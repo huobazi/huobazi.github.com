@@ -3,9 +3,14 @@
 
 /* Header */
 body > header {
-    font-size: 1em;
     padding-top: 15px;
     padding-bottom: 15px;
+}
+body > header h1 {
+    font-family: Georgia,"Hiragino Sans GB","Helvetica Neue",Helvetica,Arial,Sans-serif;
+    font-size: 2.2em;
+    font-weight: normal;
+    line-height: 1.2em;
 }
 body {
     max-width: 100%;
@@ -13,7 +18,17 @@ body {
 body > header h2 {
     display:none;
 }
+body > header, body > nav, body > footer, body #content > article, body #content > div > article, body #content > div > section {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+body > nav form {
+    width: 215px;
+}
 .serif, body, #content .blog-index a[rel="full-article"] {
+    font-family: Georgia,"Hiragino Sans GB","Helvetica Neue",Helvetica,Arial,Sans-serif;
+}
+.sans, body > header h2, body > nav form .search, body > nav a, article header p.meta, article > footer, #content .blog-index footer, html .gist .gist-file .gist-meta, #blog-archives a.category, #blog-archives time, aside.sidebar section, body > footer {
     font-family: Georgia,"Hiragino Sans GB","Helvetica Neue",Helvetica,Arial,Sans-serif;
 }
 /* Articles*/
