@@ -1,0 +1,11 @@
+---
+layout: post
+title: C# VB XML 源代码转Html高亮显示工具
+comments: true
+date: 2004-06-03 08:52
+categories:
+- ASP.NET
+- Asp.net
+---
+
+<p><span class="bold"><span class="smalltxt"><strong>C# VB XML 源代码转Html高亮显示工具<br /><br /></strong></span></span><a href="http://www.squishyweb.com/ware/products.asp?q=squishysyntax" target="_blank"><font color="#003366">http://www.squishyweb.com/ware/products.asp?q=squishysyntax</font></a><br />很不错的东西<br />演示:<br /><a href="http://www.squishyweb.com/ware/files/SampleCs-Output.html">http://www.squishyweb.com/ware/files/SampleCs-Output.html</a><br /><a href="http://www.squishyweb.com/ware/files/SampleVb-Output.html">http://www.squishyweb.com/ware/files/SampleVb-Output.html</a><br /><a href="http://www.squishyweb.com/ware/files/SampleXML-Output.html">http://www.squishyweb.com/ware/files/SampleXML-Output.html</a><br />我试了试，真不错！</p>				

@@ -1,0 +1,13 @@
+---
+layout: post
+title: 请珍爱自己的身体
+comments: true
+date: 2010-03-03 19:05
+categories:
+- ASP.NET
+- 珍爱身体
+- 锻炼
+---
+
+<p><strong><span style="color: #008000;font-size:48px;">see see:</span></strong></p>
+<p><a title="程序员们，请珍爱自己的身体" href="http://www.cnblogs.com/yiway/archive/2010/02/23/1672173.html" target="_blank"><span style="color: #008000;"><strong>http://www.cnblogs.com/yiway/archive/2010/02/23/1672173.html</strong></span></a></p>				

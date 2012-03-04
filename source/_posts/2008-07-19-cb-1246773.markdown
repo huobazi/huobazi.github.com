@@ -1,0 +1,18 @@
+---
+layout: post
+title: 我学Linq to SQL做的demo
+comments: true
+date: 2008-07-19 19:19
+categories:
+- ASP.NET
+- .Net其他
+- LINQ
+- LINQ2SQL
+- 代码片段
+---
+
+<p>最近才开始学LINQ to SQL,</p>
+<p>做了个demo，都是基本操作。</p>
+<p>有兴趣的朋友看看。</p>
+<p><a href="http://download.csdn.net/source/528628">http://download.csdn.net/source/528628</a></p>
+<p mce_keep="true"> </p>				

@@ -1,0 +1,28 @@
+---
+layout: post
+title: 关于Data Access Blok (SqlHelper.cs)使用时出现
+comments: true
+date: 2006-03-24 11:25
+categories:
+- ASP.NET
+- Asp.net
+- 代码片段
+- SQL
+- Server
+---
+
+<p>关于Data Access Blok (SqlHelper.cs)使用时出现"对象必须实现 IConvertible/Object must implement IConvertible."异常</p>
+<p>在使用低版本 Data Access Blok  时，出现如下异常<br />“/”应用程序中的服务器错误。<br />--------------------------------------------------------------------------------</p>
+<p> </p>
+<p><span style="color: #0000ff;">对象必须实现 IConvertible。<br />说明: 执行当前 Web 请求期间，出现未处理的异常。请检查堆栈跟踪信息，以了解有关该错误以及代码中导致错误的出处的详细信息。 </span></p>
+<p> </p>
+<p><span style="color: #0000ff;">异常详细信息: System.InvalidCastException: 对象必须实现 IConvertible。</span></p>
+<p> </p>
+<p><span style="color: #0000ff;">源错误: </span></p>
+<p> <br /><span style="color: #0000ff;">行 360：   <br />行 361：   //finally, execute the command.<br />行 362：   int retval = cmd.ExecuteNonQuery();<br />行 363：   <br />行 364：   // detach the SqlParameters from the command object, so they can be used again.</span></p>
+<p> </p>
+<p>参考<a href="http://weblogs.asp.net/ssmith/archive/2003/08/19/24524.aspx#92222" target="_blank">http://weblogs.asp.net/ssmith/archive/2003/08/19/24524.aspx#92222</a><br />做修改<br />the simple fix is to change line 93 to read:<br />commandParameters[i].Value = ((SqlParameter)parameterValues[i]).Value;</p>
+<p> </p>
+<p>instead of:<br />commandParameters[i].Value = parameterValues[i];</p>
+<p> </p>
+<p>正常工作。</p>				

@@ -1,0 +1,28 @@
+---
+layout: post
+title: 拆箱记
+comments: true
+date: 2009-07-26 18:36
+categories:
+- ASP.NET
+- Microsoft
+- MVP
+---
+
+<p>大洋彼岸寄来了一个纸箱</p>
+<p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/1.jpg" alt=""></p>
+<p><!--more--></p>
+<p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/2.jpg" alt=""></p>
+<p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/3.jpg" alt=""></p>
+<p>哇，里面装了一个老外宅男</p>
+<p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/4.jpg" alt=""></p>
+<p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/5.jpg" alt=""></p>
+<p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/6.jpg" alt=""></p>
+<p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/7.jpg" alt=""></p>
+<p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/8.jpg" alt=""></p>
+<p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/9.jpg" alt=""></p>
+<p>MVP奖杯</p>
+<p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/10.jpg" alt=""></p>
+<p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/11.jpg" alt=""></p>
+<p>MVP证书</p>
+<p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/12.jpg" alt=""></p>				

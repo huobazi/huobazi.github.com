@@ -1,0 +1,13 @@
+---
+layout: post
+title: MSN Toolbar 谁用了
+comments: true
+date: 2004-01-29 13:31
+categories:
+- 闲言碎语
+- Asp.net
+- MSN
+- Microsoft
+---
+
+<p><a id="viewpost.ascx_TitleUrl" href="http://toolbar.msn.com/">MSN Toolbar Beta</a></p>				

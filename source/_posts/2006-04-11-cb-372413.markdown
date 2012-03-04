@@ -1,0 +1,15 @@
+---
+layout: post
+title: Yetanotherforum 编辑表情后不立即更新
+comments: true
+date: 2006-04-11 17:38
+categories:
+- ASP.NET
+- Asp.net
+- Yetanotherforum
+---
+
+<p>文件  FormatMsg.cs</p>
+<br /><p>方法iAddSmiles内 </p>
+<br /><p>Code:<br />strTemp = strTemp.Replace(code.ToLower(),String.Format("&lt;img src=\"{0}\" alt=\"{1}\" /&gt;",basePage.Smiley(Convert.ToString(row["Icon"])),basePage.Server.HtmlEncode(row["Emoticon"].ToString())));<br />调用了两次可能导致被转化成html后有乱码出现</p>
+<br /><p>在方法GetSmilies内<br />Code:<br />System.Web.HttpContext.Current.Cache.Insert("Smilies",dt,null,DateTime.Now.AddMinutes(60),TimeSpan.Zero);<br />加入缓存项的Key和更新/删除时移除缓存的Key不一致 导致编辑表情后不立即更新<br />DB.cs<br />Code:<br />System.Web.HttpContext.Current.Cache.Remove("Smiles");<br /></p>				

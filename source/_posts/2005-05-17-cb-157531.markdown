@@ -1,0 +1,10 @@
+---
+layout: post
+title: 顺利与不顺利
+comments: true
+date: 2005-05-17 17:32
+categories:
+- 闲言碎语
+---
+
+<p>今日给客户做演示，1年多的项目演示，客户比较满意，算顺利。<br />下午打开邮箱，发现<a href="https://www.google.com/adsense">GoogleAdsense</a>把我的帐号停用了，说产生了无效点击。<br />一天才几个美毛的收入，我这个弊做的也太差劲了。不顺利。</p>				

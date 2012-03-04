@@ -1,0 +1,10 @@
+---
+layout: post
+title: 不错的搜索引擎
+comments: true
+date: 2004-04-17 15:58
+categories:
+- 闲言碎语
+---
+
+<p>在<a href="http://blog.joycode.com/zhanbos">http://blog.joycode.com/zhanbos</a>看到的<br />页面很简单，速度很快，功能也很强？<br />感觉比较好。<br />比如搜索“huobazi“可以这样<br /><a href="http://a9.com/huobazi">http://a9.com/huobazi</a></p>				

@@ -1,0 +1,13 @@
+---
+layout: post
+title: ! '[[我认识个家伙，说了注册表这个词，三天之后就被车撞了]] ,哈哈哈哈'
+comments: true
+date: 2004-12-04 16:01
+categories:
+- 闲言碎语
+---
+
+<p><strong>好文笔哦,幽默.</strong></p>
+<br /><p><strong>警告：</strong>不要修改注册表里的值。永远别这样。我们知道刚才我们让您这么做，<font color="#006400">可如果我们让您去跳崖您也去跳吗？</font>永远也别改变注册表中的值。甚至连<i>注册表</i>这个词都别说。<font color="#ff0000">我认识个家伙，说了<i>注册表</i>这个词，三天之后就被车撞了</font>。这是一个真实的故事。事实上，您的计算机上都不该有注册表。如果您怀疑你的计算机上有个注册表，请致电我们，我们会立即派出训练有素的专业人员去您的办公室将注册表删除。<font color="#ff1493">如果您不小心接触了注册表，请打肥皂洗手然后去叫医生。不要将注册表吞下或弄到眼睛里！</font></p>
+<br /><p>原文地址:</p>
+<br /><p><a href="http://www.microsoft.com/china/technet/community/scriptcenter/tools/twkmatic.mspx">http://www.microsoft.com/china/technet/community/scriptcenter/tools/twkmatic.mspx</a></p>				

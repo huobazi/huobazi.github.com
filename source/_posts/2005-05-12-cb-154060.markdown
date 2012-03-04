@@ -1,0 +1,13 @@
+---
+layout: post
+title: 从VB的语法理解 抽象方法
+comments: true
+date: 2005-05-12 15:38
+categories:
+- ASP.NET
+- Asp.net
+---
+
+<p> </p>
+<br /><p>C#中 abstract void MethodName(....<br /> <br />VB中 MustOverride Sub MethodName(....</p>
+<br /><p>“<font style="BACKGROUND-COLOR: #d3d3d3" color="#ff1493"><strong><font color="#ff0000">Must</font></strong><font color="#0000ff">Override</font></font>”多容易理解啊<img height="19" src="/images/hbz_images/0a603e93-b2ed-47bf-86c0-ebbf83a0f832.png7" width="19" border="0"><br /></p>				

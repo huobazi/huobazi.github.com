@@ -1,0 +1,10 @@
+---
+layout: post
+title: 项目的发布的方法
+comments: true
+date: 2004-06-15 08:51
+categories:
+- ASP.NET
+---
+
+<p>在<a href="http://www.cnblogs.com/aierong/archive/2004/06/12/15264.aspx">http://www.cnblogs.com/aierong/archive/2004/06/12/15264.aspx</a><br />看到大家讨论关于项目的发布。<br />我们的做法是：<br /><font style="BACKGROUND-COLOR: #f5f5dc">如果您使用的是VS2003<br />那么<br />假设你的虚拟目录为WebApp1<br />位于C:\Inetpub\wwwroot\WebApp1<br />在你的电脑上新建一个虚拟目录<br />假设命名为WebApp2<br />位于C:\Inetpub\wwwroot\WebApp2<br />点击项目菜单---复制项目<br />在弹出的对话筐内选择目标项目文件夹<br />“http://localhost/WebApp2/”<br />web方法为(RadioButton)：文件共享<br />路径为“C:\Inetpub\wwwroot\WebApp2”<br />复制(RadioButton)为：<br />“仅限运行该应用程序所需的文件”<br />点击确定<br />就可以把需要发布的内容放到“C:\Inetpub\wwwroot\WebApp2”内<br /></font></p>				

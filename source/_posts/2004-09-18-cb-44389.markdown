@@ -1,0 +1,21 @@
+---
+layout: post
+title: 真郁闷，ListItem的Attributes让我碰到了
+comments: true
+date: 2004-09-18 15:25
+categories:
+- ASP.NET
+- 前端开发
+- Asp.net
+---
+
+<p>想给CheckBoxList的Item加个Onclick执行的javascript函数<br /> </p>
+<div style="padding-right: 5.4pt; padding-left: 5.4pt; background: #e6e6e6; padding-bottom: 4px; width: 98%; padding-top: 4px; border: windowtext 0.5pt solid;">
+<div>
+<span style="COLOR: #000000">CheckBoxList chk_list_big </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> (CheckBoxList)e.Item.FindControl(</span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">chk_list_big</span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">) </span><span style="COLOR: #0000ff">as</span><span style="COLOR: #000000"> CheckBoxList;<br />            </span><span style="COLOR: #0000ff">if</span><span style="COLOR: #000000">(chk_list_big </span><span style="COLOR: #000000">!=</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">null</span><span style="COLOR: #000000">)<br />            </span><span id="Codehighlighter1_125_389_Open_Text"><span style="COLOR: #000000">{<br />                ListItem item </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">new</span><span style="COLOR: #000000"> ListItem(bigClassName,bigClassId);<br />                chk_list_big.Attributes[</span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">onclick</span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">] </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> String.Format(</span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">CheckAll({0})</span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">,bigClassId);<br />                item.Attributes.Add(</span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">onclick</span><span style="COLOR: #000000">"</span><span style="COLOR: #000000"> , String.Format(</span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">CheckAll({0})</span><span style="COLOR: #000000">"</span><span style="COLOR: #000000"> , bigClassId));<br />                chk_list_big.Items.Add(item);<br />            }</span></span>
+</div>
+<p></p>
+</div>
+<br />死活不行啊，<p>原来想这样的人好多啊<br /><a href="http://weblogs.asp.net/fmarguerie/archive/2003/02/27/3103.aspx">http://weblogs.asp.net/fmarguerie/archive/2003/02/27/3103.aspx</a><br /><a href="http://unboxedsolutions.com/sean/archive/2004/05/04/213.aspx">http://unboxedsolutions.com/sean/archive/2004/05/04/213.aspx</a></p>
+<p><a href="http://support.microsoft.com/default.aspx?scid=kb;en-us;309338&amp;Product=NETFrame">http://support.microsoft.com/default.aspx?scid=kb;en-us;309338&amp;Product=NETFrame</a></p>
+<p>后来只有加在CheckBoxList上了，虽然可以用但是发送到客户端的html内是把onclick加到input type =checkbox 外层的table上了</p>				

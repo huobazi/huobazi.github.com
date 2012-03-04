@@ -1,0 +1,16 @@
+---
+layout: post
+title: 把你的netbeans变成英文版
+comments: true
+date: 2010-01-07 22:13
+categories:
+- 它山之石
+- 奇技淫巧
+- netbeans
+---
+
+<p>呵呵其实很简单，装完后再你使用的快捷方式内增加</p>
+<p>--locale en:us就可以了，比如我的快捷方式里的设置为：</p>
+<p>"D:\Program Files\NetBeans 6.8\bin\netbeans.exe" --locale en:us</p>
+<p>ok 英文了.</p>
+<p>按照这个方法你可以为自己定制很多套语言版本的netbeans，但只要一份安装。</p>				

@@ -1,0 +1,10 @@
+---
+layout: post
+title: 比较酷
+comments: true
+date: 2005-10-07 12:39
+categories:
+- 闲言碎语
+---
+
+<p><a href="http://www.netvibes.com/">http://www.netvibes.com/</a><br /><a href="http://www.google.com/ig">http://www.google.com/ig</a><br /><a href="http://www.start.com/">http://www.start.com/</a><br />都有基于web的rss 订阅功能，页面还可以自由调整</p>				

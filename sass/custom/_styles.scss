@@ -1,0 +1,369 @@
+// This File is imported last, and will override other styles in the cascade
+// Add styles here to make changes without digging in too much
+
+/* Header */
+body > header {
+    font-size: 1em;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+body {
+    max-width: 100%;
+}
+body > header h2 {
+    display:none;
+}
+.serif, body, #content .blog-index a[rel="full-article"] {
+    font-family: Georgia,"Hiragino Sans GB","Helvetica Neue",Helvetica,Arial,Sans-serif;
+}
+/* Articles*/
+body > div > div {
+    background: url("/images/noise.png?1329792395") repeat scroll left top #FFFFFF;
+    border-right: 1px solid #E0E0E0;
+}
+/* Others */
+
+div {
+  table-layout: fixed;
+  word-wrap: break-word;
+}
+#tag-cloud {
+  line-height: 2.2em;
+}
+pre, code, blockquote {
+  font-size: 12px;
+}
+div.source{
+  font-size: 12px;
+  padding: 6px;
+}
+div.source > p{
+  margin-bottom:0;
+}
+.codeDiv
+{
+	background-color: #ddedfb;
+	border: 1px solid #0099cc;
+	color: #000;
+	font-family: "Verdana" , "Courier New" , "Courier" , "mono" , "sans-serif" , "å®‹ä½“";
+	font-size: 12px;
+	line-height: 18px;
+	margin: 5px;
+	padding: 5px;
+	width: 90%;
+}
+pre,code
+{
+	background-color: #ddedfb;
+	border: 1px solid #0099cc;
+	color: #000;
+	font-family: "Verdana" , "Courier New" , "Courier" , "mono" , "sans-serif" , "å®‹ä½“";
+	font-size: 12px;
+	line-height: 18px;
+	margin: 5px;
+	padding: 5px;
+	padding-bottom:20px;
+	width: 90%;
+	overflow: auto;
+	display:block;
+	max-height:800px;
+}
+.codeHead
+{
+	background: #fff none repeat scroll 0 0;
+	border-bottom: 1px solid #ddd;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 5px 5px 5px 15px;
+}
+.codeText
+{
+	-x-system-font: none;
+	background: #fff none repeat scroll 0 0;
+	border: 1px solid #ddd;
+	font-family: 'Courier New' ,Monospace;
+	font-size: 12px;
+	font-size-adjust: none;
+	font-stretch: normal;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: normal;
+	margin: 0 0 1.1em;
+	overflow: auto;
+	padding: 0;
+	width: 98%;
+}
+.codeText ol
+{
+	background: #fff none repeat scroll 0 0;
+	border-left: 1px solid #ddd;
+	color: #5c5c5c;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: decimal-leading-zero;
+	margin: 0 1px 0 45px;
+	padding: 5px 0;
+}
+.codeText ol li
+{
+	background: #fff none repeat scroll 0 0;
+	padding-left: 10px;
+}
+.codeText ol li.alt
+{
+	background: #fff none repeat scroll 0 0;
+}
+.codeText ol li span
+{
+	color: #000;
+}
+.codeText .comment, .codeText .comments
+{
+	color: #008200;
+}
+.codeText .string
+{
+	color: blue;
+}
+.codeText .keyword
+{
+	color: #006699;
+	font-weight: bold;
+}
+.codeText .preprocessor
+{
+	color: gray;
+}
+.dp-c .comment
+{
+	color: green;
+}
+.dp-c .string
+{
+	color: blue;
+}
+.dp-c .preprocessor
+{
+	color: gray;
+}
+.dp-c .keyword
+{
+	color: blue;
+}
+.dp-c .vars
+{
+	color: #DD0000;
+}
+.dp-vb .comment
+{
+	color: green;
+}
+.dp-vb .string
+{
+	color: blue;
+}
+.dp-vb .preprocessor
+{
+	color: gray;
+}
+.dp-vb .keyword
+{
+	color: blue;
+}
+.dp-sql .comment
+{
+	color: green;
+}
+.dp-sql .string
+{
+	color: red;
+}
+.dp-sql .keyword
+{
+	color: #7F0055;
+}
+.dp-sql .func
+{
+	color: #FF1493;
+}
+.dp-sql .op
+{
+	color: blue;
+}
+.dp-xml .cdata
+{
+	color: #FF1493;
+}
+.dp-xml .comments
+{
+	color: green;
+}
+.dp-xml .tag
+{
+	color: blue;
+	font-weight: bold;
+}
+.dp-xml .tag-name
+{
+	color: #7F0055;
+	font-weight: bold;
+}
+.dp-xml .attribute
+{
+	color: red;
+}
+.dp-xml .attribute-value
+{
+	color: blue;
+}
+.dp-delphi .comment
+{
+	color: #008200;
+	font-style: italic;
+}
+.dp-delphi .string
+{
+	color: blue;
+}
+.dp-delphi .number
+{
+	color: blue;
+}
+.dp-delphi .directive
+{
+	color: #008284;
+}
+.dp-delphi .keyword
+{
+	color: navy;
+	font-weight: bold;
+}
+.dp-delphi .vars
+{
+	color: #000;
+}
+.dp-py .comment
+{
+	color: green;
+}
+.dp-py .string
+{
+	color: red;
+}
+.dp-py .docstring
+{
+	color: green;
+}
+.dp-py .keyword
+{
+	color: blue;
+	font-weight: bold;
+}
+.dp-py .builtins
+{
+	color: #FF1493;
+}
+.dp-py .magicmethods
+{
+	color: #808080;
+}
+.dp-py .exceptions
+{
+	color: brown;
+}
+.dp-py .types
+{
+	color: brown;
+	font-style: italic;
+}
+.dp-py .commonlibs
+{
+	color: #8a2be2;
+	font-style: italic;
+}
+.dp-rb .comment
+{
+	color: #cc0000;
+}
+.dp-rb .string
+{
+	color: #FF00CC;
+}
+.dp-rb .symbol
+{
+	color: #02b902;
+}
+.dp-rb .keyword
+{
+	color: #006699;
+}
+.dp-rb .variable
+{
+	color: #66ccff;
+}
+.dp-css .comment
+{
+	color: green;
+}
+.dp-css .string
+{
+	color: red;
+}
+.dp-css .keyword
+{
+	color: blue;
+}
+.dp-css .colors
+{
+	color: darkred;
+}
+.dp-css .vars
+{
+	color: #dd0000;
+}
+.dp-j .comment
+{
+	color: #3f7f5f;
+}
+.dp-j .string
+{
+	color: #2a00ff;
+}
+.dp-j .keyword
+{
+	color: #7F0055;
+	font-weight: bold;
+}
+.dp-j .annotation
+{
+	color: #646464;
+}
+.dp-j .number
+{
+	color: #C00000;
+}
+.dp-cpp .comment
+{
+	color: #ee0000;
+}
+.dp-cpp .string
+{
+	color: red;
+}
+.dp-cpp .preprocessor
+{
+	color: #cd00cd;
+	font-weight: bold;
+}
+.dp-cpp .keyword
+{
+	color: #5697D9;
+	font-weight: bold;
+}
+.dp-cpp .datatypes
+{
+	color: #2e8b57;
+	font-weight: bold;
+}
+

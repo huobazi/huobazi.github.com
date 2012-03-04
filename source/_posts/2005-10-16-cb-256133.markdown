@@ -1,0 +1,23 @@
+---
+layout: post
+title: 买了edong的空间没有db_securityadmin权限
+comments: true
+date: 2005-10-16 22:45
+categories:
+- ASP.NET
+- 闲言碎语
+- Community Server
+- Edong
+---
+
+<p>买了edong的<a href="http://www.edong.com/v8/webhosting/K1000.php">http://www.edong.com/v8/webhosting/K1000.php</a>这个k1000空间<br />没有db_securityadmin权限装不了CommunityServer和DotNetNuke</p>
+<div class="CodeDiv">
+<p></p>
+<div style="padding-right: 5px; padding-left: 4px; font-size: 13px; padding-bottom: 4px; width: 98%; padding-top: 4px; background-color: #eeeeee; border: #cccccc 1px solid;">
+<span style="COLOR: #000000">The account you use to run CS under must have the following minimum database roles to function corrected:<p>db_securityadmin<br />db_ddladmin<br />db_datareader<br />db_datawriter</p>
+<p>Use the following from Query Analyzer to ensure that your account has sufficent permissions. If you are in a host environment and can not change your database roles you will need to requrest these roles from your ISP</p>
+<p>sp_addrolemember 'db_securityadmin', '</p></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">your </span><span style="COLOR: #ff0000">login name</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000">'<br />sp_addrolemember 'db_ddladmin', '</span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">your </span><span style="COLOR: #ff0000">login name</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000">'<br />sp_addrolemember 'db_datareader', '</span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">your </span><span style="COLOR: #ff0000">login name</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000">'<br />sp_addrolemember 'db_datawriter', '</span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">your </span><span style="COLOR: #ff0000">login name</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000">'</span>
+</div>
+<p></p>
+</div>
+<br />郁闷。<br />看来要自己租服务器了。<br />另注：本随笔不接受枪手评论，谢谢！				

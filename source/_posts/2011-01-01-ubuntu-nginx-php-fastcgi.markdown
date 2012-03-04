@@ -1,0 +1,18 @@
+---
+layout: post
+title: 在ubuntu上配置 nginx和php+fastcgi
+comments: true
+date: 2011-01-01 01:04
+categories:
+- LAMP
+- PHP
+- LAMP
+- nginx
+- Ubuntu
+- fastcgi
+---
+
+<p>(1)安装php5<br />apt-get install php5 php-pear php5-cli php5-common php5-xcache php5-cgi php5-mysql php5-curl  php5-gd  php5-imagick  php5-xmlrpc  php5-dev php5-memcache<br />(2)安装nginx<br />apt-get install nginx<br />(3)安装spawn-fcgi<br /> apt-get install spawn-fcgi<br />(4)设置，也是最头疼滴地方哦</p>
+<p><!--more--></p>
+<p>在/etc/nginx/fastcgi_params 文件最后，加入一行，可以用sudo gedit /etc/nginx/fastcgi_params打开文件<br /><strong>fastcgi_param SCRIPT_FILENAME     $document_root$fastcgi_script_name;</strong><br />设置php.ini的 cgi.fix_pathinfo=1;doc_root=<br />拷贝/etc/nginx/sites-availab修改本机hosts文件，指定一个域名<br />修改server_name<br />在server_name同级增加root 设置为网站根目录<br />location里 加上 index.php<br />php的fast-cgi配置</p>
+<p><span style="color: #fff; background-color:#000;">    location ~ \.php$ {<br />        fastcgi_pass   127.0.0.1:9000;<br />        fastcgi_index  index.php;<br />        include fastcgi_params;     <br />    }</span><br />$ sudo killall -HUP php5-cgi<br />$ sudo /usr/bin/spawn-fcgi -a 127.0.0.1 -p 9000 -C 5 -u www-data -g www-data -f /usr/bin/php5-cgi -P /var/run/fastcgi-php.pid<br />$ /etc/init.d# sudo /etc/init.d/nginx restart <br />在网站内放个phpinfo测试一下，ok了。</p>				

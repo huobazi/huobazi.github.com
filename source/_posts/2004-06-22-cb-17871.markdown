@@ -1,0 +1,11 @@
+---
+layout: post
+title: csdn开通blog了
+comments: true
+date: 2004-06-22 17:54
+categories:
+- 闲言碎语
+- CSDN
+---
+
+<p><span class="bold"><span class="smalltxt"><strong>csdn开通blog了<br /><br /></strong></span></span>文档中心发过豆腐干 的都有吧<br /><a href="http://blog.csdn.net/xiahouwen" target="_blank"><font color="#003366">http://blog.csdn.net/xiahouwen</font></a><br /></p>				

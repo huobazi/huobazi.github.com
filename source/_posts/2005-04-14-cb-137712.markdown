@@ -1,0 +1,17 @@
+---
+layout: post
+title: 今天头又晕了
+comments: true
+date: 2005-04-14 17:58
+categories:
+- ASP.NET
+- .Net其他
+---
+
+<p>写了如下代码，还跟踪了半个多小时，没找出来问题<img style="border: 0px;" src="/images/hbz_images/036aa5c2-64f8-4fe7-8ccc-983e17d8c364.gif" border="0" alt=""></p>
+<div style="padding-right: 5.4pt; padding-left: 5.4pt; background: #e6e6e6; padding-bottom: 4px; width: 98%; word-break: break-all; padding-top: 4px; border: windowtext 0.5pt solid;">
+<div>
+<span style="COLOR: #0000ff">if</span><span style="COLOR: #000000">(strCarId.StartsWith(</span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">**</span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">))<br />                                    </span><span id="Codehighlighter1_39_89_Closed_Text" style="BORDER-RIGHT: #808080 1px solid; BORDER-TOP: #808080 1px solid; DISPLAY: none; BORDER-LEFT: #808080 1px solid; BORDER-BOTTOM: #808080 1px solid; BACKGROUND-COLOR: #ffffff"> </span><span id="Codehighlighter1_39_89_Open_Text"><span style="COLOR: #000000">{<br />                                         strCarId.Replace(</span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">**</span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">,</span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">U</span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">);<br />                                    }</span></span><span style="COLOR: #000000"><br />                                    </span><span style="COLOR: #0000ff">else</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">if</span><span style="COLOR: #000000">(strCarId.StartsWith(</span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">*</span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">))<br />                                    </span><span id="Codehighlighter1_143_192_Open_Text"><span style="COLOR: #000000">{<br />                                         strCarId.Replace(</span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">*</span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">,</span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">T</span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">);<br />                                    }</span></span>
+</div>
+<p></p>
+</div>				

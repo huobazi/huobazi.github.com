@@ -1,0 +1,11 @@
+---
+layout: post
+title: 这次吵的更凶了！！
+comments: true
+date: 2004-04-05 13:43
+categories:
+- ASP.NET
+- 程序员
+---
+
+<p>1 <a href="http://blog.joycode.com/5drush/posts/18249.aspx">http://blog.joycode.com/5drush/posts/18249.aspx</a><br />从而引出<br />2 <a href="http://blog.codelphi.com/virushuo/posts/3453.aspx">http://blog.codelphi.com/virushuo/posts/3453.aspx</a><br />再<br />3 <a href="http://blog.codelphi.com/netfire/posts/3469.aspx">http://blog.codelphi.com/netfire/posts/3469.aspx</a><br />我个人认为<br />MVPs是一群值得佩服的人，因为我身边就有<a href="http://www.webdiyer.com">一位</a> 。如果你知道了他的一些情况你将更佩服他！<br />不同意文中“国内的大半都是靠论坛灌水得到”，<br />我认为热心于帮助别人的人最值得敬佩的！！！</p>				

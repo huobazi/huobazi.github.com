@@ -1,0 +1,45 @@
+---
+layout: post
+title: 文本块内的文本的空格、制表符和换行处理
+comments: true
+date: 2005-09-21 11:39
+categories:
+- ASP.NET
+---
+
+<p>最近在做我的<a href="http://www.aspxboy.com/">AspxBoy.Com</a>时遇到一个郁闷的问题<br /></p>
+<div><font style="BACKGROUND-COLOR: #ffffff" color="#808080">在使用ftb２.0做编辑器的时候</font></div>
+<div>
+<p><font style="BACKGROUND-COLOR: #ffffff" color="#808080">在内容筐内粘贴进</font></p>
+<pre>....</pre>
+<p></p>
+</div>
+<div><font style="BACKGROUND-COLOR: #ffffff" color="#808080">的代码</font></div>
+<div>
+<p><font style="BACKGROUND-COLOR: #ffffff" color="#808080">当提交后显示页面(如<a href="http://www.aspxboy.com/433/archive.aspx">http://www.aspxboy.com/433/archive.aspx</a>)内</font></p>
+<pre>内的制表符都变没了<br />求助与csdn:<br /><br /></pre>
+</div>
+<p><a title="http://community.csdn.net/Expert/topic/4282/4282303.xml?temp=.5363428" href="http://community.csdn.net/Expert/topic/4282/4282303.xml?temp=.5363428">http://community.csdn.net/Expert/topic/4282/4282303.xml?temp=.5363428</a><br /><br />经网友指点采用新的ftb版本,发现提交到数据库内<font color="#000000">制表符没有被替换,<br />但是显示的时候还是全部被替换了<br />找啊找啊,一夜没睡,终于在</font><font color="#000000">苏昱的样式表中文手册内找到了答案<br />原来在写</font></p>
+<pre>样式的时候<br />写上了<br />white-space:normal;<br />却没有用 去替换制表符,<br />我改用如下样式则显示正确了<br /><strong><font color="#ff0000">white-space:pre;</font></strong><br /><br />而正确的使用方法是<br /><div class="cssColumnTitle"><font style="BACKGROUND-COLOR: #d3d3d3">语法：</font></div>
+<div><font style="BACKGROUND-COLOR: #d3d3d3"><b>white-space : </b><span class="cssDefault"><b>normal</b></span> | <b>pre</b> | <b>nowrap</b> </font></div>
+<div class="cssColumnTitle"><font style="BACKGROUND-COLOR: #d3d3d3">取值：</font></div>
+</pre>
+<table><tbody>
+<tr>
+<td nowrap><b><font style="BACKGROUND-COLOR: #d3d3d3">normal </font></b></td>
+<td nowrap><b><font style="BACKGROUND-COLOR: #d3d3d3">:</font></b></td>
+<td><font style="BACKGROUND-COLOR: #d3d3d3"><b>默认值</b>。默认处理方式。文本自动处理换行。假如抵达容器边界内容会转到下一行</font></td>
+</tr>
+<tr>
+<td nowrap><b><font style="BACKGROUND-COLOR: #d3d3d3">pre </font></b></td>
+<td nowrap><b><font style="BACKGROUND-COLOR: #d3d3d3">:</font></b></td>
+<td><font style="BACKGROUND-COLOR: #d3d3d3">换行和其他空白字符都将受到保护。这个值需要IE6+或者<b> !DOCTYPE </b>声明为<b> <br /><br />standards-compliant mode <br /></b>支持。如果<b> !DOCTYPE </b>声明没有指定<br />为<b> standards-compliant mode </b>，此属性可以使用，但是不会发生作用。结果等同于<b> normal </b>。参阅<b> pre </b>对象</font></td>
+</tr>
+<tr>
+<td nowrap><b><font style="BACKGROUND-COLOR: #d3d3d3">nowrap </font></b></td>
+<td nowrap><b><font style="BACKGROUND-COLOR: #d3d3d3">:</font></b></td>
+<td><font style="BACKGROUND-COLOR: #d3d3d3">强制在同一行内显示所有文本，直到文本结束或者遭遇<b> br </b>对象。参阅<b> noWrap </b>属性</font></td>
+</tr>
+</tbody></table>
+<div class="cssColumnTitle"><font style="BACKGROUND-COLOR: #d3d3d3">说明：</font></div>
+<div><font style="BACKGROUND-COLOR: #d3d3d3">设置或检索对象内空格字符的处理方式。<br />空格字符，像换行，空格，TAB，在HTML文档中默认的是被忽略的。<font color="#0000ff">当此属性设置为<b> normal <br /></b>或者<b> nowrap </b>时，你可以使用不换行空格的命名实体<b>   </b>来添加空格，用<b> br </b>元素来添加换行。<br /></font>此属性对你使用文档对象模型(DOM)操作的内容的影响与其对IE显示内容的影响一样。<br />此属性作用于块对象。<br />此属性对于<b> currentStyle </b>对象而言是只读的。对于其他对象而言是可读写的。<br />对应的脚本特性为<b> whiteSpace </b>。</font></div>				

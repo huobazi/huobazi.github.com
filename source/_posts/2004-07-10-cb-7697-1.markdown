@@ -1,0 +1,17 @@
+---
+layout: post
+title: 小雕虫,不被Google工具条拦截的弹出窗口
+comments: true
+date: 2004-07-10 10:38
+categories:
+- ASP.NET
+- 前端开发
+- Asp.net
+- 奇技淫巧
+---
+
+<p>如果做项目必须用到弹出窗口可以考虑以下</p>
+<p>不保证任何时候能用<br />更不保证在那个myie新版本下能用<br />如果myie等浏览器屏蔽掉了地址内的某些字比如我演示中有“pop“字样,那也出不来</p>
+<p>demo+code:</p>
+<p><a href="http://www.aspxboy.com/popWindow/" target="_blank"><span style="color: #003366;">http://www.aspxboy.com/popWindow/</span></a></p>
+<p><span style="font-size: x-large;"><strong>测试</strong>通过日期： <span style="color: #002c99;"><a href="http://huobazi.cnblogs.com/archive/2004/07/10/22926.html"><strong>2004/07/10/</strong></a>  ！！！<br /></span></span></p>				

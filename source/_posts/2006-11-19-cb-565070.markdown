@@ -1,0 +1,11 @@
+---
+layout: post
+title: Test live writer
+comments: true
+date: 2006-11-19 12:25
+categories:
+- 闲言碎语
+- Live Writer
+---
+
+<p>Test live writer</p>				

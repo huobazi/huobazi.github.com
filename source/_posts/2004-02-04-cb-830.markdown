@@ -1,0 +1,15 @@
+---
+layout: post
+title: 使网页中的元素可编辑
+comments: true
+date: 2004-02-04 15:02
+categories:
+- ASP.NET
+- Asp.net
+- Javascript
+- HTML
+---
+
+<p><u><font color="#800080">在<a href="http://lucky.myrice.com">net_lover</a>的文章里找到了答案.<br /><a href="http://www.csdn.net/Develop/Read_Article.asp?Id=4405"><br />http://www.csdn.net/Develop/Read_Article.asp?Id=4405</a></font></u><br /><br /></p>
+<p>代码如下：<br />&lt;HTML&gt;<br />&lt;HEAD&gt;<br />&lt;/HEAD&gt;<br />&lt;BODY&gt;<br />&lt;DIV ID="oDiv"&gt;TEST---TEST---TEST 您可以在这里编辑文字！&lt;/DIV&gt;<br />&lt;SCRIPT&gt;<br />&lt;!--<br />oDiv.contentEditable = true;<br />// --&gt;<br />&lt;/SCRIPT&gt;<br />&lt;/BODY&gt;<br />&lt;/HTML&gt;</p>
+<a href="http://www.csdn.net/Develop/Read_Article.asp?Id=4405"></a>				

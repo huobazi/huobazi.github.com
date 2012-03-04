@@ -1,0 +1,11 @@
+---
+layout: post
+title: 一个不错的代码编辑工具
+comments: true
+date: 2004-02-12 10:01
+categories:
+- ASP.NET
+---
+
+<p>CrimSon Editer<br /><a href="http://www.crimsoneditor.com/" target="_blank"><br />http://www.crimsoneditor.com/</a><br />我用它因为它体积小 启动迅速 最大的优点是<span style="font-size: large; color: #ff3300;"><strong>免费</strong></span>哦<br />支持许多常用代码的语法高亮显示.<br />可以在这里下载到C#的代码高亮显示文件<br /><a target="_blank">http://www.crimsoneditor.com/board/CrazyWWWBoard.cgi?db=user0&amp;mode=read&amp;num=99&amp;page=1&amp;ftype=6&amp;fval=c%23&amp;backdepth=1</a></p>
+<p>还有其他好的编辑工具都列在这里了:<br /><a href="http://www.crimsoneditor.com/english/editors.html" target="_blank">http://www.crimsoneditor.com/english/editors.html</a></p>				

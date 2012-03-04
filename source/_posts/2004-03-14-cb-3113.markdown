@@ -1,0 +1,11 @@
+---
+layout: post
+title: 一个比较郁闷的问题
+comments: true
+date: 2004-03-14 09:10
+categories:
+- ASP.NET
+- Asp.net
+---
+
+<p>我在我的主页 <a href="http://www.AspxBoy.com">http://www.AspxBoy.com</a> 内<br />文章显示页面是在添加文章的时候生成的静态htm页。<br />在首页和其他栏目显示文章列表时链接为<br /><a href="http://www.aspxboy.com/ShowArticle.Aspx?ID=214">http://www.aspxboy.com/ShowArticle.Aspx?ID=214</a><br />这样的链接<br />在ShowArticle.Aspx内为文章的被阅读次数加1，跳转到（<span style="color: #ff3333;"><strong>Response.Redirect</strong></span>）相应的Html文件<br />如<br /><a href="http://www.aspxboy.com/Files/71/66/20039280037.htm">http://www.aspxboy.com/Files/71/66/20039280037.htm</a><br />最近发现这样的设计导致搜索引擎抓取不到页面<img src="/images/hbz_images/e01387bd-8f4f-4638-8131-226ce244e723.jpg" alt=""><br />好友<a href="http://0day.com.cn">龙龙</a>放出他的<a href="http://home.0day.com.cn/search.php">龙族蜘蛛</a>在我的站内老是抓取不到任何可用链接<img src="/images/hbz_images/e01387bd-8f4f-4638-8131-226ce244e723.jpg" alt="">,只能抓到首页就进行不下去了......<br />不只该如何解决，郁闷啊。</p>				

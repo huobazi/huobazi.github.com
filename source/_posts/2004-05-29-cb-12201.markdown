@@ -1,0 +1,14 @@
+---
+layout: post
+title: 也有人和我一样抱怨为何C#中操作office产品的方法有那么多的参数
+comments: true
+date: 2004-05-29 14:46
+categories:
+- ASP.NET
+- Asp.net
+---
+
+<p>原来做过一个小的<a href="http://www.cnblogs.com/huobazi/archive/2004/04/27/7771.aspx">win程序操作Excel的</a> 被那些个参数搞的头晕晕的<br />那么多Missing啊<br />今天在Blog.Msdn.com看到关于VB和C#在office开发中的比较的讨论</p>
+<br /><p><a href="http://blogs.msdn.com/cyrusn/archive/2004/05/28/144148.aspx">http://blogs.msdn.com/cyrusn/archive/2004/05/28/144148.aspx</a></p>
+<br /><p>嘿嘿，也有人和我一样抱怨为何C#中操作office产品的方法有那么多的参数,其中Word.Documents.Open多达30个参数...</p>
+<br /><p><a href="http://blogs.msdn.com/cyrusn/archive/2004/05/28/144165.aspx">http://blogs.msdn.com/cyrusn/archive/2004/05/28/144165.aspx</a><br /><br />继续关注这2篇blog中......</p>				

@@ -1,0 +1,97 @@
+---
+layout: post
+title: 在 Ubuntu 下安装 Redis 并使用 init 脚本启动  && 添加 删除ubuntu自启动服务
+comments: true
+date: 2011-08-06 23:53
+categories:
+- LAMP
+- Ubuntu
+- Redis
+---
+
+<pre style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; font: normal normal normal 12px/normal Monaco, 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;  font-family: 'Bitstream Vera Sans Mono', 'Courier New', monospace; "><span style="font-family: helvetica, arial, freesans, clean, sans-serif; line-height: 14px; white-space: normal;">
+
+<div id="LC1" style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;">1. 下载安装：</div>
+
+<div id="LC2" style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;"></div>
+
+<div id="LC3" style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;">cd /tmp</div>
+
+<div id="LC4" style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;">wget http://redis.googlecode.com/files/redis-*.*.*.tar.gz</div>
+
+<div id="LC5" style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;">tar -zxf redis-*.*.*.tar.gz</div>
+
+<div id="LC6" style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;">cd redis-*.*.*</div>
+
+<div id="LC7" style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;">make</div>
+
+<div id="LC8" style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;">sudo make install</div>
+
+<div id="LC8" style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;"></div>
+
+<div id="LC9" style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;">2. 配置init脚本：</div>
+
+<div id="LC10" style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;"></div>
+
+<div id="LC11" style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;">wget https://github.com/ijonas/dotfiles/raw/master/etc/init.d/redis-server</div>
+
+<div id="LC12" style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;">wget https://github.com/ijonas/dotfiles/raw/master/etc/redis.conf</div>
+
+<div id="LC13" style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;">sudo mv redis-server /etc/init.d/redis-server</div>
+
+<div id="LC14" style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;">sudo chmod +x /etc/init.d/redis-server</div>
+
+<div id="LC15" style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;">sudo mv redis.conf /etc/redis.conf</div>
+
+<div id="LC15" style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;"></div>
+
+<div id="LC16" style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;">3. 初始化用户和日志路径</div>
+
+<div id="LC17" style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;"></div>
+
+<div id="LC18" style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;">sudo useradd redis</div>
+
+<div id="LC19" style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;">sudo mkdir -p /var/lib/redis</div>
+
+<div id="LC20" style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;">sudo mkdir -p /var/log/redis</div>
+
+<div id="LC21" style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;">sudo chown redis.redis /var/lib/redis</div>
+
+<div id="LC22" style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;">sudo chown redis.redis /var/log/redis</div>
+
+<div id="LC22" style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;"></div>
+
+<div id="LC23" style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;">4. 启动Redis：</div>
+
+<div id="LC24" style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;"></div>
+
+<div id="LC25" style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;">sudo /etc/init.d/redis-server start</div>
+
+<div id="LC25" style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;"></div>
+
+</span></pre>
+<pre style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; font: normal normal normal 12px/normal Monaco, 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;  font-family: 'Bitstream Vera Sans Mono', 'Courier New', monospace; ">
+<span style="font-family: helvetica, arial, freesans, clean, sans-serif; line-height: 14px; white-space: normal;">
+
+<div id="LC1" style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;">添加一个服务</div>
+
+<div id="LC2" style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;">#sudo update-rc.d 服务名 defaults 99</div>
+
+<div id="LC4" style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;">删除一个服务</div>
+
+<div id="LC5" style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;">#sudo update-rc.d 服务名 remove</div>
+
+<div id="LC7" style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;">临时重启一个服务</div>
+
+<div id="LC8" style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;">#/etc/init.d/服务名 restart</div>
+
+<div id="LC10" style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;">临时关闭一个服务</div>
+
+<div id="LC11" style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;">#/etc/init.d/服务名 stop</div>
+
+<div id="LC13" style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;">临时启动一个服务</div>
+
+<div id="LC14" style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;">#/etc/init.d/服务名 start</div>
+
+</span>
+</pre>				

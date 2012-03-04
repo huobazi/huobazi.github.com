@@ -1,0 +1,11 @@
+---
+layout: post
+title: ! 'Serv-U FTPD 2.x/3.x/4.x/5.x remote overflow exploit V7.0 '
+comments: true
+date: 2004-02-28 11:16
+categories:
+- 闲言碎语
+- Serv-U
+---
+
+<p>5.0的版本也发现了溢出漏洞<br />源码<br /><a href="http://www.cnhonker.com/download/releases/Codes/Servu2.c">http://www.cnhonker.com/download/releases/Codes/Servu2.c</a><br /><br /></p>				

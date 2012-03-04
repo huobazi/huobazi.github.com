@@ -1,0 +1,58 @@
+---
+layout: post
+title: 商务中国的DNS解析，主机名不许有下划线
+comments: true
+date: 2009-08-02 16:10
+categories:
+- 闲言碎语
+- DNS
+- 域名
+- 商务中国
+---
+
+<p>就在刚才，就在刚才哦，本博客突然突然的就不能访问了，玉米是上午中国注册的，使用的是商务中国的dns服务，使用同样dns服务器的域名都可以访问，就这个突然离奇的不能访问了，去商务中国提了个ticket,过了不一会儿收到邮件说是已经回复了这个问题，赶紧登陆一看</p>
+<p><!--more--></p>
+<p></p>
+<hr size="1">
+<table border="0" cellspacing="1" cellpadding="3" width="90%" align="center" bgcolor="#dbebf7"><tbody>
+<tr>
+<td width="20%" valign="top" bgcolor="#afd1eb">问题序号:  </td>
+<td width="39%" valign="top">298804</td>
+<td width="15%" valign="top" bgcolor="#afd1eb">处理状态:</td>
+<td width="26%" valign="top">问题已回复</td>
+</tr>
+<tr>
+<td width="20%" valign="top" bgcolor="#afd1eb">您的问题:</td>
+<td colspan="3" valign="top" bgcolor="#ffffff"><span style="color: #ff0000;">dns挂了</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" bgcolor="#afd1eb">相关域名:  </td>
+<td width="39%" valign="top">aspxboy.com</td>
+<td width="15%" valign="top" bgcolor="#afd1eb">相关IP:</td>
+<td width="26%" valign="top"> </td>
+</tr>
+<tr>
+<td width="20%" valign="top" bgcolor="#afd1eb">问题关键字:</td>
+<td colspan="3" valign="top" bgcolor="#ffffff"> </td>
+</tr>
+<tr>
+<td width="20%" valign="top" bgcolor="#afd1eb">问题时间:</td>
+<td colspan="3" valign="top" bgcolor="#ffffff">2009-08-02 15:42:26.0</td>
+</tr>
+<tr>
+<td width="20%" valign="top" bgcolor="#afd1eb">问题内容:</td>
+<td colspan="3" valign="top" bgcolor="#ffffff">其他玉米ok，就这个无法解析。</td>
+</tr>
+<tr>
+<td width="20%" valign="top" bgcolor="#afd1eb">答复时间:</td>
+<td colspan="3" valign="top" bgcolor="#ffffff">2009-08-02 16:06:47.0</td>
+</tr>
+<tr>
+<td width="20%" valign="top" bgcolor="#afd1eb">答复问题:</td>
+<td colspan="3" valign="top" bgcolor="#ffffff"><span style="color: #ff0000;">您好！经查看您其中一条解析记录错误导致，mail_boy 61.139.70.3 域名解析不能有下划线的,请删除该条解析记录可恢复，谢谢!</span></td>
+</tr>
+<tr><td colspan="4"> </td></tr>
+</tbody></table>
+<p></p>
+<hr size="1">
+<br />则登陆商务的<a title="http://www.bizcn.com/domainportal" href="http://www.bizcn.com/domainportal" target="_blank">domainportal</a>删除该条，嘿嘿，还真的好了，不过....不过 以前可是好好的呀，猜测就在刚才商务中国的DNS系统可能升级了。				

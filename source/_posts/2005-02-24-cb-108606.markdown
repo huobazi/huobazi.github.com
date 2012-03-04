@@ -1,0 +1,10 @@
+---
+layout: post
+title: 1bu.com用的什么方法？
+comments: true
+date: 2005-02-24 14:17
+categories:
+- ASP.NET
+---
+
+<p>http://www.cnblogs.com.1bu.com/<br />可以访问<br />某些论坛竟然都可以登录甚至回复帖子<br />如：<br /><a href="http://www.im286.com.1bu.com/viewthread.php?tid=817721&amp;extra=page%3D1">http://www.im286.com.1bu.com/viewthread.php?tid=817721&amp;extra=page%3D1</a><br />长次以往，1bu强奸了所有搜索引擎，先看看<br /><a href="http://www.baidu.com/s?wd=site%3A1bu.com&amp;cl=3">http://www.baidu.com/s?wd=site%3A1bu.com&amp;cl=3</a><br />神奇哦<img height="20" src="/images/hbz_images/4b94bd6c-01e6-4ad4-b64e-fe905bb6b3eb.png7" width="20" border="0"><img height="19" src="/images/hbz_images/4b94bd6c-01e6-4ad4-b64e-fe905bb6b3eb.png8" width="19" border="0">，据说这个是8U8弄的<br /><a href="http://www.im286.com/viewthread.php?tid=817711&amp;extra=page%3D1">http://www.im286.com/viewthread.php?tid=817711&amp;extra=page%3D1</a><br /><br />暂时放首页，吸引眼球讨论，谢谢！</p>				

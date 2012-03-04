@@ -1,0 +1,10 @@
+---
+layout: post
+title: 笑一下
+comments: true
+date: 2005-03-30 13:40
+categories:
+- 闲言碎语
+---
+
+<p><span style="FONT-SIZE: 12px">八十年代初，摆个地摊就能发财，可很多人不敢。<br />九十年代初，买支股票就能挣钱，可很多人不信。<br />二十一世纪，开个网站就能赚钱，可很多人不试。</span></p>				

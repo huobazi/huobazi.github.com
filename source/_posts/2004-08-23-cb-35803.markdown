@@ -1,0 +1,59 @@
+---
+layout: post
+title: MSDN中文站增加了几篇关于Smart Client的翻译文章
+comments: true
+date: 2004-08-23 09:42
+categories:
+- ASP.NET
+- Asp.net
+---
+
+<p></p>
+<p>最近正在看智能客户端方面的资料,发现中文的甚少, <br />不料今日去MSDN中文站,发现本周更新里多出好多关于智能客户端的文章,正是前几日在看的英文文章的翻译 <br />能看到中文资料,太高兴了,谢谢译者!</p>
+<div id="huobazi">
+<li>
+<a href="http://www.microsoft.com/china/msdn/library/enterprisedevelopment/softwaredev/SCdnwinformswnftaskvision.mspx">TaskVision 解决方案概述：设计与实现</a><br /><br />
+</li>
+<li>
+<a href="http://www.microsoft.com/china/msdn/library/architecture/architecture/architecturetopic/SCOfflineAppBlockcover.mspx">智能客户端 Offline Application Block</a><br /><br />
+</li>
+<li>
+<a href="http://www.microsoft.com/china/msdn/library/architecture/architecture/architecturetopic/SCArchDeGuide/cover.mspx">智能客户端体系结构与设计指南</a><br /><br />
+</li>
+<li>
+<a href="http://www.microsoft.com/china/msdn/library/architecture/architecture/architecturetopic/SCArchDeGuide/ForewordbyMarkBoulter.mspx">智能客户端体系结构与设计指南：前言 — Mark Boulter</a><br /><br />
+</li>
+<li>
+<a href="http://www.microsoft.com/china/msdn/library/architecture/architecture/architecturetopic/SCArchDeGuide/Chapter1Introduction.mspx">智能客户端体系结构与设计指南：第 1 章 — 简介</a><br /><br />
+</li>
+<li>
+<a href="http://www.microsoft.com/china/msdn/library/architecture/architecture/architecturetopic/SCArchDeGuide/Chapter2HandlingData.mspx">智能客户端体系结构与设计指南：第 2 章 — 处理数据</a><br /><br />
+</li>
+<li>
+<a href="http://www.microsoft.com/china/msdn/library/architecture/architecture/architecturetopic/SCArchDeGuide/Chapter3GettingConnected.mspx">智能客户端体系结构与设计指南：第 3 章 — 建立连接</a><br /><br />
+</li>
+<li>
+<a href="http://www.microsoft.com/china/msdn/library/architecture/architecture/architecturetopic/SCArchDeGuide/Chapter4OccConnSC.mspx">智能客户端体系结构与设计指南：第 4 章 — 偶尔连接的智能客户端</a><br /><br />
+</li>
+<li>
+<a href="http://www.microsoft.com/china/msdn/library/architecture/architecture/architecturetopic/SCArchDeGuide/Chapter5SecuCons.mspx">智能客户端体系结构与设计指南：第 5 章 — 安全性考虑事项</a><br /><br />
+</li>
+<li>
+<a href="http://www.microsoft.com/china/msdn/library/architecture/architecture/architecturetopic/SCArchDeGuide/Chapter6UsingMultThr.mspx">智能客户端体系结构与设计指南：第 6 章 — 使用多线程</a><br /><br />
+</li>
+<li>
+<a href="http://www.microsoft.com/china/msdn/library/architecture/architecture/architecturetopic/SCArchDeGuide/Chapter7DeployUpdSCApp.mspx">智能客户端体系结构与设计指南：第 7 章 — 部署和更新智能客户端应用程序</a><br /><br />
+</li>
+<li>
+<a href="http://www.microsoft.com/china/msdn/library/architecture/architecture/architecturetopic/SCArchDeGuide/Chapter8SCAppPerf.mspx">智能客户端体系结构与设计指南：第 8 章 — 智能客户端应用程序性能</a><br /><br />
+</li>
+<li>
+<a href="http://www.microsoft.com/china/msdn/library/architecture/architecture/architecturetopic/AppendATestCases.mspx">智能客户端Offline Application Block：附录 A – 测试用例</a><br /><br />
+</li>
+<li>
+<a href="http://www.microsoft.com/china/msdn/library/architecture/architecture/architecturetopic/4OffAppBlocConfSecuCons.mspx">Offline Application Block 配置和安全注意事项</a><br /><br />
+</li>
+<li>
+<a href="http://www.microsoft.com/china/msdn/library/architecture/architecture/architecturetopic/3DevUsOfflineAppBloc.mspx">使用 Offline Application Block 进行开发</a><br />
+</li>
+</div>				

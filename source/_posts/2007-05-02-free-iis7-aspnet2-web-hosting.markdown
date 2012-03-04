@@ -1,0 +1,60 @@
+---
+layout: post
+title: IIS7 beta FREE WEBHOSTING FREE HOSTING FOR ASP.NET 2.0 IIS7
+comments: true
+date: 2007-05-02 10:18
+categories:
+- ASP.NET
+- Asp.net
+- IIS7
+---
+
+<h2 class="first bucket-header">Free IIS 7 Beta Hosting</h2>
+<table class="row-fade" cellspacing="0" cellpadding="0"><tbody>
+<tr>
+<th class="column-downloads">
+<br /><br />
+</th>
+<td class="column-name">
+<h3><a href="https://iis7.maximumaspbeta.com/"><font color="#002c99">Maximum ASP</font></a></h3>
+<br /><p>MaximumASP is proud to be the first Hoster partnered with Microsoft to help cutting edge developers and IT pros learn IIS 7, and showcase their applications to the world. We'll provide you with 50MB of disk space for your application, and a 10MB SQL Server 2005 database that will remain active through the Longhorn Server RC1 period.</p>
+</td>
+</tr>
+<tr>
+<th class="column-downloads">
+<br /><br />
+</th>
+<td class="column-name">
+<h3><a href="http://www.discountasp.net/sp_iis7hosting.aspx"><font color="#002c99">Discount ASP.net</font></a></h3>
+<br /><p>DiscountASP.NET is proud to be one of the few ASP.NET Hosting providers to offer Free Internet Information Services 7.0 Beta Hosting (IIS7 Hosting)!! All DiscountASP.NET customers can activate an IIS7 Hosting beta account as an optional addon at no additional cost. This FREE IIS7 Hosting beta program will continue until the official release of IIS 7.0.</p>
+</td>
+</tr>
+<tr>
+<th class="column-downloads">
+<br /><br />
+</th>
+<td class="column-name">
+<h3><a href="http://www.appliedi.net/iis7-hosting/"><font color="#002c99">Applied Innovations</font></a></h3>
+<br /><p>Applied Innovations is one of a select few Windows Hosting services to be invited by Microsoft's Internet Information Services team to offer IIS 7 beta hosting through the IIS7.0 Early Adopter Program. Best of all we're not just offering IIS 7 beta hosting, but we're offering FREE IIS7 Beta hosting to all web developers and not limiting it to just our customers. Plus we're the first to provide full support for FastCGI and PHP on IIS7.</p>
+</td>
+</tr>
+<tr>
+<th class="column-downloads">
+<br /><br />
+</th>
+<td class="column-name">
+<h3><a href="http://www.hostmysite.com/iis7/"><font color="#002c99">HostMySite.com</font></a></h3>
+<br /><p>HostMySite is one of the first to offer FREE hosting beta accounts for IIS7 through our exclusive partnership with Microsoft's IIS7 product team. Sign up now for FREE! The free IIS7 Beta trial will be in effect as long as IIS7 is in beta. </p>
+</td>
+</tr>
+<tr>
+<th class="column-downloads">
+<br /><br />
+</th>
+<td class="column-name">
+<h3><a href="http://www.webfusion.co.uk/webhosting/hosting.php?package=fusion_developer_.net_2.0&amp;platform=Windows"><font color="#002c99">Web Fusion</font></a></h3>
+<br /><p>Get a sneak preview of brand new beta Microsoft development technology, free with your Fusion Developer account! <br />You can activate an IIS7 Beta Hosting account as an additional option at no extra cost when you buy one of our Fusion Developer accounts, giving you the chance to try IIS7 before it’s released. IIS7 fully supports ASP.NET features, so you’ll find ASP.NET components like Forms Authentication will now be able to process all requests. </p>
+</td>
+</tr>
+</tbody></table>
+<p><br /><br />From:<a href="http://blogs.iis.net/bills/archive/2007/04/28/free-iis7-web-hosting.aspx"><br />http://blogs.iis.net/bills/archive/2007/04/28/free-iis7-web-hosting.aspx</a></p>				

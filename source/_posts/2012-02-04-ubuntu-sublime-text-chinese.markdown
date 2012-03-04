@@ -1,0 +1,25 @@
+---
+layout: post
+title: Ubuntu下设置 Sublime Text 2 显示中文 && 输入中文
+comments: true
+date: 2012-02-04 23:54
+categories:
+- 闲言碎语
+- 奇技淫巧
+- 代码片段
+- Ubuntu
+- Sublime Text2
+---
+
+<p>Sublime text 2在mac os 下用的很舒服，今天尝试在ubuntu下使用一下，发现汉字显示不了，</p>
+<p>后来找到方法：</p>
+<p>菜单栏 -&gt; Preferences -&gt; File Settings - User，在配置文件中增加：</p>
+<p><!--more--></p>
+<p>// Settings in here override those in "Default/Base File.sublime-settings", and<br />// are overridden in turn by file type specific settings. Place your settings<br />// here, to ensure they're preserved when upgrading.<br />{<br />    "font_face": "WenQuanYi Micro Hei Mono"<br />}<br />就OK了，其中文泉驿是著名的开源字体 <a title="http://wenq.org/" href="http://wenq.org/" target="_blank">http://wenq.org/</a></p>
+<p>然后我们来解决中文输入的问题</p>
+<p>sudo apt-get install scim</p>
+<p>sudo apt-get install scim-pinyin</p>
+<p>在“系统－首选项－scim设置里“</p>
+<p>scim设置－&gt;全局设置－&gt;将预编辑字符串嵌入到客户端中  勾去掉<br />scim设置-&gt;gtk-&gt;嵌入式候选词标 勾去掉</p>
+<p>下来 在“系统－语言支持”里面选上“scim-bridge”就可以了,记得这些修改完要注销重新登录进来哦。</p>
+<p>或者 ,打开终端,输入 pkill scim,然后输入 scim -d，如果不起作用，那还是建议你注销一下</p>				

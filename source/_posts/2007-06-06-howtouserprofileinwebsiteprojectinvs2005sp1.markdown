@@ -1,0 +1,22 @@
+---
+layout: post
+title: 如何在Web App Project 或者 Web Site Project的App_Code 内使用 Profile/ProfileCommon
+comments: true
+date: 2007-06-06 22:52
+categories:
+- ASP.NET
+- Asp.net
+- ProfileCommon
+- Profile
+---
+
+<p>在 web site project 内 可以很方便的使用 Profile/ProfileCommon 来 访问我们在web.config 的profile节内定义的properties ， 并且有很爽的 intellisense <br />然而在Web App Project或者Web Site Project的App_Code内使用的时候 编译都通不过的，因为 Profile 是 web site project 模型 在页面 执行时候创建在HttpContext的，Web Site Project 或者App_Code编译的时候还没有页面实例呢，何谈HttpContext, 当然无法使用了<br /><br />引用<a title="http://weblogs.asp.net/scottgu/" href="http://weblogs.asp.net/scottgu/" target="_blank">scottgu</a>的原话解释“This is supported because with the VS 2005 Web Site Project option Visual Studio is dynamically creating and adding a "ProfileCommon" class named "Profile" into every code-behind instance”，那么怎么办呢 <a title="http://weblogs.asp.net/scottgu/" href="http://weblogs.asp.net/scottgu/" target="_blank">scottgu</a> 支招------“VS 2005 Web Application Projects don't automatically support generating a strongly-typed Profile class proxy. <strong style="FONT-SIZE: 18pt; COLOR: #ff0000">However</strong>, you <a style="COLOR: #ff0000" href="http://www.gotdotnet.com/workspaces/workspace.aspx?id=406eefba-2dd9-4d80-a48c-b4f135df4127"><strong>can use this free download</strong></a><span style="COLOR: #ff0000"> </span>to automatically keep your own proxy class in sync with the profile configuration”。<br /><br />我们可以到 <a href="http://www.gotdotnet.com/" target="_blank">gotdotnet </a>上下载这个 addin  安装，经我测试 这个东西装在中文VS2005 SP1 上右键不会出现菜单(只会出现在外部程序管理器内，看的到用不成，不开心)。<br />好在他有源码的，我们用他的源码 找到 大概 40行上下<br />string toolsMenuName ;定义部分 <br />直接 string toolsMenuName = "工具"; 然后下面的 try catch 注释掉----编译---然后把dll文件<br />替换到 C:\Documents and Settings\武眉博\My Documents\Visual Studio 2005\AddIns<br />就可以用了（原因可能是他的资源文件有问题）<br />接下来按照readme使用吧。<br />==================================================<br />To use the generator right click on web.config in a Web Application Project and<br />select "Generate WebProfile."  This will create a WebProfile class in your<br />project based on the current profile setting sin Web.Config.  If you make a <br />change to your profile setting you need to run the tool again to update the <br />WebProfile class.  The WebProfile class is simply a thin wrapper that has<br />strongly typed accessors to profile properties.</p>
+<br /><p>To use the web profile class in a page create an accessor like this:</p>
+<br /><p>    // C# accessor<br />    private WebProfile Profile<br />    {<br />        get { return new WebProfile(Context.Profile); }<br />    }</p>
+<br /><p>    ' VB accessor<br />    Private ReadOnly Property Profile() As WebProfile<br />        Get<br />            Return New WebProfile(Context.Profile)<br />        End Get<br />    End Property</p>
+<br /><p>Then you can use it like this:</p>
+<br /><p>    // C# use or accessor<br />    string s = Profile.MyProperty;<br />    Profile.MyGroup.MyProperty = "value";</p>
+<br /><p>    ' VB use of accessor<br />    Dim prop As String = Profile.MyProperty<br />    Profile.MyGroup.MyProperty = "value"</p>
+<br /><p>You can also access the current profile using the static Current property<br />like this:</p>
+<br /><p>    // C# use of Current property<br />    string s = WebProfile.Current.MyProperty;<br />    WebProfile.Current.MyGroup.MyProperty = "value";</p>
+<br /><p>    // VB use of Current property<br />    Dim s As String = WebProfile.Current.MyProperty<br />    WebProfile.Current.MyGroup.MyProperty = "value"<br />    ========================================================<br />如果你用的是Web Site Project 想在App_Code内用Profile那么建议 创建一个WebSiteProject web.config拷贝过去仍然使用这个AddIn生成一个WebProfile.cs拷贝回你的app_code内就可以了（哎，怎么感觉像是说了个废话，还不如直接用Web App Project呢）<br />OK,就这么几步了。记在这里希望对朋友们有用，睡觉了。<br /><br />参考资料： <a href="http://webproject.scottgu.com/CSharp/migration2/migration2.aspx">http://webproject.scottgu.com/CSharp/migration2/migration2.aspx</a><br /></p>				
