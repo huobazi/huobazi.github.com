@@ -67,7 +67,7 @@ module Jekyll
 
       html = ''
       lists.each do | category, counter |
-        url = category_dir + category.gsub(/_|\P{Word}/, '-').gsub(/-{2,}/, '-').downcase
+        url = category_dir + category.force_encoding('utf-8').gsub(/_|\P{Word}/, '-').gsub(/-{2,}/, '-').downcase
         style = "font-size: #{100 + (60 * Float(counter)/max)}%"
         html << "<a href='#{url}' style='#{style}'>#{category.capitalize}"
         if @opts['counter']
@@ -96,7 +96,7 @@ module Jekyll
       category_dir = config['root'] + config['category_dir'] + '/'
       categories = context.registers[:site].categories
       categories.keys.sort_by{ |str| str.downcase }.each do |category|
-        url = category_dir + category.gsub(/_|\P{Word}/, '-').gsub(/-{2,}/, '-').downcase
+        url = category_dir + category.force_encoding('utf-8').gsub(/_|\P{Word}/, '-').gsub(/-{2,}/, '-').downcase
         html << "<li><a href='#{url}'>#{category.capitalize}"
         if @opts['counter']
           html << " (#{categories[category].count})"

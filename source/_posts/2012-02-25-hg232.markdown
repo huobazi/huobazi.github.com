@@ -1,5 +1,6 @@
 ---
 layout: post
+published: true
 title: HG232破解一例
 comments: true
 date: 2012-02-25 14:25
@@ -37,16 +38,12 @@ categories:
 如果有ruby运行环境，则可以使用代码库里的decrypt.rb另存到本地来，把要破解或者加密的文件放入相同目录,在命令行运行 ruby decrypt.rb 按照提示做就可以了
 #####2.3 超级管理员密码
 到文本编辑软件打开破解后的文件，查找telecomadmin，找到
-```
-    <X_ATP_UserInfoInstance InstanceID="1" Username="telecomadmin" Userpassword="telecomadmin******" Userlevel="2" Busy="0" LoginIP=""/>
-```
+	<X_ATP_UserInfoInstance InstanceID="1" Username="telecomadmin" Userpassword="telecomadmin******" Userlevel="2" Busy="0" LoginIP=""/>
 Userpassword里面的就是超级管理员的密码了。一般是telecomadmin加串数字。
 
 ###3. 设置
 后面的情况就大同小异了，网上很多介绍，开路由，，自动拨号，开无线，一堆一堆的教程，另外有些设置在管理平台是没有的，比如下面的ftp和telnet设置，如果又必要使用这些相功能，修改配置文件，加密后，登陆后台后启用从usb恢复设备这个功能，然后把配置文件夹自己修改后，再恢复回去，就可以了。
-```
-    <X_CT-COM_ServiceManage TelnetEnable="0" TelnetUserName="!!Huawei" TelnetPassword="@HuaweiHgw" TelnetPort="23" WebWanAccessEnable="0" FtpEnable="1" FtpUserName="ftp" FtpPassword="ftp" FtpPort="21" FtpPath="/mnt"/>
-```
+	<X_CT-COM_ServiceManage TelnetEnable="0" TelnetUserName="!!Huawei" TelnetPassword="@HuaweiHgw" TelnetPort="23" WebWanAccessEnable="0" FtpEnable="1" FtpUserName="ftp" FtpPassword="ftp" FtpPort="21" FtpPath="/mnt"/>
 ###4. 代码
 本文提及的代码可以在[https://github.com/huobazi/hg232](https://github.com/huobazi/hg232)下载到
 
