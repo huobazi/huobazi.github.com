@@ -11,15 +11,15 @@
     }
     var o_url = window.location.href.toLowerCase();
     if(o_url.startWith('http://huobazi.aspxboy.com/20')){
-      o_url = o_url.replace('http://huobazi.aspxboy.com/','http://huobazi.aspxboy.com/blog');
+      o_url = o_url.replace('http://huobazi.aspxboy.com/','http://huobazi.aspxboy.com/blog/');
       window.location.href = o_url;
     }
     if(o_url.startWith('http://huobazi.aspxboy.com/tag')){
-      o_url = o_url.replace('http://huobazi.aspxboy.com/','http://huobazi.aspxboy.com/blog');
+      o_url = o_url.replace('http://huobazi.aspxboy.com/','http://huobazi.aspxboy.com/blog/');
       window.location.href = o_url;
     }
     if(o_url.startWith('http://huobazi.aspxboy.com/category')){
-      o_url = o_url.replace('http://huobazi.aspxboy.com/category/','http://huobazi.aspxboy.com/blog/tag/');
+      o_url = o_url.replace('http://huobazi.aspxboy.com/category','http://huobazi.aspxboy.com/blog/tag');
       window.location.href = o_url;
     }
    </script>
@@ -37,7 +37,7 @@
 <body>
   <div class="dialog">
     <a href="/"><img src="http://huobazi.aspxboy.com/images/404.png" /></a>
-    <p>It looks like that page you were looking has been mislaid, sorry. Go to<a href="/">Homepage<a/></p>
+    <p>It looks like that page you were looking has been mislaid, sorry.<br /> Go to <a href="/">Homepage<a/></p>
   </div>
  <script type="text/javascript">
     var _gaq = _gaq || [];
