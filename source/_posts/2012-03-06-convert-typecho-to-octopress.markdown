@@ -10,6 +10,7 @@ categories:
 - Wordpress
 - Ruby
 - 折腾
+- 闲言碎语
 ---
 
 人生在于折腾,所以将博客转换到Octopress了  
@@ -18,7 +19,7 @@ categories:
 ----------------->  
 2004年4月,[搬到博客园，以前的记录停止维护，后来数据丢失](http://huobazi.cnblogs.com/)  
 ----------------->  
-2009年6月,[搬出博客园,转还到Wordpress](http://huobazi.aspxboy.com/blog/2009/06/21/my-blog-moved-to-wp/)当时在旧博客上写了script，告知访问者此处停止更新，询问访问者是否停留在当前页，或转向新页面(可能有更新),因此被封号 @_@|||  
+2009年6月,[搬出博客园,转换到Wordpress](http://huobazi.aspxboy.com/blog/2009/06/21/my-blog-moved-to-wp/)当时在旧博客上写了script，告知访问者此处停止更新，询问访问者是否停留在当前页，或转向新页面(可能有更新),因此被封号 @_@|||  
 ----------------->  
 2009年7月,[博客又转换到Typecho平台](http://huobazi.aspxboy.com/blog/2009/07/04/myblog-from-wordpress-to-typecho/)  
 ----------------->  
