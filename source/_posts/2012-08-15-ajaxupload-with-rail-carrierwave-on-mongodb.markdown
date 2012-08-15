@@ -15,7 +15,7 @@ categories:
 # Ajax Upload With Carrierwave and Mongoid
 [file-uploader](https://github.com/valums/file-uploader)是一个用 Javascrit 编写的文件上传 Libary,在这里我使用[CarrierWave](https://github.com/jnicklas/carrierwave)和 [Mongoid](https://github.com/mongoid/mongoid) 来完成多文件的无刷新上传功能
 
-# RubyGems
+## RubyGems
 
 ```ruby
 gem 'mongoid', '3.0.4'
@@ -25,7 +25,7 @@ gem 'mini_magick', '3.4'
 gem 'rack-raw-upload', '1.1.0'
 ```
 
-# Model 
+## Model 
 
 ```ruby
 class Screenshot
@@ -42,7 +42,7 @@ end
 ```
 <!--more-->
 
-# Controller
+## Controller
 
 ```ruby
 class ScreenshotsController < ApplicationController
@@ -84,7 +84,7 @@ class ScreenshotsController < ApplicationController
 end
 ```
 
-# Uploader
+## Uploader
 
 ```ruby
 # encoding: utf-8
@@ -126,7 +126,7 @@ class ScreenshotUploader < CarrierWave::Uploader::Base
 end
 ```
 
-# Javascript
+## Javascript
 
 ```javascript
   $(document).ready(function(){
