@@ -51,4 +51,10 @@ bind -t vi-copy y copy-selection
 
 ``` 
 
+另外不要忘记设置vim的
+
+```bash
+set clipboard=unnamed
+```
+
 完整的配置[https://github.com/huobazi/dotfiles](https://github.com/huobazi/dotfiles)
