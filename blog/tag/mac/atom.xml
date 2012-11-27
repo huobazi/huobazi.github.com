@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mac | 武眉博]]></title>
   <link href="http://huobazi.github.com/blog/tag/mac/atom.xml" rel="self"/>
   <link href="http://huobazi.github.com/"/>
-  <updated>2012-11-27T20:43:08+08:00</updated>
+  <updated>2012-11-27T20:47:49+08:00</updated>
   <id>http://huobazi.github.com/</id>
   <author>
     <name><![CDATA[Marble Wu]]></name>
@@ -40,8 +40,9 @@ brew install macvim --HEAD --override-system-vim
 
 <p>下来，发现在OSX内用tmux后仍然无法访问＋和＊寄存器
 一直提示 Nothing in ＋ register
-SO上找找，发现
-<code>bash
+SO上找找，发现</p>
+
+<p><code>bash
  brew install reattach-to-user-namespace
 </code>
 装这个补丁就可以访问tmux的buffer了
@@ -59,8 +60,9 @@ bind p paste-buffer
 bind -t vi-copy v begin-selection
 bind -t vi-copy y copy-selection</p>
 
-<p>```
-完整的配置<a href="https://github.com/huobazi/dotfiles">https://github.com/huobazi/dotfiles</a></p>
+<p>```</p>
+
+<p>完整的配置<a href="https://github.com/huobazi/dotfiles">https://github.com/huobazi/dotfiles</a></p>
 ]]></content>
   </entry>
   

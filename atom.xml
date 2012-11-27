@@ -4,7 +4,7 @@
   <title><![CDATA[武眉博]]></title>
   <link href="http://huobazi.github.com/atom.xml" rel="self"/>
   <link href="http://huobazi.github.com/"/>
-  <updated>2012-11-27T20:43:08+08:00</updated>
+  <updated>2012-11-27T20:47:49+08:00</updated>
   <id>http://huobazi.github.com/</id>
   <author>
     <name><![CDATA[Marble Wu]]></name>
@@ -51,31 +51,38 @@
 SO上找找，发现</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'> brew install reattach-to-user-namespace
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>装这个补丁就可以访问tmux的buffer了
+最后贴一下.tmux.conf</p>
+
+<!--more-->
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'> brew install reattach-to-user-namespace
-</span><span class='line'> <span class="sb">```</span>
-</span><span class='line'>装这个补丁就可以访问tmux的buffer了
-</span><span class='line'>最后贴一下.tmux.conf
-</span><span class='line'>
-</span><span class='line'>&lt;!--more--&gt;
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">set</span>-option -g default-shell <span class="nv">$SHELL</span>
+</span><span class='line'><span class="nb">set</span>-option -g default-command <span class="s2">&quot;reattach-to-user-namespace -l zsh&quot;</span>
+</span><span class='line'><span class="nb">bind </span>y run <span class="s2">&quot;tmux save-buffer - | reattach-to-user-namespace pbcopy&quot;</span>
+</span><span class='line'>unbind p
+</span><span class='line'><span class="nb">bind </span>p paste-buffer
+</span><span class='line'><span class="nb">bind</span> -t vi-copy v begin-selection
+</span><span class='line'><span class="nb">bind</span> -t vi-copy y copy-selection
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>bash
-set-option -g default-shell $SHELL
-set-option -g default-command &#8220;reattach-to-user-namespace -l zsh&#8221;
-bind y run &#8220;tmux save-buffer - | reattach-to-user-namespace pbcopy&#8221;
-unbind p
-bind p paste-buffer
-bind -t vi-copy v begin-selection
-bind -t vi-copy y copy-selection</p>
+<p></p>
 
-<p>&#8220;`
-完整的配置<a href="https://github.com/huobazi/dotfiles">https://github.com/huobazi/dotfiles</a></p>
+<p>完整的配置<a href="https://github.com/huobazi/dotfiles">https://github.com/huobazi/dotfiles</a></p>
 ]]></content>
   </entry>
   
