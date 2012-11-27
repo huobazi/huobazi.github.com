@@ -1,0 +1,349 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>关于请求的目录不存在而需要url重写 - 武眉博</title>
+  <meta name="author" content="Marble Wu">
+
+  
+  <meta name="description" content="在http://pwqzc.cnblogs.com/archive/2005/11/21/281331.html看到的讨论其实csdn的那两个帖子http://community.csdn.net/Expert/topic/4401/4401936.xml?temp=.317898 http:// &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://huobazi.github.com/blog/2005/11/21/nodirurlrewrite/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="武眉博" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-56321-3']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">武眉博</a></h1>
+  
+    <h2>Marble's blog.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:huobazi.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/links">Friends</a></li>
+  <li><a href="/about">About</a></li>
+  
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">关于请求的目录不存在而需要url重写</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-11-21T21:52:00+08:00" pubdate data-updated="true">Nov 21<span>st</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>在<a href="http://pwqzc.cnblogs.com/archive/2005/11/21/281331.html" target="_blank">http://pwqzc.cnblogs.com/archive/2005/11/21/281331.html</a>看到的讨论<br />其实csdn的那两个帖子<br /><a href="http://community.csdn.net/Expert/topic/4401/4401936.xml?temp=.317898" target="_blank">http://community.csdn.net/Expert/topic/4401/4401936.xml?temp=.317898</a></p>
+
+
+<p><a href="http://community.csdn.net/Expert/topic/4406/4406615.xml?temp=.513714" target="_blank">http://community.csdn.net/Expert/topic/4406/4406615.xml?temp=.513714</a><br />中已经有网友们说到方法了，hander module 都可以做<br />在iis中设置*.*映射到 aspnet_isapi.dll ISAPI 扩展，我测试后没有发现什么访问被拒绝访问的401.3错误,<br />需要输入用户名的问题。<br /><img style="width: 627px; height: 396px; border: 0px;" src="/images/hbz_images/5c851a33-204d-4d19-a338-3220cd1979ae.gif" border="0" alt=""><br />  </p>
+
+
+<p>以下在代码xpsp2 .net1.1 sp1 下测试通过</p>
+
+
+<div style="cursor: hand; color: blue; text-align: left; text-decoration: underline;" title="&gt;-点此复制到剪贴板-&lt;" onclick='function anonymous() { var obj = document.getElementById("code_huobazi_code");    if( obj != null )   {       var rng = document.body.createTextRange();      rng.moveToElementText(obj);         rng.scrollIntoView();       rng.select();       rng.execCommand("Copy");        rng.collapse(false);    } }'>[Copy to clipboard]</div>
+
+
+<p><textarea id="code_huobazi_code" style="width: 632px; height: 298px; background-color: #ffcc00;" cols="84" rows="4">using System;&lt;br /&gt; using System.Web;&lt;br /&gt; using System.Web.UI;&lt;/div&gt; &lt;div  mce_tmp=&#8221;1&#8221;&gt;namespace AspxBoy.VisualUrl&lt;br /&gt; {&lt;br /&gt;   /// &lt;summary&gt;&lt;br /&gt;     /// VisualUrlHttpHander 的摘要说明。&lt;br /&gt;  /// &lt;/summary&gt;&lt;br /&gt;    public class VisualUrlHttpHander : IHttpHandlerFactory&lt;br /&gt;  {&lt;br /&gt;       #region IHttpHandlerFactory 成员&lt;/div&gt; &lt;div  mce_tmp=&#8221;1&#8221;&gt;     public void ReleaseHandler(IHttpHandler handler)&lt;br /&gt;        {&lt;br /&gt;           // TODO:  添加 VisualUrlHttpHander.ReleaseHandler 实现&lt;br /&gt;      }&lt;/div&gt; &lt;div  mce_tmp=&#8221;1&#8221;&gt;      public IHttpHandler GetHandler(HttpContext context, string requestType, string url, string pathTranslated)&lt;br /&gt;      {&lt;br /&gt;           // TODO:  添加 VisualUrlHttpHander.GetHandler 实现&lt;/div&gt; &lt;div  mce_tmp=&#8221;1&#8221;&gt;         string rawUrl = context.Request.RawUrl.Trim();&lt;/div&gt; &lt;div  mce_tmp=&#8221;1&#8221;&gt;         ///&lt;br /&gt;             ///这里只示范地址是http://domainname/xxx&lt;br /&gt;            ///和http://domainname/xxx/这样的地址&lt;br /&gt;             ///&lt;br /&gt;             string userName = rawUrl.TrimStart(&#8216;/&#8217;).TrimEnd(&#8216;/&#8217;);&lt;br /&gt;           string sendToUrl = url;&lt;br /&gt;             string filePath = pathTranslated;&lt;br /&gt;           string sendToUrlLessQString;&lt;/div&gt; &lt;div  mce_tmp=&#8221;1&#8221;&gt;           sendToUrl = Globals.AppPath + &#8220;/get.aspx?username=&#8221; + userName;&lt;/div&gt; &lt;div  mce_tmp=&#8221;1&#8221;&gt;            Globals.RewriteUrl(context, sendToUrl, out sendToUrlLessQString, out filePath);&lt;/div&gt; &lt;div  mce_tmp=&#8221;1&#8221;&gt;            return PageParser.GetCompiledPageInstance(sendToUrlLessQString, filePath, context);&lt;br /&gt;         }&lt;/div&gt; &lt;div  mce_tmp=&#8221;1&#8221;&gt;      #endregion&lt;/div&gt; &lt;div  mce_tmp=&#8221;1&#8221;&gt; }&lt;/div&gt; &lt;div  mce_tmp=&#8221;1&#8221;&gt;  public class Globals&lt;br /&gt;    {&lt;br /&gt;       /// &lt;summary&gt;&lt;br /&gt;         /// 应用程序路径&lt;br /&gt;      /// &lt;/summary&gt;&lt;br /&gt;        public static string AppPath&lt;br /&gt;        {&lt;/div&gt; &lt;div  mce_tmp=&#8221;1&#8221;&gt;          get&lt;br /&gt;             {&lt;br /&gt;               string applicationPath = &#8220;/&#8221;;&lt;/div&gt; &lt;div  mce_tmp=&#8221;1&#8221;&gt;              if(HttpContext.Current != null)&lt;br /&gt;                 {&lt;br /&gt; applicationPath = HttpContext.Current.Request.ApplicationPath;&lt;br /&gt;                }&lt;/div&gt; &lt;div  mce_tmp=&#8221;1&#8221;&gt;              if (applicationPath == &#8220;/&#8221;)&lt;br /&gt;                 {&lt;br /&gt; return string.Empty;&lt;br /&gt;              }&lt;br /&gt;               else&lt;br /&gt;                {&lt;br /&gt; if (applicationPath.EndsWith(&#8220;/&#8221;))&lt;br /&gt; {&lt;br /&gt;  return applicationPath;&lt;br /&gt; }&lt;br /&gt; else&lt;br /&gt; {&lt;br /&gt;    return applicationPath + &#8220;/&#8221;;&lt;br /&gt; }&lt;br /&gt;                 }&lt;/div&gt; &lt;div  mce_tmp=&#8221;1&#8221;&gt;          }&lt;br /&gt;       }&lt;br /&gt;       /// &lt;summary&gt;&lt;br /&gt;         /// 在ASP.NET中执行URL重写&lt;br /&gt;        /// see http://www.aspxboy.com/484/archive.aspx&lt;br /&gt;         /// &lt;/summary&gt;&lt;br /&gt;        /// &lt;param name=&#8221;context&#8221;&gt;&lt;/param&gt;&lt;br /&gt;      /// &lt;param name=&#8221;sendToUrl&#8221;&gt;&lt;/param&gt;&lt;br /&gt;        /// &lt;param name=&#8221;sendToUrlLessQString&#8221;&gt;&lt;/param&gt;&lt;br /&gt;         /// &lt;param name=&#8221;filePath&#8221;&gt;&lt;/param&gt;&lt;br /&gt;         public static  void RewriteUrl(HttpContext context, string sendToUrl, out string sendToUrlLessQString, out string filePath)&lt;br /&gt;         {&lt;br /&gt;           if (context.Request.QueryString.Count &gt; 0)&lt;br /&gt;           {&lt;br /&gt;               if (sendToUrl.IndexOf(&#8216;?&#8217;) != -1)&lt;br /&gt;               {&lt;br /&gt; sendToUrl += &#8220;&amp;&#8221; + context.Request.QueryString.ToString();&lt;br /&gt;                }&lt;br /&gt;               else&lt;br /&gt;                {&lt;br /&gt; sendToUrl += &#8220;?&#8221; + context.Request.QueryString.ToString();&lt;br /&gt;                }&lt;br /&gt;           }&lt;/div&gt; &lt;div  mce_tmp=&#8221;1&#8221;&gt;          string queryString = String.Empty;&lt;br /&gt;          sendToUrlLessQString = sendToUrl;&lt;br /&gt;           if (sendToUrl.IndexOf(&#8216;?&#8217;) &gt; 0)&lt;br /&gt;          {&lt;br /&gt;               sendToUrlLessQString = sendToUrl.Substring(0, sendToUrl.IndexOf(&#8216;?&#8217;));&lt;br /&gt;              queryString = sendToUrl.Substring(sendToUrl.IndexOf(&#8216;?&#8217;) + 1);&lt;br /&gt;          }&lt;/div&gt; &lt;div  mce_tmp=&#8221;1&#8221;&gt;          filePath = string.Empty;&lt;br /&gt;            filePath = context.Server.MapPath(sendToUrlLessQString);&lt;/div&gt; &lt;div  mce_tmp=&#8221;1&#8221;&gt;           context.RewritePath(sendToUrlLessQString, String.Empty, queryString);&lt;br /&gt;       }&lt;br /&gt;   }&lt;br /&gt; }&lt;/div&gt; &lt;div  mce_tmp=&#8221;1&#8221;&gt;</textarea></p>
+
+
+<p>下载<br /><a href="http://www.cnblogs.com/Files/huobazi/VisualUrl.rar">http://www.cnblogs.com/Files/huobazi/VisualUrl.rar</a></p>
+
+
+<p></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Marble Wu</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-11-21T21:52:00+08:00" pubdate data-updated="true">Nov 21<span>st</span>, 2005</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/tag/asp-net/'>ASP.NET</a>, <a class='category' href='/blog/tag/asp-net/'>Asp.net</a>, <a class='category' href='/blog/tag/url-rewrite/'>Url Rewrite</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://huobazi.github.com/blog/2005/11/21/nodirurlrewrite/" data-via="huobazi" data-counturl="http://huobazi.github.com/blog/2005/11/21/nodirurlrewrite/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2005/11/16/cb-277830/" title="Previous Post: Google的网站统计、分析系统">&laquo; Google的网站统计、分析系统</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2005/12/12/freeaspdotnetsqlserverexpresswebhosting/" title="Next Post: 免费的Asp.net2.0 Sqlserver express的学习空间">免费的Asp.net2.0 Sqlserver express的学习空间 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("huobazi", 10, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/huobazi" class="twitter-follow-button" data-show-count="false">Follow @huobazi</a>
+  
+</section>
+
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/11/26/osx-shang-mo-ren-vim-bu-zhi-chi-plus-ji-cun-qi/">OSX 上默认 VIM 不支持 + 寄存器</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/02/tmux-diu-shi-huo-xian-shi-vimde-pei-se/">tmux丢失或显示vim的配色</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/09/12/import-data-from-mysql-to-postgresql/">将 MySQL 的数据导入 PostgreSQL</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/15/ajaxupload-with-rail-carrierwave-on-mongodb/">使用AjaxUpload和Carrierwave在Rails && Mongoid中批量上传图片'</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/06/convert-typecho-to-octopress/">从typecho转换到Octopress了</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/02/25/hg232/">HG232破解一例</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/02/13/ios-uiactionsheetdelegate/">iOS通过UIActionSheetDelegate来实现警告的方法</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/02/04/ubuntu-sublime-text-chinese/">Ubuntu下设置 Sublime Text 2 显示中文 && 输入中文</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/12/09/ios-hide-keyboard-when-touch/">[How to]在iOS中点击文本框以外区域，隐藏键盘</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/11/28/how-to-uninstall-xcode/"> [How to] 如何卸载Xcode</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/huobazi">@huobazi</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'huobazi',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Marble Wu -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'huobaziblog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://huobazi.github.com/blog/2005/11/21/nodirurlrewrite/';
+        var disqus_url = 'http://huobazi.github.com/blog/2005/11/21/nodirurlrewrite/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

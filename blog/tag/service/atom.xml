@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Service | 武眉博]]></title>
+  <link href="http://huobazi.github.com/blog/tag/service/atom.xml" rel="self"/>
+  <link href="http://huobazi.github.com/"/>
+  <updated>2012-11-27T11:09:53+08:00</updated>
+  <id>http://huobazi.github.com/</id>
+  <author>
+    <name><![CDATA[Marble Wu]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[不改程序, 创建同一个程序不同服务名的方法]]></title>
+    <link href="http://huobazi.github.com/blog/2009/08/06/mulit-window-service-one-exe/"/>
+    <updated>2009-08-06T23:28:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2009/08/06/mulit-window-service-one-exe</id>
+    <content type="html"><![CDATA[<p>以往写windows service都需要个ProjectInstaller和serviceInstaller并配置serviceName，这样build出来的exe在install成windows service时我们会：</p>
+
+
+<pre>@echo 安装WindowService
+@Set Path=C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727;
+@Set svn_dir=%cd%
+installutil %svn_dir%\MyServiceDemo.exe
+pause
+@echo 成功！</pre>
+
+
+<p>但服务名被我们编译在程序里了，如果这个exe想被装很多次服务怎么办呢？<br />今天从同事Martin Jia那里学来一个好方法，可以不用ProjectInstaller、serviceInstaller这种东西，直接安装exe为windows service并在安装时指定服务名称</p>
+
+
+<p><!--more--></p>
+
+
+<p>安装服务：</p>
+
+
+<pre>sc create 服务名 binpath= "路径" displayname= "显示名"</pre>
+
+
+<p>卸载服务</p>
+
+
+<pre>sc delete 服务名</pre>
+
+
+<p></p>
+]]></content>
+  </entry>
+  
+</feed>

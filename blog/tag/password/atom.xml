@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Password | 武眉博]]></title>
+  <link href="http://huobazi.github.com/blog/tag/password/atom.xml" rel="self"/>
+  <link href="http://huobazi.github.com/"/>
+  <updated>2012-11-27T11:09:53+08:00</updated>
+  <id>http://huobazi.github.com/</id>
+  <author>
+    <name><![CDATA[Marble Wu]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[在Console下输入密码，以星号代替。]]></title>
+    <link href="http://huobazi.github.com/blog/2011/06/22/password-masking-in-csharp-console-application/"/>
+    <updated>2011-06-22T23:03:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2011/06/22/password-masking-in-csharp-console-application</id>
+    <content type="html"><![CDATA[<p>如何在Console下输入密码，像*unix系统下那样不显示，或者显示星号，如下代码经过测试：</p>
+
+
+<p><!--more--></p>
+
+
+<div class="source" style="font-family: '[object HTMLOptionElement]', Consolas, 'Lucida Console', 'Courier New'; color: #ffffff; background-color: #333333; ">
+<p><span style="color: #87ceeb; ">/// &lt;summary&gt;</span><br /><span style="color: #87ceeb; ">/// Gets the console secure password.</span><br /><span style="color: #87ceeb; ">/// &lt;/summary&gt;</span><br /><span style="color: #87ceeb; ">/// &lt;returns&gt;&lt;/returns&gt;</span><br /><span style="color: #f0e68c; ">private</span> <span style="color: #f0e68c; ">static</span> <span style="color: #ffffff; ">SecureString</span> <span style="color: #ffffff; ">GetConsoleSecurePassword</span>( )<br /><span style="color: #ffffff; ">{</span><br />    <span style="color: #ffffff; ">SecureString</span> <span style="color: #ffffff; ">pwd</span> <span style="color: #ffffff; ">=</span> <span style="color: #f0e68c; ">new</span> <span style="color: #ffffff; ">SecureString</span>( );<br />    <span style="color: #f0e68c; ">while</span> ( <span style="color: #f0e68c; ">true</span> )<br />    <span style="color: #ffffff; ">{</span><br />        <span style="color: #ffffff; ">ConsoleKeyInfo</span> <span style="color: #ffffff; ">i</span> <span style="color: #ffffff; ">=</span> <span style="color: #ffffff; ">Console</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">ReadKey</span>( <span style="color: #f0e68c; ">true</span> );<br />        <span style="color: #f0e68c; ">if</span> ( <span style="color: #ffffff; ">i</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Key</span> <span style="color: #ffffff; ">==</span> <span style="color: #ffffff; ">ConsoleKey</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Enter</span> )<br />        <span style="color: #ffffff; ">{</span><br />            <span style="color: #f0e68c; ">break</span>;<br />        <span style="color: #ffffff; ">}</span><br />        <span style="color: #f0e68c; ">else</span> <span style="color: #ffffff; ">if</span> ( <span style="color: #ffffff; ">i</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Key</span> <span style="color: #ffffff; ">==</span> <span style="color: #ffffff; ">ConsoleKey</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Backspace</span> )<br />        <span style="color: #ffffff; ">{</span><br />            <span style="color: #ffffff; ">pwd</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">RemoveAt</span>( <span style="color: #ffffff; ">pwd</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Length</span> <span style="color: #ffffff; ">-</span> <span style="color: #ffffff; ">1</span> );<br />            <span style="color: #ffffff; ">Console</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Write</span>( <span style="color: #ffffff; ">"\b \b"</span> );<br />        <span style="color: #ffffff; ">}</span><br />        <span style="color: #f0e68c; ">else</span><br />        <span style="color: #ffffff; ">{</span><br />            <span style="color: #ffffff; ">pwd</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">AppendChar</span>( <span style="color: #ffffff; ">i</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">KeyChar</span> );<br />            <span style="color: #ffffff; ">Console</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Write</span>( <span style="color: #ffffff; ">"*"</span> );<br />        <span style="color: #ffffff; ">}</span><br />    <span style="color: #ffffff; ">}</span><br />    <span style="color: #f0e68c; ">return</span> <span style="color: #ffffff; ">pwd</span>;<br /><span style="color: #ffffff; ">}</span></p>
+<p><span style="color: #87ceeb; ">/// &lt;summary&gt;</span><br /><span style="color: #87ceeb; ">/// Gets the console password.</span><br /><span style="color: #87ceeb; ">/// &lt;/summary&gt;</span><br /><span style="color: #87ceeb; ">/// &lt;returns&gt;&lt;/returns&gt;</span><br /><span style="color: #f0e68c; ">private</span> <span style="color: #f0e68c; ">static</span> <span style="color: #bdb76b; ">string</span> <span style="color: #ffffff; ">GetConsolePassword</span>( )<br /><span style="color: #ffffff; ">{</span><br />    <span style="color: #ffffff; ">StringBuilder</span> sb <span style="color: #ffffff; ">=</span> <span style="color: #f0e68c; ">new</span> <span style="color: #ffffff; ">StringBuilder</span>( );<br />    <span style="color: #f0e68c; ">while</span> ( <span style="color: #f0e68c; ">true</span> )<br />    <span style="color: #ffffff; ">{</span><br />        <span style="color: #ffffff; ">ConsoleKeyInfo</span> <span style="color: #ffffff; ">cki</span> <span style="color: #ffffff; ">=</span> <span style="color: #ffffff; ">Console</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">ReadKey</span>( <span style="color: #f0e68c; ">true</span> );<br />        <span style="color: #f0e68c; ">if</span> ( <span style="color: #ffffff; ">cki</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Key</span> <span style="color: #ffffff; ">==</span> <span style="color: #ffffff; ">ConsoleKey</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Enter</span> )<br />        <span style="color: #ffffff; ">{</span><br />            <span style="color: #ffffff; ">Console</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">WriteLine</span>( );<br />            <span style="color: #f0e68c; ">break</span>;<br />        <span style="color: #ffffff; ">}</span></p>
+<p>        <span style="color: #f0e68c; ">if</span> ( <span style="color: #ffffff; ">cki</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Key</span> <span style="color: #ffffff; ">==</span> <span style="color: #ffffff; ">ConsoleKey</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Backspace</span> )<br />        <span style="color: #ffffff; ">{</span><br />            <span style="color: #f0e68c; ">if</span> ( sb<span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Length</span> <span style="color: #ffffff; ">&gt;</span> <span style="color: #ffffff; ">0</span> )<br />            <span style="color: #ffffff; ">{</span><br />                <span style="color: #ffffff; ">Console</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Write</span>( <span style="color: #ffffff; ">"\b\0\b"</span> );<br />                sb<span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Length</span><span style="color: #ffffff; ">--;</span><br />            <span style="color: #ffffff; ">}</span></p>
+<p>            <span style="color: #f0e68c; ">continue</span>;<br />        <span style="color: #ffffff; ">}</span></p>
+<p>        <span style="color: #ffffff; ">Console</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Write</span>( <span style="color: #ffffff; ">'*'</span> );<br />        sb<span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Append</span>( <span style="color: #ffffff; ">cki</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">KeyChar</span> );<br />    <span style="color: #ffffff; ">}</span></p>
+<p>    <span style="color: #f0e68c; ">return</span> sb<span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">ToString</span>( );<br /><span style="color: #ffffff; ">}</span></p>
+</div>
+
+
+<p>gist：<a href="https://gist.github.com/1039424">https://gist.github.com/1039424</a></p>
+
+
+<p></p>
+]]></content>
+  </entry>
+  
+</feed>

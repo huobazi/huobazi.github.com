@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Yetanotherforum | 武眉博]]></title>
+  <link href="http://huobazi.github.com/blog/tag/yetanotherforum/atom.xml" rel="self"/>
+  <link href="http://huobazi.github.com/"/>
+  <updated>2012-11-27T11:09:53+08:00</updated>
+  <id>http://huobazi.github.com/</id>
+  <author>
+    <name><![CDATA[Marble Wu]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Yetanotherforum 编辑表情后不立即更新]]></title>
+    <link href="http://huobazi.github.com/blog/2006/04/11/cb-372413/"/>
+    <updated>2006-04-11T17:38:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2006/04/11/cb-372413</id>
+    <content type="html"><![CDATA[<p>文件  FormatMsg.cs</p>
+
+
+<br /><p>方法iAddSmiles内 </p>
+
+
+<br /><p>Code:<br />strTemp = strTemp.Replace(code.ToLower(),String.Format("&lt;img src=\"{0}\" alt=\"{1}\" /&gt;",basePage.Smiley(Convert.ToString(row["Icon"])),basePage.Server.HtmlEncode(row["Emoticon"].ToString())));<br />调用了两次可能导致被转化成html后有乱码出现</p>
+
+
+<br /><p>在方法GetSmilies内<br />Code:<br />System.Web.HttpContext.Current.Cache.Insert("Smilies",dt,null,DateTime.Now.AddMinutes(60),TimeSpan.Zero);<br />加入缓存项的Key和更新/删除时移除缓存的Key不一致 导致编辑表情后不立即更新<br />DB.cs<br />Code:<br />System.Web.HttpContext.Current.Cache.Remove("Smiles");<br /></p>             
+
+]]></content>
+  </entry>
+  
+</feed>

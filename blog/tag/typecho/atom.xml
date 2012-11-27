@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Typecho | 武眉博]]></title>
+  <link href="http://huobazi.github.com/blog/tag/typecho/atom.xml" rel="self"/>
+  <link href="http://huobazi.github.com/"/>
+  <updated>2012-11-27T11:09:53+08:00</updated>
+  <id>http://huobazi.github.com/</id>
+  <author>
+    <name><![CDATA[Marble Wu]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[从typecho转换到Octopress了]]></title>
+    <link href="http://huobazi.github.com/blog/2012/03/06/convert-typecho-to-octopress/"/>
+    <updated>2012-03-06T21:55:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2012/03/06/convert-typecho-to-octopress</id>
+    <content type="html"><![CDATA[<p>人生在于折腾,所以将博客转换到Octopress了<br/>
+我的博客经历了如下几次变动：<br/>
+2003年1月,<a href="http://aspxboy.com/private/">自己装了个SnowForum</a>，用来写些技术记录之类的东西<br/>
+-----------------><br/>
+2004年4月,<a href="http://huobazi.cnblogs.com/">搬到博客园，以前的记录停止维护，后来数据丢失</a><br/>
+-----------------><br/>
+2009年6月,<a href="http://huobazi.aspxboy.com/blog/2009/06/21/my-blog-moved-to-wp/">搬出博客园,转换到Wordpress</a>当时在旧博客上写了script，告知访问者此处停止更新，询问访问者是否停留在当前页，或转向新页面(可能有更新),因此被封号 @_@|||<br/>
+-----------------><br/>
+2009年7月,<a href="http://huobazi.aspxboy.com/blog/2009/07/04/myblog-from-wordpress-to-typecho/">博客又转换到Typecho平台</a><br/>
+-----------------><br/>
+2012年3月,转到Octopress了，一个静态博客生成引擎，现在看到的全都是html页面,我写了几行ruby代码做了转换，在<a href="https://github.com/huobazi/typecho-to-octopress">https://github.com/huobazi/typecho-to-octopress</a>，希望对想转换的朋友有用。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[nginx下typecho的rewrite]]></title>
+    <link href="http://huobazi.github.com/blog/2009/07/09/nginx-typecho-rewrite/"/>
+    <updated>2009-07-09T23:31:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2009/07/09/nginx-typecho-rewrite</id>
+    <content type="html"><![CDATA[<p>导数据到typecho的时候是在localhost的windows xp系统上用的apache,部署时用的是nginx<br />先是发现无法登陆按照<a href="http://forum.typecho.org/viewtopic.php?f=4&amp;t=238&amp;p=852&amp;hilit=nginx#p852" target="_blank">这篇帖子</a>内的方法配置了vhost.conf，发现可以登陆了，接着又出现了<br />无法编辑post的问题，具体症状见<a href="http://forum.typecho.org/viewtopic.php?f=4&amp;t=270" target="_blank">这篇帖子</a>,甚是郁闷啊，google+baidu 找到一片描写wp的<br />rewrite的<a href="http://hi.baidu.com/3322/blog/item/95d254e7594a012bb93820bb.html" target="_blank">帖子</a>,因typecho与wp笔记像，抱着试试看的想法,在测试站点试验了一下，嘿嘿<br />能用，转寄在此，备忘</p>
+
+
+<p><!--more--></p>
+
+
+<pre>
+location / {
+        index index.html index.php;
+        if (-f $request_filename/index.html){
+            rewrite (.*) $1/index.html break;
+        }
+        if (-f $request_filename/index.php){
+            rewrite (.*) $1/index.php;
+        }
+        if (!-f $request_filename){
+            rewrite (.*) /index.php;
+        }
+    }
+</pre>
+
+
+<p>同时感谢<a class="titlink" title="Atrhis的空间 http://hi.baidu.com/3322" href="http://huobazi.aspxboy.com/3322">Atlantis</a>  :-)</p>
+
+
+<p></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[从Wordpress转到Typecho了]]></title>
+    <link href="http://huobazi.github.com/blog/2009/07/04/myblog-from-wordpress-to-typecho/"/>
+    <updated>2009-07-04T03:30:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2009/07/04/myblog-from-wordpress-to-typecho</id>
+    <content type="html"><![CDATA[<p>WP比较占资源，今天把博客又转到Typecho了，忙乎了大半夜(现在接近临晨4点)，东拼西凑，南抄北挪，终于啊，皮肤基本上搞定了，发现Typecho的皮肤也蛮简单的，默认皮肤就七八个文件，照着改也蛮容易入门的。<br />郁闷的是现在还是在localhost上，自己点击，速度超好，刷刷刷的哦。还有就是Typecho这个版本（0.6）默认没有WYSIWYG的编辑器，只这篇post就是手写发出的，不过这样也好，以前在博客园用编辑器编辑的博客有时候因皮肤调整，会出现编辑器的html不符合皮肤，撑的页面不好看。<br />最搞的是我一直没找到如何处理分类排序的功能，还去官方论坛发了个贴（标准的新手贴），被告知按住拖动就OK了...<br />(*^__^*) 嘻嘻……</p>
+
+
+<p>在此感谢所有TV  感谢<a href="http://cnblogs.com" target="_self">博客园</a>  感谢<a href="http://www.typecho.org" target="_blank">Typecho</a>开发团队  感谢<a href="http://www.wp.com" target="_blank">Wordpress</a>  感谢<a href="http://www.getpaint.net/" target="_self">Paint.Net</a>  感谢<a href="http://www.photonvps.com/billing/aff.php?aff=011" target="_blank">PhotonVPS</a></p>
+
+
+<p>感谢...</p>
+
+
+<p></p>
+]]></content>
+  </entry>
+  
+</feed>

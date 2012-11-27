@@ -1,0 +1,773 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>武眉博</title>
+  <meta name="author" content="Marble Wu">
+
+  
+  <meta name="description" content="机器中标，竟然有提示您的QQ已在别处登陆，亏得俺是QQ会员，不一会儿手机收到藤讯短信提示QQ密码被修改，随发个“16”回去，取回密码，在打开QQ准备登陆时，诺顿报警如下：扫描类型： 实时防护 扫描事件： 已发现病毒！病毒名称: Trojan.PWS.QQPass文件： C:\WINDOWS\ &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://huobazi.github.com/blog/page/14/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="武眉博" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-56321-3']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">武眉博</a></h1>
+  
+    <h2>Marble's blog.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:huobazi.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/links">Friends</a></li>
+  <li><a href="/about">About</a></li>
+  
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2006/03/08/cleartrojanpwsqqpasswinmide32dllwinslib/">记Trojan.PWS.QQPass,winmide32.dll,wins.lib的清除</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2006-03-08T14:48:00+08:00" pubdate data-updated="true">Mar 8<span>th</span>, 2006</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>机器中标，竟然有提示您的QQ已在别处登陆，亏得俺是QQ会员，不一会儿手机收到藤讯短信<br />提示QQ密码被修改，随发个“16”回去，取回密码，在打开QQ准备登陆时，<br />诺顿报警如下：<br /><font color="#0000ff" size="2">扫描类型： 实时防护 扫描<br />事件： 已发现病毒！<br />病毒名称: Trojan.PWS.QQPass<br />文件： C:\WINDOWS\system32\winmide32.dll<br />位置：C:\WINDOWS\system32<br />计算机：WUMEIBO<br />用户：武眉博<br />采用的操作：清除 失败 : 删除 失败 : 拒绝访问<br />发现的日期： 2006年3月8日  13:31:48</font></p>
+
+
+<br /><p><font color="#0000ff" size="2">扫描类型： 实时防护 扫描<br />事件： 已发现病毒！<br />病毒名称: Trojan.PWS.QQPass<br />文件： C:\WINDOWS\system32\wins\wins.lib<br />位置：C:\WINDOWS\system32\wins<br />计算机：WUMEIBO<br />用户：武眉博<br />采用的操作：清除 失败 : 删除 失败 : 拒绝访问<br />发现的日期： 2006年3月8日  13:59:57<br /></font>Google , Baidu 找到一堆“Trojan.PWS.QQPass”的信息，然而都不是我机器上这2个文件。<br />进入32目录试图，手工删除，提示 磁盘保护云云&#8230; 删除不掉。<br />在注册表内搜索“winmide32.dll”有两个键值，删除，再搜，又回来了，再删，再搜，又回来<br />技穷，只好重启，F8，命令行安全模式。<br />进入32目录<br />attrib -s winmide32.dll<br />del winmide32.dll<br />进入wins目录<br />attrib -s wins.lib<br />del wins.lib<br />重新启动，Win+Run+Regedit 搜索winmide32.dll，删除两个键值。<br />重新启动，32目录，wins目录均无原来那2文件，注册表内也F3不到它们了。</p>
+
+
+<br /><p>运行QQ，登陆窗口输入密码的时候诺顿再不报警。登陆成功。</p>
+
+
+<br /><p>不知道是否彻底清除，观察几天。先写这些，如有异样，随时更新。 </p>                
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2006/01/05/sourcecodeviewer01/">SourceCodeViewer 0.1 and Ms Treeview &#8216;S Problem</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2006-01-05T15:34:00+08:00" pubdate data-updated="true">Jan 5<span>th</span>, 2006</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><table style="TABLE-LAYOUT: fixed; WORD-WRAP: break-word" height="100%" cellspacing="0" cellpadding="0" width="100%" border="0"><tbody><tr><td valign="top">
+<a href="http://www.im286.com/misc.php?action=viewratings&amp;tid=1241659&amp;pid=12694846" name="pid12694846" alt="查看评分记录"></a><strong><span class="smalltxt"><span class="bold">SourceCodeViewer 0.1</span></span><br /><br /></strong><span style="FONT-SIZE: 12px"><font size="3">一直想给自己网站放一个源码浏览器，发现<a href="http://scottwater.com/blog/default.aspx" target="_blank">Scott Watermasysk</a>做的</font><a href="http://code.communityserver.org/" target="_blank"><font color="#237299" size="3">Cojax</font></a><font size="3">很酷，但却找不到同类的asp.net的开源项目，就决定自己做一个，顺便学习ajax .基本做出了个雏形，语法高亮也只能支持到 C#,Jscript,htm.<br />树用的是MS treeview ，但郁闷的事情也来了，MS treeview在firefox下render出的html竟然和ie下一点都不相同，而且是采用postback方式展开节点，我给tree上加的onclick不起作用，导致目前这个<a href="http://www.aspxboy.com/code/">东东</a>在firefox下不能用<img height="19" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png9" width="19" border="0">,继续研究中&#8230;.<br /></font><br />An open source web based Source Code Viewer system application <br />written in ASP.NET / C#.NET / Javascript with ajax for the Windows OS and .Net FrameWork platform.<br /><br />Homepage : <a href="http://www.aspxboy.com/scv/" target="_blank"><font color="#003366">http://www.aspxboy.com/scv/</font></a> <br />Online demo : <a href="http://www.aspxboy.com/code/" target="_blank"><font color="#003366">http://www.aspxboy.com/code/</font></a> <br />Online screenshots : <a href="http://sourceforge.net/project/screenshots.php?group_id=155912" target="_blank"><font color="#003366">http://sourceforge.net/project/screenshots.php?group_id=155912</font></a> <br />On Sourceforge : <a href="http://sourceforge.net/projects/scv" target="_blank"><font color="#003366">http://sourceforge.net/projects/scv</font></a> <br />Download the latest version 0.1 including the source code :<br /><a href="http://sourceforge.net/project/showfiles.php?group_id=155912&amp;package_id=174984&amp;release_id=382944" target="_blank"><font color="#003366">http://sourceforge.net/project/s &#8230; p;release_id=382944</font></a><br /><br />Screenshots:<br /><img onmousewheel="return imgzoom(this);" onmouseover="if(this.width&gt;screen.width*0.7) {this.resized=true; this.width=screen.width*0.7; this.style.cursor='hand'; this.alt='Click here to open new window\nCTRL+Mouse wheel to zoom in/out';}" onclick="if(!this.resized) {return true;} else {window.open('http://sourceforge.net/dbimage.php?id=54076');}" src="http://sourceforge.net/dbimage.php?id=54076" onload="if(this.width&gt;screen.width*0.7) {this.resized=true; this.width=screen.width*0.7; this.alt='Click here to open new window\nCTRL+Mouse wheel to zoom in/out';}" border="0"><br /><img onmousewheel="return imgzoom(this);" onmouseover="if(this.width&gt;screen.width*0.7) {this.resized=true; this.width=screen.width*0.7; this.style.cursor='hand'; this.alt='Click here to open new window\nCTRL+Mouse wheel to zoom in/out';}" onclick="if(!this.resized) {return true;} else {window.open('http://sourceforge.net/dbimage.php?id=54080');}" src="http://sourceforge.net/dbimage.php?id=54080" onload="if(this.width&gt;screen.width*0.7) {this.resized=true; this.width=screen.width*0.7; this.alt='Click here to open new window\nCTRL+Mouse wheel to zoom in/out';}" border="0"><br /><img onmousewheel="return imgzoom(this);" onmouseover="if(this.width&gt;screen.width*0.7) {this.resized=true; this.width=screen.width*0.7; this.style.cursor='hand'; this.alt='Click here to open new window\nCTRL+Mouse wheel to zoom in/out';}" onclick="if(!this.resized) {return true;} else {window.open('http://sourceforge.net/dbimage.php?id=54082');}" src="http://sourceforge.net/dbimage.php?id=54082" onload="if(this.width&gt;screen.width*0.7) {this.resized=true; this.width=screen.width*0.7; this.alt='Click here to open new window\nCTRL+Mouse wheel to zoom in/out';}" border="0"><br /><br /></span>
+</td></tr></tbody></table>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2005/12/12/freeaspdotnetsqlserverexpresswebhosting/">免费的Asp.net2.0 Sqlserver Express的学习空间</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-12-12T13:24:00+08:00" pubdate data-updated="true">Dec 12<span>th</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p></p>
+
+
+<p><b><font face="Tahoma" color="black"> <font color="#0000ff">dotnetspider.com</font>提供Asp.net2.0 Sqlserver express的学习空间<br /><br /><font color="#ff0000">- Learn ASP.NET 2.0</font></font><font color="#ff0000"> <br /><font face="Tahoma">- Develop your web site</font> <br /><font face="Tahoma">- Host it for free.</font> </font></b></p>
+
+
+<p><b><br /></b><p><font color="#ff0000"><font face="Tahoma" color="#000000">Web hosting package <br />For ASP.NET programmers</font><font face="Tahoma"> </font></font></p>
+<li>
+<font color="#ff0000">$0.00 monthly fee. </font><br />
+</li>
+<li>
+<font color="#ff0000">No advertisements in your site. </font><br />
+</li>
+<li>
+<font color="#ff0000">SQL Server Express support. </font><br />
+</li>
+<li>
+<font color="#ff0000">MS Access support. </font><br />
+</li>
+<li>
+<font color="#ff0000">Up to 100 MB Space. </font><br />
+</li>
+<li>
+<font color="#ff0000">2 GB monthly data transfer. </font><br />
+</li>
+<li>
+<font color="#ff0000">Your own </font><font color="#ff0000">domain name</font><font color="#ff0000">.</font><font color="#000000"> </font> <br /><p>详细描述参考下面的页面：<br /><a href="http://www.aspxboy.com/private/5271/default.aspx" target="_blank"><font face="Tahoma" color="#0000ff" size="4">http://www.aspxboy.com/private/5271/default.aspx</font></a></p>
+</li></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2005/11/21/nodirurlrewrite/">关于请求的目录不存在而需要url重写</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-11-21T21:52:00+08:00" pubdate data-updated="true">Nov 21<span>st</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>在<a href="http://pwqzc.cnblogs.com/archive/2005/11/21/281331.html" target="_blank">http://pwqzc.cnblogs.com/archive/2005/11/21/281331.html</a>看到的讨论<br />其实csdn的那两个帖子<br /><a href="http://community.csdn.net/Expert/topic/4401/4401936.xml?temp=.317898" target="_blank">http://community.csdn.net/Expert/topic/4401/4401936.xml?temp=.317898</a></p>
+
+
+<p><a href="http://community.csdn.net/Expert/topic/4406/4406615.xml?temp=.513714" target="_blank">http://community.csdn.net/Expert/topic/4406/4406615.xml?temp=.513714</a><br />中已经有网友们说到方法了，hander module 都可以做<br />在iis中设置*.*映射到 aspnet_isapi.dll ISAPI 扩展，我测试后没有发现什么访问被拒绝访问的401.3错误,<br />需要输入用户名的问题。<br /><img style="width: 627px; height: 396px; border: 0px;" src="/images/hbz_images/5c851a33-204d-4d19-a338-3220cd1979ae.gif" border="0" alt=""><br />  </p>
+
+
+<p>以下在代码xpsp2 .net1.1 sp1 下测试通过</p>
+
+
+<div style="cursor: hand; color: blue; text-align: left; text-decoration: underline;" title="&gt;-点此复制到剪贴板-&lt;" onclick='function anonymous() { var obj = document.getElementById("code_huobazi_code");    if( obj != null )   {       var rng = document.body.createTextRange();      rng.moveToElementText(obj);         rng.scrollIntoView();       rng.select();       rng.execCommand("Copy");        rng.collapse(false);    } }'>[Copy to clipboard]</div>
+
+
+<p><textarea id="code_huobazi_code" style="width: 632px; height: 298px; background-color: #ffcc00;" cols="84" rows="4">using System;&lt;br /&gt; using System.Web;&lt;br /&gt; using System.Web.UI;&lt;/div&gt; &lt;div  mce_tmp=&#8221;1&#8221;&gt;namespace AspxBoy.VisualUrl&lt;br /&gt; {&lt;br /&gt;   /// &lt;summary&gt;&lt;br /&gt;     /// VisualUrlHttpHander 的摘要说明。&lt;br /&gt;  /// &lt;/summary&gt;&lt;br /&gt;    public class VisualUrlHttpHander : IHttpHandlerFactory&lt;br /&gt;  {&lt;br /&gt;       #region IHttpHandlerFactory 成员&lt;/div&gt; &lt;div  mce_tmp=&#8221;1&#8221;&gt;     public void ReleaseHandler(IHttpHandler handler)&lt;br /&gt;        {&lt;br /&gt;           // TODO:  添加 VisualUrlHttpHander.ReleaseHandler 实现&lt;br /&gt;      }&lt;/div&gt; &lt;div  mce_tmp=&#8221;1&#8221;&gt;      public IHttpHandler GetHandler(HttpContext context, string requestType, string url, string pathTranslated)&lt;br /&gt;      {&lt;br /&gt;           // TODO:  添加 VisualUrlHttpHander.GetHandler 实现&lt;/div&gt; &lt;div  mce_tmp=&#8221;1&#8221;&gt;         string rawUrl = context.Request.RawUrl.Trim();&lt;/div&gt; &lt;div  mce_tmp=&#8221;1&#8221;&gt;         ///&lt;br /&gt;             ///这里只示范地址是http://domainname/xxx&lt;br /&gt;            ///和http://domainname/xxx/这样的地址&lt;br /&gt;             ///&lt;br /&gt;             string userName = rawUrl.TrimStart(&#8216;/&#8217;).TrimEnd(&#8216;/&#8217;);&lt;br /&gt;           string sendToUrl = url;&lt;br /&gt;             string filePath = pathTranslated;&lt;br /&gt;           string sendToUrlLessQString;&lt;/div&gt; &lt;div  mce_tmp=&#8221;1&#8221;&gt;           sendToUrl = Globals.AppPath + &#8220;/get.aspx?username=&#8221; + userName;&lt;/div&gt; &lt;div  mce_tmp=&#8221;1&#8221;&gt;            Globals.RewriteUrl(context, sendToUrl, out sendToUrlLessQString, out filePath);&lt;/div&gt; &lt;div  mce_tmp=&#8221;1&#8221;&gt;            return PageParser.GetCompiledPageInstance(sendToUrlLessQString, filePath, context);&lt;br /&gt;         }&lt;/div&gt; &lt;div  mce_tmp=&#8221;1&#8221;&gt;      #endregion&lt;/div&gt; &lt;div  mce_tmp=&#8221;1&#8221;&gt; }&lt;/div&gt; &lt;div  mce_tmp=&#8221;1&#8221;&gt;  public class Globals&lt;br /&gt;    {&lt;br /&gt;       /// &lt;summary&gt;&lt;br /&gt;         /// 应用程序路径&lt;br /&gt;      /// &lt;/summary&gt;&lt;br /&gt;        public static string AppPath&lt;br /&gt;        {&lt;/div&gt; &lt;div  mce_tmp=&#8221;1&#8221;&gt;          get&lt;br /&gt;             {&lt;br /&gt;               string applicationPath = &#8220;/&#8221;;&lt;/div&gt; &lt;div  mce_tmp=&#8221;1&#8221;&gt;              if(HttpContext.Current != null)&lt;br /&gt;                 {&lt;br /&gt; applicationPath = HttpContext.Current.Request.ApplicationPath;&lt;br /&gt;                }&lt;/div&gt; &lt;div  mce_tmp=&#8221;1&#8221;&gt;              if (applicationPath == &#8220;/&#8221;)&lt;br /&gt;                 {&lt;br /&gt; return string.Empty;&lt;br /&gt;              }&lt;br /&gt;               else&lt;br /&gt;                {&lt;br /&gt; if (applicationPath.EndsWith(&#8220;/&#8221;))&lt;br /&gt; {&lt;br /&gt;  return applicationPath;&lt;br /&gt; }&lt;br /&gt; else&lt;br /&gt; {&lt;br /&gt;    return applicationPath + &#8220;/&#8221;;&lt;br /&gt; }&lt;br /&gt;                 }&lt;/div&gt; &lt;div  mce_tmp=&#8221;1&#8221;&gt;          }&lt;br /&gt;       }&lt;br /&gt;       /// &lt;summary&gt;&lt;br /&gt;         /// 在ASP.NET中执行URL重写&lt;br /&gt;        /// see http://www.aspxboy.com/484/archive.aspx&lt;br /&gt;         /// &lt;/summary&gt;&lt;br /&gt;        /// &lt;param name=&#8221;context&#8221;&gt;&lt;/param&gt;&lt;br /&gt;      /// &lt;param name=&#8221;sendToUrl&#8221;&gt;&lt;/param&gt;&lt;br /&gt;        /// &lt;param name=&#8221;sendToUrlLessQString&#8221;&gt;&lt;/param&gt;&lt;br /&gt;         /// &lt;param name=&#8221;filePath&#8221;&gt;&lt;/param&gt;&lt;br /&gt;         public static  void RewriteUrl(HttpContext context, string sendToUrl, out string sendToUrlLessQString, out string filePath)&lt;br /&gt;         {&lt;br /&gt;           if (context.Request.QueryString.Count &gt; 0)&lt;br /&gt;           {&lt;br /&gt;               if (sendToUrl.IndexOf(&#8216;?&#8217;) != -1)&lt;br /&gt;               {&lt;br /&gt; sendToUrl += &#8220;&amp;&#8221; + context.Request.QueryString.ToString();&lt;br /&gt;                }&lt;br /&gt;               else&lt;br /&gt;                {&lt;br /&gt; sendToUrl += &#8220;?&#8221; + context.Request.QueryString.ToString();&lt;br /&gt;                }&lt;br /&gt;           }&lt;/div&gt; &lt;div  mce_tmp=&#8221;1&#8221;&gt;          string queryString = String.Empty;&lt;br /&gt;          sendToUrlLessQString = sendToUrl;&lt;br /&gt;           if (sendToUrl.IndexOf(&#8216;?&#8217;) &gt; 0)&lt;br /&gt;          {&lt;br /&gt;               sendToUrlLessQString = sendToUrl.Substring(0, sendToUrl.IndexOf(&#8216;?&#8217;));&lt;br /&gt;              queryString = sendToUrl.Substring(sendToUrl.IndexOf(&#8216;?&#8217;) + 1);&lt;br /&gt;          }&lt;/div&gt; &lt;div  mce_tmp=&#8221;1&#8221;&gt;          filePath = string.Empty;&lt;br /&gt;            filePath = context.Server.MapPath(sendToUrlLessQString);&lt;/div&gt; &lt;div  mce_tmp=&#8221;1&#8221;&gt;           context.RewritePath(sendToUrlLessQString, String.Empty, queryString);&lt;br /&gt;       }&lt;br /&gt;   }&lt;br /&gt; }&lt;/div&gt; &lt;div  mce_tmp=&#8221;1&#8221;&gt;</textarea></p>
+
+
+<p>下载<br /><a href="http://www.cnblogs.com/Files/huobazi/VisualUrl.rar">http://www.cnblogs.com/Files/huobazi/VisualUrl.rar</a></p>
+
+
+<p></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2005/11/16/cb-277830/">Google的网站统计、分析系统</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-11-16T15:58:00+08:00" pubdate data-updated="true">Nov 16<span>th</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://www.google.com/analytics/">http://www.google.com/analytics/</a></p>
+
+
+<p><img style="width: 287px; height: 264px;" src="/images/hbz_images/836d6e32-fcfe-4aca-896b-16f7763c97cf.jpg" alt=""><br />功能全，比较酷！</p>
+
+
+<p></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2005/11/09/cb-272505/">准备开辟第二职业了，哎&#8230;&#8230;</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-11-09T18:46:00+08:00" pubdate data-updated="true">Nov 9<span>th</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>        现欲开辟第二职业，有意者来电来函咨询，本人承接以下业务：苦力搬运，装卸，车工，钳工，焊工，水电工，瓦工，砸墙，砌墙，筛沙,油漆,通下水道,贴瓷砖,室内装璜,Vb,C++，面点制作，热炒、小炒。<br />　　.NET,C#,Java,j2ee,j2me,asp,delphi,汇编，PC&amp;手机游戏开发,网络维护管理，3维建模，照片上色，平面设计，建筑效果图，flash动画，硬件设计,单片机开发,四六级替考，办证，黑枪，黑车,暗杀，洗钱，放火，要债，割双眼皮，拉单眼皮，修复处女膜，整容，养狗…</p>
+
+
+<br /><p>　　另:本人长期代写小学生寒,暑假作业.替小学生欺负其他同学，代替学生父母开家长会，(限制5-10岁以内)<br />         <br />有意者狂Q我 </p>                
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2005/11/03/cb-268350/">新的GotDotNet</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-11-03T21:42:00+08:00" pubdate data-updated="true">Nov 3<span>rd</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://gotdotnet.com/">http://gotdotnet.com/</a></p>
+
+
+<p></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2005/10/16/cb-256133/">买了edong的空间没有db_securityadmin权限</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-10-16T22:45:00+08:00" pubdate data-updated="true">Oct 16<span>th</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>买了edong的<a href="http://www.edong.com/v8/webhosting/K1000.php">http://www.edong.com/v8/webhosting/K1000.php</a>这个k1000空间<br />没有db_securityadmin权限装不了CommunityServer和DotNetNuke</p>
+
+
+<div class="CodeDiv">
+<p></p>
+<div style="padding-right: 5px; padding-left: 4px; font-size: 13px; padding-bottom: 4px; width: 98%; padding-top: 4px; background-color: #eeeeee; border: #cccccc 1px solid;">
+<span style="COLOR: #000000">The account you use to run CS under must have the following minimum database roles to function corrected:<p>db_securityadmin<br />db_ddladmin<br />db_datareader<br />db_datawriter</p>
+<p>Use the following from Query Analyzer to ensure that your account has sufficent permissions. If you are in a host environment and can not change your database roles you will need to requrest these roles from your ISP</p>
+<p>sp_addrolemember &#8217;db_securityadmin&#8217;, &#8217;</p></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">your </span><span style="COLOR: #ff0000">login name</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000">&#8217;<br />sp_addrolemember &#8217;db_ddladmin&#8217;, &#8217;</span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">your </span><span style="COLOR: #ff0000">login name</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000">&#8217;<br />sp_addrolemember &#8217;db_datareader&#8217;, &#8217;</span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">your </span><span style="COLOR: #ff0000">login name</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000">&#8217;<br />sp_addrolemember &#8217;db_datawriter&#8217;, &#8217;</span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">your </span><span style="COLOR: #ff0000">login name</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000">&#8217;</span>
+</div>
+<p></p>
+</div>
+
+
+<br />郁闷。<br />看来要自己租服务器了。<br />另注：本随笔不接受枪手评论，谢谢！             
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2005/10/15/subdomainswithhttpmoduleinaspdotnet/">在Asp.Net中使用HttpModule实现多个域名分别“绑定”到子目录</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-10-15T14:07:00+08:00" pubdate data-updated="true">Oct 15<span>th</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>作者：活靶子 发表于：<a href="http://www.aspxboy.com/">AspxBoy.Com</a> &amp;&amp; <a href="http://im286.com/">im286.com</a> &amp;&amp; <a href="http://cnblogs.com/">Cnblogs.com</a></p>
+
+
+<br /><p>目前虚拟主机商提供将多个域名绑定到站点根目录，但是不提供类似CPanel那样可以将域名绑定到站点的子目录。<br />而当你手上有多个域名，网站空间和流量又有闲置的时候，是很希望<br />将这些资源利用起来，而且要做到降低做站的成本。而网络上流传的多域名绑到子目录多为判断HTTP_HOST再使用Asp的Response.Redirect或者php的header方法重订向到子目录去。这种方法在地址的请求上发生了变化，大家都知道Redirect的定向是很不友好的，在服务器端控制自动跳转会令访问者感到不安。<br />所以我需要的是对这个域名下面的所有请求都转接到对应的子目录里去<br />比如<
+
+
+<p></div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2005/10/15/subdomainswithhttpmoduleinaspdotnet/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2005/10/10/cb-251251/">[哭]使用Data Access 2 插入Ntext类型数据时SqlParameter不指定类型的问题 ， ，请为我解惑</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-10-10T00:58:00+08:00" pubdate data-updated="true">Oct 10<span>th</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>实在郁闷 <img height="19" src="/images/hbz_images/0a603e93-b2ed-47bf-86c0-ebbf83a0f832.png3" width="19" border="0">，请大家为我解惑。<br />同发csdn：<a href="http://community.csdn.net/Expert/topic/4315/4315539.xml?temp=.3931848">http://community.csdn.net/Expert/topic/4315/4315539.xml?temp=.3931848</a><br /><br />原来的代码 <br /></p>
+
+
+<p></p>
+
+
+<div class="codeDiv"> SqlHelper.ExecuteNonQuery(connectionString, CommandType.StoredProcedure, <br />  FullyQualifiedSprocName(&#8220;P_InsertNtextData&#8221;), <br />  new SqlParameter(&#8220;@Id&#8221;, f.Id),<br />  new SqlParameter(&#8220;@NtextData&#8221;,f.Data));<br />
+</div>
+
+
+<p>如果 f.Data过长，就莫名其妙的异常， <br /></p>
+
+
+<p></p>
+
+
+<div class="codeDiv">
+<p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</p>
+<br /><p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;<br />当前命令发生了严重错误。应放弃任何可能产生的结果。<br />&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;<br />确定   <br />&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</p>
+<br /><p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</p>
+<br /><p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;<br />常规网络错误。请检查您的网络文档。<br />&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;<br />确定   <br />&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;<br /></p>
+</div>
+
+
+<p>Google baidu 都翻了个底朝天，也没个能安慰我的信息。<br />试验了一下午，最后试出来写个测试字符串&#8221;aaaa&#8221;就能插入<br />尝试了如下代码 <br /></p>
+
+
+<p></p>
+
+
+<div class="codeDiv"> SqlParameter ntext = new SqlParameter(&#8220;@NtextData&#8221;,SqlDbType.NText);<br /> ntext.Value = f.Data;<br /> SqlHelper.ExecuteNonQuery(connectionString, CommandType.StoredProcedure, <br />  FullyQualifiedSprocName(&#8220;P_InsertNtextData&#8221;), <br />  new SqlParameter(&#8220;@Id&#8221;, f.Id),<br />  ntext);<br />
+</div>
+
+
+<p></p>
+
+
+<p>成功，怎么也想不通这换汤不换药的方法为何能够成功，<br />翻msdn，<br />打自己一巴掌<img height="19" src="/images/hbz_images/0a603e93-b2ed-47bf-86c0-ebbf83a0f832.png4" width="19" border="0"><img height="20" src="/images/hbz_images/0a603e93-b2ed-47bf-86c0-ebbf83a0f832.png5" width="25" border="0"><br /></p>
+
+
+<p></p>
+
+
+<div class="codeDiv">获取或设置参数的 SqlDbType。 <br /><p></p>
+<br /><p>[Visual Basic]<br />Public Property SqlDbType As SqlDbType</p>
+<br /><p>[C#]<br />public SqlDbType SqlDbType {get; set;}</p>
+<br /><p><br />属性值<br />SqlDbType 值之一。默认值为 <font color="#0000ff">NVarChar</font>。 </p>
+</div>
+
+
+<p></p>
+
+
+<p>然而我又看到另外一个构造器的重载这样说明<br /></p>
+
+
+<p></p>
+
+
+<div class="codeDiv">[Visual Basic]<br />Public Sub New( _<br />   ByVal parameterName As String, _<br />   ByVal value As Object _<br />) <br /><p></p>
+<br /><p>[C#]<br />public SqlParameter(<br />   string parameterName,<br />   object value<br />);</p>
+<br /><p><br />参数<br />parameterName <br />要映射的参数的名称。 <br />value <br />一个 Object，它是 SqlParameter 的值。 <br />备注<br /><font color="#0000ff">当在 value 参数中指定 Object 时，SqlDbType 将从 Object 的 .NET Framework 类型推断出。</font></p>
+</div>
+
+
+<p></p>
+
+
+<p>这又如何解释？？</p>
+
+
+<p></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/15/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/13/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("huobazi", 10, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/huobazi" class="twitter-follow-button" data-show-count="false">Follow @huobazi</a>
+  
+</section>
+
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/11/26/osx-shang-mo-ren-vim-bu-zhi-chi-plus-ji-cun-qi/">OSX 上默认 VIM 不支持 + 寄存器</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/02/tmux-diu-shi-huo-xian-shi-vimde-pei-se/">tmux丢失或显示vim的配色</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/09/12/import-data-from-mysql-to-postgresql/">将 MySQL 的数据导入 PostgreSQL</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/15/ajaxupload-with-rail-carrierwave-on-mongodb/">使用AjaxUpload和Carrierwave在Rails && Mongoid中批量上传图片&#8217;</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/06/convert-typecho-to-octopress/">从typecho转换到Octopress了</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/02/25/hg232/">HG232破解一例</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/02/13/ios-uiactionsheetdelegate/">iOS通过UIActionSheetDelegate来实现警告的方法</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/02/04/ubuntu-sublime-text-chinese/">Ubuntu下设置 Sublime Text 2 显示中文 && 输入中文</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/12/09/ios-hide-keyboard-when-touch/">[How to]在iOS中点击文本框以外区域，隐藏键盘</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/11/28/how-to-uninstall-xcode/"> [How to] 如何卸载Xcode</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/huobazi">@huobazi</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'huobazi',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Marble Wu -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'huobaziblog';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

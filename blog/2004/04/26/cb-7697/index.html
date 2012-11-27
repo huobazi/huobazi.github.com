@@ -1,0 +1,347 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>关于 “编译器失败，错误代码为 128” - 武眉博</title>
+  <meta name="author" content="Marble Wu">
+
+  
+  <meta name="description" content="csdn上有位兄弟遇到这个错误了http://expert.csdn.net/Expert/topic/3009/3009791.xml?temp=2.024478E-02我先是搜索baidu发现一个帖子http://www.devmanclub.com/showpost.aspx?PostID &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://huobazi.github.com/blog/2004/04/26/cb-7697/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="武眉博" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-56321-3']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">武眉博</a></h1>
+  
+    <h2>Marble's blog.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:huobazi.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/links">Friends</a></li>
+  <li><a href="/about">About</a></li>
+  
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">关于 “编译器失败，错误代码为 128”</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2004-04-26T17:30:00+08:00" pubdate data-updated="true">Apr 26<span>th</span>, 2004</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p></p>
+
+
+<p>csdn上有位兄弟遇到这个错误了<br /><a href="http://expert.csdn.net/Expert/topic/3009/3009791.xml?temp=2.024478E-02">http://expert.csdn.net/Expert/topic/3009/3009791.xml?temp=2.024478E-02</a><br />我先是搜索baidu发现一个帖子<br /><a href="http://www.devmanclub.com/showpost.aspx?PostID=1791">http://www.devmanclub.com/showpost.aspx?PostID=1791</a><br />没有解决办法<br />翻google从gotdotnet翻出<a href="http://www.gotdotnet.com/Community/MessageBoard/Thread.aspx?id=209899&amp;Page=1#209899"><strike>一贴</strike> </a>作者称其为“horrible dream”的错误，并给出解决方案<br /><br /><font style="BACKGROUND-COLOR: #a9a9a9">First of all, update your antivirus software and make a full scan on your computer. I guess the cause of the problem is that some hacker has entered in my computer and made some change in my account and security settings, so the sensitive asp.net found it and then stopped working. <br /><br />After u are sure no viruse is in your computer, u can follow the steps below. <br /><br />1. run &#8221;aspnet_regiis -ua&#8221; in the cmd. u can start the cmd from the vs.net tools in the start menu, otherwise u need type the full path. <br /><br />2. remove the aspnet account from your computer <br /><br />3. uninstall iis <br /><br />4. restart your computer <br /><br />5. reinstall iis <br /><br />6. run &#8220;aspnet_regiss -i&#8221; in the cmd <br /><br />7. add vs_developers group to iis operators (u can operation in iis) <br /><br />8. open the file &#8220;machine.config&#8221; which is in &#8220;C:\WINNT\Microsoft.NET\Framework\v1.1.xxxx\CONFIG&#8221;, then find and replace <br />userName=&#8221;machine&#8221; <br />with <br />userName=&#8221;SYSTEM&#8221; <br /><br />9. restart your computer and pray silently <br /><br /><font style="BACKGROUND-COLOR: #ffffff">地址 </font><a href="http://www.gotdotnet.com/Community/MessageBoard/Thread.aspx?id=209899&amp;Page=1#209899"><font style="BACKGROUND-COLOR: #ffffff">http://www.gotdotnet.com/Community/MessageBoard/Thread.aspx?id=209899&amp;Page=1#209899</font></a><br /><font style="BACKGROUND-COLOR: #ffffff">记在这里，免今后自己和其他朋友遇到<br /><br />&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;<br /><br />2004-7-1补记<br /><br /><font style="BACKGROUND-COLOR: #d3d3d3">我们一个客户机器也出了这个问题<br />咨询了微软动力营专家，专家提出2点：<br />//＝＝＝＝＝以下内容来字微软动力营＝＝＝＝＝＝＝<br />您好！<br />    谢谢您使用微软动力营！<br />    对于你的这个问题，通常都是由于以下两个原因引起的，你可以去查看一下：<br />1. 你的客户的机器可能感染了这个病毒</font><a href="http://de.mcafee.com/root/genericVIL.asp?genericURL=/VirusInfo/VIL/dispVirus.asp&amp;virus_k=100252"><font style="BACKGROUND-COLOR: #d3d3d3">http://de.mcafee.com/root/genericVIL.asp?genericURL=/VirusInfo/VIL/dispVirus.asp&amp;virus_k=100252</font></a><br /></font></font><font style="BACKGROUND-COLOR: #d3d3d3">2. 你的客户的服务器运行着一些防病毒软件(象norton)，这有可能导致了这个错误。</font></p>
+
+
+<br /><p><font style="BACKGROUND-COLOR: #d3d3d3">对于第一个可能，我提供的那篇网页里面提供了清除方法。对于第二个可能你可以将防病毒软件关闭掉试试。</font></p>
+
+
+<br /><p><font style="BACKGROUND-COLOR: #d3d3d3">希望对你有帮助</font></p>
+
+
+<br /><p><font style="BACKGROUND-COLOR: #d3d3d3">谭映辉 [微软]  <br />微软全球技术中心 微软动力营合作伙伴技术支持</font></p>
+
+
+<br /><p><font style="BACKGROUND-COLOR: #a9a9a9"><font style="BACKGROUND-COLOR: #ffffff"><font style="BACKGROUND-COLOR: #d3d3d3">使您100%满意是&#8221;微软动力营&#8221;合作伙伴支持服务的唯一目标。我们真诚希望您能够对&#8221;微软动力营&#8221;服务提出宝贵建议和意见，我们将针对您的反馈不断改进服务质量。如有任何问题，请发信至：<br /></font><a href="mailto:cmsdn@microsoft.com"><font style="BACKGROUND-COLOR: #d3d3d3">cmsdn@microsoft.com</font></a><br /><font style="BACKGROUND-COLOR: #d3d3d3">本贴子以“现状”提供且没有任何担保，同时也没有授予任何权利。</font><br />//＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝<br /></font><br /></font></p>                
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Marble Wu</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2004-04-26T17:30:00+08:00" pubdate data-updated="true">Apr 26<span>th</span>, 2004</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/tag/asp-net/'>ASP.NET</a>, <a class='category' href='/blog/tag/debug/'>Debug</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://huobazi.github.com/blog/2004/04/26/cb-7697/" data-via="huobazi" data-counturl="http://huobazi.github.com/blog/2004/04/26/cb-7697/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2004/04/17/cb-6394/" title="Previous Post: 不错的搜索引擎">&laquo; 不错的搜索引擎</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2004/04/27/filldatatoexceltemplate/" title="Next Post: 打开一个Excel模板文件填充数据另存为一个文件">打开一个Excel模板文件填充数据另存为一个文件 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("huobazi", 10, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/huobazi" class="twitter-follow-button" data-show-count="false">Follow @huobazi</a>
+  
+</section>
+
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/11/26/osx-shang-mo-ren-vim-bu-zhi-chi-plus-ji-cun-qi/">OSX 上默认 VIM 不支持 + 寄存器</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/02/tmux-diu-shi-huo-xian-shi-vimde-pei-se/">tmux丢失或显示vim的配色</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/09/12/import-data-from-mysql-to-postgresql/">将 MySQL 的数据导入 PostgreSQL</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/15/ajaxupload-with-rail-carrierwave-on-mongodb/">使用AjaxUpload和Carrierwave在Rails && Mongoid中批量上传图片'</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/06/convert-typecho-to-octopress/">从typecho转换到Octopress了</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/02/25/hg232/">HG232破解一例</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/02/13/ios-uiactionsheetdelegate/">iOS通过UIActionSheetDelegate来实现警告的方法</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/02/04/ubuntu-sublime-text-chinese/">Ubuntu下设置 Sublime Text 2 显示中文 && 输入中文</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/12/09/ios-hide-keyboard-when-touch/">[How to]在iOS中点击文本框以外区域，隐藏键盘</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/11/28/how-to-uninstall-xcode/"> [How to] 如何卸载Xcode</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/huobazi">@huobazi</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'huobazi',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Marble Wu -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'huobaziblog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://huobazi.github.com/blog/2004/04/26/cb-7697/';
+        var disqus_url = 'http://huobazi.github.com/blog/2004/04/26/cb-7697/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

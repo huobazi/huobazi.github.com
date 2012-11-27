@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: OSX | 武眉博]]></title>
+  <link href="http://huobazi.github.com/blog/tag/osx/atom.xml" rel="self"/>
+  <link href="http://huobazi.github.com/"/>
+  <updated>2012-11-27T11:09:53+08:00</updated>
+  <id>http://huobazi.github.com/</id>
+  <author>
+    <name><![CDATA[Marble Wu]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[OSX 上默认 VIM 不支持 + 寄存器]]></title>
+    <link href="http://huobazi.github.com/blog/2012/11/26/osx-shang-mo-ren-vim-bu-zhi-chi-plus-ji-cun-qi/"/>
+    <updated>2012-11-26T21:48:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2012/11/26/osx-shang-mo-ren-vim-bu-zhi-chi-plus-ji-cun-qi</id>
+    <content type="html"><![CDATA[<p>OSX 上默认 VIM 不支持 + 寄存器，所以从系统剪贴板相互复制东西就麻烦了
+所以,我重新装了一下vim</p>
+
+<p><code>bash
+brew install vim
+</code>
+然后
+<code>bash
+which vim
+</code>
+发现还是 /usr/bin</p>
+
+<p>则，在 .zshrc内 把 /usr/local/bin 加入 PATH 就 ok 了
+其实后来想想，把原来的 move 到 old 上去，将 /usr/bin/vim ln 到/usr/local/vim 就 OK 了
+或者
+<code>bash
+brew install macvim --HEAD --override-system-vim
+</code>
+来安装 macvim 并覆盖系统原来的vim</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: MSN | 武眉博]]></title>
+  <link href="http://huobazi.github.com/blog/tag/msn/atom.xml" rel="self"/>
+  <link href="http://huobazi.github.com/"/>
+  <updated>2012-11-27T11:09:53+08:00</updated>
+  <id>http://huobazi.github.com/</id>
+  <author>
+    <name><![CDATA[Marble Wu]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[批量 移动 msn 联系人]]></title>
+    <link href="http://huobazi.github.com/blog/2008/03/16/movefriendtoothergroupinmsn/"/>
+    <updated>2008-03-16T12:45:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2008/03/16/movefriendtoothergroupinmsn</id>
+    <content type="html"><![CDATA[<p><font face="Verdana">MSN内导入一个联系人列表后，联系人都在“其他联系人”这个组，<br /><br /></font><font face="Verdana">我想把它重命名一下，不可以，转移到其他组，发现只能一个一个转移。</font><br /><br />最后发现，新建组然后按shift选择需要加入的联系人checkbox，确定。<br /><br />“其他联系人”内的联系人都到新组中去了。</p>
+
+
+<br /><p><br /><br /> </p>
+
+
+<br /><p> </p>             
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[MSN Toolbar 谁用了]]></title>
+    <link href="http://huobazi.github.com/blog/2004/01/29/cb-506/"/>
+    <updated>2004-01-29T13:31:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2004/01/29/cb-506</id>
+    <content type="html"><![CDATA[<p><a id="viewpost.ascx_TitleUrl" href="http://toolbar.msn.com/">MSN Toolbar Beta</a></p>
+
+
+<p></p>
+]]></content>
+  </entry>
+  
+</feed>

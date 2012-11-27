@@ -1,0 +1,461 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>可以弹出确认对话框的自定义Web服务器控件ConfirmButton - 武眉博</title>
+  <meta name="author" content="Marble Wu">
+
+  
+  <meta name="description" content="经常在论坛里看到类似这样的问题：“…如何在点击删除按钮的时候弹出个确认删除对话框”。 下面我们来自己写一个这样的自定义Web服务器控件! 思路如下： 继承System.Web.UI.WebControls.Button控件 增加一个属性“ConfirmMessage”来表示弹出确认框上面的提示信息 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://huobazi.github.com/blog/2004/04/30/confirmbutton/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="武眉博" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-56321-3']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">武眉博</a></h1>
+  
+    <h2>Marble's blog.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:huobazi.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/links">Friends</a></li>
+  <li><a href="/about">About</a></li>
+  
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">可以弹出确认对话框的自定义Web服务器控件ConfirmButton</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2004-04-30T09:49:00+08:00" pubdate data-updated="true">Apr 30<span>th</span>, 2004</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><font size="3"><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">经常在论坛里看到类似这样的问题：“</span><span lang="EN-US">…</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">如何在点击删除按钮的时候弹出个确认删除对话框”。</span></font></p>
+
+
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><font size="3"><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">下面我们来自己写一个这样的自定义</span><span lang="EN-US">Web</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">服务器控件</span><span lang="EN-US">!</span></font></p>
+
+
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'"><font size="3">思路如下：</font></span></p>
+
+
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><font size="3"><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">继承</span><span lang="EN-US">System.Web.UI.WebControls.Button</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">控件</span></font></p>
+
+
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><font size="3"><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">增加一个属性“</span><span lang="EN-US">ConfirmMessage</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">”来表示弹出确认框上面的提示信息。</span></font></p>
+
+
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><font size="3"><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">在服务器控件呈现在页面之前把一段</span><span lang="EN-US">javascript</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">写到页面</span></font></p>
+
+
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'"><font size="3">内容如下：</font></span></p>
+
+
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3">&lt;script language=&#8221;JavaScript&#8221;&gt;<?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3">&lt;!&#8211;<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3">function _doAspxBoyConfirm()<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3">{<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><font size="3"><b><span lang="EN-US" style="COLOR: navy">return confirm(&#8221;</span></b><b><span style="COLOR: navy; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">你确认删除</span><span lang="EN-US" style="COLOR: navy">/</span></b><b><span style="COLOR: navy; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">保存吗</span><span lang="EN-US" style="COLOR: navy">??&#8221;)<p></p></span></b></font></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3">}<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3">//&#8211;&gt;<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3">&lt;/script&gt;<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><font size="3"><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">查一下</span><span lang="EN-US">msdn</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">中对于</span><b><span lang="EN-US" style="BACKGROUND: #d9d9d9; COLOR: navy; mso-shading: white; mso-pattern: gray-15 auto">Control.OnPreRender</span></b><span lang="EN-US"> </span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">方法<span class="ilang">的描述</span></span><b><span lang="EN-US" style="COLOR: navy"><p></p></span></b></font></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><font size="3"><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">可以得到“<b><span style="COLOR: navy">此方法通知服务器控件在保存视图状态和呈现内容之前，执行任何必要的预呈现步骤</span></b></span><span lang="EN-US">”.</span></font></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><font size="3"><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">所以我们只要在</span><b><span lang="EN-US" style="BACKGROUND: #d9d9d9; COLOR: navy; mso-shading: white; mso-pattern: gray-15 auto">OnPreRender</span></b><b><span style="BACKGROUND: #d9d9d9; COLOR: navy; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-shading: white; mso-pattern: gray-15 auto">方法内</span><span style="BACKGROUND: #d9d9d9; COLOR: navy; mso-shading: white; mso-pattern: gray-15 auto"> </span></b><b><span style="BACKGROUND: #d9d9d9; COLOR: navy; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-shading: white; mso-pattern: gray-15 auto">用</span></b><span lang="EN-US">Page.RegisterClientScriptBlock</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">把这段</span><span lang="EN-US">javascript</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">发送到客户端，并且给</span><span lang="EN-US">Button. Attributes</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">属性内添加一个“</span><span lang="EN-US">onclick</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">”的客户端属性对应值为</span><span lang="EN-US">: &#8220;return _doAspxBoyConfirm()”.</span></font></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'"><font size="3">详细情况可以查阅</font></span></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><span lang="EN-US"><font size="3">ms-help://MS.VSCC.2003/MS.MSDNQTR.2003FEB.2052/cpref/html/frlrfsystemwebuiwebcontrolswebcontrolclassattributestopic.htm</font></span></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><font size="3"><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">这样一个具有</span><span lang="EN-US">ConFirm</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">功能的</span><span lang="EN-US">Button</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">就基本上建立起来了。</span></font></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'"><font size="3">新建一个测试该控件的工程</font></span></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><font size="3"><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">在工具箱上点右键选择“添加</span><span lang="EN-US">/</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">移除项”，点击浏览选择编译好的</span><span lang="EN-US">dll</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">文件，点击确定，你会发现</span><span lang="EN-US">ConFirmButton</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">已经添加到工具箱内了</span></font></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><font size="3"><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">将其托到一个</span><span lang="EN-US">Aspx</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">页面内</span> <span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">在属性设置内给</span><span lang="EN-US">ConfirmMessage</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">值为你要的弹出框内容比如“确定删除吗</span><span lang="EN-US">?</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">”，按</span><span lang="EN-US">F5</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">运行。</span></font></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><font size="3"><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">当点该按钮时会弹出一个</span><span lang="EN-US">confirm</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">对话框询问“确定删除吗</span><span lang="EN-US">?</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">”</span><span lang="EN-US">,</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">如果点击确定则执行</span><span lang="EN-US">button</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的</span><span lang="EN-US">Button_Click</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">事件，如果点击取消则不执行。</span></font></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><font size="3"><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">你可以查看他生成的</span><span lang="EN-US">html</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">代码，以加深对该控件工作原理的理解</span></font></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'"><font size="3">完整的代码如下：</font></span></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3">using System;<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3">using System.Web.UI;<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3">using System.Web.UI.WebControls;<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3">using System.ComponentModel;<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3">using System.Text;<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"> <p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3">namespace AspxBoy.Com.ConfirmButton<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3">{<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 1">       </span>/// &lt;summary&gt;<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><font size="3"><b><span lang="EN-US" style="COLOR: navy"><span style="mso-tab-count: 1">       </span>/// Button</span></b><b><span style="COLOR: navy; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">点击时会弹出一个对话框要求确认</span><span lang="EN-US" style="COLOR: navy"><p></p></span></b></font></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 1">       </span>/// &lt;/summary&gt;<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 1">       </span>public class ConfirmButton : System.Web.UI.WebControls.Button<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 1">       </span>{<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 1">       </span><span style="mso-tab-count: 1">       </span>private string _confirmMessage;<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span>/// &lt;summary&gt;<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><font size="3"><b><span lang="EN-US" style="COLOR: navy"><span style="mso-tab-count: 2">              </span>/// </span></b><b><span style="COLOR: navy; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">当客户端点击此</span><span lang="EN-US" style="COLOR: navy">Button</span></b><b><span style="COLOR: navy; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">时弹出的提示消息筐的内容</span><span lang="EN-US" style="COLOR: navy"><p></p></span></b></font></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span>/// &lt;/summary&gt;<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span>public string ConfirmMessage<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span>{<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>get<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 3">                     </span>{<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 3">                     </span><span style="mso-tab-count: 1">       </span>return _confirmMessage;<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 3">                     </span>}<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"> <p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>set<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 3">                     </span>{<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 3">                     </span><span style="mso-tab-count: 1">       </span>_confirmMessage = value;<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 3">                     </span>}<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span>}<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"> <p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 1">       </span><span style="mso-tab-count: 1">       </span>protected override void OnPreRender(System.EventArgs e)<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span>{<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>StringBuilder sb = new StringBuilder();<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(&#8220;&lt;script language=&#34;JavaScript&#34;&gt;&#8221;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(System.Environment.NewLine);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(&#8220;&lt;!&#8211;&#8221;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(System.Environment.NewLine);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(&#8220;/*&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;&#8221;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(System.Environment.NewLine);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(&#8220;ControlName:\t\tAspxBoy.Com.ConfirmButton&#8221;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(System.Environment.NewLine);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(&#8220;AuthorName:\t\t\tHuobazi,WuMeibo&#8221;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(System.Environment.NewLine);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(&#8220;CopyRight:\t\t\twww.AspxBoy.Com&#8221;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(System.Environment.NewLine);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(&#8220;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;*/&#8221;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(System.Environment.NewLine);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(&#8220;function _doAspxBoyConfirm()&#8221;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(System.Environment.NewLine);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(&#8220;{&#8220;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(System.Environment.NewLine);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(&#8220;return confirm(&#34;&#8221;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(ConfirmMessage);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(&#8220;&#34;)&#8221;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(System.Environment.NewLine);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(&#8220;}&#8221;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(System.Environment.NewLine);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(&#8220;//&#8211;&gt;&#8221;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(&#8220;&lt;/script&gt;&#8221;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>Page.RegisterClientScriptBlock(&#8220;_doAspxBoyConfirm&#8221;,sb.ToString());<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>this.Attributes.Add(&#8220;onclick&#8221;,&#8221;return _doAspxBoyConfirm()&#8221;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>base.OnPreRender(e);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span>}<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span>public override void RenderBeginTag(HtmlTextWriter writer)<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span>{<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>writer.WriteLine();<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>writer.Write(&#8220;&lt;!&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-&#8220;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>writer.Write(&#8220;AspxBoy.Com.ConfirmButton Start&#8221;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>writer.Write(&#8220;\tAuthorName: \tHuobazi&#8221;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>writer.WriteLine(&#8221; &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&gt;&#8221;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>writer.Write(&#8220;&lt;!&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211; &#8220;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>writer.Write(&#8220;Copyright:2004 Huobazi(www.AspxBoy.com)&#8221;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>writer.Write(&#8221; &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8221;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>writer.WriteLine(&#8220;&gt;&#8221;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>base.RenderBeginTag(writer);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span>}<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span>public override void RenderEndTag(HtmlTextWriter writer)<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span>{<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>base.RenderEndTag(writer);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>writer.WriteLine();<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>writer.Write(&#8220;&lt;!&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;- &#8220;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>writer.Write(&#8220;AspxBoy.Com.ConfirmButton<span style="mso-spacerun: yes">  </span>End&#8221;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>writer.Write(&#8221; &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;&#8221;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>writer.WriteLine(&#8220;&gt;&#8221;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>writer.WriteLine();<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span>}<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 1">       </span>}<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3">}<p></p></font></span></b></p>
+<p><br /></p>               
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Marble Wu</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2004-04-30T09:49:00+08:00" pubdate data-updated="true">Apr 30<span>th</span>, 2004</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/tag/asp-net/'>ASP.NET</a>, <a class='category' href='/blog/tag/asp-net/'>Asp.net</a>, <a class='category' href='/blog/tag/confirmbutton/'>ConfirmButton</a>, <a class='category' href='/blog/tag/自定义控件/'>自定义控件</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://huobazi.github.com/blog/2004/04/30/confirmbutton/" data-via="huobazi" data-counturl="http://huobazi.github.com/blog/2004/04/30/confirmbutton/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2004/04/27/filldatatoexceltemplate/" title="Previous Post: 打开一个Excel模板文件填充数据另存为一个文件">&laquo; 打开一个Excel模板文件填充数据另存为一个文件</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2004/04/30/cb-8176/" title="Next Post: 一个关于DataGrid的打印类,分享,感谢作者">一个关于DataGrid的打印类,分享,感谢作者 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("huobazi", 10, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/huobazi" class="twitter-follow-button" data-show-count="false">Follow @huobazi</a>
+  
+</section>
+
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/11/26/osx-shang-mo-ren-vim-bu-zhi-chi-plus-ji-cun-qi/">OSX 上默认 VIM 不支持 + 寄存器</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/02/tmux-diu-shi-huo-xian-shi-vimde-pei-se/">tmux丢失或显示vim的配色</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/09/12/import-data-from-mysql-to-postgresql/">将 MySQL 的数据导入 PostgreSQL</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/15/ajaxupload-with-rail-carrierwave-on-mongodb/">使用AjaxUpload和Carrierwave在Rails && Mongoid中批量上传图片'</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/06/convert-typecho-to-octopress/">从typecho转换到Octopress了</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/02/25/hg232/">HG232破解一例</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/02/13/ios-uiactionsheetdelegate/">iOS通过UIActionSheetDelegate来实现警告的方法</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/02/04/ubuntu-sublime-text-chinese/">Ubuntu下设置 Sublime Text 2 显示中文 && 输入中文</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/12/09/ios-hide-keyboard-when-touch/">[How to]在iOS中点击文本框以外区域，隐藏键盘</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/11/28/how-to-uninstall-xcode/"> [How to] 如何卸载Xcode</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/huobazi">@huobazi</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'huobazi',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Marble Wu -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'huobaziblog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://huobazi.github.com/blog/2004/04/30/confirmbutton/';
+        var disqus_url = 'http://huobazi.github.com/blog/2004/04/30/confirmbutton/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

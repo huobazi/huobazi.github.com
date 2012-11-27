@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: ASP.NET | 武眉博]]></title>
+  <link href="http://huobazi.github.com/blog/tag/asp-net/atom.xml" rel="self"/>
+  <link href="http://huobazi.github.com/"/>
+  <updated>2012-11-27T11:09:53+08:00</updated>
+  <id>http://huobazi.github.com/</id>
+  <author>
+    <name><![CDATA[Marble Wu]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[ [How to] 如何卸载Xcode]]></title>
+    <link href="http://huobazi.github.com/blog/2011/11/28/how-to-uninstall-xcode/"/>
+    <updated>2011-11-28T15:27:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2011/11/28/how-to-uninstall-xcode</id>
+    <content type="html"><![CDATA[<p> </p>
+
+
+<pre> $ sudo /Developer/Library/uninstall-devtools --mode=all</pre>
+
+
+<p> </p>
+
+
+<p></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[AutoGenerateColumns='true'的GridView如何支持htmlencode/htmldecode]]></title>
+    <link href="http://huobazi.github.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/"/>
+    <updated>2011-11-09T23:47:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview</id>
+    <content type="html"><![CDATA[<p>我们知道BoundField.HtmlEncode 属性可以设置一个单元格是否能够htmlencode，我今天碰到的问题是：自动生成列的GridView，表头可能是包含html的比如&lt;font color=red&gt;邮件&lt;/font&gt;，默认被htmlencode了，而我不希望这样做，所以有了如下的代码:</p>
+
+
+<p><!--more--></p>
+
+
+<p> </p>
+
+
+<div class="source" style="font-family: '[object HTMLOptionElement]', Consolas, 'Lucida Console', 'Courier New'; color: #e6e1dc; background-color: #111111; ">
+<span style="color: #bc9458; font-style: italic; ">/// &lt;summary&gt;</span><br /><span style="color: #bc9458; font-style: italic; ">/// Handles the PreRender event of the gvSource control.</span><br /><span style="color: #bc9458; font-style: italic; ">/// &lt;/summary&gt;</span><br /><span style="color: #bc9458; font-style: italic; ">/// &lt;param name="sender"&gt;The source of the event.&lt;/param&gt;</span><br /><span style="color: #bc9458; font-style: italic; ">/// &lt;param name="e"&gt;The &lt;see cref="System.EventArgs"/&gt; instance containing the event data.&lt;/param&gt;</span><br /><span style="color: #cc7833; ">protected</span> <span style="color: #cc7833; ">void</span> <span style="color: #ffc66d; ">gvSource_PreRender</span>( <span style="color: #da4939; ">object</span> <span style="color: #e6e1dc; ">sender</span> <span style="color: #e6e1dc; ">,</span> <span style="color: #e6e1dc; ">EventArgs</span> <span style="color: #e6e1dc; ">e</span> )<br /><span style="color: #e6e1dc; ">{</span><br />    <span style="color: #e6e1dc; ">GridView</span> <span style="color: #e6e1dc; ">gridView</span> <span style="color: #e6e1dc; ">=</span> <span style="color: #e6e1dc; ">sender</span> <span style="color: #cc7833; ">as</span> <span style="color: #e6e1dc; ">GridView</span>;<br />    <span style="color: #cc7833; ">if</span> ( <span style="color: #e6e1dc; ">gridView</span> <span style="color: #e6e1dc; ">!=</span> <span style="color: #cc7833; ">null</span> <span style="color: #e6e1dc; ">&amp;&amp;</span> <span style="color: #e6e1dc; ">gridView</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HeaderRow</span> <span style="color: #e6e1dc; ">!=</span> <span style="color: #cc7833; ">null</span> <span style="color: #e6e1dc; ">&amp;&amp;</span> <span style="color: #e6e1dc; ">gridView</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HeaderRow</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Cells</span> <span style="color: #e6e1dc; ">!=</span> <span style="color: #cc7833; ">null</span> )<br />    <span style="color: #e6e1dc; ">{</span><br />        <span style="color: #cc7833; ">for</span> ( <span style="color: #da4939; ">int</span> <span style="color: #e6e1dc; ">j</span> <span style="color: #e6e1dc; ">=</span> <span style="color: #a5c261; ">0</span> ; <span style="color: #e6e1dc; ">j</span> <span style="color: #e6e1dc; ">&lt;</span> <span style="color: #e6e1dc; ">gridView</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HeaderRow</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Cells</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Count</span> ; <span style="color: #e6e1dc; ">j</span><span style="color: #e6e1dc; ">++</span> )<br />        <span style="color: #e6e1dc; ">{</span><br />            <span style="color: #e6e1dc; ">gridView</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HeaderRow</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Cells</span><span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">j</span><span style="color: #e6e1dc; ">].</span><span style="color: #e6e1dc; ">Text</span> <span style="color: #e6e1dc; ">=</span> <span style="color: #e6e1dc; ">System</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Web</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HttpUtility</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HtmlDecode</span>( <span style="color: #e6e1dc; ">gridView</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HeaderRow</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Cells</span><span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">j</span><span style="color: #e6e1dc; ">].</span><span style="color: #e6e1dc; ">Text</span> );<br />        <span style="color: #e6e1dc; ">}</span><br />    <span style="color: #e6e1dc; ">}</span><br /><span style="color: #e6e1dc; ">}</span>
+</div>
+
+
+<p></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[在Console下输入密码，以星号代替。]]></title>
+    <link href="http://huobazi.github.com/blog/2011/06/22/password-masking-in-csharp-console-application/"/>
+    <updated>2011-06-22T23:03:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2011/06/22/password-masking-in-csharp-console-application</id>
+    <content type="html"><![CDATA[<p>如何在Console下输入密码，像*unix系统下那样不显示，或者显示星号，如下代码经过测试：</p>
+
+
+<p><!--more--></p>
+
+
+<div class="source" style="font-family: '[object HTMLOptionElement]', Consolas, 'Lucida Console', 'Courier New'; color: #ffffff; background-color: #333333; ">
+<p><span style="color: #87ceeb; ">/// &lt;summary&gt;</span><br /><span style="color: #87ceeb; ">/// Gets the console secure password.</span><br /><span style="color: #87ceeb; ">/// &lt;/summary&gt;</span><br /><span style="color: #87ceeb; ">/// &lt;returns&gt;&lt;/returns&gt;</span><br /><span style="color: #f0e68c; ">private</span> <span style="color: #f0e68c; ">static</span> <span style="color: #ffffff; ">SecureString</span> <span style="color: #ffffff; ">GetConsoleSecurePassword</span>( )<br /><span style="color: #ffffff; ">{</span><br />    <span style="color: #ffffff; ">SecureString</span> <span style="color: #ffffff; ">pwd</span> <span style="color: #ffffff; ">=</span> <span style="color: #f0e68c; ">new</span> <span style="color: #ffffff; ">SecureString</span>( );<br />    <span style="color: #f0e68c; ">while</span> ( <span style="color: #f0e68c; ">true</span> )<br />    <span style="color: #ffffff; ">{</span><br />        <span style="color: #ffffff; ">ConsoleKeyInfo</span> <span style="color: #ffffff; ">i</span> <span style="color: #ffffff; ">=</span> <span style="color: #ffffff; ">Console</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">ReadKey</span>( <span style="color: #f0e68c; ">true</span> );<br />        <span style="color: #f0e68c; ">if</span> ( <span style="color: #ffffff; ">i</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Key</span> <span style="color: #ffffff; ">==</span> <span style="color: #ffffff; ">ConsoleKey</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Enter</span> )<br />        <span style="color: #ffffff; ">{</span><br />            <span style="color: #f0e68c; ">break</span>;<br />        <span style="color: #ffffff; ">}</span><br />        <span style="color: #f0e68c; ">else</span> <span style="color: #ffffff; ">if</span> ( <span style="color: #ffffff; ">i</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Key</span> <span style="color: #ffffff; ">==</span> <span style="color: #ffffff; ">ConsoleKey</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Backspace</span> )<br />        <span style="color: #ffffff; ">{</span><br />            <span style="color: #ffffff; ">pwd</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">RemoveAt</span>( <span style="color: #ffffff; ">pwd</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Length</span> <span style="color: #ffffff; ">-</span> <span style="color: #ffffff; ">1</span> );<br />            <span style="color: #ffffff; ">Console</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Write</span>( <span style="color: #ffffff; ">"\b \b"</span> );<br />        <span style="color: #ffffff; ">}</span><br />        <span style="color: #f0e68c; ">else</span><br />        <span style="color: #ffffff; ">{</span><br />            <span style="color: #ffffff; ">pwd</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">AppendChar</span>( <span style="color: #ffffff; ">i</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">KeyChar</span> );<br />            <span style="color: #ffffff; ">Console</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Write</span>( <span style="color: #ffffff; ">"*"</span> );<br />        <span style="color: #ffffff; ">}</span><br />    <span style="color: #ffffff; ">}</span><br />    <span style="color: #f0e68c; ">return</span> <span style="color: #ffffff; ">pwd</span>;<br /><span style="color: #ffffff; ">}</span></p>
+<p><span style="color: #87ceeb; ">/// &lt;summary&gt;</span><br /><span style="color: #87ceeb; ">/// Gets the console password.</span><br /><span style="color: #87ceeb; ">/// &lt;/summary&gt;</span><br /><span style="color: #87ceeb; ">/// &lt;returns&gt;&lt;/returns&gt;</span><br /><span style="color: #f0e68c; ">private</span> <span style="color: #f0e68c; ">static</span> <span style="color: #bdb76b; ">string</span> <span style="color: #ffffff; ">GetConsolePassword</span>( )<br /><span style="color: #ffffff; ">{</span><br />    <span style="color: #ffffff; ">StringBuilder</span> sb <span style="color: #ffffff; ">=</span> <span style="color: #f0e68c; ">new</span> <span style="color: #ffffff; ">StringBuilder</span>( );<br />    <span style="color: #f0e68c; ">while</span> ( <span style="color: #f0e68c; ">true</span> )<br />    <span style="color: #ffffff; ">{</span><br />        <span style="color: #ffffff; ">ConsoleKeyInfo</span> <span style="color: #ffffff; ">cki</span> <span style="color: #ffffff; ">=</span> <span style="color: #ffffff; ">Console</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">ReadKey</span>( <span style="color: #f0e68c; ">true</span> );<br />        <span style="color: #f0e68c; ">if</span> ( <span style="color: #ffffff; ">cki</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Key</span> <span style="color: #ffffff; ">==</span> <span style="color: #ffffff; ">ConsoleKey</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Enter</span> )<br />        <span style="color: #ffffff; ">{</span><br />            <span style="color: #ffffff; ">Console</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">WriteLine</span>( );<br />            <span style="color: #f0e68c; ">break</span>;<br />        <span style="color: #ffffff; ">}</span></p>
+<p>        <span style="color: #f0e68c; ">if</span> ( <span style="color: #ffffff; ">cki</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Key</span> <span style="color: #ffffff; ">==</span> <span style="color: #ffffff; ">ConsoleKey</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Backspace</span> )<br />        <span style="color: #ffffff; ">{</span><br />            <span style="color: #f0e68c; ">if</span> ( sb<span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Length</span> <span style="color: #ffffff; ">&gt;</span> <span style="color: #ffffff; ">0</span> )<br />            <span style="color: #ffffff; ">{</span><br />                <span style="color: #ffffff; ">Console</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Write</span>( <span style="color: #ffffff; ">"\b\0\b"</span> );<br />                sb<span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Length</span><span style="color: #ffffff; ">--;</span><br />            <span style="color: #ffffff; ">}</span></p>
+<p>            <span style="color: #f0e68c; ">continue</span>;<br />        <span style="color: #ffffff; ">}</span></p>
+<p>        <span style="color: #ffffff; ">Console</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Write</span>( <span style="color: #ffffff; ">'*'</span> );<br />        sb<span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Append</span>( <span style="color: #ffffff; ">cki</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">KeyChar</span> );<br />    <span style="color: #ffffff; ">}</span></p>
+<p>    <span style="color: #f0e68c; ">return</span> sb<span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">ToString</span>( );<br /><span style="color: #ffffff; ">}</span></p>
+</div>
+
+
+<p>gist：<a href="https://gist.github.com/1039424">https://gist.github.com/1039424</a></p>
+
+
+<p></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[请珍爱自己的身体]]></title>
+    <link href="http://huobazi.github.com/blog/2010/03/03/356/"/>
+    <updated>2010-03-03T19:05:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2010/03/03/356</id>
+    <content type="html"><![CDATA[<p><strong><span style="color: #008000;font-size:48px;">see see:</span></strong></p>
+
+
+<p><a title="程序员们，请珍爱自己的身体" href="http://www.cnblogs.com/yiway/archive/2010/02/23/1672173.html" target="_blank"><span style="color: #008000;"><strong>http://www.cnblogs.com/yiway/archive/2010/02/23/1672173.html</strong></span></a></p>
+
+
+<p></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[使用window.location跳转，在IE中UrlReffer不被记录]]></title>
+    <link href="http://huobazi.github.com/blog/2010/01/21/window-location-href-ie-request-reffer/"/>
+    <updated>2010-01-21T16:54:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2010/01/21/window-location-href-ie-request-reffer</id>
+    <content type="html"><![CDATA[<p>使用window.location跳转，在FF中，没问题，下一页面可以取得UrlReffer，但在IE中UrlReffer不被记录</p>
+
+
+<p>真变态，</p>
+
+
+<p>让我头痛了半天，弄了个丑陋的办法做了如下实现：</p>
+
+
+<p><!--more--></p>
+
+
+<div class="source" style="COLOR: #f6f3e8; FONT-FAMILY: '[object]','Consolas','Lucida Console','Courier New'; BACKGROUND-COLOR: #242424">
+<span style="COLOR: #8ac6f2">function</span> <span style="COLOR: #f6f3e8">safeRedirectToCart</span>(<span style="COLOR: #f6f3e8">url</span>) <span style="COLOR: #f6f3e8">{</span><br />    <span style="COLOR: #8ac6f2">var</span> <span style="COLOR: #f6f3e8">isIE</span> <span style="COLOR: #f6f3e8">=</span> <span style="COLOR: #f6f3e8">jQuery</span><span style="COLOR: #f6f3e8">.</span><span style="COLOR: #f6f3e8">browser</span><span style="COLOR: #f6f3e8">.</span><span style="COLOR: #f6f3e8">msie</span>;<br />    <span style="COLOR: #8ac6f2">if</span> (<span style="COLOR: #f6f3e8">!</span><span style="COLOR: #f6f3e8">isIE</span>) <span style="COLOR: #f6f3e8">{</span><br />        <span style="COLOR: #f6f3e8">window</span><span style="COLOR: #f6f3e8">.</span><span style="COLOR: #f6f3e8">location</span> <span style="COLOR: #f6f3e8">=</span> <span style="COLOR: #f6f3e8">url</span>;<br />        <span style="COLOR: #8ac6f2">return</span>;<br />    <span style="COLOR: #f6f3e8">}</span><br />    <span style="COLOR: #f6f3e8">$</span>(<span style="COLOR: #95e454; FONT-STYLE: italic">".btnCart"</span><span style="COLOR: #f6f3e8">).</span><span style="COLOR: #f6f3e8">get</span>(<span style="COLOR: #e5786d">0</span><span style="COLOR: #f6f3e8">).</span><span style="COLOR: #f6f3e8">click</span>();<br /><span style="COLOR: #f6f3e8">}</span>
+</div>
+
+
+<p>说明：在页面上render一个连接(可以用样式表控制不显示），判断如果是IE浏览器然则调用其click，嘿嘿，就这个。</p>
+
+
+<p></p>
+]]></content>
+  </entry>
+  
+</feed>

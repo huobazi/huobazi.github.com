@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 配色 | 武眉博]]></title>
+  <link href="http://huobazi.github.com/blog/tag/配色/atom.xml" rel="self"/>
+  <link href="http://huobazi.github.com/"/>
+  <updated>2012-11-27T11:09:53+08:00</updated>
+  <id>http://huobazi.github.com/</id>
+  <author>
+    <name><![CDATA[Marble Wu]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[漂亮的VIM配色方案]]></title>
+    <link href="http://huobazi.github.com/blog/2010/01/11/vim-color-scheme/"/>
+    <updated>2010-01-11T10:39:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2010/01/11/vim-color-scheme</id>
+    <content type="html"><![CDATA[<p>这里<br /><a href="http://code.google.com/p/vimcolorschemetest/" target="_blank">http://code.google.com/p/vimcolorschemetest/</a><br />有一堆一堆的配色方案</p>
+
+
+<h1><a name="Browse_By_File_Type">Browse By File Type</a></h1>
+
+
+<p><a name="Browse_By_File_Type">Featuring 428 schemes: </a></p>
+
+
+<ul>
+<li><a rel="nofollow" href="http://vimcolorschemetest.googlecode.com/svn/html/index-c.html">C</a></li>
+<li><a rel="nofollow" href="http://vimcolorschemetest.googlecode.com/svn/html/index-html.html">HTML</a></li>
+<li><a rel="nofollow" href="http://vimcolorschemetest.googlecode.com/svn/html/index-java.html">Java</a></li>
+<li><a rel="nofollow" href="http://vimcolorschemetest.googlecode.com/svn/html/index-pl.html">Perl</a></li>
+<li><a rel="nofollow" href="http://vimcolorschemetest.googlecode.com/svn/html/index-tex.html">LaTeX</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

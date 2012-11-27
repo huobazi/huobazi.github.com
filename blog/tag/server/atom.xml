@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Server | 武眉博]]></title>
+  <link href="http://huobazi.github.com/blog/tag/server/atom.xml" rel="self"/>
+  <link href="http://huobazi.github.com/"/>
+  <updated>2012-11-27T11:09:53+08:00</updated>
+  <id>http://huobazi.github.com/</id>
+  <author>
+    <name><![CDATA[Marble Wu]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[使用SQL语句更改数据表的默认值]]></title>
+    <link href="http://huobazi.github.com/blog/2009/12/09/chang-sql-table-field-default/"/>
+    <updated>2009-12-09T17:34:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2009/12/09/chang-sql-table-field-default</id>
+    <content type="html"><![CDATA[<p>以前还真没这么干过，都是手工去掉约束，再添加的，今天一边google一边搞啊搞啊的，最终下面这个脚本可以用了</p>
+
+
+<p><!--more--></p>
+
+
+<div class="source" style='font-family: "Consolas","Lucida Console","Courier New"; color: #ffffff; background-color: #333333;'>
+<p><span style="color: #f0e68c;">alter</span> <span style="color: #f0e68c;">table</span> <span style="color: #ffffff;">dbo</span><span style="color: #ffffff;">.</span><span style="color: #ffffff;">SOTransaction</span><br />    <span style="color: #f0e68c;">alter</span> <span style="color: #f0e68c;">column</span> <span style="color: #ffffff;">UnitCostWithoutTax</span> <span style="color: #ffffff;">decimal</span>(<span style="color: #ffffff;">10</span><span style="color: #ffffff;">,</span> <span style="color: #ffffff;">2</span>)  <span style="color: #f0e68c;">not</span> <span style="color: #f0e68c;">null</span></p>
+<p><span style="color: #f0e68c;">go</span></p>
+<p><span style="color: #f0e68c;">declare</span> <span style="color: #ffffff;">@</span><span style="color: #ffffff;">name</span> <span style="color: #ffffff;">varchar</span>(<span style="color: #ffffff;">1000</span>)<br /><span style="color: #f0e68c;">declare</span> <span style="color: #ffffff;">@</span><span style="color: #ffffff;">tablename</span> <span style="color: #ffffff;">varchar</span>(<span style="color: #ffffff;">1000</span>)<br /><span style="color: #f0e68c;">declare</span> <span style="color: #ffffff;">@</span><span style="color: #ffffff;">fieldname</span> <span style="color: #ffffff;">varchar</span>(<span style="color: #ffffff;">1000</span>)</p>
+<p><span style="color: #f0e68c;">set</span> <span style="color: #ffffff;">@</span><span style="color: #ffffff;">tablename</span> <span style="color: #ffffff;">=</span> <span style="color: #ffffff;">'SOTransaction'</span>;<br /><span style="color: #f0e68c;">set</span> <span style="color: #ffffff;">@</span><span style="color: #ffffff;">fieldname</span> <span style="color: #ffffff;">=</span> <span style="color: #ffffff;">'UnitCostWithoutTax'</span>;</p>
+<p><span style="color: #f0e68c;">select</span> <span style="color: #ffffff;">@</span><span style="color: #ffffff;">name</span> <span style="color: #ffffff;">=</span> b<span style="color: #ffffff;">.</span><span style="color: #ffffff;">name</span> <span style="color: #f0e68c;">from</span> <span style="color: #ffffff;">syscolumns</span> <span style="color: #ffffff;">a</span> <span style="color: #f0e68c;">inner</span> <span style="color: #f0e68c;">join</span> <span style="color: #ffffff;">sysobjects</span> b<br />    <span style="color: #f0e68c;">on</span> b<span style="color: #ffffff;">.</span><span style="color: #ffffff;">id</span><span style="color: #ffffff;">=</span><span style="color: #ffffff;">a</span><span style="color: #ffffff;">.</span><span style="color: #ffffff;">cdefault</span><br /><span style="color: #f0e68c;">where</span><br />    <span style="color: #ffffff;">a</span><span style="color: #ffffff;">.</span><span style="color: #ffffff;">id</span><span style="color: #ffffff;">=</span> <span style="color: #ffffff;">object_id</span>(<span style="color: #ffffff;">@</span><span style="color: #ffffff;">tablename</span>)<br />    <span style="color: #f0e68c;">and</span> <span style="color: #ffffff;">a</span><span style="color: #ffffff;">.</span><span style="color: #ffffff;">name</span><span style="color: #ffffff;">=@</span><span style="color: #ffffff;">fieldname</span><br />    <span style="color: #f0e68c;">and</span> b<span style="color: #ffffff;">.</span><span style="color: #ffffff;">name</span> <span style="color: #f0e68c;">like</span> <span style="color: #ffffff;">'DF%'</span><br /><span style="color: #87ceeb;">--print @name</span></p>
+<p><span style="color: #f0e68c;">exec</span>(<span style="color: #ffffff;">' alter table SOTransaction drop constraint '</span> <span style="color: #ffffff;">+</span> <span style="color: #ffffff;">@</span><span style="color: #ffffff;">name</span>);<br /><span style="color: #f0e68c;">go</span><br /><span style="color: #f0e68c;">alter</span> <span style="color: #f0e68c;">table</span> <span style="color: #ffffff;">dbo</span><span style="color: #ffffff;">.</span><span style="color: #ffffff;">SOTransaction</span><br />    <span style="color: #f0e68c;">add</span> <span style="color: #f0e68c;">constraint</span> <span style="color: #ffffff;">DF_SOTransaction_UnitCostWithoutTax</span> <span style="color: #f0e68c;">default</span> (<span style="color: #ffffff;">0</span>) <span style="color: #f0e68c;">for</span> <span style="color: #ffffff;">UnitCostWithoutTax</span></p>
+</div>
+
+
+<p></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[关于Data Access Blok (SqlHelper.cs)使用时出现]]></title>
+    <link href="http://huobazi.github.com/blog/2006/03/24/cb-357546/"/>
+    <updated>2006-03-24T11:25:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2006/03/24/cb-357546</id>
+    <content type="html"><![CDATA[<p>关于Data Access Blok (SqlHelper.cs)使用时出现"对象必须实现 IConvertible/Object must implement IConvertible."异常</p>
+
+
+<p>在使用低版本 Data Access Blok  时，出现如下异常<br />“/”应用程序中的服务器错误。<br />--------------------------------------------------------------------------------</p>
+
+
+<p> </p>
+
+
+<p><span style="color: #0000ff;">对象必须实现 IConvertible。<br />说明: 执行当前 Web 请求期间，出现未处理的异常。请检查堆栈跟踪信息，以了解有关该错误以及代码中导致错误的出处的详细信息。 </span></p>
+
+
+<p> </p>
+
+
+<p><span style="color: #0000ff;">异常详细信息: System.InvalidCastException: 对象必须实现 IConvertible。</span></p>
+
+
+<p> </p>
+
+
+<p><span style="color: #0000ff;">源错误: </span></p>
+
+
+<p> <br /><span style="color: #0000ff;">行 360：   <br />行 361：   //finally, execute the command.<br />行 362：   int retval = cmd.ExecuteNonQuery();<br />行 363：   <br />行 364：   // detach the SqlParameters from the command object, so they can be used again.</span></p>
+
+
+<p> </p>
+
+
+<p>参考<a href="http://weblogs.asp.net/ssmith/archive/2003/08/19/24524.aspx#92222" target="_blank">http://weblogs.asp.net/ssmith/archive/2003/08/19/24524.aspx#92222</a><br />做修改<br />the simple fix is to change line 93 to read:<br />commandParameters[i].Value = ((SqlParameter)parameterValues[i]).Value;</p>
+
+
+<p> </p>
+
+
+<p>instead of:<br />commandParameters[i].Value = parameterValues[i];</p>
+
+
+<p> </p>
+
+
+<p>正常工作。</p>
+
+
+<p></p>
+]]></content>
+  </entry>
+  
+</feed>

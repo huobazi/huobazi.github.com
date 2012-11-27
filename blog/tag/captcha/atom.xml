@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Captcha | 武眉博]]></title>
+  <link href="http://huobazi.github.com/blog/tag/captcha/atom.xml" rel="self"/>
+  <link href="http://huobazi.github.com/"/>
+  <updated>2012-11-27T11:09:53+08:00</updated>
+  <id>http://huobazi.github.com/</id>
+  <author>
+    <name><![CDATA[Marble Wu]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[原来验证码可以租的哦]]></title>
+    <link href="http://huobazi.github.com/blog/2006/04/17/textdisguisecaptchaimage/"/>
+    <updated>2006-04-17T11:01:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2006/04/17/textdisguisecaptchaimage</id>
+    <content type="html"><![CDATA[<p><a href="http://www.textdisguise.com/TextDisguise/default.aspx">http://www.textdisguise.com/TextDisguise/default.aspx</a><br />提供webservice生成防止机器人的CAPTCHA Image<br />看样子<a href="http://www.textdisguise.com/TextDisguise/ProductsComparison.aspx">挺贵的</a>，不过<a href="http://www.textdisguise.com/TextDisguise/Demo.aspx">Demo</a>看起来很不错。</p>
+
+
+<p></p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,738 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>武眉博</title>
+  <meta name="author" content="Marble Wu">
+
+  
+  <meta name="description" content="在C#中为了提高性能使用了字符串驻留技术，而在Python中不光是字符串，连整数都有使用类似的驻留技术哦，看下面的测试： C:\Documents and Settings\Marble Wu&gt;python
+Python 2.6.2 (r262:71605, Apr 14 2009, 22: &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://huobazi.github.com/blog/page/6/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="武眉博" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-56321-3']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">武眉博</a></h1>
+  
+    <h2>Marble's blog.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:huobazi.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/links">Friends</a></li>
+  <li><a href="/about">About</a></li>
+  
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/08/21/python-object-interning/">Python的对象驻留</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-08-21T22:21:00+08:00" pubdate data-updated="true">Aug 21<span>st</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>在C#中为了提高性能使用了<a title="字符串驻留" href="http://www.google.com.sg/search?hl=zh-CN&amp;source=hp&amp;q=string+interning&amp;aq=f&amp;oq=" target="_blank">字符串驻留技术</a>，而在Python中不光是字符串，连整数都有使用类似的驻留技术哦，看下面的测试：</p>
+
+
+<pre>C:\Documents and Settings\Marble Wu&gt;python
+Python 2.6.2 (r262:71605, Apr 14 2009, 22:40:02) [MSC v.1500 32 bit (Intel)] on
+win32
+Type "help", "copyright", "credits" or "license" for more information.
+&gt;&gt;&gt; a=1
+&gt;&gt;&gt; b=1
+&gt;&gt;&gt; id(1)
+10446048
+&gt;&gt;&gt; id(a)
+10446048
+&gt;&gt;&gt; import sys
+&gt;&gt;&gt; sys.getrefcount(a)
+245
+&gt;&gt;&gt; sys.getrefcount(b)
+245
+&gt;&gt;&gt;</pre>
+
+
+<p><span style="font-family: Courier New; background-color: #eaf7ff;">其实也很容易理解，因为在Python<a title="Python的对象" href="http://wiki.woodpecker.org.cn/moin/PythonEssentialRef3" target="_blank">一切皆对象</a></span></p>
+
+
+<p></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/08/19/netbeans-utf8-settings/">调整netbeans6.5设置使之默认使用utf-8存储文件</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-08-19T23:28:00+08:00" pubdate data-updated="true">Aug 19<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>netbeans默认使用ANSI存储的，我们一般希望它采用utf-8来存储，按照如下方法可以实现这个要求</p>
+
+
+<p>1)  找到你的Netbeans安装目录下的etc文件夹,如D:\Program Files\NetBeans 6.5\etc<br />2)  用文本编辑器打开netbeans.conf<br />3)  找到netbeans_default_options这一句(注意#号开头的行的是注释)<br />4)  在最后面加上一个空格,再加入-J-Dfile.encoding=UTF-8</p>
+
+
+<p>如我现在的设置:</p>
+
+
+<p></div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2009/08/19/netbeans-utf8-settings/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/08/11/how-to-install-setuptools-on-windows-and-python26/">如何在windows xp下安装python2.6的setuptools</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-08-11T21:34:00+08:00" pubdate data-updated="true">Aug 11<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>最近开始学python，要安装很多egg文件，但发现<a href="http://pypi.python.org/pypi/setuptools#downloads">http://pypi.python.org/pypi/setuptools#downloads</a>没有python2.6的MS Windows installer版本，google了一把，用如下方法解决：</p>
+
+
+<p></div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2009/08/11/how-to-install-setuptools-on-windows-and-python26/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/08/06/mulit-window-service-one-exe/">不改程序, 创建同一个程序不同服务名的方法</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-08-06T23:28:00+08:00" pubdate data-updated="true">Aug 6<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>以往写windows service都需要个ProjectInstaller和serviceInstaller并配置serviceName，这样build出来的exe在install成windows service时我们会：</p>
+
+
+<pre>@echo 安装WindowService
+@Set Path=C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727;
+@Set svn_dir=%cd%
+installutil %svn_dir%\MyServiceDemo.exe
+pause
+@echo 成功！</pre>
+
+
+<p>但服务名被我们编译在程序里了，如果这个exe想被装很多次服务怎么办呢？<br />今天从同事Martin Jia那里学来一个好方法，可以不用ProjectInstaller、serviceInstaller这种东西，直接安装exe为windows service并在安装时指定服务名称</p>
+
+
+<p></div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2009/08/06/mulit-window-service-one-exe/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/08/02/bizcn-dns-hostname/">商务中国的DNS解析，主机名不许有下划线</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-08-02T16:10:00+08:00" pubdate data-updated="true">Aug 2<span>nd</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>就在刚才，就在刚才哦，本博客突然突然的就不能访问了，玉米是上午中国注册的，使用的是商务中国的dns服务，使用同样dns服务器的域名都可以访问，就这个突然离奇的不能访问了，去商务中国提了个ticket,过了不一会儿收到邮件说是已经回复了这个问题，赶紧登陆一看</p>
+
+
+<p></div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2009/08/02/bizcn-dns-hostname/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/08/02/wordpress-from-windows-to-linux/">Wordpress从windows上迁移到linux上要注意路径设置</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-08-02T00:21:00+08:00" pubdate data-updated="true">Aug 2<span>nd</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>今天在localhost上用xampp装了个<a title="Wordpress" href="http://www.wp.com" target="_blank">wordpress</a> 2.8.2,本地导入原来<a title="www.codeplex.com/blogengine" href="http://www.codeplex.com/blogengine" target="_blank">blogengine.net</a>的数据调整好，没有任何问题，就<a title="帝国备份王" href="http://www.phome.net/product/Ebak.html" target="_blank">用帝国备份王</a>打包数据在远程linunx上恢复，ftp上传本地站点内的文件到服务器对应目录，修改wp-config.php，兴冲冲的去访问首页，发现打不开，任何跟wp有关的页面都打不开，html可以打开和wp无关的页面比如探针是可以打开的，郁闷啊，检查了好久配置文件没有任何问题，思前想后想不通啊。本地和远程只是web服务器不同，本地是apache远程是nginx，不会是因为这个吧，其他几个站点都是这么弄的啊，是在想不到什么原因，</p>
+
+
+<p></div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2009/08/02/wordpress-from-windows-to-linux/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/07/30/how-to-determine-whether-an-type-is-nullable-and-get-the-underlying-type/">如何判断一个类型是nullable类型，并得知它的原始类型</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-07-30T20:04:00+08:00" pubdate data-updated="true">Jul 30<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>有些时候我们需要判断某个类型是否是Nullable类型，并且可能需要知道它的原始类型，<br />比如在做些ORM相关工作时，就需要这方面的应用，如下代码使用可以实现这个要求</p>
+
+
+<p></div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2009/07/30/how-to-determine-whether-an-type-is-nullable-and-get-the-underlying-type/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/07/26/2009-mvp/">拆箱记</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-07-26T18:36:00+08:00" pubdate data-updated="true">Jul 26<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>大洋彼岸寄来了一个纸箱</p>
+
+
+<p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/1.jpg" alt=""></p>
+
+
+<p></div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2009/07/26/2009-mvp/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/07/21/how-to-send-an-email-with-attachments/">Asp.Net发邮件，如何发送附件</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-07-21T17:20:00+08:00" pubdate data-updated="true">Jul 21<span>st</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>使用如下代码可以发送附件</p>
+
+
+<pre>MailMessage mail = new MailMessage();
+mail.To = "me@mycompany.com";
+mail.From = "you@yourcompany.com";
+mail.Subject = "this is a test email.";
+mail.Body = "this is my test email body.";
+MailAttachment attachment = new MailAttachment( Server.MapPath( "mailTest.txt" ) ); //create the attachment
+mail.Attachments.Add( attachment );
+SmtpMail.SmtpServer = "localhost"; 
+SmtpMail.Send( mail );</pre>
+
+
+<p>使用如下代码可以在用户上传附件后发生邮件:</p>
+
+
+<p></div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2009/07/21/how-to-send-an-email-with-attachments/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/07/18/php-guid/">如何判断一个网站是不是php做的？</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-07-18T12:16:00+08:00" pubdate data-updated="true">Jul 18<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>可以当作<strong>简易</strong>判断站点是否用PHP架设。</p>
+
+
+<p>PHP_LOGO_GUID<br /><a href="http://www.php.net/?=PHPE9568F34-D428-11d2-A769-00AA001ACF42">http://www.php.net/?=PHPE9568F34-D428-11d2-A769-00AA001ACF42</a></p>
+
+
+<p>PHP_EGG_LOGO_GUID<br /><a href="http://www.php.net/?=PHPE9568F36-D428-11d2-A769-00AA001ACF42">http://www.php.net/?=PHPE9568F36-D428-11d2-A769-00AA001ACF42</a></p>
+
+
+<p>ZEND_LOGO_GUID<br /><a href="http://www.php.net/?=PHPE9568F35-D428-11d2-A769-00AA001ACF42">http://www.php.net/?=PHPE9568F35-D428-11d2-A769-00AA001ACF42</a></p>
+
+
+<p>PHP_CREDITS_GUID<br /><a href="http://www.php.net/?=PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000">http://www.php.net/?=PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000</a></p>
+
+
+<p>喜欢看愚人节的那个Logo就是第二个链接罗<br /><a href="http://www.php.net/">http://www.php.net/</a> 这个网址只是范例，只要是任一PHP的站点即可。</p>
+
+
+<p>来源:<a href="http://www.google.cn/search?client=aff-os-worldbrowser&amp;forid=1&amp;ie=utf-8&amp;oe=UTF-8&amp;hl=zh-CN&amp;q=%E4%B8%80%E4%BA%9B%E5%86%85%E5%AE%9A%E7%9A%84PHP%E7%89%B9%E6%AE%8AGUID" target="_blank">http://www.google.cn/search?client=aff-os-worldbrowser&amp;forid=1&amp;ie=utf-8&amp;oe=UTF-8&amp;hl=zh-CN&amp;q=%E4%B8%80%E4%BA%9B%E5%86%85%E5%AE%9A%E7%9A%84PHP%E7%89%B9%E6%AE%8AGUID</a></p>
+
+
+<p> </p>
+
+
+<p></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/7/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/5/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("huobazi", 10, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/huobazi" class="twitter-follow-button" data-show-count="false">Follow @huobazi</a>
+  
+</section>
+
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/11/26/osx-shang-mo-ren-vim-bu-zhi-chi-plus-ji-cun-qi/">OSX 上默认 VIM 不支持 + 寄存器</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/02/tmux-diu-shi-huo-xian-shi-vimde-pei-se/">tmux丢失或显示vim的配色</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/09/12/import-data-from-mysql-to-postgresql/">将 MySQL 的数据导入 PostgreSQL</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/15/ajaxupload-with-rail-carrierwave-on-mongodb/">使用AjaxUpload和Carrierwave在Rails && Mongoid中批量上传图片&#8217;</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/06/convert-typecho-to-octopress/">从typecho转换到Octopress了</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/02/25/hg232/">HG232破解一例</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/02/13/ios-uiactionsheetdelegate/">iOS通过UIActionSheetDelegate来实现警告的方法</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/02/04/ubuntu-sublime-text-chinese/">Ubuntu下设置 Sublime Text 2 显示中文 && 输入中文</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/12/09/ios-hide-keyboard-when-touch/">[How to]在iOS中点击文本框以外区域，隐藏键盘</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/11/28/how-to-uninstall-xcode/"> [How to] 如何卸载Xcode</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/huobazi">@huobazi</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'huobazi',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Marble Wu -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'huobaziblog';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

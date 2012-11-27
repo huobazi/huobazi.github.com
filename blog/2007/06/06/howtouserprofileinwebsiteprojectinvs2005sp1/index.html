@@ -1,0 +1,359 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>如何在Web App Project 或者 Web Site Project的App_Code 内使用 Profile/ProfileCommon - 武眉博</title>
+  <meta name="author" content="Marble Wu">
+
+  
+  <meta name="description" content="在 web site project 内 可以很方便的使用 Profile/ProfileCommon 来 访问我们在web.config 的profile节内定义的properties ， 并且有很爽的 intellisense 然而在Web App Project或者Web Site &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://huobazi.github.com/blog/2007/06/06/howtouserprofileinwebsiteprojectinvs2005sp1/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="武眉博" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-56321-3']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">武眉博</a></h1>
+  
+    <h2>Marble's blog.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:huobazi.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/links">Friends</a></li>
+  <li><a href="/about">About</a></li>
+  
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">如何在Web App Project 或者 Web Site Project的App_Code 内使用 Profile/ProfileCommon</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-06-06T22:52:00+08:00" pubdate data-updated="true">Jun 6<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>在 web site project 内 可以很方便的使用 Profile/ProfileCommon 来 访问我们在web.config 的profile节内定义的properties ， 并且有很爽的 intellisense <br />然而在Web App Project或者Web Site Project的App_Code内使用的时候 编译都通不过的，因为 Profile 是 web site project 模型 在页面 执行时候创建在HttpContext的，Web Site Project 或者App_Code编译的时候还没有页面实例呢，何谈HttpContext, 当然无法使用了<br /><br />引用<a title="http://weblogs.asp.net/scottgu/" href="http://weblogs.asp.net/scottgu/" target="_blank">scottgu</a>的原话解释“This is supported because with the VS 2005 Web Site Project option Visual Studio is dynamically creating and adding a &#8220;ProfileCommon&#8221; class named &#8220;Profile&#8221; into every code-behind instance”，那么怎么办呢 <a title="http://weblogs.asp.net/scottgu/" href="http://weblogs.asp.net/scottgu/" target="_blank">scottgu</a> 支招&#8212;&#8212;“VS 2005 Web Application Projects don&#8217;t automatically support generating a strongly-typed Profile class proxy. <strong style="FONT-SIZE: 18pt; COLOR: #ff0000">However</strong>, you <a style="COLOR: #ff0000" href="http://www.gotdotnet.com/workspaces/workspace.aspx?id=406eefba-2dd9-4d80-a48c-b4f135df4127"><strong>can use this free download</strong></a><span style="COLOR: #ff0000"> </span>to automatically keep your own proxy class in sync with the profile configuration”。<br /><br />我们可以到 <a href="http://www.gotdotnet.com/" target="_blank">gotdotnet </a>上下载这个 addin  安装，经我测试 这个东西装在中文VS2005 SP1 上右键不会出现菜单(只会出现在外部程序管理器内，看的到用不成，不开心)。<br />好在他有源码的，我们用他的源码 找到 大概 40行上下<br />string toolsMenuName ;定义部分 <br />直接 string toolsMenuName = &#8220;工具&#8221;; 然后下面的 try catch 注释掉&#8212;-编译&#8212;然后把dll文件<br />替换到 C:\Documents and Settings\武眉博\My Documents\Visual Studio 2005\AddIns<br />就可以用了（原因可能是他的资源文件有问题）<br />接下来按照readme使用吧。<br />==================================================<br />To use the generator right click on web.config in a Web Application Project and<br />select &#8220;Generate WebProfile.&#8221;  This will create a WebProfile class in your<br />project based on the current profile setting sin Web.Config.  If you make a <br />change to your profile setting you need to run the tool again to update the <br />WebProfile class.  The WebProfile class is simply a thin wrapper that has<br />strongly typed accessors to profile properties.</p>
+
+
+<br /><p>To use the web profile class in a page create an accessor like this:</p>
+
+
+<br /><p>    // C# accessor<br />    private WebProfile Profile<br />    {<br />        get { return new WebProfile(Context.Profile); }<br />    }</p>
+
+
+<br /><p>    &#8217; VB accessor<br />    Private ReadOnly Property Profile() As WebProfile<br />        Get<br />            Return New WebProfile(Context.Profile)<br />        End Get<br />    End Property</p>
+
+
+<br /><p>Then you can use it like this:</p>
+
+
+<br /><p>    // C# use or accessor<br />    string s = Profile.MyProperty;<br />    Profile.MyGroup.MyProperty = &#8220;value&#8221;;</p>
+
+
+<br /><p>    &#8217; VB use of accessor<br />    Dim prop As String = Profile.MyProperty<br />    Profile.MyGroup.MyProperty = &#8220;value&#8221;</p>
+
+
+<br /><p>You can also access the current profile using the static Current property<br />like this:</p>
+
+
+<br /><p>    // C# use of Current property<br />    string s = WebProfile.Current.MyProperty;<br />    WebProfile.Current.MyGroup.MyProperty = &#8220;value&#8221;;</p>
+
+
+<br /><p>    // VB use of Current property<br />    Dim s As String = WebProfile.Current.MyProperty<br />    WebProfile.Current.MyGroup.MyProperty = &#8220;value&#8221;<br />    ========================================================<br />如果你用的是Web Site Project 想在App_Code内用Profile那么建议 创建一个WebSiteProject web.config拷贝过去仍然使用这个AddIn生成一个WebProfile.cs拷贝回你的app_code内就可以了（哎，怎么感觉像是说了个废话，还不如直接用Web App Project呢）<br />OK,就这么几步了。记在这里希望对朋友们有用，睡觉了。<br /><br />参考资料： <a href="http://webproject.scottgu.com/CSharp/migration2/migration2.aspx">http://webproject.scottgu.com/CSharp/migration2/migration2.aspx</a><br /></p>              
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Marble Wu</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-06-06T22:52:00+08:00" pubdate data-updated="true">Jun 6<span>th</span>, 2007</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/tag/asp-net/'>ASP.NET</a>, <a class='category' href='/blog/tag/asp-net/'>Asp.net</a>, <a class='category' href='/blog/tag/profile/'>Profile</a>, <a class='category' href='/blog/tag/profilecommon/'>ProfileCommon</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://huobazi.github.com/blog/2007/06/06/howtouserprofileinwebsiteprojectinvs2005sp1/" data-via="huobazi" data-counturl="http://huobazi.github.com/blog/2007/06/06/howtouserprofileinwebsiteprojectinvs2005sp1/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2007/05/27/vs2005sp1256andmram/" title="Previous Post: 郁闷啊，竟然用256M内存跑着VS2005 SP1 好几个月">&laquo; 郁闷啊，竟然用256M内存跑着VS2005 SP1 好几个月</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2007/06/08/cb-777092/" title="Next Post: 靶子的婚纱照出炉了，各位朋友PP">靶子的婚纱照出炉了，各位朋友PP &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("huobazi", 10, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/huobazi" class="twitter-follow-button" data-show-count="false">Follow @huobazi</a>
+  
+</section>
+
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/11/26/osx-shang-mo-ren-vim-bu-zhi-chi-plus-ji-cun-qi/">OSX 上默认 VIM 不支持 + 寄存器</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/02/tmux-diu-shi-huo-xian-shi-vimde-pei-se/">tmux丢失或显示vim的配色</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/09/12/import-data-from-mysql-to-postgresql/">将 MySQL 的数据导入 PostgreSQL</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/15/ajaxupload-with-rail-carrierwave-on-mongodb/">使用AjaxUpload和Carrierwave在Rails && Mongoid中批量上传图片'</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/06/convert-typecho-to-octopress/">从typecho转换到Octopress了</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/02/25/hg232/">HG232破解一例</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/02/13/ios-uiactionsheetdelegate/">iOS通过UIActionSheetDelegate来实现警告的方法</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/02/04/ubuntu-sublime-text-chinese/">Ubuntu下设置 Sublime Text 2 显示中文 && 输入中文</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/12/09/ios-hide-keyboard-when-touch/">[How to]在iOS中点击文本框以外区域，隐藏键盘</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/11/28/how-to-uninstall-xcode/"> [How to] 如何卸载Xcode</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/huobazi">@huobazi</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'huobazi',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Marble Wu -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'huobaziblog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://huobazi.github.com/blog/2007/06/06/howtouserprofileinwebsiteprojectinvs2005sp1/';
+        var disqus_url = 'http://huobazi.github.com/blog/2007/06/06/howtouserprofileinwebsiteprojectinvs2005sp1/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

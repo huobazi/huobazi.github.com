@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 实线 | 武眉博]]></title>
+  <link href="http://huobazi.github.com/blog/tag/实线/atom.xml" rel="self"/>
+  <link href="http://huobazi.github.com/"/>
+  <updated>2012-11-27T11:09:53+08:00</updated>
+  <id>http://huobazi.github.com/</id>
+  <author>
+    <name><![CDATA[Marble Wu]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[【How to】解决Visio虚线复制到word中变为实线]]></title>
+    <link href="http://huobazi.github.com/blog/2009/10/10/visio-dashed/"/>
+    <updated>2009-10-10T22:55:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2009/10/10/visio-dashed</id>
+    <content type="html"><![CDATA[<p>添加 MetafileDashLineAsSolid 到以下注册表位置，类型DWORD。</p>
+
+
+<p> • Visio 2007<br />HKEY_CURRENT_USER\Software\Microsoft\Office\12.0\Visio\Application<br />• Visio 2003<br />HKEY_CURRENT_USER\Software\Microsoft\Office\11.0\Visio\Application<br />属性值：</p>
+
+
+<p>• 0：虚线或虚线行执行不替换为实线。<br />• 1：虚线或虚线极端情形中行只替换为实线。 100 倍的原始文件大小时可能导致文件大小中增加例如, 替换实线为虚线或虚线行。 <br />• 2：替换实线用于当合理虚线或虚线行。 这是默认值。 <br />• 3：始终替换为实线虚线或虚线行。 </p>
+
+
+<p> </p>
+
+
+<p></p>
+]]></content>
+  </entry>
+  
+</feed>
