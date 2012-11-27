@@ -4,7 +4,7 @@
   <title><![CDATA[武眉博]]></title>
   <link href="http://huobazi.github.com/atom.xml" rel="self"/>
   <link href="http://huobazi.github.com/"/>
-  <updated>2012-11-27T20:47:49+08:00</updated>
+  <updated>2012-11-27T20:53:15+08:00</updated>
   <id>http://huobazi.github.com/</id>
   <author>
     <name><![CDATA[Marble Wu]]></name>
@@ -81,6 +81,13 @@ SO上找找，发现</p>
 
 
 <p></p>
+
+<p>另外不要忘记设置vim的</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">set </span><span class="nv">clipboard</span><span class="o">=</span>unnamed
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>完整的配置<a href="https://github.com/huobazi/dotfiles">https://github.com/huobazi/dotfiles</a></p>
 ]]></content>
