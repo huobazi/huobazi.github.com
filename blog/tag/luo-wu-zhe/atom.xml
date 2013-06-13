@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 落伍者 | 武眉博]]></title>
+  <link href="http://huobazi.github.com/blog/tag/luo-wu-zhe/atom.xml" rel="self"/>
+  <link href="http://huobazi.github.com/"/>
+  <updated>2013-06-13T11:06:04+08:00</updated>
+  <id>http://huobazi.github.com/</id>
+  <author>
+    <name><![CDATA[Marble Wu]]></name>
+    <email><![CDATA[huobazi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[落伍者三周岁了 ]]></title>
+    <link href="http://huobazi.github.com/blog/2004/03/14/cb-3122/"/>
+    <updated>2004-03-14T11:12:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2004/03/14/cb-3122</id>
+    <content type="html"><![CDATA[<p>我常泡的一个论坛&lt;&lt;<a href="http://www.im286.com">落伍者</a>&gt;&gt;三周岁了，<br />小贺一下<br />公布我的AspxBoy.Com.Article的源代码<br />帖子在<a href="http://www.im286.com/viewthread.php?tid=445594">这里</a><br />源码在<a href="http://www.aspxboy.com/code/">这里</a><br />希望各位指正。<br /></p>
+
+
+<p></p>
+]]></content>
+  </entry>
+  
+</feed>

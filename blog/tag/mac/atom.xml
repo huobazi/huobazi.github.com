@@ -4,11 +4,11 @@
   <title><![CDATA[Category: Mac | 武眉博]]></title>
   <link href="http://huobazi.github.com/blog/tag/mac/atom.xml" rel="self"/>
   <link href="http://huobazi.github.com/"/>
-  <updated>2012-11-27T20:53:15+08:00</updated>
+  <updated>2013-06-13T11:06:04+08:00</updated>
   <id>http://huobazi.github.com/</id>
   <author>
     <name><![CDATA[Marble Wu]]></name>
-    
+    <email><![CDATA[huobazi@gmail.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
@@ -53,8 +53,8 @@ SO上找找，发现</p>
 
 <p>```bash
 set-option -g default-shell $SHELL
-set-option -g default-command "reattach-to-user-namespace -l zsh"
-bind y run "tmux save-buffer - | reattach-to-user-namespace pbcopy"
+set-option -g default-command &ldquo;reattach-to-user-namespace -l zsh&rdquo;
+bind y run &ldquo;tmux save-buffer &ndash; | reattach-to-user-namespace pbcopy&rdquo;
 unbind p
 bind p paste-buffer
 bind -t vi-copy v begin-selection

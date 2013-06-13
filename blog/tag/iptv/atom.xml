@@ -4,11 +4,11 @@
   <title><![CDATA[Category: IPTV | 武眉博]]></title>
   <link href="http://huobazi.github.com/blog/tag/iptv/atom.xml" rel="self"/>
   <link href="http://huobazi.github.com/"/>
-  <updated>2012-11-27T20:53:15+08:00</updated>
+  <updated>2013-06-13T11:06:04+08:00</updated>
   <id>http://huobazi.github.com/</id>
   <author>
     <name><![CDATA[Marble Wu]]></name>
-    
+    <email><![CDATA[huobazi@gmail.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
@@ -30,11 +30,11 @@
 <!--more-->
 
 
-<h5>1.1 手工操作----乐趣</h5>
+<h5>1.1 手工操作&mdash;&mdash;乐趣</h5>
 
 <p>用猫后面印刷的普通用户useradmin登陆，这个用户登陆进去什么高级全选都木有，但是表着急，我这么干的，浏览器用firefox，如果木有就去下载，然后装上firebug，去看隐藏的html元素吧，把样式表的disply:none;都禁止掉，什么 备份配置文件、启动从U盘加载配置、回复出厂值、日志等等都出来了吧，插入U盘，点击备份按钮，文件就下载下来了。</p>
 
-<h5>1.2 连接下载----直接</h5>
+<h5>1.2 连接下载&mdash;&mdash;直接</h5>
 
 <p>同时通过分析html和javascript代码，我直接把下载地址找到了，如果你不想或者木有firefox&amp;&amp;firebug，那就直接访问：
 <a href="http://192.168.1.1/html/ehomeclient/cfgUSBRestore.cgi?coverusbpath=usb1_1">http://192.168.1.1/html/ehomeclient/cfgUSBRestore.cgi?coverusbpath=usb1_1</a> 这是firebug分析抓包后得到的地址，嘿嘿。

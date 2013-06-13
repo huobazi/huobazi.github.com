@@ -4,11 +4,11 @@
   <title><![CDATA[Category: Mongoid | 武眉博]]></title>
   <link href="http://huobazi.github.com/blog/tag/mongoid/atom.xml" rel="self"/>
   <link href="http://huobazi.github.com/"/>
-  <updated>2012-11-27T20:53:15+08:00</updated>
+  <updated>2013-06-13T11:06:04+08:00</updated>
   <id>http://huobazi.github.com/</id>
   <author>
     <name><![CDATA[Marble Wu]]></name>
-    
+    <email><![CDATA[huobazi@gmail.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
@@ -105,8 +105,8 @@ end
 
 <h1>encoding: utf-8</h1>
 
-<p>require "digest/md5"
-require 'carrierwave/processing/mini_magick'</p>
+<p>require &ldquo;digest/md5&rdquo;
+require &lsquo;carrierwave/processing/mini_magick&rsquo;</p>
 
 <p>class ScreenshotUploader &lt; CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick</p>
@@ -121,7 +121,7 @@ require 'carrierwave/processing/mini_magick'</p>
 
 <p>  end</p>
 
-<p>  process :convert => 'png'</p>
+<p>  process :convert => &lsquo;png&rsquo;</p>
 
 <p>  # Create different versions of your uploaded files:
   version :thumb do</p>
@@ -140,7 +140,7 @@ require 'carrierwave/processing/mini_magick'</p>
 <p>  end</p>
 
 <p>  # Override the filename of the uploaded files:
-  # see http://huacnlee.com/blog/carrierwave-upload-store-file-name-config/
+  # see <a href="http://huacnlee.com/blog/carrierwave-upload-store-file-name-config/">http://huacnlee.com/blog/carrierwave-upload-store-file-name-config/</a>
   def filename</p>
 
 <pre><code>if super.present?

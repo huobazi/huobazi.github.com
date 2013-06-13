@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 奇技淫巧 | 武眉博]]></title>
+  <link href="http://huobazi.github.com/blog/tag/qi-ji-yin-qiao/atom.xml" rel="self"/>
+  <link href="http://huobazi.github.com/"/>
+  <updated>2013-06-13T11:06:04+08:00</updated>
+  <id>http://huobazi.github.com/</id>
+  <author>
+    <name><![CDATA[Marble Wu]]></name>
+    <email><![CDATA[huobazi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Ubuntu下设置 Sublime Text 2 显示中文 && 输入中文]]></title>
+    <link href="http://huobazi.github.com/blog/2012/02/04/ubuntu-sublime-text-chinese/"/>
+    <updated>2012-02-04T23:54:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2012/02/04/ubuntu-sublime-text-chinese</id>
+    <content type="html"><![CDATA[<p>Sublime text 2在mac os 下用的很舒服，今天尝试在ubuntu下使用一下，发现汉字显示不了，</p>
+
+
+<p>后来找到方法：</p>
+
+
+<p>菜单栏 -&gt; Preferences -&gt; File Settings - User，在配置文件中增加：</p>
+
+
+<p><!--more--></p>
+
+
+<p>// Settings in here override those in "Default/Base File.sublime-settings", and<br />// are overridden in turn by file type specific settings. Place your settings<br />// here, to ensure they're preserved when upgrading.<br />{<br />    "font_face": "WenQuanYi Micro Hei Mono"<br />}<br />就OK了，其中文泉驿是著名的开源字体 <a title="http://wenq.org/" href="http://wenq.org/" target="_blank">http://wenq.org/</a></p>
+
+
+<p>然后我们来解决中文输入的问题</p>
+
+
+<p>sudo apt-get install scim</p>
+
+
+<p>sudo apt-get install scim-pinyin</p>
+
+
+<p>在“系统－首选项－scim设置里“</p>
+
+
+<p>scim设置－&gt;全局设置－&gt;将预编辑字符串嵌入到客户端中  勾去掉<br />scim设置-&gt;gtk-&gt;嵌入式候选词标 勾去掉</p>
+
+
+<p>下来 在“系统－语言支持”里面选上“scim-bridge”就可以了,记得这些修改完要注销重新登录进来哦。</p>
+
+
+<p>或者 ,打开终端,输入 pkill scim,然后输入 scim -d，如果不起作用，那还是建议你注销一下</p>
+
+
+<p></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[AutoGenerateColumns='true'的GridView如何支持htmlencode/htmldecode]]></title>
+    <link href="http://huobazi.github.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/"/>
+    <updated>2011-11-09T23:47:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview</id>
+    <content type="html"><![CDATA[<p>我们知道BoundField.HtmlEncode 属性可以设置一个单元格是否能够htmlencode，我今天碰到的问题是：自动生成列的GridView，表头可能是包含html的比如&lt;font color=red&gt;邮件&lt;/font&gt;，默认被htmlencode了，而我不希望这样做，所以有了如下的代码:</p>
+
+
+<p><!--more--></p>
+
+
+<p> </p>
+
+
+<div class="source" style="font-family: '[object HTMLOptionElement]', Consolas, 'Lucida Console', 'Courier New'; color: #e6e1dc; background-color: #111111; ">
+<span style="color: #bc9458; font-style: italic; ">/// &lt;summary&gt;</span><br /><span style="color: #bc9458; font-style: italic; ">/// Handles the PreRender event of the gvSource control.</span><br /><span style="color: #bc9458; font-style: italic; ">/// &lt;/summary&gt;</span><br /><span style="color: #bc9458; font-style: italic; ">/// &lt;param name="sender"&gt;The source of the event.&lt;/param&gt;</span><br /><span style="color: #bc9458; font-style: italic; ">/// &lt;param name="e"&gt;The &lt;see cref="System.EventArgs"/&gt; instance containing the event data.&lt;/param&gt;</span><br /><span style="color: #cc7833; ">protected</span> <span style="color: #cc7833; ">void</span> <span style="color: #ffc66d; ">gvSource_PreRender</span>( <span style="color: #da4939; ">object</span> <span style="color: #e6e1dc; ">sender</span> <span style="color: #e6e1dc; ">,</span> <span style="color: #e6e1dc; ">EventArgs</span> <span style="color: #e6e1dc; ">e</span> )<br /><span style="color: #e6e1dc; ">{</span><br />    <span style="color: #e6e1dc; ">GridView</span> <span style="color: #e6e1dc; ">gridView</span> <span style="color: #e6e1dc; ">=</span> <span style="color: #e6e1dc; ">sender</span> <span style="color: #cc7833; ">as</span> <span style="color: #e6e1dc; ">GridView</span>;<br />    <span style="color: #cc7833; ">if</span> ( <span style="color: #e6e1dc; ">gridView</span> <span style="color: #e6e1dc; ">!=</span> <span style="color: #cc7833; ">null</span> <span style="color: #e6e1dc; ">&amp;&amp;</span> <span style="color: #e6e1dc; ">gridView</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HeaderRow</span> <span style="color: #e6e1dc; ">!=</span> <span style="color: #cc7833; ">null</span> <span style="color: #e6e1dc; ">&amp;&amp;</span> <span style="color: #e6e1dc; ">gridView</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HeaderRow</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Cells</span> <span style="color: #e6e1dc; ">!=</span> <span style="color: #cc7833; ">null</span> )<br />    <span style="color: #e6e1dc; ">{</span><br />        <span style="color: #cc7833; ">for</span> ( <span style="color: #da4939; ">int</span> <span style="color: #e6e1dc; ">j</span> <span style="color: #e6e1dc; ">=</span> <span style="color: #a5c261; ">0</span> ; <span style="color: #e6e1dc; ">j</span> <span style="color: #e6e1dc; ">&lt;</span> <span style="color: #e6e1dc; ">gridView</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HeaderRow</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Cells</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Count</span> ; <span style="color: #e6e1dc; ">j</span><span style="color: #e6e1dc; ">++</span> )<br />        <span style="color: #e6e1dc; ">{</span><br />            <span style="color: #e6e1dc; ">gridView</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HeaderRow</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Cells</span><span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">j</span><span style="color: #e6e1dc; ">].</span><span style="color: #e6e1dc; ">Text</span> <span style="color: #e6e1dc; ">=</span> <span style="color: #e6e1dc; ">System</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Web</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HttpUtility</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HtmlDecode</span>( <span style="color: #e6e1dc; ">gridView</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HeaderRow</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Cells</span><span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">j</span><span style="color: #e6e1dc; ">].</span><span style="color: #e6e1dc; ">Text</span> );<br />        <span style="color: #e6e1dc; ">}</span><br />    <span style="color: #e6e1dc; ">}</span><br /><span style="color: #e6e1dc; ">}</span>
+</div>
+
+
+<p></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[使用window.location跳转，在IE中UrlReffer不被记录]]></title>
+    <link href="http://huobazi.github.com/blog/2010/01/21/window-location-href-ie-request-reffer/"/>
+    <updated>2010-01-21T16:54:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2010/01/21/window-location-href-ie-request-reffer</id>
+    <content type="html"><![CDATA[<p>使用window.location跳转，在FF中，没问题，下一页面可以取得UrlReffer，但在IE中UrlReffer不被记录</p>
+
+
+<p>真变态，</p>
+
+
+<p>让我头痛了半天，弄了个丑陋的办法做了如下实现：</p>
+
+
+<p><!--more--></p>
+
+
+<div class="source" style="COLOR: #f6f3e8; FONT-FAMILY: '[object]','Consolas','Lucida Console','Courier New'; BACKGROUND-COLOR: #242424">
+<span style="COLOR: #8ac6f2">function</span> <span style="COLOR: #f6f3e8">safeRedirectToCart</span>(<span style="COLOR: #f6f3e8">url</span>) <span style="COLOR: #f6f3e8">{</span><br />    <span style="COLOR: #8ac6f2">var</span> <span style="COLOR: #f6f3e8">isIE</span> <span style="COLOR: #f6f3e8">=</span> <span style="COLOR: #f6f3e8">jQuery</span><span style="COLOR: #f6f3e8">.</span><span style="COLOR: #f6f3e8">browser</span><span style="COLOR: #f6f3e8">.</span><span style="COLOR: #f6f3e8">msie</span>;<br />    <span style="COLOR: #8ac6f2">if</span> (<span style="COLOR: #f6f3e8">!</span><span style="COLOR: #f6f3e8">isIE</span>) <span style="COLOR: #f6f3e8">{</span><br />        <span style="COLOR: #f6f3e8">window</span><span style="COLOR: #f6f3e8">.</span><span style="COLOR: #f6f3e8">location</span> <span style="COLOR: #f6f3e8">=</span> <span style="COLOR: #f6f3e8">url</span>;<br />        <span style="COLOR: #8ac6f2">return</span>;<br />    <span style="COLOR: #f6f3e8">}</span><br />    <span style="COLOR: #f6f3e8">$</span>(<span style="COLOR: #95e454; FONT-STYLE: italic">".btnCart"</span><span style="COLOR: #f6f3e8">).</span><span style="COLOR: #f6f3e8">get</span>(<span style="COLOR: #e5786d">0</span><span style="COLOR: #f6f3e8">).</span><span style="COLOR: #f6f3e8">click</span>();<br /><span style="COLOR: #f6f3e8">}</span>
+</div>
+
+
+<p>说明：在页面上render一个连接(可以用样式表控制不显示），判断如果是IE浏览器然则调用其click，嘿嘿，就这个。</p>
+
+
+<p></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[漂亮的VIM配色方案]]></title>
+    <link href="http://huobazi.github.com/blog/2010/01/11/vim-color-scheme/"/>
+    <updated>2010-01-11T10:39:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2010/01/11/vim-color-scheme</id>
+    <content type="html"><![CDATA[<p>这里<br /><a href="http://code.google.com/p/vimcolorschemetest/" target="_blank">http://code.google.com/p/vimcolorschemetest/</a><br />有一堆一堆的配色方案</p>
+
+
+<h1><a name="Browse_By_File_Type">Browse By File Type</a></h1>
+
+
+<p><a name="Browse_By_File_Type">Featuring 428 schemes: </a></p>
+
+
+<ul>
+<li><a rel="nofollow" href="http://vimcolorschemetest.googlecode.com/svn/html/index-c.html">C</a></li>
+<li><a rel="nofollow" href="http://vimcolorschemetest.googlecode.com/svn/html/index-html.html">HTML</a></li>
+<li><a rel="nofollow" href="http://vimcolorschemetest.googlecode.com/svn/html/index-java.html">Java</a></li>
+<li><a rel="nofollow" href="http://vimcolorschemetest.googlecode.com/svn/html/index-pl.html">Perl</a></li>
+<li><a rel="nofollow" href="http://vimcolorschemetest.googlecode.com/svn/html/index-tex.html">LaTeX</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[把你的netbeans变成英文版]]></title>
+    <link href="http://huobazi.github.com/blog/2010/01/07/349/"/>
+    <updated>2010-01-07T22:13:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2010/01/07/349</id>
+    <content type="html"><![CDATA[<p>呵呵其实很简单，装完后再你使用的快捷方式内增加</p>
+
+
+<p>--locale en:us就可以了，比如我的快捷方式里的设置为：</p>
+
+
+<p>"D:\Program Files\NetBeans 6.8\bin\netbeans.exe" --locale en:us</p>
+
+
+<p>ok 英文了.</p>
+
+
+<p>按照这个方法你可以为自己定制很多套语言版本的netbeans，但只要一份安装。</p>
+
+
+<p></p>
+]]></content>
+  </entry>
+  
+</feed>
