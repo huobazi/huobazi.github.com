@@ -1,0 +1,13 @@
+<script src="{{ root_url }}/javascripts/tag-clouds.js"></script>
+<style>
+    #tag-cloud-3D {position:relative; width:270px; height:300px; margin: 20px auto 0 }
+    #tag-cloud-3D a {position:absolute; top:0px; left:0px; font-family: Microsoft YaHei; color:black; font-weight:bold; text-decoration:none; padding: 3px 6px; }
+    #tag-cloud-3D a:hover {border: 1px solid #eee; background: white; }
+</style>
+
+<section>
+    <h1>Tag Cloud</h1>
+    <div id="tag-cloud-3D">
+        {% tag_cloud %}
+    </div>
+</section>

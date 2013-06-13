@@ -35,6 +35,11 @@ code_dir: downloads/code
 category_dir: blog/tag
 markdown: rdiscount
 pygments: true # default python pygments have been replaced by pygments.rb
+rdiscount:
+  extensions:
+    - autolink
+    - footnotes
+    - smart
 
 paginate: 10          # Posts per page on the blog index
 pagination_dir: blog  # Directory base for pagination URLs eg. /blog/page/2/
@@ -45,7 +50,7 @@ titlecase: true       # Converts page and post titles to titlecase
 
 # list each of the sidebar modules you want to include, in the order you want them to appear.
 # To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like 'custom/asides/custom_aside_name.html'
-default_asides: [asides/twitter.html, asides/recent_posts.html, asides/github.html, asides/delicious.html, asides/pinboard.html, asides/googleplus.html]
+default_asides: [asides/nav.html,  asides/tag_cloud_3D.html, asides/recent_posts.html, asides/github.html]
 
 # Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below
 # and add an array with the asides you want to use.
@@ -69,7 +74,6 @@ twitter_tweet_count: 10
 twitter_show_replies: false
 twitter_follow_button: true
 twitter_show_follower_count: false
-twitter_tweet_button: true
 
 # Google +1
 google_plus_one: true
@@ -97,3 +101,6 @@ google_analytics_tracking_id: UA-56321-3
 
 # Facebook Like
 facebook_like: false
+
+email: huobazi@gmail.com
+weibo_uid: huobazi
