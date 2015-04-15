@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Sublime Text2 | 武眉博]]></title>
+  <link href="http://huobazi.github.com/blog/tag/sublime-text2/atom.xml" rel="self"/>
+  <link href="http://huobazi.github.com/"/>
+  <updated>2013-07-14T11:11:48+08:00</updated>
+  <id>http://huobazi.github.com/</id>
+  <author>
+    <name><![CDATA[Marble Wu]]></name>
+    <email><![CDATA[huobazi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Ubuntu下设置 Sublime Text 2 显示中文 && 输入中文]]></title>
+    <link href="http://huobazi.github.com/blog/2012/02/04/ubuntu-sublime-text-chinese/"/>
+    <updated>2012-02-04T23:54:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2012/02/04/ubuntu-sublime-text-chinese</id>
+    <content type="html"><![CDATA[<p>Sublime text 2在mac os 下用的很舒服，今天尝试在ubuntu下使用一下，发现汉字显示不了，</p>
+
+
+<p>后来找到方法：</p>
+
+
+<p>菜单栏 -&gt; Preferences -&gt; File Settings - User，在配置文件中增加：</p>
+
+
+<p><!--more--></p>
+
+
+<p>// Settings in here override those in "Default/Base File.sublime-settings", and<br />// are overridden in turn by file type specific settings. Place your settings<br />// here, to ensure they're preserved when upgrading.<br />{<br />    "font_face": "WenQuanYi Micro Hei Mono"<br />}<br />就OK了，其中文泉驿是著名的开源字体 <a title="http://wenq.org/" href="http://wenq.org/" target="_blank">http://wenq.org/</a></p>
+
+
+<p>然后我们来解决中文输入的问题</p>
+
+
+<p>sudo apt-get install scim</p>
+
+
+<p>sudo apt-get install scim-pinyin</p>
+
+
+<p>在“系统－首选项－scim设置里“</p>
+
+
+<p>scim设置－&gt;全局设置－&gt;将预编辑字符串嵌入到客户端中  勾去掉<br />scim设置-&gt;gtk-&gt;嵌入式候选词标 勾去掉</p>
+
+
+<p>下来 在“系统－语言支持”里面选上“scim-bridge”就可以了,记得这些修改完要注销重新登录进来哦。</p>
+
+
+<p>或者 ,打开终端,输入 pkill scim,然后输入 scim -d，如果不起作用，那还是建议你注销一下</p>
+
+
+<p></p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Url Rewrite | 武眉博]]></title>
+  <link href="http://huobazi.github.com/blog/tag/url-rewrite/atom.xml" rel="self"/>
+  <link href="http://huobazi.github.com/"/>
+  <updated>2013-07-14T11:11:48+08:00</updated>
+  <id>http://huobazi.github.com/</id>
+  <author>
+    <name><![CDATA[Marble Wu]]></name>
+    <email><![CDATA[huobazi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[关于请求的目录不存在而需要url重写]]></title>
+    <link href="http://huobazi.github.com/blog/2005/11/21/nodirurlrewrite/"/>
+    <updated>2005-11-21T21:52:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2005/11/21/nodirurlrewrite</id>
+    <content type="html"><![CDATA[<p>在<a href="http://pwqzc.cnblogs.com/archive/2005/11/21/281331.html" target="_blank">http://pwqzc.cnblogs.com/archive/2005/11/21/281331.html</a>看到的讨论<br />其实csdn的那两个帖子<br /><a href="http://community.csdn.net/Expert/topic/4401/4401936.xml?temp=.317898" target="_blank">http://community.csdn.net/Expert/topic/4401/4401936.xml?temp=.317898</a></p>
+
+
+<p><a href="http://community.csdn.net/Expert/topic/4406/4406615.xml?temp=.513714" target="_blank">http://community.csdn.net/Expert/topic/4406/4406615.xml?temp=.513714</a><br />中已经有网友们说到方法了，hander module 都可以做<br />在iis中设置*.*映射到 aspnet_isapi.dll ISAPI 扩展，我测试后没有发现什么访问被拒绝访问的401.3错误,<br />需要输入用户名的问题。<br /><img style="width: 627px; height: 396px; border: 0px;" src="http://huobazi.github.com/images/hbz_images/5c851a33-204d-4d19-a338-3220cd1979ae.gif" border="0" alt=""><br />  </p>
+
+
+<p>以下在代码xpsp2 .net1.1 sp1 下测试通过</p>
+
+
+<div style="cursor: hand; color: blue; text-align: left; text-decoration: underline;" title="&gt;-点此复制到剪贴板-&lt;" onclick='function anonymous() { var obj = document.getElementById("code_huobazi_code");    if( obj != null )   {       var rng = document.body.createTextRange();      rng.moveToElementText(obj);         rng.scrollIntoView();       rng.select();       rng.execCommand("Copy");        rng.collapse(false);    } }'>[Copy to clipboard]</div>
+
+
+<p><textarea id="code_huobazi_code" style="width: 632px; height: 298px; background-color: #ffcc00;" cols="84" rows="4">using System;&lt;br /&gt; using System.Web;&lt;br /&gt; using System.Web.UI;&lt;/div&gt; &lt;div  mce_tmp="1"&gt;namespace AspxBoy.VisualUrl&lt;br /&gt; {&lt;br /&gt;   /// &lt;summary&gt;&lt;br /&gt;     /// VisualUrlHttpHander 的摘要说明。&lt;br /&gt;  /// &lt;/summary&gt;&lt;br /&gt;    public class VisualUrlHttpHander : IHttpHandlerFactory&lt;br /&gt;  {&lt;br /&gt;       #region IHttpHandlerFactory 成员&lt;/div&gt; &lt;div  mce_tmp="1"&gt;     public void ReleaseHandler(IHttpHandler handler)&lt;br /&gt;        {&lt;br /&gt;           // TODO:  添加 VisualUrlHttpHander.ReleaseHandler 实现&lt;br /&gt;      }&lt;/div&gt; &lt;div  mce_tmp="1"&gt;      public IHttpHandler GetHandler(HttpContext context, string requestType, string url, string pathTranslated)&lt;br /&gt;      {&lt;br /&gt;           // TODO:  添加 VisualUrlHttpHander.GetHandler 实现&lt;/div&gt; &lt;div  mce_tmp="1"&gt;         string rawUrl = context.Request.RawUrl.Trim();&lt;/div&gt; &lt;div  mce_tmp="1"&gt;         ///&lt;br /&gt;             ///这里只示范地址是http://domainname/xxx&lt;br /&gt;            ///和http://domainname/xxx/这样的地址&lt;br /&gt;             ///&lt;br /&gt;             string userName = rawUrl.TrimStart('/').TrimEnd('/');&lt;br /&gt;           string sendToUrl = url;&lt;br /&gt;             string filePath = pathTranslated;&lt;br /&gt;           string sendToUrlLessQString;&lt;/div&gt; &lt;div  mce_tmp="1"&gt;           sendToUrl = Globals.AppPath + "/get.aspx?username=" + userName;&lt;/div&gt; &lt;div  mce_tmp="1"&gt;            Globals.RewriteUrl(context, sendToUrl, out sendToUrlLessQString, out filePath);&lt;/div&gt; &lt;div  mce_tmp="1"&gt;            return PageParser.GetCompiledPageInstance(sendToUrlLessQString, filePath, context);&lt;br /&gt;         }&lt;/div&gt; &lt;div  mce_tmp="1"&gt;      #endregion&lt;/div&gt; &lt;div  mce_tmp="1"&gt; }&lt;/div&gt; &lt;div  mce_tmp="1"&gt;  public class Globals&lt;br /&gt;    {&lt;br /&gt;       /// &lt;summary&gt;&lt;br /&gt;         /// 应用程序路径&lt;br /&gt;      /// &lt;/summary&gt;&lt;br /&gt;        public static string AppPath&lt;br /&gt;        {&lt;/div&gt; &lt;div  mce_tmp="1"&gt;          get&lt;br /&gt;             {&lt;br /&gt;               string applicationPath = "/";&lt;/div&gt; &lt;div  mce_tmp="1"&gt;              if(HttpContext.Current != null)&lt;br /&gt;                 {&lt;br /&gt; applicationPath = HttpContext.Current.Request.ApplicationPath;&lt;br /&gt;                }&lt;/div&gt; &lt;div  mce_tmp="1"&gt;              if (applicationPath == "/")&lt;br /&gt;                 {&lt;br /&gt; return string.Empty;&lt;br /&gt;              }&lt;br /&gt;               else&lt;br /&gt;                {&lt;br /&gt; if (applicationPath.EndsWith("/"))&lt;br /&gt; {&lt;br /&gt;  return applicationPath;&lt;br /&gt; }&lt;br /&gt; else&lt;br /&gt; {&lt;br /&gt;    return applicationPath + "/";&lt;br /&gt; }&lt;br /&gt;                 }&lt;/div&gt; &lt;div  mce_tmp="1"&gt;          }&lt;br /&gt;       }&lt;br /&gt;       /// &lt;summary&gt;&lt;br /&gt;         /// 在ASP.NET中执行URL重写&lt;br /&gt;        /// see http://www.aspxboy.com/484/archive.aspx&lt;br /&gt;         /// &lt;/summary&gt;&lt;br /&gt;        /// &lt;param name="context"&gt;&lt;/param&gt;&lt;br /&gt;      /// &lt;param name="sendToUrl"&gt;&lt;/param&gt;&lt;br /&gt;        /// &lt;param name="sendToUrlLessQString"&gt;&lt;/param&gt;&lt;br /&gt;         /// &lt;param name="filePath"&gt;&lt;/param&gt;&lt;br /&gt;         public static  void RewriteUrl(HttpContext context, string sendToUrl, out string sendToUrlLessQString, out string filePath)&lt;br /&gt;         {&lt;br /&gt;           if (context.Request.QueryString.Count &gt; 0)&lt;br /&gt;           {&lt;br /&gt;               if (sendToUrl.IndexOf('?') != -1)&lt;br /&gt;               {&lt;br /&gt; sendToUrl += "&amp;" + context.Request.QueryString.ToString();&lt;br /&gt;                }&lt;br /&gt;               else&lt;br /&gt;                {&lt;br /&gt; sendToUrl += "?" + context.Request.QueryString.ToString();&lt;br /&gt;                }&lt;br /&gt;           }&lt;/div&gt; &lt;div  mce_tmp="1"&gt;          string queryString = String.Empty;&lt;br /&gt;          sendToUrlLessQString = sendToUrl;&lt;br /&gt;           if (sendToUrl.IndexOf('?') &gt; 0)&lt;br /&gt;          {&lt;br /&gt;               sendToUrlLessQString = sendToUrl.Substring(0, sendToUrl.IndexOf('?'));&lt;br /&gt;              queryString = sendToUrl.Substring(sendToUrl.IndexOf('?') + 1);&lt;br /&gt;          }&lt;/div&gt; &lt;div  mce_tmp="1"&gt;          filePath = string.Empty;&lt;br /&gt;            filePath = context.Server.MapPath(sendToUrlLessQString);&lt;/div&gt; &lt;div  mce_tmp="1"&gt;           context.RewritePath(sendToUrlLessQString, String.Empty, queryString);&lt;br /&gt;       }&lt;br /&gt;   }&lt;br /&gt; }&lt;/div&gt; &lt;div  mce_tmp="1"&gt;</textarea></p>
+
+
+<p>下载<br /><a href="http://www.cnblogs.com/Files/huobazi/VisualUrl.rar">http://www.cnblogs.com/Files/huobazi/VisualUrl.rar</a></p>
+
+
+<p></p>
+]]></content>
+  </entry>
+  
+</feed>

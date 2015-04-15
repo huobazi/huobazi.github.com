@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 自定义控件 | 武眉博]]></title>
+  <link href="http://huobazi.github.com/blog/tag/zi-ding-yi-kong-jian/atom.xml" rel="self"/>
+  <link href="http://huobazi.github.com/"/>
+  <updated>2013-07-14T11:11:48+08:00</updated>
+  <id>http://huobazi.github.com/</id>
+  <author>
+    <name><![CDATA[Marble Wu]]></name>
+    <email><![CDATA[huobazi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[自定义控件实现广告内容后期加载，以及NamingContainer层次的应用]]></title>
+    <link href="http://huobazi.github.com/blog/2007/08/05/advertisementlazyloadingcontrol/"/>
+    <updated>2007-08-05T13:49:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2007/08/05/advertisementlazyloadingcontrol</id>
+    <content type="html"><![CDATA[<p>自定义控件：广告内容后期加载。以及NamingContainer层次的应用<br />网站上的广告内容可能会因加载过慢而导致整个网页加载过慢<br />我们可以考虑将广告内全部放在网页最底部，等整个页面加载完毕後<br />再采用javascript使其显示，考虑给控件一个TargetContainerID标识<br />控件广告内容将要被显示的容器ID，然后从控件自己所处的 开始向上查找该ID<br />所指定的控件，(我们只向上找而没有向下找，并且没有处理某层次的<br />子NamingContainer,所以不一定能够找到，这里没有考虑从Page对象向下递归查找<br />主要考虑为了提高性能),如果没有找到，则考虑给用户一个事件让用户自己处理TargetContainer</p>
+
+
+<p>下面的自定义控件对此实现了封装:</p>
+
+
+
+
+<!--more-->
+
+
+<p>```</p>
+
+<pre><code>//------------------------------------------------------------------------------
+//
+// Copyright (c) www.AspxBoy.com All rights reserved.
+//
+//------------------------------------------------------------------------------
+namespace HBZ.Ads.Controls
+{
+    using System;
+    using System.ComponentModel;
+    using System.Web;
+    using System.Web.UI;
+    using System.Web.UI.WebControls;
+    using HBZ.Ads;
+    using System.Collections.Generic;
+    using System.Text;
+    [Designer( typeof( HBZ.Ads.Controls.AdRotatorDesigner ) )]
+    public class AdRotator : WebControl
+    {
+        private Dictionary findControlHelperCacheList = new Dictionary( );
+        private readonly string scriptFormat = " var {0}_target = document.getElementById(\"{0}\"); var {1}_base = document.getElementById(\"{1}\"); if ({0}_target)  {0}_target.innerHTML = {1}_base.innerHTML; if ({0}_target)  {1}_base.innerHTML = \"\"; ";
+        private static readonly object eventObj = new object( );
+        public event FindTargetContainerEventHandler FindTargetContainer
+        {
+            add
+            {
+                Events.AddHandler( eventObj , value );
+            }
+            remove
+            {
+                Events.RemoveHandler( eventObj , value );
+            }
+        }
+        public AdRotator( )
+        : base( HtmlTextWriterTag.Span )
+        {
+        }
+        [TypeConverter( typeof( ValidatedControlConverter ) )]
+        [DefaultValue( "" ) , Category( "Data" ) , Description( "广告位后期加载后显示的位置的控件ID" )]
+        [IDReferenceProperty]
+        public string TargetContainerID
+        {
+            get
+            {
+                return (string)this.ViewState[ "TargetContainerID" ] ?? string.Empty;
+            }
+            set
+            {
+                this.ViewState[ "TargetContainerID" ] = value;
+            }
+        }
+        [Bindable( true ) , Category( "Data" ) , DefaultValue( "" ) , Description( "广告位的默认内容" )]
+        public string DefaultContent
+        {
+            get
+            {
+                return (string)this.ViewState[ "DefaultContent" ] ?? "广告位招租";
+            }
+            set
+            {
+                this.ViewState[ "DefaultContent" ] = value;
+            }
+        }
+        protected override void OnPreRender( EventArgs e )
+        {
+            base.OnPreRender( e );
+            if ( !string.IsNullOrEmpty( TargetContainerID ) )
+            {
+                this.Style.Add( HtmlTextWriterStyle.Display , "none" );
+                ClientScriptManager cs = Page.ClientScript;
+                if ( !cs.IsStartupScriptRegistered( this.ClientID ) )
+                {
+                    cs.RegisterStartupScript( this.GetType( ) , this.ClientID , GetLazyLoadingScript( ) , true );
+                }
+            }
+        }
+        protected virtual string GetLazyLoadingScript( )
+        {
+            Control target = FindControlHelper( TargetContainerID );
+            if ( target == null )
+            {
+                throw new TargetContainerNotFoundException( );
+            }
+            StringBuilder sb = new StringBuilder( );
+            sb.AppendFormat( scriptFormat , target.ClientID , this.ClientID );
+            return sb.ToString( );
+        }
+        protected virtual void RenderAdvertisement( Advertisement ad , HtmlTextWriter writer )
+        {
+            // 广告内容
+        }
+        protected override void RenderContents( HtmlTextWriter writer )
+        {
+            // call RenderAdvertisement method
+        }
+        protected Control FindControlHelper( string id )
+        {
+            Control c = null;
+            if ( findControlHelperCacheList.ContainsKey( id ) )
+            {
+                c = findControlHelperCacheList[ id ];
+            }
+            else
+            {
+                c = base.FindControl( id ); // 注意：我们从自己开始向上沿NamingContainer层次查找
+                Control nc = NamingContainer;
+                while ( ( null == c ) &amp;&amp; ( null != nc ) )
+                {
+                    c = nc.FindControl( id );
+                    nc = nc.NamingContainer;
+                }
+                if ( null == c )
+                {
+                    // 因为我们是从自己开始向上沿NamingContainer层次查找，而没有向下找，
+                    // 并且没有找每一层NamingContainer内的其他NamingContainer,
+                    // 所以这种查找有可能出现没有找到id对应的控件
+                    // 当没此时有找到时，激发FindTargetContainer事件交给用户自己设定Target Container Control
+                    FindTargetContainerEventArgs args = new FindTargetContainerEventArgs( id );
+                    OnFindTargetContainer( args );
+                    c = args.Control;
+                }
+                if ( null != c )
+                {
+                    findControlHelperCacheList[ id ] = c;
+                }
+            }
+            return c;
+        }
+        protected virtual void OnFindTargetContainer( FindTargetContainerEventArgs e )
+        {
+            FindTargetContainerEventHandler hander = Events[ eventObj ] as FindTargetContainerEventHandler;
+            if ( hander != null )
+            {
+                hander( this , e );
+            }
+        }
+    }
+    public delegate void FindTargetContainerEventHandler( object src , FindTargetContainerEventArgs e );
+    public class FindTargetContainerEventArgs : EventArgs
+    {
+        private string controlID;
+        private Control control;
+        public FindTargetContainerEventArgs( string controlId )
+        {
+            controlID = controlId;
+        }
+        public string ControlID
+        {
+            get
+            {
+                return controlID;
+            }
+        }
+        public Control Control
+        {
+            get
+            {
+                return control;
+            }
+            set
+            {
+                control = value;
+            }
+        }
+    }
+    public class TargetContainerNotFoundException : Exception
+    {
+        string exceptionMessage = string.Empty;
+        public TargetContainerNotFoundException( )
+        : this( "TargetContainerID所指定的控件没有找到！您或许应该处理一下FindTargetContainer事件" )
+        {
+        }
+        public TargetContainerNotFoundException( string message )
+        : base( message )
+        {
+            this.exceptionMessage = message;
+        }
+        public override string Message
+        {
+            get
+            {
+                if ( exceptionMessage != null )
+                {
+                    return exceptionMessage;
+                }
+                return base.Message;
+            }
+        }
+    }
+}
+```
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[在自定义控件中实现ICallbackEventHandler接口不经过回发而实现客户端回掉]]></title>
+    <link href="http://huobazi.github.com/blog/2007/07/23/webcontrolandicallbackeventhandler/"/>
+    <updated>2007-07-23T14:49:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2007/07/23/webcontrolandicallbackeventhandler</id>
+    <content type="html"><![CDATA[<p> <br /></p>
+
+
+<p><span>在自定义控件中实现</span><strong><span>ICallbackEventHandler</span></strong><strong><span>接口</span></strong><span>不经过回发而实现客户端回掉</span> <br /><span>Asp.Net2.0</span><span>中新增了</span><span><a href="ms-help://MS.VSCC.v80/MS.MSDN.v80/MS.NETDEVFX.v20.chs/cpref13/html/T_System_Web_UI_ICallbackEventHandler.htm">ICallbackEventHandler</a></span><span>接口，</span><span>用于指示控件可以作</span><span>为</span><span>服</span><span>务</span><span>器的回</span><span>调</span><span>事件的目</span><span>标</span><span>。</span><br /><span>MSDN</span><span>中的描述</span><span>:</span><br /></p>
+
+
+<p align="left"><span>实现</span><span> <strong><span>ICallbackEventHandler</span></strong><span> </span></span><span>接口的控件的示例包括</span><span> GridView</span><span>、</span><span>DetailsView </span><span>和</span><span> TreeView </span><span>控件。当回</span><span>调</span><span>事件以</span><span>实现</span><span>了</span><span> <strong><span>ICallbackEventHandler</span></strong><span> </span></span><span>接口的控件</span><span>为</span><span>目</span><span>标时</span><span>，将把事件</span><span>变</span><span>量作</span><span>为</span><span>参数</span><span>传递</span><span>来</span><span>调</span><span>用</span><span> <span><a href="ms-help://MS.VSCC.v80/MS.MSDN.v80/MS.NETDEVFX.v20.chs/cpref13/html/M_System_Web_UI_ICallbackEventHandler_RaiseCallbackEvent_1_16219e3a.htm"><span>RaiseCallbackEvent</span></a> </span></span><span>方法以</span><span>处</span><span>理</span><span>该</span><span>事件，并且</span><span><a href="ms-help://MS.VSCC.v80/MS.MSDN.v80/MS.NETDEVFX.v20.chs/cpref13/html/M_System_Web_UI_ICallbackEventHandler_GetCallbackResult.htm"><span>GetCallbackResult</span></a> </span><span>方法返回回</span><span>调</span><span>的</span><span>结</span><span>果</span><span>。</span></p>
+
+
+<p align="left"><strong><span>ICallbackEventHandler</span></strong><span>成员有：</span></p>
+
+
+<table border="0" cellpadding="0" width="98%"><tbody>
+<tr>
+<td valign="top">
+<p></p>
+<p align="left"><strong> </strong><br /></p>
+<p></p>
+<p> </p>
+</td>
+<td valign="top">
+<p></p>
+<p align="left"><strong><span>名称</span></strong><strong><span> </span></strong><br /></p>
+<p></p>
+<p> </p>
+</td>
+<td valign="top">
+<p></p>
+<p align="left"><strong><span>说</span></strong><strong><span>明</span></strong><strong><span> </span></strong><br /></p>
+<p></p>
+<p> </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p></p>
+<p align="left"> <br /></p>
+<p></p>
+<p> </p>
+</td>
+<td valign="top">
+<p></p>
+<p align="left"><span><a href="ms-help://MS.VSCC.v80/MS.MSDN.v80/MS.NETDEVFX.v20.chs/cpref13/html/M_System_Web_UI_ICallbackEventHandler_GetCallbackResult.htm"><span>GetCallbackResult</span></a> </span><br /></p>
+<p></p>
+<p> </p>
+</td>
+<td valign="top">
+<p></p>
+<p align="left"><span>返回以控件</span><span>为</span><span>目</span><span>标</span><span>的回</span><span>调</span><span>事件的</span><span>结</span><span>果。</span><span> </span><br /></p>
+<p></p>
+<p> </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p></p>
+<p align="left"> <br /></p>
+<p></p>
+<p> </p>
+</td>
+<td valign="top">
+<p></p>
+<p align="left"><span><a href="ms-help://MS.VSCC.v80/MS.MSDN.v80/MS.NETDEVFX.v20.chs/cpref13/html/M_System_Web_UI_ICallbackEventHandler_RaiseCallbackEvent_1_16219e3a.htm"><span>RaiseCallbackEvent</span></a> </span><br /></p>
+<p></p>
+<p> </p>
+</td>
+<td valign="top">
+<p></p>
+<p align="left"><span>处</span><span>理以控件</span><span>为</span><span>目</span><span>标</span><span>的回</span><span>调</span><span>事件。</span><span> </span><br /></p>
+<p></p>
+<p> </p>
+</td>
+</tr>
+</tbody></table>
+
+
+<p> <br /><span>如下代码实现一个不经过回发而实现客户端回掉的</span><span>CheckBox</span></p>
+
+
+<p></p>
+
+
+<div><span>。<br /></span></div>
+
+
+<p><span><br />//------------------------------------------------------------------------------&lt;br /&gt;// &lt;copyright company="Meibo Wu www.AspxBoy.com"&gt;&lt;br /&gt;// Copyright (c) www.AspxBoy.com All rights reserved.&lt;br /&gt;// &lt;/copyright&gt;&lt;br /&gt;//------------------------------------------------------------------------------&lt;br /&gt;using System;&lt;br /&gt;using System.Drawing;&lt;br /&gt;using System.Collections;&lt;br /&gt;using System.ComponentModel;&lt;br /&gt;using System.Web;&lt;br /&gt;using System.Web.UI;&lt;br /&gt;using System.Web.UI.WebControls;&lt;br /&gt;namespace HBZ&lt;br /&gt;{&lt;br /&gt;/// &lt;summary&gt;&lt;br /&gt;/// A Asynchronous AutoPostback Checkbox Control&lt;br /&gt;/// &lt;/summary&gt;&lt;br /&gt;[DefaultEvent("CheckedChanged")]&lt;br /&gt;[ControlValueProperty("Checked")]&lt;br /&gt;[DefaultProperty("Text")]&lt;br /&gt;public class AsynchronousCheckBox : WebControl, INamingContainer, ICallbackEventHandler&lt;br /&gt;{&lt;br /&gt;#region Delegates&lt;br /&gt;/// &lt;summary&gt;&lt;br /&gt;/// The delegate for the checked changed event&lt;br /&gt;/// &lt;/summary&gt;&lt;br /&gt;///&lt;br /&gt;&lt;span name="sender" class="mceItemParam"&gt;&lt;/span&gt;&lt;/param&gt;&lt;br /&gt;///&lt;br /&gt;&lt;span name="e" class="mceItemParam"&gt;&lt;/span&gt;&lt;/param&gt;&lt;br /&gt;public delegate void CheckedChangedEventHander(object sender, CheckChangedEventArgs e);&lt;br /&gt;#endregion&lt;br /&gt;#region Events&lt;br /&gt;private static readonly object eventCheckedChanged;&lt;br /&gt;/// &lt;summary&gt;&lt;br /&gt;/// The checked changed event.&lt;br /&gt;/// &lt;/summary&gt;&lt;br /&gt;public event CheckedChangedEventHander CheckedChanged&lt;br /&gt;{&lt;br /&gt;add&lt;br /&gt;{&lt;br /&gt;Events.AddHandler(eventCheckedChanged, value);&lt;br /&gt;}&lt;br /&gt;remove&lt;br /&gt;{&lt;br /&gt;Events.RemoveHandler(eventCheckedChanged, value);&lt;br /&gt;}&lt;br /&gt;}&lt;br /&gt;#endregion&lt;br /&gt;#region Constructors&lt;br /&gt;/// &lt;summary&gt;&lt;br /&gt;/// Static Constructor&lt;br /&gt;/// &lt;/summary&gt;&lt;br /&gt;static AsynchronousCheckBox()&lt;br /&gt;{&lt;br /&gt;eventCheckedChanged = new object();&lt;br /&gt;}&lt;br /&gt;/// &lt;summary&gt;&lt;br /&gt;/// Constructor&lt;br /&gt;/// &lt;/summary&gt;&lt;br /&gt;public AsynchronousCheckBox()&lt;br /&gt;: base(HtmlTextWriterTag.Input)&lt;br /&gt;{&lt;br /&gt;}&lt;br /&gt;#endregion&lt;br /&gt;#region Properties&lt;br /&gt;/// &lt;summary&gt;&lt;br /&gt;/// Gets or sets a value indicating whether the Lable Text&lt;br /&gt;/// &lt;/summary&gt;&lt;br /&gt;[Description("Gets or sets a value indicating whether the Lable Text")]&lt;br /&gt;public virtual string Text&lt;br /&gt;{&lt;br /&gt;get&lt;br /&gt;{&lt;br /&gt;return (string)ViewState["Text"];&lt;br /&gt;}&lt;br /&gt;set&lt;br /&gt;{&lt;br /&gt;this.ViewState["Text"] = value;&lt;br /&gt;}&lt;br /&gt;}&lt;br /&gt;/// &lt;summary&gt;&lt;br /&gt;/// Gets or sets a value indicating whether the 'Client CallBack Script Name'&lt;br /&gt;/// &lt;/summary&gt;&lt;br /&gt;[Description("Gets or sets a value indicating whether the 'Client CallBack Script function Name'")]&lt;br /&gt;public string ClientCallBackScript&lt;br /&gt;{&lt;br /&gt;get&lt;br /&gt;{&lt;br /&gt;object o = ViewState["ClientCallBackScript"];&lt;br /&gt;return o == null ? "null" : o.ToString();&lt;br /&gt;}&lt;br /&gt;set&lt;br /&gt;{&lt;br /&gt;ViewState["ClientCallBackScript"] = value;&lt;br /&gt;}&lt;br /&gt;}&lt;br /&gt;/// &lt;summary&gt;&lt;br /&gt;/// Gets or sets a value indicating whether the checkbox 's checked&lt;br /&gt;/// &lt;/summary&gt;&lt;br /&gt;[Description("Gets or sets a value indicating whether the checkbox 's checked")]&lt;br /&gt;public bool Checked&lt;br /&gt;{&lt;br /&gt;get&lt;br /&gt;{&lt;br /&gt;object o = ViewState["Checked"];&lt;br /&gt;return o == null ? false : (bool)o;&lt;br /&gt;}&lt;br /&gt;set&lt;br /&gt;{&lt;br /&gt;ViewState["Checked"] = value;&lt;br /&gt;}&lt;br /&gt;}&lt;br /&gt;/// &lt;summary&gt;&lt;br /&gt;/// Gets or sets a value indicating whether the Text 's cssClass&lt;br /&gt;/// &lt;/summary&gt;&lt;br /&gt;[Description("Gets or sets a value indicating whether the Text 's cssClass")]&lt;br /&gt;public string TextCss&lt;br /&gt;{&lt;br /&gt;get&lt;br /&gt;{&lt;br /&gt;return (string)ViewState["TextCss"];&lt;br /&gt;}&lt;br /&gt;set&lt;br /&gt;{&lt;br /&gt;ViewState["TextCss"] = value;&lt;br /&gt;}&lt;br /&gt;}&lt;br /&gt;/// &lt;summary&gt;&lt;br /&gt;/// Gets or sets a value indicating whether the Label 's position&lt;br /&gt;/// &lt;/summary&gt;&lt;br /&gt;public virtual TextAlign TextAlign&lt;br /&gt;{&lt;br /&gt;get&lt;br /&gt;{&lt;br /&gt;object o = ViewState["TextAlign"];&lt;br /&gt;if (o != null)&lt;br /&gt;{&lt;br /&gt;return (TextAlign)o;&lt;br /&gt;}&lt;br /&gt;return TextAlign.Right;&lt;br /&gt;}&lt;br /&gt;set&lt;br /&gt;{&lt;br /&gt;if ((value &lt;textalign.left) || (value &gt; TextAlign.Right))&lt;br /&gt;{&lt;br /&gt;throw new ArgumentOutOfRangeException("value");&lt;br /&gt;}&lt;br /&gt;ViewState["TextAlign"] = value;&lt;br /&gt;}&lt;br /&gt;}&lt;br /&gt;#endregion&lt;br /&gt;#region Render Meghods&lt;br /&gt;/// &lt;summary&gt;&lt;br /&gt;///&lt;br /&gt;/// &lt;/summary&gt;&lt;br /&gt;///&lt;br /&gt;&lt;span name="writer" class="mceItemParam"&gt;&lt;/span&gt;&lt;/param&gt;&lt;br /&gt;protected override void Render(HtmlTextWriter writer)&lt;br /&gt;{&lt;br /&gt;if (TextAlign == TextAlign.Left)&lt;br /&gt;{&lt;br /&gt;RenderLabel(writer);&lt;br /&gt;base.Render(writer);&lt;br /&gt;}&lt;br /&gt;else&lt;br /&gt;{&lt;br /&gt;base.Render(writer);&lt;br /&gt;RenderLabel(writer);&lt;br /&gt;}&lt;br /&gt;}&lt;br /&gt;/// &lt;summary&gt;&lt;br /&gt;/// Render Label&lt;br /&gt;/// &lt;/summary&gt;&lt;br /&gt;///&lt;br /&gt;&lt;span name="writer" class="mceItemParam"&gt;&lt;/span&gt;&lt;/param&gt;&lt;br /&gt;private void RenderLabel(HtmlTextWriter writer)&lt;br /&gt;{&lt;br /&gt;if (string.IsNullOrEmpty(Text))&lt;br /&gt;{&lt;br /&gt;return;&lt;br /&gt;}&lt;br /&gt;writer.Write("&lt;label");&lt;br /&gt;writer.WriteAttribute("for", ClientID);&lt;br /&gt;if (!string.IsNullOrEmpty(TextCss))&lt;br /&gt;{&lt;br /&gt;writer.WriteAttribute("class", TextCss);&lt;br /&gt;}&lt;br /&gt;writer.Write("&gt;");&lt;br /&gt;writer.Write(Text);&lt;br /&gt;writer.WriteEndTag("label");&lt;br /&gt;}&lt;br /&gt;/// &lt;summary&gt;&lt;br /&gt;/// Override the AddAttributesToRender method&lt;br /&gt;/// &lt;/summary&gt;&lt;br /&gt;///&lt;br /&gt;&lt;span name="writer" class="mceItemParam"&gt;&lt;/span&gt;&lt;/param&gt;&lt;br /&gt;protected override void AddAttributesToRender(HtmlTextWriter writer)&lt;br /&gt;{&lt;br /&gt;if (base.Page == null)&lt;br /&gt;{&lt;br /&gt;base.Page.VerifyRenderingInServerForm(this);&lt;br /&gt;}&lt;br /&gt;string callbackReference&lt;br /&gt;= Page.ClientScript.GetCallbackEventReference(this, "this.checked", ClientCallBackScript, null);&lt;br /&gt;writer.AddAttribute(HtmlTextWriterAttribute.Onclick, callbackReference);&lt;br /&gt;writer.AddAttribute(HtmlTextWriterAttribute.Type, "checkbox");&lt;br /&gt;if (Checked)&lt;br /&gt;{&lt;br /&gt;writer.AddAttribute(HtmlTextWriterAttribute.Checked, "checked");&lt;br /&gt;}&lt;br /&gt;if (!Enabled)&lt;br /&gt;{&lt;br /&gt;writer.AddAttribute(HtmlTextWriterAttribute.Disabled, "disabled");&lt;br /&gt;}&lt;br /&gt;if (!string.IsNullOrEmpty(ToolTip))&lt;br /&gt;{&lt;br /&gt;writer.AddAttribute(HtmlTextWriterAttribute.Title, ToolTip);&lt;br /&gt;}&lt;br /&gt;base.AddAttributesToRender(writer);&lt;br /&gt;}&lt;br /&gt;#endregion&lt;br /&gt;#region On Checked Changed&lt;br /&gt;/// &lt;summary&gt;&lt;br /&gt;/// Invoke the check changed event.&lt;br /&gt;/// &lt;/summary&gt;&lt;br /&gt;///&lt;br /&gt;&lt;span name="sender" class="mceItemParam"&gt;&lt;/span&gt;&lt;/param&gt;&lt;br /&gt;///&lt;br /&gt;&lt;span name="e" class="mceItemParam"&gt;&lt;/span&gt;&lt;/param&gt;&lt;br /&gt;protected virtual void OnCheckedChanged(object sender, CheckChangedEventArgs e)&lt;br /&gt;{&lt;br /&gt;CheckedChangedEventHander hander = Events[eventCheckedChanged] as CheckedChangedEventHander;&lt;br /&gt;if (hander != null)&lt;br /&gt;{&lt;br /&gt;Checked = e.Checked;&lt;br /&gt;hander(this, e);&lt;br /&gt;}&lt;br /&gt;}&lt;br /&gt;#endregion&lt;br /&gt;#region ICallbackEventHandler Members&lt;br /&gt;/// &lt;summary&gt;&lt;br /&gt;/// Get the result of a client side callback.&lt;br /&gt;/// &lt;/summary&gt;&lt;br /&gt;/// &lt;returns&gt;The callback result string.&lt;/returns&gt;&lt;br /&gt;public string GetCallbackResult()&lt;br /&gt;{&lt;br /&gt;return Checked.ToString();&lt;br /&gt;}&lt;br /&gt;/// &lt;summary&gt;&lt;br /&gt;/// Raise the client callback event&lt;br /&gt;/// &lt;/summary&gt;&lt;br /&gt;///&lt;br /&gt;&lt;span name="eventArgument" class="mceItemParam"&gt;&lt;/span&gt;The event arguments.&lt;/param&gt;&lt;br /&gt;public void RaiseCallbackEvent(string eventArgument)&lt;br /&gt;{&lt;br /&gt;bool isChecked = Boolean.Parse(eventArgument);&lt;br /&gt;CheckChangedEventArgs args = new CheckChangedEventArgs(isChecked);&lt;br /&gt;OnCheckedChanged(this, args);&lt;br /&gt;}&lt;br /&gt;#endregion&lt;br /&gt;}&lt;br /&gt;}&lt;br /&gt;//------------------------------------------------------------------------------&lt;br /&gt;// &lt;copyright company="Meibo Wu www.AspxBoy.com"&gt;&lt;br /&gt;// Copyright (c) www.AspxBoy.com All rights reserved.&lt;br /&gt;// &lt;/copyright&gt;&lt;br /&gt;//------------------------------------------------------------------------------&lt;br /&gt;using System;&lt;br /&gt;using System.Drawing;&lt;br /&gt;using System.Collections;&lt;br /&gt;using System.ComponentModel;&lt;br /&gt;using System.Web;&lt;br /&gt;using System.Web.UI;&lt;br /&gt;using System.Web.UI.WebControls;&lt;br /&gt;namespace HBZ&lt;br /&gt;{&lt;br /&gt;/// &lt;summary&gt;&lt;br /&gt;///&lt;br /&gt;/// &lt;/summary&gt;&lt;br /&gt;public class CheckChangedEventArgs:EventArgs&lt;br /&gt;{&lt;br /&gt;/// &lt;summary&gt;&lt;br /&gt;///&lt;br /&gt;/// &lt;/summary&gt;&lt;br /&gt;///&lt;br /&gt;&lt;span name="_isChecked" class="mceItemParam"&gt;&lt;/span&gt;&lt;/param&gt;&lt;br /&gt;public CheckChangedEventArgs(bool _isChecked)&lt;br /&gt;{&lt;br /&gt;isChecked = _isChecked;&lt;br /&gt;}&lt;br /&gt;private bool isChecked = false;&lt;br /&gt;/// &lt;summary&gt;&lt;br /&gt;///&lt;br /&gt;/// &lt;/summary&gt;&lt;br /&gt;public bool Checked&lt;br /&gt;{&lt;br /&gt;get&lt;br /&gt;{&lt;br /&gt;return isChecked;&lt;br /&gt;}&lt;br /&gt;}&lt;br /&gt;}&lt;br /&gt;}&lt;br /&gt;<br />         <a href="http://www.aspxboy.com/private/5504/default.aspx">http://www.aspxboy.com/private/5504/default.aspx<br /></a></span></p>
+
+
+<p></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[在写自定义控件时，如果控件某个属性允许被验证控件验证，需要注意微软在 WebUIValidation.js内的实现。]]></title>
+    <link href="http://huobazi.github.com/blog/2006/12/01/customwebcontrolandwebuivalidationjs/"/>
+    <updated>2006-12-01T16:46:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2006/12/01/customwebcontrolandwebuivalidationjs</id>
+    <content type="html"><![CDATA[<p>微软在WebUIValidation.js(System.Web的资源文件内自己找工具看吧)<br />内有如下代码：<br /></p>
+
+
+<div style="BORDER-RIGHT: #cccccc 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #cccccc 1px solid; PADDING-LEFT: 4px; FONT-SIZE: 13px; PADDING-BOTTOM: 4px; BORDER-LEFT: #cccccc 1px solid; WIDTH: 77.29%; WORD-BREAK: break-all; PADDING-TOP: 4px; BORDER-BOTTOM: #cccccc 1px solid; HEIGHT: 310px; BACKGROUND-COLOR: #eeeeee">
+<span style="COLOR: #0000ff">function</span><span style="COLOR: #000000"> ValidatorGetValue(id) {<br />    </span><span style="COLOR: #0000ff">var</span><span style="COLOR: #000000"> control;<br />    control </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> document.getElementById(id);<br />    </span><span style="COLOR: #0000ff">if</span><span style="COLOR: #000000"> (</span><span style="COLOR: #0000ff">typeof</span><span style="COLOR: #000000">(control.value) </span><span style="COLOR: #000000">==</span><span style="COLOR: #000000"> </span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">string</span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">) {<br />        </span><span style="COLOR: #0000ff">return</span><span style="COLOR: #000000"> control.value;<br />    }<br />    </span><span style="COLOR: #0000ff">return</span><span style="COLOR: #000000"> ValidatorGetValueRecursive(control);<br />}<br /></span><span style="COLOR: #0000ff">function</span><span style="COLOR: #000000"> ValidatorGetValueRecursive(control)<br />{<br />    </span><span style="COLOR: #0000ff">if</span><span style="COLOR: #000000"> (</span><span style="COLOR: #0000ff">typeof</span><span style="COLOR: #000000">(control.value) </span><span style="COLOR: #000000">==</span><span style="COLOR: #000000"> </span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">string</span><span style="COLOR: #000000">"</span><span style="COLOR: #000000"> </span><span style="COLOR: #000000">&amp;&amp;</span><span style="COLOR: #000000"> (control.type </span><span style="COLOR: #000000">!=</span><span style="COLOR: #000000"> </span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">radio</span><span style="COLOR: #000000">"</span><span style="COLOR: #000000"> </span><span style="COLOR: #000000">||</span><span style="COLOR: #000000"> control.checked </span><span style="COLOR: #000000">==</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">true</span><span style="COLOR: #000000">)) {<br />        </span><span style="COLOR: #0000ff">return</span><span style="COLOR: #000000"> control.value;<br />    }<br />    </span><span style="COLOR: #0000ff">var</span><span style="COLOR: #000000"> i, val;<br />    </span><span style="COLOR: #0000ff">for</span><span style="COLOR: #000000"> (i </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #000000">0</span><span style="COLOR: #000000">; i</span><span style="COLOR: #000000">&lt;</span><span style="COLOR: #000000">control.childNodes.length; i</span><span style="COLOR: #000000">++</span><span style="COLOR: #000000">) {<br />        val </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> ValidatorGetValueRecursive(control.childNodes[i]);<br />        </span><span style="COLOR: #0000ff">if</span><span style="COLOR: #000000"> (val </span><span style="COLOR: #000000">!=</span><span style="COLOR: #000000"> </span><span style="COLOR: #000000">""</span><span style="COLOR: #000000">) </span><span style="COLOR: #0000ff">return</span><span style="COLOR: #000000"> val;<br />    }<br />    </span><span style="COLOR: #0000ff">return</span><span style="COLOR: #000000"> </span><span style="COLOR: #000000">""</span><span style="COLOR: #000000">;<br />}</span>
+</div>
+
+
+<p><br />当自定义控件为符合控件，比如两个或多个DropDownList组合而成<br />而有一个Value属性来返回这几个DropDownList的返回选项，并且设置了<span style="COLOR: #000000"><strong><font color="#0000ff">ValidationPropertyAttribute去验证某个属性，如：</font></strong><br /></span><strong style="COLOR: #0000ff">[ValidationPropertyAttribute( "Value" )]<br /><span style="COLOR: #000000">当使用验证控件验证的时候，由于上面脚本在控件没有客户端value的时候返回的为第一个value不为空的ChildNode的value<br />值，这样用来验证，可能不是我们所需要的。<br />比如我需要非空验证控件来验证我的自定义控件所有的DropDownList都必须被选择时候，如果第一个有了选择，则该脚本认为验证通过了，叶面可以PostBack然而，在服务器端Page.IsValidata属性是false的。<br />我用了一个非常ugly的方法，在控件外层放一个父容器（可以通过override TagKey 来指定）span<br />在每个DropDownList的客户端onchange的时候 判断 如果 任一个没有选择，那么置span的value = ‘’；<br />当全部选择的时候再将span.value = 实际的值 ，这样就不会出现客户端验证通过，然而服务器端验证没有通过才出来ErrorMessage的情况了。<br /><br />但是总觉得 这样非常的ugly,如果有其他朋友也遇到过这样的问题，欢迎讨论。</span></strong></p>
+
+
+<p></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[可以弹出确认对话框的自定义Web服务器控件ConfirmButton]]></title>
+    <link href="http://huobazi.github.com/blog/2004/04/30/confirmbutton/"/>
+    <updated>2004-04-30T09:49:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2004/04/30/confirmbutton</id>
+    <content type="html"><![CDATA[<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><font size="3"><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">经常在论坛里看到类似这样的问题：“</span><span lang="EN-US">…</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">如何在点击删除按钮的时候弹出个确认删除对话框”。</span></font></p>
+
+
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><font size="3"><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">下面我们来自己写一个这样的自定义</span><span lang="EN-US">Web</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">服务器控件</span><span lang="EN-US">!</span></font></p>
+
+
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'"><font size="3">思路如下：</font></span></p>
+
+
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><font size="3"><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">继承</span><span lang="EN-US">System.Web.UI.WebControls.Button</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">控件</span></font></p>
+
+
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><font size="3"><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">增加一个属性“</span><span lang="EN-US">ConfirmMessage</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">”来表示弹出确认框上面的提示信息。</span></font></p>
+
+
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><font size="3"><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">在服务器控件呈现在页面之前把一段</span><span lang="EN-US">javascript</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">写到页面</span></font></p>
+
+
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'"><font size="3">内容如下：</font></span></p>
+
+
+<p><p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3">&lt;script language=&ldquo;JavaScript&rdquo;&gt;&lt;?xml:namespace prefix = o ns = &ldquo;urn:schemas-microsoft-com:office:office&rdquo; /><p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3">&lt;!&mdash;<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3">function <em>doAspxBoyConfirm()<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3">{<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><font size="3"><b><span lang="EN-US" style="COLOR: navy">return confirm(&ldquo;</span></b><b><span style="COLOR: navy; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">你确认删除</span><span lang="EN-US" style="COLOR: navy">/</span></b><b><span style="COLOR: navy; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">保存吗</span><span lang="EN-US" style="COLOR: navy">??&rdquo;)<p></p></span></b></font></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3">}<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3">//&mdash;&gt;<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3">&lt;/script&gt;<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><font size="3"><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">查一下</span><span lang="EN-US">msdn</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">中对于</span><b><span lang="EN-US" style="BACKGROUND: #d9d9d9; COLOR: navy; mso-shading: white; mso-pattern: gray-15 auto">Control.OnPreRender</span></b><span lang="EN-US"> </span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">方法<span class="ilang">的描述</span></span><b><span lang="EN-US" style="COLOR: navy"><p></p></span></b></font></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><font size="3"><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">可以得到“<b><span style="COLOR: navy">此方法通知服务器控件在保存视图状态和呈现内容之前，执行任何必要的预呈现步骤</span></b></span><span lang="EN-US">”.</span></font></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><font size="3"><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">所以我们只要在</span><b><span lang="EN-US" style="BACKGROUND: #d9d9d9; COLOR: navy; mso-shading: white; mso-pattern: gray-15 auto">OnPreRender</span></b><b><span style="BACKGROUND: #d9d9d9; COLOR: navy; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-shading: white; mso-pattern: gray-15 auto">方法内</span><span style="BACKGROUND: #d9d9d9; COLOR: navy; mso-shading: white; mso-pattern: gray-15 auto"> </span></b><b><span style="BACKGROUND: #d9d9d9; COLOR: navy; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-shading: white; mso-pattern: gray-15 auto">用</span></b><span lang="EN-US">Page.RegisterClientScriptBlock</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">把这段</span><span lang="EN-US">javascript</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">发送到客户端，并且给</span><span lang="EN-US">Button. Attributes</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">属性内添加一个“</span><span lang="EN-US">onclick</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">”的客户端属性对应值为</span><span lang="EN-US">: &ldquo;return </em>doAspxBoyConfirm()”.</span></font></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'"><font size="3">详细情况可以查阅</font></span></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><span lang="EN-US"><font size="3">ms-help://MS.VSCC.2003/MS.MSDNQTR.2003FEB.2052/cpref/html/frlrfsystemwebuiwebcontrolswebcontrolclassattributestopic.htm</font></span></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><font size="3"><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">这样一个具有</span><span lang="EN-US">ConFirm</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">功能的</span><span lang="EN-US">Button</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">就基本上建立起来了。</span></font></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'"><font size="3">新建一个测试该控件的工程</font></span></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><font size="3"><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">在工具箱上点右键选择“添加</span><span lang="EN-US">/</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">移除项”，点击浏览选择编译好的</span><span lang="EN-US">dll</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">文件，点击确定，你会发现</span><span lang="EN-US">ConFirmButton</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">已经添加到工具箱内了</span></font></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><font size="3"><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">将其托到一个</span><span lang="EN-US">Aspx</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">页面内</span> <span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">在属性设置内给</span><span lang="EN-US">ConfirmMessage</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">值为你要的弹出框内容比如“确定删除吗</span><span lang="EN-US">?</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">”，按</span><span lang="EN-US">F5</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">运行。</span></font></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><font size="3"><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">当点该按钮时会弹出一个</span><span lang="EN-US">confirm</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">对话框询问“确定删除吗</span><span lang="EN-US">?</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">”</span><span lang="EN-US">,</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">如果点击确定则执行</span><span lang="EN-US">button</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的</span><span lang="EN-US">Button_Click</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">事件，如果点击取消则不执行。</span></font></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><font size="3"><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">你可以查看他生成的</span><span lang="EN-US">html</span><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">代码，以加深对该控件工作原理的理解</span></font></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><span style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'"><font size="3">完整的代码如下：</font></span></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3">using System;<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3">using System.Web.UI;<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3">using System.Web.UI.WebControls;<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3">using System.ComponentModel;<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3">using System.Text;<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"> <p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3">namespace AspxBoy.Com.ConfirmButton<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3">{<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 1">       </span>/// &lt;summary&gt;<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><font size="3"><b><span lang="EN-US" style="COLOR: navy"><span style="mso-tab-count: 1">       </span>/// Button</span></b><b><span style="COLOR: navy; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">点击时会弹出一个对话框要求确认</span><span lang="EN-US" style="COLOR: navy"><p></p></span></b></font></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 1">       </span>/// &lt;/summary&gt;<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 1">       </span>public class ConfirmButton : System.Web.UI.WebControls.Button<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 1">       </span>{<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 1">       </span><span style="mso-tab-count: 1">       </span>private string <em>confirmMessage;<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span>/// &lt;summary&gt;<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><font size="3"><b><span lang="EN-US" style="COLOR: navy"><span style="mso-tab-count: 2">              </span>/// </span></b><b><span style="COLOR: navy; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">当客户端点击此</span><span lang="EN-US" style="COLOR: navy">Button</span></b><b><span style="COLOR: navy; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">时弹出的提示消息筐的内容</span><span lang="EN-US" style="COLOR: navy"><p></p></span></b></font></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span>/// &lt;/summary&gt;<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span>public string ConfirmMessage<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span>{<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>get<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 3">                     </span>{<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 3">                     </span><span style="mso-tab-count: 1">       </span>return </em>confirmMessage;<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 3">                     </span>}<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"> <p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>set<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 3">                     </span>{<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 3">                     </span><span style="mso-tab-count: 1">       </span><em>confirmMessage = value;<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 3">                     </span>}<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span>}<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"> <p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 1">       </span><span style="mso-tab-count: 1">       </span>protected override void OnPreRender(System.EventArgs e)<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span>{<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>StringBuilder sb = new StringBuilder();<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(&rdquo;&lt;script language=\&ldquo;JavaScript\&rdquo;&gt;&ldquo;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(System.Environment.NewLine);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(&rdquo;&lt;!&mdash;&ldquo;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(System.Environment.NewLine);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(&rdquo;/<em>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ldquo;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(System.Environment.NewLine);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append("ControlName:\t\tAspxBoy.Com.ConfirmButton&rdquo;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(System.Environment.NewLine);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(&ldquo;AuthorName:\t\t\tHuobazi,WuMeibo&rdquo;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(System.Environment.NewLine);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(&ldquo;CopyRight:\t\t\twww.AspxBoy.Com&rdquo;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(System.Environment.NewLine);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(&ldquo;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;</em>/&rdquo;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(System.Environment.NewLine);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(&ldquo;function </em>doAspxBoyConfirm()&rdquo;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(System.Environment.NewLine);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(&ldquo;{&rdquo;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(System.Environment.NewLine);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(&ldquo;return confirm(\&rdquo;&ldquo;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(ConfirmMessage);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(&rdquo;\&ldquo;)&rdquo;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(System.Environment.NewLine);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(&ldquo;}&rdquo;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(System.Environment.NewLine);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(&ldquo;//&mdash;&gt;&rdquo;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>sb.Append(&ldquo;&lt;/script&gt;&rdquo;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>Page.RegisterClientScriptBlock(&ldquo;<em>doAspxBoyConfirm&rdquo;,sb.ToString());<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>this.Attributes.Add(&ldquo;onclick&rdquo;,&ldquo;return </em>doAspxBoyConfirm()&rdquo;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>base.OnPreRender(e);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span>}<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span>public override void RenderBeginTag(HtmlTextWriter writer)<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span>{<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>writer.WriteLine();<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>writer.Write(&ldquo;&lt;!&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;&rdquo;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>writer.Write(&ldquo;AspxBoy.Com.ConfirmButton Start&rdquo;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>writer.Write(&ldquo;\tAuthorName: \tHuobazi&rdquo;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>writer.WriteLine(&ldquo; &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;&gt;&rdquo;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>writer.Write(&ldquo;&lt;!&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash; &rdquo;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>writer.Write(&ldquo;Copyright:2004 Huobazi(www.AspxBoy.com)&rdquo;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>writer.Write(&ldquo; &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;&rdquo;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>writer.WriteLine(&ldquo;&gt;&rdquo;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>base.RenderBeginTag(writer);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span>}<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span>public override void RenderEndTag(HtmlTextWriter writer)<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span>{<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>base.RenderEndTag(writer);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>writer.WriteLine();<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>writer.Write(&ldquo;&lt;!&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash; &rdquo;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>writer.Write(&ldquo;AspxBoy.Com.ConfirmButton<span style="mso-spacerun: yes">  </span>End&rdquo;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>writer.Write(&ldquo; &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&rdquo;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>writer.WriteLine(&ldquo;&gt;&rdquo;);<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span><span style="mso-tab-count: 1">       </span>writer.WriteLine();<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 2">              </span>}<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3"><span style="mso-tab-count: 1">       </span>}<p></p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt"><b><span lang="EN-US" style="COLOR: navy"><font size="3">}<p></p></font></span></b></p>
+<p><br /></p></p>
+]]></content>
+  </entry>
+  
+</feed>

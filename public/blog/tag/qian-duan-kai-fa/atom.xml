@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 前端开发 | 武眉博]]></title>
+  <link href="http://huobazi.github.com/blog/tag/qian-duan-kai-fa/atom.xml" rel="self"/>
+  <link href="http://huobazi.github.com/"/>
+  <updated>2013-07-14T11:11:48+08:00</updated>
+  <id>http://huobazi.github.com/</id>
+  <author>
+    <name><![CDATA[Marble Wu]]></name>
+    <email><![CDATA[huobazi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[淘宝首页 say goodbye to YUI 了还是forever的]]></title>
+    <link href="http://huobazi.github.com/blog/2010/08/06/taobao-say-goodbye-to-yui/"/>
+    <updated>2010-08-06T15:23:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2010/08/06/taobao-say-goodbye-to-yui</id>
+    <content type="html"><![CDATA[<p>好久没有时间读google reader了攒了上千条，今天上去，玉伯的一则快讯映入眼帘</p>
+
+
+<p>Thanks YUI, and says goodbye to YUI forever!</p>
+
+
+<p>http://lifesinger.org/blog/2010/08/kissy-briefings-1/</p>
+
+
+<p> </p>
+
+
+<p></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[使用window.location跳转，在IE中UrlReffer不被记录]]></title>
+    <link href="http://huobazi.github.com/blog/2010/01/21/window-location-href-ie-request-reffer/"/>
+    <updated>2010-01-21T16:54:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2010/01/21/window-location-href-ie-request-reffer</id>
+    <content type="html"><![CDATA[<p>使用window.location跳转，在FF中，没问题，下一页面可以取得UrlReffer，但在IE中UrlReffer不被记录</p>
+
+
+<p>真变态，</p>
+
+
+<p>让我头痛了半天，弄了个丑陋的办法做了如下实现：</p>
+
+
+<p><!--more--></p>
+
+
+<div class="source" style="COLOR: #f6f3e8; FONT-FAMILY: '[object]','Consolas','Lucida Console','Courier New'; BACKGROUND-COLOR: #242424">
+<span style="COLOR: #8ac6f2">function</span> <span style="COLOR: #f6f3e8">safeRedirectToCart</span>(<span style="COLOR: #f6f3e8">url</span>) <span style="COLOR: #f6f3e8">{</span><br />    <span style="COLOR: #8ac6f2">var</span> <span style="COLOR: #f6f3e8">isIE</span> <span style="COLOR: #f6f3e8">=</span> <span style="COLOR: #f6f3e8">jQuery</span><span style="COLOR: #f6f3e8">.</span><span style="COLOR: #f6f3e8">browser</span><span style="COLOR: #f6f3e8">.</span><span style="COLOR: #f6f3e8">msie</span>;<br />    <span style="COLOR: #8ac6f2">if</span> (<span style="COLOR: #f6f3e8">!</span><span style="COLOR: #f6f3e8">isIE</span>) <span style="COLOR: #f6f3e8">{</span><br />        <span style="COLOR: #f6f3e8">window</span><span style="COLOR: #f6f3e8">.</span><span style="COLOR: #f6f3e8">location</span> <span style="COLOR: #f6f3e8">=</span> <span style="COLOR: #f6f3e8">url</span>;<br />        <span style="COLOR: #8ac6f2">return</span>;<br />    <span style="COLOR: #f6f3e8">}</span><br />    <span style="COLOR: #f6f3e8">$</span>(<span style="COLOR: #95e454; FONT-STYLE: italic">".btnCart"</span><span style="COLOR: #f6f3e8">).</span><span style="COLOR: #f6f3e8">get</span>(<span style="COLOR: #e5786d">0</span><span style="COLOR: #f6f3e8">).</span><span style="COLOR: #f6f3e8">click</span>();<br /><span style="COLOR: #f6f3e8">}</span>
+</div>
+
+
+<p>说明：在页面上render一个连接(可以用样式表控制不显示），判断如果是IE浏览器然则调用其click，嘿嘿，就这个。</p>
+
+
+<p></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[腾讯webQQ的 CSS Sprite]]></title>
+    <link href="http://huobazi.github.com/blog/2009/11/28/webqq-css-sprite/"/>
+    <updated>2009-11-28T15:34:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2009/11/28/webqq-css-sprite</id>
+    <content type="html"><![CDATA[<p>web qq速度很快，很多图标处理的也很漂亮，偷偷看了一下sprite的图片，所有图标都在这个图里了20多k，性能压倒一切啊。</p>
+
+
+<p><!--more--></p>
+
+
+<p><img src="http://web.qq.com/images/icon.gif" alt="webQQ CSS Sprite" width="560" height="1000"></p>
+
+
+<p></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[在线编辑器的一个新选择。]]></title>
+    <link href="http://huobazi.github.com/blog/2009/10/27/kissy-editor/"/>
+    <updated>2009-10-27T20:16:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2009/10/27/kissy-editor</id>
+    <content type="html"><![CDATA[<p>今天<a title="http://lifesinger.org/" href="http://lifesinger.org/" target="_blank">lifesinger</a>发布了<a title="kiss editor" href="http://lifesinger.org/blog/2009/10/kissy-editor/" target="_blank">淘宝编辑器</a>,</p>
+
+
+<p>可以在这里看到<a href="http://kissy.googlecode.com/svn/trunk/src/editor/demo/basic.html" target="_blank">演示</a></p>
+
+
+<p>介绍可以看这里，<a href="http://lifesinger.org/blog/2009/10/kissy-editor/">http://lifesinger.org/blog/2009/10/kissy-editor/</a></p>
+
+
+<p></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[知识死角,name相同的html element]]></title>
+    <link href="http://huobazi.github.com/blog/2009/07/17/same-name-element-in-one-page/"/>
+    <updated>2009-07-17T19:01:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2009/07/17/same-name-element-in-one-page</id>
+    <content type="html"><![CDATA[<p>今天在帮同事调程序时发现了这个死角<br />现象如下，没有任何输入的textarea提交到服务端后得到的值总是","<br />找了半天发现是因为页面上两个textarea的name相同，以前只知道页面上radio的name相同则是一个组，name相同的<br />的checkbox提交后是以逗号分隔值的，于是做了下面代码的试验，发现任何name相同的element提交到服务端都会得到逗号分隔的值，以前还不知道这个，汗</p>
+
+
+<p><!--more--></p>
+
+
+<p><code><span style="color: #000000">
+&lt;%@ Page Language=&ldquo;C#" %&gt;<br /><br />&lt;script runat="server" languag="c#&rdquo;&gt;<br />    string textboxValue = string.Empty;<br />    string radioValue = string.Empty;<br />    string checkboxValue = string.Empty;<br />    string selectValue = string.Empty;<br />    string textareaValue = string.Empty;<br />    void Page_Load(object obj , EventArgs args)<br />    {<br />        placeHolder.Visible = false;<br />        System.Web.HttpContext ctx = System.Web.HttpContext.Current;<br />        if(ctx.Request.HttpMethod == "POST")<br />        {<br />            placeHolder.Visible = true;<br />            textboxValue = ctx.Request.Form[&ldquo;textbox&rdquo;];<br />            radioValue = ctx.Request.Form[&ldquo;radio&rdquo;];<br />            checkboxValue = ctx.Request.Form[&ldquo;checkbox&rdquo;];<br />            selectValue = ctx.Request.Form[&ldquo;select&rdquo;];<br />            textareaValue = ctx.Request.Form[&ldquo;textarea&rdquo;];<br />        }<br />    }<br />&lt;/script&gt;<br /><br />&lt;!DOCTYPE html PUBLIC "&ndash;//W3C//DTD XHTML 1.0 Transitional//EN" "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>"&gt;<br />&lt;html xmlns=&ldquo;<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>" &gt;<br />&lt;head&gt;<br />&lt;style&gt;<br />body, h1, h2, h3, h4, h5, h6, hr, p, ul, ol, li,pre,fieldset, lengend, button, input, textarea,{<br />    margin: 0;<br />    padding: 0;<br />}<br />body,button, input, select, textarea {<br />    font: 13px/1 Tahoma, Helvetica, Arial, &rdquo;\5b8b\4f53", sans-serif;<br />}<br /><br />#page{<br />    padding:10px 30px 10px 30px;<br />}<br />#s{<br />color:red;<br />}<br />input,select,textarea{<br />    clear:both;<br />    float:left;<br />    margin:5px;<br />}<br /><br />pre {<br />    overflow: auto;<br />    border: 1px dotted #281;<br />    background-color: #eee;<br />    padding: 2px 20px 20px 10px;<br />}<br />fieldset{<br />    line-height:200%;<br />}<br /><br />&lt;/style&gt;<br />&lt;/head&gt;<br />&lt;body&gt;<br /><br />&lt;div id=&ldquo;page&rdquo;&gt;<br /><br />&lt;div id=&ldquo;placeHolder" runat="server&rdquo;&gt;    <br />            &lt;string id=&ldquo;s&rdquo;&gt;Post Data:&lt;/string&gt;<br /><br />&lt;pre style=&ldquo;max-height:30px;&rdquo;&gt;<br />textboxvalue:&lt;%= textboxValue%&gt;<br />radioValue:&lt;%= radioValue%&gt;<br />checkboxValue:&lt;%= checkboxValue%&gt;<br />selectValue:&lt;%=selectValue%&gt;<br />textareaValue:&lt;%= textareaValue%&gt;&lt;/pre&gt;<br /><br />&lt;/div&gt;<br /><br />&lt;form id=&ldquo;aspnetForm" method="post&rdquo;&gt;<br />                &lt;fieldset&gt;       <br />                  &lt;legend&gt;Test&lt;/legend&gt;              <br />                &lt;input type=&ldquo;text" name="textbox" value="a&rdquo;/&gt; <br />                &lt;input type=&ldquo;text" name="textbox" value="a&rdquo;/&gt;<br />                &lt;input type=&ldquo;text" name="textbox" value="a&rdquo;/&gt;<br />                &lt;input type=&ldquo;radio" name="radio" value="a" /&gt;<br />                &lt;input type="radio" name="radio" value="a" /&gt;<br />                &lt;input type="radio" name="radio" value="a" checked="checked" /&gt;<br />                &lt;input type="checkbox" name="checkbox" value="a" checked="checked" /&gt;<br />                &lt;input type="checkbox" name="checkbox" value="a" checked="checked" /&gt;<br />                &lt;input type="checkbox" name="checkbox" value="a" checked="checked" /&gt;<br />                &lt;select name="select&rdquo;&gt;<br />                                   &lt;option value=&ldquo;a&rdquo;&gt;a&lt;/option&gt;<br />                &lt;/select&gt;<br />                &lt;select name=&ldquo;select&rdquo;&gt;<br />                                   &lt;option value=&ldquo;a&rdquo;&gt;a&lt;/option&gt;<br />                &lt;/select&gt;<br />                &lt;select name=&ldquo;select&rdquo;&gt;<br />                                   &lt;option value=&ldquo;a&rdquo;&gt;a&lt;/option&gt;<br />                &lt;/select&gt;<br />                &lt;textarea name=&ldquo;textarea&rdquo;&gt;a&lt;/textarea&gt;<br />                &lt;textarea name=&ldquo;textarea&rdquo;&gt;a&lt;/textarea&gt;<br />                &lt;textarea name=&ldquo;textarea&rdquo;&gt;a&lt;/textarea&gt;<br />                &lt;input type=&ldquo;submit" value="Do PostBack" /&gt;<br />            &lt;/fieldset&gt;<br />            &lt;/form&gt;<br />    &lt;/div&gt;<br /><br />&lt;/body&gt;<br />&lt;/html&gt;</span>
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>

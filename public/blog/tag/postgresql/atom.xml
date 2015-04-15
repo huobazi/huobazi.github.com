@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: PostgreSQL | 武眉博]]></title>
+  <link href="http://huobazi.github.com/blog/tag/postgresql/atom.xml" rel="self"/>
+  <link href="http://huobazi.github.com/"/>
+  <updated>2013-07-14T11:11:48+08:00</updated>
+  <id>http://huobazi.github.com/</id>
+  <author>
+    <name><![CDATA[Marble Wu]]></name>
+    <email><![CDATA[huobazi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[将 MySQL 的数据导入 PostgreSQL]]></title>
+    <link href="http://huobazi.github.com/blog/2012/09/12/import-data-from-mysql-to-postgresql/"/>
+    <updated>2012-09-12T21:45:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2012/09/12/import-data-from-mysql-to-postgresql</id>
+    <content type="html"><![CDATA[<p>开始学习使用PostgreSQL, 先尝试将MySQL数据导入到PostgreSQL</p>
+
+<h2>安装PostgreSQL</h2>
+
+<p><code>bash
+sudo apt-get install postgresql postgresql-client postgresql-contrib  
+</code>
+基本按照<a href="http://kiki.ubuntu.org.cn/PostgreSQL">http://wiki.ubuntu.org.cn/PostgreSQL</a>进行设置就OK了</p>
+
+<h2>安装开发工具</h2>
+
+<p><code>bash
+sudo apt-get install libpq-dev pgadmin3
+</code>
+PgAdmin3 这是一个桌面 GUI 工具, 可以很方便的管理 PostgreSQL</p>
+
+<h2>用到的RubyGems</h2>
+
+<p>在 Gemfile 中增加：
+<code>ruby
+gem "pg"
+gem "mysql2"
+</code>
+然后
+<code>bash
+bundle install
+</code></p>
+
+<!--more-->
+
+
+<h3>完整的 Ruby 代码</h3>
+
+<p>```</p>
+
+<h1>coding: utf-8</h1>
+
+<p>require &lsquo;mysql2&rsquo;
+require &lsquo;pg&rsquo;</p>
+
+<p>mysql_client = Mysql2::Client.new(:host => &ldquo;localhost&rdquo;, :username =>&ldquo;root&rdquo;, :password => &ldquo;pa$$word&rdquo;, :database => &ldquo;my_test&rdquo;, :encoding => &ldquo;utf8&rdquo;)</p>
+
+<p>postgres_client = PG::Connection.new(:host => &ldquo;localhost&rdquo;, :dbname => &lsquo;mydb&rsquo;, :user => &ldquo;postgres&rdquo;, :password => &ldquo;pa$$word&rdquo;)
+postgres_client.set_client_encoding(&lsquo;utf8&rsquo;)</p>
+
+<p>mysql_result = mysql_client.query(&lsquo;select <code>code</code>,<code>name</code>,<code>level</code> from <code>chinese_regions</code>&rsquo;)</p>
+
+<p>step = 0
+mysql_result.each do |row|</p>
+
+<p>  the_code = row[&lsquo;code&rsquo;]
+  the_name = row[&lsquo;name&rsquo;]
+  the_level = row[&lsquo;level&rsquo;].to_i
+  insert_sql_test = &ldquo;insert into chinese_regions (\"code\&rdquo;,\&ldquo;name\&rdquo;,\&ldquo;level\&rdquo;) values (&lsquo;#{the_code}&rsquo;,&lsquo;#{the_name}&rsquo;,&lsquo;#{the_level}&rsquo;);&ldquo;
+  postgres_client.exec(insert_sql_test)</p>
+
+<p>  step += 1
+  puts &lsquo;&ndash;&rsquo; + step.to_s + &lsquo;&ndash;&rsquo; + the_code + &lsquo;&mdash;&rsquo; + the_name + &lsquo;&mdash;&rsquo; + the_level.to_s</p>
+
+<p>end</p>
+
+<p>```</p>
+
+<p>Run 啊 Run 啊的就 OK 了</p>
+]]></content>
+  </entry>
+  
+</feed>

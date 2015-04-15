@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: DataGrid | 武眉博]]></title>
+  <link href="http://huobazi.github.com/blog/tag/datagrid/atom.xml" rel="self"/>
+  <link href="http://huobazi.github.com/"/>
+  <updated>2013-07-14T11:11:48+08:00</updated>
+  <id>http://huobazi.github.com/</id>
+  <author>
+    <name><![CDATA[Marble Wu]]></name>
+    <email><![CDATA[huobazi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[两个DropDownList在Repeater、DataList、DataGrid内的连动和冒泡事件(BubbleEvent) ]]></title>
+    <link href="http://huobazi.github.com/blog/2006/04/08/twodropdownlistindatagridandbubbleevent/"/>
+    <updated>2006-04-08T17:59:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2006/04/08/twodropdownlistindatagridandbubbleevent</id>
+    <content type="html"><![CDATA[<p><span style="font-size: medium;"><strong>两个DropDownList在Repeater、DataList、DataGrid内的连动和冒泡事件(BubbleEvent)<br /></strong><span style="font-size: small;">        问题</span><strong>:</strong></span> <a href="http://community.csdn.net/Expert/topic/4670/4670056.xml?temp=3.944033E-02" target="_blank">http://community.csdn.net/Expert/topic/4670/4670056.xml?temp=3.944033E-02</a><br />        刚看第一眼觉得在第一个DDL的SelectedIndexChanged事件内绑定第二个DDL就ok了，页面上写或者ItemDataBound内写事件挂接代码都可以。打开VS写测试却发现有点<span style="color: #ff0000;"><strong><span style="text-decoration: underline;">障碍</span></strong></span>哦，<br /><span style="color: #008000;"><span style="text-decoration: underline;"><em>在SelectedIndexChanged内要知道去绑定哪个行哪个列的DDL要费些周折</em></span></span>。<br /><strong><span style="color: #0000ff;">只有从DDL一级一级的向上找Parent最后找到DataGridItem，再利用其ItemIndex定位到行然后FindControl到要绑定的DDL</span></strong>，最终可以实现，好像比较累哦。<br />        随又想到DataGrid的ItemCommand事件，但发现WebControl内只有<a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/cpref/html/frlrfSystemWebUIWebControlsButtonClassTopic.asp"><strong><span style="color: #a52a2a;">Button</span></strong></a><span style="color: #a52a2a;"> </span><a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/cpref/html/frlrfSystemWebUIWebControlsImageButtonClassTopic.asp"><strong><span style="color: #a52a2a;">ImageButton</span></strong></a><span style="color: #a52a2a;"> <strong><span style="text-decoration: underline;"><a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/cpref/html/frlrfsystemwebuiwebcontrolslinkbuttonclasstopic.asp">LinkButton</a></span></strong></span>有<a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/cpref/html/frlrfsystemwebuiwebcontrolslinkbuttonclasscommandnametopic.asp">CommandName</a>属性和 <a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/cpref/html/frlrfsystemwebuiwebcontrolslinkbuttonclasscommandargumenttopic.asp">CommandArgument</a>属性，并可以将事件<span style="text-decoration: underline;"><strong><a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/cpguide/html/cpconbubblingcommandevent.asp">上浮（冒泡）</a>.</strong></span><a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/cpref/html/frlrfsystemwebuiwebcontrolsdropdownlistclasstopic.asp">DropDownLis</a>t先天不足！真是郁闷~~~~~ 能不能自己改造呢？<span style="color: #ff0000; background-color: #000080;"><strong>动手试试</strong></span>就知道了。</p>
+
+
+<p><code><span style="color: #000000">
+&lt;%@ Page Language=&ldquo;C#" Debug="true" %&gt;<br />&lt;%@ Import Namespace="System.Data" %&gt;<br />&lt;!DOCTYPE html PUBLIC &rdquo;&ndash;//W3C//DTD XHTML 1.0 Transitional//EN" "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>"&gt;<br />&lt;html xmlns=&ldquo;<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>" xml:lang="gb2312" lang="gb2312&rdquo;&gt;<br />&lt;head&gt;<br />&lt;title&gt; ItemDataBoundGetColumnName &lt;/title&gt;<br />&lt;meta http-equiv=&ldquo;Content-Type" content="text/html; charset=gb2312" /&gt;<br />&lt;meta name="title" content=&rdquo;&ldquo; /&gt;<br />&lt;meta name="author" content="活靶子,Huobazi,www.AspxBoy.com" /&gt;<br />&lt;meta name="subject" content=&rdquo;&ldquo; /&gt;<br />&lt;meta name="language" content="gb2312" /&gt;<br />&lt;meta name="keywords" content=&rdquo;&ldquo; /&gt;<br />&lt;meta name="Copyright" content="www.AspxBoy.com" /&gt;<br />&lt;meta name="robots" content="all" /&gt;<br /><br />&lt;script language="c#" runat="server&rdquo;&gt;<br />void BindGrid()<br />{<br />        DataTable dt = new DataTable();<br />        DataRow dr;<br />        dt.Columns.Add(new DataColumn(&ldquo;IntegerValue&rdquo;, typeof(Int32)));<br />        dt.Columns.Add(new DataColumn(&ldquo;StringValue&rdquo;, typeof(string)));<br />        dt.Columns.Add(new DataColumn(&ldquo;DateTimeValue&rdquo;, typeof(DateTime)));<br />        dt.Columns.Add(new DataColumn(&ldquo;BoolValue&rdquo;, typeof(bool)));<br />        dt.Columns.Add(new DataColumn(&ldquo;CurrencyValue&rdquo;, typeof(double)));<br />        for (int i = 0; i &lt; 36; i++) {<br />            dr = dt.NewRow();<br />            dr[0] = i;<br />            dr[1] = "项 " + i.ToString();<br />            dr[2] = DateTime.Now;<br />            dr[3] = (i % 2 != 0) ? true : false;<br />            dr[4] = 1.23 * (i+1);<br />            dt.Rows.Add(dr);<br />        }<br />  dg.DataSource= dt;<br />  dg.DataBind();<br />}<br />void Page_Load(object o, EventArgs e)<br />{<br />     dg.PagerStyle.Mode = PagerMode.NumericPages;<br />     if(!IsPostBack)<br />     {<br />        BindGrid();<br />     }<br />}<br /> <br />void btnClick(object o , EventArgs e)<br />{<br />     Response.Write(&ldquo;页面回发,但是不执行ItemDataBound&rdquo;);<br />}<br /> <br />void PageChange(object o , DataGridPageChangedEventArgs e)<br />{<br />     dg.CurrentPageIndex = e.NewPageIndex;<br />     BindGrid();<br />}<br />void ItemDataBound(object o , DataGridItemEventArgs e)<br />{<br />     if(e.Item.ItemIndex &gt; -1 )//必须<br />     {<br />          DataRowView drv = (DataRowView)e.Item.DataItem;<br />          for (int i=0; i&lt;drv.Row.Table.Columns.Count ; i++)<br />          { <br />            Response.Write(drv.Row.Table.Columns[i].ColumnName + "&amp;nbsp;&amp;nbsp;&ldquo;);<br />          }<br />     }<br />}<br />&lt;/script&gt;<br /><br />&lt;/head&gt;<br />&lt;body&gt;<br />&lt;form runat="server&rdquo;&gt;<br />  &lt;ASP:DataGrid id=&ldquo;dg" runat="server"      <br />   HeaderStyle-BackColor=&rdquo;#aaaadd"<br />   AutoGenerateColumns=&ldquo;true&rdquo;<br />   AllowPaging=&ldquo;true&rdquo;<br />   PageSize=&ldquo;6&rdquo;<br />    OnItemDataBound=&ldquo;ItemDataBound&rdquo;<br />    OnPageIndexChanged=&ldquo;PageChange&rdquo;<br />  &gt;<br />  &lt;/asp:DataGrid&gt;<br />  &lt;/br&gt;<br />   &lt;asp:button id=&ldquo;btn" runat="server" onclick="btnClick" Text="我是按钮,按我一下&rdquo;&gt;&lt;/asp:button&gt;<br />在AutoGenerateColumns=&ldquo;false"使用绑定列或者模板列的时候只需要使用 <br /><br />&lt;font color="blut&rdquo;&gt;YourDataGrid.Columns[编号].HeaderText&lt;/font&gt; 去获取<br />  <br />&lt;/form&gt;<br />&lt;/body&gt;<br />&lt;/html&gt;</span>
+</code><p><a href="http://www.aspxboy.com/Files/71/66/284.Aspx" target="_blank"><a href="http://www.aspxboy.com/Files/71/66/284.Aspx">http://www.aspxboy.com/Files/71/66/284.Aspx</a></a></p></p>
+
+<p> </p>
+
+
+<p></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[一个关于DataGrid的打印类,分享,感谢作者]]></title>
+    <link href="http://huobazi.github.com/blog/2004/04/30/cb-8176/"/>
+    <updated>2004-04-30T17:03:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2004/04/30/cb-8176</id>
+    <content type="html"><![CDATA[<p><font size="2">手中的活计需要打印,就到处找找。<br />从</font><a href="http://www.google.com/"><font size="2">google</font></a><font size="2">中扑获,挺不错的，大家共享～<br />how can i print the data in DataGrid?</font><a href="http://forums.aspfree.com/archive/t-17107"><br /><font size="2">http://forums.aspfree.com/archive/t-17107</font></a><br /><a href="http://forums.aspfree.com/t17107/s.html"><font size="2">http://forums.aspfree.com/t17107/s.html</font></a><br /></p>
+
+
+<pre>using System;
+using System.Collections;
+using System.ComponentModel;
+using System.Drawing;
+using System.Drawing.Printing;
+using System.Data;
+
+using System.Windows.Forms;
+
+namespace Hooooo.Print
+{
+public class DataGridPrinter
+{
+private DataGrid dataGrid;
+private PrintDocument printDocument;
+private PageSetupDialog pageSetupDialog;
+private PrintPreviewDialog printPreviewDialog;
+
+public DataGridPrinter(DataGrid dataGrid)
+{ 
+this.dataGrid = dataGrid; 
+printDocument = new PrintDocument();
+printDocument.PrintPage += new PrintPageEventHandler(this.printDocument_PrintPage);
+} 
+
+private void printDocument_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+{
+int rowCount = 0;
+int colCount = 0;
+int x = 0;
+int y = 0;
+int rowGap = 20;
+int colGap = 5;
+int leftMargin = 50;
+Font font = new Font("Arial", 10);
+Font headingFont = new Font("Arial", 11, FontStyle.Underline);
+Font captionFont = new Font("Arial", 10, FontStyle.Bold); 
+Brush brush = new SolidBrush(Color.Black);
+string cellValue = "";
+
+if(dataGrid.DataSource.GetType().ToString() == "System.Data.DataTable")
+{
+rowCount = ((DataTable)dataGrid.DataSource).Rows.Count;
+}
+else if(dataGrid.DataSource.GetType().ToString() == "System.Collections.ArrayList")
+{
+rowCount = ((ArrayList)dataGrid.DataSource).Count;
+}
+colCount = dataGrid.TableStyles[0].GridColumnStyles.Count;
+
+//print caption
+if(dataGrid.CaptionVisible)
+{
+y += rowGap;
+x = leftMargin;
+e.Graphics.DrawString(dataGrid.CaptionText, captionFont, brush, x, y);
+}
+
+//print headings 
+y += rowGap;
+x = leftMargin;
+for(int j = 0; j &lt; colCount; j++)
+{
+if(dataGrid.TableStyles[0].GridColumnStyles[j].Width &gt; 0)
+{
+cellValue = dataGrid.TableStyles[0].GridColumnStyles[j].HeaderText; 
+e.Graphics.DrawString(cellValue, headingFont, brush, x, y);
+x += dataGrid.TableStyles[0].GridColumnStyles[j].Width + colGap; 
+}
+} 
+
+//print all rows
+for(int i = 0; i &lt; rowCount; i++)
+{
+y += rowGap;
+x = leftMargin;
+for(int j = 0; j &lt; colCount; j++)
+{
+if(dataGrid.TableStyles[0].GridColumnStyles[j].Width &gt; 0)
+{
+cellValue = dataGrid[i,j].ToString(); 
+e.Graphics.DrawString(cellValue, font, brush, x, y);
+x += dataGrid.TableStyles[0].GridColumnStyles[j].Width + colGap;
+y = y + rowGap * (cellValue.Split(new char[] {'\r', '\n'}).Length - 1); 
+}
+} 
+}
+string s = cellValue;
+string f3 = cellValue;
+}
+
+public PrintDocument GetPrintDocument()
+{
+return printDocument;
+}
+
+public void Print()
+{
+try
+{
+pageSetupDialog = new PageSetupDialog();
+pageSetupDialog.Document = printDocument;
+pageSetupDialog.ShowDialog();
+printPreviewDialog = new PrintPreviewDialog();
+printPreviewDialog.Document = printDocument;
+printPreviewDialog.Height = 600;
+printPreviewDialog.Width = 800;
+printPreviewDialog.ShowDialog();
+}
+catch(Exception e)
+{
+throw new Exception("Printer error." + e.Message);
+}
+
+}
+} 
+}
+</pre>
+
+
+<p><br />需要打印表格线条及分页的朋友，可以看一下下面这篇文章：<br /> <br /></p>
+
+
+<div><strong><font face="Verdana" size="4"><a title="How to Print a DataGrid in C# and .NET" style="COLOR: #0000ff" href="http://www.c-sharpcorner.com/Graphics/DataGridPrinterMG.asp" target="_blank"><strong><font face="Verdana" size="4">How to Print a DataGrid in C# and .NET</font> </strong></a><br /><br /></font><br /><div></div>
+<div>
+<img style="WIDTH: 672px; HEIGHT: 352px" height="245" src="http://huobazi.github.com/images/hbz_images/e01387bd-8f4f-4638-8131-226ce244e723.jpg50" width="510"> </div>
+<div> </div>
+<div></div>
+<p></p></strong></div>
+
+
+<p></p>
+]]></content>
+  </entry>
+  
+</feed>
