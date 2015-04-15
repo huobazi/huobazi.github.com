@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netbeans &middot; 武眉博</title>
+
+    <meta name="description" content="Marble&#39;s blog">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="huobazi" />
+    <meta name="twitter:title" content="Netbeans &middot; 武眉博">
+    <meta name="twitter:description" content="Marble&#39;s blog">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Netbeans &middot; 武眉博">
+    <meta property="og:description" content="Marble&#39;s blog">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    
+    
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+    
+
+    <link rel="stylesheet" href="http://huobazi.aspxboy.com//css/all.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <h1 class="brand-title"><a href="http://huobazi.aspxboy.com/">武眉博</a></h1>
+            <h2 class="brand-tagline"> Marble&#39;s blog </h2>
+        </hgroup>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://twitter.com/huobazi"><i class="fa fa-twitter"></i> Twitter</a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://github.com/huobazi "><i class="fa fa-github-alt"></i> github</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</div>
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                
+                <h1 class="content-subhead">07 Jan 2010, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2010/01/07/349/" class="post-title">把你的netbeans变成英文版</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-它山之石" href="http://huobazi.aspxboy.com//tags/%E5%AE%83%E5%B1%B1%E4%B9%8B%E7%9F%B3">它山之石</a><a class="post-category post-category-奇技淫巧" href="http://huobazi.aspxboy.com//tags/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7">奇技淫巧</a><a class="post-category post-category-netbeans" href="http://huobazi.aspxboy.com//tags/netbeans">netbeans</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>呵呵其实很简单，装完后再你使用的快捷方式内增加</p>
+<p>--locale en:us就可以了，比如我的快捷方式里的设置为：</p>
+<p>"D:\Program Files\NetBeans 6.8\bin\netbeans.exe" --locale en:us</p>
+<p>ok 英文了.</p>
+<p>按照这个方法你可以为自己定制很多套语言版本的netbeans，但只要一份安装。</p>              
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">19 Aug 2009, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2009/08/19/netbeans-utf8-settings/" class="post-title">调整netbeans6.5设置使之默认使用utf-8存储文件</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-LAMP" href="http://huobazi.aspxboy.com//tags/lamp">LAMP</a><a class="post-category post-category-netbeans" href="http://huobazi.aspxboy.com//tags/netbeans">netbeans</a><a class="post-category post-category-utf-8" href="http://huobazi.aspxboy.com//tags/utf-8">utf-8</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p>netbeans默认使用ANSI存储的，我们一般希望它采用utf-8来存储，按照如下方法可以实现这个要求</p>
+<p>1)  找到你的Netbeans安装目录下的etc文件夹,如D:\Program Files\NetBeans 6.5\etc<br />2)  用文本编辑器打开netbeans.conf<br />3)  找到netbeans_default_options这一句(注意#号开头的行的是注释)<br />4)  在最后面加上一个空格,再加入-J-Dfile.encoding=UTF-8</p>
+<p>如我现在的设置:</p>
+<p></p>
+<pre># ${HOME} will be replaced by JVM user.home system property
+netbeans_default_userdir=&ldquo;${HOME}/.netbeans/6.5&rdquo;</p>
+
+<p># Options used by NetBeans launcher by default, can be overridden by explicit
+# command line switches:
+netbeans_default_options=&ldquo;-J-client -J-Xverify:none -J-Xss2m -J-Xms32m -J-XX:PermSize=32m -J-XX:MaxPermSize=200m -J-Dapple.laf.useScreenMenuBar=true -J-Dsun.java2d.noddraw=true -J-Dfile.encoding=UTF-8&rdquo;
+# Note that a default -Xmx is selected for you automatically.
+# You can find this value in var/log/messages.log file in your userdir.
+# The automatically selected value can be overridden by specifying -J-Xmx here
+# or on the command line.</p>
+
+<p># If you specify the heap size (-Xmx) explicitely, you may also want to enable
+# Concurrent Mark &amp; Sweep garbage collector. In such case add the following
+# options to the netbeans_default_options:
+# -J-XX:+UseConcMarkSweepGC -J-XX:+CMSClassUnloadingEnabled -J-XX:+CMSPermGenSweepingEnabled
+# (see <a href="http://wiki.netbeans.org/wiki/view/FaqGCPauses">http://wiki.netbeans.org/wiki/view/FaqGCPauses</a>)</p>
+
+<p># Default location of JDK, can be overridden by using &ndash;jdkhome &lt;dir&gt;:
+netbeans_jdkhome=&ldquo;C:\Program Files\Java\jre6&rdquo;</p>
+
+<p># Additional module clusters, using ${path.separator} (&lsquo;;&lsquo; on Windows or &rsquo;:&lsquo; on Unix):
+#netbeans_extraclusters=&ldquo;/absolute/path/to/cluster1:/absolute/path/to/cluster2&rdquo;</p>
+
+<p># If you have some problems with detect of proxy settings, you may want to enable
+# detect the proxy settings provided by JDK5 or higher.
+# In such case add -J-Djava.net.useSystemProxies=true to the netbeans_default_options.</pre></p>
+
+                    </div>
+                </section>
+                
+            </div>
+            
+
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a></li>
+        </ul>
+    </div>
+</div>
+<script src="http://huobazi.aspxboy.com//js/all.min.js"></script>
+        </div>
+    </div>
+</div>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-56321-3', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

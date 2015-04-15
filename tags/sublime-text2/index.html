@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sublime Text2 &middot; 武眉博</title>
+
+    <meta name="description" content="Marble&#39;s blog">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="huobazi" />
+    <meta name="twitter:title" content="Sublime Text2 &middot; 武眉博">
+    <meta name="twitter:description" content="Marble&#39;s blog">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Sublime Text2 &middot; 武眉博">
+    <meta property="og:description" content="Marble&#39;s blog">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    
+    
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+    
+
+    <link rel="stylesheet" href="http://huobazi.aspxboy.com//css/all.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <h1 class="brand-title"><a href="http://huobazi.aspxboy.com/">武眉博</a></h1>
+            <h2 class="brand-tagline"> Marble&#39;s blog </h2>
+        </hgroup>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://twitter.com/huobazi"><i class="fa fa-twitter"></i> Twitter</a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://github.com/huobazi "><i class="fa fa-github-alt"></i> github</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</div>
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                
+                <h1 class="content-subhead">04 Feb 2012, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2012/02/04/ubuntu-sublime-text-chinese/" class="post-title">Ubuntu下设置 Sublime Text 2 显示中文 &amp;&amp; 输入中文</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-闲言碎语" href="http://huobazi.aspxboy.com//tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD">闲言碎语</a><a class="post-category post-category-奇技淫巧" href="http://huobazi.aspxboy.com//tags/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7">奇技淫巧</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a><a class="post-category post-category-Ubuntu" href="http://huobazi.aspxboy.com//tags/ubuntu">Ubuntu</a><a class="post-category post-category-Sublime Text2" href="http://huobazi.aspxboy.com//tags/sublime-text2">Sublime Text2</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>Sublime text 2在mac os 下用的很舒服，今天尝试在ubuntu下使用一下，发现汉字显示不了，</p>
+<p>后来找到方法：</p>
+<p>菜单栏 -&gt; Preferences -&gt; File Settings - User，在配置文件中增加：</p>
+<p></p>
+<p>// Settings in here override those in "Default/Base File.sublime-settings", and<br />// are overridden in turn by file type specific settings. Place your settings<br />// here, to ensure they're preserved when upgrading.<br />{<br />    "font_face": "WenQuanYi Micro Hei Mono"<br />}<br />就OK了，其中文泉驿是著名的开源字体 <a title="http://wenq.org/" href="http://wenq.org/" target="_blank">http://wenq.org/</a></p>
+<p>然后我们来解决中文输入的问题</p>
+<p>sudo apt-get install scim</p>
+<p>sudo apt-get install scim-pinyin</p>
+<p>在“系统－首选项－scim设置里“</p>
+<p>scim设置－&gt;全局设置－&gt;将预编辑字符串嵌入到客户端中  勾去掉<br />scim设置-&gt;gtk-&gt;嵌入式候选词标 勾去掉</p>
+<p>下来 在“系统－语言支持”里面选上“scim-bridge”就可以了,记得这些修改完要注销重新登录进来哦。</p>
+<p>或者 ,打开终端,输入 pkill scim,然后输入 scim -d，如果不起作用，那还是建议你注销一下</p>                
+
+                    </div>
+                </section>
+                
+            </div>
+            
+
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a></li>
+        </ul>
+    </div>
+</div>
+<script src="http://huobazi.aspxboy.com//js/all.min.js"></script>
+        </div>
+    </div>
+</div>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-56321-3', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

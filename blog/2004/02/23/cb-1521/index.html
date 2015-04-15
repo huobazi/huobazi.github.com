@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用Asp.Net抓取web页面 &middot; 武眉博</title>
+
+    <meta name="description" content="">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="huobazi" />
+    <meta name="twitter:title" content="用Asp.Net抓取web页面 &middot; 武眉博">
+    <meta name="twitter:description" content="">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="用Asp.Net抓取web页面 &middot; 武眉博">
+    <meta property="og:description" content="">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    
+    
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+    
+
+    <link rel="stylesheet" href="http://huobazi.aspxboy.com//css/all.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <h1 class="brand-title"><a href="http://huobazi.aspxboy.com/">武眉博</a></h1>
+            <h2 class="brand-tagline"> Marble&#39;s blog </h2>
+        </hgroup>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://twitter.com/huobazi"><i class="fa fa-twitter"></i> Twitter</a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://github.com/huobazi "><i class="fa fa-github-alt"></i> github</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</div>
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                <h1 class="content-subhead">23 Feb 2004, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2004/02/23/cb-1521/" class="post-title">用Asp.Net抓取web页面</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-share">
+                        <div class="post-share-links">
+                            <h4 style="">Share</h4>
+                            <a href="#" data-type="facebook" data-url="http://huobazi.aspxboy.com/blog/2004/02/23/cb-1521/" data-title="用Asp.Net抓取web页面" data-description="" data-media="" class="prettySocial fa fa-facebook"></a>
+                            <a href="#" data-type="googleplus" data-url="http://huobazi.aspxboy.com/blog/2004/02/23/cb-1521/" data-description="" class="prettySocial fa fa-google-plus"></a>
+                            
+                            <a href="#" data-type="twitter" data-url="http://huobazi.aspxboy.com/blog/2004/02/23/cb-1521/" data-description="" data-via="huobazi" class="prettySocial fa fa-twitter"></a>
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="post-description">
+                        <p><span style="color: #990000;">演示:<br /><a href="http://www.aspxboy.com/demo/286.aspx" target="_blank">http://www.aspxboy.com/demo/286.aspx</a></span></p>
+<p><span style="color: #990000;"><br />代码高亮显示(HightLight in <a href="http://www.aspxboy.com/scv/">Source Code Viewer</a>)</span></p>
+<p><span style="color: #990000;"><br /><a href="http://www.aspxboy.com/code/default.aspx/S7s2zPJbeI9PJA/OKHpAVwVaUEhf02EgEOgeB3Yd5Z7fLL3ZNgdv7XIqertUOYm9kbQ62LshbJBwvWPBBYa4EyVMhvMhyEDPH8chU5ornn8=.Aspx" target="_blank">http://www.aspxboy.com/code/default.aspx/S7s2zPJbeI9PJA/OK<br />HpAVwVaUEhf02EgEOgeB3Yd5Z7fLL3ZNgdv7XIqertUOYm9kbQ62<br />LshbJBwvWPBBYa4EyVMhvMhyEDPH8chU5ornn8=.Aspx</a></span><br /><span style="color: #990000;">&lt;html&gt;<br />&lt;head&gt;<br /> </span><br /><span style="color: #990000;">&lt;SCRIPT runat="server"&gt;<br />  void Page_Load(Object sender, EventArgs e) {</span><br /><span style="color: #990000;">    WebRequest req = WebRequest.Create("<a href="http://www.im286.com/index.php" target="_blank">http://www.im286.com/index.php</a>");<br /> string urliii="src="; //图片使用绝对连接<br /> urliii+="<a href="http://www.im286.com/" target="_blank">http://www.im286.com/</a>";<br />    try {<br />        WebResponse result = req.GetResponse();<br />        Stream ReceiveStream = result.GetResponseStream();</span><br /><span style="color: #990000;">        Byte[] read = new Byte[512];<br />        int bytes = ReceiveStream.Read(read, 0, 512);</span><br /><span style="color: #990000;">        lblHTML.Text = "";<br />        while (bytes &gt; 0)<br />        {</span><br /><span style="color: #990000;">          // 注意：<br />          // 下面假定响应使用 gb2312 作为编码方式。<br />          // 如果内容以 ANSI 代码页形式（例如，932）发送，则使用类似下面的语句：<br />          //Encoding encode = System.Text.Encoding.GetEncoding("shift-jis");<br />          Encoding encode = System.Text.Encoding.GetEncoding("gb2312");<br />          lblHTML.Text = lblHTML.Text + encode.GetString(read, 0, bytes);<br />   <br />          bytes = ReceiveStream.Read(read, 0, 512);<br />   <br />        }<br />    } catch(Exception) {<br />        lblHTML.Text = "检索页时出错";<br />    }<br /> lblHTML.Text = lblHTML.Text.Replace("src=",""+urliii+"");<br /> lblHTML.Text = lblHTML.Text.Replace("\"","");<br />  }<br />&lt;/SCRIPT&gt;<br />&lt;/head&gt;</span><br /><span style="color: #990000;">&lt;body&gt;</span><br /><span style="color: #990000;">  &lt;form method="post" action="Webrequest.aspx" runat="server"&gt;<br />   <br />    &lt;asp:Label runat=server ID="lblHTML" Rows="30" Cols="80" EnableViewState="false"  Wrap="True"&gt;&lt;/asp:Label&gt;<br />  &lt;/form&gt;</span><br /><span style="color: #990000;">&lt;/body&gt;<br />&lt;/html&gt;</span></p>
+<p>&lt;%@ Page language="C#" Trace="True" %&gt;<br />&lt;%@ Import Namespace="System.Net" %&gt;<br />&lt;%@ Import Namespace="System.IO" %&gt;</p>              
+
+                    </div>
+                    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'huobaziblog';
+    var disqus_identifier = 'http:\/\/huobazi.aspxboy.com\/blog\/2004\/02\/23\/cb-1521\/';
+    var disqus_title = '用Asp.Net抓取web页面';
+    var disqus_url = 'http:\/\/huobazi.aspxboy.com\/blog\/2004\/02\/23\/cb-1521\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                </section>
+            </div>
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a></li>
+        </ul>
+    </div>
+</div>
+<script src="http://huobazi.aspxboy.com//js/all.min.js"></script>
+        </div>
+    </div>
+</div>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-56321-3', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

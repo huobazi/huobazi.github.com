@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>代码片段 &middot; 武眉博</title>
+
+    <meta name="description" content="Marble&#39;s blog">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="huobazi" />
+    <meta name="twitter:title" content="代码片段 &middot; 武眉博">
+    <meta name="twitter:description" content="Marble&#39;s blog">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="代码片段 &middot; 武眉博">
+    <meta property="og:description" content="Marble&#39;s blog">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    
+    
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+    
+
+    <link rel="stylesheet" href="http://huobazi.aspxboy.com//css/all.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <h1 class="brand-title"><a href="http://huobazi.aspxboy.com/">武眉博</a></h1>
+            <h2 class="brand-tagline"> Marble&#39;s blog </h2>
+        </hgroup>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://twitter.com/huobazi"><i class="fa fa-twitter"></i> Twitter</a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://github.com/huobazi "><i class="fa fa-github-alt"></i> github</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</div>
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                
+                <h1 class="content-subhead">25 Feb 2012, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2012/02/25/hg232/" class="post-title">HG232破解一例</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-闲言碎语" href="http://huobazi.aspxboy.com//tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD">闲言碎语</a><a class="post-category post-category-推荐阅读" href="http://huobazi.aspxboy.com//tags/%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB">推荐阅读</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a><a class="post-category post-category-HG232" href="http://huobazi.aspxboy.com//tags/hg232">HG232</a><a class="post-category post-category-HUAWEI" href="http://huobazi.aspxboy.com//tags/huawei">HUAWEI</a><a class="post-category post-category-电信" href="http://huobazi.aspxboy.com//tags/%E7%94%B5%E4%BF%A1">电信</a><a class="post-category post-category-IPTV" href="http://huobazi.aspxboy.com//tags/iptv">IPTV</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>###0. 默认超级账户</p>
+
+<p>如果电信没有改过你的猫账户，可以尝试使用下面的信息登陆，如果不可以在进入后面的步骤1和2破解
+<code>帐号： telecomadmin 密码：nE7jA%5m (注意大小写)</code></p>
+
+<p>###1. 下载配置文件</p>
+
+<p>猫上插入U盘，下面两种方法都可以，您挑一种吧。</p>
+
+<p>#####1.1 手工操作&mdash;-乐趣</p>
+
+<p>用猫后面印刷的普通用户useradmin登陆，这个用户登陆进去什么高级全选都木有，但是表着急，我这么干的，浏览器用firefox，如果木有就去下载，然后装上firebug，去看隐藏的html元素吧，把样式表的disply:none;都禁止掉，什么 备份配置文件、启动从U盘加载配置、回复出厂值、日志等等都出来了吧，插入U盘，点击备份按钮，文件就下载下来了。</p>
+
+<p>#####1.2 连接下载&mdash;-直接</p>
+
+<p>同时通过分析html和javascript代码，我直接把下载地址找到了，如果你不想或者木有firefox&amp;&amp;firebug，那就直接访问：
+<a href="http://192.168.1.1/html/ehomeclient/cfgUSBRestore.cgi?coverusbpath=usb1_1">http://192.168.1.1/html/ehomeclient/cfgUSBRestore.cgi?coverusbpath=usb1_1</a> 这是firebug分析抓包后得到的地址，嘿嘿。
+配置文件就能成功被备份出了，在U盘根目录生成的e8_Config_backup文件夹里ctce8_HG232.cfg。</p>
+
+<p>###2. 解密配置文件</p>
+
+<p>网上有现成的编译好的工具可以直接用，不过作为技术宅男，当然要做点有挑战性的了，我弄了俩，一个javascript写的，一个ruby写的，开源滴，您用着放心哦</p>
+
+<p>#####2.1 无ruby环境</p>
+
+<p>将代码库里的decrypt.html另存到本地，然后用浏览器打开，在Source里粘贴用ctce8_HG232.cfg文件的内容，
+点击解密按钮,就可进行解密，加密同理。</p>
+
+<p>#####2.2 有ruby环境</p>
+
+<p>如果有ruby运行环境，则可以使用代码库里的decrypt.rb另存到本地来，把要破解或者加密的文件放入相同目录,在命令行运行 ruby decrypt.rb 按照提示做就可以了</p>
+
+<p>#####2.3 超级管理员密码
+到文本编辑软件打开破解后的文件，查找telecomadmin，找到
+    <X_ATP_UserInfoInstance InstanceID="1" Username="telecomadmin" Userpassword="telecomadmin******" Userlevel="2" Busy="0" LoginIP=""/>
+Userpassword里面的就是超级管理员的密码了。一般是telecomadmin加串数字。</p>
+
+<p>###3. 设置</p>
+
+<p>后面的情况就大同小异了，网上很多介绍，开路由，，自动拨号，开无线，一堆一堆的教程，另外有些设置在管理平台是没有的，比如下面的ftp和telnet设置，如果又必要使用这些相功能，修改配置文件，加密后，登陆后台后启用从usb恢复设备这个功能，然后把配置文件夹自己修改后，再恢复回去，就可以了。
+    <X_CT-COM_ServiceManage TelnetEnable="0" TelnetUserName="!!Huawei" TelnetPassword="@HuaweiHgw" TelnetPort="23" WebWanAccessEnable="0" FtpEnable="1" FtpUserName="ftp" FtpPassword="ftp" FtpPort="21" FtpPath="/mnt"/></p>
+
+<p>###4. 代码</p>
+
+<p>本文提及的代码可以在<a href="https://github.com/huobazi/hg232">https://github.com/huobazi/hg232</a>下载到</p>
+
+<p>###5.  其他</p>
+
+<p>4个RJ45口理论上都可以设置成接电脑或者itv输出，并不局限于写了itv的那个口。另外，也可以增加一个itv无线网络，在你的机顶盒上加个无线网卡，机顶盒拨入此无线网络，这样就不用拉一堆堆的线了，很适用于前期没有做好布线设计的朋友。</p>
+
+<p>itv 不选择 无线的话 要选VLAN透传，选无线是VLAN修改</p>
+
+<p>另外，网上有现成的改好的配置文件下载，<a href="http://email2me.blog.163.com/blog/static/34347033201101094128402/">http://email2me.blog.163.com/blog/static/34347033201101094128402/</a></p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">13 Feb 2012, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2012/02/13/ios-uiactionsheetdelegate/" class="post-title">iOS通过UIActionSheetDelegate来实现警告的方法</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a><a class="post-category post-category-iOS" href="http://huobazi.aspxboy.com//tags/ios">iOS</a><a class="post-category post-category-iPhone" href="http://huobazi.aspxboy.com//tags/iphone">iPhone</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p>有时候需要用户确认一些操作，比如退出，删除数据等等，用UIActionSheetDelegate实现比较友好，实现也很简单，controller实现UIActionSheetDelegate协议就可以了，示例如下:</p>
+<p></p>
+<div class="source" style="font-family: '[object HTMLOptionElement]', Consolas, 'Lucida Console', 'Courier New'; color: #e0eee0; background-color: #000000; ">
+<span style="color: #7c7268; ">01</span> <span style="color: #8db6cd; ">#pragma mark-</span><br /><span style="color: #7c7268; ">02</span> <span style="color: #8db6cd; ">#pragma mark UIActionSheetDelegate with logOff</span><br /><span style="color: #7c7268; ">03</span><br /><span style="color: #7c7268; ">04</span> <span style="color: #e0eee0; ">-</span> (<span style="color: #add8e6; ">void</span>) <span style="color: #e0eee0; ">onLogOffButtonClick:</span>(<span style="color: #add8e6; ">id</span>)<span style="color: #e0eee0; ">sender</span><span style="color: #e0eee0; ">{</span><br /><span style="color: #f810b0; ">05</span>     <span style="color: #e0eee0; ">UIActionSheet</span> <span style="color: #e0eee0; "><em></span><span style="color: #e0eee0; ">actionSheet</span> <span style="color: #e0eee0; ">=</span> <span style="color: #e0eee0; ">[[</span><span style="color: #e0eee0; ">UIActionSheet</span> <span style="color: #e0eee0; ">alloc</span><span style="color: #e0eee0; ">]</span> <span style="color: #e0eee0; ">initWithTitle:</span><span style="color: #80a0ff; ">@&ldquo;确认要退出登录吗？&rdquo;</span> <span style="color: #e0eee0; ">delegate:</span><span style="color: #e0eee0; ">self</span> <span style="color: #e0eee0; ">cancelButtonTitle:</span><span style="color: #80a0ff; ">@&ldquo;不退出&rdquo;</span> <span style="color: #e0eee0; ">destructiveButtonTitle:</span><span style="color: #80a0ff; ">@&ldquo;退出&rdquo;</span> <span style="color: #e0eee0; ">otherButtonTitles:</span><span style="color: #4eee94; ">nil</span><span style="color: #e0eee0; ">,</span> <span style="color: #4eee94; ">nil</span><span style="color: #e0eee0; ">];</span><br /><span style="color: #7c7268; ">06</span>    <br /><span style="color: #7c7268; ">07</span>     <span style="color: #e0eee0; ">[</span><span style="color: #e0eee0; ">actionSheet</span> <span style="color: #e0eee0; ">showFromTabBar:</span><span style="color: #e0eee0; ">self</span><span style="color: #e0eee0; ">.</span><span style="color: #e0eee0; ">navigationController</span><span style="color: #e0eee0; ">.</span><span style="color: #e0eee0; ">tabBarController</span><span style="color: #e0eee0; ">.</span><span style="color: #e0eee0; ">tabBar</span><span style="color: #e0eee0; ">];</span><br /><span style="color: #7c7268; ">08</span>     XX<span style="color: #e0eee0; ">_RELEASE_SAFELY</span>(<span style="color: #e0eee0; ">actionSheet</span>);<br /><span style="color: #7c7268; ">09</span> <span style="color: #e0eee0; ">}</span><br /><span style="color: #f810b0; ">10</span> <span style="color: #e0eee0; ">-</span> (<span style="color: #add8e6; ">void</span>)<span style="color: #e0eee0; ">logOff</span><span style="color: #e0eee0; ">{</span><br /><span style="color: #7c7268; ">11</span><br /><span style="color: #7c7268; ">12</span>     <span style="color: #7c7268; ">//do logoff</span><br /><span style="color: #7c7268; ">13</span>    <br /><span style="color: #7c7268; ">14</span>     <span style="color: #e0eee0; ">[</span><span style="color: #e0eee0; ">self</span><span style="color: #e0eee0; ">.</span><span style="color: #e0eee0; ">navigationController</span> <span style="color: #e0eee0; ">popViewControllerAnimated:</span><span style="color: #e0eee0; ">YES</span><span style="color: #e0eee0; ">];</span><br /><span style="color: #f810b0; ">15</span> <span style="color: #e0eee0; ">}</span><br /><span style="color: #7c7268; ">16</span><br /><span style="color: #7c7268; ">17</span> <span style="color: #e0eee0; ">-</span> (<span style="color: #add8e6; ">void</span>)<span style="color: #e0eee0; ">actionSheet:</span>(<span style="color: #e0eee0; ">UIActionSheet</span> <span style="color: #e0eee0; "></em></span>)<span style="color: #e0eee0; ">actionSheet</span> <span style="color: #e0eee0; ">didDismissWithButtonIndex:</span>(<span style="color: #e0eee0; ">NSInteger</span>)<span style="color: #e0eee0; ">buttonIndex</span>; <span style="color: #e0eee0; ">{</span><br /><span style="color: #7c7268; ">18</span>     <span style="color: #90ee90; ">switch</span> (<span style="color: #e0eee0; ">buttonIndex</span>) <span style="color: #e0eee0; ">{</span><br /><span style="color: #7c7268; ">19</span>         <span style="color: #90ee90; ">case</span> <span style="color: #00ffff; ">0</span><span style="color: #e0eee0; ">:</span><br /><span style="color: #f810b0; ">20</span>             <span style="color: #e0eee0; ">[</span><span style="color: #e0eee0; ">self</span> <span style="color: #e0eee0; ">logOff</span><span style="color: #e0eee0; ">];</span><br /><span style="color: #7c7268; ">21</span>             <span style="color: #90ee90; ">break</span>;<br /><span style="color: #7c7268; ">22</span>         <span style="color: #90ee90; ">case</span> <span style="color: #00ffff; ">1</span><span style="color: #e0eee0; ">:</span><br /><span style="color: #7c7268; ">23</span>             <span style="color: #e0eee0; ">[</span><span style="color: #e0eee0; ">self</span><span style="color: #e0eee0; ">.</span><span style="color: #e0eee0; ">tableView</span> <span style="color: #e0eee0; ">deselectRowAtIndexPath:</span><span style="color: #e0eee0; ">[</span><span style="color: #e0eee0; ">self</span><span style="color: #e0eee0; ">.</span><span style="color: #e0eee0; ">tableView</span> <span style="color: #e0eee0; ">indexPathForSelectedRow</span><span style="color: #e0eee0; ">]</span> <span style="color: #e0eee0; ">animated:</span><span style="color: #e0eee0; ">YES</span><span style="color: #e0eee0; ">];</span><br /><span style="color: #7c7268; ">24</span>             <span style="color: #90ee90; ">break</span>;<br /><span style="color: #f810b0; ">25</span>         <span style="color: #90ee90; ">default</span><span style="color: #e0eee0; ">:</span><br /><span style="color: #7c7268; ">26</span>             <span style="color: #90ee90; ">break</span>;<br /><span style="color: #7c7268; ">27</span>     <span style="color: #e0eee0; ">}</span><br /><span style="color: #7c7268; ">28</span> <span style="color: #e0eee0; ">}</span>
+</div></p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">04 Feb 2012, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2012/02/04/ubuntu-sublime-text-chinese/" class="post-title">Ubuntu下设置 Sublime Text 2 显示中文 &amp;&amp; 输入中文</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-闲言碎语" href="http://huobazi.aspxboy.com//tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD">闲言碎语</a><a class="post-category post-category-奇技淫巧" href="http://huobazi.aspxboy.com//tags/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7">奇技淫巧</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a><a class="post-category post-category-Ubuntu" href="http://huobazi.aspxboy.com//tags/ubuntu">Ubuntu</a><a class="post-category post-category-Sublime Text2" href="http://huobazi.aspxboy.com//tags/sublime-text2">Sublime Text2</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>Sublime text 2在mac os 下用的很舒服，今天尝试在ubuntu下使用一下，发现汉字显示不了，</p>
+<p>后来找到方法：</p>
+<p>菜单栏 -&gt; Preferences -&gt; File Settings - User，在配置文件中增加：</p>
+<p></p>
+<p>// Settings in here override those in "Default/Base File.sublime-settings", and<br />// are overridden in turn by file type specific settings. Place your settings<br />// here, to ensure they're preserved when upgrading.<br />{<br />    "font_face": "WenQuanYi Micro Hei Mono"<br />}<br />就OK了，其中文泉驿是著名的开源字体 <a title="http://wenq.org/" href="http://wenq.org/" target="_blank">http://wenq.org/</a></p>
+<p>然后我们来解决中文输入的问题</p>
+<p>sudo apt-get install scim</p>
+<p>sudo apt-get install scim-pinyin</p>
+<p>在“系统－首选项－scim设置里“</p>
+<p>scim设置－&gt;全局设置－&gt;将预编辑字符串嵌入到客户端中  勾去掉<br />scim设置-&gt;gtk-&gt;嵌入式候选词标 勾去掉</p>
+<p>下来 在“系统－语言支持”里面选上“scim-bridge”就可以了,记得这些修改完要注销重新登录进来哦。</p>
+<p>或者 ,打开终端,输入 pkill scim,然后输入 scim -d，如果不起作用，那还是建议你注销一下</p>                
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">09 Dec 2011, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2011/12/09/ios-hide-keyboard-when-touch/" class="post-title">How to,在iOS中点击文本框以外区域，隐藏键盘</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-闲言碎语" href="http://huobazi.aspxboy.com//tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD">闲言碎语</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a><a class="post-category post-category-iOS" href="http://huobazi.aspxboy.com//tags/ios">iOS</a><a class="post-category post-category-iPhone" href="http://huobazi.aspxboy.com//tags/iphone">iPhone</a><a class="post-category post-category-键盘" href="http://huobazi.aspxboy.com//tags/%E9%94%AE%E7%9B%98">键盘</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>当点击文本框以外部分时，隐藏键盘，实现很简单，加个Category就可以了，代码如下：</p>
+<p></p>
+<div class="source" style="font-family: '[object HTMLOptionElement]', Consolas, 'Lucida Console', 'Courier New'; color: #e6e1dc; background-color: #111111; ">
+<p><span style="color: #cc7833; font-style: italic; ">#import &lt;UIKit/UIKit.h&gt;</span><br /><span style="color: #cc7833; ">@interface</span> <span style="color: #e6e1dc; ">UITextField</span> <span style="color: #e6e1dc; ">(HideKeyBoard)</span><br /><span style="color: #e6e1dc; ">-</span>(<span style="color: #da4939; ">void</span>)<span style="color: #e6e1dc; ">hideKeyBoard:</span>(<span style="color: #e6e1dc; ">UIView</span> <span style="color: #e6e1dc; ">*</span>)<span style="color: #e6e1dc; ">view</span>;<br /><span style="color: #cc7833; ">@end</span></p>
+<p><span style="color: #cc7833; font-style: italic; ">#import "UITextField+HideKeyBoard.h"</span></p>
+<p><span style="color: #cc7833; ">@implementation</span> <span style="color: #e6e1dc; ">UITextField</span> <span style="color: #e6e1dc; ">(HideKeyBoard)</span><br /><span style="color: #e6e1dc; ">-</span> (<span style="color: #da4939; ">void</span>) <span style="color: #e6e1dc; ">hideKeyBoard:</span>(<span style="color: #e6e1dc; ">UIView</span><span style="color: #e6e1dc; ">*</span>)<span style="color: #e6e1dc; ">view</span><span style="color: #e6e1dc; ">{</span><br />    <span style="color: #e6e1dc; ">UITapGestureRecognizer</span> <span style="color: #e6e1dc; ">*</span><span style="color: #e6e1dc; ">tap</span> <span style="color: #e6e1dc; ">=</span> <span style="color: #e6e1dc; ">[[</span><span style="color: #e6e1dc; ">UITapGestureRecognizer</span> <span style="color: #e6e1dc; ">alloc</span><span style="color: #e6e1dc; ">]</span><br />                                   <span style="color: #e6e1dc; ">initWithTarget:</span><span style="color: #e6e1dc; ">self</span><br />                                   <span style="color: #e6e1dc; ">action:</span><span style="color: #cc7833; ">@selector</span>(<span style="color: #e6e1dc; ">doHideKeyBoard</span><span style="color: #e6e1dc; ">)];</span><br />   <br />    <span style="color: #e6e1dc; ">tap</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">numberOfTapsRequired</span> <span style="color: #e6e1dc; ">=</span> <span style="color: #a5c261; ">1</span>;<br />    <span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">view</span>  <span style="color: #e6e1dc; ">addGestureRecognizer:</span> <span style="color: #e6e1dc; ">tap</span><span style="color: #e6e1dc; ">];</span><br />    <span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">tap</span> <span style="color: #e6e1dc; ">setCancelsTouchesInView:</span><span style="color: #e6e1dc; ">NO</span><span style="color: #e6e1dc; ">];</span><br />    <span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">tap</span> <span style="color: #e6e1dc; ">release</span><span style="color: #e6e1dc; ">];</span><br /><span style="color: #e6e1dc; ">}</span></p>
+<p><span style="color: #e6e1dc; ">-</span> (<span style="color: #da4939; ">void</span>)<span style="color: #e6e1dc; ">doHideKeyBoard</span><span style="color: #e6e1dc; ">{</span><br />    <span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">self</span> <span style="color: #e6e1dc; ">resignFirstResponder</span><span style="color: #e6e1dc; ">];</span><br /><span style="color: #e6e1dc; ">}</span><br /><span style="color: #cc7833; ">@end</span></p>
+<p><span style="color: #e6e1dc; ">-</span> (<span style="color: #da4939; ">void</span>)<span style="color: #e6e1dc; ">viewDidLoad</span><br /><span style="color: #e6e1dc; ">{</span><br />    <span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">super</span> <span style="color: #e6e1dc; ">viewDidLoad</span><span style="color: #e6e1dc; ">];</span><br />    <span style="color: #bc9458; font-style: italic; ">// Do any additional setup after loading the view from its nib.</span><br />    <span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">self</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">txtInput</span> <span style="color: #e6e1dc; ">hideKeyBoard:</span><span style="color: #e6e1dc; ">self</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">view</span><span style="color: #e6e1dc; ">];</span><br /><span style="color: #e6e1dc; ">}</span></p>
+</div>
+<p>see also: <a href="https://gist.github.com/1450404">https://gist.github.com/1450404</a></p>              
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">09 Nov 2011, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/" class="post-title">AutoGenerateColumns=&#39;true&#39;的GridView如何支持htmlencode/htmldecode</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a><a class="post-category post-category-.Net其他" href="http://huobazi.aspxboy.com//tags/.net%E5%85%B6%E4%BB%96">.Net其他</a><a class="post-category post-category-奇技淫巧" href="http://huobazi.aspxboy.com//tags/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7">奇技淫巧</a><a class="post-category post-category-GridView" href="http://huobazi.aspxboy.com//tags/gridview">GridView</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a><a class="post-category post-category-HtmlEncode" href="http://huobazi.aspxboy.com//tags/htmlencode">HtmlEncode</a><a class="post-category post-category-AutoGenerateColumns" href="http://huobazi.aspxboy.com//tags/autogeneratecolumns">AutoGenerateColumns</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p>我们知道BoundField.HtmlEncode 属性可以设置一个单元格是否能够htmlencode，我今天碰到的问题是：自动生成列的GridView，表头可能是包含html的比如&lt;font color=red&gt;邮件&lt;/font&gt;，默认被htmlencode了，而我不希望这样做，所以有了如下的代码:</p>
+<p></p>
+<p> </p>
+<div class="source" style="font-family: '[object HTMLOptionElement]', Consolas, 'Lucida Console', 'Courier New'; color: #e6e1dc; background-color: #111111; ">
+<span style="color: #bc9458; font-style: italic; ">/// &lt;summary&gt;</span><br /><span style="color: #bc9458; font-style: italic; ">/// Handles the PreRender event of the gvSource control.</span><br /><span style="color: #bc9458; font-style: italic; ">/// &lt;/summary&gt;</span><br /><span style="color: #bc9458; font-style: italic; ">/// &lt;param name=&ldquo;sender&rdquo;&gt;The source of the event.&lt;/param&gt;</span><br /><span style="color: #bc9458; font-style: italic; ">/// &lt;param name=&ldquo;e&rdquo;&gt;The &lt;see cref=&ldquo;System.EventArgs&rdquo;/&gt; instance containing the event data.&lt;/param&gt;</span><br /><span style="color: #cc7833; ">protected</span> <span style="color: #cc7833; ">void</span> <span style="color: #ffc66d; ">gvSource_PreRender</span>( <span style="color: #da4939; ">object</span> <span style="color: #e6e1dc; ">sender</span> <span style="color: #e6e1dc; ">,</span> <span style="color: #e6e1dc; ">EventArgs</span> <span style="color: #e6e1dc; ">e</span> )<br /><span style="color: #e6e1dc; ">{</span><br />    <span style="color: #e6e1dc; ">GridView</span> <span style="color: #e6e1dc; ">gridView</span> <span style="color: #e6e1dc; ">=</span> <span style="color: #e6e1dc; ">sender</span> <span style="color: #cc7833; ">as</span> <span style="color: #e6e1dc; ">GridView</span>;<br />    <span style="color: #cc7833; ">if</span> ( <span style="color: #e6e1dc; ">gridView</span> <span style="color: #e6e1dc; ">!=</span> <span style="color: #cc7833; ">null</span> <span style="color: #e6e1dc; ">&amp;&amp;</span> <span style="color: #e6e1dc; ">gridView</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HeaderRow</span> <span style="color: #e6e1dc; ">!=</span> <span style="color: #cc7833; ">null</span> <span style="color: #e6e1dc; ">&amp;&amp;</span> <span style="color: #e6e1dc; ">gridView</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HeaderRow</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Cells</span> <span style="color: #e6e1dc; ">!=</span> <span style="color: #cc7833; ">null</span> )<br />    <span style="color: #e6e1dc; ">{</span><br />        <span style="color: #cc7833; ">for</span> ( <span style="color: #da4939; ">int</span> <span style="color: #e6e1dc; ">j</span> <span style="color: #e6e1dc; ">=</span> <span style="color: #a5c261; ">0</span> ; <span style="color: #e6e1dc; ">j</span> <span style="color: #e6e1dc; ">&lt;</span> <span style="color: #e6e1dc; ">gridView</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HeaderRow</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Cells</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Count</span> ; <span style="color: #e6e1dc; ">j</span><span style="color: #e6e1dc; ">++</span> )<br />        <span style="color: #e6e1dc; ">{</span><br />            <span style="color: #e6e1dc; ">gridView</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HeaderRow</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Cells</span><span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">j</span><span style="color: #e6e1dc; ">].</span><span style="color: #e6e1dc; ">Text</span> <span style="color: #e6e1dc; ">=</span> <span style="color: #e6e1dc; ">System</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Web</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HttpUtility</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HtmlDecode</span>( <span style="color: #e6e1dc; ">gridView</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HeaderRow</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Cells</span><span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">j</span><span style="color: #e6e1dc; ">].</span><span style="color: #e6e1dc; ">Text</span> );<br />        <span style="color: #e6e1dc; ">}</span><br />    <span style="color: #e6e1dc; ">}</span><br /><span style="color: #e6e1dc; ">}</span>
+</div></p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">22 Jun 2011, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2011/06/22/password-masking-in-csharp-console-application/" class="post-title">在Console下输入密码，以星号代替。</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-.Net其他" href="http://huobazi.aspxboy.com//tags/.net%E5%85%B6%E4%BB%96">.Net其他</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a><a class="post-category post-category-Console" href="http://huobazi.aspxboy.com//tags/console">Console</a><a class="post-category post-category-Password" href="http://huobazi.aspxboy.com//tags/password">Password</a><a class="post-category post-category-masking" href="http://huobazi.aspxboy.com//tags/masking">masking</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>如何在Console下输入密码，像*unix系统下那样不显示，或者显示星号，如下代码经过测试：</p>
+<p></p>
+<div class="source" style="font-family: '[object HTMLOptionElement]', Consolas, 'Lucida Console', 'Courier New'; color: #ffffff; background-color: #333333; ">
+<p><span style="color: #87ceeb; ">/// &lt;summary&gt;</span><br /><span style="color: #87ceeb; ">/// Gets the console secure password.</span><br /><span style="color: #87ceeb; ">/// &lt;/summary&gt;</span><br /><span style="color: #87ceeb; ">/// &lt;returns&gt;&lt;/returns&gt;</span><br /><span style="color: #f0e68c; ">private</span> <span style="color: #f0e68c; ">static</span> <span style="color: #ffffff; ">SecureString</span> <span style="color: #ffffff; ">GetConsoleSecurePassword</span>( )<br /><span style="color: #ffffff; ">{</span><br />    <span style="color: #ffffff; ">SecureString</span> <span style="color: #ffffff; ">pwd</span> <span style="color: #ffffff; ">=</span> <span style="color: #f0e68c; ">new</span> <span style="color: #ffffff; ">SecureString</span>( );<br />    <span style="color: #f0e68c; ">while</span> ( <span style="color: #f0e68c; ">true</span> )<br />    <span style="color: #ffffff; ">{</span><br />        <span style="color: #ffffff; ">ConsoleKeyInfo</span> <span style="color: #ffffff; ">i</span> <span style="color: #ffffff; ">=</span> <span style="color: #ffffff; ">Console</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">ReadKey</span>( <span style="color: #f0e68c; ">true</span> );<br />        <span style="color: #f0e68c; ">if</span> ( <span style="color: #ffffff; ">i</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Key</span> <span style="color: #ffffff; ">==</span> <span style="color: #ffffff; ">ConsoleKey</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Enter</span> )<br />        <span style="color: #ffffff; ">{</span><br />            <span style="color: #f0e68c; ">break</span>;<br />        <span style="color: #ffffff; ">}</span><br />        <span style="color: #f0e68c; ">else</span> <span style="color: #ffffff; ">if</span> ( <span style="color: #ffffff; ">i</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Key</span> <span style="color: #ffffff; ">==</span> <span style="color: #ffffff; ">ConsoleKey</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Backspace</span> )<br />        <span style="color: #ffffff; ">{</span><br />            <span style="color: #ffffff; ">pwd</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">RemoveAt</span>( <span style="color: #ffffff; ">pwd</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Length</span> <span style="color: #ffffff; ">-</span> <span style="color: #ffffff; ">1</span> );<br />            <span style="color: #ffffff; ">Console</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Write</span>( <span style="color: #ffffff; ">"\b \b"</span> );<br />        <span style="color: #ffffff; ">}</span><br />        <span style="color: #f0e68c; ">else</span><br />        <span style="color: #ffffff; ">{</span><br />            <span style="color: #ffffff; ">pwd</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">AppendChar</span>( <span style="color: #ffffff; ">i</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">KeyChar</span> );<br />            <span style="color: #ffffff; ">Console</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Write</span>( <span style="color: #ffffff; ">"*"</span> );<br />        <span style="color: #ffffff; ">}</span><br />    <span style="color: #ffffff; ">}</span><br />    <span style="color: #f0e68c; ">return</span> <span style="color: #ffffff; ">pwd</span>;<br /><span style="color: #ffffff; ">}</span></p>
+<p><span style="color: #87ceeb; ">/// &lt;summary&gt;</span><br /><span style="color: #87ceeb; ">/// Gets the console password.</span><br /><span style="color: #87ceeb; ">/// &lt;/summary&gt;</span><br /><span style="color: #87ceeb; ">/// &lt;returns&gt;&lt;/returns&gt;</span><br /><span style="color: #f0e68c; ">private</span> <span style="color: #f0e68c; ">static</span> <span style="color: #bdb76b; ">string</span> <span style="color: #ffffff; ">GetConsolePassword</span>( )<br /><span style="color: #ffffff; ">{</span><br />    <span style="color: #ffffff; ">StringBuilder</span> sb <span style="color: #ffffff; ">=</span> <span style="color: #f0e68c; ">new</span> <span style="color: #ffffff; ">StringBuilder</span>( );<br />    <span style="color: #f0e68c; ">while</span> ( <span style="color: #f0e68c; ">true</span> )<br />    <span style="color: #ffffff; ">{</span><br />        <span style="color: #ffffff; ">ConsoleKeyInfo</span> <span style="color: #ffffff; ">cki</span> <span style="color: #ffffff; ">=</span> <span style="color: #ffffff; ">Console</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">ReadKey</span>( <span style="color: #f0e68c; ">true</span> );<br />        <span style="color: #f0e68c; ">if</span> ( <span style="color: #ffffff; ">cki</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Key</span> <span style="color: #ffffff; ">==</span> <span style="color: #ffffff; ">ConsoleKey</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Enter</span> )<br />        <span style="color: #ffffff; ">{</span><br />            <span style="color: #ffffff; ">Console</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">WriteLine</span>( );<br />            <span style="color: #f0e68c; ">break</span>;<br />        <span style="color: #ffffff; ">}</span></p>
+<p>        <span style="color: #f0e68c; ">if</span> ( <span style="color: #ffffff; ">cki</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Key</span> <span style="color: #ffffff; ">==</span> <span style="color: #ffffff; ">ConsoleKey</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Backspace</span> )<br />        <span style="color: #ffffff; ">{</span><br />            <span style="color: #f0e68c; ">if</span> ( sb<span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Length</span> <span style="color: #ffffff; ">&gt;</span> <span style="color: #ffffff; ">0</span> )<br />            <span style="color: #ffffff; ">{</span><br />                <span style="color: #ffffff; ">Console</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Write</span>( <span style="color: #ffffff; ">"\b\0\b"</span> );<br />                sb<span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Length</span><span style="color: #ffffff; ">--;</span><br />            <span style="color: #ffffff; ">}</span></p>
+<p>            <span style="color: #f0e68c; ">continue</span>;<br />        <span style="color: #ffffff; ">}</span></p>
+<p>        <span style="color: #ffffff; ">Console</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Write</span>( <span style="color: #ffffff; ">'*'</span> );<br />        sb<span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Append</span>( <span style="color: #ffffff; ">cki</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">KeyChar</span> );<br />    <span style="color: #ffffff; ">}</span></p>
+<p>    <span style="color: #f0e68c; ">return</span> sb<span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">ToString</span>( );<br /><span style="color: #ffffff; ">}</span></p>
+</div>
+<p>gist：<a href="https://gist.github.com/1039424">https://gist.github.com/1039424</a></p>               
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">02 Jun 2010, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2010/06/02/google-js-framework-cdn/" class="post-title">Google 给几个Javascript Framework提供的CDN地址</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-jQuery" href="http://huobazi.aspxboy.com//tags/jquery">jQuery</a><a class="post-category post-category-Javascript" href="http://huobazi.aspxboy.com//tags/javascript">Javascript</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a><a class="post-category post-category-cdn" href="http://huobazi.aspxboy.com//tags/cdn">cdn</a><a class="post-category post-category-googke" href="http://huobazi.aspxboy.com//tags/googke">googke</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p>Google 给几个Javascript Framework提供的CDN地址:</p>
+<p></p>
+<h2>jquery</h2>
+<pre>&lt;script src=&ldquo;<a href="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js&quot;&gt;&lt;/script&gt;">http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js&quot;&gt;&lt;/script&gt;</a></pre>
+<h2>jquery UI</h2>
+<pre>&lt;script src=&ldquo;<a href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js&quot;&gt;&lt;/script&gt;">http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js&quot;&gt;&lt;/script&gt;</a></pre>
+<h2>Chrome Frame</h2>
+<pre>&lt;script src=&ldquo;<a href="http://ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js&quot;&gt;&lt;/script&gt;">http://ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js&quot;&gt;&lt;/script&gt;</a></pre>
+<h2>swfobject</h2>
+<pre>&lt;script src=&ldquo;<a href="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js&quot;&gt;&lt;/script&gt;">http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js&quot;&gt;&lt;/script&gt;</a></pre>
+<h2>mootools</h2>
+<pre>&lt;script src=&ldquo;<a href="http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools-yui-compressed.js&quot;&gt;&lt;/script&gt;">http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools-yui-compressed.js&quot;&gt;&lt;/script&gt;</a></pre>
+<h2>Yahoo! UI</h2>
+<pre>&lt;script src=&ldquo;<a href="http://ajax.googleapis.com/ajax/libs/yui/2.8.1/build/yuiloader/yuiloader-min.js&quot;&gt;&lt;/script&gt;">http://ajax.googleapis.com/ajax/libs/yui/2.8.1/build/yuiloader/yuiloader-min.js&quot;&gt;&lt;/script&gt;</a></pre>
+<h2>Prototype</h2>
+<pre>&lt;script src=&ldquo;<a href="http://ajax.googleapis.com/ajax/libs/prototype/1.6.1.0/prototype.js&quot;&gt;&lt;/script&gt;">http://ajax.googleapis.com/ajax/libs/prototype/1.6.1.0/prototype.js&quot;&gt;&lt;/script&gt;</a></pre>
+<h2>Ext.JS</h2>
+<pre>&lt;script src=&ldquo;<a href="http://ajax.googleapis.com/ajax/libs/ext-core/3.1.0/ext-core.js&quot;&gt;&lt;/script&gt;">http://ajax.googleapis.com/ajax/libs/ext-core/3.1.0/ext-core.js&quot;&gt;&lt;/script&gt;</a></pre>
+<h2>Dojo</h2>
+<pre>&lt;script src=&ldquo;<a href="http://ajax.googleapis.com/ajax/libs/dojo/1.4.3/dojo/dojo.xd.js&quot;&gt;&lt;/script&gt;">http://ajax.googleapis.com/ajax/libs/dojo/1.4.3/dojo/dojo.xd.js&quot;&gt;&lt;/script&gt;</a></pre>
+<h2>Scriptaculous</h2>
+<pre>&lt;script src=&ldquo;<a href="http://ajax.googleapis.com/ajax/libs/scriptaculous/1.8.3/scriptaculous.js&quot;&gt;&lt;/script&gt;">http://ajax.googleapis.com/ajax/libs/scriptaculous/1.8.3/scriptaculous.js&quot;&gt;&lt;/script&gt;</a></pre></p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">21 Jan 2010, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2010/01/21/window-location-href-ie-request-reffer/" class="post-title">使用window.location跳转，在IE中UrlReffer不被记录</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-前端开发" href="http://huobazi.aspxboy.com//tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91">前端开发</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a><a class="post-category post-category-Javascript" href="http://huobazi.aspxboy.com//tags/javascript">Javascript</a><a class="post-category post-category-奇技淫巧" href="http://huobazi.aspxboy.com//tags/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7">奇技淫巧</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a><a class="post-category post-category-IE" href="http://huobazi.aspxboy.com//tags/ie">IE</a><a class="post-category post-category-UrlReffer" href="http://huobazi.aspxboy.com//tags/urlreffer">UrlReffer</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>使用window.location跳转，在FF中，没问题，下一页面可以取得UrlReffer，但在IE中UrlReffer不被记录</p>
+<p>真变态，</p>
+<p>让我头痛了半天，弄了个丑陋的办法做了如下实现：</p>
+<p></p>
+<div class="source" style="COLOR: #f6f3e8; FONT-FAMILY: '[object]','Consolas','Lucida Console','Courier New'; BACKGROUND-COLOR: #242424">
+<span style="COLOR: #8ac6f2">function</span> <span style="COLOR: #f6f3e8">safeRedirectToCart</span>(<span style="COLOR: #f6f3e8">url</span>) <span style="COLOR: #f6f3e8">{</span><br />    <span style="COLOR: #8ac6f2">var</span> <span style="COLOR: #f6f3e8">isIE</span> <span style="COLOR: #f6f3e8">=</span> <span style="COLOR: #f6f3e8">jQuery</span><span style="COLOR: #f6f3e8">.</span><span style="COLOR: #f6f3e8">browser</span><span style="COLOR: #f6f3e8">.</span><span style="COLOR: #f6f3e8">msie</span>;<br />    <span style="COLOR: #8ac6f2">if</span> (<span style="COLOR: #f6f3e8">!</span><span style="COLOR: #f6f3e8">isIE</span>) <span style="COLOR: #f6f3e8">{</span><br />        <span style="COLOR: #f6f3e8">window</span><span style="COLOR: #f6f3e8">.</span><span style="COLOR: #f6f3e8">location</span> <span style="COLOR: #f6f3e8">=</span> <span style="COLOR: #f6f3e8">url</span>;<br />        <span style="COLOR: #8ac6f2">return</span>;<br />    <span style="COLOR: #f6f3e8">}</span><br />    <span style="COLOR: #f6f3e8">$</span>(<span style="COLOR: #95e454; FONT-STYLE: italic">".btnCart"</span><span style="COLOR: #f6f3e8">).</span><span style="COLOR: #f6f3e8">get</span>(<span style="COLOR: #e5786d">0</span><span style="COLOR: #f6f3e8">).</span><span style="COLOR: #f6f3e8">click</span>();<br /><span style="COLOR: #f6f3e8">}</span>
+</div>
+<p>说明：在页面上render一个连接(可以用样式表控制不显示），判断如果是IE浏览器然则调用其click，嘿嘿，就这个。</p>              
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">09 Dec 2009, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2009/12/09/chang-sql-table-field-default/" class="post-title">使用SQL语句更改数据表的默认值</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a><a class="post-category post-category-SQL" href="http://huobazi.aspxboy.com//tags/sql">SQL</a><a class="post-category post-category-Server" href="http://huobazi.aspxboy.com//tags/server">Server</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p>以前还真没这么干过，都是手工去掉约束，再添加的，今天一边google一边搞啊搞啊的，最终下面这个脚本可以用了</p>
+<p></p>
+<div class="source" style='font-family: "Consolas","Lucida Console","Courier New"; color: #ffffff; background-color: #333333;'>
+<p><span style="color: #f0e68c;">alter</span> <span style="color: #f0e68c;">table</span> <span style="color: #ffffff;">dbo</span><span style="color: #ffffff;">.</span><span style="color: #ffffff;">SOTransaction</span><br />    <span style="color: #f0e68c;">alter</span> <span style="color: #f0e68c;">column</span> <span style="color: #ffffff;">UnitCostWithoutTax</span> <span style="color: #ffffff;">decimal</span>(<span style="color: #ffffff;">10</span><span style="color: #ffffff;">,</span> <span style="color: #ffffff;">2</span>)  <span style="color: #f0e68c;">not</span> <span style="color: #f0e68c;">null</span></p>
+<p><span style="color: #f0e68c;">go</span></p>
+<p><span style="color: #f0e68c;">declare</span> <span style="color: #ffffff;">@</span><span style="color: #ffffff;">name</span> <span style="color: #ffffff;">varchar</span>(<span style="color: #ffffff;">1000</span>)<br /><span style="color: #f0e68c;">declare</span> <span style="color: #ffffff;">@</span><span style="color: #ffffff;">tablename</span> <span style="color: #ffffff;">varchar</span>(<span style="color: #ffffff;">1000</span>)<br /><span style="color: #f0e68c;">declare</span> <span style="color: #ffffff;">@</span><span style="color: #ffffff;">fieldname</span> <span style="color: #ffffff;">varchar</span>(<span style="color: #ffffff;">1000</span>)</p>
+<p><span style="color: #f0e68c;">set</span> <span style="color: #ffffff;">@</span><span style="color: #ffffff;">tablename</span> <span style="color: #ffffff;">=</span> <span style="color: #ffffff;">&lsquo;SOTransaction&rsquo;</span>;<br /><span style="color: #f0e68c;">set</span> <span style="color: #ffffff;">@</span><span style="color: #ffffff;">fieldname</span> <span style="color: #ffffff;">=</span> <span style="color: #ffffff;">&lsquo;UnitCostWithoutTax&rsquo;</span>;</p>
+<p><span style="color: #f0e68c;">select</span> <span style="color: #ffffff;">@</span><span style="color: #ffffff;">name</span> <span style="color: #ffffff;">=</span> b<span style="color: #ffffff;">.</span><span style="color: #ffffff;">name</span> <span style="color: #f0e68c;">from</span> <span style="color: #ffffff;">syscolumns</span> <span style="color: #ffffff;">a</span> <span style="color: #f0e68c;">inner</span> <span style="color: #f0e68c;">join</span> <span style="color: #ffffff;">sysobjects</span> b<br />    <span style="color: #f0e68c;">on</span> b<span style="color: #ffffff;">.</span><span style="color: #ffffff;">id</span><span style="color: #ffffff;">=</span><span style="color: #ffffff;">a</span><span style="color: #ffffff;">.</span><span style="color: #ffffff;">cdefault</span><br /><span style="color: #f0e68c;">where</span><br />    <span style="color: #ffffff;">a</span><span style="color: #ffffff;">.</span><span style="color: #ffffff;">id</span><span style="color: #ffffff;">=</span> <span style="color: #ffffff;">object_id</span>(<span style="color: #ffffff;">@</span><span style="color: #ffffff;">tablename</span>)<br />    <span style="color: #f0e68c;">and</span> <span style="color: #ffffff;">a</span><span style="color: #ffffff;">.</span><span style="color: #ffffff;">name</span><span style="color: #ffffff;">=@</span><span style="color: #ffffff;">fieldname</span><br />    <span style="color: #f0e68c;">and</span> b<span style="color: #ffffff;">.</span><span style="color: #ffffff;">name</span> <span style="color: #f0e68c;">like</span> <span style="color: #ffffff;">&lsquo;DF%&rsquo;</span><br /><span style="color: #87ceeb;">&ndash;print @name</span></p>
+<p><span style="color: #f0e68c;">exec</span>(<span style="color: #ffffff;">&rsquo; alter table SOTransaction drop constraint &lsquo;</span> <span style="color: #ffffff;">+</span> <span style="color: #ffffff;">@</span><span style="color: #ffffff;">name</span>);<br /><span style="color: #f0e68c;">go</span><br /><span style="color: #f0e68c;">alter</span> <span style="color: #f0e68c;">table</span> <span style="color: #ffffff;">dbo</span><span style="color: #ffffff;">.</span><span style="color: #ffffff;">SOTransaction</span><br />    <span style="color: #f0e68c;">add</span> <span style="color: #f0e68c;">constraint</span> <span style="color: #ffffff;">DF_SOTransaction_UnitCostWithoutTax</span> <span style="color: #f0e68c;">default</span> (<span style="color: #ffffff;">0</span>) <span style="color: #f0e68c;">for</span> <span style="color: #ffffff;">UnitCostWithoutTax</span></p>
+</div></p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">24 Sep 2009, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2009/09/24/sexy-activerecord/" class="post-title">rails中的ActiveRecord真性感！</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-LAMP" href="http://huobazi.aspxboy.com//tags/lamp">LAMP</a><a class="post-category post-category-Rails" href="http://huobazi.aspxboy.com//tags/rails">Rails</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a><a class="post-category post-category-RoR" href="http://huobazi.aspxboy.com//tags/ror">RoR</a><a class="post-category post-category-ActiveRecord" href="http://huobazi.aspxboy.com//tags/activerecord">ActiveRecord</a><a class="post-category post-category-Ruby" href="http://huobazi.aspxboy.com//tags/ruby">Ruby</a><a class="post-category post-category-on" href="http://huobazi.aspxboy.com//tags/on">on</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>Rails使用的ActiveRecord真性感啊，see see吧</p>
+<div class="source" style="COLOR: #dcdccc; FONT-FAMILY: '[object]','Consolas','Lucida Console','Courier New'; BACKGROUND-COLOR: #3f3f3f">
+<span style="COLOR: #e3ceab">class</span> <span style="COLOR: #dcdccc">User</span> <span style="COLOR: #dcdccc">&lt;</span> <span style="FONT-WEIGHT: bold; COLOR: #dca3a3">ActiveRecord</span><span style="COLOR: #dcdccc">::</span><span style="FONT-WEIGHT: bold; COLOR: #dca3a3">Base</span>  <br />  <span style="COLOR: #dcdccc">has_many</span> <span style="COLOR: #cc9393">:articles</span>  <br /><span style="COLOR: #e3ceab">end</span>  <br /> <br /><span style="COLOR: #e3ceab">class</span> <span style="COLOR: #dcdccc">Article</span> <span style="COLOR: #dcdccc">&lt;</span> <span style="FONT-WEIGHT: bold; COLOR: #dca3a3">ActiveRecord</span><span style="COLOR: #dcdccc">::</span><span style="FONT-WEIGHT: bold; COLOR: #dca3a3">Base</span><br />  <span style="COLOR: #dcdccc">belongs_to</span> <span style="COLOR: #cc9393">:user</span>  <br /><span style="COLOR: #e3ceab">end</span>
+</div>
+<p>然后执行<br />&gt;&gt; <strong><span style="color: #0000ff;">Article.find(1)</span> </strong>会得到延迟加载user对象的sql语句。如下：</p>
+<p></p>
+<div class="source" style="COLOR: #dcdccc; FONT-FAMILY: '[object]','Consolas','Lucida Console','Courier New'; BACKGROUND-COLOR: #3f3f3f">
+<span style="COLOR: #e3ceab">SELECT</span> <span style="COLOR: #dcdccc">*</span> <span style="COLOR: #e3ceab">FROM</span> <span style="COLOR: #dcdccc">articles</span> <span style="COLOR: #e3ceab">WHERE</span> (<span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">id</span> <span style="COLOR: #dcdccc">=</span><span style="COLOR: #8cd0d3">1</span>) <span style="COLOR: #e3ceab">LIMIT</span> <span style="COLOR: #8cd0d3">1</span>
+</div>
+<p>当需要访问user对象时，比如用article.user.name会再生成一个sql语句请求数据库。<br />如果执行<br />&gt;&gt; <strong><span style="color: #0000ff;">Article.find(1,:include =&gt; :user)</span></strong> 会得到一次性加载了user的查询</p>
+<div class="source" style="COLOR: #dcdccc; FONT-FAMILY: '[object]','Consolas','Lucida Console','Courier New'; BACKGROUND-COLOR: #3f3f3f">
+<span style="COLOR: #e3ceab">SELECT</span><br /><span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">extended_html</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r6</span> <span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">excerpt</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r7</span><br /><span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">keywords</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r8</span> <span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">allow_pings</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r10</span><br /><span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">allow_comments</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r9</span> <span style="COLOR: #dcdccc">users</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">id</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t1_r0</span><br /><span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">published</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r11</span> <span style="COLOR: #dcdccc">users</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">login</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t1_r1</span><br /><span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">text_filter</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r12</span> <span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">id</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r0</span><br /><span style="COLOR: #dcdccc">users</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">password</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t1_r2</span> <span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">user_id</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r13</span><br /><span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">title</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r1</span> <span style="COLOR: #dcdccc">users</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">name</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t1_r3</span><br /><span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">created_at</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r14</span> <span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">author</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r2</span><br /><span style="COLOR: #dcdccc">users</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">email</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t1_r4</span> <span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">updated_at</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r15</span><br /><span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">body</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r3</span> <span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">permalink</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r16</span><br /><span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">body_html</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r4</span> <span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">guid</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r17</span><br /><span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">extended</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r5</span><br /><span style="COLOR: #e3ceab">FROM</span> <span style="COLOR: #dcdccc">articles</span> <span style="COLOR: #e3ceab">LEFT</span> <span style="COLOR: #e3ceab">OUTER</span> <span style="COLOR: #e3ceab">JOIN</span> <span style="COLOR: #dcdccc">users</span><br /><span style="COLOR: #e3ceab">ON</span> <span style="COLOR: #dcdccc">users</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">id</span> <span style="COLOR: #dcdccc">=</span> <span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">user_id</span><br /><span style="COLOR: #e3ceab">WHERE</span> (<span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">id</span> <span style="COLOR: #dcdccc">=</span> <span style="COLOR: #8cd0d3">1</span>)</div>
+<p>是不是很优美，很性感涅？</p>
+<p> </p>                
+
+                    </div>
+                </section>
+                
+            </div>
+            
+<div class="pagination">
+  <nav role="pagination" class="post-list-pagination">
+      
+    <span class="post-list-pagination-item post-list-pagination-item-current">Page 1 of 3</span>
+    
+      <a href="/tags/e4bba3e7a081e78987e6aeb5/page/2/" class="post-list-pagination-item pure-button post-list-pagination-item-next">
+        Older&nbsp;<i class="fa fa-angle-double-right"></i>
+      </a>
+    
+  </nav>
+</div>
+
+
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a></li>
+        </ul>
+    </div>
+</div>
+<script src="http://huobazi.aspxboy.com//js/all.min.js"></script>
+        </div>
+    </div>
+</div>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-56321-3', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

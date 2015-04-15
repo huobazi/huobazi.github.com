@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gridview &middot; 武眉博</title>
+
+    <meta name="description" content="Marble&#39;s blog">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="huobazi" />
+    <meta name="twitter:title" content="Gridview &middot; 武眉博">
+    <meta name="twitter:description" content="Marble&#39;s blog">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Gridview &middot; 武眉博">
+    <meta property="og:description" content="Marble&#39;s blog">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    
+    
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+    
+
+    <link rel="stylesheet" href="http://huobazi.aspxboy.com//css/all.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <h1 class="brand-title"><a href="http://huobazi.aspxboy.com/">武眉博</a></h1>
+            <h2 class="brand-tagline"> Marble&#39;s blog </h2>
+        </hgroup>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://twitter.com/huobazi"><i class="fa fa-twitter"></i> Twitter</a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://github.com/huobazi "><i class="fa fa-github-alt"></i> github</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</div>
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                
+                <h1 class="content-subhead">09 Nov 2011, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/" class="post-title">AutoGenerateColumns=&#39;true&#39;的GridView如何支持htmlencode/htmldecode</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a><a class="post-category post-category-.Net其他" href="http://huobazi.aspxboy.com//tags/.net%E5%85%B6%E4%BB%96">.Net其他</a><a class="post-category post-category-奇技淫巧" href="http://huobazi.aspxboy.com//tags/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7">奇技淫巧</a><a class="post-category post-category-GridView" href="http://huobazi.aspxboy.com//tags/gridview">GridView</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a><a class="post-category post-category-HtmlEncode" href="http://huobazi.aspxboy.com//tags/htmlencode">HtmlEncode</a><a class="post-category post-category-AutoGenerateColumns" href="http://huobazi.aspxboy.com//tags/autogeneratecolumns">AutoGenerateColumns</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p>我们知道BoundField.HtmlEncode 属性可以设置一个单元格是否能够htmlencode，我今天碰到的问题是：自动生成列的GridView，表头可能是包含html的比如&lt;font color=red&gt;邮件&lt;/font&gt;，默认被htmlencode了，而我不希望这样做，所以有了如下的代码:</p>
+<p></p>
+<p> </p>
+<div class="source" style="font-family: '[object HTMLOptionElement]', Consolas, 'Lucida Console', 'Courier New'; color: #e6e1dc; background-color: #111111; ">
+<span style="color: #bc9458; font-style: italic; ">/// &lt;summary&gt;</span><br /><span style="color: #bc9458; font-style: italic; ">/// Handles the PreRender event of the gvSource control.</span><br /><span style="color: #bc9458; font-style: italic; ">/// &lt;/summary&gt;</span><br /><span style="color: #bc9458; font-style: italic; ">/// &lt;param name=&ldquo;sender&rdquo;&gt;The source of the event.&lt;/param&gt;</span><br /><span style="color: #bc9458; font-style: italic; ">/// &lt;param name=&ldquo;e&rdquo;&gt;The &lt;see cref=&ldquo;System.EventArgs&rdquo;/&gt; instance containing the event data.&lt;/param&gt;</span><br /><span style="color: #cc7833; ">protected</span> <span style="color: #cc7833; ">void</span> <span style="color: #ffc66d; ">gvSource_PreRender</span>( <span style="color: #da4939; ">object</span> <span style="color: #e6e1dc; ">sender</span> <span style="color: #e6e1dc; ">,</span> <span style="color: #e6e1dc; ">EventArgs</span> <span style="color: #e6e1dc; ">e</span> )<br /><span style="color: #e6e1dc; ">{</span><br />    <span style="color: #e6e1dc; ">GridView</span> <span style="color: #e6e1dc; ">gridView</span> <span style="color: #e6e1dc; ">=</span> <span style="color: #e6e1dc; ">sender</span> <span style="color: #cc7833; ">as</span> <span style="color: #e6e1dc; ">GridView</span>;<br />    <span style="color: #cc7833; ">if</span> ( <span style="color: #e6e1dc; ">gridView</span> <span style="color: #e6e1dc; ">!=</span> <span style="color: #cc7833; ">null</span> <span style="color: #e6e1dc; ">&amp;&amp;</span> <span style="color: #e6e1dc; ">gridView</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HeaderRow</span> <span style="color: #e6e1dc; ">!=</span> <span style="color: #cc7833; ">null</span> <span style="color: #e6e1dc; ">&amp;&amp;</span> <span style="color: #e6e1dc; ">gridView</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HeaderRow</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Cells</span> <span style="color: #e6e1dc; ">!=</span> <span style="color: #cc7833; ">null</span> )<br />    <span style="color: #e6e1dc; ">{</span><br />        <span style="color: #cc7833; ">for</span> ( <span style="color: #da4939; ">int</span> <span style="color: #e6e1dc; ">j</span> <span style="color: #e6e1dc; ">=</span> <span style="color: #a5c261; ">0</span> ; <span style="color: #e6e1dc; ">j</span> <span style="color: #e6e1dc; ">&lt;</span> <span style="color: #e6e1dc; ">gridView</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HeaderRow</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Cells</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Count</span> ; <span style="color: #e6e1dc; ">j</span><span style="color: #e6e1dc; ">++</span> )<br />        <span style="color: #e6e1dc; ">{</span><br />            <span style="color: #e6e1dc; ">gridView</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HeaderRow</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Cells</span><span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">j</span><span style="color: #e6e1dc; ">].</span><span style="color: #e6e1dc; ">Text</span> <span style="color: #e6e1dc; ">=</span> <span style="color: #e6e1dc; ">System</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Web</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HttpUtility</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HtmlDecode</span>( <span style="color: #e6e1dc; ">gridView</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HeaderRow</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Cells</span><span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">j</span><span style="color: #e6e1dc; ">].</span><span style="color: #e6e1dc; ">Text</span> );<br />        <span style="color: #e6e1dc; ">}</span><br />    <span style="color: #e6e1dc; ">}</span><br /><span style="color: #e6e1dc; ">}</span>
+</div></p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">03 Jul 2006, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2006/07/03/enablesortingandpagingcallbacksisnotworkingwhennotusethesqldatasourcecontorl/" class="post-title">code-beside方式绑定GridView后EnableSortingAndPagingCallbacks不工作</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a><a class="post-category post-category-GridView" href="http://huobazi.aspxboy.com//tags/gridview">GridView</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p>今天对GridView的学习中发现 当用 code-beside方式绑定GridView后（比如我绑一个DataTable)<br />EnableSortingAndPagingCallbacks不起作用。<br />在下面地址找到 一些说法</p>
+<p><a href="http://forums.asp.net/thread/1230450.aspx">http://forums.asp.net/thread/1230450.aspx</a></p>
+<p><a href="http://connect.microsoft.com/VisualStudio/feedback/ViewFeedback.aspx?FeedbackID=103040">http://connect.microsoft.com/VisualStudio/feedback/ViewFeedback.aspx?FeedbackID=103040</a><br />记之&hellip;</p>
+<div style="padding-right: 5px; padding-left: 4px; font-size: 13px; padding-bottom: 4px; width: 98%; word-break: break-all; padding-top: 4px; background-color: #eeeeee; border: #cccccc 1px solid;">
+<span style="COLOR: #008080"> 1</span><span style="COLOR: #000000">    </span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">asp:GridView </span><span style="COLOR: #ff0000">id</span><span style="COLOR: #0000ff">=&ldquo;Gridviewex1&rdquo;</span><span style="COLOR: #ff0000"> <br /></span><span style="COLOR: #008080"> 2</span><span style="COLOR: #ff0000">    runat</span><span style="COLOR: #0000ff">=&ldquo;server&rdquo;</span><span style="COLOR: #ff0000"> <br /></span><span style="COLOR: #008080"> 3</span><span style="COLOR: #ff0000">    AllowSorting</span><span style="COLOR: #0000ff">=&ldquo;True&rdquo;</span><span style="COLOR: #ff0000"> <br /></span><span style="COLOR: #008080"> 4</span><span style="COLOR: #ff0000">    AutoGenerateColumns</span><span style="COLOR: #0000ff">=&ldquo;False&rdquo;</span><span style="COLOR: #ff0000"><br /></span><span style="COLOR: #008080"> 5</span><span style="COLOR: #ff0000">    EnableSortingAndPagingCallbacks</span><span style="COLOR: #0000ff">=&ldquo;True&rdquo;</span><span style="COLOR: #ff0000"> <br /></span><span style="COLOR: #008080"> 6</span><span style="COLOR: #ff0000">    OnSorting</span><span style="COLOR: #0000ff">=&ldquo;Gridviewex1_Sorting&rdquo;</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080"> 7</span><span style="COLOR: #000000">        </span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">Columns</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080"> 8</span><span style="COLOR: #000000">            </span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">asp:BoundField </span><span style="COLOR: #ff0000">DataField</span><span style="COLOR: #0000ff">=&ldquo;ProductId&rdquo;</span><span style="COLOR: #ff0000"> HeaderText</span><span style="COLOR: #0000ff">=&ldquo;ProductId&rdquo;</span><span style="COLOR: #ff0000"> SortExpression</span><span style="COLOR: #0000ff">=&ldquo;ProductId&rdquo;</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080"> 9</span><span style="COLOR: #000000">            </span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">asp:BoundField </span><span style="COLOR: #ff0000">DataField</span><span style="COLOR: #0000ff">=&ldquo;ProductName&rdquo;</span><span style="COLOR: #ff0000"> HeaderText</span><span style="COLOR: #0000ff">=&ldquo;ProductName&rdquo;</span><span style="COLOR: #ff0000"> SortExpression</span><span style="COLOR: #0000ff">=&ldquo;ProductName&rdquo;</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080">10</span><span style="COLOR: #000000">            </span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">asp:BoundField </span><span style="COLOR: #ff0000">DataField</span><span style="COLOR: #0000ff">=&ldquo;QuantityPerUnit&rdquo;</span><span style="COLOR: #ff0000"> HeaderText</span><span style="COLOR: #0000ff">=&ldquo;QuantityPerUnit&rdquo;</span><span style="COLOR: #ff0000"> SortExpression</span><span style="COLOR: #0000ff">=&ldquo;QuantityPerUnit&rdquo;</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080">11</span><span style="COLOR: #000000">            </span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">asp:BoundField </span><span style="COLOR: #ff0000">DataField</span><span style="COLOR: #0000ff">=&ldquo;UnitsInStock&rdquo;</span><span style="COLOR: #ff0000"> HeaderText</span><span style="COLOR: #0000ff">=&ldquo;UnitsInStock&rdquo;</span><span style="COLOR: #ff0000"> SortExpression</span><span style="COLOR: #0000ff">=&ldquo;UnitsInStock&rdquo;</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080">12</span><span style="COLOR: #000000">            </span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">asp:BoundField </span><span style="COLOR: #ff0000">DataField</span><span style="COLOR: #0000ff">=&ldquo;ReorderLevel&rdquo;</span><span style="COLOR: #ff0000"> HeaderText</span><span style="COLOR: #0000ff">=&ldquo;ReorderLevel&rdquo;</span><span style="COLOR: #ff0000"> SortExpression</span><span style="COLOR: #0000ff">=&ldquo;ReorderLevel&rdquo;</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080">13</span><span style="COLOR: #000000">            </span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">asp:BoundField </span><span style="COLOR: #ff0000">DataField</span><span style="COLOR: #0000ff">=&ldquo;Discontinued&rdquo;</span><span style="COLOR: #ff0000"> HeaderText</span><span style="COLOR: #0000ff">=&ldquo;Discontinued&rdquo;</span><span style="COLOR: #ff0000"> SortExpression</span><span style="COLOR: #0000ff">=&ldquo;Discontinued&rdquo;</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080">14</span><span style="COLOR: #000000">        </span><span style="COLOR: #0000ff">&lt;/</span><span style="COLOR: #800000">Columns</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080">15</span><span style="COLOR: #000000">    </span><span style="COLOR: #0000ff">&lt;/</span><span style="COLOR: #800000">aspx:GridView</span><span style="COLOR: #0000ff">&gt;</span>
+</div>
+<div style="padding-right: 5px; padding-left: 4px; font-size: 13px; padding-bottom: 4px; width: 98%; word-break: break-all; padding-top: 4px; background-color: #eeeeee; border: #cccccc 1px solid;">
+<span style="COLOR: #008080"> 1</span><span style="COLOR: #000000">    </span><span style="COLOR: #0000ff">protected</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">void</span><span style="COLOR: #000000"> Page_Load(</span><span style="COLOR: #0000ff">object</span><span style="COLOR: #000000"> sender, EventArgs e)<br /></span><span style="COLOR: #008080"> 2</span><span style="COLOR: #000000">    </span><span id="Codehighlighter1_61_159_Open_Text"><span style="COLOR: #000000">{<br /></span><span style="COLOR: #008080"> 3</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080"> 4</span><span style="COLOR: #000000">        </span><span style="COLOR: #0000ff">if</span><span style="COLOR: #000000"> (</span><span style="COLOR: #000000">!</span><span style="COLOR: #000000">Page.IsPostBack)<br /></span><span style="COLOR: #008080"> 5</span><span style="COLOR: #000000">        </span><span id="Codehighlighter1_102_153_Open_Text"><span style="COLOR: #000000">{<br /></span><span style="COLOR: #008080"> 6</span><span style="COLOR: #000000">            </span><span style="COLOR: #0000ff">this</span><span style="COLOR: #000000">.BindGrid(</span><span style="COLOR: #0000ff">string</span><span style="COLOR: #000000">.Empty);<br /></span><span style="COLOR: #008080"> 7</span><span style="COLOR: #000000">        }</span></span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080"> 8</span><span style="COLOR: #000000">    }</span></span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080"> 9</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080">10</span><span style="COLOR: #000000">    </span><span style="COLOR: #0000ff">private</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">void</span><span style="COLOR: #000000"> BindGrid(</span><span style="COLOR: #0000ff">string</span><span style="COLOR: #000000"> sortExpression)<br /></span><span style="COLOR: #008080">11</span><span style="COLOR: #000000">    </span><span id="Codehighlighter1_215_967_Open_Text"><span style="COLOR: #000000">{<br /></span><span style="COLOR: #008080">12</span><span style="COLOR: #000000">        DataTable dt </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">new</span><span style="COLOR: #000000"> DataTable();<br /></span><span style="COLOR: #008080">13</span><span style="COLOR: #000000">        SqlConnection conn </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">new</span><span style="COLOR: #000000"> SqlConnection();<br /></span><span style="COLOR: #008080">14</span><span style="COLOR: #000000">        conn.ConnectionString </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">server=wumeibo\wmb;database=northwind;uid=sa;pwd=sa;</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">;<br /></span><span style="COLOR: #008080">15</span><span style="COLOR: #000000">        SqlCommand cmd </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">new</span><span style="COLOR: #000000"> SqlCommand();<br /></span><span style="COLOR: #008080">16</span><span style="COLOR: #000000">        cmd.Connection </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> conn;<br /></span><span style="COLOR: #008080">17</span><span style="COLOR: #000000">        cmd.CommandType </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> CommandType.Text;<br /></span><span style="COLOR: #008080">18</span><span style="COLOR: #000000">        cmd.CommandText </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">select * from products</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">;<br /></span><span style="COLOR: #008080">19</span><span style="COLOR: #000000">        SqlDataAdapter adapter </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">new</span><span style="COLOR: #000000"> SqlDataAdapter();<br /></span><span style="COLOR: #008080">20</span><span style="COLOR: #000000">        adapter.SelectCommand </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> cmd;<br /></span><span style="COLOR: #008080">21</span><span style="COLOR: #000000">        adapter.Fill(dt);<br /></span><span style="COLOR: #008080">22</span><span style="COLOR: #000000">        DataView dv </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> dt.DefaultView;;<br /></span><span style="COLOR: #008080">23</span><span style="COLOR: #000000">        </span><span style="COLOR: #0000ff">if</span><span style="COLOR: #000000"> (</span><span style="COLOR: #000000">!</span><span style="COLOR: #0000ff">string</span><span style="COLOR: #000000">.IsNullOrEmpty(sortExpression))        <br /></span><span style="COLOR: #008080">24</span><span style="COLOR: #000000">        </span><span id="Codehighlighter1_792_873_Open_Text"><span style="COLOR: #000000">{<br /></span><span style="COLOR: #008080">25</span><span style="COLOR: #000000">            dv </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> dt.DefaultView;<br /></span><span style="COLOR: #008080">26</span><span style="COLOR: #000000">            dv.Sort </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> sortExpression;<br /></span><span style="COLOR: #008080">27</span><span style="COLOR: #000000">        }</span></span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080">28</span><span style="COLOR: #000000">        </span><span style="COLOR: #0000ff">this</span><span style="COLOR: #000000">.Gridviewex1.DataSource </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> dv;<br /></span><span style="COLOR: #008080">29</span><span style="COLOR: #000000">        </span><span style="COLOR: #0000ff">this</span><span style="COLOR: #000000">.Gridviewex1.DataBind();<br /></span><span style="COLOR: #008080">30</span><span style="COLOR: #000000">        <br /></span><span style="COLOR: #008080">31</span><span style="COLOR: #000000">    }</span></span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080">32</span><span style="COLOR: #000000">    </span><span style="COLOR: #0000ff">protected</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">void</span><span style="COLOR: #000000"> Gridviewex1_Sorting(</span><span style="COLOR: #0000ff">object</span><span style="COLOR: #000000"> sender, GridViewSortEventArgs e)<br /></span><span style="COLOR: #008080">33</span><span style="COLOR: #000000">    </span><span id="Codehighlighter1_1052_1094_Open_Text"><span style="COLOR: #000000">{<br /></span><span style="COLOR: #008080">34</span><span style="COLOR: #000000">        BindGrid(e.SortExpression);<br /></span><span style="COLOR: #008080">35</span><span style="COLOR: #000000">    }</span></span>
+</div>
+<p>经过测试 如下方法 可用</p>
+<div style="padding-right: 5px; padding-left: 4px; font-size: 13px; padding-bottom: 4px; width: 98%; word-break: break-all; padding-top: 4px; background-color: #eeeeee; border: #cccccc 1px solid;">
+<span style="COLOR: #008080"> 1</span> <span style="COLOR: #000000">    </span><span style="COLOR: #0000ff">protected</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">void</span><span style="COLOR: #000000"> Page_Load(</span><span style="COLOR: #0000ff">object</span><span style="COLOR: #000000"> sender, EventArgs e)<br /></span><span style="COLOR: #008080"> 2</span> <span style="COLOR: #000000">    {<br /></span><span style="COLOR: #008080"> 3</span> <span style="COLOR: #000000">            xx();<br /></span><span style="COLOR: #008080"> 4</span> <span style="COLOR: #000000">        <br /></span><span style="COLOR: #008080"> 5</span> <span style="COLOR: #000000">    }<br /></span><span style="COLOR: #008080"> 6</span> <span style="COLOR: #000000"><br /></span><span style="COLOR: #008080"> 7</span> <span style="COLOR: #000000">    </span><span style="COLOR: #0000ff">private</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">void</span><span style="COLOR: #000000"> xx()<br /></span><span style="COLOR: #008080"> 8</span> <span style="COLOR: #000000">    {<br /></span><span style="COLOR: #008080"> 9</span> <span style="COLOR: #000000">        SqlConnection conn </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">new</span><span style="COLOR: #000000"> SqlConnection();<br /></span><span style="COLOR: #008080">10</span> <span style="COLOR: #000000">        conn.ConnectionString </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">server=wumeibo\wmb;database=northwind;uid=sa;pwd=sa;</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">;<br /></span><span style="COLOR: #008080">11</span> <span style="COLOR: #000000">   <br /></span><span style="COLOR: #008080">12</span> <span style="COLOR: #000000">        SqlDataSource source </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">new</span><span style="COLOR: #000000"> SqlDataSource();<br /></span><span style="COLOR: #008080">13</span> <span style="COLOR: #000000">        source.ConnectionString </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">server=wumeibo\wmb;database=northwind;uid=sa;pwd=sa;</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">;<br /></span><span style="COLOR: #008080">14</span> <span style="COLOR: #000000">        source.SelectCommand </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">select * from products</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">;<br /></span><span style="COLOR: #008080">15</span> <span style="COLOR: #000000"><br /></span><span style="COLOR: #008080">16</span> <span style="COLOR: #000000">        </span><span style="COLOR: #0000ff">this</span><span style="COLOR: #000000">.Gridviewex1.DataSource </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> source;<br /></span><span style="COLOR: #008080">17</span> <span style="COLOR: #000000">        </span><span style="COLOR: #0000ff">this</span><span style="COLOR: #000000">.Gridviewex1.DataBind();<br /></span><span style="COLOR: #008080">18</span> <span style="COLOR: #000000">    }</span>
+</div></p>
+
+                    </div>
+                </section>
+                
+            </div>
+            
+
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a></li>
+        </ul>
+    </div>
+</div>
+<script src="http://huobazi.aspxboy.com//js/all.min.js"></script>
+        </div>
+    </div>
+</div>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-56321-3', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

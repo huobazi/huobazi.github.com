@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>武眉博 &middot; 武眉博</title>
+
+    <meta name="description" content="Marble&#39;s blog">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="huobazi" />
+    <meta name="twitter:title" content="武眉博 &middot; 武眉博">
+    <meta name="twitter:description" content="Marble&#39;s blog">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="武眉博 &middot; 武眉博">
+    <meta property="og:description" content="Marble&#39;s blog">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    
+    
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+    
+
+    <link rel="stylesheet" href="http://huobazi.aspxboy.com//css/all.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <h1 class="brand-title"><a href="http://huobazi.aspxboy.com/">武眉博</a></h1>
+            <h2 class="brand-tagline"> Marble&#39;s blog </h2>
+        </hgroup>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://twitter.com/huobazi"><i class="fa fa-twitter"></i> Twitter</a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://github.com/huobazi "><i class="fa fa-github-alt"></i> github</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</div>
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                
+                <h1 class="content-subhead">26 Nov 2012, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2012/11/26/osx-shang-mo-ren-vim-bu-zhi-chi-plus-ji-cun-qi/" class="post-title">OSX 上默认 VIM 不支持 &#43; 寄存器</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-vim" href="http://huobazi.aspxboy.com//tags/vim">vim</a><a class="post-category post-category-OSX" href="http://huobazi.aspxboy.com//tags/osx">OSX</a><a class="post-category post-category-Mac" href="http://huobazi.aspxboy.com//tags/mac">Mac</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>OSX 上默认 VIM 不支持 + 寄存器，所以从系统剪贴板相互复制东西就麻烦了
+所以,我重新装了一下vim</p>
+
+<pre><code class="language-bash">brew install vim
+</code></pre>
+
+<p>然后</p>
+
+<pre><code class="language-bash">which vim
+</code></pre>
+
+<p>发现还是 /usr/bin</p>
+
+<p>于是，在 .zshrc内 把 /usr/local/bin 加入 PATH 就 ok 了
+其实后来想想，把原来的 move 到 old 上去，将 /usr/bin/vim ln 到/usr/local/vim 就 OK 了
+或者</p>
+
+<pre><code class="language-bash">brew install macvim --HEAD --override-system-vim
+</code></pre>
+
+<p>来安装 macvim 并覆盖系统原来的vim</p>
+
+<p>下来，发现在OSX内用tmux后仍然无法访问＋和＊寄存器
+一直提示 Nothing in ＋ register
+SO上找找，发现</p>
+
+<pre><code class="language-bash"> brew install reattach-to-user-namespace
+</code></pre>
+
+<p>装这个补丁就可以访问tmux的buffer了
+最后贴一下.tmux.conf</p>
+
+<pre><code class="language-bash">set-option -g default-shell $SHELL
+set-option -g default-command &quot;reattach-to-user-namespace -l zsh&quot;
+bind y run &quot;tmux save-buffer - | reattach-to-user-namespace pbcopy&quot;
+unbind p
+bind p paste-buffer
+bind -t vi-copy v begin-selection
+bind -t vi-copy y copy-selection
+
+</code></pre>
+
+<p>另外不要忘记设置vim的</p>
+
+<pre><code class="language-bash">set clipboard=unnamed
+</code></pre>
+
+<p>完整的配置<a href="https://github.com/huobazi/dotfiles">https://github.com/huobazi/dotfiles</a></p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">02 Nov 2012, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2012/11/02/tmux-diu-shi-huo-xian-shi-vimde-pei-se/" class="post-title">tmux丢失或显示vim的配色</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-tmux" href="http://huobazi.aspxboy.com//tags/tmux">tmux</a><a class="post-category post-category-vim" href="http://huobazi.aspxboy.com//tags/vim">vim</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>使用tmux，同时使用vim，发现配色总是和别人截图有差别
+在.tmux.conf内设置了</p>
+
+<pre><code>set -g default-terminal &quot;screen-256color&quot;
+</code></pre>
+
+<p>还是木有作用，最后在SO上找到了解决的办法
+在.bashrc内(我是在.zshrc内)添加</p>
+
+<pre><code>alias tmux='tmux -2'
+</code></pre>
+
+<p>就OK了</p>
+
+<p>参见</p>
+
+<p><a href="http://vim.wikia.com/wiki/256_colors_setup_for_console_Vim">http://vim.wikia.com/wiki/256_colors_setup_for_console_Vim</a>
+<a href="http://stackoverflow.com/questions/10158508/lose-vim-colorscheme-in-tmux-mode">http://stackoverflow.com/questions/10158508/lose-vim-colorscheme-in-tmux-mode</a></p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">12 Sep 2012, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2012/09/12/import-data-from-mysql-to-postgresql/" class="post-title">将MySQL 的数据导入 PostgreSQL</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        
+
+<p>开始学习使用PostgreSQL, 先尝试将MySQL数据导入到PostgreSQL</p>
+
+<h2 id="安装postgresql:8e74d1f4d6a69d3ff86a984aac665b40">安装PostgreSQL</h2>
+
+<pre><code class="language-bash">sudo apt-get install postgresql postgresql-client postgresql-contrib  
+</code></pre>
+
+<p>基本按照<a href="http://kiki.ubuntu.org.cn/PostgreSQL">http://wiki.ubuntu.org.cn/PostgreSQL</a>进行设置就OK了</p>
+
+<h2 id="安装开发工具:8e74d1f4d6a69d3ff86a984aac665b40">安装开发工具</h2>
+
+<pre><code class="language-bash">sudo apt-get install libpq-dev pgadmin3
+</code></pre>
+
+<p>PgAdmin3 这是一个桌面 GUI 工具, 可以很方便的管理 PostgreSQL</p>
+
+<h2 id="用到的rubygems:8e74d1f4d6a69d3ff86a984aac665b40">用到的RubyGems</h2>
+
+<p>在 Gemfile 中增加：</p>
+
+<pre><code class="language-ruby">gem &quot;pg&quot; 
+gem &quot;mysql2&quot;
+</code></pre>
+
+<p>然后</p>
+
+<pre><code class="language-bash">bundle install
+</code></pre>
+
+<h3 id="完整的-ruby-代码:8e74d1f4d6a69d3ff86a984aac665b40">完整的 Ruby 代码</h3>
+
+<pre><code># coding: utf-8
+require 'mysql2'
+require 'pg'
+
+mysql_client = Mysql2::Client.new(:host =&gt; &quot;localhost&quot;, :username =&gt;&quot;root&quot;, :password =&gt; &quot;pa$$word&quot;, :database =&gt; &quot;my_test&quot;, :encoding =&gt; &quot;utf8&quot;)
+
+postgres_client = PG::Connection.new(:host =&gt; &quot;localhost&quot;, :dbname =&gt; 'mydb', :user =&gt; &quot;postgres&quot;, :password =&gt; &quot;pa$$word&quot;)
+postgres_client.set_client_encoding('utf8')
+
+mysql_result = mysql_client.query('select `code`,`name`,`level` from `chinese_regions`')
+
+step = 0
+mysql_result.each do |row|
+
+  the_code = row['code']
+  the_name = row['name']
+  the_level = row['level'].to_i
+  insert_sql_test = &quot;insert into chinese_regions (\&quot;code\&quot;,\&quot;name\&quot;,\&quot;level\&quot;) values ('#{the_code}','#{the_name}','#{the_level}');&quot;
+  postgres_client.exec(insert_sql_test)
+
+  step += 1
+  puts '-' + step.to_s + '-' + the_code + '--' + the_name + '--' + the_level.to_s
+
+end
+
+</code></pre>
+
+<p>Run 啊 Run 啊的就 OK 了</p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">15 Aug 2012, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2012/08/15/ajaxupload-with-rail-carrierwave-on-mongodb/" class="post-title">使用AjaxUpload和Carrierwave在Rails Mongoid中批量上传图片</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-Ruby on Rails" href="http://huobazi.aspxboy.com//tags/ruby-on-rails">Ruby on Rails</a><a class="post-category post-category-Rails" href="http://huobazi.aspxboy.com//tags/rails">Rails</a><a class="post-category post-category-Mongoid" href="http://huobazi.aspxboy.com//tags/mongoid">Mongoid</a><a class="post-category post-category-Carrierwave" href="http://huobazi.aspxboy.com//tags/carrierwave">Carrierwave</a><a class="post-category post-category-Ajax" href="http://huobazi.aspxboy.com//tags/ajax">Ajax</a><a class="post-category post-category-Ruby" href="http://huobazi.aspxboy.com//tags/ruby">Ruby</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        
+
+<p><a href="https://github.com/valums/file-uploader">file-uploader</a>是一个用 Javascrit 编写的文件上传 Libary,在这里我使用<a href="https://github.com/jnicklas/carrierwave">CarrierWave</a>和 <a href="https://github.com/mongoid/mongoid">Mongoid</a> 来完成多文件的无刷新上传功能</p>
+
+<h2 id="rubygems:7371c11e255b336e41edb223ab46297b">RubyGems</h2>
+
+<pre><code class="language-ruby">gem 'mongoid', '3.0.4'
+gem 'carrierwave', '0.6.2'
+gem 'carrierwave-mongoid', :github =&gt; 'jnicklas/carrierwave-mongoid', :branch =&gt; 'mongoid-3.0' 
+gem 'mini_magick', '3.4'
+gem 'rack-raw-upload', '1.1.0'
+</code></pre>
+
+<h2 id="model:7371c11e255b336e41edb223ab46297b">Model</h2>
+
+<pre><code class="language-ruby">class Screenshot
+  include Mongoid::Document
+  include Mongoid::Timestamps::Created
+  include Rails.application.routes.url_helpers
+
+  attr_accessible :image 
+  field :image 
+
+  mount_uploader :image, ScreenshotUploader 
+
+end
+</code></pre>
+
+<h2 id="controller:7371c11e255b336e41edb223ab46297b">Controller</h2>
+
+<pre><code class="language-ruby">class ScreenshotsController &lt; ApplicationController
+
+  def index
+    @screenshots = Screenshot.all.desc(:created_at)
+
+    respond_to do |format|
+      format.html # index.html.erb    
+      format.js{ render :layout =&gt; false}
+    end
+  end
+
+  def create
+    file = params[:qqfile].is_a?(ActionDispatch::Http::UploadedFile) ? params[:qqfile] : params[:file]
+    @screenshot = Screenshot.new
+    @screenshot.image = file
+    if @screenshot.save
+      render json: { success: true, src: @screenshot.to_json }
+    else
+      render json: @screenshot.errors.to_json
+    end
+  end
+
+  def destroy
+    @screenshot = Screenshot.find(params[:id])
+    @screenshot.destroy
+
+    respond_to do |format|
+      format.html { redirect_to screenshots_path }
+      format.js{ 
+        @screenshots = Screenshot.all.desc(:created_at)
+        render :layout =&gt; false
+      }
+    end
+
+  end
+
+end
+</code></pre>
+
+<h2 id="uploader:7371c11e255b336e41edb223ab46297b">Uploader</h2>
+
+<pre><code class="language-ruby"># encoding: utf-8
+require &quot;digest/md5&quot;
+require 'carrierwave/processing/mini_magick'
+
+class ScreenshotUploader &lt; CarrierWave::Uploader::Base
+  include CarrierWave::MiniMagick
+
+  storage :file
+
+  # Override the directory where uploaded files will be stored.
+  def store_dir
+    &quot;uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}&quot;
+  end
+
+
+  process :convert =&gt; 'png'
+
+  # Create different versions of your uploaded files:
+  version :thumb do
+    process :resize_to_fill =&gt; [120, 120]
+  end
+
+  # Add a white list of extensions which are allowed to be uploaded.
+  def extension_white_list
+    %w(jpg jpeg gif png)
+  end
+
+  # Override the filename of the uploaded files:
+  # see http://huacnlee.com/blog/carrierwave-upload-store-file-name-config/
+  def filename
+    if super.present?
+      # current_path 是 Carrierwave 上传过程临时创建的一个文件，有时间标记，所以它将是唯一的
+      @name ||= Digest::MD5.hexdigest(File.dirname(current_path))
+      &quot;#{@name}.#{file.extension.downcase}&quot;
+    end
+  end
+end
+</code></pre>
+
+<h2 id="javascript:7371c11e255b336e41edb223ab46297b">Javascript</h2>
+
+<pre><code class="language-javascript">  $(document).ready(function(){
+
+    var uploader = new qq.FileUploader({
+      debug: true,
+      allowedExtensions: ['jpg', 'jpeg', 'png', 'gif'],
+      sizeLimit: 1048576, // max size: 1MB
+      minSizeLimit: 0, // min size
+      multiple: true,
+      element: document.getElementById('file-uploader'),
+      action: '&lt;%= screenshots_path %&gt;',
+      onComplete: function(id, fileName, responseJSON){
+        $.getScript(&quot;&lt;%= screenshots_path %&gt;&quot;);
+      },
+      onSubmit: function(id, fileName) {
+        uploader.setParams({
+          xx: &quot;xx&quot;,
+          yy: 'yy',
+          zz: 'zz',       
+          authenticity_token: &quot;&lt;%= form_authenticity_token.to_s %&gt;&quot;
+        });
+      }
+    });
+
+});
+</code></pre>
+
+<p>你可以在 <a href="https://github.com/huobazi/ajax-upload-with-carrierwave-mongoid">https://github.com/huobazi/ajax-upload-with-carrierwave-mongoid</a>下载完整的示例代码</p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">06 Mar 2012, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2012/03/06/convert-typecho-to-octopress/" class="post-title">从typecho转换到Octopress了</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-Octopress" href="http://huobazi.aspxboy.com//tags/octopress">Octopress</a><a class="post-category post-category-Typecho" href="http://huobazi.aspxboy.com//tags/typecho">Typecho</a><a class="post-category post-category-数据转换" href="http://huobazi.aspxboy.com//tags/%E6%95%B0%E6%8D%AE%E8%BD%AC%E6%8D%A2">数据转换</a><a class="post-category post-category-Wordpress" href="http://huobazi.aspxboy.com//tags/wordpress">Wordpress</a><a class="post-category post-category-Ruby" href="http://huobazi.aspxboy.com//tags/ruby">Ruby</a><a class="post-category post-category-折腾" href="http://huobazi.aspxboy.com//tags/%E6%8A%98%E8%85%BE">折腾</a><a class="post-category post-category-闲言碎语" href="http://huobazi.aspxboy.com//tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD">闲言碎语</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>人生在于折腾,所以将博客转换到Octopress了<br />
+我的博客经历了如下几次变动：<br />
+2003年1月,<a href="http://aspxboy.com/private/">自己装了个SnowForum</a>，用来写些技术记录之类的东西<br />
+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;&gt;<br />
+2004年4月,<a href="http://huobazi.cnblogs.com/">搬到博客园，以前的记录停止维护，后来数据丢失</a><br />
+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;&gt;<br />
+2009年6月,<a href="http://huobazi.aspxboy.com/blog/2009/06/21/my-blog-moved-to-wp/">搬出博客园,转换到Wordpress</a>当时在旧博客上写了script，告知访问者此处停止更新，询问访问者是否停留在当前页，或转向新页面(可能有更新),因此被封号 @_@|||<br />
+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;&gt;<br />
+2009年7月,<a href="http://huobazi.aspxboy.com/blog/2009/07/04/myblog-from-wordpress-to-typecho/">博客又转换到Typecho平台</a><br />
+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;&gt;<br />
+2012年3月,转到Octopress了，一个静态博客生成引擎，现在看到的全都是html页面,我写了几行ruby代码做了转换，在<a href="https://github.com/huobazi/typecho-to-octopress">https://github.com/huobazi/typecho-to-octopress</a>，希望对想转换的朋友有用。</p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">25 Feb 2012, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2012/02/25/hg232/" class="post-title">HG232破解一例</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-闲言碎语" href="http://huobazi.aspxboy.com//tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD">闲言碎语</a><a class="post-category post-category-推荐阅读" href="http://huobazi.aspxboy.com//tags/%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB">推荐阅读</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a><a class="post-category post-category-HG232" href="http://huobazi.aspxboy.com//tags/hg232">HG232</a><a class="post-category post-category-HUAWEI" href="http://huobazi.aspxboy.com//tags/huawei">HUAWEI</a><a class="post-category post-category-电信" href="http://huobazi.aspxboy.com//tags/%E7%94%B5%E4%BF%A1">电信</a><a class="post-category post-category-IPTV" href="http://huobazi.aspxboy.com//tags/iptv">IPTV</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>###0. 默认超级账户</p>
+
+<p>如果电信没有改过你的猫账户，可以尝试使用下面的信息登陆，如果不可以在进入后面的步骤1和2破解
+<code>帐号： telecomadmin 密码：nE7jA%5m (注意大小写)</code></p>
+
+<p>###1. 下载配置文件</p>
+
+<p>猫上插入U盘，下面两种方法都可以，您挑一种吧。</p>
+
+<p>#####1.1 手工操作&mdash;-乐趣</p>
+
+<p>用猫后面印刷的普通用户useradmin登陆，这个用户登陆进去什么高级全选都木有，但是表着急，我这么干的，浏览器用firefox，如果木有就去下载，然后装上firebug，去看隐藏的html元素吧，把样式表的disply:none;都禁止掉，什么 备份配置文件、启动从U盘加载配置、回复出厂值、日志等等都出来了吧，插入U盘，点击备份按钮，文件就下载下来了。</p>
+
+<p>#####1.2 连接下载&mdash;-直接</p>
+
+<p>同时通过分析html和javascript代码，我直接把下载地址找到了，如果你不想或者木有firefox&amp;&amp;firebug，那就直接访问：
+<a href="http://192.168.1.1/html/ehomeclient/cfgUSBRestore.cgi?coverusbpath=usb1_1">http://192.168.1.1/html/ehomeclient/cfgUSBRestore.cgi?coverusbpath=usb1_1</a> 这是firebug分析抓包后得到的地址，嘿嘿。
+配置文件就能成功被备份出了，在U盘根目录生成的e8_Config_backup文件夹里ctce8_HG232.cfg。</p>
+
+<p>###2. 解密配置文件</p>
+
+<p>网上有现成的编译好的工具可以直接用，不过作为技术宅男，当然要做点有挑战性的了，我弄了俩，一个javascript写的，一个ruby写的，开源滴，您用着放心哦</p>
+
+<p>#####2.1 无ruby环境</p>
+
+<p>将代码库里的decrypt.html另存到本地，然后用浏览器打开，在Source里粘贴用ctce8_HG232.cfg文件的内容，
+点击解密按钮,就可进行解密，加密同理。</p>
+
+<p>#####2.2 有ruby环境</p>
+
+<p>如果有ruby运行环境，则可以使用代码库里的decrypt.rb另存到本地来，把要破解或者加密的文件放入相同目录,在命令行运行 ruby decrypt.rb 按照提示做就可以了</p>
+
+<p>#####2.3 超级管理员密码
+到文本编辑软件打开破解后的文件，查找telecomadmin，找到
+    <X_ATP_UserInfoInstance InstanceID="1" Username="telecomadmin" Userpassword="telecomadmin******" Userlevel="2" Busy="0" LoginIP=""/>
+Userpassword里面的就是超级管理员的密码了。一般是telecomadmin加串数字。</p>
+
+<p>###3. 设置</p>
+
+<p>后面的情况就大同小异了，网上很多介绍，开路由，，自动拨号，开无线，一堆一堆的教程，另外有些设置在管理平台是没有的，比如下面的ftp和telnet设置，如果又必要使用这些相功能，修改配置文件，加密后，登陆后台后启用从usb恢复设备这个功能，然后把配置文件夹自己修改后，再恢复回去，就可以了。
+    <X_CT-COM_ServiceManage TelnetEnable="0" TelnetUserName="!!Huawei" TelnetPassword="@HuaweiHgw" TelnetPort="23" WebWanAccessEnable="0" FtpEnable="1" FtpUserName="ftp" FtpPassword="ftp" FtpPort="21" FtpPath="/mnt"/></p>
+
+<p>###4. 代码</p>
+
+<p>本文提及的代码可以在<a href="https://github.com/huobazi/hg232">https://github.com/huobazi/hg232</a>下载到</p>
+
+<p>###5.  其他</p>
+
+<p>4个RJ45口理论上都可以设置成接电脑或者itv输出，并不局限于写了itv的那个口。另外，也可以增加一个itv无线网络，在你的机顶盒上加个无线网卡，机顶盒拨入此无线网络，这样就不用拉一堆堆的线了，很适用于前期没有做好布线设计的朋友。</p>
+
+<p>itv 不选择 无线的话 要选VLAN透传，选无线是VLAN修改</p>
+
+<p>另外，网上有现成的改好的配置文件下载，<a href="http://email2me.blog.163.com/blog/static/34347033201101094128402/">http://email2me.blog.163.com/blog/static/34347033201101094128402/</a></p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">13 Feb 2012, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2012/02/13/ios-uiactionsheetdelegate/" class="post-title">iOS通过UIActionSheetDelegate来实现警告的方法</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a><a class="post-category post-category-iOS" href="http://huobazi.aspxboy.com//tags/ios">iOS</a><a class="post-category post-category-iPhone" href="http://huobazi.aspxboy.com//tags/iphone">iPhone</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p>有时候需要用户确认一些操作，比如退出，删除数据等等，用UIActionSheetDelegate实现比较友好，实现也很简单，controller实现UIActionSheetDelegate协议就可以了，示例如下:</p>
+<p></p>
+<div class="source" style="font-family: '[object HTMLOptionElement]', Consolas, 'Lucida Console', 'Courier New'; color: #e0eee0; background-color: #000000; ">
+<span style="color: #7c7268; ">01</span> <span style="color: #8db6cd; ">#pragma mark-</span><br /><span style="color: #7c7268; ">02</span> <span style="color: #8db6cd; ">#pragma mark UIActionSheetDelegate with logOff</span><br /><span style="color: #7c7268; ">03</span><br /><span style="color: #7c7268; ">04</span> <span style="color: #e0eee0; ">-</span> (<span style="color: #add8e6; ">void</span>) <span style="color: #e0eee0; ">onLogOffButtonClick:</span>(<span style="color: #add8e6; ">id</span>)<span style="color: #e0eee0; ">sender</span><span style="color: #e0eee0; ">{</span><br /><span style="color: #f810b0; ">05</span>     <span style="color: #e0eee0; ">UIActionSheet</span> <span style="color: #e0eee0; "><em></span><span style="color: #e0eee0; ">actionSheet</span> <span style="color: #e0eee0; ">=</span> <span style="color: #e0eee0; ">[[</span><span style="color: #e0eee0; ">UIActionSheet</span> <span style="color: #e0eee0; ">alloc</span><span style="color: #e0eee0; ">]</span> <span style="color: #e0eee0; ">initWithTitle:</span><span style="color: #80a0ff; ">@&ldquo;确认要退出登录吗？&rdquo;</span> <span style="color: #e0eee0; ">delegate:</span><span style="color: #e0eee0; ">self</span> <span style="color: #e0eee0; ">cancelButtonTitle:</span><span style="color: #80a0ff; ">@&ldquo;不退出&rdquo;</span> <span style="color: #e0eee0; ">destructiveButtonTitle:</span><span style="color: #80a0ff; ">@&ldquo;退出&rdquo;</span> <span style="color: #e0eee0; ">otherButtonTitles:</span><span style="color: #4eee94; ">nil</span><span style="color: #e0eee0; ">,</span> <span style="color: #4eee94; ">nil</span><span style="color: #e0eee0; ">];</span><br /><span style="color: #7c7268; ">06</span>    <br /><span style="color: #7c7268; ">07</span>     <span style="color: #e0eee0; ">[</span><span style="color: #e0eee0; ">actionSheet</span> <span style="color: #e0eee0; ">showFromTabBar:</span><span style="color: #e0eee0; ">self</span><span style="color: #e0eee0; ">.</span><span style="color: #e0eee0; ">navigationController</span><span style="color: #e0eee0; ">.</span><span style="color: #e0eee0; ">tabBarController</span><span style="color: #e0eee0; ">.</span><span style="color: #e0eee0; ">tabBar</span><span style="color: #e0eee0; ">];</span><br /><span style="color: #7c7268; ">08</span>     XX<span style="color: #e0eee0; ">_RELEASE_SAFELY</span>(<span style="color: #e0eee0; ">actionSheet</span>);<br /><span style="color: #7c7268; ">09</span> <span style="color: #e0eee0; ">}</span><br /><span style="color: #f810b0; ">10</span> <span style="color: #e0eee0; ">-</span> (<span style="color: #add8e6; ">void</span>)<span style="color: #e0eee0; ">logOff</span><span style="color: #e0eee0; ">{</span><br /><span style="color: #7c7268; ">11</span><br /><span style="color: #7c7268; ">12</span>     <span style="color: #7c7268; ">//do logoff</span><br /><span style="color: #7c7268; ">13</span>    <br /><span style="color: #7c7268; ">14</span>     <span style="color: #e0eee0; ">[</span><span style="color: #e0eee0; ">self</span><span style="color: #e0eee0; ">.</span><span style="color: #e0eee0; ">navigationController</span> <span style="color: #e0eee0; ">popViewControllerAnimated:</span><span style="color: #e0eee0; ">YES</span><span style="color: #e0eee0; ">];</span><br /><span style="color: #f810b0; ">15</span> <span style="color: #e0eee0; ">}</span><br /><span style="color: #7c7268; ">16</span><br /><span style="color: #7c7268; ">17</span> <span style="color: #e0eee0; ">-</span> (<span style="color: #add8e6; ">void</span>)<span style="color: #e0eee0; ">actionSheet:</span>(<span style="color: #e0eee0; ">UIActionSheet</span> <span style="color: #e0eee0; "></em></span>)<span style="color: #e0eee0; ">actionSheet</span> <span style="color: #e0eee0; ">didDismissWithButtonIndex:</span>(<span style="color: #e0eee0; ">NSInteger</span>)<span style="color: #e0eee0; ">buttonIndex</span>; <span style="color: #e0eee0; ">{</span><br /><span style="color: #7c7268; ">18</span>     <span style="color: #90ee90; ">switch</span> (<span style="color: #e0eee0; ">buttonIndex</span>) <span style="color: #e0eee0; ">{</span><br /><span style="color: #7c7268; ">19</span>         <span style="color: #90ee90; ">case</span> <span style="color: #00ffff; ">0</span><span style="color: #e0eee0; ">:</span><br /><span style="color: #f810b0; ">20</span>             <span style="color: #e0eee0; ">[</span><span style="color: #e0eee0; ">self</span> <span style="color: #e0eee0; ">logOff</span><span style="color: #e0eee0; ">];</span><br /><span style="color: #7c7268; ">21</span>             <span style="color: #90ee90; ">break</span>;<br /><span style="color: #7c7268; ">22</span>         <span style="color: #90ee90; ">case</span> <span style="color: #00ffff; ">1</span><span style="color: #e0eee0; ">:</span><br /><span style="color: #7c7268; ">23</span>             <span style="color: #e0eee0; ">[</span><span style="color: #e0eee0; ">self</span><span style="color: #e0eee0; ">.</span><span style="color: #e0eee0; ">tableView</span> <span style="color: #e0eee0; ">deselectRowAtIndexPath:</span><span style="color: #e0eee0; ">[</span><span style="color: #e0eee0; ">self</span><span style="color: #e0eee0; ">.</span><span style="color: #e0eee0; ">tableView</span> <span style="color: #e0eee0; ">indexPathForSelectedRow</span><span style="color: #e0eee0; ">]</span> <span style="color: #e0eee0; ">animated:</span><span style="color: #e0eee0; ">YES</span><span style="color: #e0eee0; ">];</span><br /><span style="color: #7c7268; ">24</span>             <span style="color: #90ee90; ">break</span>;<br /><span style="color: #f810b0; ">25</span>         <span style="color: #90ee90; ">default</span><span style="color: #e0eee0; ">:</span><br /><span style="color: #7c7268; ">26</span>             <span style="color: #90ee90; ">break</span>;<br /><span style="color: #7c7268; ">27</span>     <span style="color: #e0eee0; ">}</span><br /><span style="color: #7c7268; ">28</span> <span style="color: #e0eee0; ">}</span>
+</div></p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">04 Feb 2012, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2012/02/04/ubuntu-sublime-text-chinese/" class="post-title">Ubuntu下设置 Sublime Text 2 显示中文 &amp;&amp; 输入中文</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-闲言碎语" href="http://huobazi.aspxboy.com//tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD">闲言碎语</a><a class="post-category post-category-奇技淫巧" href="http://huobazi.aspxboy.com//tags/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7">奇技淫巧</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a><a class="post-category post-category-Ubuntu" href="http://huobazi.aspxboy.com//tags/ubuntu">Ubuntu</a><a class="post-category post-category-Sublime Text2" href="http://huobazi.aspxboy.com//tags/sublime-text2">Sublime Text2</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>Sublime text 2在mac os 下用的很舒服，今天尝试在ubuntu下使用一下，发现汉字显示不了，</p>
+<p>后来找到方法：</p>
+<p>菜单栏 -&gt; Preferences -&gt; File Settings - User，在配置文件中增加：</p>
+<p></p>
+<p>// Settings in here override those in "Default/Base File.sublime-settings", and<br />// are overridden in turn by file type specific settings. Place your settings<br />// here, to ensure they're preserved when upgrading.<br />{<br />    "font_face": "WenQuanYi Micro Hei Mono"<br />}<br />就OK了，其中文泉驿是著名的开源字体 <a title="http://wenq.org/" href="http://wenq.org/" target="_blank">http://wenq.org/</a></p>
+<p>然后我们来解决中文输入的问题</p>
+<p>sudo apt-get install scim</p>
+<p>sudo apt-get install scim-pinyin</p>
+<p>在“系统－首选项－scim设置里“</p>
+<p>scim设置－&gt;全局设置－&gt;将预编辑字符串嵌入到客户端中  勾去掉<br />scim设置-&gt;gtk-&gt;嵌入式候选词标 勾去掉</p>
+<p>下来 在“系统－语言支持”里面选上“scim-bridge”就可以了,记得这些修改完要注销重新登录进来哦。</p>
+<p>或者 ,打开终端,输入 pkill scim,然后输入 scim -d，如果不起作用，那还是建议你注销一下</p>                
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">09 Dec 2011, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2011/12/09/ios-hide-keyboard-when-touch/" class="post-title">How to,在iOS中点击文本框以外区域，隐藏键盘</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-闲言碎语" href="http://huobazi.aspxboy.com//tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD">闲言碎语</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a><a class="post-category post-category-iOS" href="http://huobazi.aspxboy.com//tags/ios">iOS</a><a class="post-category post-category-iPhone" href="http://huobazi.aspxboy.com//tags/iphone">iPhone</a><a class="post-category post-category-键盘" href="http://huobazi.aspxboy.com//tags/%E9%94%AE%E7%9B%98">键盘</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>当点击文本框以外部分时，隐藏键盘，实现很简单，加个Category就可以了，代码如下：</p>
+<p></p>
+<div class="source" style="font-family: '[object HTMLOptionElement]', Consolas, 'Lucida Console', 'Courier New'; color: #e6e1dc; background-color: #111111; ">
+<p><span style="color: #cc7833; font-style: italic; ">#import &lt;UIKit/UIKit.h&gt;</span><br /><span style="color: #cc7833; ">@interface</span> <span style="color: #e6e1dc; ">UITextField</span> <span style="color: #e6e1dc; ">(HideKeyBoard)</span><br /><span style="color: #e6e1dc; ">-</span>(<span style="color: #da4939; ">void</span>)<span style="color: #e6e1dc; ">hideKeyBoard:</span>(<span style="color: #e6e1dc; ">UIView</span> <span style="color: #e6e1dc; ">*</span>)<span style="color: #e6e1dc; ">view</span>;<br /><span style="color: #cc7833; ">@end</span></p>
+<p><span style="color: #cc7833; font-style: italic; ">#import "UITextField+HideKeyBoard.h"</span></p>
+<p><span style="color: #cc7833; ">@implementation</span> <span style="color: #e6e1dc; ">UITextField</span> <span style="color: #e6e1dc; ">(HideKeyBoard)</span><br /><span style="color: #e6e1dc; ">-</span> (<span style="color: #da4939; ">void</span>) <span style="color: #e6e1dc; ">hideKeyBoard:</span>(<span style="color: #e6e1dc; ">UIView</span><span style="color: #e6e1dc; ">*</span>)<span style="color: #e6e1dc; ">view</span><span style="color: #e6e1dc; ">{</span><br />    <span style="color: #e6e1dc; ">UITapGestureRecognizer</span> <span style="color: #e6e1dc; ">*</span><span style="color: #e6e1dc; ">tap</span> <span style="color: #e6e1dc; ">=</span> <span style="color: #e6e1dc; ">[[</span><span style="color: #e6e1dc; ">UITapGestureRecognizer</span> <span style="color: #e6e1dc; ">alloc</span><span style="color: #e6e1dc; ">]</span><br />                                   <span style="color: #e6e1dc; ">initWithTarget:</span><span style="color: #e6e1dc; ">self</span><br />                                   <span style="color: #e6e1dc; ">action:</span><span style="color: #cc7833; ">@selector</span>(<span style="color: #e6e1dc; ">doHideKeyBoard</span><span style="color: #e6e1dc; ">)];</span><br />   <br />    <span style="color: #e6e1dc; ">tap</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">numberOfTapsRequired</span> <span style="color: #e6e1dc; ">=</span> <span style="color: #a5c261; ">1</span>;<br />    <span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">view</span>  <span style="color: #e6e1dc; ">addGestureRecognizer:</span> <span style="color: #e6e1dc; ">tap</span><span style="color: #e6e1dc; ">];</span><br />    <span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">tap</span> <span style="color: #e6e1dc; ">setCancelsTouchesInView:</span><span style="color: #e6e1dc; ">NO</span><span style="color: #e6e1dc; ">];</span><br />    <span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">tap</span> <span style="color: #e6e1dc; ">release</span><span style="color: #e6e1dc; ">];</span><br /><span style="color: #e6e1dc; ">}</span></p>
+<p><span style="color: #e6e1dc; ">-</span> (<span style="color: #da4939; ">void</span>)<span style="color: #e6e1dc; ">doHideKeyBoard</span><span style="color: #e6e1dc; ">{</span><br />    <span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">self</span> <span style="color: #e6e1dc; ">resignFirstResponder</span><span style="color: #e6e1dc; ">];</span><br /><span style="color: #e6e1dc; ">}</span><br /><span style="color: #cc7833; ">@end</span></p>
+<p><span style="color: #e6e1dc; ">-</span> (<span style="color: #da4939; ">void</span>)<span style="color: #e6e1dc; ">viewDidLoad</span><br /><span style="color: #e6e1dc; ">{</span><br />    <span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">super</span> <span style="color: #e6e1dc; ">viewDidLoad</span><span style="color: #e6e1dc; ">];</span><br />    <span style="color: #bc9458; font-style: italic; ">// Do any additional setup after loading the view from its nib.</span><br />    <span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">self</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">txtInput</span> <span style="color: #e6e1dc; ">hideKeyBoard:</span><span style="color: #e6e1dc; ">self</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">view</span><span style="color: #e6e1dc; ">];</span><br /><span style="color: #e6e1dc; ">}</span></p>
+</div>
+<p>see also: <a href="https://gist.github.com/1450404">https://gist.github.com/1450404</a></p>              
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">28 Nov 2011, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2011/11/28/how-to-uninstall-xcode/" class="post-title"> [How to] 如何卸载Xcode</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-xcode" href="http://huobazi.aspxboy.com//tags/xcode">xcode</a><a class="post-category post-category-iOS" href="http://huobazi.aspxboy.com//tags/ios">iOS</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p> </p>
+<pre> $ sudo /Developer/Library/uninstall-devtools --mode=all</pre>
+<p> </p>                
+
+                    </div>
+                </section>
+                
+            </div>
+            
+<div class="pagination">
+  <nav role="pagination" class="post-list-pagination">
+      
+    <span class="post-list-pagination-item post-list-pagination-item-current">Page 1 of 22</span>
+    
+      <a href="/page/2/" class="post-list-pagination-item pure-button post-list-pagination-item-next">
+        Older&nbsp;<i class="fa fa-angle-double-right"></i>
+      </a>
+    
+  </nav>
+</div>
+
+
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a></li>
+        </ul>
+    </div>
+</div>
+<script src="http://huobazi.aspxboy.com//js/all.min.js"></script>
+        </div>
+    </div>
+</div>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-56321-3', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

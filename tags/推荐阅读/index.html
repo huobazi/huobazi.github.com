@@ -1,0 +1,637 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>推荐阅读 &middot; 武眉博</title>
+
+    <meta name="description" content="Marble&#39;s blog">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="huobazi" />
+    <meta name="twitter:title" content="推荐阅读 &middot; 武眉博">
+    <meta name="twitter:description" content="Marble&#39;s blog">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="推荐阅读 &middot; 武眉博">
+    <meta property="og:description" content="Marble&#39;s blog">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    
+    
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+    
+
+    <link rel="stylesheet" href="http://huobazi.aspxboy.com//css/all.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <h1 class="brand-title"><a href="http://huobazi.aspxboy.com/">武眉博</a></h1>
+            <h2 class="brand-tagline"> Marble&#39;s blog </h2>
+        </hgroup>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://twitter.com/huobazi"><i class="fa fa-twitter"></i> Twitter</a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://github.com/huobazi "><i class="fa fa-github-alt"></i> github</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</div>
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                
+                <h1 class="content-subhead">25 Feb 2012, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2012/02/25/hg232/" class="post-title">HG232破解一例</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-闲言碎语" href="http://huobazi.aspxboy.com//tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD">闲言碎语</a><a class="post-category post-category-推荐阅读" href="http://huobazi.aspxboy.com//tags/%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB">推荐阅读</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a><a class="post-category post-category-HG232" href="http://huobazi.aspxboy.com//tags/hg232">HG232</a><a class="post-category post-category-HUAWEI" href="http://huobazi.aspxboy.com//tags/huawei">HUAWEI</a><a class="post-category post-category-电信" href="http://huobazi.aspxboy.com//tags/%E7%94%B5%E4%BF%A1">电信</a><a class="post-category post-category-IPTV" href="http://huobazi.aspxboy.com//tags/iptv">IPTV</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>###0. 默认超级账户</p>
+
+<p>如果电信没有改过你的猫账户，可以尝试使用下面的信息登陆，如果不可以在进入后面的步骤1和2破解
+<code>帐号： telecomadmin 密码：nE7jA%5m (注意大小写)</code></p>
+
+<p>###1. 下载配置文件</p>
+
+<p>猫上插入U盘，下面两种方法都可以，您挑一种吧。</p>
+
+<p>#####1.1 手工操作&mdash;-乐趣</p>
+
+<p>用猫后面印刷的普通用户useradmin登陆，这个用户登陆进去什么高级全选都木有，但是表着急，我这么干的，浏览器用firefox，如果木有就去下载，然后装上firebug，去看隐藏的html元素吧，把样式表的disply:none;都禁止掉，什么 备份配置文件、启动从U盘加载配置、回复出厂值、日志等等都出来了吧，插入U盘，点击备份按钮，文件就下载下来了。</p>
+
+<p>#####1.2 连接下载&mdash;-直接</p>
+
+<p>同时通过分析html和javascript代码，我直接把下载地址找到了，如果你不想或者木有firefox&amp;&amp;firebug，那就直接访问：
+<a href="http://192.168.1.1/html/ehomeclient/cfgUSBRestore.cgi?coverusbpath=usb1_1">http://192.168.1.1/html/ehomeclient/cfgUSBRestore.cgi?coverusbpath=usb1_1</a> 这是firebug分析抓包后得到的地址，嘿嘿。
+配置文件就能成功被备份出了，在U盘根目录生成的e8_Config_backup文件夹里ctce8_HG232.cfg。</p>
+
+<p>###2. 解密配置文件</p>
+
+<p>网上有现成的编译好的工具可以直接用，不过作为技术宅男，当然要做点有挑战性的了，我弄了俩，一个javascript写的，一个ruby写的，开源滴，您用着放心哦</p>
+
+<p>#####2.1 无ruby环境</p>
+
+<p>将代码库里的decrypt.html另存到本地，然后用浏览器打开，在Source里粘贴用ctce8_HG232.cfg文件的内容，
+点击解密按钮,就可进行解密，加密同理。</p>
+
+<p>#####2.2 有ruby环境</p>
+
+<p>如果有ruby运行环境，则可以使用代码库里的decrypt.rb另存到本地来，把要破解或者加密的文件放入相同目录,在命令行运行 ruby decrypt.rb 按照提示做就可以了</p>
+
+<p>#####2.3 超级管理员密码
+到文本编辑软件打开破解后的文件，查找telecomadmin，找到
+    <X_ATP_UserInfoInstance InstanceID="1" Username="telecomadmin" Userpassword="telecomadmin******" Userlevel="2" Busy="0" LoginIP=""/>
+Userpassword里面的就是超级管理员的密码了。一般是telecomadmin加串数字。</p>
+
+<p>###3. 设置</p>
+
+<p>后面的情况就大同小异了，网上很多介绍，开路由，，自动拨号，开无线，一堆一堆的教程，另外有些设置在管理平台是没有的，比如下面的ftp和telnet设置，如果又必要使用这些相功能，修改配置文件，加密后，登陆后台后启用从usb恢复设备这个功能，然后把配置文件夹自己修改后，再恢复回去，就可以了。
+    <X_CT-COM_ServiceManage TelnetEnable="0" TelnetUserName="!!Huawei" TelnetPassword="@HuaweiHgw" TelnetPort="23" WebWanAccessEnable="0" FtpEnable="1" FtpUserName="ftp" FtpPassword="ftp" FtpPort="21" FtpPath="/mnt"/></p>
+
+<p>###4. 代码</p>
+
+<p>本文提及的代码可以在<a href="https://github.com/huobazi/hg232">https://github.com/huobazi/hg232</a>下载到</p>
+
+<p>###5.  其他</p>
+
+<p>4个RJ45口理论上都可以设置成接电脑或者itv输出，并不局限于写了itv的那个口。另外，也可以增加一个itv无线网络，在你的机顶盒上加个无线网卡，机顶盒拨入此无线网络，这样就不用拉一堆堆的线了，很适用于前期没有做好布线设计的朋友。</p>
+
+<p>itv 不选择 无线的话 要选VLAN透传，选无线是VLAN修改</p>
+
+<p>另外，网上有现成的改好的配置文件下载，<a href="http://email2me.blog.163.com/blog/static/34347033201101094128402/">http://email2me.blog.163.com/blog/static/34347033201101094128402/</a></p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">30 Apr 2010, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2010/04/30/360buy-vs-newegg/" class="post-title">京东新蛋攻防</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-闲言碎语" href="http://huobazi.aspxboy.com//tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD">闲言碎语</a><a class="post-category post-category-推荐阅读" href="http://huobazi.aspxboy.com//tags/%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB">推荐阅读</a><a class="post-category post-category-Newegg" href="http://huobazi.aspxboy.com//tags/newegg">Newegg</a><a class="post-category post-category-京东" href="http://huobazi.aspxboy.com//tags/%E4%BA%AC%E4%B8%9C">京东</a><a class="post-category post-category-新蛋" href="http://huobazi.aspxboy.com//tags/%E6%96%B0%E8%9B%8B">新蛋</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>这是一片不断膨胀、愈演愈烈的虚拟战场。每一位统帅都着迷于它的独特魅力——任何势力的盛衰都取决于无数素未谋面的人的鼠标点击。每一位统帅也都必须铭记：实体世界里“强攻弱守”的军事规律已经在此失效。这里唯一可以遵循的生死法则是，无论势力强弱，一旦站到防守的位置上，那么溃败将接踵而来，且来得出乎意料地快</p>
+<p></p>
+<p><a href="http://finance.ifeng.com/news/20100429/2128118.shtml">http://finance.ifeng.com/news/20100429/2128118.shtml</a></p>
+<p>京东新蛋攻防<br />来源：凤凰网    日期：10年04月30日 10:35:18</p>              
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">27 Oct 2009, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2009/10/27/kissy-editor/" class="post-title">在线编辑器的一个新选择。</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-前端开发" href="http://huobazi.aspxboy.com//tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91">前端开发</a><a class="post-category post-category-推荐阅读" href="http://huobazi.aspxboy.com//tags/%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB">推荐阅读</a><a class="post-category post-category-FckEditor" href="http://huobazi.aspxboy.com//tags/fckeditor">FckEditor</a><a class="post-category post-category-kissy-editor" href="http://huobazi.aspxboy.com//tags/kissy-editor">kissy-editor</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>今天<a title="http://lifesinger.org/" href="http://lifesinger.org/" target="_blank">lifesinger</a>发布了<a title="kiss editor" href="http://lifesinger.org/blog/2009/10/kissy-editor/" target="_blank">淘宝编辑器</a>,</p>
+<p>可以在这里看到<a href="http://kissy.googlecode.com/svn/trunk/src/editor/demo/basic.html" target="_blank">演示</a></p>
+<p>介绍可以看这里，<a href="http://lifesinger.org/blog/2009/10/kissy-editor/">http://lifesinger.org/blog/2009/10/kissy-editor/</a></p>              
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">10 Oct 2009, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2009/10/10/visio-dashed/" class="post-title">【How to】解决Visio虚线复制到word中变为实线</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-闲言碎语" href="http://huobazi.aspxboy.com//tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD">闲言碎语</a><a class="post-category post-category-推荐阅读" href="http://huobazi.aspxboy.com//tags/%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB">推荐阅读</a><a class="post-category post-category-它山之石" href="http://huobazi.aspxboy.com//tags/%E5%AE%83%E5%B1%B1%E4%B9%8B%E7%9F%B3">它山之石</a><a class="post-category post-category-Visio" href="http://huobazi.aspxboy.com//tags/visio">Visio</a><a class="post-category post-category-虚线" href="http://huobazi.aspxboy.com//tags/%E8%99%9A%E7%BA%BF">虚线</a><a class="post-category post-category-实线" href="http://huobazi.aspxboy.com//tags/%E5%AE%9E%E7%BA%BF">实线</a><a class="post-category post-category-Word" href="http://huobazi.aspxboy.com//tags/word">Word</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>添加 MetafileDashLineAsSolid 到以下注册表位置，类型DWORD。</p>
+<p> • Visio 2007<br />HKEY_CURRENT_USER\Software\Microsoft\Office\12.0\Visio\Application<br />• Visio 2003<br />HKEY_CURRENT_USER\Software\Microsoft\Office\11.0\Visio\Application<br />属性值：</p>
+<p>• 0：虚线或虚线行执行不替换为实线。<br />• 1：虚线或虚线极端情形中行只替换为实线。 100 倍的原始文件大小时可能导致文件大小中增加例如, 替换实线为虚线或虚线行。 <br />• 2：替换实线用于当合理虚线或虚线行。 这是默认值。 <br />• 3：始终替换为实线虚线或虚线行。 </p>
+<p> </p>                
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">02 Sep 2009, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2009/09/02/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8A%B6%E6%80%81%E4%BB%A3%E7%A0%81%E5%90%AB%E4%B9%89/" class="post-title">服务器状态代码含义</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-推荐阅读" href="http://huobazi.aspxboy.com//tags/%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB">推荐阅读</a><a class="post-category post-category-它山之石" href="http://huobazi.aspxboy.com//tags/%E5%AE%83%E5%B1%B1%E4%B9%8B%E7%9F%B3">它山之石</a><a class="post-category post-category-服务器状态代码" href="http://huobazi.aspxboy.com//tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8A%B6%E6%80%81%E4%BB%A3%E7%A0%81">服务器状态代码</a><a class="post-category post-category-404" href="http://huobazi.aspxboy.com//tags/404">404</a><a class="post-category post-category-500" href="http://huobazi.aspxboy.com//tags/500">500</a><a class="post-category post-category-503" href="http://huobazi.aspxboy.com//tags/503">503</a><a class="post-category post-category-403" href="http://huobazi.aspxboy.com//tags/403">403</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><h2 class="title">服务器状态代码含义google来的，存档。</h2>
+<p class="title"> </p>
+<p></p>
+<table border="1" cellspacing="1" cellpadding="4" width="100%" align="center" bordercolor="#009999"><tbody>
+<tr>
+<td width="25" align="center">100</td>
+<td width="150" align="center">Continue</td>
+<td>初始的请求已经接受，客户应当继续发送请求的其余部分。（HTTP 1.1新）</td>
+</tr>
+<tr>
+<td align="center">101</td>
+<td align="center">Switching Protocols</td>
+<td>服务器将遵从客户的请求转换到另外一种协议（HTTP 1.1新）</td>
+</tr>
+<tr>
+<td align="center">200</td>
+<td align="center">OK</td>
+<td>一切正常，对GET和POST请求的应答文档跟在后面。</td>
+</tr>
+<tr>
+<td align="center">201</td>
+<td align="center">Created</td>
+<td>服务器已经创建了文档，Location头给出了它的URL。</td>
+</tr>
+<tr>
+<td align="center">202</td>
+<td align="center">Accepted</td>
+<td>已经接受请求，但处理尚未完成。</td>
+</tr>
+<tr>
+<td align="center">203</td>
+<td align="center">Non-Authoritative Information</td>
+<td>文档已经正常地返回，但一些应答头可能不正确，因为使用的是文档的拷贝（HTTP 1.1新）。</td>
+</tr>
+<tr>
+<td align="center">204</td>
+<td align="center">No Content</td>
+<td>没有新文档，浏览器应该继续显示原来的文档。如果用户定期地刷新页面，而Servlet可以确定用户文档足够新，这个状态代码是很有用的。</td>
+</tr>
+<tr>
+<td align="center">205</td>
+<td align="center">Reset Content</td>
+<td>没有新的内容，但浏览器应该重置它所显示的内容。用来强制浏览器清除表单输入内容（HTTP 1.1新）。</td>
+</tr>
+<tr>
+<td align="center">206</td>
+<td align="center">Partial Content</td>
+<td>客户发送了一个带有Range头的GET请求，服务器完成了它（HTTP 1.1新）。</td>
+</tr>
+<tr>
+<td align="center">300</td>
+<td align="center">Multiple Choices</td>
+<td>客户请求的文档可以在多个位置找到，这些位置已经在返回的文档内列出。如果服务器要提出优先选择，则应该在Location应答头指明。</td>
+</tr>
+<tr>
+<td align="center">301</td>
+<td align="center">Moved Permanently</td>
+<td>客户请求的文档在其他地方，新的URL在Location头中给出，浏览器应该自动地访问新的URL。</td>
+</tr>
+<tr>
+<td align="center">302</td>
+<td align="center">Found</td>
+<td>
+<p>类似于301，但新的URL应该被视为临时性的替代，而不是永久性的。注意，在HTTP1.0中对应的状态信息是“Moved Temporatily”。<br />出现该状态代码时，浏览器能够自动访问新的URL，因此它是一个很有用的状态代码。</p>
+<p>注意这个状态代码有时候可以和301替换使用。例如，如果浏览器错误地请求<a href="http://host/~user（缺少了后面的斜杠），有的服务器返回301，有的则返回302。">http://host/~user（缺少了后面的斜杠），有的服务器返回301，有的则返回302。</a></p>
+<p>严格地说，我们只能假定只有当原来的请求是GET时浏览器才会自动重定向。请参见307。</p>
+</td>
+</tr>
+<tr>
+<td align="center">303</td>
+<td align="center">See Other</td>
+<td>类似于301/302，不同之处在于，如果原来的请求是POST，Location头指定的重定向目标文档应该通过GET提取（HTTP 1.1新）。</td>
+</tr>
+<tr>
+<td align="center">304</td>
+<td align="center">Not Modified</td>
+<td>客户端有缓冲的文档并发出了一个条件性的请求（一般是提供If-Modified-Since头表示客户只想比指定日期更新的文档）。服务器告诉客户，原来缓冲的文档还可以继续使用。</td>
+</tr>
+<tr>
+<td align="center">305</td>
+<td align="center">Use Proxy</td>
+<td>客户请求的文档应该通过Location头所指明的代理服务器提取（HTTP 1.1新）。</td>
+</tr>
+<tr>
+<td align="center">307</td>
+<td align="center">Temporary Redirect</td>
+<td>和302（Found）相同。许多浏览器会错误地响应302应答进行重定向，即使原来的请求是POST，即使它实际上只能在POST请求的应答是303时才能重定向。由于这个原因，HTTP 1.1新增了307，以便更加清除地区分几个状态代码：当出现303应答时，浏览器可以跟随重定向的GET和POST请求；如果是307应答，则浏览器只能跟随对GET请求的重定向。（HTTP 1.1新）</td>
+</tr>
+<tr>
+<td align="center">400</td>
+<td align="center">Bad Request</td>
+<td>请求出现语法错误。</td>
+</tr>
+<tr>
+<td align="center">401</td>
+<td align="center">Unauthorized</td>
+<td>客户试图未经授权访问受密码保护的页面。应答中会包含一个WWW-Authenticate头，浏览器据此显示用户名字/密码对话框，然后在填写合适的Authorization头后再次发出请求。</td>
+</tr>
+<tr>
+<td align="center">403</td>
+<td align="center">Forbidden</td>
+<td>资源不可用。服务器理解客户的请求，但拒绝处理它。通常由于服务器上文件或目录的权限设置导致。</td>
+</tr>
+<tr>
+<td align="center">404</td>
+<td align="center">Not Found</td>
+<td>无法找到指定位置的资源。这也是一个常用的应答。</td>
+</tr>
+<tr>
+<td align="center">405</td>
+<td align="center">Method Not Allowed</td>
+<td>请求方法（GET、POST、HEAD、DELETE、PUT、TRACE等）对指定的资源不适用。（HTTP 1.1新）</td>
+</tr>
+<tr>
+<td align="center">406</td>
+<td align="center">Not Acceptable</td>
+<td>指定的资源已经找到，但它的MIME类型和客户在Accpet头中所指定的不兼容（HTTP 1.1新）。</td>
+</tr>
+<tr>
+<td align="center">407</td>
+<td align="center">Proxy Authentication Required</td>
+<td>类似于401，表示客户必须先经过代理服务器的授权。（HTTP 1.1新）</td>
+</tr>
+<tr>
+<td align="center">408</td>
+<td align="center">Request Timeout</td>
+<td>在服务器许可的等待时间内，客户一直没有发出任何请求。客户可以在以后重复同一请求。（HTTP 1.1新）</td>
+</tr>
+<tr>
+<td align="center">409</td>
+<td align="center">Conflict</td>
+<td>通常和PUT请求有关。由于请求和资源的当前状态相冲突，因此请求不能成功。（HTTP 1.1新）</td>
+</tr>
+<tr>
+<td align="center">410</td>
+<td align="center">Gone</td>
+<td>所请求的文档已经不再可用，而且服务器不知道应该重定向到哪一个地址。它和404的不同在于，返回407表示文档永久地离开了指定的位置，而404表示由于未知的原因文档不可用。（HTTP 1.1新）</td>
+</tr>
+<tr>
+<td align="center">411</td>
+<td align="center">Length Required</td>
+<td>服务器不能处理请求，除非客户发送一个Content-Length头。（HTTP 1.1新）</td>
+</tr>
+<tr>
+<td align="center">412</td>
+<td align="center">Precondition Failed</td>
+<td>请求头中指定的一些前提条件失败（HTTP 1.1新）。</td>
+</tr>
+<tr>
+<td align="center">413</td>
+<td align="center">Request Entity Too Large</td>
+<td>目标文档的大小超过服务器当前愿意处理的大小。如果服务器认为自己能够稍后再处理该请求，则应该提供一个Retry-After头（HTTP 1.1新）。</td>
+</tr>
+<tr>
+<td align="center">414</td>
+<td align="center">Request URI Too Long</td>
+<td>URI太长（HTTP 1.1新）。</td>
+</tr>
+<tr>
+<td align="center">416</td>
+<td align="center">Requested Range Not Satisfiable</td>
+<td>服务器不能满足客户在请求中指定的Range头。（HTTP 1.1新）</td>
+</tr>
+<tr>
+<td align="center">500</td>
+<td align="center">Internal Server Error</td>
+<td>服务器遇到了意料不到的情况，不能完成客户的请求。</td>
+</tr>
+<tr>
+<td align="center">501</td>
+<td align="center">Not Implemented</td>
+<td>服务器不支持实现请求所需要的功能。例如，客户发出了一个服务器不支持的PUT请求。</td>
+</tr>
+<tr>
+<td align="center">502</td>
+<td align="center">Bad Gateway</td>
+<td>服务器作为网关或者代理时，为了完成请求访问下一个服务器，但该服务器返回了非法的应答。</td>
+</tr>
+<tr>
+<td align="center">503</td>
+<td align="center">Service Unavailable</td>
+<td>服务器由于维护或者负载过重未能应答。例如，Servlet可能在数据库连接池已满的情况下返回503。服务器返回503时可以提供一个Retry-After头。</td>
+</tr>
+<tr>
+<td align="center">504</td>
+<td align="center">Gateway Timeout</td>
+<td>由作为代理或网关的服务器使用，表示不能及时地从远程服务器获得应答。（HTTP 1.1新）</td>
+</tr>
+<tr>
+<td align="center">505</td>
+<td align="center">HTTP Version Not Supported</td>
+<td>服务器不支持请求中所指明的HTTP版本。（HTTP 1.1新）</td>
+</tr>
+</tbody></table>
+<p class="aaa"> </p></p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">01 Nov 2008, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2008/11/01/hf/" class="post-title">哈佛经典案例，赶集卖猪记 </a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-闲言碎语" href="http://huobazi.aspxboy.com//tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD">闲言碎语</a><a class="post-category post-category-推荐阅读" href="http://huobazi.aspxboy.com//tags/%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB">推荐阅读</a><a class="post-category post-category-它山之石" href="http://huobazi.aspxboy.com//tags/%E5%AE%83%E5%B1%B1%E4%B9%8B%E7%9F%B3">它山之石</a><a class="post-category post-category-卖猪" href="http://huobazi.aspxboy.com//tags/%E5%8D%96%E7%8C%AA">卖猪</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>哈佛经典案例，赶集卖猪记（次贷危机加强篇）<br />　　<br />　　这是目前为止关于次贷危机最通俗易懂的版本了。<br />　　<br />　　1<br />　　<br />　　大家都知道这个案例：<br />　　<br />　　一男赶集卖猪，天黑遇雨，二十头猪未卖成，到一农家借宿。<br />　　<br />　　少妇说：家里只一人不便。<br />　</p>
+<p></p>
+<p>　<br />　　男：求你了大妹子，给猪一头。<br />　　<br />　　女：好吧，但家只有一床。<br />　　<br />　　男：我也到床上睡，再给猪一头。<br />　　<br />　　女：同意。<br />　　<br />　　半夜男与女商量，我到你上面睡，女不肯。<br />　　<br />　　男：给猪两头。<br />　　<br />　　女允，要求上去不能动。<br />　　<br />　　少顷，男忍不住，央求动一下，女不肯。<br />　　<br />　　男：动一下给猪两头。女同意。<br />　　<br />　　男动了八次停下，女问为何不动？<br />　　<br />　　男说猪没了。<br />　　<br />　　女小声说：要不我给你猪……<br />　　<br />　　天亮后，男吹着口哨赶30头（含少妇家的10头）猪赶集去了……<br />　　<br />　　[ 哈佛导师评论 ]<br />　　<br />　　要发现用户潜在需求，前期必须引导，培养用户需求，因此产生的投入是符合发展规律的。<br />　　<br />　　2<br />　　<br />　　另一男得知此事，决意如法炮制，遂赶集卖猪，天黑遇雨，二十头猪未卖成，到一农家借宿<br />　　<br />　　少妇说：家里只一人不便。<br />　　<br />　　男：求你了大妹子，给猪一头<br />　　<br />　　女：好吧，但家只有一床。<br />　　<br />　　男：我也到床上睡，再给猪一头。<br />　　<br />　　女：同意。<br />　　<br />　　半夜男商女，我到你上面睡，女不肯。<br />　　<br />　　男：给猪两头。<br />　　<br />　　女允，要求上去不能动。<br />　　<br />　　少顷，男忍不住，央求动一下，女不肯。<br />　　<br />　　男：动一下给猪两头。女同意。<br />　　<br />　　男动了七次停下，女问为何不动？<br />　　<br />　　男说：完事了～～～女：......<br />　　<br />　　天亮后，男低著头赶2头猪赶集去了......<br />　　<br />　　[ 哈佛导师评论 ]<br />　　<br />　　要结合企业自身规模进行谨慎投资，谨防资金链断裂问题<br />　　<br />　　3<br />　　<br />　　又一男得知此事，决意如法炮制兼吸取教训，遂先用一头猪去换一粒伟哥，事必，天亮后，男吹着口哨赶38头（含少妇家的18头）猪赶集去了……<br />　　<br />　　[ 哈佛导师评论 ]<br />　　<br />　　企业如果获得金融资本的帮助，自身经营能力将得到倍增。<br />　　<br />　　4<br />　　<br />　　知道此法男多，伟哥供不应求，逐渐要2头，3头猪换一粒伟哥。<br />　　<br />　　[ 哈佛导师评论 ]<br />　　<br />　　这就是通货膨胀。<br />　　<br />　　5<br />　　<br />　　当伟哥价格涨到16头猪一颗的时候...<br />　　<br />　　[ 哈佛导师评论 ]<br />　　<br />　　该男已经进入边际成本，除了拥有对自身能力的自信和未来良好愿望以外，实际现猪流已经为零。<br />　　<br />　　6<br />　　<br />　　但换猪男越来越多，卖伟哥的决定，扩展生产能力，推出一种次级伟哥，如果你缺一头猪，只要你承诺可以到该女房中一夜，就可以先借，事成后补交猪款，这个方法大大促进了伟哥销售。<br />　　<br />　　[ 哈佛导师评论 ]<br />　　<br />　　这就是贷款，让企业可以根据未来的收益选择借支流动资金。<br />　　<br />　　7<br />　　<br />　　伟哥专卖店后来在即使你一头猪都没有，只要你承诺可以到该女房中一夜，就可以先借，事成后补交猪款。<br />　　<br />　　[ 哈佛导师评论 ]<br />　　<br />　　这就是金融创新，让现在的人花未来的钱，反正等你老了未来的钱你也花不动。<br />　　<br />　　8<br />　　<br />　　消息一出，换猪男越来越多，有人找伟哥专卖店，这个项目太好了，我们把它变成优质基金，对外销售债券，你们也就可以分享我的收益，如何？<br />　　<br />　　结果伟哥专卖店觉得甚好，于是该公司把换猪男分三类，一类是拿现猪换的，一类是一部分现猪贷的，一类是完全没有现猪借的，发行三种债券。大家踊跃而上。纷纷购买伟哥专卖店的债券，伟哥专卖店生意太好，就把债券销售外包给另外一家公司运作，该公司也一并大发其财，公司越做越大，甚至可以脱离实际伟哥销售情况来发行，给自己和伟哥专卖店带来巨大的现金收益。<br />　　<br />　　[ 哈佛导师评论 ]<br />　　<br />　　这就是专业的人做专业的事，从实体经营到资本运作，经济进入了更高的层次。<br />　　<br />　　9<br />　　<br />　　为了防止自己债券未来有损失，该公司决定给它买上保险，这样债券销售就更容易，因为一旦债券出现问题，还可以获得保险公司的赔付，哇，销售这下子太好了，保险公司也获得巨大平白无故的保险收入。<br />　　<br />　　[ 哈佛导师评论 ]<br />　　<br />　　这就是风险对冲，策略联盟，提高了企业的抗风险能力，也保护了消费者利益。<br />　　<br />　　10<br />　　<br />　　换猪男太多，排长队等待，该女无法承受，说老娘不干了，我搬家，一时间有无数拥有伟哥的欠猪男。<br />　　<br />　　[ 哈佛导师评论 ]<br />　　<br />　　这是个别现象，属于市场的正常波动，不会影响整个经济。<br />　　<br />　　11<br />　　<br />　　结果该女迟迟不肯搬回。一部分欠猪男没有收入，只好赖帐，结果大量债券到期无法换现猪吃，债券公司一看，一粒伟哥16头猪，这哪里还得起，宣布倒闭<br />　　<br />　　[ 哈佛导师评论 ]<br />　　<br />　　这是次贷危机，不会影响整个金融行业。<br />　　<br />　　12<br />　　<br />　　哪里晓得债券公司还把债券上了保险，保险公司一看，这哪里赔得起，于是也宣布要倒闭。<br />　　<br />　　[ 哈佛导师评论 ]<br />　　<br />　　这是金融危机，还不会影响整个实体经济。<br />　　<br />　　13<br />　　<br />　　后文：据说该女已搬到中国定居。</p>
+<p>from:http://topic.csdn.net/u/20081030/09/0A743CDE-0A1D-4824-975C-B6984D545C3E.html</p>               
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">26 Oct 2008, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2008/10/26/crisis-and-ons/" class="post-title">次贷危机和一夜情</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-闲言碎语" href="http://huobazi.aspxboy.com//tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD">闲言碎语</a><a class="post-category post-category-推荐阅读" href="http://huobazi.aspxboy.com//tags/%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB">推荐阅读</a><a class="post-category post-category-它山之石" href="http://huobazi.aspxboy.com//tags/%E5%AE%83%E5%B1%B1%E4%B9%8B%E7%9F%B3">它山之石</a><a class="post-category post-category-ONS" href="http://huobazi.aspxboy.com//tags/ons">ONS</a><a class="post-category post-category-CRISIS" href="http://huobazi.aspxboy.com//tags/crisis">CRISIS</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>     有一天，一位其貌不扬的男士，带着一位十分艳丽的OL，来到Causeway Bay一家LV店。他为OL选了一价值6万5元的LV handbag。　　付款时，男士掏出支票本，十分潇洒地签了一张支票。店员有些为难，因为这对夫妇是第一次来店购物。<br />　　男士看穿了店员的心思，十分冷静地对店员说： "我感觉到，您担心这是一张是空头支票，对吗？今天是周六，银行关门。我建议您把支票和handbag都留下。等到星期一支票兑现之后，再请你们把 handbag 送到这位小姐的府上。您看这样行不行？"<br />　</p>
+<p></p>
+<p>　店员放了下心来，欣然地接受了这个建议，并且大方的承诺，递送handbag的费用由该店承担，他本人将会亲自把这件事情给办妥。<br />　　星期一，店员拿着支票去银行入账，支票果真是张空头支票！愤怒的店员打电话给那位顾客，客户对他说： "这没有什么要紧啊！你和我都没有损失。上星期六的晚上我已经同那个女孩上床了！哦，多谢您的合作。" 这个故事揭示了次贷危机的本质。人们在对未来收益充满良好预期的时候，对于可能加大风险缺乏防范意识。美女认为周一六万多LV就到家了，自然也就放松了警惕，认为ONS的投资是值得的，对于投入产出的预期是建立在一个具有巨大不确定风险的情况下的。而对未来收益预期的包装则是这些投资机构最擅长的事情。中国的股民大多跟这个美女一样，所以亏钱基本上是活该，没有这些人，股市赚谁的钱呢。而媒体和分析家们，往往在其中扮演了LV店员的配合角色。from:http://www.im286.com/thread-2983005-1-10.html</p>              
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">02 Sep 2007, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2007/09/02/cb-878740/" class="post-title">员工辞职的十大原因！ </a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-闲言碎语" href="http://huobazi.aspxboy.com//tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD">闲言碎语</a><a class="post-category post-category-推荐阅读" href="http://huobazi.aspxboy.com//tags/%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB">推荐阅读</a><a class="post-category post-category-它山之石" href="http://huobazi.aspxboy.com//tags/%E5%AE%83%E5%B1%B1%E4%B9%8B%E7%9F%B3">它山之石</a><a class="post-category post-category-辞职" href="http://huobazi.aspxboy.com//tags/%E8%BE%9E%E8%81%8C">辞职</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>美国企管顾问史密斯（Gregory Smith），日前在《CEO Refresher》杂志上指出，根据他多年的顾问经验，员工辞职的十大原因为<br />1、员工的工作量过重，造成他们必须在晚上或周末加班。 <br /><br />2、公司不愿意在办公室杂务上，另外再花费雇用专人负责，以致专业工作者必须自行做影印等工作。<br /><br />3、当员工可以在其他公司找到薪水高二至三成的工作时，公司却宣布暂时不帮员工加薪及升迁。<br /><br />　　4、公司不附予员工做决定的权力。<br /><br />　　5、公司不断重整部门、转调员工职务，以及改变公司走向。 <br /><br />6、公司不向员工清楚沟通目标及决定，以致有时候当员工完成一项工作时，却遭到公司的拒绝，严重打击士气。 <br /><br />　　7、主管对某些员工偏心，给予他们较好的办公室，或者较舒适的出差机会等。<br /><br />　　8、公司搬家，迫使员工通勤时间加倍等。 <br /><br />　　9、公司升迁没有能力的员工，真正的人才却没有受到重视。 <br /><br />　　10、公司虽然强调团队合作，但是却塑造部门或员工间必须激烈竞争的环境</p>              
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">31 Mar 2007, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2007/03/31/cb-694846/" class="post-title">上班人员必读：“五险一金”详解！</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-闲言碎语" href="http://huobazi.aspxboy.com//tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD">闲言碎语</a><a class="post-category post-category-推荐阅读" href="http://huobazi.aspxboy.com//tags/%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB">推荐阅读</a><a class="post-category post-category-五险一金" href="http://huobazi.aspxboy.com//tags/%E4%BA%94%E9%99%A9%E4%B8%80%E9%87%91">五险一金</a><a class="post-category post-category-社保" href="http://huobazi.aspxboy.com//tags/%E7%A4%BE%E4%BF%9D">社保</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>问：什么是五险一金？ </p>
+<br /><p>    答：“五险一金”讲的是五种保险，包括养老保险、医疗保险、失业保险、工伤保险和生育保险；“一金”指的是住房公积金。 </p>
+<br /><p>    其中养老保险、医疗保险和失业保险，这三种险是由企业和个人共同缴纳的保费，工伤保险和生育保险完全是由企业承担的。个人不需要缴纳。这里要注意的是“五险”是法定的，而“一金”不是法定的。 </p>
+<br /><p>    问：“五险一金”的缴费比例是什么？ </p>
+<br /><p>    答：目前北京养老保险缴费比例：单位20%(其中17%划入统筹基金，3%划入个人帐户)，个人8%(全部划入个人帐户)；医疗保险缴费比例：单位10%，个人2%+3元。 </p>
+<br /><p>    失业保险缴费比例：单位1.5%，个人0.5%；工伤保险根据单位被划分的行业范围来确定它的工伤费率；生育保险缴费比例：单位0.8%，个人不交钱。 </p>
+<br /><p>    公积金缴费比例：　根据企业的实际情况，选择住房公积金缴费比例。但原则上最高缴费额不得超过北京市职工平均工资300%的10%。 </p>
+<br /><p>    统筹基金即：在养老保险制度从国家—单位制逐渐向国家—社会制转变的过程中需要国家统筹，以解决经济发展不平衡及人口老龄化等问题。 </p>
+<br /><p>    (1)以企业缴费为主建立社会统筹基金；(2)由职工和企业缴费为主建立个人帐户；(3)政府负担养老保险基金的管理费用。这种社会统筹和个人帐户相结合的半基金制有利于应付中国人口老龄化危机，逐渐分散旧制度到新制度的转轨成本，逐步实现由企业养老保险制度到个人养老保险制度的转变。 </p>
+<br /><p>    四险一金的缴纳额度每个地区的规定都不同，基数是以工资总额为基数。有的企业在发放时有基本工资，有相关一些补贴，但有的企业在缴纳时，只是基本工资，这是违反法律规定的。具体比例要向当地的劳动部门去咨询。 </p>
+<br /><p>    关于养老保险、失业保险和医疗保险的支取，是在法定允许的情况下才可以领取，是由设保登记部门来发放，比如“养老保险，要达到法定的年龄才可以，失业保险金的领取也是要具备条件，比如你到户口所在地的街道办事处办理失业证明，同时又办了求职证，就是指你失业以后还必须有求职的意愿，这样的条件才可以领取。 </p>
+<br /><p>    如果失业之后你不想工作，那么就不能给你发保险金。另外，养老金和失业金是不能同时享受的。 </p>
+<br /><p>    问：试用期内是否享有保险？ </p>
+<br /><p>    答：在试用期内也应该有享受保险，因为试用期是合同期的一个组成部分，它不是隔离在合同期之外的。所以在试用期内也应该上保险。另外，企业给员工上保险是一个法定的义务，不取决于当事人的意思或自愿与否，即使员工表示不需要交保险也不行，而且商业保险不能替代社会保险。养老保险的享受待遇。 </p>
+<br /><p>    累计缴纳养老保险15年以上，并达到法定退休年龄，可以享受养老保险待遇： </p>
+<br /><p>    1、按月领取按规定计发的基本养老金，直至死亡。 </p>
+<br /><p>    基本养老金的计算公式如下： </p>
+<br /><p>    基本养老金=基础养老金+个人账户养老金+过渡性养老金=退休前一年全市职工月平均工资×20%(缴费年限不满15年的按15%)+个人账户本息和÷120+指数化月平均缴费工资×1997年底前缴费年限×1.4%。 </p>
+<br /><p>    2、死亡待遇。(1)丧葬费(2)一次性抚恤费(3)符合供养条件的直系亲属生活困难补助费，按月发放，直至供养直系亲属死亡。 </p>
+<br /><p>    注意：养老保险应尽量连续缴纳，根据有关文件规定，凡企业或被保险人间断缴纳基本养老保险费的(失业人员领取失业保险金期间或按有关规定不缴费的人员除外)，被保险人符合国家规定的养老条件，计算基本养老金时，其基础性养老金的计算基数，按累计间断的缴费时间逐年前推至相应年度上一年的本市职工平均工资计算(累计间断的缴费时间，按每满12个月为一个间断缴费年度计算，不满12个月不计算) </p>
+<br /><p>    举例来说吧： </p>
+<br /><p>    如果你2020年退休，正常你的基础养老金是2019年的社会平均工资×20%，但是如果你在退休之前养老保险中断了30个月，就是中断了2.5年，按2年算，你的基础养老金就是2017年社会平均工资×20% </p>
+<br /><p>    问：参加医疗保险享受哪些待遇？ </p>
+<br /><p>    答：1、门、急诊医疗费用。在职职工年度内(1月1日-12月31日)符合基本医疗保险规定范围的医疗费累计超过2000元以上部分； </p>
+<br /><p>    2、结算比例。合同期内派遣人员2000元以上部分报销50%，个人自付50%；在一个年度内累计支付派遣人员门、急诊报销最高数额为2万元。 </p>
+<br /><p>    3、参保人员要妥善保管好在定点医院就诊的门诊医疗单据(含大额以下部分的收据、处方底方等)，作为医疗费用报销凭证；　 </p>
+<br /><p>    4、三种特殊病的门诊就医：参保人员患恶性肿瘤放射治疗和化学治疗、肾透析、肾移植后服抗排异药需在门诊就医时，由参保人就医的二、三级定点医院开据”疾病诊断证明”，并填写《北京市医疗保险特殊病种申报审批表》，报区医保中心审批备案。这三种特殊病的门诊就医及取药仅限在批准就诊的定点医院，不能到定点零售药店购买。发生的医疗费符合门诊特殊病规定范围的，参照住院进行结算。 </p>
+<br /><p>    5、住院医疗 </p>
+<br /><p>    ●住院押金：符合住院条件的参保人员，在收入住院时，医院收取参保人员部分押金，押金数额由医院根据病情按比例确定。如被派遣人员单位和参保人员未能按时足额缴纳医疗保险费的，住院押金由派遣人员个人全额垫付。 </p>
+<br /><p>    ●结算周期：参保人员住院治疗每90天为一个结算周期：不超过90天的，每次住院为一个结算周期。 </p>
+<br /><p>    ●恶性肿瘤患者门诊放射治疗和化学治疗、肾透析、肾移植后服抗排异药、患有精神病需常年住院的患者其发生的医疗费用每360天为一个结算周期。 </p>
+<br /><p>    ●参保人员在定点的社区卫生服务中心(站)的家庭病床治疗发生的医疗费用，每90天为一个结算周期。 </p>
+<br /><p>    ●参保人员出院或阶段治疗结束时，需由派遣人员个人先与医院结清应由派遣人员个人自费和自付的费用，应由基本医疗保险统筹基金和大额医疗互助资金支付的医疗费用，由医院向医保中心申报审核、结算。 </p>
+<br /><p>    ●参保人员住院治疗，符合基本医疗保险规定范围的医疗费的结算，设定基本医疗统筹基金支付起付线和最高支付额。 </p>
+<br /><p>    ●起付线第一次住院为1300元，以后住院为650元，最高支付限额为5万元；超过最高支付上限的(不含起付标准以下以及派遣人员个人负担部分)大额医疗费用互助。 </p>
+<br /><p>    资金支付70%，派遣人员个人负担30%。在一个年度内最高支付10万元。住院费用的结算标准，在一个结算周期内按医院等级和费用数额采取分段计算、累加支付的办法。（各项比例有调整时，按新的标准执行） </p>
+<br /><p>    注意：非因公交通事故，医保是免责的！ </p>
+<br /><p>    问：参加失业保险将能享受待遇？ </p>
+<br /><p>    答：失业保险连续缴纳一年以上，档案退回街道后。可以在街道享受失业保险待遇。 </p>
+<br /><p>    1.失业保险金：是指失业保险经办机构按规定支付给符合条件的失业人员的基本生活费用，它是最主要的失业保险待遇。失业保险待遇根据北京市相关文件执行。 </p>
+<br /><p>    2.领取失业保险金期间的医疗补助金：是指支付给失业人员领取失业保险金期间发生的医疗费用的补助。根据北京市有关政策法规执行。 </p>
+<br /><p>    3.领取失业保险金期间死亡的失业人员的丧葬补助金和其供养的配偶、直系亲属的抚恤金按有关规定执行。 </p>
+<br /><p>    问：参加工伤保险享受哪些待遇？ </p>
+<br /><p>    答：在合同期内不幸发生意外，需向企业索取情况说明，并加盖企业公章，尽快(最好在三个工作日内)申请工伤认定并需提供下列材料。 </p>
+<br /><p>    1、初次治疗诊断书或住院病历。 </p>
+<br /><p>    2、职业病诊断证明(原件、复印件各一份)。 </p>
+<br /><p>    3、交通事故需提供交通大队的事故裁决书或交通部门的交通事故证明。 </p>
+<br /><p>    4、身份证复印件。 </p>
+<br /><p>    5、有效期内的劳动合同原件。 </p>
+<br /><p>    问：参加生育保险享受哪些待遇？ </p>
+<br /><p>    答：可以报销与生育有关费用。报销范围包括，生育津贴、生育医疗费用、计划生育手术医疗费用、国家和本市规定的其他与生育有关的费用。　 </p>
+<br /><p>    生育津贴按照女职工本人生育当月的缴费基数除以30再乘以产假天数计算。生育津贴为女职工产假期间的工资，生育津贴低于本人工资标准的，差额部分由企业补足。　 </p>
+<br /><p>    生育医疗费用包括女职工因怀孕、生育发生的医疗检查费、接生费、手术费、住院费和药品费。计划生育手术医疗费用包括职工因计划生育发生的医疗费用。 <br /> 现在要求，医保缴够20年，养老交够15年才有资格领养老金和享受退休后的医保报销。（完）<br /><br />from:http://community.csdn.net/Expert/topic/5369/5369833.xml?temp=.5263025<br /></p>               
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">06 Mar 2007, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2007/03/06/cb-665199/" class="post-title">转载, 春晚诗朗诵《心里话》之程序员版!! </a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-闲言碎语" href="http://huobazi.aspxboy.com//tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD">闲言碎语</a><a class="post-category post-category-推荐阅读" href="http://huobazi.aspxboy.com//tags/%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB">推荐阅读</a><a class="post-category post-category-它山之石" href="http://huobazi.aspxboy.com//tags/%E5%AE%83%E5%B1%B1%E4%B9%8B%E7%9F%B3">它山之石</a><a class="post-category post-category-程序员" href="http://huobazi.aspxboy.com//tags/%E7%A8%8B%E5%BA%8F%E5%91%98">程序员</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>要问我是谁？<br />过去，我总不愿回答，<br />因为我怕，<br />我怕机关里的公务员笑话。</p>
+<br /><p>我们的房间很小，放不下一个鞍马；<br />我们的宿舍简陋，还经常搬家；<br />我们的电脑很破，还经常乱码；<br />我们的椅子很旧，坐上去吱吱哑哑……</p>
+<br /><p>但是，<br />我们代码工整，<br />我们的业绩不差！</p>
+<br /><p>要问我此刻最想要什么？<br />我要我的笔记本，<br />我要我的Vista！<br />因为，有笔记本才能扛着到处出差；<br />因为，有Vista客户才觉得够现代化。</p>
+<br /><p>IT的2008，<br />也是我们的2008，<br />客户把需求说成了天书，<br />我们把工程变成了神话，<br />关于界面上，我们写了这样的话：<br />别人与我比薪水，我和别人比明天！<br />程序员和机关里的公务员不一样，<br />你们是祖国的栋梁，我们是打工的傻瓜！<br /><br />From:<br /><br /><a href="http://community.csdn.net/Expert/topic/5370/5370546.xml?temp=.6211817">http://community.csdn.net/Expert/topic/5370/5370546.xml?temp=.6211817</a></p>               
+
+                    </div>
+                </section>
+                
+            </div>
+            
+<div class="pagination">
+  <nav role="pagination" class="post-list-pagination">
+      
+    <span class="post-list-pagination-item post-list-pagination-item-current">Page 1 of 2</span>
+    
+      <a href="/tags/e68ea8e88d90e99885e8afbb/page/2/" class="post-list-pagination-item pure-button post-list-pagination-item-next">
+        Older&nbsp;<i class="fa fa-angle-double-right"></i>
+      </a>
+    
+  </nav>
+</div>
+
+
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a></li>
+        </ul>
+    </div>
+</div>
+<script src="http://huobazi.aspxboy.com//js/all.min.js"></script>
+        </div>
+    </div>
+</div>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-56321-3', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

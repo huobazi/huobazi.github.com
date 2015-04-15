@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asp.Net &middot; 武眉博</title>
+
+    <meta name="description" content="Marble&#39;s blog">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="huobazi" />
+    <meta name="twitter:title" content="Asp.Net &middot; 武眉博">
+    <meta name="twitter:description" content="Marble&#39;s blog">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Asp.Net &middot; 武眉博">
+    <meta property="og:description" content="Marble&#39;s blog">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    
+    
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+    
+
+    <link rel="stylesheet" href="http://huobazi.aspxboy.com//css/all.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <h1 class="brand-title"><a href="http://huobazi.aspxboy.com/">武眉博</a></h1>
+            <h2 class="brand-tagline"> Marble&#39;s blog </h2>
+        </hgroup>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://twitter.com/huobazi"><i class="fa fa-twitter"></i> Twitter</a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://github.com/huobazi "><i class="fa fa-github-alt"></i> github</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</div>
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                
+                <h1 class="content-subhead">14 Jul 2004, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2004/07/14/cb-24084/" class="post-title">能在微软的网站找到IeWebcontrols的安装文件吗</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a><a class="post-category post-category-TreeView" href="http://huobazi.aspxboy.com//tags/treeview">TreeView</a><a class="post-category post-category-IeWebcontrol" href="http://huobazi.aspxboy.com//tags/iewebcontrol">IeWebcontrol</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>你们能在微软的网站找到IeWebcontrols的安装文件吗?<br />这个地址不行了<br /> <a href="http://msdn.microsoft.com/downloads/samples/internet/ASP_DOT_NET_ServerControls/WebControls/default.asp">http://msdn.microsoft.com/downloads/samples/internet/ASP_DOT_NET_ServerControls/WebControls/default.asp</a><br />我指的是IeWebControls.<font color="#ff3333">msi</font>这个安装文件 装完后就会自动注册程序集了<br />而<a href="http://www.microsoft.com/china/MSDN/library/archives/library/DNAspp/html/aspnet-usingtreeviewieWebcontrol.asp#aspnet-usingtreeviewiewebcontrol_topic2">不是</a>这里说的<a href="http://asp.net/IEWebControls/Download.aspx">地址</a>里的包含源代码还需要自己build的文件,.<br />后来还是发动同事们在所有电脑里search终于找到了一份.<br />为什么ms不提供msi的安装文件了呢,竟然在google也找不到了.</p>                
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">10 Jul 2004, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2004/07/10/cb-7697-1/" class="post-title">小雕虫,不被Google工具条拦截的弹出窗口</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-前端开发" href="http://huobazi.aspxboy.com//tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91">前端开发</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a><a class="post-category post-category-奇技淫巧" href="http://huobazi.aspxboy.com//tags/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7">奇技淫巧</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>如果做项目必须用到弹出窗口可以考虑以下</p>
+<p>不保证任何时候能用<br />更不保证在那个myie新版本下能用<br />如果myie等浏览器屏蔽掉了地址内的某些字比如我演示中有“pop“字样,那也出不来</p>
+<p>demo+code:</p>
+<p><a href="http://www.aspxboy.com/popWindow/" target="_blank"><span style="color: #003366;">http://www.aspxboy.com/popWindow/</span></a></p>
+<p><span style="font-size: x-large;"><strong>测试</strong>通过日期： <span style="color: #002c99;"><a href="http://huobazi.cnblogs.com/archive/2004/07/10/22926.html"><strong>2004/07/10/</strong></a>  ！！！<br /></span></span></p>                
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">10 Jul 2004, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2004/07/10/cb-7697-1/" class="post-title">小雕虫,不被Google工具条拦截的弹出窗口</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-前端开发" href="http://huobazi.aspxboy.com//tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91">前端开发</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a><a class="post-category post-category-奇技淫巧" href="http://huobazi.aspxboy.com//tags/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7">奇技淫巧</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>如果做项目必须用到弹出窗口可以考虑以下</p>
+<p>不保证任何时候能用<br />更不保证在那个myie新版本下能用<br />如果myie等浏览器屏蔽掉了地址内的某些字比如我演示中有“pop“字样,那也出不来</p>
+<p>demo+code:</p>
+<p><a href="http://www.aspxboy.com/popWindow/" target="_blank"><span style="color: #003366;">http://www.aspxboy.com/popWindow/</span></a></p>
+<p><span style="font-size: x-large;"><strong>测试</strong>通过日期： <span style="color: #002c99;"><a href="http://huobazi.cnblogs.com/archive/2004/07/10/22926.html"><strong>2004/07/10/</strong></a>  ！！！<br /></span></span></p>                
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">07 Jul 2004, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2004/07/07/cb-22127/" class="post-title">AspNet2.0的QuickStart出了</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><a href="http://beta.asp.net/quickstart/aspnet/">http://beta.asp.net/quickstart/aspnet/</a><br />英文的</p>             
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">07 Jul 2004, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2004/07/07/cb-22127/" class="post-title">AspNet2.0的QuickStart出了</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><a href="http://beta.asp.net/quickstart/aspnet/">http://beta.asp.net/quickstart/aspnet/</a><br />英文的</p>             
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">15 Jun 2004, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2004/06/15/cb-15786/" class="post-title">项目的发布的方法</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>在<a href="http://www.cnblogs.com/aierong/archive/2004/06/12/15264.aspx">http://www.cnblogs.com/aierong/archive/2004/06/12/15264.aspx</a><br />看到大家讨论关于项目的发布。<br />我们的做法是：<br /><font style="BACKGROUND-COLOR: #f5f5dc">如果您使用的是VS2003<br />那么<br />假设你的虚拟目录为WebApp1<br />位于C:\Inetpub\wwwroot\WebApp1<br />在你的电脑上新建一个虚拟目录<br />假设命名为WebApp2<br />位于C:\Inetpub\wwwroot\WebApp2<br />点击项目菜单---复制项目<br />在弹出的对话筐内选择目标项目文件夹<br />“http://localhost/WebApp2/”<br />web方法为(RadioButton)：文件共享<br />路径为“C:\Inetpub\wwwroot\WebApp2”<br />复制(RadioButton)为：<br />“仅限运行该应用程序所需的文件”<br />点击确定<br />就可以把需要发布的内容放到“C:\Inetpub\wwwroot\WebApp2”内<br /></font></p>               
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">14 Jun 2004, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2004/06/14/cb-15458/" class="post-title">ASP.NET Developer&#39;s Cookbook</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p align="justify">一个很系统的ASP.NET示例教程?lt;BR&gt;类似于QuickStart,但感觉详细的多?lt;BR&gt;可以象某些书一样起个名字－－“从入门到精通?lt;BR&gt;<a href="http://aspalliance.com/cookbook/default.aspx"><br /><font style="BACKGROUND-COLOR: #ffffff" color="#0033ff">ASP.NET Developer's Cookbook</font></a><br /><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=1"><font color="#0000cc">Chapter 1: Web Form Basics</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=2"><font color="#0000cc">Chapter 2: User Controls</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=3"><font color="#0000cc">Chapter 3: Custom Controls</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=4"><font color="#0000cc">Chapter 4: Caching</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=5"><font color="#0000cc">Chapter 5: Mobile Controls</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=6"><font color="#0000cc">Chapter 6: ASP.NET Application Configuration</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=7"><font color="#0000cc">Chapter 7: State Management</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=8"><font color="#0000cc">Chapter 8: Security</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=9"><font color="#0000cc">Chapter 9: Debugging and Error Handling</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=10"><font color="#0000cc">Chapter 10: Basic Data Operations with ADO.NET</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=11"><font color="#0000cc">Chapter 11: Working with DataReaders and DataSets</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=12"><font color="#0000cc">Chapter 12: XML</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=13"><font color="#0000cc">Chapter 13: Rendering Data with ASP.NET WebControls</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=14"><font color="#0000cc">Chapter 14: Working with Classes</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=15"><font color="#0000cc">Chapter 15: Manipulating Strings</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=16"><font color="#0000cc">Chapter 16: Working with Numbers, Dates, and Times</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=17"><font color="#0000cc">Chapter 17: Working with Files and Folders</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=18"><font color="#0000cc">Chapter 18: Working with Collections</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=19"><font color="#0000cc">Chapter 19: Web Services</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=20"><font color="#0000cc">Chapter 20: LDAP/ADSI Directory Services</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=21"><font color="#0000cc">Chapter 21: Internet Tasks and Techniques</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=22"><font color="#0000cc">Chapter 22: Generating and Manipulating Images</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=23"><font color="#0000cc">Chapter 23: Threading, Reflection, and CodeDOM</font></a></p>             
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">14 Jun 2004, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2004/06/14/cb-15458/" class="post-title">ASP.NET Developer&#39;s Cookbook</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p align="justify">一个很系统的ASP.NET示例教程?lt;BR&gt;类似于QuickStart,但感觉详细的多?lt;BR&gt;可以象某些书一样起个名字－－“从入门到精通?lt;BR&gt;<a href="http://aspalliance.com/cookbook/default.aspx"><br /><font style="BACKGROUND-COLOR: #ffffff" color="#0033ff">ASP.NET Developer's Cookbook</font></a><br /><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=1"><font color="#0000cc">Chapter 1: Web Form Basics</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=2"><font color="#0000cc">Chapter 2: User Controls</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=3"><font color="#0000cc">Chapter 3: Custom Controls</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=4"><font color="#0000cc">Chapter 4: Caching</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=5"><font color="#0000cc">Chapter 5: Mobile Controls</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=6"><font color="#0000cc">Chapter 6: ASP.NET Application Configuration</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=7"><font color="#0000cc">Chapter 7: State Management</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=8"><font color="#0000cc">Chapter 8: Security</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=9"><font color="#0000cc">Chapter 9: Debugging and Error Handling</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=10"><font color="#0000cc">Chapter 10: Basic Data Operations with ADO.NET</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=11"><font color="#0000cc">Chapter 11: Working with DataReaders and DataSets</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=12"><font color="#0000cc">Chapter 12: XML</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=13"><font color="#0000cc">Chapter 13: Rendering Data with ASP.NET WebControls</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=14"><font color="#0000cc">Chapter 14: Working with Classes</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=15"><font color="#0000cc">Chapter 15: Manipulating Strings</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=16"><font color="#0000cc">Chapter 16: Working with Numbers, Dates, and Times</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=17"><font color="#0000cc">Chapter 17: Working with Files and Folders</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=18"><font color="#0000cc">Chapter 18: Working with Collections</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=19"><font color="#0000cc">Chapter 19: Web Services</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=20"><font color="#0000cc">Chapter 20: LDAP/ADSI Directory Services</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=21"><font color="#0000cc">Chapter 21: Internet Tasks and Techniques</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=22"><font color="#0000cc">Chapter 22: Generating and Manipulating Images</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=23"><font color="#0000cc">Chapter 23: Threading, Reflection, and CodeDOM</font></a></p>             
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">14 Jun 2004, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2004/06/14/cb-15450/" class="post-title">一个有关水晶报表的Blog</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-水晶报表" href="http://huobazi.aspxboy.com//tags/%E6%B0%B4%E6%99%B6%E6%8A%A5%E8%A1%A8">水晶报表</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><a href="http://blogs.aspadvice.com/crystal/">http://blogs.aspadvice.com/crystal/</a><br />有很多的faq，很实用的技巧。</p>               
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">07 Jun 2004, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2004/06/07/cb-13934/" class="post-title">C-omega语言什么东东？</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>谁研究过？<br />和DotNet什么关系？<br />好像是C#的扩展<a href="http://research.microsoft.com/Comega/"><br />http://research.microsoft.com/Comega/</a></p>             
+
+                    </div>
+                </section>
+                
+            </div>
+            
+<div class="pagination">
+  <nav role="pagination" class="post-list-pagination">
+      
+      <a href="/tags/asp/index.net/page/13/" class="post-list-pagination-item pure-button post-list-pagination-item-prev">
+        <i class="fa fa-angle-double-left"></i>&nbsp;Newer
+      </a>
+      
+    <span class="post-list-pagination-item post-list-pagination-item-current">Page 14 of 18</span>
+    
+      <a href="/tags/asp/index.net/page/15/" class="post-list-pagination-item pure-button post-list-pagination-item-next">
+        Older&nbsp;<i class="fa fa-angle-double-right"></i>
+      </a>
+    
+  </nav>
+</div>
+
+
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a></li>
+        </ul>
+    </div>
+</div>
+<script src="http://huobazi.aspxboy.com//js/all.min.js"></script>
+        </div>
+    </div>
+</div>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-56321-3', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

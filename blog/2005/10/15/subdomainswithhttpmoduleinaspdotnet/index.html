@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在Asp.Net中使用HttpModule实现多个域名分别“绑定”到子目录  &middot; 武眉博</title>
+
+    <meta name="description" content="">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="huobazi" />
+    <meta name="twitter:title" content="在Asp.Net中使用HttpModule实现多个域名分别“绑定”到子目录  &middot; 武眉博">
+    <meta name="twitter:description" content="">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="在Asp.Net中使用HttpModule实现多个域名分别“绑定”到子目录  &middot; 武眉博">
+    <meta property="og:description" content="">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    
+    
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+    
+
+    <link rel="stylesheet" href="http://huobazi.aspxboy.com//css/all.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <h1 class="brand-title"><a href="http://huobazi.aspxboy.com/">武眉博</a></h1>
+            <h2 class="brand-tagline"> Marble&#39;s blog </h2>
+        </hgroup>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://twitter.com/huobazi"><i class="fa fa-twitter"></i> Twitter</a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://github.com/huobazi "><i class="fa fa-github-alt"></i> github</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</div>
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                <h1 class="content-subhead">15 Oct 2005, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2005/10/15/subdomainswithhttpmoduleinaspdotnet/" class="post-title">在Asp.Net中使用HttpModule实现多个域名分别“绑定”到子目录 </a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-share">
+                        <div class="post-share-links">
+                            <h4 style="">Share</h4>
+                            <a href="#" data-type="facebook" data-url="http://huobazi.aspxboy.com/blog/2005/10/15/subdomainswithhttpmoduleinaspdotnet/" data-title="在Asp.Net中使用HttpModule实现多个域名分别“绑定”到子目录 " data-description="" data-media="" class="prettySocial fa fa-facebook"></a>
+                            <a href="#" data-type="googleplus" data-url="http://huobazi.aspxboy.com/blog/2005/10/15/subdomainswithhttpmoduleinaspdotnet/" data-description="" class="prettySocial fa fa-google-plus"></a>
+                            
+                            <a href="#" data-type="twitter" data-url="http://huobazi.aspxboy.com/blog/2005/10/15/subdomainswithhttpmoduleinaspdotnet/" data-description="" data-via="huobazi" class="prettySocial fa fa-twitter"></a>
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="post-description">
+                        <p>作者：活靶子 发表于：<a href="http://www.aspxboy.com/">AspxBoy.Com</a> &amp;&amp; <a href="http://im286.com/">im286.com</a> &amp;&amp; <a href="http://cnblogs.com/">Cnblogs.com</a></p>
+<br /><p>目前虚拟主机商提供将多个域名绑定到站点根目录，但是不提供类似CPanel那样可以将域名绑定到站点的子目录。<br />而当你手上有多个域名，网站空间和流量又有闲置的时候，是很希望<br />将这些资源利用起来，而且要做到降低做站的成本。而网络上流传的多域名绑到子目录多为判断HTTP_HOST再使用Asp的Response.Redirect或者php的header方法重订向到子目录去。这种方法在地址的请求上发生了变化，大家都知道Redirect的定向是很不友好的，在服务器端控制自动跳转会令访问者感到不安。<br />所以我需要的是对这个域名下面的所有请求都转接到对应的子目录里去<br />比如<
+<p></p>
+<br /><a href="http://www.xaradio.com/default.aspx">http://www.xaradio.com/default.aspx</a><br />实际访问的是<a href="http://www.3pub.com/xaradio/default.aspx">http://www.3pub.com/xaradio/default.aspx</a><br /><br /><a href="http://www.xaradio.com/album.aspx?id=722">http://www.xaradio.com/album.aspx?id=722</a><br />实际访问的是<a href="http://www.3pub.com/xaradio/album.aspx?id=722">http://www.3pub.com/xaradio/album.aspx?id=722</a><br /><br />http://www.xaradio.com/*.aspx<br />实际要访问到http://www.3pub.com/xaradio/*.aspx<br /><br />而绑定到该站点根目录的其他域名和地址仍然不受影响<br />如: <a href="http://www.3pub.com/">http://www.3pub.com/</a> 和<a href="http://3pub.com/">http://3pub.com/</a><br /> <a href="http://www.3pub.com/default.aspx">http://www.3pub.com/default.aspx</a>和<a href="http://3pub.com/default.aspx">http://3pub.com/default.aspx</a></p>
+<br /><p><br /><a href="http://www.aspxboy.com/484/default.aspx"><strong>http://www.aspxboy.com/484/default.aspx</strong></a>该文章详细的描述了在Asp.Net中使用HttpModule和HttpHander来重写Url,读懂他特别是<a href="http://www.aspxboy.com/484/archive.aspx#ekaa"><strong>http://www.aspxboy.com/484/archive.aspx#ekaa</strong></a><strong>节</strong>将是我们下面工作的前提朋友们可以下载该文章附带的代码研究。<br /><br />如果您对HttpModule的编成非常熟悉那么可以向下进行了<br /><br />一。 先把配置文件从web.config内移出为了不让web.config变的非常臃肿，我们将配置文件从web.config内移出<br />假设我们的多域名绑定配置文件为“MulitDomain.config“<br />将RewriterConfiguration.cs的public static RewriterConfiguration GetConfig()方法<br />修改如下:<br /></p>
+<pre>/// <summary>
+/// 从XML配置文件中返回重写信息
+/// </summary>
+/// <returns>RewriterConfiguration</returns>
+public static RewriterConfiguration GetConfig()
+{
+RewriterConfiguration config = (RewriterConfiguration) BoovooCache.Get(CacheKey);
+if(config == null)
+{
+// 2005-08-18 wu meibo update the config file to SiteUrls.config
+// HttpContext.Current.Cache.Insert("RewriterConfig", ConfigurationSettings.GetConfig("RewriterConfig"));
+///************************************************************************************
+///
+///  Author:武眉博&lt;活靶子.Net&gt;，huobazi
+///　Date:2005-08-18
+///
+///  Description:将配置文件移到单独的文件内，更新以下代码，原代码（上一行）停止工作
+///
+///************************************************************************************
+string filePath = String.Empty;
+if(HttpContext.Current != null)
+{
+filePath = HttpContext.Current.Server.MapPath("~/MulitDomain.config");
+}
+else
+{
+filePath = Directory.GetCurrentDirectory() + Path.DirectorySeparatorChar + "MulitDomain.config";
+}
+XmlSerializer ser = new XmlSerializer(typeof(RewriterConfiguration));
+FileStream fileReader = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.Read);
+StreamReader reader = new StreamReader(fileReader);
+config = (ser.Deserialize(reader)) as RewriterConfiguration;
+reader.Close();
+fileReader.Close();
+if (File.Exists(filePath))
+{
+CacheDependency dep = new CacheDependency(filePath);
+BoovooCache.Max(CacheKey,config,dep);
+BoovooCache.ReSetFactor(config.CacheFactor);
+}
+}
+return config;
+} </pre>
+<p>二。做一些修补<br />RewriterModule.cs内<br /></p>
+<pre>public virtual void Init(HttpApplication app)
+{
+///**********************************************************************************
+///  Author:武眉博&lt;活靶子.Net&gt;，huobazi
+///　Date:2005-08-18
+///  Description:增加BeginRequest,在内增加防止黑客可能利用的某些Url漏洞攻击的代码
+///**********************************************************************************
+app.BeginRequest += new EventHandler(this.RewriterModule_BeginRequest);
+// 警告！此代码不适用于 Windows 身份验证！
+// 如果使用 Windows 身份验证，
+// 请改为 app.BeginRequest
+app.AuthorizeRequest += new EventHandler(this.RewriterModule_AuthorizeRequest);
+} </pre>
+<pre>protected virtual void RewriterModule_BeginRequest(object o , EventArgs e)
+{
+HttpApplication app = ((HttpApplication)(o));
+HttpServerUtility Server = app.Server;
+HttpRequest Request = app.Request;
+///************************************************************
+///  Author:vv，huobazi
+///　Date:2005-08-18
+///　Description:修补黑客可能采用".."的方法进入其他目录的问题
+///************************************************************
+string strURL = Server.UrlDecode(Request.RawUrl);
+if (strURL.IndexOf("..") != -1)
+{
+throw new HttpException(404, "Not Found");
+}
+///**********************************************************************************
+///  Author:武眉博&lt;活靶子.Net&gt;，huobazi
+///　Date:2005-08-18
+///　Description:修补"规范化"问题　see: http://support.microsoft.com/?kbid=887459
+///***********************************************************************************
+if (Request.Path.IndexOf('\\') &gt;= 0 ||
+Path.GetFullPath(Request.PhysicalPath) != Request.PhysicalPath)
+{
+throw new HttpException(404, "Not Found");
+}
+} </pre>
+<p>三。开始匹配域名<br /></p>
+<pre>protected void Rewrite(string requestedPath, System.Web.HttpApplication app)
+{
+string host = app.Context.Request.Url.Host.ToString().ToLower();
+app.Context.Trace.Write("RewriterModule", "Entering ModuleRewriter");
+RewriterRuleCollection rules = RewriterConfiguration.GetConfig().Rules;
+for(int i = 0; i &lt; rules.Count; i++)
+{//将MulitDomain.config内定义的规则LookFor的值逐个匹配当前主机名判断否被定义了需要重写
+//如果匹配则需要重写，那将请求重写到SendTo定义的目录内的该文件
+string lookFor = "^" + rules[i].LookFor + "$";
+//string lookFor = "^" + Rewriter.ResolveUrl(app.Context.Request.ApplicationPath, rules[i].LookFor + requestedPath) + "$";
+Regex re = new Regex(lookFor, RegexOptions.IgnoreCase);
+if (re.IsMatch(host))
+{
+string sendToUrl = Rewriter.ResolveUrl(app.Context.Request.ApplicationPath,  rules[i].SendTo + requestedPath);
+app.Context.Trace.Write("RewriterModule", "Rewriting URL to " + sendToUrl);
+Rewriter.RewriteUrl(app.Context, sendToUrl);
+break;
+}
+}
+app.Context.Trace.Write("RewriterModule", "Exiting ModuleRewriter");
+}
+</pre>
+<p>四。写规则文件<br />MulitDomain.config的匹配规则如下：<br /></p>
+<div class="codeDiv">&lt;?xml version="1.0" encoding="utf-8" ?&gt; <br /> &lt;RewriterConfig&gt;<br /> &lt;Rules&gt;<br />  &lt;RewriterRule&gt;<br />   &lt;LookFor&gt;www\.xaradio\.com&lt;/LookFor&gt;<br />   &lt;SendTo&gt;~/xaradio&lt;/SendTo&gt;<br />  &lt;/RewriterRule&gt;<br />  &lt;RewriterRule&gt;<br />   &lt;LookFor&gt;xaradio\.com&lt;/LookFor&gt;<br />   &lt;SendTo&gt;~/xaradio&lt;/SendTo&gt;<br />  &lt;/RewriterRule&gt;<br /> &lt;/Rules&gt;<br />  &lt;/RewriterConfig&gt;</div>
+<p>最后说明一下，根目录下一定要有一个Default.aspx如果你的所有域名都按照这种方式“绑定”那么根目录下放置一个空Default.aspx就可以，该文件来“欺骗IIS” ，防止直接使用域名访问的时候IIS查找不到default或者index文件就报404错误，等到该检查过去之后权利已经移交到aspnet_isapi.dll那里了。<br /><br /><strong><span style="COLOR: #339966"> <span style="COLOR: #0000ff">全部</span><span style="COLOR: #0000ff">代码</span></span>：</strong><a href="http://www.aspxboy.com/code/"><strong>http://www.aspxboy.com/code/</strong></a>  Other节点</p>             
+
+                    </div>
+                    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'huobaziblog';
+    var disqus_identifier = 'http:\/\/huobazi.aspxboy.com\/blog\/2005\/10\/15\/subdomainswithhttpmoduleinaspdotnet\/';
+    var disqus_title = '在Asp.Net中使用HttpModule实现多个域名分别“绑定”到子目录 ';
+    var disqus_url = 'http:\/\/huobazi.aspxboy.com\/blog\/2005\/10\/15\/subdomainswithhttpmoduleinaspdotnet\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                </section>
+            </div>
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a></li>
+        </ul>
+    </div>
+</div>
+<script src="http://huobazi.aspxboy.com//js/all.min.js"></script>
+        </div>
+    </div>
+</div>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-56321-3', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

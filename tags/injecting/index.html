@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Injecting &middot; 武眉博</title>
+
+    <meta name="description" content="Marble&#39;s blog">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="huobazi" />
+    <meta name="twitter:title" content="Injecting &middot; 武眉博">
+    <meta name="twitter:description" content="Marble&#39;s blog">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Injecting &middot; 武眉博">
+    <meta property="og:description" content="Marble&#39;s blog">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    
+    
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+    
+
+    <link rel="stylesheet" href="http://huobazi.aspxboy.com//css/all.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <h1 class="brand-title"><a href="http://huobazi.aspxboy.com/">武眉博</a></h1>
+            <h2 class="brand-tagline"> Marble&#39;s blog </h2>
+        </hgroup>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://twitter.com/huobazi"><i class="fa fa-twitter"></i> Twitter</a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://github.com/huobazi "><i class="fa fa-github-alt"></i> github</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</div>
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                
+                <h1 class="content-subhead">30 Mar 2010, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2010/03/30/hwo-to-injecting-themes-css-javascript-to-header-in-rails/" class="post-title">在rails中不同的view不同皮肤下的js，css，注入js和css到head区域</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-LAMP" href="http://huobazi.aspxboy.com//tags/lamp">LAMP</a><a class="post-category post-category-Rails" href="http://huobazi.aspxboy.com//tags/rails">Rails</a><a class="post-category post-category-Ruby" href="http://huobazi.aspxboy.com//tags/ruby">Ruby</a><a class="post-category post-category-layout" href="http://huobazi.aspxboy.com//tags/layout">layout</a><a class="post-category post-category-injecting" href="http://huobazi.aspxboy.com//tags/injecting">injecting</a><a class="post-category post-category-dynamic" href="http://huobazi.aspxboy.com//tags/dynamic">dynamic</a><a class="post-category post-category-ruby on rails" href="http://huobazi.aspxboy.com//tags/ruby-on-rails">ruby on rails</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>利用layout可以很好实现这个需求.</p>
+<p>在ApplicationHelper内加入如下代码：</p>
+<div class="source" style='font-family: "[object HTMLOptionElement]","Consolas","Lucida Console","Courier New"; color: #e6e1dc; background-color: #111111;'>
+<p><span style="color: #cc7833;">def</span> <span style="color: #ffc66d;">require_js</span>(<span style="color: #e6e1dc;">path</span>)<br />    <span style="color: #e6e1dc;">content_for</span> <span style="color: #a5c261;">:header_js</span> <span style="color: #cc7833;">do</span><br />      <span style="color: #e6e1dc;">include_js_tag</span> <span style="color: #e6e1dc;">path</span><br />    <span style="color: #cc7833;">end</span><br />  <span style="color: #cc7833;">end</span></p>
+<p>  <span style="color: #cc7833;">def</span> <span style="color: #ffc66d;">require_css</span>(<span style="color: #e6e1dc;">path</span>)<br />    <span style="color: #e6e1dc;">content_for</span> <span style="color: #a5c261;">:header_css</span> <span style="color: #cc7833;">do</span><br />      <span style="color: #e6e1dc;">include_css_tag</span> <span style="color: #e6e1dc;">path</span><br />    <span style="color: #cc7833;">end</span><br />  <span style="color: #cc7833;">end</span></p>
+<p>  <span style="color: #cc7833;">def</span> <span style="color: #ffc66d;">include_js_tag</span>(<span style="color: #e6e1dc;">path</span>)<br />    <span style="color: #cc7833;">if</span> <span style="color: #e6e1dc;">not</span> <span style="color: #e6e1dc;">path</span><span style="color: #e6e1dc;">.</span><span style="color: #e6e1dc;">starts_with?</span>(<span style="color: #a5c261;">"http:"</span>)<br />      <span style="color: #e6e1dc;">path</span> <span style="color: #e6e1dc;">=</span> <span style="color: #a5c261;">"/themes/</span><span style="color: #a5c261;">#{</span><span style="color: #6d9cbe;">@setting</span><span style="color: #e6e1dc;">[</span><span style="color: #a5c261;">:theme</span><span style="color: #e6e1dc;">]</span><span style="color: #a5c261;">}</span><span style="color: #a5c261;">/javascripts/"</span> <span style="color: #e6e1dc;">+</span> <span style="color: #e6e1dc;">path</span><br />    <span style="color: #cc7833;">end</span><br />    <span style="color: #e6e1dc;">javascript_include_tag</span> <span style="color: #e6e1dc;">path</span><br />  <span style="color: #cc7833;">end</span></p>
+<p>   <span style="color: #cc7833;">def</span> <span style="color: #ffc66d;">include_css_tag</span>(<span style="color: #e6e1dc;">path</span>)<br />    <span style="color: #cc7833;">if</span> <span style="color: #e6e1dc;">not</span> <span style="color: #e6e1dc;">path</span><span style="color: #e6e1dc;">.</span><span style="color: #e6e1dc;">starts_with?</span>(<span style="color: #a5c261;">"http:"</span>)<br />      <span style="color: #e6e1dc;">path</span> <span style="color: #e6e1dc;">=</span> <span style="color: #a5c261;">"/themes/</span><span style="color: #a5c261;">#{</span><span style="color: #6d9cbe;">@setting</span><span style="color: #e6e1dc;">[</span><span style="color: #a5c261;">:theme</span><span style="color: #e6e1dc;">]</span><span style="color: #a5c261;">}</span><span style="color: #a5c261;">/stylesheets/"</span> <span style="color: #e6e1dc;">+</span> <span style="color: #e6e1dc;">path</span><br />    <span style="color: #cc7833;">end</span><br />    <span style="color: #e6e1dc;">stylesheet_link_tag</span> <span style="color: #e6e1dc;">path</span><br />  <span style="color: #cc7833;">end</span></p>
+</div>
+<p>(如果你要直接在view或者layout内引入css则可以&lt;%= include_css_tag "global.css" %&gt;，这样生成的路径是带有皮肤目录的）</p>
+<p>接下来，修改你的layout的head，加入如下代码：</p>
+<p></p>
+<p>&lt;%= yield :header_js %&gt;<br />&lt;%= yield :header_css %&gt;</p>
+<p>然后在需要引入js的View内</p>
+<p>&lt;% require_js "jquery/jquery.tools.min.js" %&gt;<br />&lt;% require_js "jquery/jquery.colorbox.min.js" %&gt;</p>
+<p>最后run一下，你会看到会在html的head内生成如下html</p>
+<p>&lt;script src="/themes/2010v1/javascripts/jquery/jquery.tools.min.js?1269949149" type="text/javascript"&gt;&lt;/script&gt;<br />&lt;script src="/themes/2010v1/javascripts/jquery/jquery.colorbox.min.js?1269949147" type="text/javascript"&gt;&lt;/script&gt;</p>
+<p> </p>
+<p> </p>                
+
+                    </div>
+                </section>
+                
+            </div>
+            
+
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a></li>
+        </ul>
+    </div>
+</div>
+<script src="http://huobazi.aspxboy.com//js/all.min.js"></script>
+        </div>
+    </div>
+</div>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-56321-3', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

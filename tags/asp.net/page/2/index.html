@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asp.Net &middot; 武眉博</title>
+
+    <meta name="description" content="Marble&#39;s blog">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="huobazi" />
+    <meta name="twitter:title" content="Asp.Net &middot; 武眉博">
+    <meta name="twitter:description" content="Marble&#39;s blog">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Asp.Net &middot; 武眉博">
+    <meta property="og:description" content="Marble&#39;s blog">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    
+    
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+    
+
+    <link rel="stylesheet" href="http://huobazi.aspxboy.com//css/all.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <h1 class="brand-title"><a href="http://huobazi.aspxboy.com/">武眉博</a></h1>
+            <h2 class="brand-tagline"> Marble&#39;s blog </h2>
+        </hgroup>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://twitter.com/huobazi"><i class="fa fa-twitter"></i> Twitter</a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://github.com/huobazi "><i class="fa fa-github-alt"></i> github</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</div>
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                
+                <h1 class="content-subhead">09 Dec 2009, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2009/12/09/chang-sql-table-field-default/" class="post-title">使用SQL语句更改数据表的默认值</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a><a class="post-category post-category-SQL" href="http://huobazi.aspxboy.com//tags/sql">SQL</a><a class="post-category post-category-Server" href="http://huobazi.aspxboy.com//tags/server">Server</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p>以前还真没这么干过，都是手工去掉约束，再添加的，今天一边google一边搞啊搞啊的，最终下面这个脚本可以用了</p>
+<p></p>
+<div class="source" style='font-family: "Consolas","Lucida Console","Courier New"; color: #ffffff; background-color: #333333;'>
+<p><span style="color: #f0e68c;">alter</span> <span style="color: #f0e68c;">table</span> <span style="color: #ffffff;">dbo</span><span style="color: #ffffff;">.</span><span style="color: #ffffff;">SOTransaction</span><br />    <span style="color: #f0e68c;">alter</span> <span style="color: #f0e68c;">column</span> <span style="color: #ffffff;">UnitCostWithoutTax</span> <span style="color: #ffffff;">decimal</span>(<span style="color: #ffffff;">10</span><span style="color: #ffffff;">,</span> <span style="color: #ffffff;">2</span>)  <span style="color: #f0e68c;">not</span> <span style="color: #f0e68c;">null</span></p>
+<p><span style="color: #f0e68c;">go</span></p>
+<p><span style="color: #f0e68c;">declare</span> <span style="color: #ffffff;">@</span><span style="color: #ffffff;">name</span> <span style="color: #ffffff;">varchar</span>(<span style="color: #ffffff;">1000</span>)<br /><span style="color: #f0e68c;">declare</span> <span style="color: #ffffff;">@</span><span style="color: #ffffff;">tablename</span> <span style="color: #ffffff;">varchar</span>(<span style="color: #ffffff;">1000</span>)<br /><span style="color: #f0e68c;">declare</span> <span style="color: #ffffff;">@</span><span style="color: #ffffff;">fieldname</span> <span style="color: #ffffff;">varchar</span>(<span style="color: #ffffff;">1000</span>)</p>
+<p><span style="color: #f0e68c;">set</span> <span style="color: #ffffff;">@</span><span style="color: #ffffff;">tablename</span> <span style="color: #ffffff;">=</span> <span style="color: #ffffff;">&lsquo;SOTransaction&rsquo;</span>;<br /><span style="color: #f0e68c;">set</span> <span style="color: #ffffff;">@</span><span style="color: #ffffff;">fieldname</span> <span style="color: #ffffff;">=</span> <span style="color: #ffffff;">&lsquo;UnitCostWithoutTax&rsquo;</span>;</p>
+<p><span style="color: #f0e68c;">select</span> <span style="color: #ffffff;">@</span><span style="color: #ffffff;">name</span> <span style="color: #ffffff;">=</span> b<span style="color: #ffffff;">.</span><span style="color: #ffffff;">name</span> <span style="color: #f0e68c;">from</span> <span style="color: #ffffff;">syscolumns</span> <span style="color: #ffffff;">a</span> <span style="color: #f0e68c;">inner</span> <span style="color: #f0e68c;">join</span> <span style="color: #ffffff;">sysobjects</span> b<br />    <span style="color: #f0e68c;">on</span> b<span style="color: #ffffff;">.</span><span style="color: #ffffff;">id</span><span style="color: #ffffff;">=</span><span style="color: #ffffff;">a</span><span style="color: #ffffff;">.</span><span style="color: #ffffff;">cdefault</span><br /><span style="color: #f0e68c;">where</span><br />    <span style="color: #ffffff;">a</span><span style="color: #ffffff;">.</span><span style="color: #ffffff;">id</span><span style="color: #ffffff;">=</span> <span style="color: #ffffff;">object_id</span>(<span style="color: #ffffff;">@</span><span style="color: #ffffff;">tablename</span>)<br />    <span style="color: #f0e68c;">and</span> <span style="color: #ffffff;">a</span><span style="color: #ffffff;">.</span><span style="color: #ffffff;">name</span><span style="color: #ffffff;">=@</span><span style="color: #ffffff;">fieldname</span><br />    <span style="color: #f0e68c;">and</span> b<span style="color: #ffffff;">.</span><span style="color: #ffffff;">name</span> <span style="color: #f0e68c;">like</span> <span style="color: #ffffff;">&lsquo;DF%&rsquo;</span><br /><span style="color: #87ceeb;">&ndash;print @name</span></p>
+<p><span style="color: #f0e68c;">exec</span>(<span style="color: #ffffff;">&rsquo; alter table SOTransaction drop constraint &lsquo;</span> <span style="color: #ffffff;">+</span> <span style="color: #ffffff;">@</span><span style="color: #ffffff;">name</span>);<br /><span style="color: #f0e68c;">go</span><br /><span style="color: #f0e68c;">alter</span> <span style="color: #f0e68c;">table</span> <span style="color: #ffffff;">dbo</span><span style="color: #ffffff;">.</span><span style="color: #ffffff;">SOTransaction</span><br />    <span style="color: #f0e68c;">add</span> <span style="color: #f0e68c;">constraint</span> <span style="color: #ffffff;">DF_SOTransaction_UnitCostWithoutTax</span> <span style="color: #f0e68c;">default</span> (<span style="color: #ffffff;">0</span>) <span style="color: #f0e68c;">for</span> <span style="color: #ffffff;">UnitCostWithoutTax</span></p>
+</div></p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">27 Oct 2009, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2009/10/27/kissy-editor/" class="post-title">在线编辑器的一个新选择。</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-前端开发" href="http://huobazi.aspxboy.com//tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91">前端开发</a><a class="post-category post-category-推荐阅读" href="http://huobazi.aspxboy.com//tags/%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB">推荐阅读</a><a class="post-category post-category-FckEditor" href="http://huobazi.aspxboy.com//tags/fckeditor">FckEditor</a><a class="post-category post-category-kissy-editor" href="http://huobazi.aspxboy.com//tags/kissy-editor">kissy-editor</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>今天<a title="http://lifesinger.org/" href="http://lifesinger.org/" target="_blank">lifesinger</a>发布了<a title="kiss editor" href="http://lifesinger.org/blog/2009/10/kissy-editor/" target="_blank">淘宝编辑器</a>,</p>
+<p>可以在这里看到<a href="http://kissy.googlecode.com/svn/trunk/src/editor/demo/basic.html" target="_blank">演示</a></p>
+<p>介绍可以看这里，<a href="http://lifesinger.org/blog/2009/10/kissy-editor/">http://lifesinger.org/blog/2009/10/kissy-editor/</a></p>              
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">26 Jul 2009, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2009/07/26/2009-mvp/" class="post-title">拆箱记</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Microsoft" href="http://huobazi.aspxboy.com//tags/microsoft">Microsoft</a><a class="post-category post-category-MVP" href="http://huobazi.aspxboy.com//tags/mvp">MVP</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>大洋彼岸寄来了一个纸箱</p>
+<p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/1.jpg" alt=""></p>
+<p></p>
+<p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/2.jpg" alt=""></p>
+<p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/3.jpg" alt=""></p>
+<p>哇，里面装了一个老外宅男</p>
+<p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/4.jpg" alt=""></p>
+<p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/5.jpg" alt=""></p>
+<p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/6.jpg" alt=""></p>
+<p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/7.jpg" alt=""></p>
+<p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/8.jpg" alt=""></p>
+<p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/9.jpg" alt=""></p>
+<p>MVP奖杯</p>
+<p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/10.jpg" alt=""></p>
+<p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/11.jpg" alt=""></p>
+<p>MVP证书</p>
+<p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/12.jpg" alt=""></p>               
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">21 Jul 2009, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2009/07/21/how-to-send-an-email-with-attachments/" class="post-title">Asp.Net发邮件，如何发送附件</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a><a class="post-category post-category-.Net其他" href="http://huobazi.aspxboy.com//tags/.net%E5%85%B6%E4%BB%96">.Net其他</a><a class="post-category post-category-C#" href="http://huobazi.aspxboy.com//tags/c">C#</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a><a class="post-category post-category-邮件" href="http://huobazi.aspxboy.com//tags/%E9%82%AE%E4%BB%B6">邮件</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p>使用如下代码可以发送附件</p>
+<pre>MailMessage mail = new MailMessage();
+mail.To = &rdquo;me@mycompany.com&rdquo;;
+mail.From = &rdquo;you@yourcompany.com&rdquo;;
+mail.Subject = &rdquo;this is a test email.&ldquo;;
+mail.Body = &rdquo;this is my test email body.&ldquo;;
+MailAttachment attachment = new MailAttachment( Server.MapPath( &rdquo;mailTest.txt&rdquo; ) ); //create the attachment
+mail.Attachments.Add( attachment );
+SmtpMail.SmtpServer = &rdquo;localhost&rdquo;; 
+SmtpMail.Send( mail );</pre>
+<p>使用如下代码可以在用户上传附件后发生邮件:</p>
+<p></p>
+<pre>if  (FileUpload1.HasFile)
+{
+    string  toAddress  =  &rdquo;you@yourprovider.com&rdquo;;
+    string  fromAddress  =  you@yourprovider.com  (2);
+    string  mailServer  =  &rdquo;smtp.yourprovider.com&rdquo;;</p>
+
+<p>    MailMessage  myMailMessage  =  new  MailMessage();</p>
+
+<p>    myMailMessage.To.Add(toAddress);
+    myMailMessage.From  =  new  MailAddress(fromAddress);
+    myMailMessage.Subject  =  &rdquo;Test  Message&rdquo;;</p>
+
+<p>    string  fileName  =  Path.GetFileName(FileUpload1.PostedFile.FileName);
+    Attachment  myAttachment  =  
+                                  new  Attachment(FileUpload1.FileContent,  fileName);
+    myMailMessage.Attachments.Add(myAttachment);</p>
+
+<p>    SmtpClient  mySmtpClient  =  new  SmtpClient(mailServer);</p>
+
+<p>    mySmtpClient.Send(myMailMessage);
+}</pre></p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">21 Jul 2009, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2009/07/21/how-to-send-an-email-with-attachments/" class="post-title">Asp.Net发邮件，如何发送附件</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a><a class="post-category post-category-.Net其他" href="http://huobazi.aspxboy.com//tags/.net%E5%85%B6%E4%BB%96">.Net其他</a><a class="post-category post-category-C#" href="http://huobazi.aspxboy.com//tags/c">C#</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a><a class="post-category post-category-邮件" href="http://huobazi.aspxboy.com//tags/%E9%82%AE%E4%BB%B6">邮件</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p>使用如下代码可以发送附件</p>
+<pre>MailMessage mail = new MailMessage();
+mail.To = &rdquo;me@mycompany.com&rdquo;;
+mail.From = &rdquo;you@yourcompany.com&rdquo;;
+mail.Subject = &rdquo;this is a test email.&ldquo;;
+mail.Body = &rdquo;this is my test email body.&ldquo;;
+MailAttachment attachment = new MailAttachment( Server.MapPath( &rdquo;mailTest.txt&rdquo; ) ); //create the attachment
+mail.Attachments.Add( attachment );
+SmtpMail.SmtpServer = &rdquo;localhost&rdquo;; 
+SmtpMail.Send( mail );</pre>
+<p>使用如下代码可以在用户上传附件后发生邮件:</p>
+<p></p>
+<pre>if  (FileUpload1.HasFile)
+{
+    string  toAddress  =  &rdquo;you@yourprovider.com&rdquo;;
+    string  fromAddress  =  you@yourprovider.com  (2);
+    string  mailServer  =  &rdquo;smtp.yourprovider.com&rdquo;;</p>
+
+<p>    MailMessage  myMailMessage  =  new  MailMessage();</p>
+
+<p>    myMailMessage.To.Add(toAddress);
+    myMailMessage.From  =  new  MailAddress(fromAddress);
+    myMailMessage.Subject  =  &rdquo;Test  Message&rdquo;;</p>
+
+<p>    string  fileName  =  Path.GetFileName(FileUpload1.PostedFile.FileName);
+    Attachment  myAttachment  =  
+                                  new  Attachment(FileUpload1.FileContent,  fileName);
+    myMailMessage.Attachments.Add(myAttachment);</p>
+
+<p>    SmtpClient  mySmtpClient  =  new  SmtpClient(mailServer);</p>
+
+<p>    mySmtpClient.Send(myMailMessage);
+}</pre></p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">15 Jul 2009, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2009/07/15/make-a-deep-clone-of-the-object/" class="post-title">C#中如何深度克隆一个对象？</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a><a class="post-category post-category-.Net其他" href="http://huobazi.aspxboy.com//tags/.net%E5%85%B6%E4%BB%96">.Net其他</a><a class="post-category post-category-C#" href="http://huobazi.aspxboy.com//tags/c">C#</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p>如何深度克隆一个对象？</p>
+<p>普通版:</p>
+<pre>
+        public static object CloneObject( object obj )
+        {
+            using ( MemoryStream memStream = new MemoryStream( ) )
+            {
+                BinaryFormatter binaryFormatter = new BinaryFormatter( null ,
+                     new StreamingContext( StreamingContextStates.Clone ) );
+                binaryFormatter.Serialize( memStream , obj );
+                memStream.Seek( 0 , SeekOrigin.Begin );
+                return binaryFormatter.Deserialize( memStream );
+            }
+        }
+</pre>
+<p>泛型版：</p>
+<p></p>
+<pre>public  static  T  Clone&lt;T&gt;(T  obj)
+{
+        T  ret  =  default(T);
+        if  (obj  !=  null)
+        {
+                XmlSerializer  cloner  =  new  XmlSerializer(typeof(T));
+                MemoryStream  stream  =  new  MemoryStream();
+                cloner.Serialize(stream,  obj);
+                stream.Seek(0,  SeekOrigin.Begin);
+                ret  =  (T)cloner.Deserialize(stream);
+        }
+        return  ret;
+}</pre></p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">15 Jul 2009, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2009/07/15/make-a-deep-clone-of-the-object/" class="post-title">C#中如何深度克隆一个对象？</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a><a class="post-category post-category-.Net其他" href="http://huobazi.aspxboy.com//tags/.net%E5%85%B6%E4%BB%96">.Net其他</a><a class="post-category post-category-C#" href="http://huobazi.aspxboy.com//tags/c">C#</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p>如何深度克隆一个对象？</p>
+<p>普通版:</p>
+<pre>
+        public static object CloneObject( object obj )
+        {
+            using ( MemoryStream memStream = new MemoryStream( ) )
+            {
+                BinaryFormatter binaryFormatter = new BinaryFormatter( null ,
+                     new StreamingContext( StreamingContextStates.Clone ) );
+                binaryFormatter.Serialize( memStream , obj );
+                memStream.Seek( 0 , SeekOrigin.Begin );
+                return binaryFormatter.Deserialize( memStream );
+            }
+        }
+</pre>
+<p>泛型版：</p>
+<p></p>
+<pre>public  static  T  Clone&lt;T&gt;(T  obj)
+{
+        T  ret  =  default(T);
+        if  (obj  !=  null)
+        {
+                XmlSerializer  cloner  =  new  XmlSerializer(typeof(T));
+                MemoryStream  stream  =  new  MemoryStream();
+                cloner.Serialize(stream,  obj);
+                stream.Seek(0,  SeekOrigin.Begin);
+                ret  =  (T)cloner.Deserialize(stream);
+        }
+        return  ret;
+}</pre></p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">01 Dec 2008, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2008/12/01/asp-net-mvc-route-config/" class="post-title">把ASP.NET MVC的路由利用配置维护起来</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a><a class="post-category post-category-MVC" href="http://huobazi.aspxboy.com//tags/mvc">MVC</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>配置大多就是文件配置或者数据库配置了</p>
+<br /><p>ref:</p>
+<br /><p><a href="http://mnour.blogspot.com/2008/11/mvc-routing-using-custom-configuration.html">http://mnour.blogspot.com/2008/11/mvc-routing-using-custom-configuration.html</a></p>
+<br /><p><a href="/QLeelulu/archive/2008/11/24/1340212.html">http://www.cnblogs.com/QLeelulu/archive/2008/11/24/1340212.html</a></p>
+<br /><p><a href="http://www.iansuttle.com/blog/post/ASPNET-MVC-Store-Routes-in-the-Database.aspx">http://www.iansuttle.com/blog/post/ASPNET-MVC-Store-Routes-in-the-Database.aspx</a></p>
+<br /><p>我觉得加上做webform时常用的PageAlias和BuildUrl会更好用些</p>               
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">01 Dec 2008, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2008/12/01/asp-net-mvc-route-config/" class="post-title">把ASP.NET MVC的路由利用配置维护起来</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a><a class="post-category post-category-MVC" href="http://huobazi.aspxboy.com//tags/mvc">MVC</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>配置大多就是文件配置或者数据库配置了</p>
+<br /><p>ref:</p>
+<br /><p><a href="http://mnour.blogspot.com/2008/11/mvc-routing-using-custom-configuration.html">http://mnour.blogspot.com/2008/11/mvc-routing-using-custom-configuration.html</a></p>
+<br /><p><a href="/QLeelulu/archive/2008/11/24/1340212.html">http://www.cnblogs.com/QLeelulu/archive/2008/11/24/1340212.html</a></p>
+<br /><p><a href="http://www.iansuttle.com/blog/post/ASPNET-MVC-Store-Routes-in-the-Database.aspx">http://www.iansuttle.com/blog/post/ASPNET-MVC-Store-Routes-in-the-Database.aspx</a></p>
+<br /><p>我觉得加上做webform时常用的PageAlias和BuildUrl会更好用些</p>               
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">07 Oct 2008, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2008/10/07/jquerycool/" class="post-title">jQuery从此更牛了</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-前端开发" href="http://huobazi.aspxboy.com//tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91">前端开发</a><a class="post-category post-category-jQuery" href="http://huobazi.aspxboy.com//tags/jquery">jQuery</a><a class="post-category post-category-Microsoft" href="http://huobazi.aspxboy.com//tags/microsoft">Microsoft</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>为什么更牛了?</p>
+<p> </p>
+<p>26日回家，昨天才返回，这么好的消息自己错过了，补记一下。</p>
+<p> </p>
+<p>see see</p>
+<p></p>
+<p> </p>
+<p> </p>
+<p><a href="http://weblogs.asp.net/scottgu/">Scott Guthrie</a>的<a href="http://weblogs.asp.net/scottgu/archive/2008/09/28/jquery-and-microsoft.aspx">公告 </a>(jQuery将成为Visual Studio的一部分等更多好消息...)</p>
+<p> <br />jQuery头儿<a href="http://ejohn.org/">John Resig</a>的<a href="http://jquery.com/blog/2008/09/28/jquery-microsoft-nokia/">公告</a>（jQuery, Microsoft, and Nokia）</p>
+<p> <br /><a href="http://www.hanselman.com/blog/">Scott Hanselman</a>的jQuery的<a href="http://www.hanselman.com/blog/jQueryToShipWithASPNETMVCAndVisualStudio.aspx">演示</a></p>              
+
+                    </div>
+                </section>
+                
+            </div>
+            
+<div class="pagination">
+  <nav role="pagination" class="post-list-pagination">
+      
+      <a href="/tags/asp/index.net/" class="post-list-pagination-item pure-button post-list-pagination-item-prev">
+        <i class="fa fa-angle-double-left"></i>&nbsp;Newer
+      </a>
+      
+    <span class="post-list-pagination-item post-list-pagination-item-current">Page 2 of 18</span>
+    
+      <a href="/tags/asp/index.net/page/3/" class="post-list-pagination-item pure-button post-list-pagination-item-next">
+        Older&nbsp;<i class="fa fa-angle-double-right"></i>
+      </a>
+    
+  </nav>
+</div>
+
+
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a></li>
+        </ul>
+    </div>
+</div>
+<script src="http://huobazi.aspxboy.com//js/all.min.js"></script>
+        </div>
+    </div>
+</div>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-56321-3', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

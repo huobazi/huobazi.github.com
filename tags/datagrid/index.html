@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datagrid &middot; 武眉博</title>
+
+    <meta name="description" content="Marble&#39;s blog">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="huobazi" />
+    <meta name="twitter:title" content="Datagrid &middot; 武眉博">
+    <meta name="twitter:description" content="Marble&#39;s blog">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Datagrid &middot; 武眉博">
+    <meta property="og:description" content="Marble&#39;s blog">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    
+    
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+    
+
+    <link rel="stylesheet" href="http://huobazi.aspxboy.com//css/all.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <h1 class="brand-title"><a href="http://huobazi.aspxboy.com/">武眉博</a></h1>
+            <h2 class="brand-tagline"> Marble&#39;s blog </h2>
+        </hgroup>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://twitter.com/huobazi"><i class="fa fa-twitter"></i> Twitter</a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://github.com/huobazi "><i class="fa fa-github-alt"></i> github</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</div>
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                
+                <h1 class="content-subhead">30 Apr 2004, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2004/04/30/cb-8176/" class="post-title">一个关于DataGrid的打印类,分享,感谢作者</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-.Net其他" href="http://huobazi.aspxboy.com//tags/.net%E5%85%B6%E4%BB%96">.Net其他</a><a class="post-category post-category-Print" href="http://huobazi.aspxboy.com//tags/print">Print</a><a class="post-category post-category-DataGrid" href="http://huobazi.aspxboy.com//tags/datagrid">DataGrid</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p><font size="2">手中的活计需要打印,就到处找找。<br />从</font><a href="http://www.google.com/"><font size="2">google</font></a><font size="2">中扑获,挺不错的，大家共享～<br />how can i print the data in DataGrid?</font><a href="http://forums.aspfree.com/archive/t-17107"><br /><font size="2"><a href="http://forums.aspfree.com/archive/t-17107">http://forums.aspfree.com/archive/t-17107</a></font></a><br /><a href="http://forums.aspfree.com/t17107/s.html"><font size="2"><a href="http://forums.aspfree.com/t17107/s.html">http://forums.aspfree.com/t17107/s.html</a></font></a><br /></p>
+<pre>using System;
+using System.Collections;
+using System.ComponentModel;
+using System.Drawing;
+using System.Drawing.Printing;
+using System.Data;</p>
+
+<p>using System.Windows.Forms;</p>
+
+<p>namespace Hooooo.Print
+{
+public class DataGridPrinter
+{
+private DataGrid dataGrid;
+private PrintDocument printDocument;
+private PageSetupDialog pageSetupDialog;
+private PrintPreviewDialog printPreviewDialog;</p>
+
+<p>public DataGridPrinter(DataGrid dataGrid)
+{
+this.dataGrid = dataGrid;
+printDocument = new PrintDocument();
+printDocument.PrintPage += new PrintPageEventHandler(this.printDocument_PrintPage);
+}</p>
+
+<p>private void printDocument_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+{
+int rowCount = 0;
+int colCount = 0;
+int x = 0;
+int y = 0;
+int rowGap = 20;
+int colGap = 5;
+int leftMargin = 50;
+Font font = new Font(&ldquo;Arial&rdquo;, 10);
+Font headingFont = new Font(&ldquo;Arial&rdquo;, 11, FontStyle.Underline);
+Font captionFont = new Font(&ldquo;Arial&rdquo;, 10, FontStyle.Bold);
+Brush brush = new SolidBrush(Color.Black);
+string cellValue = &ldquo;&rdquo;;</p>
+
+<p>if(dataGrid.DataSource.GetType().ToString() == &ldquo;System.Data.DataTable&rdquo;)
+{
+rowCount = ((DataTable)dataGrid.DataSource).Rows.Count;
+}
+else if(dataGrid.DataSource.GetType().ToString() == &ldquo;System.Collections.ArrayList&rdquo;)
+{
+rowCount = ((ArrayList)dataGrid.DataSource).Count;
+}
+colCount = dataGrid.TableStyles[0].GridColumnStyles.Count;</p>
+
+<p>//print caption
+if(dataGrid.CaptionVisible)
+{
+y += rowGap;
+x = leftMargin;
+e.Graphics.DrawString(dataGrid.CaptionText, captionFont, brush, x, y);
+}</p>
+
+<p>//print headings
+y += rowGap;
+x = leftMargin;
+for(int j = 0; j &lt; colCount; j++)
+{
+if(dataGrid.TableStyles[0].GridColumnStyles[j].Width &gt; 0)
+{
+cellValue = dataGrid.TableStyles[0].GridColumnStyles[j].HeaderText;
+e.Graphics.DrawString(cellValue, headingFont, brush, x, y);
+x += dataGrid.TableStyles[0].GridColumnStyles[j].Width + colGap;
+}
+}</p>
+
+<p>//print all rows
+for(int i = 0; i &lt; rowCount; i++)
+{
+y += rowGap;
+x = leftMargin;
+for(int j = 0; j &lt; colCount; j++)
+{
+if(dataGrid.TableStyles[0].GridColumnStyles[j].Width &gt; 0)
+{
+cellValue = dataGrid[i,j].ToString();
+e.Graphics.DrawString(cellValue, font, brush, x, y);
+x += dataGrid.TableStyles[0].GridColumnStyles[j].Width + colGap;
+y = y + rowGap * (cellValue.Split(new char[] {&rsquo;\r&rsquo;, &lsquo;\n&rsquo;}).Length - 1);
+}
+}
+}
+string s = cellValue;
+string f3 = cellValue;
+}</p>
+
+<p>public PrintDocument GetPrintDocument()
+{
+return printDocument;
+}</p>
+
+<p>public void Print()
+{
+try
+{
+pageSetupDialog = new PageSetupDialog();
+pageSetupDialog.Document = printDocument;
+pageSetupDialog.ShowDialog();
+printPreviewDialog = new PrintPreviewDialog();
+printPreviewDialog.Document = printDocument;
+printPreviewDialog.Height = 600;
+printPreviewDialog.Width = 800;
+printPreviewDialog.ShowDialog();
+}
+catch(Exception e)
+{
+throw new Exception(&ldquo;Printer error.&rdquo; + e.Message);
+}</p>
+
+<p>}
+}
+}
+</pre>
+<p><br />需要打印表格线条及分页的朋友，可以看一下下面这篇文章：<br /> <br /></p>
+<div><strong><font face="Verdana" size="4"><a title="How to Print a DataGrid in C# and .NET" style="COLOR: #0000ff" href="http://www.c-sharpcorner.com/Graphics/DataGridPrinterMG.asp" target="_blank"><strong><font face="Verdana" size="4">How to Print a DataGrid in C# and .NET</font> </strong></a><br /><br /></font><br /><div></div>
+<div>
+<img style="WIDTH: 672px; HEIGHT: 352px" height="245" src="/images/hbz_images/e01387bd-8f4f-4638-8131-226ce244e723.jpg50" width="510"> </div>
+<div> </div>
+<div></div>
+<p></p></strong></div></p>
+
+                    </div>
+                </section>
+                
+            </div>
+            
+
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a></li>
+        </ul>
+    </div>
+</div>
+<script src="http://huobazi.aspxboy.com//js/all.min.js"></script>
+        </div>
+    </div>
+</div>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-56321-3', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

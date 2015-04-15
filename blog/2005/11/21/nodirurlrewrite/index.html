@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于请求的目录不存在而需要url重写 &middot; 武眉博</title>
+
+    <meta name="description" content="">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="huobazi" />
+    <meta name="twitter:title" content="关于请求的目录不存在而需要url重写 &middot; 武眉博">
+    <meta name="twitter:description" content="">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="关于请求的目录不存在而需要url重写 &middot; 武眉博">
+    <meta property="og:description" content="">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    
+    
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+    
+
+    <link rel="stylesheet" href="http://huobazi.aspxboy.com//css/all.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <h1 class="brand-title"><a href="http://huobazi.aspxboy.com/">武眉博</a></h1>
+            <h2 class="brand-tagline"> Marble&#39;s blog </h2>
+        </hgroup>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://twitter.com/huobazi"><i class="fa fa-twitter"></i> Twitter</a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://github.com/huobazi "><i class="fa fa-github-alt"></i> github</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</div>
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                <h1 class="content-subhead">21 Nov 2005, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2005/11/21/nodirurlrewrite/" class="post-title">关于请求的目录不存在而需要url重写</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a><a class="post-category post-category-Url Rewrite" href="http://huobazi.aspxboy.com//tags/url-rewrite">Url Rewrite</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-share">
+                        <div class="post-share-links">
+                            <h4 style="">Share</h4>
+                            <a href="#" data-type="facebook" data-url="http://huobazi.aspxboy.com/blog/2005/11/21/nodirurlrewrite/" data-title="关于请求的目录不存在而需要url重写" data-description="" data-media="" class="prettySocial fa fa-facebook"></a>
+                            <a href="#" data-type="googleplus" data-url="http://huobazi.aspxboy.com/blog/2005/11/21/nodirurlrewrite/" data-description="" class="prettySocial fa fa-google-plus"></a>
+                            
+                            <a href="#" data-type="twitter" data-url="http://huobazi.aspxboy.com/blog/2005/11/21/nodirurlrewrite/" data-description="" data-via="huobazi" class="prettySocial fa fa-twitter"></a>
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="post-description">
+                        <p>在<a href="http://pwqzc.cnblogs.com/archive/2005/11/21/281331.html" target="_blank">http://pwqzc.cnblogs.com/archive/2005/11/21/281331.html</a>看到的讨论<br />其实csdn的那两个帖子<br /><a href="http://community.csdn.net/Expert/topic/4401/4401936.xml?temp=.317898" target="_blank">http://community.csdn.net/Expert/topic/4401/4401936.xml?temp=.317898</a></p>
+<p><a href="http://community.csdn.net/Expert/topic/4406/4406615.xml?temp=.513714" target="_blank">http://community.csdn.net/Expert/topic/4406/4406615.xml?temp=.513714</a><br />中已经有网友们说到方法了，hander module 都可以做<br />在iis中设置*.*映射到 aspnet_isapi.dll ISAPI 扩展，我测试后没有发现什么访问被拒绝访问的401.3错误,<br />需要输入用户名的问题。<br /><img style="width: 627px; height: 396px; border: 0px;" src="/images/hbz_images/5c851a33-204d-4d19-a338-3220cd1979ae.gif" border="0" alt=""><br />  </p>
+<p>以下在代码xpsp2 .net1.1 sp1 下测试通过</p>
+<div style="cursor: hand; color: blue; text-align: left; text-decoration: underline;" title="&gt;-点此复制到剪贴板-&lt;" onclick='function anonymous() { var obj = document.getElementById("code_huobazi_code");    if( obj != null )   {       var rng = document.body.createTextRange();      rng.moveToElementText(obj);         rng.scrollIntoView();       rng.select();       rng.execCommand("Copy");        rng.collapse(false);    } }'>[Copy to clipboard]</div>
+<p><textarea id="code_huobazi_code" style="width: 632px; height: 298px; background-color: #ffcc00;" cols="84" rows="4">using System;&lt;br /&gt; using System.Web;&lt;br /&gt; using System.Web.UI;&lt;/div&gt; &lt;div  mce_tmp="1"&gt;namespace AspxBoy.VisualUrl&lt;br /&gt; {&lt;br /&gt;   /// &lt;summary&gt;&lt;br /&gt;     /// VisualUrlHttpHander 的摘要说明。&lt;br /&gt;  /// &lt;/summary&gt;&lt;br /&gt;    public class VisualUrlHttpHander : IHttpHandlerFactory&lt;br /&gt;  {&lt;br /&gt;       #region IHttpHandlerFactory 成员&lt;/div&gt; &lt;div  mce_tmp="1"&gt;     public void ReleaseHandler(IHttpHandler handler)&lt;br /&gt;        {&lt;br /&gt;           // TODO:  添加 VisualUrlHttpHander.ReleaseHandler 实现&lt;br /&gt;      }&lt;/div&gt; &lt;div  mce_tmp="1"&gt;      public IHttpHandler GetHandler(HttpContext context, string requestType, string url, string pathTranslated)&lt;br /&gt;      {&lt;br /&gt;           // TODO:  添加 VisualUrlHttpHander.GetHandler 实现&lt;/div&gt; &lt;div  mce_tmp="1"&gt;         string rawUrl = context.Request.RawUrl.Trim();&lt;/div&gt; &lt;div  mce_tmp="1"&gt;         ///&lt;br /&gt;             ///这里只示范地址是http://domainname/xxx&lt;br /&gt;            ///和http://domainname/xxx/这样的地址&lt;br /&gt;             ///&lt;br /&gt;             string userName = rawUrl.TrimStart('/').TrimEnd('/');&lt;br /&gt;           string sendToUrl = url;&lt;br /&gt;             string filePath = pathTranslated;&lt;br /&gt;           string sendToUrlLessQString;&lt;/div&gt; &lt;div  mce_tmp="1"&gt;           sendToUrl = Globals.AppPath + "/get.aspx?username=" + userName;&lt;/div&gt; &lt;div  mce_tmp="1"&gt;            Globals.RewriteUrl(context, sendToUrl, out sendToUrlLessQString, out filePath);&lt;/div&gt; &lt;div  mce_tmp="1"&gt;            return PageParser.GetCompiledPageInstance(sendToUrlLessQString, filePath, context);&lt;br /&gt;         }&lt;/div&gt; &lt;div  mce_tmp="1"&gt;      #endregion&lt;/div&gt; &lt;div  mce_tmp="1"&gt; }&lt;/div&gt; &lt;div  mce_tmp="1"&gt;  public class Globals&lt;br /&gt;    {&lt;br /&gt;       /// &lt;summary&gt;&lt;br /&gt;         /// 应用程序路径&lt;br /&gt;      /// &lt;/summary&gt;&lt;br /&gt;        public static string AppPath&lt;br /&gt;        {&lt;/div&gt; &lt;div  mce_tmp="1"&gt;          get&lt;br /&gt;             {&lt;br /&gt;               string applicationPath = "/";&lt;/div&gt; &lt;div  mce_tmp="1"&gt;              if(HttpContext.Current != null)&lt;br /&gt;                 {&lt;br /&gt; applicationPath = HttpContext.Current.Request.ApplicationPath;&lt;br /&gt;                }&lt;/div&gt; &lt;div  mce_tmp="1"&gt;              if (applicationPath == "/")&lt;br /&gt;                 {&lt;br /&gt; return string.Empty;&lt;br /&gt;              }&lt;br /&gt;               else&lt;br /&gt;                {&lt;br /&gt; if (applicationPath.EndsWith("/"))&lt;br /&gt; {&lt;br /&gt;  return applicationPath;&lt;br /&gt; }&lt;br /&gt; else&lt;br /&gt; {&lt;br /&gt;    return applicationPath + "/";&lt;br /&gt; }&lt;br /&gt;                 }&lt;/div&gt; &lt;div  mce_tmp="1"&gt;          }&lt;br /&gt;       }&lt;br /&gt;       /// &lt;summary&gt;&lt;br /&gt;         /// 在ASP.NET中执行URL重写&lt;br /&gt;        /// see http://www.aspxboy.com/484/archive.aspx&lt;br /&gt;         /// &lt;/summary&gt;&lt;br /&gt;        /// &lt;param name="context"&gt;&lt;/param&gt;&lt;br /&gt;      /// &lt;param name="sendToUrl"&gt;&lt;/param&gt;&lt;br /&gt;        /// &lt;param name="sendToUrlLessQString"&gt;&lt;/param&gt;&lt;br /&gt;         /// &lt;param name="filePath"&gt;&lt;/param&gt;&lt;br /&gt;         public static  void RewriteUrl(HttpContext context, string sendToUrl, out string sendToUrlLessQString, out string filePath)&lt;br /&gt;         {&lt;br /&gt;           if (context.Request.QueryString.Count &gt; 0)&lt;br /&gt;           {&lt;br /&gt;               if (sendToUrl.IndexOf('?') != -1)&lt;br /&gt;               {&lt;br /&gt; sendToUrl += "&amp;" + context.Request.QueryString.ToString();&lt;br /&gt;                }&lt;br /&gt;               else&lt;br /&gt;                {&lt;br /&gt; sendToUrl += "?" + context.Request.QueryString.ToString();&lt;br /&gt;                }&lt;br /&gt;           }&lt;/div&gt; &lt;div  mce_tmp="1"&gt;          string queryString = String.Empty;&lt;br /&gt;          sendToUrlLessQString = sendToUrl;&lt;br /&gt;           if (sendToUrl.IndexOf('?') &gt; 0)&lt;br /&gt;          {&lt;br /&gt;               sendToUrlLessQString = sendToUrl.Substring(0, sendToUrl.IndexOf('?'));&lt;br /&gt;              queryString = sendToUrl.Substring(sendToUrl.IndexOf('?') + 1);&lt;br /&gt;          }&lt;/div&gt; &lt;div  mce_tmp="1"&gt;          filePath = string.Empty;&lt;br /&gt;            filePath = context.Server.MapPath(sendToUrlLessQString);&lt;/div&gt; &lt;div  mce_tmp="1"&gt;           context.RewritePath(sendToUrlLessQString, String.Empty, queryString);&lt;br /&gt;       }&lt;br /&gt;   }&lt;br /&gt; }&lt;/div&gt; &lt;div  mce_tmp="1"&gt;</textarea></p>
+<p>下载<br /><a href="http://www.cnblogs.com/Files/huobazi/VisualUrl.rar">http://www.cnblogs.com/Files/huobazi/VisualUrl.rar</a></p>              
+
+                    </div>
+                    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'huobaziblog';
+    var disqus_identifier = 'http:\/\/huobazi.aspxboy.com\/blog\/2005\/11\/21\/nodirurlrewrite\/';
+    var disqus_title = '关于请求的目录不存在而需要url重写';
+    var disqus_url = 'http:\/\/huobazi.aspxboy.com\/blog\/2005\/11\/21\/nodirurlrewrite\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                </section>
+            </div>
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a></li>
+        </ul>
+    </div>
+</div>
+<script src="http://huobazi.aspxboy.com//js/all.min.js"></script>
+        </div>
+    </div>
+</div>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-56321-3', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

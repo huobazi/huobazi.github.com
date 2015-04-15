@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs &middot; 武眉博</title>
+
+    <meta name="description" content="Marble&#39;s blog">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="huobazi" />
+    <meta name="twitter:title" content="Blogs &middot; 武眉博">
+    <meta name="twitter:description" content="Marble&#39;s blog">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Blogs &middot; 武眉博">
+    <meta property="og:description" content="Marble&#39;s blog">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    
+    
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+    
+
+    <link rel="stylesheet" href="http://huobazi.aspxboy.com//css/all.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <h1 class="brand-title"><a href="http://huobazi.aspxboy.com/">武眉博</a></h1>
+            <h2 class="brand-tagline"> Marble&#39;s blog </h2>
+        </hgroup>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://twitter.com/huobazi"><i class="fa fa-twitter"></i> Twitter</a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://github.com/huobazi "><i class="fa fa-github-alt"></i> github</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</div>
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                
+                <h1 class="content-subhead">04 Feb 2004, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2004/02/04/whoisinaspdotnet/" class="post-title">域名Whois信息查询(ASP.NET&#43;C#)</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a><a class="post-category post-category-.Net其他" href="http://huobazi.aspxboy.com//tags/.net%E5%85%B6%E4%BB%96">.Net其他</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>去年写的了,是从<a href="http://http://blog.joycode.com/aspdian/posts/4466.aspx">点缀</a>的博客学来的<br />看演示请点这里:<a href="http://www.aspxboy.com/whois.aspx">http://www.aspxboy.com/whois.aspx</a><br />代码如下:<br /><span style="color: #a52a2a;">&lt;% @Page Language="C#" %&gt;<br />&lt;% @Import Namespace="System.Net.Sockets" %&gt;<br />&lt;% @Import Namespace="System.Text" %&gt;<br />&lt;% @Import Namespace="System.IO" %&gt;<br />&lt;html&gt;<br />&lt;head&gt;<br />&lt;title&gt;.Com/.Net/.Org/.Cn 域名Whois信息查询&lt;/title&gt;<br />&lt;meta name="keywords" content=".Com,.Net,.Org,.Cn 域名Whois信息查询"&gt;<br />&lt;meta name="generator" content=".Com/.Net/.Org,.Cn 域名Whois信息查询"&gt;<br />&lt;meta name="description" content=".Com/.Net/.Org,.Cn 域名Whois信息查询"&gt;<br />&lt;style&gt;<br />&lt;!--<br />body,input{<br />        font-family: Tahoma, Verdana; color: #004080; font-size: 12px        <br />        }<br />a:link,a:visited{<br />        text-decoration: none; color: #004080<br />        }<br />--&gt;<br />&lt;/style&gt;<br />&lt;/head&gt;<br />&lt;body&gt;<br />&lt;form id="fmQuery" runat="server"&gt;<br />&amp;nbsp;要查询的域名域名:<br />www.&lt;asp:TextBox id="txtDomain" width="100" value="ASPXBOY.COM" runat="server" /&gt;<br />&amp;nbsp; &lt;asp:Button id="btnQuery" OnClick="btn_click"<br />text="查询!" runat="server" /&gt;（只能查询.Com/.Net/.Org/.Cn 域名Whois的信息）&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a href ="WhoisCode.htm" title="View the source code here!"&gt;源代码在这里&lt;/a&gt;<br />&lt;BR&gt;&lt;HR width="550" height="1" align="left"&gt;&lt;BR&gt;<br />&lt;asp:label id="lblResult" runat="server" /&gt;<br />&lt;/form&gt;<br />&lt;/body&gt;<br />&lt;/html&gt;<br />&lt;script language="C#" runat="server"&gt;<br />void btn_click(Object sender, EventArgs e)<br />{<br />String strServer;<br />String strDomain = txtDomain.Text;<br />String strServerCom = "whois.networksolutions.com";<br />String strServerCN = "whois.cnnic.net.cn";<br />String strResponse;<br />string[] arrDomain = strDomain.Split('.');<br />if (arrDomain[1].ToUpper()=="CN")<br />{<br />       <br />        strServer=strServerCN;<br />}<br />else<br />{<br />        strServer=strServerCom;<br />}</span></p>
+<p>bool blSuccess = IsWhosisSuccess(strDomain, strServer, out strResponse);<br />if (blSuccess)<br />{<br />lblResult.Text = strResponse;<br />}<br />else<br />{<br />lblResult.Text = "查找失败....";<br />}<br />}<br />bool IsWhosisSuccess(String strDomain, String strServer,<br />                   out String strResponse)<br />{<br />  strResponse = "none";<br />  bool blSuccess = false;<br />  TcpClient tcpc = new TcpClient();<br />  try<br />  {<br />    tcpc.Connect(strServer, 43);<br />  }<br />  catch(SocketException ex)<br />  {<br />    strResponse = "连接不到该 Whois server,请稍后再试。";<br />    return false;<br />  }</p>
+<p>  strDomain += "\r\n";<br />  Byte[] arrDomain = Encoding.UTF8.GetBytes(strDomain.ToCharArray());<br />  try<br />  {<br />        Stream s = tcpc.GetStream();<br />        s.Write(arrDomain, 0, strDomain.Length);<br />       <br />        StreamReader sr = new StreamReader(tcpc.GetStream(), Encoding.UTF8);<br />        StringBuilder strBuilder = new StringBuilder();<br />        string strLine = null;</p>
+<p>        while (null != (strLine = sr.ReadLine()))<br />        {<br />                strBuilder.Append(strLine+"&lt;br&gt;");<br />        }<br />        tcpc.Close();<br />               <br />        blSuccess = true;<br />        string my="Go to Huobazi's WebSite：&lt;a href=\"http://www.aspxboy.com\" title=\".Net男孩社区\"&gt;www.AspxBoy.Com&lt;/a&gt;&lt;br&gt;";<br />        strResponse = strBuilder.ToString()+my;  }<br />  catch(Exception e)<br />  {<br />        strResponse = e.ToString();<br />  }<br />  <br />  return blSuccess;<br />}<br />  &lt;/script&gt;</p>               
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">03 Feb 2004, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2004/02/03/cb-734/" class="post-title">又开始吵架了</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-闲言碎语" href="http://huobazi.aspxboy.com//tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD">闲言碎语</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a><a class="post-category post-category-程序员" href="http://huobazi.aspxboy.com//tags/%E7%A8%8B%E5%BA%8F%E5%91%98">程序员</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><a href="http://expert.csdn.net/Expert/topic/2697/2697501.xml?temp=.2264826"><br />http://expert.csdn.net/Expert/topic/2697/2697501.xml?temp=.2264826</a></p>
+<p>不过没有<a href="http://expert.csdn.net/Expert/topic/2285/2285944.xml?temp=.9354517">这个帖子</a>吵的凶哦</p>                
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">29 Jan 2004, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2004/01/29/cb-504/" class="post-title">Hello World !</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-闲言碎语" href="http://huobazi.aspxboy.com//tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD">闲言碎语</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p> Hello World !<br />开张了<br /> Hello World !<br />开张了<br /> Hello World !<br />开张了</p>                
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">29 Jan 2004, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2004/01/29/cb-506/" class="post-title">MSN Toolbar 谁用了</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-闲言碎语" href="http://huobazi.aspxboy.com//tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD">闲言碎语</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a><a class="post-category post-category-MSN" href="http://huobazi.aspxboy.com//tags/msn">MSN</a><a class="post-category post-category-Microsoft" href="http://huobazi.aspxboy.com//tags/microsoft">Microsoft</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><a id="viewpost.ascx_TitleUrl" href="http://toolbar.msn.com/">MSN Toolbar Beta</a></p>               
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">01 Jan 0001, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/1/01/01/datagridheadertextinitemdatabound/" class="post-title"></a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <hr />
+
+<p>layout: post
+title: 如何在ItemDataBound内获得DataGrid的列名称HeaderText
+comments: true
+date: 2004-11-03</p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">01 Jan 0001, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/1/01/01/same-name-element-in-one-page/" class="post-title"></a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        
+
+<hr />
+
+<p>layout: post
+title: 知识死角,name相同的html element
+comments: true
+date: 2009-07-17
+tags:
+- ASP.NET
+- 前端开发
+- Asp.net</p>
+
+<h2 id="c:bc45f5d6473d87f09f67929338a52eff">- C#</h2>
+
+<p><p>今天在帮同事调程序时发现了这个死角<br />现象如下，没有任何输入的textarea提交到服务端后得到的值总是&rdquo;,&rdquo;<br />找了半天发现是因为页面上两个textarea的name相同，以前只知道页面上radio的name相同则是一个组，name相同的<br />的checkbox提交后是以逗号分隔值的，于是做了下面代码的试验，发现任何name相同的element提交到服务端都会得到逗号分隔的值，以前还不知道这个，汗</p>
+<p></p>
+<code><span style="color: #000000">
+&lt;%@ Page Language=&ldquo;C#&ldquo; %&gt;<br /><br />&lt;script runat=&ldquo;server&rdquo; languag=&ldquo;c#&rdquo;&gt;
+<br />    string textboxValue = string.Empty;
+<br />    string radioValue = string.Empty;
+<br />    string checkboxValue = string.Empty;
+<br />    string selectValue = string.Empty;
+<br />    string textareaValue = string.Empty;
+<br />    void Page_Load(object obj , EventArgs args)
+<br />    {
+<br />        placeHolder.Visible = false;
+<br />        System.Web.HttpContext ctx = System.Web.HttpContext.Current;
+<br />        if(ctx.Request.HttpMethod == &rdquo;POST&rdquo;)
+<br />        {
+<br />            placeHolder.Visible = true;
+<br />            textboxValue = ctx.Request.Form[&ldquo;textbox&rdquo;];
+<br />            radioValue = ctx.Request.Form[&ldquo;radio&rdquo;];
+<br />            checkboxValue = ctx.Request.Form[&ldquo;checkbox&rdquo;];
+<br />            selectValue = ctx.Request.Form[&ldquo;select&rdquo;];
+<br />            textareaValue = ctx.Request.Form[&ldquo;textarea&rdquo;];
+<br />        }
+<br />    }
+<br />&lt;/script&gt;<br /><br />&lt;!DOCTYPE html PUBLIC &rdquo;-//W3C//DTD XHTML 1.0 Transitional//EN&rdquo; &rdquo;<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</a>
+<br />&lt;html xmlns=&ldquo;<a href="http://www.w3.org/1999/xhtml&quot; &gt;">http://www.w3.org/1999/xhtml&quot; &gt;</a>
+<br />&lt;head&gt;
+<br />&lt;style&gt;
+<br />body, h1, h2, h3, h4, h5, h6, hr, p, ul, ol, li,pre,fieldset, lengend, button, input, textarea,{
+<br />    margin: 0;
+<br />    padding: 0;
+<br />}
+<br />body,button, input, select, textarea {
+<br />    font: 13px/1 Tahoma, Helvetica, Arial, &rdquo;\5b8b\4f53&rdquo;, sans-serif;
+<br />}
+<br /><br />#page{
+<br />    padding:10px 30px 10px 30px;
+<br />}
+<br />#s{
+<br />color:red;
+<br />}
+<br />input,select,textarea{
+<br />    clear:both;
+<br />    float:left;
+<br />    margin:5px;
+<br />}
+<br /><br />pre {
+<br />    overflow: auto;
+<br />    border: 1px dotted #281;
+<br />    background-color: #eee;
+<br />    padding: 2px 20px 20px 10px;
+<br />}
+<br />fieldset{
+<br />    line-height:200%;
+<br />}
+<br /><br />&lt;/style&gt;
+<br />&lt;/head&gt;
+<br />&lt;body&gt;<br /><br />&lt;div id=&ldquo;page&rdquo;&gt;<br /><br />&lt;div id=&ldquo;placeHolder&rdquo; runat=&ldquo;server&rdquo;&gt;    
+<br />            &lt;string id=&ldquo;s&rdquo;&gt;Post Data:&lt;/string&gt;<br /><br />&lt;pre style=&ldquo;max-height:30px;&rdquo;&gt;
+<br />textboxvalue:&lt;%= textboxValue%&gt;
+<br />radioValue:&lt;%= radioValue%&gt;
+<br />checkboxValue:&lt;%= checkboxValue%&gt;
+<br />selectValue:&lt;%=selectValue%&gt;
+<br />textareaValue:&lt;%= textareaValue%&gt;&lt;/pre&gt;<br /><br />&lt;/div&gt;<br /><br />&lt;form id=&ldquo;aspnetForm&rdquo; method=&ldquo;post&rdquo;&gt;
+<br />                &lt;fieldset&gt;       
+<br />                  &lt;legend&gt;Test&lt;/legend&gt;              
+<br />                &lt;input type=&ldquo;text&rdquo; name=&ldquo;textbox&rdquo; value=&ldquo;a&rdquo;/&gt; 
+<br />                &lt;input type=&ldquo;text&rdquo; name=&ldquo;textbox&rdquo; value=&ldquo;a&rdquo;/&gt;
+<br />                &lt;input type=&ldquo;text&rdquo; name=&ldquo;textbox&rdquo; value=&ldquo;a&rdquo;/&gt;
+<br />                &lt;input type=&ldquo;radio&rdquo; name=&ldquo;radio&rdquo; value=&ldquo;a&rdquo; /&gt;
+<br />                &lt;input type=&ldquo;radio&rdquo; name=&ldquo;radio&rdquo; value=&ldquo;a&rdquo; /&gt;
+<br />                &lt;input type=&ldquo;radio&rdquo; name=&ldquo;radio&rdquo; value=&ldquo;a&rdquo; checked=&ldquo;checked&rdquo; /&gt;
+<br />                &lt;input type=&ldquo;checkbox&rdquo; name=&ldquo;checkbox&rdquo; value=&ldquo;a&rdquo; checked=&ldquo;checked&rdquo; /&gt;
+<br />                &lt;input type=&ldquo;checkbox&rdquo; name=&ldquo;checkbox&rdquo; value=&ldquo;a&rdquo; checked=&ldquo;checked&rdquo; /&gt;
+<br />                &lt;input type=&ldquo;checkbox&rdquo; name=&ldquo;checkbox&rdquo; value=&ldquo;a&rdquo; checked=&ldquo;checked&rdquo; /&gt;
+<br />                &lt;select name=&ldquo;select&rdquo;&gt;
+<br />                                   &lt;option value=&ldquo;a&rdquo;&gt;a&lt;/option&gt;
+<br />                &lt;/select&gt;
+<br />                &lt;select name=&ldquo;select&rdquo;&gt;
+<br />                                   &lt;option value=&ldquo;a&rdquo;&gt;a&lt;/option&gt;
+<br />                &lt;/select&gt;
+<br />                &lt;select name=&ldquo;select&rdquo;&gt;
+<br />                                   &lt;option value=&ldquo;a&rdquo;&gt;a&lt;/option&gt;
+<br />                &lt;/select&gt;
+<br />                &lt;textarea name=&ldquo;textarea&rdquo;&gt;a&lt;/textarea&gt;
+<br />                &lt;textarea name=&ldquo;textarea&rdquo;&gt;a&lt;/textarea&gt;
+<br />                &lt;textarea name=&ldquo;textarea&rdquo;&gt;a&lt;/textarea&gt;
+<br />                &lt;input type=&ldquo;submit&rdquo; value=&ldquo;Do PostBack&rdquo; /&gt;
+<br />            &lt;/fieldset&gt;
+<br />            &lt;/form&gt;
+<br />    &lt;/div&gt;<br /><br />&lt;/body&gt;
+<br />&lt;/html&gt;</span>
+</code></p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">01 Jan 0001, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/1/01/01/twodropdownlistindatagridandbubbleevent/" class="post-title"></a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        
+
+<hr />
+
+<p>layout: post
+title: &lsquo;两个DropDownList在Repeater、DataList、DataGrid内的连动和冒泡事件(BubbleEvent) &lsquo;
+comments: true
+date: 2006-04-08
+tags:
+- ASP.NET
+- Asp.net
+- DataGrid
+- GridView
+- 代码片段
+- Grid
+- DataList
+- Repeater
+- DropDownList</p>
+
+<h2 id="bubbleevent:ed9a8ef925c044158182db7aab93e2fd">- BubbleEvent</h2>
+
+<p><span style="font-size: medium;"><strong>两个DropDownList在Repeater、DataList、DataGrid内的连动和冒泡事件(BubbleEvent)<br /></strong><span style="font-size: small;">        问题</span><strong>:</strong></span> <a href="http://community.csdn.net/Expert/topic/4670/4670056.xml?temp=3.944033E-02" target="_blank">http://community.csdn.net/Expert/topic/4670/4670056.xml?temp=3.944033E-02</a><br />        刚看第一眼觉得在第一个DDL的SelectedIndexChanged事件内绑定第二个DDL就ok了，页面上写或者ItemDataBound内写事件挂接代码都可以。打开VS写测试却发现有点<span style="color: #ff0000;"><strong><span style="text-decoration: underline;">障碍</span></strong></span>哦，<br /><span style="color: #008000;"><span style="text-decoration: underline;"><em>在SelectedIndexChanged内要知道去绑定哪个行哪个列的DDL要费些周折</em></span></span>。<br /><strong><span style="color: #0000ff;">只有从DDL一级一级的向上找Parent最后找到DataGridItem，再利用其ItemIndex定位到行然后FindControl到要绑定的DDL</span></strong>，最终可以实现，好像比较累哦。<br />        随又想到DataGrid的ItemCommand事件，但发现WebControl内只有<a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/cpref/html/frlrfSystemWebUIWebControlsButtonClassTopic.asp"><strong><span style="color: #a52a2a;">Button</span></strong></a><span style="color: #a52a2a;"> </span><a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/cpref/html/frlrfSystemWebUIWebControlsImageButtonClassTopic.asp"><strong><span style="color: #a52a2a;">ImageButton</span></strong></a><span style="color: #a52a2a;"> <strong><span style="text-decoration: underline;"><a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/cpref/html/frlrfsystemwebuiwebcontrolslinkbuttonclasstopic.asp">LinkButton</a></span></strong></span>有<a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/cpref/html/frlrfsystemwebuiwebcontrolslinkbuttonclasscommandnametopic.asp">CommandName</a>属性和 <a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/cpref/html/frlrfsystemwebuiwebcontrolslinkbuttonclasscommandargumenttopic.asp">CommandArgument</a>属性，并可以将事件<span style="text-decoration: underline;"><strong><a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/cpguide/html/cpconbubblingcommandevent.asp">上浮（冒泡）</a>.</strong></span><a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/cpref/html/frlrfsystemwebuiwebcontrolsdropdownlistclasstopic.asp">DropDownLis</a>t先天不足！真是郁闷~~~~~ 能不能自己改造呢？<span style="color: #ff0000; background-color: #000080;"><strong>动手试试</strong></span>就知道了。</p>
+<code><span style="color: #000000">
+&lt;%@ Page Language="C#" Debug="true" %&gt;
+<br />&lt;%@ Import Namespace="System.Data" %&gt;
+<br />&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+<br />&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="gb2312" lang="gb2312"&gt;
+<br />&lt;head&gt;
+<br />&lt;title&gt; ItemDataBoundGetColumnName &lt;/title&gt;
+<br />&lt;meta http-equiv="Content-Type" content="text/html; charset=gb2312" /&gt;
+<br />&lt;meta name="title" content="" /&gt;
+<br />&lt;meta name="author" content="活靶子,Huobazi,www.AspxBoy.com" /&gt;
+<br />&lt;meta name="subject" content="" /&gt;
+<br />&lt;meta name="language" content="gb2312" /&gt;
+<br />&lt;meta name="keywords" content="" /&gt;
+<br />&lt;meta name="Copyright" content="www.AspxBoy.com" /&gt;
+<br />&lt;meta name="robots" content="all" /&gt;<br /><br />&lt;script language="c#" runat="server"&gt;
+<br />void BindGrid()
+<br />{
+<br />        DataTable dt = new DataTable();
+<br />        DataRow dr;
+<br />        dt.Columns.Add(new DataColumn("IntegerValue", typeof(Int32)));
+<br />        dt.Columns.Add(new DataColumn("StringValue", typeof(string)));
+<br />        dt.Columns.Add(new DataColumn("DateTimeValue", typeof(DateTime)));
+<br />        dt.Columns.Add(new DataColumn("BoolValue", typeof(bool)));
+<br />        dt.Columns.Add(new DataColumn("CurrencyValue", typeof(double)));
+<br />        for (int i = 0; i &lt; 36; i++) {
+<br />            dr = dt.NewRow();
+<br />            dr[0] = i;
+<br />            dr[1] = "项 " + i.ToString();
+<br />            dr[2] = DateTime.Now;
+<br />            dr[3] = (i % 2 != 0) ? true : false;
+<br />            dr[4] = 1.23 * (i+1);
+<br />            dt.Rows.Add(dr);
+<br />        }
+<br />  dg.DataSource= dt;
+<br />  dg.DataBind();
+<br />}
+<br />void Page_Load(object o, EventArgs e)
+<br />{
+<br />     dg.PagerStyle.Mode = PagerMode.NumericPages;
+<br />     if(!IsPostBack)
+<br />     {
+<br />        BindGrid();
+<br />     }
+<br />}
+<br /> 
+<br />void btnClick(object o , EventArgs e)
+<br />{
+<br />     Response.Write("页面回发,但是不执行ItemDataBound");
+<br />}
+<br /> 
+<br />void PageChange(object o , DataGridPageChangedEventArgs e)
+<br />{
+<br />     dg.CurrentPageIndex = e.NewPageIndex;
+<br />     BindGrid();
+<br />}
+<br />void ItemDataBound(object o , DataGridItemEventArgs e)
+<br />{
+<br />     if(e.Item.ItemIndex &gt; -1 )//必须
+<br />     {
+<br />          DataRowView drv = (DataRowView)e.Item.DataItem;
+<br />          for (int i=0; i&lt;drv.Row.Table.Columns.Count ; i++)
+<br />          { 
+<br />            Response.Write(drv.Row.Table.Columns[i].ColumnName + "&amp;nbsp;&amp;nbsp;");
+<br />          }
+<br />     }
+<br />}
+<br />&lt;/script&gt;<br /><br />&lt;/head&gt;
+<br />&lt;body&gt;
+<br />&lt;form runat="server"&gt;
+<br />  &lt;ASP:DataGrid id="dg" runat="server"      
+<br />   HeaderStyle-BackColor="#aaaadd"
+<br />   AutoGenerateColumns="true"
+<br />   AllowPaging="true"
+<br />   PageSize="6"
+<br />    OnItemDataBound="ItemDataBound"
+<br />    OnPageIndexChanged="PageChange"
+<br />  &gt;
+<br />  &lt;/asp:DataGrid&gt;
+<br />  &lt;/br&gt;
+<br />   &lt;asp:button id="btn" runat="server" onclick="btnClick" Text="我是按钮,按我一下"&gt;&lt;/asp:button&gt;<br />在AutoGenerateColumns="false"使用绑定列或者模板列的时候只需要使用 <br /><br />&lt;font color="blut"&gt;YourDataGrid.Columns[编号].HeaderText&lt;/font&gt; 去获取
+<br />  <br />&lt;/form&gt;
+<br />&lt;/body&gt;
+<br />&lt;/html&gt;</span>
+</code><p><a href="http://www.aspxboy.com/Files/71/66/284.Aspx" target="_blank">http://www.aspxboy.com/Files/71/66/284.Aspx</a></p>
+<p> </p>                
+
+                    </div>
+                </section>
+                
+            </div>
+            
+<div class="pagination">
+  <nav role="pagination" class="post-list-pagination">
+      
+      <a href="/blog/page/21/" class="post-list-pagination-item pure-button post-list-pagination-item-prev">
+        <i class="fa fa-angle-double-left"></i>&nbsp;Newer
+      </a>
+      
+    <span class="post-list-pagination-item post-list-pagination-item-current">Page 22 of 22</span>
+    
+  </nav>
+</div>
+
+
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a></li>
+        </ul>
+    </div>
+</div>
+<script src="http://huobazi.aspxboy.com//js/all.min.js"></script>
+        </div>
+    </div>
+</div>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-56321-3', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

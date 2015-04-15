@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文本块内的文本的空格、制表符和换行处理 &middot; 武眉博</title>
+
+    <meta name="description" content="">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="huobazi" />
+    <meta name="twitter:title" content="文本块内的文本的空格、制表符和换行处理 &middot; 武眉博">
+    <meta name="twitter:description" content="">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="文本块内的文本的空格、制表符和换行处理 &middot; 武眉博">
+    <meta property="og:description" content="">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    
+    
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+    
+
+    <link rel="stylesheet" href="http://huobazi.aspxboy.com//css/all.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <h1 class="brand-title"><a href="http://huobazi.aspxboy.com/">武眉博</a></h1>
+            <h2 class="brand-tagline"> Marble&#39;s blog </h2>
+        </hgroup>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://twitter.com/huobazi"><i class="fa fa-twitter"></i> Twitter</a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://github.com/huobazi "><i class="fa fa-github-alt"></i> github</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</div>
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                <h1 class="content-subhead">21 Sep 2005, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2005/09/21/cb-241048/" class="post-title">文本块内的文本的空格、制表符和换行处理</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-share">
+                        <div class="post-share-links">
+                            <h4 style="">Share</h4>
+                            <a href="#" data-type="facebook" data-url="http://huobazi.aspxboy.com/blog/2005/09/21/cb-241048/" data-title="文本块内的文本的空格、制表符和换行处理" data-description="" data-media="" class="prettySocial fa fa-facebook"></a>
+                            <a href="#" data-type="googleplus" data-url="http://huobazi.aspxboy.com/blog/2005/09/21/cb-241048/" data-description="" class="prettySocial fa fa-google-plus"></a>
+                            
+                            <a href="#" data-type="twitter" data-url="http://huobazi.aspxboy.com/blog/2005/09/21/cb-241048/" data-description="" data-via="huobazi" class="prettySocial fa fa-twitter"></a>
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="post-description">
+                        <p><p>最近在做我的<a href="http://www.aspxboy.com/">AspxBoy.Com</a>时遇到一个郁闷的问题<br /></p>
+<div><font style="BACKGROUND-COLOR: #ffffff" color="#808080">在使用ftb２.0做编辑器的时候</font></div>
+<div>
+<p><font style="BACKGROUND-COLOR: #ffffff" color="#808080">在内容筐内粘贴进</font></p>
+<pre>&hellip;.</pre>
+<p></p>
+</div>
+<div><font style="BACKGROUND-COLOR: #ffffff" color="#808080">的代码</font></div>
+<div>
+<p><font style="BACKGROUND-COLOR: #ffffff" color="#808080">当提交后显示页面(如<a href="http://www.aspxboy.com/433/archive.aspx">http://www.aspxboy.com/433/archive.aspx</a>)内</font></p>
+<pre>内的制表符都变没了<br />求助与csdn:<br /><br /></pre>
+</div>
+<p><a title="http://community.csdn.net/Expert/topic/4282/4282303.xml?temp=.5363428" href="http://community.csdn.net/Expert/topic/4282/4282303.xml?temp=.5363428"><a href="http://community.csdn.net/Expert/topic/4282/4282303.xml?temp=.5363428">http://community.csdn.net/Expert/topic/4282/4282303.xml?temp=.5363428</a></a><br /><br />经网友指点采用新的ftb版本,发现提交到数据库内<font color="#000000">制表符没有被替换,<br />但是显示的时候还是全部被替换了<br />找啊找啊,一夜没睡,终于在</font><font color="#000000">苏昱的样式表中文手册内找到了答案<br />原来在写</font></p>
+<pre>样式的时候<br />写上了<br />white-space:normal;<br />却没有用 去替换制表符,<br />我改用如下样式则显示正确了<br /><strong><font color="#ff0000">white-space:pre;</font></strong><br /><br />而正确的使用方法是<br /><div class="cssColumnTitle"><font style="BACKGROUND-COLOR: #d3d3d3">语法：</font></div>
+<div><font style="BACKGROUND-COLOR: #d3d3d3"><b>white-space : </b><span class="cssDefault"><b>normal</b></span> | <b>pre</b> | <b>nowrap</b> </font></div>
+<div class="cssColumnTitle"><font style="BACKGROUND-COLOR: #d3d3d3">取值：</font></div>
+</pre>
+<table><tbody>
+<tr>
+<td nowrap><b><font style="BACKGROUND-COLOR: #d3d3d3">normal </font></b></td>
+<td nowrap><b><font style="BACKGROUND-COLOR: #d3d3d3">:</font></b></td>
+<td><font style="BACKGROUND-COLOR: #d3d3d3"><b>默认值</b>。默认处理方式。文本自动处理换行。假如抵达容器边界内容会转到下一行</font></td>
+</tr>
+<tr>
+<td nowrap><b><font style="BACKGROUND-COLOR: #d3d3d3">pre </font></b></td>
+<td nowrap><b><font style="BACKGROUND-COLOR: #d3d3d3">:</font></b></td>
+<td><font style="BACKGROUND-COLOR: #d3d3d3">换行和其他空白字符都将受到保护。这个值需要IE6+或者<b> !DOCTYPE </b>声明为<b> <br /><br />standards-compliant mode <br /></b>支持。如果<b> !DOCTYPE </b>声明没有指定<br />为<b> standards-compliant mode </b>，此属性可以使用，但是不会发生作用。结果等同于<b> normal </b>。参阅<b> pre </b>对象</font></td>
+</tr>
+<tr>
+<td nowrap><b><font style="BACKGROUND-COLOR: #d3d3d3">nowrap </font></b></td>
+<td nowrap><b><font style="BACKGROUND-COLOR: #d3d3d3">:</font></b></td>
+<td><font style="BACKGROUND-COLOR: #d3d3d3">强制在同一行内显示所有文本，直到文本结束或者遭遇<b> br </b>对象。参阅<b> noWrap </b>属性</font></td>
+</tr>
+</tbody></table>
+<div class="cssColumnTitle"><font style="BACKGROUND-COLOR: #d3d3d3">说明：</font></div>
+<div><font style="BACKGROUND-COLOR: #d3d3d3">设置或检索对象内空格字符的处理方式。<br />空格字符，像换行，空格，TAB，在HTML文档中默认的是被忽略的。<font color="#0000ff">当此属性设置为<b> normal <br /></b>或者<b> nowrap </b>时，你可以使用不换行空格的命名实体<b>   </b>来添加空格，用<b> br </b>元素来添加换行。<br /></font>此属性对你使用文档对象模型(DOM)操作的内容的影响与其对IE显示内容的影响一样。<br />此属性作用于块对象。<br />此属性对于<b> currentStyle </b>对象而言是只读的。对于其他对象而言是可读写的。<br />对应的脚本特性为<b> whiteSpace </b>。</font></div></p>
+
+                    </div>
+                    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'huobaziblog';
+    var disqus_identifier = 'http:\/\/huobazi.aspxboy.com\/blog\/2005\/09\/21\/cb-241048\/';
+    var disqus_title = '文本块内的文本的空格、制表符和换行处理';
+    var disqus_url = 'http:\/\/huobazi.aspxboy.com\/blog\/2005\/09\/21\/cb-241048\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                </section>
+            </div>
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a></li>
+        </ul>
+    </div>
+</div>
+<script src="http://huobazi.aspxboy.com//js/all.min.js"></script>
+        </div>
+    </div>
+</div>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-56321-3', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

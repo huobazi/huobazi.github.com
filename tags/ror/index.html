@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ror &middot; 武眉博</title>
+
+    <meta name="description" content="Marble&#39;s blog">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="huobazi" />
+    <meta name="twitter:title" content="Ror &middot; 武眉博">
+    <meta name="twitter:description" content="Marble&#39;s blog">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Ror &middot; 武眉博">
+    <meta property="og:description" content="Marble&#39;s blog">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    
+    
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+    
+
+    <link rel="stylesheet" href="http://huobazi.aspxboy.com//css/all.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <h1 class="brand-title"><a href="http://huobazi.aspxboy.com/">武眉博</a></h1>
+            <h2 class="brand-tagline"> Marble&#39;s blog </h2>
+        </hgroup>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://twitter.com/huobazi"><i class="fa fa-twitter"></i> Twitter</a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://github.com/huobazi "><i class="fa fa-github-alt"></i> github</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</div>
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                
+                <h1 class="content-subhead">24 Jul 2010, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2010/07/24/ruby-on-rails-nginx-passenger-memcached-on-centos/" class="post-title">在centos上装rubyee,passenger和memcached ,搭建rails环境</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-LAMP" href="http://huobazi.aspxboy.com//tags/lamp">LAMP</a><a class="post-category post-category-Rails" href="http://huobazi.aspxboy.com//tags/rails">Rails</a><a class="post-category post-category-nginx" href="http://huobazi.aspxboy.com//tags/nginx">nginx</a><a class="post-category post-category-RoR" href="http://huobazi.aspxboy.com//tags/ror">RoR</a><a class="post-category post-category-Ruby" href="http://huobazi.aspxboy.com//tags/ruby">Ruby</a><a class="post-category post-category-memcache" href="http://huobazi.aspxboy.com//tags/memcache">memcache</a><a class="post-category post-category-passenger" href="http://huobazi.aspxboy.com//tags/passenger">passenger</a><a class="post-category post-category-RubyEE" href="http://huobazi.aspxboy.com//tags/rubyee">RubyEE</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>流水笔记一则.</p>
+<p>我之前已在服务器配置了nginx，php，mysql等，现在先安装ruby企业版</p>
+<div class="source" style='font-family: "[object HTMLOptionElement]","Consolas","Lucida Console","Courier New"; color: #c0c0c0; background-color: #000000;'>
+<span style="color: #c0c0c0;">cd</span><span style="color: #00bbbb;"> /tmp</span><br /><span style="color: #00bbbb;">wget http:/</span><span style="color: #c0c0c0;">/</span><span style="color: #c0c0c0;">rubyforge</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">org</span><span style="color: #c0c0c0;">/</span><span style="color: #c0c0c0;">frs</span><span style="color: #c0c0c0;">/</span><span style="color: #c0c0c0;">download</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">php</span><span style="color: #c0c0c0;">/</span><span style="color: #c0c0c0;">71096</span><span style="color: #c0c0c0;">/</span><span style="color: #c0c0c0;">ruby</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">enterprise</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">1</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">8</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">7</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">2010</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">02</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">tar</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">gz</span><br /><span style="color: #c0c0c0;">tar</span> <span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">xzvf</span> <span style="color: #c0c0c0;">ruby</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">enterprise</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">1</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">8</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">7</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">2010</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">02</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">tar</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">gz</span><br /><span style="color: #c0c0c0;">cd</span> <span style="color: #c0c0c0;">ruby</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">enterprise</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">1</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">8</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">7</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">2010</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">02</span><br /><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">/installer</span>
+</div>
+<p>然后按照提示做</p>
+<p></p>
+<p>设置一下环境变量 <br />export PATH=/rubyee/bin:$PATH<br />接着<br />ruby -v<br />gem -v<br />看到版本号，说明rubyee 安装ok</p>
+<p>下来<br />gem install passenger<br />passenger-install-nginx-module</p>
+<p>按照提示在nginx配置文件里增加：</p>
+<div class="source" style='font-family: "[object HTMLOptionElement]","Consolas","Lucida Console","Courier New"; color: #c0c0c0; background-color: #000000;'>
+<p><span style="color: #c0c0c0;">http</span> <span style="color: #c0c0c0;">{</span><br />     <span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">.</span><br />     <span style="color: #c0c0c0;">passenger_root</span><span style="color: #00bbbb;"> /rubyee/</span><span style="color: #c0c0c0;">lib</span><span style="color: #c0c0c0;">/</span><span style="color: #c0c0c0;">ruby</span><span style="color: #c0c0c0;">/</span><span style="color: #c0c0c0;">gems</span><span style="color: #c0c0c0;">/</span><span style="color: #c0c0c0;">1</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">8</span><span style="color: #c0c0c0;">/</span><span style="color: #c0c0c0;">gems</span><span style="color: #c0c0c0;">/</span><span style="color: #c0c0c0;">passenger</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">2</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">2</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">14</span>;<br />     <span style="color: #c0c0c0;">passenger_ruby</span><span style="color: #00bbbb;"> /rubyee/</span><span style="color: #c0c0c0;">bin</span><span style="color: #c0c0c0;">/</span><span style="color: #c0c0c0;">ruby</span>;<br />     <span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">.</span><br /><span style="color: #c0c0c0;">}</span></p>
+<p>  <span style="color: #c0c0c0;">server</span> <span style="color: #c0c0c0;">{</span><br />     <span style="color: #c0c0c0;">listen</span> <span style="color: #c0c0c0;">80</span>;<br />     <span style="color: #c0c0c0;">server_name</span> <span style="color: #c0c0c0;">www</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">yourhost</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">com</span>;<br />     <span style="color: #c0c0c0;">root</span><span style="color: #00bbbb;"> /somewhere/</span><span style="color: #00ffff; font-weight: bold;">public</span>;   <span style="color: #696969;"># &lt;--- be sure to point to 'public'!</span><br />     <span style="color: #c0c0c0;">passenger_enabled</span> <span style="color: #c0c0c0;">on</span>;<br />  <span style="color: #c0c0c0;">}</span></p>
+</div>
+<p>rails 欧了~</p>
+<p>下来开始装 memcached,</p>
+<p>memcached 的使用需要libeven的支持</p>
+<div class="source" style='font-family: "[object HTMLOptionElement]","Consolas","Lucida Console","Courier New"; color: #c0c0c0; background-color: #000000;'>
+<p><span style="color: #c0c0c0;">cd</span><span style="color: #00bbbb;"> /tmp</span><br /><span style="color: #00bbbb;">wget http:/</span><span style="color: #c0c0c0;">/</span><span style="color: #c0c0c0;">www</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">monkey</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">org</span><span style="color: #c0c0c0;">/~</span><span style="color: #c0c0c0;">provos</span><span style="color: #c0c0c0;">/</span><span style="color: #c0c0c0;">libevent</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">1</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">4</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">14</span><span style="color: #c0c0c0;">a</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">stable</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">tar</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">gz</span><br /><span style="color: #c0c0c0;">tar</span> <span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">zxvf</span> <span style="color: #c0c0c0;">libevent</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">1</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">4</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">14</span><span style="color: #c0c0c0;">a</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">stable</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">tar</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">gz</span><br /><span style="color: #c0c0c0;">cd</span> <span style="color: #c0c0c0;">libevent</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">1</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">4</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">14</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">stable</span><br /><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">/configure</span> <span style="color: #c0c0c0;">--</span><span style="color: #c0c0c0;">prefix</span><span style="color: #c0c0c0;">=</span><span style="color: #00bbbb;">/usr</span><br /><span style="color: #00bbbb;">make &amp;&amp; make install</span></p>
+<p><span style="color: #00bbbb;">cd /</span><span style="color: #c0c0c0;">tmp</span><br /><span style="color: #c0c0c0;">wget</span> <span style="color: #c0c0c0;">http</span><span style="color: #00bbbb;">:/</span><span style="color: #c0c0c0;">/</span><span style="color: #c0c0c0;">memcached</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">org</span><span style="color: #c0c0c0;">/</span><span style="color: #c0c0c0;">latest</span><br /><span style="color: #c0c0c0;">tar</span> <span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">zxvf</span> <span style="color: #c0c0c0;">memcached</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">1</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">4</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">5</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">tar</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">gz</span><br /><span style="color: #c0c0c0;">cd</span> <span style="color: #c0c0c0;">memcached</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">1</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">4</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">5</span><br /><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">/configure</span> <span style="color: #c0c0c0;">--</span><span style="color: #c0c0c0;">prefix</span><span style="color: #c0c0c0;">=</span><span style="color: #00bbbb;">/usr/</span><span style="color: #c0c0c0;">local</span><br /><span style="color: #c0c0c0;">make</span> <span style="color: #c0c0c0;">&amp;&amp;</span> <span style="color: #c0c0c0;">make</span> <span style="color: #c0c0c0;">install</span></p>
+</div>
+<p> 现在可以用<br />service memcached start  </p>
+<p>和<br />  service memcached stop  </p>
+<p>这两个很骚的命令来管理memcached服务了,欧了~</p>
+<p>安装mysql gem<br />gem install --no-rdoc --no-ri mysql -- --with-mysql-dir=/usr/local/mysql --with-mysql-config=/usr/local/mysql/bin/mysql_config</p>
+<p>安装 ImageMagick</p>
+<div class="source" style='font-family: "[object HTMLOptionElement]","Consolas","Lucida Console","Courier New"; color: #c0c0c0; background-color: #000000;'>
+<p><span style="color: #c0c0c0;">wget</span> <span style="color: #c0c0c0;">ftp</span><span style="color: #00bbbb;">:/</span><span style="color: #c0c0c0;">/</span><span style="color: #c0c0c0;">ftp</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">imagemagick</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">org</span><span style="color: #c0c0c0;">/</span><span style="color: #c0c0c0;">pub</span><span style="color: #c0c0c0;">/</span><span style="color: #00ffff;">ImageMagick</span><span style="color: #c0c0c0;">/</span><span style="color: #00ffff;">ImageMagick</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">tar</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">gz</span><br /><span style="color: #c0c0c0;">tar</span> <span style="color: #c0c0c0;">xvfz</span> <span style="color: #00ffff;">ImageMagick</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">tar</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">gz</span><br /><span style="color: #c0c0c0;">cd</span> <span style="color: #00ffff;">ImageMagick</span><span style="color: #c0c0c0;">*</span><br /><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">/configure</span> <span style="color: #c0c0c0;">--</span><span style="color: #c0c0c0;">disable</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">static</span> <span style="color: #c0c0c0;">--</span><span style="color: #c0c0c0;">with</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">modules</span> <span style="color: #c0c0c0;">--</span><span style="color: #c0c0c0;">with</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">gs</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">font</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">dir</span><span style="color: #c0c0c0;">=</span><span style="color: #00bbbb;">/usr/s</span><span style="color: #c0c0c0;">hare</span><span style="color: #c0c0c0;">/</span><span style="color: #c0c0c0;">fonts</span><span style="color: #c0c0c0;">/</span><span style="color: #c0c0c0;">type1</span><span style="color: #c0c0c0;">/</span><span style="color: #c0c0c0;">gsfonts</span><br /><span style="color: #c0c0c0;">make</span><br /><span style="color: #c0c0c0;">sudo</span> <span style="color: #c0c0c0;">make</span> <span style="color: #c0c0c0;">install</span><br /><span style="color: #c0c0c0;">cd</span> <span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">.</span><br /><span style="color: #c0c0c0;">rm</span> <span style="color: #c0c0c0;">-</span><span style="color: #00ffff;">Rf</span> <span style="color: #00ffff;">ImageMagick</span><span style="color: #c0c0c0;">*</span></p>
+<p><span style="color: #c0c0c0;">wget</span> <span style="color: #c0c0c0;">http</span><span style="color: #00bbbb;">:/</span><span style="color: #c0c0c0;">/</span><span style="color: #c0c0c0;">rubyforge</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">org</span><span style="color: #c0c0c0;">/</span><span style="color: #c0c0c0;">frs</span><span style="color: #c0c0c0;">/</span><span style="color: #c0c0c0;">download</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">php</span><span style="color: #c0c0c0;">/</span><span style="color: #c0c0c0;">70067</span><span style="color: #c0c0c0;">/</span><span style="color: #00ffff;">RMagick</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">2</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">13</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">1</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">tar</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">bz2</span><br /><span style="color: #c0c0c0;">tar</span> <span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">jxf</span> <span style="color: #00ffff;">RMagick</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">2</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">13</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">1</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">tar</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">bz2</span><br /><span style="color: #c0c0c0;">cd</span> <span style="color: #00ffff;">RMagick</span><span style="color: #c0c0c0;">*</span><br /><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">/configure</span> <span style="color: #c0c0c0;">--</span><span style="color: #c0c0c0;">disable</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">static</span> <span style="color: #c0c0c0;">--</span><span style="color: #c0c0c0;">with</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">modules</span> <span style="color: #c0c0c0;">--</span><span style="color: #c0c0c0;">without</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">perl</span> <span style="color: #c0c0c0;">--</span><span style="color: #c0c0c0;">without</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">magick</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">plus</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">plus</span> <span style="color: #c0c0c0;">--</span><span style="color: #c0c0c0;">with</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">jpeg</span><span style="color: #c0c0c0;">=</span><span style="color: #c0c0c0;">yes</span> <span style="color: #c0c0c0;">--</span><span style="color: #c0c0c0;">with</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">png</span><span style="color: #c0c0c0;">=</span><span style="color: #c0c0c0;">yes</span> <span style="color: #c0c0c0;">--</span><span style="color: #c0c0c0;">with</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">tiff</span><span style="color: #c0c0c0;">=</span><span style="color: #c0c0c0;">yes</span> <span style="color: #c0c0c0;">--</span><span style="color: #c0c0c0;">with</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">quantum</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">depth</span><span style="color: #c0c0c0;">=</span><span style="color: #c0c0c0;">8</span>  <span style="color: #c0c0c0;">--</span><span style="color: #c0c0c0;">with</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">gs</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">font</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">dir</span><span style="color: #c0c0c0;">=</span><span style="color: #00bbbb;">/usr/s</span><span style="color: #c0c0c0;">hare</span><span style="color: #c0c0c0;">/</span><span style="color: #c0c0c0;">fonts</span><span style="color: #c0c0c0;">/</span><span style="color: #c0c0c0;">type1</span><span style="color: #c0c0c0;">/</span><span style="color: #c0c0c0;">gsfonts</span><br /><span style="color: #c0c0c0;">ruby</span> <span style="color: #c0c0c0;">setup</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">rb</span><br /><span style="color: #c0c0c0;">ruby</span> <span style="color: #c0c0c0;">setup</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">rb</span> <span style="color: #c0c0c0;">install</span><br /><span style="color: #c0c0c0;">cd</span> <span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">.</span><br /><span style="color: #c0c0c0;">rm</span> <span style="color: #c0c0c0;">-</span><span style="color: #00ffff;">Rf</span> <span style="color: #00ffff;">RMagick</span><span style="color: #c0c0c0;">*</span></p>
+</div>
+<p>最后 上传 rails 程序<br />接着 rake gems:install</p>
+<p>centos安装rmagick出现以下错误：<br />libMagickCore.so.2: cannot open shared object file: No such file or directory – /usr/lib/ruby/gems/1.8/gems/rmagick-2.8.0/lib/RMagick2.so<br />解决办法：</p>
+<p>ldconfig /usr/local/lib</p>
+<p>错误[memcache-client] Could not load SystemTimer gem, falling back to Ruby's slower/unsafe timeout library: no such file to load -- system_timer<br />rake aborted!</p>
+<p>sudo gem install system_timer</p>
+<p>Magick::ImageMagickError (unable to read font `/usr/local/lib/ImageMagick-6.6.3/config//usr/share/fonts/type1/gsfonts/n019003l.pfb' @ error/annotate.c/RenderFreetype/1056: `(null)'):<br />错误</p>
+<p>wget http://sourceforge.net/projects/gs-fonts/files/gs-fonts/8.11%20%28base%2035%2C%20GPL%29/ghostscript-fonts-std-8.11.tar.gz/download<br /> tar -zxvf ghostscript-fonts-std-8.11.tar.gz<br />解压后拷贝到需要的目录</p>               
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">24 Sep 2009, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2009/09/24/sexy-activerecord/" class="post-title">rails中的ActiveRecord真性感！</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-LAMP" href="http://huobazi.aspxboy.com//tags/lamp">LAMP</a><a class="post-category post-category-Rails" href="http://huobazi.aspxboy.com//tags/rails">Rails</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a><a class="post-category post-category-RoR" href="http://huobazi.aspxboy.com//tags/ror">RoR</a><a class="post-category post-category-ActiveRecord" href="http://huobazi.aspxboy.com//tags/activerecord">ActiveRecord</a><a class="post-category post-category-Ruby" href="http://huobazi.aspxboy.com//tags/ruby">Ruby</a><a class="post-category post-category-on" href="http://huobazi.aspxboy.com//tags/on">on</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>Rails使用的ActiveRecord真性感啊，see see吧</p>
+<div class="source" style="COLOR: #dcdccc; FONT-FAMILY: '[object]','Consolas','Lucida Console','Courier New'; BACKGROUND-COLOR: #3f3f3f">
+<span style="COLOR: #e3ceab">class</span> <span style="COLOR: #dcdccc">User</span> <span style="COLOR: #dcdccc">&lt;</span> <span style="FONT-WEIGHT: bold; COLOR: #dca3a3">ActiveRecord</span><span style="COLOR: #dcdccc">::</span><span style="FONT-WEIGHT: bold; COLOR: #dca3a3">Base</span>  <br />  <span style="COLOR: #dcdccc">has_many</span> <span style="COLOR: #cc9393">:articles</span>  <br /><span style="COLOR: #e3ceab">end</span>  <br /> <br /><span style="COLOR: #e3ceab">class</span> <span style="COLOR: #dcdccc">Article</span> <span style="COLOR: #dcdccc">&lt;</span> <span style="FONT-WEIGHT: bold; COLOR: #dca3a3">ActiveRecord</span><span style="COLOR: #dcdccc">::</span><span style="FONT-WEIGHT: bold; COLOR: #dca3a3">Base</span><br />  <span style="COLOR: #dcdccc">belongs_to</span> <span style="COLOR: #cc9393">:user</span>  <br /><span style="COLOR: #e3ceab">end</span>
+</div>
+<p>然后执行<br />&gt;&gt; <strong><span style="color: #0000ff;">Article.find(1)</span> </strong>会得到延迟加载user对象的sql语句。如下：</p>
+<p></p>
+<div class="source" style="COLOR: #dcdccc; FONT-FAMILY: '[object]','Consolas','Lucida Console','Courier New'; BACKGROUND-COLOR: #3f3f3f">
+<span style="COLOR: #e3ceab">SELECT</span> <span style="COLOR: #dcdccc">*</span> <span style="COLOR: #e3ceab">FROM</span> <span style="COLOR: #dcdccc">articles</span> <span style="COLOR: #e3ceab">WHERE</span> (<span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">id</span> <span style="COLOR: #dcdccc">=</span><span style="COLOR: #8cd0d3">1</span>) <span style="COLOR: #e3ceab">LIMIT</span> <span style="COLOR: #8cd0d3">1</span>
+</div>
+<p>当需要访问user对象时，比如用article.user.name会再生成一个sql语句请求数据库。<br />如果执行<br />&gt;&gt; <strong><span style="color: #0000ff;">Article.find(1,:include =&gt; :user)</span></strong> 会得到一次性加载了user的查询</p>
+<div class="source" style="COLOR: #dcdccc; FONT-FAMILY: '[object]','Consolas','Lucida Console','Courier New'; BACKGROUND-COLOR: #3f3f3f">
+<span style="COLOR: #e3ceab">SELECT</span><br /><span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">extended_html</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r6</span> <span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">excerpt</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r7</span><br /><span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">keywords</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r8</span> <span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">allow_pings</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r10</span><br /><span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">allow_comments</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r9</span> <span style="COLOR: #dcdccc">users</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">id</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t1_r0</span><br /><span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">published</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r11</span> <span style="COLOR: #dcdccc">users</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">login</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t1_r1</span><br /><span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">text_filter</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r12</span> <span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">id</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r0</span><br /><span style="COLOR: #dcdccc">users</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">password</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t1_r2</span> <span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">user_id</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r13</span><br /><span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">title</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r1</span> <span style="COLOR: #dcdccc">users</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">name</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t1_r3</span><br /><span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">created_at</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r14</span> <span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">author</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r2</span><br /><span style="COLOR: #dcdccc">users</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">email</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t1_r4</span> <span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">updated_at</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r15</span><br /><span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">body</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r3</span> <span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">permalink</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r16</span><br /><span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">body_html</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r4</span> <span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">guid</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r17</span><br /><span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">extended</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r5</span><br /><span style="COLOR: #e3ceab">FROM</span> <span style="COLOR: #dcdccc">articles</span> <span style="COLOR: #e3ceab">LEFT</span> <span style="COLOR: #e3ceab">OUTER</span> <span style="COLOR: #e3ceab">JOIN</span> <span style="COLOR: #dcdccc">users</span><br /><span style="COLOR: #e3ceab">ON</span> <span style="COLOR: #dcdccc">users</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">id</span> <span style="COLOR: #dcdccc">=</span> <span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">user_id</span><br /><span style="COLOR: #e3ceab">WHERE</span> (<span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">id</span> <span style="COLOR: #dcdccc">=</span> <span style="COLOR: #8cd0d3">1</span>)</div>
+<p>是不是很优美，很性感涅？</p>
+<p> </p>                
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">29 Aug 2009, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2009/08/29/mysql-adapter-on-rails-2-3-3/" class="post-title">Mysql adapter on Rails 2.3.3</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-LAMP" href="http://huobazi.aspxboy.com//tags/lamp">LAMP</a><a class="post-category post-category-Rails" href="http://huobazi.aspxboy.com//tags/rails">Rails</a><a class="post-category post-category-奇技淫巧" href="http://huobazi.aspxboy.com//tags/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7">奇技淫巧</a><a class="post-category post-category-Mysql" href="http://huobazi.aspxboy.com//tags/mysql">Mysql</a><a class="post-category post-category-RoR" href="http://huobazi.aspxboy.com//tags/ror">RoR</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>安装好Ruby on Rails 2.3.3后，运行简单的页面提示如下错误“<span style="color: #ff0000;"><strong>The bundled mysql.rb driver has been removed from Rails 2.2. Please install the mysql gem and try again: gem install mysql”</strong></span></p>
+<p> gem 了n次也不成，搞了一早上，才google到一个比较山寨的方法解决</p>
+<pre>1.  download older MySQL client library, for example one from InstantRails: http://instantrails.rubyforge.org/svn/trunk/InstantRails-win/InstantRails/mysql/bin/libmySQL.dll
+
+2.  copy the downloaded file to C:\Ruby\bin (or wherever you installed Ruby) 
+
+3. restart MySQL server</pre>
+<p>另参考：<a href="http://www.ruby-forum.com/topic/160358">http://www.ruby-forum.com/topic/160358</a>和<a href="http://rdc.taobao.com/blog/qa/?p=523">http://rdc.taobao.com/blog/qa/?p=523</a></p>              
+
+                    </div>
+                </section>
+                
+            </div>
+            
+
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a></li>
+        </ul>
+    </div>
+</div>
+<script src="http://huobazi.aspxboy.com//js/all.min.js"></script>
+        </div>
+    </div>
+</div>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-56321-3', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

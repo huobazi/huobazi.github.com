@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> &middot; 武眉博</title>
+
+    <meta name="description" content="">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="huobazi" />
+    <meta name="twitter:title" content=" &middot; 武眉博">
+    <meta name="twitter:description" content="">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content=" &middot; 武眉博">
+    <meta property="og:description" content="">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    
+    
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+    
+
+    <link rel="stylesheet" href="http://huobazi.aspxboy.com//css/all.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <h1 class="brand-title"><a href="http://huobazi.aspxboy.com/">武眉博</a></h1>
+            <h2 class="brand-tagline"> Marble&#39;s blog </h2>
+        </hgroup>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://twitter.com/huobazi"><i class="fa fa-twitter"></i> Twitter</a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://github.com/huobazi "><i class="fa fa-github-alt"></i> github</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</div>
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                <h1 class="content-subhead">01 Jan 0001, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/1/01/01/same-name-element-in-one-page/" class="post-title"></a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-share">
+                        <div class="post-share-links">
+                            <h4 style="">Share</h4>
+                            <a href="#" data-type="facebook" data-url="http://huobazi.aspxboy.com/blog/1/01/01/same-name-element-in-one-page/" data-title="" data-description="" data-media="" class="prettySocial fa fa-facebook"></a>
+                            <a href="#" data-type="googleplus" data-url="http://huobazi.aspxboy.com/blog/1/01/01/same-name-element-in-one-page/" data-description="" class="prettySocial fa fa-google-plus"></a>
+                            
+                            <a href="#" data-type="twitter" data-url="http://huobazi.aspxboy.com/blog/1/01/01/same-name-element-in-one-page/" data-description="" data-via="huobazi" class="prettySocial fa fa-twitter"></a>
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="post-description">
+                        
+
+<hr />
+
+<p>layout: post
+title: 知识死角,name相同的html element
+comments: true
+date: 2009-07-17
+tags:
+- ASP.NET
+- 前端开发
+- Asp.net</p>
+
+<h2 id="c:bc45f5d6473d87f09f67929338a52eff">- C#</h2>
+
+<p><p>今天在帮同事调程序时发现了这个死角<br />现象如下，没有任何输入的textarea提交到服务端后得到的值总是&rdquo;,&rdquo;<br />找了半天发现是因为页面上两个textarea的name相同，以前只知道页面上radio的name相同则是一个组，name相同的<br />的checkbox提交后是以逗号分隔值的，于是做了下面代码的试验，发现任何name相同的element提交到服务端都会得到逗号分隔的值，以前还不知道这个，汗</p>
+<p></p>
+<code><span style="color: #000000">
+&lt;%@ Page Language=&ldquo;C#&ldquo; %&gt;<br /><br />&lt;script runat=&ldquo;server&rdquo; languag=&ldquo;c#&rdquo;&gt;
+<br />    string textboxValue = string.Empty;
+<br />    string radioValue = string.Empty;
+<br />    string checkboxValue = string.Empty;
+<br />    string selectValue = string.Empty;
+<br />    string textareaValue = string.Empty;
+<br />    void Page_Load(object obj , EventArgs args)
+<br />    {
+<br />        placeHolder.Visible = false;
+<br />        System.Web.HttpContext ctx = System.Web.HttpContext.Current;
+<br />        if(ctx.Request.HttpMethod == &rdquo;POST&rdquo;)
+<br />        {
+<br />            placeHolder.Visible = true;
+<br />            textboxValue = ctx.Request.Form[&ldquo;textbox&rdquo;];
+<br />            radioValue = ctx.Request.Form[&ldquo;radio&rdquo;];
+<br />            checkboxValue = ctx.Request.Form[&ldquo;checkbox&rdquo;];
+<br />            selectValue = ctx.Request.Form[&ldquo;select&rdquo;];
+<br />            textareaValue = ctx.Request.Form[&ldquo;textarea&rdquo;];
+<br />        }
+<br />    }
+<br />&lt;/script&gt;<br /><br />&lt;!DOCTYPE html PUBLIC &rdquo;-//W3C//DTD XHTML 1.0 Transitional//EN&rdquo; &rdquo;<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</a>
+<br />&lt;html xmlns=&ldquo;<a href="http://www.w3.org/1999/xhtml&quot; &gt;">http://www.w3.org/1999/xhtml&quot; &gt;</a>
+<br />&lt;head&gt;
+<br />&lt;style&gt;
+<br />body, h1, h2, h3, h4, h5, h6, hr, p, ul, ol, li,pre,fieldset, lengend, button, input, textarea,{
+<br />    margin: 0;
+<br />    padding: 0;
+<br />}
+<br />body,button, input, select, textarea {
+<br />    font: 13px/1 Tahoma, Helvetica, Arial, &rdquo;\5b8b\4f53&rdquo;, sans-serif;
+<br />}
+<br /><br />#page{
+<br />    padding:10px 30px 10px 30px;
+<br />}
+<br />#s{
+<br />color:red;
+<br />}
+<br />input,select,textarea{
+<br />    clear:both;
+<br />    float:left;
+<br />    margin:5px;
+<br />}
+<br /><br />pre {
+<br />    overflow: auto;
+<br />    border: 1px dotted #281;
+<br />    background-color: #eee;
+<br />    padding: 2px 20px 20px 10px;
+<br />}
+<br />fieldset{
+<br />    line-height:200%;
+<br />}
+<br /><br />&lt;/style&gt;
+<br />&lt;/head&gt;
+<br />&lt;body&gt;<br /><br />&lt;div id=&ldquo;page&rdquo;&gt;<br /><br />&lt;div id=&ldquo;placeHolder&rdquo; runat=&ldquo;server&rdquo;&gt;    
+<br />            &lt;string id=&ldquo;s&rdquo;&gt;Post Data:&lt;/string&gt;<br /><br />&lt;pre style=&ldquo;max-height:30px;&rdquo;&gt;
+<br />textboxvalue:&lt;%= textboxValue%&gt;
+<br />radioValue:&lt;%= radioValue%&gt;
+<br />checkboxValue:&lt;%= checkboxValue%&gt;
+<br />selectValue:&lt;%=selectValue%&gt;
+<br />textareaValue:&lt;%= textareaValue%&gt;&lt;/pre&gt;<br /><br />&lt;/div&gt;<br /><br />&lt;form id=&ldquo;aspnetForm&rdquo; method=&ldquo;post&rdquo;&gt;
+<br />                &lt;fieldset&gt;       
+<br />                  &lt;legend&gt;Test&lt;/legend&gt;              
+<br />                &lt;input type=&ldquo;text&rdquo; name=&ldquo;textbox&rdquo; value=&ldquo;a&rdquo;/&gt; 
+<br />                &lt;input type=&ldquo;text&rdquo; name=&ldquo;textbox&rdquo; value=&ldquo;a&rdquo;/&gt;
+<br />                &lt;input type=&ldquo;text&rdquo; name=&ldquo;textbox&rdquo; value=&ldquo;a&rdquo;/&gt;
+<br />                &lt;input type=&ldquo;radio&rdquo; name=&ldquo;radio&rdquo; value=&ldquo;a&rdquo; /&gt;
+<br />                &lt;input type=&ldquo;radio&rdquo; name=&ldquo;radio&rdquo; value=&ldquo;a&rdquo; /&gt;
+<br />                &lt;input type=&ldquo;radio&rdquo; name=&ldquo;radio&rdquo; value=&ldquo;a&rdquo; checked=&ldquo;checked&rdquo; /&gt;
+<br />                &lt;input type=&ldquo;checkbox&rdquo; name=&ldquo;checkbox&rdquo; value=&ldquo;a&rdquo; checked=&ldquo;checked&rdquo; /&gt;
+<br />                &lt;input type=&ldquo;checkbox&rdquo; name=&ldquo;checkbox&rdquo; value=&ldquo;a&rdquo; checked=&ldquo;checked&rdquo; /&gt;
+<br />                &lt;input type=&ldquo;checkbox&rdquo; name=&ldquo;checkbox&rdquo; value=&ldquo;a&rdquo; checked=&ldquo;checked&rdquo; /&gt;
+<br />                &lt;select name=&ldquo;select&rdquo;&gt;
+<br />                                   &lt;option value=&ldquo;a&rdquo;&gt;a&lt;/option&gt;
+<br />                &lt;/select&gt;
+<br />                &lt;select name=&ldquo;select&rdquo;&gt;
+<br />                                   &lt;option value=&ldquo;a&rdquo;&gt;a&lt;/option&gt;
+<br />                &lt;/select&gt;
+<br />                &lt;select name=&ldquo;select&rdquo;&gt;
+<br />                                   &lt;option value=&ldquo;a&rdquo;&gt;a&lt;/option&gt;
+<br />                &lt;/select&gt;
+<br />                &lt;textarea name=&ldquo;textarea&rdquo;&gt;a&lt;/textarea&gt;
+<br />                &lt;textarea name=&ldquo;textarea&rdquo;&gt;a&lt;/textarea&gt;
+<br />                &lt;textarea name=&ldquo;textarea&rdquo;&gt;a&lt;/textarea&gt;
+<br />                &lt;input type=&ldquo;submit&rdquo; value=&ldquo;Do PostBack&rdquo; /&gt;
+<br />            &lt;/fieldset&gt;
+<br />            &lt;/form&gt;
+<br />    &lt;/div&gt;<br /><br />&lt;/body&gt;
+<br />&lt;/html&gt;</span>
+</code></p>
+
+                    </div>
+                    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'huobaziblog';
+    var disqus_identifier = 'http:\/\/huobazi.aspxboy.com\/blog\/1\/01\/01\/same-name-element-in-one-page\/';
+    var disqus_title = '';
+    var disqus_url = 'http:\/\/huobazi.aspxboy.com\/blog\/1\/01\/01\/same-name-element-in-one-page\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                </section>
+            </div>
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a></li>
+        </ul>
+    </div>
+</div>
+<script src="http://huobazi.aspxboy.com//js/all.min.js"></script>
+        </div>
+    </div>
+</div>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-56321-3', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

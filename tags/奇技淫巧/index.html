@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>奇技淫巧 &middot; 武眉博</title>
+
+    <meta name="description" content="Marble&#39;s blog">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="huobazi" />
+    <meta name="twitter:title" content="奇技淫巧 &middot; 武眉博">
+    <meta name="twitter:description" content="Marble&#39;s blog">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="奇技淫巧 &middot; 武眉博">
+    <meta property="og:description" content="Marble&#39;s blog">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    
+    
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+    
+
+    <link rel="stylesheet" href="http://huobazi.aspxboy.com//css/all.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <h1 class="brand-title"><a href="http://huobazi.aspxboy.com/">武眉博</a></h1>
+            <h2 class="brand-tagline"> Marble&#39;s blog </h2>
+        </hgroup>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://twitter.com/huobazi"><i class="fa fa-twitter"></i> Twitter</a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://github.com/huobazi "><i class="fa fa-github-alt"></i> github</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</div>
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                
+                <h1 class="content-subhead">04 Feb 2012, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2012/02/04/ubuntu-sublime-text-chinese/" class="post-title">Ubuntu下设置 Sublime Text 2 显示中文 &amp;&amp; 输入中文</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-闲言碎语" href="http://huobazi.aspxboy.com//tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD">闲言碎语</a><a class="post-category post-category-奇技淫巧" href="http://huobazi.aspxboy.com//tags/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7">奇技淫巧</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a><a class="post-category post-category-Ubuntu" href="http://huobazi.aspxboy.com//tags/ubuntu">Ubuntu</a><a class="post-category post-category-Sublime Text2" href="http://huobazi.aspxboy.com//tags/sublime-text2">Sublime Text2</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>Sublime text 2在mac os 下用的很舒服，今天尝试在ubuntu下使用一下，发现汉字显示不了，</p>
+<p>后来找到方法：</p>
+<p>菜单栏 -&gt; Preferences -&gt; File Settings - User，在配置文件中增加：</p>
+<p></p>
+<p>// Settings in here override those in "Default/Base File.sublime-settings", and<br />// are overridden in turn by file type specific settings. Place your settings<br />// here, to ensure they're preserved when upgrading.<br />{<br />    "font_face": "WenQuanYi Micro Hei Mono"<br />}<br />就OK了，其中文泉驿是著名的开源字体 <a title="http://wenq.org/" href="http://wenq.org/" target="_blank">http://wenq.org/</a></p>
+<p>然后我们来解决中文输入的问题</p>
+<p>sudo apt-get install scim</p>
+<p>sudo apt-get install scim-pinyin</p>
+<p>在“系统－首选项－scim设置里“</p>
+<p>scim设置－&gt;全局设置－&gt;将预编辑字符串嵌入到客户端中  勾去掉<br />scim设置-&gt;gtk-&gt;嵌入式候选词标 勾去掉</p>
+<p>下来 在“系统－语言支持”里面选上“scim-bridge”就可以了,记得这些修改完要注销重新登录进来哦。</p>
+<p>或者 ,打开终端,输入 pkill scim,然后输入 scim -d，如果不起作用，那还是建议你注销一下</p>                
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">09 Nov 2011, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/" class="post-title">AutoGenerateColumns=&#39;true&#39;的GridView如何支持htmlencode/htmldecode</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a><a class="post-category post-category-.Net其他" href="http://huobazi.aspxboy.com//tags/.net%E5%85%B6%E4%BB%96">.Net其他</a><a class="post-category post-category-奇技淫巧" href="http://huobazi.aspxboy.com//tags/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7">奇技淫巧</a><a class="post-category post-category-GridView" href="http://huobazi.aspxboy.com//tags/gridview">GridView</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a><a class="post-category post-category-HtmlEncode" href="http://huobazi.aspxboy.com//tags/htmlencode">HtmlEncode</a><a class="post-category post-category-AutoGenerateColumns" href="http://huobazi.aspxboy.com//tags/autogeneratecolumns">AutoGenerateColumns</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p>我们知道BoundField.HtmlEncode 属性可以设置一个单元格是否能够htmlencode，我今天碰到的问题是：自动生成列的GridView，表头可能是包含html的比如&lt;font color=red&gt;邮件&lt;/font&gt;，默认被htmlencode了，而我不希望这样做，所以有了如下的代码:</p>
+<p></p>
+<p> </p>
+<div class="source" style="font-family: '[object HTMLOptionElement]', Consolas, 'Lucida Console', 'Courier New'; color: #e6e1dc; background-color: #111111; ">
+<span style="color: #bc9458; font-style: italic; ">/// &lt;summary&gt;</span><br /><span style="color: #bc9458; font-style: italic; ">/// Handles the PreRender event of the gvSource control.</span><br /><span style="color: #bc9458; font-style: italic; ">/// &lt;/summary&gt;</span><br /><span style="color: #bc9458; font-style: italic; ">/// &lt;param name=&ldquo;sender&rdquo;&gt;The source of the event.&lt;/param&gt;</span><br /><span style="color: #bc9458; font-style: italic; ">/// &lt;param name=&ldquo;e&rdquo;&gt;The &lt;see cref=&ldquo;System.EventArgs&rdquo;/&gt; instance containing the event data.&lt;/param&gt;</span><br /><span style="color: #cc7833; ">protected</span> <span style="color: #cc7833; ">void</span> <span style="color: #ffc66d; ">gvSource_PreRender</span>( <span style="color: #da4939; ">object</span> <span style="color: #e6e1dc; ">sender</span> <span style="color: #e6e1dc; ">,</span> <span style="color: #e6e1dc; ">EventArgs</span> <span style="color: #e6e1dc; ">e</span> )<br /><span style="color: #e6e1dc; ">{</span><br />    <span style="color: #e6e1dc; ">GridView</span> <span style="color: #e6e1dc; ">gridView</span> <span style="color: #e6e1dc; ">=</span> <span style="color: #e6e1dc; ">sender</span> <span style="color: #cc7833; ">as</span> <span style="color: #e6e1dc; ">GridView</span>;<br />    <span style="color: #cc7833; ">if</span> ( <span style="color: #e6e1dc; ">gridView</span> <span style="color: #e6e1dc; ">!=</span> <span style="color: #cc7833; ">null</span> <span style="color: #e6e1dc; ">&amp;&amp;</span> <span style="color: #e6e1dc; ">gridView</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HeaderRow</span> <span style="color: #e6e1dc; ">!=</span> <span style="color: #cc7833; ">null</span> <span style="color: #e6e1dc; ">&amp;&amp;</span> <span style="color: #e6e1dc; ">gridView</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HeaderRow</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Cells</span> <span style="color: #e6e1dc; ">!=</span> <span style="color: #cc7833; ">null</span> )<br />    <span style="color: #e6e1dc; ">{</span><br />        <span style="color: #cc7833; ">for</span> ( <span style="color: #da4939; ">int</span> <span style="color: #e6e1dc; ">j</span> <span style="color: #e6e1dc; ">=</span> <span style="color: #a5c261; ">0</span> ; <span style="color: #e6e1dc; ">j</span> <span style="color: #e6e1dc; ">&lt;</span> <span style="color: #e6e1dc; ">gridView</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HeaderRow</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Cells</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Count</span> ; <span style="color: #e6e1dc; ">j</span><span style="color: #e6e1dc; ">++</span> )<br />        <span style="color: #e6e1dc; ">{</span><br />            <span style="color: #e6e1dc; ">gridView</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HeaderRow</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Cells</span><span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">j</span><span style="color: #e6e1dc; ">].</span><span style="color: #e6e1dc; ">Text</span> <span style="color: #e6e1dc; ">=</span> <span style="color: #e6e1dc; ">System</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Web</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HttpUtility</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HtmlDecode</span>( <span style="color: #e6e1dc; ">gridView</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HeaderRow</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Cells</span><span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">j</span><span style="color: #e6e1dc; ">].</span><span style="color: #e6e1dc; ">Text</span> );<br />        <span style="color: #e6e1dc; ">}</span><br />    <span style="color: #e6e1dc; ">}</span><br /><span style="color: #e6e1dc; ">}</span>
+</div></p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">21 Jan 2010, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2010/01/21/window-location-href-ie-request-reffer/" class="post-title">使用window.location跳转，在IE中UrlReffer不被记录</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-前端开发" href="http://huobazi.aspxboy.com//tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91">前端开发</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a><a class="post-category post-category-Javascript" href="http://huobazi.aspxboy.com//tags/javascript">Javascript</a><a class="post-category post-category-奇技淫巧" href="http://huobazi.aspxboy.com//tags/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7">奇技淫巧</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a><a class="post-category post-category-IE" href="http://huobazi.aspxboy.com//tags/ie">IE</a><a class="post-category post-category-UrlReffer" href="http://huobazi.aspxboy.com//tags/urlreffer">UrlReffer</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>使用window.location跳转，在FF中，没问题，下一页面可以取得UrlReffer，但在IE中UrlReffer不被记录</p>
+<p>真变态，</p>
+<p>让我头痛了半天，弄了个丑陋的办法做了如下实现：</p>
+<p></p>
+<div class="source" style="COLOR: #f6f3e8; FONT-FAMILY: '[object]','Consolas','Lucida Console','Courier New'; BACKGROUND-COLOR: #242424">
+<span style="COLOR: #8ac6f2">function</span> <span style="COLOR: #f6f3e8">safeRedirectToCart</span>(<span style="COLOR: #f6f3e8">url</span>) <span style="COLOR: #f6f3e8">{</span><br />    <span style="COLOR: #8ac6f2">var</span> <span style="COLOR: #f6f3e8">isIE</span> <span style="COLOR: #f6f3e8">=</span> <span style="COLOR: #f6f3e8">jQuery</span><span style="COLOR: #f6f3e8">.</span><span style="COLOR: #f6f3e8">browser</span><span style="COLOR: #f6f3e8">.</span><span style="COLOR: #f6f3e8">msie</span>;<br />    <span style="COLOR: #8ac6f2">if</span> (<span style="COLOR: #f6f3e8">!</span><span style="COLOR: #f6f3e8">isIE</span>) <span style="COLOR: #f6f3e8">{</span><br />        <span style="COLOR: #f6f3e8">window</span><span style="COLOR: #f6f3e8">.</span><span style="COLOR: #f6f3e8">location</span> <span style="COLOR: #f6f3e8">=</span> <span style="COLOR: #f6f3e8">url</span>;<br />        <span style="COLOR: #8ac6f2">return</span>;<br />    <span style="COLOR: #f6f3e8">}</span><br />    <span style="COLOR: #f6f3e8">$</span>(<span style="COLOR: #95e454; FONT-STYLE: italic">".btnCart"</span><span style="COLOR: #f6f3e8">).</span><span style="COLOR: #f6f3e8">get</span>(<span style="COLOR: #e5786d">0</span><span style="COLOR: #f6f3e8">).</span><span style="COLOR: #f6f3e8">click</span>();<br /><span style="COLOR: #f6f3e8">}</span>
+</div>
+<p>说明：在页面上render一个连接(可以用样式表控制不显示），判断如果是IE浏览器然则调用其click，嘿嘿，就这个。</p>              
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">11 Jan 2010, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2010/01/11/vim-color-scheme/" class="post-title">漂亮的VIM配色方案</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-闲言碎语" href="http://huobazi.aspxboy.com//tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD">闲言碎语</a><a class="post-category post-category-它山之石" href="http://huobazi.aspxboy.com//tags/%E5%AE%83%E5%B1%B1%E4%B9%8B%E7%9F%B3">它山之石</a><a class="post-category post-category-奇技淫巧" href="http://huobazi.aspxboy.com//tags/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7">奇技淫巧</a><a class="post-category post-category-VIM" href="http://huobazi.aspxboy.com//tags/vim">VIM</a><a class="post-category post-category-配色" href="http://huobazi.aspxboy.com//tags/%E9%85%8D%E8%89%B2">配色</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p>这里<br /><a href="http://code.google.com/p/vimcolorschemetest/" target="_blank"><a href="http://code.google.com/p/vimcolorschemetest/">http://code.google.com/p/vimcolorschemetest/</a></a><br />有一堆一堆的配色方案</p>
+<h1><a name="Browse_By_File_Type">Browse By File Type</a></h1>
+<p><a name="Browse_By_File_Type">Featuring 428 schemes: </a></p>
+<ul>
+<li><a rel="nofollow" href="http://vimcolorschemetest.googlecode.com/svn/html/index-c.html">C</a></li>
+<li><a rel="nofollow" href="http://vimcolorschemetest.googlecode.com/svn/html/index-html.html">HTML</a></li>
+<li><a rel="nofollow" href="http://vimcolorschemetest.googlecode.com/svn/html/index-java.html">Java</a></li>
+<li><a rel="nofollow" href="http://vimcolorschemetest.googlecode.com/svn/html/index-pl.html">Perl</a></li>
+<li><a rel="nofollow" href="http://vimcolorschemetest.googlecode.com/svn/html/index-tex.html">LaTeX</a></li>
+</ul></p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">07 Jan 2010, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2010/01/07/349/" class="post-title">把你的netbeans变成英文版</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-它山之石" href="http://huobazi.aspxboy.com//tags/%E5%AE%83%E5%B1%B1%E4%B9%8B%E7%9F%B3">它山之石</a><a class="post-category post-category-奇技淫巧" href="http://huobazi.aspxboy.com//tags/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7">奇技淫巧</a><a class="post-category post-category-netbeans" href="http://huobazi.aspxboy.com//tags/netbeans">netbeans</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>呵呵其实很简单，装完后再你使用的快捷方式内增加</p>
+<p>--locale en:us就可以了，比如我的快捷方式里的设置为：</p>
+<p>"D:\Program Files\NetBeans 6.8\bin\netbeans.exe" --locale en:us</p>
+<p>ok 英文了.</p>
+<p>按照这个方法你可以为自己定制很多套语言版本的netbeans，但只要一份安装。</p>              
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">29 Aug 2009, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2009/08/29/mysql-adapter-on-rails-2-3-3/" class="post-title">Mysql adapter on Rails 2.3.3</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-LAMP" href="http://huobazi.aspxboy.com//tags/lamp">LAMP</a><a class="post-category post-category-Rails" href="http://huobazi.aspxboy.com//tags/rails">Rails</a><a class="post-category post-category-奇技淫巧" href="http://huobazi.aspxboy.com//tags/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7">奇技淫巧</a><a class="post-category post-category-Mysql" href="http://huobazi.aspxboy.com//tags/mysql">Mysql</a><a class="post-category post-category-RoR" href="http://huobazi.aspxboy.com//tags/ror">RoR</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>安装好Ruby on Rails 2.3.3后，运行简单的页面提示如下错误“<span style="color: #ff0000;"><strong>The bundled mysql.rb driver has been removed from Rails 2.2. Please install the mysql gem and try again: gem install mysql”</strong></span></p>
+<p> gem 了n次也不成，搞了一早上，才google到一个比较山寨的方法解决</p>
+<pre>1.  download older MySQL client library, for example one from InstantRails: http://instantrails.rubyforge.org/svn/trunk/InstantRails-win/InstantRails/mysql/bin/libmySQL.dll
+
+2.  copy the downloaded file to C:\Ruby\bin (or wherever you installed Ruby) 
+
+3. restart MySQL server</pre>
+<p>另参考：<a href="http://www.ruby-forum.com/topic/160358">http://www.ruby-forum.com/topic/160358</a>和<a href="http://rdc.taobao.com/blog/qa/?p=523">http://rdc.taobao.com/blog/qa/?p=523</a></p>              
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">18 Jul 2009, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2009/07/18/php-guid/" class="post-title">如何判断一个网站是不是php做的？</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-LAMP" href="http://huobazi.aspxboy.com//tags/lamp">LAMP</a><a class="post-category post-category-它山之石" href="http://huobazi.aspxboy.com//tags/%E5%AE%83%E5%B1%B1%E4%B9%8B%E7%9F%B3">它山之石</a><a class="post-category post-category-奇技淫巧" href="http://huobazi.aspxboy.com//tags/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7">奇技淫巧</a><a class="post-category post-category-PHP" href="http://huobazi.aspxboy.com//tags/php">PHP</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>可以当作<strong>简易</strong>判断站点是否用PHP架设。</p>
+<p>PHP_LOGO_GUID<br /><a href="http://www.php.net/?=PHPE9568F34-D428-11d2-A769-00AA001ACF42">http://www.php.net/?=PHPE9568F34-D428-11d2-A769-00AA001ACF42</a></p>
+<p>PHP_EGG_LOGO_GUID<br /><a href="http://www.php.net/?=PHPE9568F36-D428-11d2-A769-00AA001ACF42">http://www.php.net/?=PHPE9568F36-D428-11d2-A769-00AA001ACF42</a></p>
+<p>ZEND_LOGO_GUID<br /><a href="http://www.php.net/?=PHPE9568F35-D428-11d2-A769-00AA001ACF42">http://www.php.net/?=PHPE9568F35-D428-11d2-A769-00AA001ACF42</a></p>
+<p>PHP_CREDITS_GUID<br /><a href="http://www.php.net/?=PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000">http://www.php.net/?=PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000</a></p>
+<p>喜欢看愚人节的那个Logo就是第二个链接罗<br /><a href="http://www.php.net/">http://www.php.net/</a> 这个网址只是范例，只要是任一PHP的站点即可。</p>
+<p>来源:<a href="http://www.google.cn/search?client=aff-os-worldbrowser&amp;forid=1&amp;ie=utf-8&amp;oe=UTF-8&amp;hl=zh-CN&amp;q=%E4%B8%80%E4%BA%9B%E5%86%85%E5%AE%9A%E7%9A%84PHP%E7%89%B9%E6%AE%8AGUID" target="_blank">http://www.google.cn/search?client=aff-os-worldbrowser&amp;forid=1&amp;ie=utf-8&amp;oe=UTF-8&amp;hl=zh-CN&amp;q=%E4%B8%80%E4%BA%9B%E5%86%85%E5%AE%9A%E7%9A%84PHP%E7%89%B9%E6%AE%8AGUID</a></p>
+<p> </p>                
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">21 Jun 2009, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2009/06/21/my-blog-moved-to-wp/" class="post-title">博客园到Wordpress搬家成功！</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-LAMP" href="http://huobazi.aspxboy.com//tags/lamp">LAMP</a><a class="post-category post-category-闲言碎语" href="http://huobazi.aspxboy.com//tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD">闲言碎语</a><a class="post-category post-category-.Net其他" href="http://huobazi.aspxboy.com//tags/.net%E5%85%B6%E4%BB%96">.Net其他</a><a class="post-category post-category-奇技淫巧" href="http://huobazi.aspxboy.com//tags/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7">奇技淫巧</a><a class="post-category post-category-Wordpress" href="http://huobazi.aspxboy.com//tags/wordpress">Wordpress</a><a class="post-category post-category-Blogging" href="http://huobazi.aspxboy.com//tags/blogging">Blogging</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>终于把在博客园的博客的数据导入到Wordpress内了，包括随笔/文章，图片,标签，评论等，是写了两个C# console程序做到的，程序我传到博客园了，如果有需要的朋友可以试试。但请注意，要自己在博客园后台备份RSS文件放到Reader的Data目录内，设置为编译选项为永远复制，运行后会生成一个Entry.xml并且把博客内的图片和分类、Tag、评论等抓下来，然后将此xml文件拷贝到Writer内，在代码内修改一下你的Wordress的数据库连接，然后跑一下Writer，就可以完成数据导入到Wordpress了，时间匆忙，代码写的很乱，有些地方是针对本人需求处理的，如果你想要直接运行此程序完成你的博客园博客到Wordpress的转换，<strong>那是不可能滴！</strong>你一定要有简单的C#调试基础哦。</p>
+<p><a href="http://files.cnblogs.com/huobazi/MyBlogTools.rar">http://files.cnblogs.com/huobazi/MyBlogTools.rar</a></p>              
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">14 Sep 2004, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2004/09/14/cb-43051/" class="post-title">小技巧，如何把上传文件的浏览按钮换成其他样式 或者图片</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-前端开发" href="http://huobazi.aspxboy.com//tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91">前端开发</a><a class="post-category post-category-奇技淫巧" href="http://huobazi.aspxboy.com//tags/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7">奇技淫巧</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p><span style="font-size: large; color: #0000ff; background-color: #808080;"><strong> </strong></span></p>
+<p><span style="font-size: large; color: #0000ff; background-color: #808080;"><strong>本随笔缩写内容有误，对不起，谢谢！</strong></span></p>
+<p><span style="font-size: large; color: #0000ff; background-color: #808080;"><br /></span>csdn上有朋友问道<a href="http://community.csdn.net/Expert/topic/3371/3371728.xml?temp=.5144159">这个问题<br /></a>上google跑了跑，从<a href="http://www.junlu.com/msg/104998.html">这里</a>和csdn的<a href="http://community.csdn.net/Message_Board/Send.asp?sendto=980337" target="_blank"><span style="color: #3366cc;"><strong>980337(面包喳喳) </strong></span></a>朋友的回复得到提示，做了做测试。<br />以下代码可以把“浏览”按钮换成图片<br />当然 也可以不用&lt;img&gt;而改input或者button加上样式表（css）或者htc也应该可以吧。</p>
+<div style="padding-right: 5.4pt; padding-left: 5.4pt; background: #e6e6e6; padding-bottom: 4px; width: 98%; padding-top: 4px; border: windowtext 0.5pt solid;">
+<p></p>
+<div>
+<span style="COLOR: #0000ff">&lt;!</span><span style="COLOR: #ff00ff">DOCTYPE html PUBLIC &rdquo;-//W3C//DTD XHTML 1.0 Transitional//EN&rdquo; &rdquo;<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;</a></span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">html </span><span style="COLOR: #ff0000">xmlns</span><span style="COLOR: #0000ff">=&ldquo;<a href="http://www.w3.org/1999/xhtml&quot;">http://www.w3.org/1999/xhtml&quot;</a></span><span style="COLOR: #ff0000"> xml:lang</span><span style="COLOR: #0000ff">=&ldquo;gb2312&rdquo;</span><span style="COLOR: #ff0000"> lang</span><span style="COLOR: #0000ff">=&ldquo;gb2312&rdquo;</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">head</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">title</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"> 上传的时候</span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">input </span><span style="COLOR: #ff0000">type</span><span style="COLOR: #0000ff">=&ldquo;file&rdquo;</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000">中用图片代替浏览按钮 </span><span style="COLOR: #0000ff">&lt;/</span><span style="COLOR: #800000">title</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">meta </span><span style="COLOR: #ff0000">http-equiv</span><span style="COLOR: #0000ff">=&ldquo;Content-Type&rdquo;</span><span style="COLOR: #ff0000"> content</span><span style="COLOR: #0000ff">=&ldquo;text/html; charset=gb2312&rdquo;</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">meta </span><span style="COLOR: #ff0000">name</span><span style="COLOR: #0000ff">=&ldquo;title&rdquo;</span><span style="COLOR: #ff0000"> content</span><span style="COLOR: #0000ff">=&ldquo;&rdquo;</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">meta </span><span style="COLOR: #ff0000">name</span><span style="COLOR: #0000ff">=&ldquo;author&rdquo;</span><span style="COLOR: #ff0000"> content</span><span style="COLOR: #0000ff">=&ldquo;活靶子，huobazi&rdquo;</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">meta </span><span style="COLOR: #ff0000">name</span><span style="COLOR: #0000ff">=&ldquo;subject&rdquo;</span><span style="COLOR: #ff0000"> content</span><span style="COLOR: #0000ff">=&ldquo;&rdquo;</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">meta </span><span style="COLOR: #ff0000">name</span><span style="COLOR: #0000ff">=&ldquo;language&rdquo;</span><span style="COLOR: #ff0000"> content</span><span style="COLOR: #0000ff">=&ldquo;gb2312&rdquo;</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">meta </span><span style="COLOR: #ff0000">name</span><span style="COLOR: #0000ff">=&ldquo;keywords&rdquo;</span><span style="COLOR: #ff0000"> content</span><span style="COLOR: #0000ff">=&ldquo;&rdquo;</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">meta </span><span style="COLOR: #ff0000">name</span><span style="COLOR: #0000ff">=&ldquo;Copyright&rdquo;</span><span style="COLOR: #ff0000"> content</span><span style="COLOR: #0000ff">=&ldquo;&rdquo;</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">meta </span><span style="COLOR: #ff0000">name</span><span style="COLOR: #0000ff">=&ldquo;robots&rdquo;</span><span style="COLOR: #ff0000"> content</span><span style="COLOR: #0000ff">=&ldquo;all&rdquo;</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">script </span><span style="COLOR: #ff0000">language</span><span style="COLOR: #0000ff">=&ldquo;javascript&rdquo;</span><span style="COLOR: #ff0000"> type</span><span style="COLOR: #0000ff">=&ldquo;text/javascript&rdquo;</span><span style="COLOR: #0000ff">&gt;</span><span id="Codehighlighter1_646_787_Open_Text"><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"><br />    </span><span style="COLOR: #0000ff; BACKGROUND-COLOR: #f5f5f5">function</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> fn_browse()<br />    </span><span id="Codehighlighter1_670_786_Open_Text"><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">{<br />        document.test_form.browse.click();<br />        document.test_form.file.value </span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">=</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> document.all.test_form.browse.value;        <br />        <br />    }</span></span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"><br /></span></span><span style="COLOR: #0000ff">&lt;/</span><span style="COLOR: #800000">script</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;/</span><span style="COLOR: #800000">head</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">body</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"><p></p></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">form </span><span style="COLOR: #ff0000">name</span><span style="COLOR: #0000ff">=&ldquo;test_form&rdquo;</span><span style="COLOR: #ff0000"> method</span><span style="COLOR: #0000ff">=&ldquo;post&rdquo;</span><span style="COLOR: #ff0000"> ENCTYPE</span><span style="COLOR: #0000ff">=&ldquo;multipart/form-data&rdquo;</span><span style="COLOR: #ff0000"> onsubmit</span><span style="COLOR: #0000ff">=&ldquo;alert(document.test_form.browse.value);&rdquo;</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">input </span><span style="COLOR: #ff0000">type</span><span style="COLOR: #0000ff">=&ldquo;file&rdquo;</span><span style="COLOR: #ff0000"> name</span><span style="COLOR: #0000ff">=&ldquo;browse&rdquo;</span><span style="COLOR: #ff0000"> style</span><span style="COLOR: #0000ff">=&ldquo;display:none;&rdquo;</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">input </span><span style="COLOR: #ff0000">type</span><span style="COLOR: #0000ff">=&ldquo;text&rdquo;</span><span style="COLOR: #ff0000"> name</span><span style="COLOR: #0000ff">=&ldquo;file&rdquo;</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">a </span><span style="COLOR: #ff0000">href</span><span style="COLOR: #0000ff">=&ldquo;javascript:fn_browse();&rdquo;</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">img  </span><span style="COLOR: #ff0000">name</span><span style="COLOR: #0000ff">=&ldquo;btn&rdquo;</span><span style="COLOR: #ff0000"> src</span><span style="COLOR: #0000ff">=&ldquo;browse.gif&rdquo;</span><span style="COLOR: #ff0000"> border</span><span style="COLOR: #0000ff">=&ldquo;0&rdquo;</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000">  <br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">br </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">br </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">input </span><span style="COLOR: #ff0000">type</span><span style="COLOR: #0000ff">=&ldquo;submit&rdquo;</span><span style="COLOR: #ff0000"> name</span><span style="COLOR: #0000ff">=&ldquo;提交表单&rdquo;</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;/</span><span style="COLOR: #800000">form</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"><p></p></span><span style="COLOR: #0000ff">&lt;/</span><span style="COLOR: #800000">body</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;/</span><span style="COLOR: #800000">html</span><span style="COLOR: #0000ff">&gt;</span>
+</div>
+<p></p>
+</div></p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">10 Jul 2004, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2004/07/10/cb-7697-1/" class="post-title">小雕虫,不被Google工具条拦截的弹出窗口</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-前端开发" href="http://huobazi.aspxboy.com//tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91">前端开发</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a><a class="post-category post-category-奇技淫巧" href="http://huobazi.aspxboy.com//tags/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7">奇技淫巧</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>如果做项目必须用到弹出窗口可以考虑以下</p>
+<p>不保证任何时候能用<br />更不保证在那个myie新版本下能用<br />如果myie等浏览器屏蔽掉了地址内的某些字比如我演示中有“pop“字样,那也出不来</p>
+<p>demo+code:</p>
+<p><a href="http://www.aspxboy.com/popWindow/" target="_blank"><span style="color: #003366;">http://www.aspxboy.com/popWindow/</span></a></p>
+<p><span style="font-size: x-large;"><strong>测试</strong>通过日期： <span style="color: #002c99;"><a href="http://huobazi.cnblogs.com/archive/2004/07/10/22926.html"><strong>2004/07/10/</strong></a>  ！！！<br /></span></span></p>                
+
+                    </div>
+                </section>
+                
+            </div>
+            
+<div class="pagination">
+  <nav role="pagination" class="post-list-pagination">
+      
+    <span class="post-list-pagination-item post-list-pagination-item-current">Page 1 of 2</span>
+    
+      <a href="/tags/e5a587e68a80e6b7abe5b7a7/page/2/" class="post-list-pagination-item pure-button post-list-pagination-item-next">
+        Older&nbsp;<i class="fa fa-angle-double-right"></i>
+      </a>
+    
+  </nav>
+</div>
+
+
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a></li>
+        </ul>
+    </div>
+</div>
+<script src="http://huobazi.aspxboy.com//js/all.min.js"></script>
+        </div>
+    </div>
+</div>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-56321-3', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lamp &middot; 武眉博</title>
+
+    <meta name="description" content="Marble&#39;s blog">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="huobazi" />
+    <meta name="twitter:title" content="Lamp &middot; 武眉博">
+    <meta name="twitter:description" content="Marble&#39;s blog">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Lamp &middot; 武眉博">
+    <meta property="og:description" content="Marble&#39;s blog">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    
+    
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+    
+
+    <link rel="stylesheet" href="http://huobazi.aspxboy.com//css/all.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <h1 class="brand-title"><a href="http://huobazi.aspxboy.com/">武眉博</a></h1>
+            <h2 class="brand-tagline"> Marble&#39;s blog </h2>
+        </hgroup>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://twitter.com/huobazi"><i class="fa fa-twitter"></i> Twitter</a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://github.com/huobazi "><i class="fa fa-github-alt"></i> github</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</div>
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                
+                <h1 class="content-subhead">29 Aug 2009, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2009/08/29/mysql-adapter-on-rails-2-3-3/" class="post-title">Mysql adapter on Rails 2.3.3</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-LAMP" href="http://huobazi.aspxboy.com//tags/lamp">LAMP</a><a class="post-category post-category-Rails" href="http://huobazi.aspxboy.com//tags/rails">Rails</a><a class="post-category post-category-奇技淫巧" href="http://huobazi.aspxboy.com//tags/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7">奇技淫巧</a><a class="post-category post-category-Mysql" href="http://huobazi.aspxboy.com//tags/mysql">Mysql</a><a class="post-category post-category-RoR" href="http://huobazi.aspxboy.com//tags/ror">RoR</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>安装好Ruby on Rails 2.3.3后，运行简单的页面提示如下错误“<span style="color: #ff0000;"><strong>The bundled mysql.rb driver has been removed from Rails 2.2. Please install the mysql gem and try again: gem install mysql”</strong></span></p>
+<p> gem 了n次也不成，搞了一早上，才google到一个比较山寨的方法解决</p>
+<pre>1.  download older MySQL client library, for example one from InstantRails: http://instantrails.rubyforge.org/svn/trunk/InstantRails-win/InstantRails/mysql/bin/libmySQL.dll
+
+2.  copy the downloaded file to C:\Ruby\bin (or wherever you installed Ruby) 
+
+3. restart MySQL server</pre>
+<p>另参考：<a href="http://www.ruby-forum.com/topic/160358">http://www.ruby-forum.com/topic/160358</a>和<a href="http://rdc.taobao.com/blog/qa/?p=523">http://rdc.taobao.com/blog/qa/?p=523</a></p>              
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">21 Aug 2009, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2009/08/21/python-object-interning/" class="post-title">python的对象驻留</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-LAMP" href="http://huobazi.aspxboy.com//tags/lamp">LAMP</a><a class="post-category post-category-python" href="http://huobazi.aspxboy.com//tags/python">python</a><a class="post-category post-category-对象驻留" href="http://huobazi.aspxboy.com//tags/%E5%AF%B9%E8%B1%A1%E9%A9%BB%E7%95%99">对象驻留</a><a class="post-category post-category-字符串驻留" href="http://huobazi.aspxboy.com//tags/%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%A9%BB%E7%95%99">字符串驻留</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>在C#中为了提高性能使用了<a title="字符串驻留" href="http://www.google.com.sg/search?hl=zh-CN&amp;source=hp&amp;q=string+interning&amp;aq=f&amp;oq=" target="_blank">字符串驻留技术</a>，而在Python中不光是字符串，连整数都有使用类似的驻留技术哦，看下面的测试：</p>
+<pre>C:\Documents and Settings\Marble Wu&gt;python
+Python 2.6.2 (r262:71605, Apr 14 2009, 22:40:02) [MSC v.1500 32 bit (Intel)] on
+win32
+Type "help", "copyright", "credits" or "license" for more information.
+&gt;&gt;&gt; a=1
+&gt;&gt;&gt; b=1
+&gt;&gt;&gt; id(1)
+10446048
+&gt;&gt;&gt; id(a)
+10446048
+&gt;&gt;&gt; import sys
+&gt;&gt;&gt; sys.getrefcount(a)
+245
+&gt;&gt;&gt; sys.getrefcount(b)
+245
+&gt;&gt;&gt;</pre>
+<p><span style="font-family: Courier New; background-color: #eaf7ff;">其实也很容易理解，因为在Python<a title="Python的对象" href="http://wiki.woodpecker.org.cn/moin/PythonEssentialRef3" target="_blank">一切皆对象</a></span></p>             
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">19 Aug 2009, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2009/08/19/netbeans-utf8-settings/" class="post-title">调整netbeans6.5设置使之默认使用utf-8存储文件</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-LAMP" href="http://huobazi.aspxboy.com//tags/lamp">LAMP</a><a class="post-category post-category-netbeans" href="http://huobazi.aspxboy.com//tags/netbeans">netbeans</a><a class="post-category post-category-utf-8" href="http://huobazi.aspxboy.com//tags/utf-8">utf-8</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p>netbeans默认使用ANSI存储的，我们一般希望它采用utf-8来存储，按照如下方法可以实现这个要求</p>
+<p>1)  找到你的Netbeans安装目录下的etc文件夹,如D:\Program Files\NetBeans 6.5\etc<br />2)  用文本编辑器打开netbeans.conf<br />3)  找到netbeans_default_options这一句(注意#号开头的行的是注释)<br />4)  在最后面加上一个空格,再加入-J-Dfile.encoding=UTF-8</p>
+<p>如我现在的设置:</p>
+<p></p>
+<pre># ${HOME} will be replaced by JVM user.home system property
+netbeans_default_userdir=&ldquo;${HOME}/.netbeans/6.5&rdquo;</p>
+
+<p># Options used by NetBeans launcher by default, can be overridden by explicit
+# command line switches:
+netbeans_default_options=&ldquo;-J-client -J-Xverify:none -J-Xss2m -J-Xms32m -J-XX:PermSize=32m -J-XX:MaxPermSize=200m -J-Dapple.laf.useScreenMenuBar=true -J-Dsun.java2d.noddraw=true -J-Dfile.encoding=UTF-8&rdquo;
+# Note that a default -Xmx is selected for you automatically.
+# You can find this value in var/log/messages.log file in your userdir.
+# The automatically selected value can be overridden by specifying -J-Xmx here
+# or on the command line.</p>
+
+<p># If you specify the heap size (-Xmx) explicitely, you may also want to enable
+# Concurrent Mark &amp; Sweep garbage collector. In such case add the following
+# options to the netbeans_default_options:
+# -J-XX:+UseConcMarkSweepGC -J-XX:+CMSClassUnloadingEnabled -J-XX:+CMSPermGenSweepingEnabled
+# (see <a href="http://wiki.netbeans.org/wiki/view/FaqGCPauses">http://wiki.netbeans.org/wiki/view/FaqGCPauses</a>)</p>
+
+<p># Default location of JDK, can be overridden by using &ndash;jdkhome &lt;dir&gt;:
+netbeans_jdkhome=&ldquo;C:\Program Files\Java\jre6&rdquo;</p>
+
+<p># Additional module clusters, using ${path.separator} (&lsquo;;&lsquo; on Windows or &rsquo;:&lsquo; on Unix):
+#netbeans_extraclusters=&ldquo;/absolute/path/to/cluster1:/absolute/path/to/cluster2&rdquo;</p>
+
+<p># If you have some problems with detect of proxy settings, you may want to enable
+# detect the proxy settings provided by JDK5 or higher.
+# In such case add -J-Djava.net.useSystemProxies=true to the netbeans_default_options.</pre></p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">11 Aug 2009, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2009/08/11/how-to-install-setuptools-on-windows-and-python26/" class="post-title">如何在windows xp下安装python2.6的setuptools</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-LAMP" href="http://huobazi.aspxboy.com//tags/lamp">LAMP</a><a class="post-category post-category-Windows" href="http://huobazi.aspxboy.com//tags/windows">Windows</a><a class="post-category post-category-python" href="http://huobazi.aspxboy.com//tags/python">python</a><a class="post-category post-category-setuptools" href="http://huobazi.aspxboy.com//tags/setuptools">setuptools</a><a class="post-category post-category-ez_setup" href="http://huobazi.aspxboy.com//tags/ez_setup">ez_setup</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p>最近开始学python，要安装很多egg文件，但发现<a href="http://pypi.python.org/pypi/setuptools#downloads">http://pypi.python.org/pypi/setuptools#downloads</a>没有python2.6的MS Windows installer版本，google了一把，用如下方法解决：</p>
+<p></p>
+<p>1. 下载 setuptools-0.6c9.tar.gz<br />2. 下载 setuptools-0.6c9-py2.6.egg （放在同一个目录）<br />3. 用7-zip或者其他解压工具打开 setuptools-0.6c9.tar.gz ，并且把里面的 ez_setup.py 文件解压到同一个目录里。<br />4. 打开cmd窗口，并进入你刚才下载和解压文件的目录里。（例如： d:\downloads\）<br />5. 输入 python ez_setup.py setuptools-0.6c9-py2.6.egg</p>
+<p>提示如下:</p>
+<pre>E:\temp&gt;python ez_setup.py setuptools-0.6c9-py2.6.egg
+Processing setuptools-0.6c9-py2.6.egg
+Copying setuptools-0.6c9-py2.6.egg to c:\python26\lib\site-packages
+Adding setuptools 0.6c9 to easy-install.pth file
+Installing easy_install-script.py script to C:\Python26\Scripts
+Installing easy_install.exe script to C:\Python26\Scripts
+Installing easy_install-2.6-script.py script to C:\Python26\Scripts
+Installing easy_install-2.6.exe script to C:\Python26\Scripts</p>
+
+<p>Installed c:\python26\lib\site-packages\setuptools-0.6c9-py2.6.egg
+Processing dependencies for setuptools==0.6c9
+Finished processing dependencies for setuptools==0.6c9
+Processing setuptools-0.6c9-py2.6.egg
+Removing c:\python26\lib\site-packages\setuptools-0.6c9-py2.6.egg
+Copying setuptools-0.6c9-py2.6.egg to c:\python26\lib\site-packages
+setuptools 0.6c9 is already the active version in easy-install.pth
+Installing easy_install-script.py script to C:\Python26\Scripts
+Installing easy_install.exe script to C:\Python26\Scripts
+Installing easy_install-2.6-script.py script to C:\Python26\Scripts
+Installing easy_install-2.6.exe script to C:\Python26\Scripts</p>
+
+<p>Installed c:\python26\lib\site-packages\setuptools-0.6c9-py2.6.egg
+Processing dependencies for setuptools==0.6c9
+Finished processing dependencies for setuptools==0.6c9</p>
+
+<p>E:\temp&gt;</pre></p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">02 Aug 2009, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2009/08/02/wordpress-from-windows-to-linux/" class="post-title">Wordpress从windows上迁移到linux上要注意路径设置</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-LAMP" href="http://huobazi.aspxboy.com//tags/lamp">LAMP</a><a class="post-category post-category-Wordpress" href="http://huobazi.aspxboy.com//tags/wordpress">Wordpress</a><a class="post-category post-category-LAMP" href="http://huobazi.aspxboy.com//tags/lamp">LAMP</a><a class="post-category post-category-wp" href="http://huobazi.aspxboy.com//tags/wp">wp</a><a class="post-category post-category-linux" href="http://huobazi.aspxboy.com//tags/linux">linux</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>今天在localhost上用xampp装了个<a title="Wordpress" href="http://www.wp.com" target="_blank">wordpress</a> 2.8.2,本地导入原来<a title="www.codeplex.com/blogengine" href="http://www.codeplex.com/blogengine" target="_blank">blogengine.net</a>的数据调整好，没有任何问题，就<a title="帝国备份王" href="http://www.phome.net/product/Ebak.html" target="_blank">用帝国备份王</a>打包数据在远程linunx上恢复，ftp上传本地站点内的文件到服务器对应目录，修改wp-config.php，兴冲冲的去访问首页，发现打不开，任何跟wp有关的页面都打不开，html可以打开和wp无关的页面比如探针是可以打开的，郁闷啊，检查了好久配置文件没有任何问题，思前想后想不通啊。本地和远程只是web服务器不同，本地是apache远程是nginx，不会是因为这个吧，其他几个站点都是这么弄的啊，是在想不到什么原因，</p>
+<p></p>
+<p>就打开phpmyadmin随便翻，翻到wp-options表，发现里面有几个站点域名啊的字段，倒上去的数据是本地的，玉米对应不上，修改之，还是没好，仍然打不开，再翻最后发现upload_path这个字段的设置时E:\xxx\yyy\zzz\这样的尝试修改成linux内的/home/usr/local/vhost/xxx/yyy/zzz，再访问首页，OK啦，估计wp在页面打开时要校验这些选项，而他不认识E:\XX\YY\ZZ这样的路径，就报错了。</p>             
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">02 Aug 2009, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2009/08/02/wordpress-from-windows-to-linux/" class="post-title">Wordpress从windows上迁移到linux上要注意路径设置</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-LAMP" href="http://huobazi.aspxboy.com//tags/lamp">LAMP</a><a class="post-category post-category-Wordpress" href="http://huobazi.aspxboy.com//tags/wordpress">Wordpress</a><a class="post-category post-category-LAMP" href="http://huobazi.aspxboy.com//tags/lamp">LAMP</a><a class="post-category post-category-wp" href="http://huobazi.aspxboy.com//tags/wp">wp</a><a class="post-category post-category-linux" href="http://huobazi.aspxboy.com//tags/linux">linux</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>今天在localhost上用xampp装了个<a title="Wordpress" href="http://www.wp.com" target="_blank">wordpress</a> 2.8.2,本地导入原来<a title="www.codeplex.com/blogengine" href="http://www.codeplex.com/blogengine" target="_blank">blogengine.net</a>的数据调整好，没有任何问题，就<a title="帝国备份王" href="http://www.phome.net/product/Ebak.html" target="_blank">用帝国备份王</a>打包数据在远程linunx上恢复，ftp上传本地站点内的文件到服务器对应目录，修改wp-config.php，兴冲冲的去访问首页，发现打不开，任何跟wp有关的页面都打不开，html可以打开和wp无关的页面比如探针是可以打开的，郁闷啊，检查了好久配置文件没有任何问题，思前想后想不通啊。本地和远程只是web服务器不同，本地是apache远程是nginx，不会是因为这个吧，其他几个站点都是这么弄的啊，是在想不到什么原因，</p>
+<p></p>
+<p>就打开phpmyadmin随便翻，翻到wp-options表，发现里面有几个站点域名啊的字段，倒上去的数据是本地的，玉米对应不上，修改之，还是没好，仍然打不开，再翻最后发现upload_path这个字段的设置时E:\xxx\yyy\zzz\这样的尝试修改成linux内的/home/usr/local/vhost/xxx/yyy/zzz，再访问首页，OK啦，估计wp在页面打开时要校验这些选项，而他不认识E:\XX\YY\ZZ这样的路径，就报错了。</p>             
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">18 Jul 2009, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2009/07/18/php-guid/" class="post-title">如何判断一个网站是不是php做的？</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-LAMP" href="http://huobazi.aspxboy.com//tags/lamp">LAMP</a><a class="post-category post-category-它山之石" href="http://huobazi.aspxboy.com//tags/%E5%AE%83%E5%B1%B1%E4%B9%8B%E7%9F%B3">它山之石</a><a class="post-category post-category-奇技淫巧" href="http://huobazi.aspxboy.com//tags/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7">奇技淫巧</a><a class="post-category post-category-PHP" href="http://huobazi.aspxboy.com//tags/php">PHP</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>可以当作<strong>简易</strong>判断站点是否用PHP架设。</p>
+<p>PHP_LOGO_GUID<br /><a href="http://www.php.net/?=PHPE9568F34-D428-11d2-A769-00AA001ACF42">http://www.php.net/?=PHPE9568F34-D428-11d2-A769-00AA001ACF42</a></p>
+<p>PHP_EGG_LOGO_GUID<br /><a href="http://www.php.net/?=PHPE9568F36-D428-11d2-A769-00AA001ACF42">http://www.php.net/?=PHPE9568F36-D428-11d2-A769-00AA001ACF42</a></p>
+<p>ZEND_LOGO_GUID<br /><a href="http://www.php.net/?=PHPE9568F35-D428-11d2-A769-00AA001ACF42">http://www.php.net/?=PHPE9568F35-D428-11d2-A769-00AA001ACF42</a></p>
+<p>PHP_CREDITS_GUID<br /><a href="http://www.php.net/?=PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000">http://www.php.net/?=PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000</a></p>
+<p>喜欢看愚人节的那个Logo就是第二个链接罗<br /><a href="http://www.php.net/">http://www.php.net/</a> 这个网址只是范例，只要是任一PHP的站点即可。</p>
+<p>来源:<a href="http://www.google.cn/search?client=aff-os-worldbrowser&amp;forid=1&amp;ie=utf-8&amp;oe=UTF-8&amp;hl=zh-CN&amp;q=%E4%B8%80%E4%BA%9B%E5%86%85%E5%AE%9A%E7%9A%84PHP%E7%89%B9%E6%AE%8AGUID" target="_blank">http://www.google.cn/search?client=aff-os-worldbrowser&amp;forid=1&amp;ie=utf-8&amp;oe=UTF-8&amp;hl=zh-CN&amp;q=%E4%B8%80%E4%BA%9B%E5%86%85%E5%AE%9A%E7%9A%84PHP%E7%89%B9%E6%AE%8AGUID</a></p>
+<p> </p>                
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">09 Jul 2009, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2009/07/09/nginx-typecho-rewrite/" class="post-title">nginx下typecho的rewrite</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-LAMP" href="http://huobazi.aspxboy.com//tags/lamp">LAMP</a><a class="post-category post-category-Typecho" href="http://huobazi.aspxboy.com//tags/typecho">Typecho</a><a class="post-category post-category-LAMP" href="http://huobazi.aspxboy.com//tags/lamp">LAMP</a><a class="post-category post-category-nginx" href="http://huobazi.aspxboy.com//tags/nginx">nginx</a><a class="post-category post-category-Rewirte" href="http://huobazi.aspxboy.com//tags/rewirte">Rewirte</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>导数据到typecho的时候是在localhost的windows xp系统上用的apache,部署时用的是nginx<br />先是发现无法登陆按照<a href="http://forum.typecho.org/viewtopic.php?f=4&amp;t=238&amp;p=852&amp;hilit=nginx#p852" target="_blank">这篇帖子</a>内的方法配置了vhost.conf，发现可以登陆了，接着又出现了<br />无法编辑post的问题，具体症状见<a href="http://forum.typecho.org/viewtopic.php?f=4&amp;t=270" target="_blank">这篇帖子</a>,甚是郁闷啊，google+baidu 找到一片描写wp的<br />rewrite的<a href="http://hi.baidu.com/3322/blog/item/95d254e7594a012bb93820bb.html" target="_blank">帖子</a>,因typecho与wp笔记像，抱着试试看的想法,在测试站点试验了一下，嘿嘿<br />能用，转寄在此，备忘</p>
+<p></p>
+<pre>
+location / {
+        index index.html index.php;
+        if (-f $request_filename/index.html){
+            rewrite (.*) $1/index.html break;
+        }
+        if (-f $request_filename/index.php){
+            rewrite (.*) $1/index.php;
+        }
+        if (!-f $request_filename){
+            rewrite (.*) /index.php;
+        }
+    }
+</pre>
+<p>同时感谢<a class="titlink" title="Atrhis的空间 http://hi.baidu.com/3322" href="http://huobazi.aspxboy.com/3322">Atlantis</a>  :-)</p>               
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">09 Jul 2009, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2009/07/09/nginx-typecho-rewrite/" class="post-title">nginx下typecho的rewrite</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-LAMP" href="http://huobazi.aspxboy.com//tags/lamp">LAMP</a><a class="post-category post-category-Typecho" href="http://huobazi.aspxboy.com//tags/typecho">Typecho</a><a class="post-category post-category-LAMP" href="http://huobazi.aspxboy.com//tags/lamp">LAMP</a><a class="post-category post-category-nginx" href="http://huobazi.aspxboy.com//tags/nginx">nginx</a><a class="post-category post-category-Rewirte" href="http://huobazi.aspxboy.com//tags/rewirte">Rewirte</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>导数据到typecho的时候是在localhost的windows xp系统上用的apache,部署时用的是nginx<br />先是发现无法登陆按照<a href="http://forum.typecho.org/viewtopic.php?f=4&amp;t=238&amp;p=852&amp;hilit=nginx#p852" target="_blank">这篇帖子</a>内的方法配置了vhost.conf，发现可以登陆了，接着又出现了<br />无法编辑post的问题，具体症状见<a href="http://forum.typecho.org/viewtopic.php?f=4&amp;t=270" target="_blank">这篇帖子</a>,甚是郁闷啊，google+baidu 找到一片描写wp的<br />rewrite的<a href="http://hi.baidu.com/3322/blog/item/95d254e7594a012bb93820bb.html" target="_blank">帖子</a>,因typecho与wp笔记像，抱着试试看的想法,在测试站点试验了一下，嘿嘿<br />能用，转寄在此，备忘</p>
+<p></p>
+<pre>
+location / {
+        index index.html index.php;
+        if (-f $request_filename/index.html){
+            rewrite (.*) $1/index.html break;
+        }
+        if (-f $request_filename/index.php){
+            rewrite (.*) $1/index.php;
+        }
+        if (!-f $request_filename){
+            rewrite (.*) /index.php;
+        }
+    }
+</pre>
+<p>同时感谢<a class="titlink" title="Atrhis的空间 http://hi.baidu.com/3322" href="http://huobazi.aspxboy.com/3322">Atlantis</a>  :-)</p>               
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">04 Jul 2009, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2009/07/04/myblog-from-wordpress-to-typecho/" class="post-title">从Wordpress转到Typecho了</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-LAMP" href="http://huobazi.aspxboy.com//tags/lamp">LAMP</a><a class="post-category post-category-Typecho" href="http://huobazi.aspxboy.com//tags/typecho">Typecho</a><a class="post-category post-category-LAMP" href="http://huobazi.aspxboy.com//tags/lamp">LAMP</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>WP比较占资源，今天把博客又转到Typecho了，忙乎了大半夜(现在接近临晨4点)，东拼西凑，南抄北挪，终于啊，皮肤基本上搞定了，发现Typecho的皮肤也蛮简单的，默认皮肤就七八个文件，照着改也蛮容易入门的。<br />郁闷的是现在还是在localhost上，自己点击，速度超好，刷刷刷的哦。还有就是Typecho这个版本（0.6）默认没有WYSIWYG的编辑器，只这篇post就是手写发出的，不过这样也好，以前在博客园用编辑器编辑的博客有时候因皮肤调整，会出现编辑器的html不符合皮肤，撑的页面不好看。<br />最搞的是我一直没找到如何处理分类排序的功能，还去官方论坛发了个贴（标准的新手贴），被告知按住拖动就OK了...<br />(*^__^*) 嘻嘻……</p>
+<p>在此感谢所有TV  感谢<a href="http://cnblogs.com" target="_self">博客园</a>  感谢<a href="http://www.typecho.org" target="_blank">Typecho</a>开发团队  感谢<a href="http://www.wp.com" target="_blank">Wordpress</a>  感谢<a href="http://www.getpaint.net/" target="_self">Paint.Net</a>  感谢<a href="http://www.photonvps.com/billing/aff.php?aff=011" target="_blank">PhotonVPS</a></p>
+<p>感谢...</p>                
+
+                    </div>
+                </section>
+                
+            </div>
+            
+<div class="pagination">
+  <nav role="pagination" class="post-list-pagination">
+      
+      <a href="/tags/lamp/" class="post-list-pagination-item pure-button post-list-pagination-item-prev">
+        <i class="fa fa-angle-double-left"></i>&nbsp;Newer
+      </a>
+      
+    <span class="post-list-pagination-item post-list-pagination-item-current">Page 2 of 3</span>
+    
+      <a href="/tags/lamp/page/3/" class="post-list-pagination-item pure-button post-list-pagination-item-next">
+        Older&nbsp;<i class="fa fa-angle-double-right"></i>
+      </a>
+    
+  </nav>
+</div>
+
+
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a></li>
+        </ul>
+    </div>
+</div>
+<script src="http://huobazi.aspxboy.com//js/all.min.js"></script>
+        </div>
+    </div>
+</div>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-56321-3', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iphone &middot; 武眉博</title>
+
+    <meta name="description" content="Marble&#39;s blog">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="huobazi" />
+    <meta name="twitter:title" content="Iphone &middot; 武眉博">
+    <meta name="twitter:description" content="Marble&#39;s blog">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Iphone &middot; 武眉博">
+    <meta property="og:description" content="Marble&#39;s blog">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    
+    
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+    
+
+    <link rel="stylesheet" href="http://huobazi.aspxboy.com//css/all.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <h1 class="brand-title"><a href="http://huobazi.aspxboy.com/">武眉博</a></h1>
+            <h2 class="brand-tagline"> Marble&#39;s blog </h2>
+        </hgroup>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://twitter.com/huobazi"><i class="fa fa-twitter"></i> Twitter</a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://github.com/huobazi "><i class="fa fa-github-alt"></i> github</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</div>
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                
+                <h1 class="content-subhead">13 Feb 2012, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2012/02/13/ios-uiactionsheetdelegate/" class="post-title">iOS通过UIActionSheetDelegate来实现警告的方法</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a><a class="post-category post-category-iOS" href="http://huobazi.aspxboy.com//tags/ios">iOS</a><a class="post-category post-category-iPhone" href="http://huobazi.aspxboy.com//tags/iphone">iPhone</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p>有时候需要用户确认一些操作，比如退出，删除数据等等，用UIActionSheetDelegate实现比较友好，实现也很简单，controller实现UIActionSheetDelegate协议就可以了，示例如下:</p>
+<p></p>
+<div class="source" style="font-family: '[object HTMLOptionElement]', Consolas, 'Lucida Console', 'Courier New'; color: #e0eee0; background-color: #000000; ">
+<span style="color: #7c7268; ">01</span> <span style="color: #8db6cd; ">#pragma mark-</span><br /><span style="color: #7c7268; ">02</span> <span style="color: #8db6cd; ">#pragma mark UIActionSheetDelegate with logOff</span><br /><span style="color: #7c7268; ">03</span><br /><span style="color: #7c7268; ">04</span> <span style="color: #e0eee0; ">-</span> (<span style="color: #add8e6; ">void</span>) <span style="color: #e0eee0; ">onLogOffButtonClick:</span>(<span style="color: #add8e6; ">id</span>)<span style="color: #e0eee0; ">sender</span><span style="color: #e0eee0; ">{</span><br /><span style="color: #f810b0; ">05</span>     <span style="color: #e0eee0; ">UIActionSheet</span> <span style="color: #e0eee0; "><em></span><span style="color: #e0eee0; ">actionSheet</span> <span style="color: #e0eee0; ">=</span> <span style="color: #e0eee0; ">[[</span><span style="color: #e0eee0; ">UIActionSheet</span> <span style="color: #e0eee0; ">alloc</span><span style="color: #e0eee0; ">]</span> <span style="color: #e0eee0; ">initWithTitle:</span><span style="color: #80a0ff; ">@&ldquo;确认要退出登录吗？&rdquo;</span> <span style="color: #e0eee0; ">delegate:</span><span style="color: #e0eee0; ">self</span> <span style="color: #e0eee0; ">cancelButtonTitle:</span><span style="color: #80a0ff; ">@&ldquo;不退出&rdquo;</span> <span style="color: #e0eee0; ">destructiveButtonTitle:</span><span style="color: #80a0ff; ">@&ldquo;退出&rdquo;</span> <span style="color: #e0eee0; ">otherButtonTitles:</span><span style="color: #4eee94; ">nil</span><span style="color: #e0eee0; ">,</span> <span style="color: #4eee94; ">nil</span><span style="color: #e0eee0; ">];</span><br /><span style="color: #7c7268; ">06</span>    <br /><span style="color: #7c7268; ">07</span>     <span style="color: #e0eee0; ">[</span><span style="color: #e0eee0; ">actionSheet</span> <span style="color: #e0eee0; ">showFromTabBar:</span><span style="color: #e0eee0; ">self</span><span style="color: #e0eee0; ">.</span><span style="color: #e0eee0; ">navigationController</span><span style="color: #e0eee0; ">.</span><span style="color: #e0eee0; ">tabBarController</span><span style="color: #e0eee0; ">.</span><span style="color: #e0eee0; ">tabBar</span><span style="color: #e0eee0; ">];</span><br /><span style="color: #7c7268; ">08</span>     XX<span style="color: #e0eee0; ">_RELEASE_SAFELY</span>(<span style="color: #e0eee0; ">actionSheet</span>);<br /><span style="color: #7c7268; ">09</span> <span style="color: #e0eee0; ">}</span><br /><span style="color: #f810b0; ">10</span> <span style="color: #e0eee0; ">-</span> (<span style="color: #add8e6; ">void</span>)<span style="color: #e0eee0; ">logOff</span><span style="color: #e0eee0; ">{</span><br /><span style="color: #7c7268; ">11</span><br /><span style="color: #7c7268; ">12</span>     <span style="color: #7c7268; ">//do logoff</span><br /><span style="color: #7c7268; ">13</span>    <br /><span style="color: #7c7268; ">14</span>     <span style="color: #e0eee0; ">[</span><span style="color: #e0eee0; ">self</span><span style="color: #e0eee0; ">.</span><span style="color: #e0eee0; ">navigationController</span> <span style="color: #e0eee0; ">popViewControllerAnimated:</span><span style="color: #e0eee0; ">YES</span><span style="color: #e0eee0; ">];</span><br /><span style="color: #f810b0; ">15</span> <span style="color: #e0eee0; ">}</span><br /><span style="color: #7c7268; ">16</span><br /><span style="color: #7c7268; ">17</span> <span style="color: #e0eee0; ">-</span> (<span style="color: #add8e6; ">void</span>)<span style="color: #e0eee0; ">actionSheet:</span>(<span style="color: #e0eee0; ">UIActionSheet</span> <span style="color: #e0eee0; "></em></span>)<span style="color: #e0eee0; ">actionSheet</span> <span style="color: #e0eee0; ">didDismissWithButtonIndex:</span>(<span style="color: #e0eee0; ">NSInteger</span>)<span style="color: #e0eee0; ">buttonIndex</span>; <span style="color: #e0eee0; ">{</span><br /><span style="color: #7c7268; ">18</span>     <span style="color: #90ee90; ">switch</span> (<span style="color: #e0eee0; ">buttonIndex</span>) <span style="color: #e0eee0; ">{</span><br /><span style="color: #7c7268; ">19</span>         <span style="color: #90ee90; ">case</span> <span style="color: #00ffff; ">0</span><span style="color: #e0eee0; ">:</span><br /><span style="color: #f810b0; ">20</span>             <span style="color: #e0eee0; ">[</span><span style="color: #e0eee0; ">self</span> <span style="color: #e0eee0; ">logOff</span><span style="color: #e0eee0; ">];</span><br /><span style="color: #7c7268; ">21</span>             <span style="color: #90ee90; ">break</span>;<br /><span style="color: #7c7268; ">22</span>         <span style="color: #90ee90; ">case</span> <span style="color: #00ffff; ">1</span><span style="color: #e0eee0; ">:</span><br /><span style="color: #7c7268; ">23</span>             <span style="color: #e0eee0; ">[</span><span style="color: #e0eee0; ">self</span><span style="color: #e0eee0; ">.</span><span style="color: #e0eee0; ">tableView</span> <span style="color: #e0eee0; ">deselectRowAtIndexPath:</span><span style="color: #e0eee0; ">[</span><span style="color: #e0eee0; ">self</span><span style="color: #e0eee0; ">.</span><span style="color: #e0eee0; ">tableView</span> <span style="color: #e0eee0; ">indexPathForSelectedRow</span><span style="color: #e0eee0; ">]</span> <span style="color: #e0eee0; ">animated:</span><span style="color: #e0eee0; ">YES</span><span style="color: #e0eee0; ">];</span><br /><span style="color: #7c7268; ">24</span>             <span style="color: #90ee90; ">break</span>;<br /><span style="color: #f810b0; ">25</span>         <span style="color: #90ee90; ">default</span><span style="color: #e0eee0; ">:</span><br /><span style="color: #7c7268; ">26</span>             <span style="color: #90ee90; ">break</span>;<br /><span style="color: #7c7268; ">27</span>     <span style="color: #e0eee0; ">}</span><br /><span style="color: #7c7268; ">28</span> <span style="color: #e0eee0; ">}</span>
+</div></p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">09 Dec 2011, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://huobazi.aspxboy.com/blog/2011/12/09/ios-hide-keyboard-when-touch/" class="post-title">How to,在iOS中点击文本框以外区域，隐藏键盘</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-闲言碎语" href="http://huobazi.aspxboy.com//tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD">闲言碎语</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a><a class="post-category post-category-iOS" href="http://huobazi.aspxboy.com//tags/ios">iOS</a><a class="post-category post-category-iPhone" href="http://huobazi.aspxboy.com//tags/iphone">iPhone</a><a class="post-category post-category-键盘" href="http://huobazi.aspxboy.com//tags/%E9%94%AE%E7%9B%98">键盘</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>当点击文本框以外部分时，隐藏键盘，实现很简单，加个Category就可以了，代码如下：</p>
+<p></p>
+<div class="source" style="font-family: '[object HTMLOptionElement]', Consolas, 'Lucida Console', 'Courier New'; color: #e6e1dc; background-color: #111111; ">
+<p><span style="color: #cc7833; font-style: italic; ">#import &lt;UIKit/UIKit.h&gt;</span><br /><span style="color: #cc7833; ">@interface</span> <span style="color: #e6e1dc; ">UITextField</span> <span style="color: #e6e1dc; ">(HideKeyBoard)</span><br /><span style="color: #e6e1dc; ">-</span>(<span style="color: #da4939; ">void</span>)<span style="color: #e6e1dc; ">hideKeyBoard:</span>(<span style="color: #e6e1dc; ">UIView</span> <span style="color: #e6e1dc; ">*</span>)<span style="color: #e6e1dc; ">view</span>;<br /><span style="color: #cc7833; ">@end</span></p>
+<p><span style="color: #cc7833; font-style: italic; ">#import "UITextField+HideKeyBoard.h"</span></p>
+<p><span style="color: #cc7833; ">@implementation</span> <span style="color: #e6e1dc; ">UITextField</span> <span style="color: #e6e1dc; ">(HideKeyBoard)</span><br /><span style="color: #e6e1dc; ">-</span> (<span style="color: #da4939; ">void</span>) <span style="color: #e6e1dc; ">hideKeyBoard:</span>(<span style="color: #e6e1dc; ">UIView</span><span style="color: #e6e1dc; ">*</span>)<span style="color: #e6e1dc; ">view</span><span style="color: #e6e1dc; ">{</span><br />    <span style="color: #e6e1dc; ">UITapGestureRecognizer</span> <span style="color: #e6e1dc; ">*</span><span style="color: #e6e1dc; ">tap</span> <span style="color: #e6e1dc; ">=</span> <span style="color: #e6e1dc; ">[[</span><span style="color: #e6e1dc; ">UITapGestureRecognizer</span> <span style="color: #e6e1dc; ">alloc</span><span style="color: #e6e1dc; ">]</span><br />                                   <span style="color: #e6e1dc; ">initWithTarget:</span><span style="color: #e6e1dc; ">self</span><br />                                   <span style="color: #e6e1dc; ">action:</span><span style="color: #cc7833; ">@selector</span>(<span style="color: #e6e1dc; ">doHideKeyBoard</span><span style="color: #e6e1dc; ">)];</span><br />   <br />    <span style="color: #e6e1dc; ">tap</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">numberOfTapsRequired</span> <span style="color: #e6e1dc; ">=</span> <span style="color: #a5c261; ">1</span>;<br />    <span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">view</span>  <span style="color: #e6e1dc; ">addGestureRecognizer:</span> <span style="color: #e6e1dc; ">tap</span><span style="color: #e6e1dc; ">];</span><br />    <span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">tap</span> <span style="color: #e6e1dc; ">setCancelsTouchesInView:</span><span style="color: #e6e1dc; ">NO</span><span style="color: #e6e1dc; ">];</span><br />    <span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">tap</span> <span style="color: #e6e1dc; ">release</span><span style="color: #e6e1dc; ">];</span><br /><span style="color: #e6e1dc; ">}</span></p>
+<p><span style="color: #e6e1dc; ">-</span> (<span style="color: #da4939; ">void</span>)<span style="color: #e6e1dc; ">doHideKeyBoard</span><span style="color: #e6e1dc; ">{</span><br />    <span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">self</span> <span style="color: #e6e1dc; ">resignFirstResponder</span><span style="color: #e6e1dc; ">];</span><br /><span style="color: #e6e1dc; ">}</span><br /><span style="color: #cc7833; ">@end</span></p>
+<p><span style="color: #e6e1dc; ">-</span> (<span style="color: #da4939; ">void</span>)<span style="color: #e6e1dc; ">viewDidLoad</span><br /><span style="color: #e6e1dc; ">{</span><br />    <span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">super</span> <span style="color: #e6e1dc; ">viewDidLoad</span><span style="color: #e6e1dc; ">];</span><br />    <span style="color: #bc9458; font-style: italic; ">// Do any additional setup after loading the view from its nib.</span><br />    <span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">self</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">txtInput</span> <span style="color: #e6e1dc; ">hideKeyBoard:</span><span style="color: #e6e1dc; ">self</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">view</span><span style="color: #e6e1dc; ">];</span><br /><span style="color: #e6e1dc; ">}</span></p>
+</div>
+<p>see also: <a href="https://gist.github.com/1450404">https://gist.github.com/1450404</a></p>              
+
+                    </div>
+                </section>
+                
+            </div>
+            
+
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a></li>
+        </ul>
+    </div>
+</div>
+<script src="http://huobazi.aspxboy.com//js/all.min.js"></script>
+        </div>
+    </div>
+</div>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-56321-3', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>
