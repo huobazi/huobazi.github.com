@@ -1,0 +1,16 @@
+---
+layout: post
+title: Wordpress从windows上迁移到linux上要注意路径设置
+comments: true
+date: 2009-08-02
+categories:
+- LAMP
+- Wordpress
+- LAMP
+- wp
+- linux
+---
+
+<p>今天在localhost上用xampp装了个<a title="Wordpress" href="http://www.wp.com" target="_blank">wordpress</a> 2.8.2,本地导入原来<a title="www.codeplex.com/blogengine" href="http://www.codeplex.com/blogengine" target="_blank">blogengine.net</a>的数据调整好，没有任何问题，就<a title="帝国备份王" href="http://www.phome.net/product/Ebak.html" target="_blank">用帝国备份王</a>打包数据在远程linunx上恢复，ftp上传本地站点内的文件到服务器对应目录，修改wp-config.php，兴冲冲的去访问首页，发现打不开，任何跟wp有关的页面都打不开，html可以打开和wp无关的页面比如探针是可以打开的，郁闷啊，检查了好久配置文件没有任何问题，思前想后想不通啊。本地和远程只是web服务器不同，本地是apache远程是nginx，不会是因为这个吧，其他几个站点都是这么弄的啊，是在想不到什么原因，</p>
+<p><!--more--></p>
+<p>就打开phpmyadmin随便翻，翻到wp-options表，发现里面有几个站点域名啊的字段，倒上去的数据是本地的，玉米对应不上，修改之，还是没好，仍然打不开，再翻最后发现upload_path这个字段的设置时E:\xxx\yyy\zzz\这样的尝试修改成linux内的/home/usr/local/vhost/xxx/yyy/zzz，再访问首页，OK啦，估计wp在页面打开时要校验这些选项，而他不认识E:\XX\YY\ZZ这样的路径，就报错了。</p>				

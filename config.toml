@@ -1,0 +1,5 @@
+baseurl = "http://huobazi.aspxboy.com/"
+languageCode = "zn-cn"
+title = "Marble.M.Wu"
+[permalinks]
+    blog= "/blog/:year/:month/:day/:filename/"

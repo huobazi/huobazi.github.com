@@ -1,0 +1,54 @@
+---
+layout: post
+title: Ajax Control Toolkit 出新版了
+comments: true
+date: 2007-03-04
+categories:
+- ASP.NET
+- Asp.net
+- Ajax
+- MS Ajax
+---
+
+<p></p>
+<table id="ctl00_ctl00_ctl00_Content_ProjectBaseMain_ProjectMain_releaseDetailsTable" style="WIDTH: 100%" border="0">
+<tbody>
+<tr>
+<td valign="top"><span class="ReleaseDetailsHeader"><a href="http://www.codeplex.com/AtlasControlToolkit/Release/ProjectReleases.aspx"><br /><h1>Ajax Control Toolkit 出新版了<br />http://www.codeplex.com/AtlasControlToolkit/Release/ProjectReleases.aspx</h1></a><br /><br />Release 10301 Production</span></td>
+<td valign="top" align="right"></td>
+</tr>
+<tr><td valign="top" align="left" colspan="2">
+<span class="ReleaseDateLabel">三月-01-2007</span><span class="ReleaseFilesCountLabel">2 Files</span>
+</td></tr>
+<tr><td valign="top" align="left" colspan="2"></td></tr>
+<tr><td valign="top" align="left" colspan="2"></td></tr>
+<tr><td valign="top" align="left" colspan="2"><span class="ReleaseSubHeading">Description</span></td></tr>
+<tr><td valign="top" align="left" colspan="2"><span class="content">2007-03-01 release of the AJAX Control Toolkit includes two new controls (ListSearch and SlideShow), a number of fixes identified as important by the community, and three significant enhancements: localization support, automatic JavaScript comment stripping, and ASP.NET theme/skin support. It continues to target the new ASP.NET AJAX v1.0 release (http://ajax.asp.net/).<br /><br />AjaxControlToolkit.zip is the full release package with complete source code to all controls, the test framework, VSI, and more.<br /><br />AjaxControlToolkit-NoSource.zip contains only the sample web site and VSI and is for people who don't need or want the source code for the controls.</span></td></tr>
+<tr>
+<td valign="top" align="left" colspan="2">
+<div>
+<br /><table class="ReleaseFilesGridView" id="ctl00_ctl00_ctl00_Content_ProjectBaseMain_ProjectMain_runTimeBinariesGridView" style="BORDER-COLLAPSE: collapse" cellspacing="0" rules="all" border="1">
+<br /><tbody>
+<br /><tr>
+<th scope="col">Runtime Binaries</th>                    </tr>
+<br /><tr>
+<br /><td>
+<a class="ReleaseFileDownloadLink" href="javascript:WebForm_DoPostBackWithOptions(new%20WebForm_PostBackOptions(%22ctl00%24ctl00%24ctl00%24Content%24ProjectBaseMain%24ProjectMain%24runTimeBinariesGridView%24ctl02%24ctl00%22,%20%22%22,%20false,%20%22%22,%20%22http://www.codeplex.com/AtlasControlToolkit/Project/FileDownload.aspx?DownloadId=7712%22,%20false,%20true))">AjaxControlToolkit-NoSource.zip</a><span> - 1542 Downloads (2.3 MB)</span>
+</td>
+</tr>
+<tr><td>
+<a class="ReleaseFileDownloadLink" href="javascript:WebForm_DoPostBackWithOptions(new%20WebForm_PostBackOptions(%22ctl00%24ctl00%24ctl00%24Content%24ProjectBaseMain%24ProjectMain%24runTimeBinariesGridView%24ctl03%24ctl00%22,%20%22%22,%20false,%20%22%22,%20%22http://www.codeplex.com/AtlasControlToolkit/Project/FileDownload.aspx?DownloadId=7711%22,%20false,%20true))">AjaxControlToolkit.zip</a><span> - 4334 Downloads (3.3 MB)</span>
+</td></tr>
+</tbody>
+</table>
+<p>            </p>
+</div>
+<br />
+</td>
+<br />
+</tr>
+<br />
+</tbody>
+<br />
+</table>
+<br />

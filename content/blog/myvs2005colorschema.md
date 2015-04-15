@@ -1,0 +1,23 @@
+---
+layout: post
+title: 提供我现用的Vs配色（灰黑色调）下载，有兴趣的朋友玩玩。
+comments: true
+date: 2008-06-14
+categories:
+- ASP.NET
+- .Net其他
+- Visual
+- Studio
+---
+
+<p>提供我现用的Vs配色（灰黑色调）下载，</p>
+<p> </p>
+<p>有兴趣的朋友玩玩。</p>
+<p> </p>
+<p>附件是Vs2005的，如果要在Vs2008下用，</p>
+<p> </p>
+<p>自己用文本编辑器打开修改version为9.0即可。效果见截图</p>
+<p><!--more--></p>
+<p><img style="width: 687px; height: 438px;" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png" alt="" width="748" height="430"><br /><img style="width: 814px; height: 446px;" src="/images/hbz_images/0a603e93-b2ed-47bf-86c0-ebbf83a0f832.png" alt="" width="534" height="366"><br /><img style="width: 772px; height: 367px;" src="/images/hbz_images/4b94bd6c-01e6-4ad4-b64e-fe905bb6b3eb.png" alt="" width="620" height="345" align="left"></p>
+<p> <br /><img style="clear: both; width: 675px; height: 495px;" src="/images/hbz_images/afe82875-7a37-48f8-bc2c-e0b65cd1638d.png" alt="" width="546" height="480"></p>
+<p> <br />  <a title="点这里下载" href="http://www.cnblogs.com/Files/huobazi/Marble.M.Wu-Exported-2008-06-14.rar" target="_blank">点这里下载</a></p>				

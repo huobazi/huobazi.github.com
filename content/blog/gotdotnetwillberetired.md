@@ -1,0 +1,78 @@
+---
+layout: post
+title: GotDotNet.Com要退休了
+comments: true
+date: 2007-06-21
+categories:
+- ASP.NET
+- 闲言碎语
+- GotDotNet
+---
+
+<p><br /><a href="http://www.gotdotnet.com/">http://www.gotdotnet.com/</a><br /><br /></p>
+<table cellspacing="0" cellpadding="0" width="471">
+<tbody>
+<tr><td style="COLOR: #0000ff" colspan="3">GotDotNet Phase-out Announcement</td></tr>
+<tr><td colspan="3" height="3"><img height="3" alt="" src="/images/hbz_images/9432c27b-2893-4018-946c-4bf16f270ce1.gif6" width="1" border="0"></td></tr>
+<tr>
+<td width="10"><img height="1" alt="" src="/images/hbz_images/9432c27b-2893-4018-946c-4bf16f270ce1.gif6" width="10" border="0"></td>
+<td valign="top" width="100%">Microsoft announces changes to the GotDotNet phase-out schedule. <br />Overall phase-out will be completed in summer 2007.<br /><table>
+<br /><tbody>
+<br /><tr>
+<br /><td>  </td>
+<td>
+<br />Based on your feedback, we've made some adjustments to our schedule: <br /><br /><ui><li>CodeGallery phase-out – Rescheduled to July 2007 (original phase-out date was April 24, 2007)<br />This gives CodeGallery owners more time to migrate. We suggest <a href="http://www.codeplex.com/">CodePlex</a> as an excellent alternative. Please contact <a href="https://www.codeplex.com/ContactUs.aspx">CodePlex support</a> with any questions you may have.<br />
+</li>
+<li>User Samples phase-out – Schedule update in Fall '07 <br />We will not phase-out User Samples until we can provide customers with greater alternative. We will update you with further schedule information in Fall, 2007.<br />
+</li>
+<li>Workspaces phase-out – Completed on June 19, 2007.<br />We suggest <a href="http://www.codeplex.com/">CodePlex</a> as an excellent alternative. Please contact the <a href="https://www.codeplex.com/ContactUs.aspx">CodePlex support staff</a> with any questions you may have.<br />
+</li></ui>
+</td>
+</tr>
+</tbody>
+</table>
+<p>            <br /><br /></p>
+<table><tbody><tr>
+<td>  </td>
+<td>We appreciate the input you’ve given us regarding the GotDotNet phase-out. We will keep you posted as we move forward. <br /><br />We are phasing out GotDotNet for the following reasons:<br /><br /><ui><li>Microsoft wants to reinvest the resources currently used for GotDotNet in new and better community features for our customers<br /><br />
+</li>
+<li>Traffic and usage of GotDotNet features has significantly decreased over the last six months<br />
+</li>
+<li>Microsoft wants to eliminate redundant functionality between GotDotNet and other community resources provided by Microsoft</li></ui>
+</td>
+</tr></tbody></table>
+<p>            <br />Other Microsoft sites<br /><a href="http://msdn2.microsoft.com/en-us/default.aspx">MSDN</a><br />Offers help for developers in writing applications using Microsoft products and technologies.<br /><a href="http://technet.microsoft.com/en-us/default.aspx">TechNet</a><br />Offers help for IT professionals using Microsoft products and technologies<br /><a href="http://www.asp.net/">ASP.NET</a><br />The ASP.NET 2.0 site is a portal site for the ASP.NET development community.<br /><a href="http://channel9.msdn.com/">Channel 9</a><br />Channel 9 is a Microsoft discussion forum used to promote conversations among Microsoft's customers.<br /><a href="http://www.codeplex.com/">CodePlex</a><br />CodePlex is Microsoft's open source project hosting web site.<br /><a href="http://msdn.microsoft.com/XML/XMLDownloads/default.aspx">XML Downloads</a><br />This page provides downloads for building XML applications using Microsoft technologies.<br /><br />Phase Out Schedule<br />The GotDotNet phase out will be carried out in phases according the following timetable:<br /><br /><br /></p>
+<table cellspacing="0" cellpadding="0" width="70%" border="0"><tbody>
+<tr>
+<td>Target Date</td>
+<td>Areas to be phased out</td>
+</tr>
+<tr>
+<td>February 20</td>
+<td>Partners, Resource Center, Microsoft Tools</td>
+</tr>
+<tr>
+<td>March 20</td>
+<td>Private workspaces, Team pages, Message Boards</td>
+</tr>
+<tr>
+<td>June 19</td>
+<td>Workspaces</td>
+</tr>
+<tr>
+<td>By end of July 2007</td>
+<td>CodeGallery (projected date)</td>
+</tr>
+<tr>
+<td>Schedule update in Fall 2007</td>
+<td>User Samples (date TBD)</td>
+</tr>
+</tbody></table>
+<p>            </p>
+</td>
+<br />
+</tr>
+<br />
+</tbody>
+<br />
+</table>

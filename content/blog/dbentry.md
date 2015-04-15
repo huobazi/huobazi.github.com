@@ -1,0 +1,74 @@
+---
+layout: post
+title: DbEntry.Net 又一个国产开源ORM数据访问及 WEB 框架
+comments: true
+date: 2008-01-31
+categories:
+- ASP.NET
+- Asp.net
+- ORM
+- Rails
+- .Net其他
+- DbEntry.Net
+---
+
+<p>今天去逛<a href="http://www.codeplex.com" target="_blank">CodePlex</a>发现这个东西<br /><br />链接到<a href="http://www.javaeye.com/" target="_blank">JavaEye</a>的<a href="http://llf.javaeye.com/" target="_blank">blog</a>，作者：<span id="AuthorLabel">梁利锋</span><br /><br />中文描述：<font face="Verdana"><a href="http://llf.hanzify.org/llf/show.asp?id=555">http://llf.hanzify.org/llf/show.asp?id=555</a><br /><br /></font><font face="Verdana"><strong>Features:</strong><br /><br />FluentInterface query syntax </font></p>
+<ul>
+<li>RoR ActiveRecord style syntax<br />
+</li>
+<li>Ambient transaction<br />
+</li>
+<li>Dynamic object<br />
+</li>
+<li>Partial update<br />
+</li>
+<li>1:1 1:Many Many:Many relations<br />
+</li>
+<li>Auto create table<br />
+</li>
+<li>Anti sql injection<br />
+</li>
+<li>Multiple data source<br />
+</li>
+<li>Object validation<br />
+</li>
+<li>Paged selector and collection<br />
+</li>
+<li>Nullable support<br />
+</li>
+<li>DbEntryDataSource<br />
+</li>
+<li>ASP.NET 2.0 Membership support<br />
+</li>
+<li>Built-in Cache Support<br />
+</li>
+<li>Ruby On Rails style MVC framework<br />
+</li>
+<li>High performance, almost same as using ADO.NET directly<br />
+</li>
+<li>Lightwight, the binary file only about 268KB</li>
+</ul>
+<ul><li><strong>Rails Style MVC</strong></li></ul>
+<ol>
+<ol>
+<li>
+<a href="http://www.codeplex.com/DbEntry/Wiki/View.aspx?title=Rails%20Getting%20Started&amp;referringTitle=Home">Getting Started</a><br />
+</li>
+<li>
+<a href="http://www.codeplex.com/DbEntry/Wiki/View.aspx?title=Scaffolding&amp;referringTitle=Home">Scaffolding</a><br />
+</li>
+<li>
+<a href="http://www.codeplex.com/DbEntry/Wiki/View.aspx?title=Controller&amp;referringTitle=Home">Controller</a><br />
+</li>
+<li>
+<a href="http://www.codeplex.com/DbEntry/Wiki/View.aspx?title=Viewer&amp;referringTitle=Home">Viewer</a><br />
+</li>
+<li>
+<a href="http://www.codeplex.com/DbEntry/Wiki/View.aspx?title=Rails%20Configuration&amp;referringTitle=Home">Configuration</a><br />
+</li>
+<li><a href="http://www.codeplex.com/DbEntry/Wiki/View.aspx?title=Rails%20Style%20MVC%20Deployment&amp;referringTitle=Home">Deployment</a></li>
+</ol>
+<p></p>
+</ol>
+<br /><p>另外还有一些不错的东西比如他的 <strong>Rails Style MVC</strong> 和<strong><a href="http://www.codeplex.com/DbEntry/Wiki/View.aspx?title=Tools&amp;referringTitle=Home" target="_blank"><strong>TemplateBuilder</strong>  </a></strong>还有 <a href="http://www.codeplex.com/DbEntry/Wiki/View.aspx?title=HtmlBuilder&amp;referringTitle=Home" target="_blank"><strong>HtmlBuilder</strong></a><br /><br />看了看并没有<a href="http://www.codeplex.com/nbear" target="_blank">Nbear</a>那样类似Linq的查询支持.<br /><br />令人欣慰的是这个东西一直从.net1.1做到现在，而且就一个人开发，从<a href="http://www.codeplex.com" target="_blank">codeplex</a>上来看，最近还有代码签入.<br /><br /><font face="Verdana"><a href="http://www.codeplex.com/DbEntry/SourceControl/ListDownloadableCommits.aspx">http://www.codeplex.com/DbEntry/SourceControl/ListDownloadableCommits.aspx</a><br /><br /></font><br /><br /><strong>最后贴一下地址：<font face="Verdana"><a href="http://www.codeplex.com/DbEntry">http://www.codeplex.com/DbEntry</a></font></strong></p>
+<br />
