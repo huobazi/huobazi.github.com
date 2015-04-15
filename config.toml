@@ -1,4 +1,4 @@
-baseurl = "http://huobazi.aspxboy.com/"
+baseurl = "http://huobazi.aspxboy.com"
 languageCode = "zh-cn"
 title = "武眉博"
 theme = "purehugo"
