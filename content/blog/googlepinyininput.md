@@ -3,7 +3,7 @@ layout: post
 title: Google发布谷歌拼音输入
 comments: true
 date: 2007-04-04
-categories:
+tags:
 - 闲言碎语
 - Google
 ---

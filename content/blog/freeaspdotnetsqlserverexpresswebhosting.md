@@ -3,7 +3,7 @@ layout: post
 title: 免费的Asp.net2.0 Sqlserver express的学习空间
 comments: true
 date: 2005-12-12
-categories:
+tags:
 - ASP.NET
 - Asp.net
 - SQL Server

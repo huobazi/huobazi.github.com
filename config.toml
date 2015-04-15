@@ -1,5 +1,16 @@
 baseurl = "http://huobazi.aspxboy.com/"
-languageCode = "zn-cn"
-title = "Marble.M.Wu"
+languageCode = "zh-cn"
+title = "武眉博"
+theme = "purehugo"
+Paginate = 10
+disqusShortname = "huobaziblog"
 [permalinks]
     blog= "/blog/:year/:month/:day/:filename/"
+[params]
+  twitter = "huobazi"
+  github = "huobazi"
+  description = "Marble's blog"
+  google_analytics = "UA-56321-3"
+[taxonomies]
+  tag = "tags"
+  category = "categories"

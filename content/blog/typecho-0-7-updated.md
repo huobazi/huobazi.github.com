@@ -3,7 +3,7 @@ layout: post
 title: 把typecho升级到0.7了
 comments: true
 date: 2010-01-14
-categories:
+tags:
 - 闲言碎语
 ---
 

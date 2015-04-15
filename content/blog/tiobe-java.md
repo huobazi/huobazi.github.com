@@ -3,7 +3,7 @@ layout: post
 title: 编程语言排行榜Java下跌引起的...
 comments: true
 date: 2010-04-07
-categories:
+tags:
 - 闲言碎语
 - java
 - tiobe

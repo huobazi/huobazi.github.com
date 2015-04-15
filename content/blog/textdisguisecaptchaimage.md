@@ -3,7 +3,7 @@ layout: post
 title: 原来验证码可以租的哦
 comments: true
 date: 2006-04-17
-categories:
+tags:
 - ASP.NET
 - 它山之石
 - Captcha

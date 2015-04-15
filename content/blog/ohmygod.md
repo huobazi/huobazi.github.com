@@ -3,7 +3,7 @@ layout: post
 title: 上班族饮食十大“夺命”恶习
 comments: true
 date: 2007-10-10
-categories:
+tags:
 - 闲言碎语
 - health
 ---

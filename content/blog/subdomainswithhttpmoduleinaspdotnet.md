@@ -3,7 +3,7 @@ layout: post
 title: '在Asp.Net中使用HttpModule实现多个域名分别“绑定”到子目录 '
 comments: true
 date: 2005-10-15
-categories:
+tags:
 - ASP.NET
 - Asp.net
 ---

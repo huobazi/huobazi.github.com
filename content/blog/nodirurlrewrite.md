@@ -3,7 +3,7 @@ layout: post
 title: 关于请求的目录不存在而需要url重写
 comments: true
 date: 2005-11-21
-categories:
+tags:
 - ASP.NET
 - Asp.net
 - Url Rewrite

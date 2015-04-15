@@ -3,7 +3,7 @@ layout: post
 title: 'How to,在iOS中点击文本框以外区域，隐藏键盘'
 comments: true
 date: 2011-12-09
-categories:
+tags:
 - 闲言碎语
 - 代码片段
 - iOS

@@ -3,7 +3,7 @@ layout: post
 title: GotDotNet.Com要退休了
 comments: true
 date: 2007-06-21
-categories:
+tags:
 - ASP.NET
 - 闲言碎语
 - GotDotNet

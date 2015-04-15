@@ -3,7 +3,7 @@ layout: post
 title: 商务中国的DNS解析，主机名不许有下划线
 comments: true
 date: 2009-08-02
-categories:
+tags:
 - 闲言碎语
 - DNS
 - 域名

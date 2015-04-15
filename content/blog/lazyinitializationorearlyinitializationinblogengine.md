@@ -3,7 +3,7 @@ layout: post
 title: 讨论一下类似BlogEngine为何要一次性加载所有Post到内存
 comments: true
 date: 2007-07-04
-categories:
+tags:
 - ASP.NET
 - Asp.net
 - .Net其他

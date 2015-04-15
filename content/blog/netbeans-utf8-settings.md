@@ -3,7 +3,7 @@ layout: post
 title: 调整netbeans6.5设置使之默认使用utf-8存储文件
 comments: true
 date: 2009-08-19
-categories:
+tags:
 - LAMP
 - netbeans
 - utf-8

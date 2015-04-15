@@ -3,7 +3,7 @@ layout: post
 title: DataGrid点击删除按钮弹出确认对话框一个好办法
 comments: true
 date: 2004-04-05
-categories:
+tags:
 - ASP.NET
 - Asp.net
 - 代码片段

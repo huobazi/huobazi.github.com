@@ -3,7 +3,7 @@ layout: post
 title: 【How to】解决Visio虚线复制到word中变为实线
 comments: true
 date: 2009-10-10
-categories:
+tags:
 - 闲言碎语
 - 推荐阅读
 - 它山之石

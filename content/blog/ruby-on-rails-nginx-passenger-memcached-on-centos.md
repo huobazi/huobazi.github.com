@@ -3,7 +3,7 @@ layout: post
 title: 在centos上装rubyee,passenger和memcached ,搭建rails环境
 comments: true
 date: 2010-07-24
-categories:
+tags:
 - LAMP
 - Rails
 - nginx

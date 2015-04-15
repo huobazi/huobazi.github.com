@@ -3,7 +3,7 @@ layout: post
 title: win7上安装memcache
 comments: true
 date: 2010-04-13
-categories:
+tags:
 - LAMP
 - 它山之石
 - win7

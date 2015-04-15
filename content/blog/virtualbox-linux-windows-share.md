@@ -3,7 +3,7 @@ layout: post
 title: VirtualBox内的Linux和宿主Windows的文件共享
 comments: true
 date: 2010-12-25
-categories:
+tags:
 - LAMP
 - linux
 - VirtualBox

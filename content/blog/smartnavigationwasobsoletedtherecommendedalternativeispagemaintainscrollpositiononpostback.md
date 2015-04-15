@@ -3,7 +3,7 @@ layout: post
 title: 还记得 Page.SmartNavigation 属性么，此属性已被否决。
 comments: true
 date: 2006-06-29
-categories:
+tags:
 - ASP.NET
 - Asp.net
 ---

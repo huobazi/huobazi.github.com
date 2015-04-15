@@ -3,7 +3,7 @@ layout: post
 title:  [How to] 如何卸载Xcode
 comments: true
 date: 2011-11-28
-categories:
+tags:
 - ASP.NET
 - xcode
 - iOS

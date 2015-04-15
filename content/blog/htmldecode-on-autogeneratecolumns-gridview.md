@@ -3,7 +3,7 @@ layout: post
 title: AutoGenerateColumns='true'的GridView如何支持htmlencode/htmldecode
 comments: true
 date: 2011-11-09
-categories:
+tags:
 - ASP.NET
 - Asp.net
 - .Net其他

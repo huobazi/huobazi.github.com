@@ -3,7 +3,7 @@ layout: post
 title: 使用window.location跳转，在IE中UrlReffer不被记录
 comments: true
 date: 2010-01-21
-categories:
+tags:
 - ASP.NET
 - 前端开发
 - Asp.net

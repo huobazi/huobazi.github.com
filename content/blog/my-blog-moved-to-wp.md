@@ -3,7 +3,7 @@ layout: post
 title: 博客园到Wordpress搬家成功！
 comments: true
 date: 2009-06-21
-categories:
+tags:
 - LAMP
 - 闲言碎语
 - .Net其他

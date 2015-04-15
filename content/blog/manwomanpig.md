@@ -3,7 +3,7 @@ layout: post
 title: 男人 女人 猪
 comments: true
 date: 2007-04-04
-categories:
+tags:
 - 闲言碎语
 - boy
 - girl

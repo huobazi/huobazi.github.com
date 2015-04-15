@@ -3,7 +3,7 @@ layout: post
 title: 检测email地址是否存在的Web Service
 comments: true
 date: 2004-09-30
-categories:
+tags:
 - ASP.NET
 - Asp.net
 ---

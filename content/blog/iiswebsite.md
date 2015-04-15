@@ -3,7 +3,7 @@ layout: post
 title: 比尔盖茨的又一个网站
 comments: true
 date: 2006-05-25
-categories:
+tags:
 - ASP.NET
 - .Net其他
 - Microsoft

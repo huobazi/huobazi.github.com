@@ -3,7 +3,7 @@ layout: post
 title: 新蛋开始卖蛋蛋了
 comments: true
 date: 2010-04-02
-categories:
+tags:
 - 闲言碎语
 - Newegg
 ---

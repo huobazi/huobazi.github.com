@@ -3,7 +3,7 @@ layout: post
 title: '哈佛经典案例，赶集卖猪记 '
 comments: true
 date: 2008-11-01
-categories:
+tags:
 - 闲言碎语
 - 推荐阅读
 - 它山之石

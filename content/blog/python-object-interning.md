@@ -3,7 +3,7 @@ layout: post
 title: python的对象驻留
 comments: true
 date: 2009-08-21
-categories:
+tags:
 - LAMP
 - python
 - 对象驻留

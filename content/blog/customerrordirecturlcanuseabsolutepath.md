@@ -3,7 +3,7 @@ layout: post
 title: CustomError可以设置绝对路径
 comments: true
 date: 2008-04-23
-categories:
+tags:
 - ASP.NET
 - Asp.net
 - CustomError

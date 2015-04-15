@@ -3,7 +3,7 @@ layout: post
 title: Google的Picasa网络相册很弓虽！！！
 comments: true
 date: 2007-03-21
-categories:
+tags:
 - 闲言碎语
 - Google
 - Picasa

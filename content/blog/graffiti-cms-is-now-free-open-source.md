@@ -3,7 +3,7 @@ layout: post
 title: Graffiti CMS  开源了
 comments: true
 date: 2009-12-18
-categories:
+tags:
 - ASP.NET
 - Asp.net
 - CMS

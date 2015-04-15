@@ -3,7 +3,7 @@ layout: post
 title: 不改程序, 创建同一个程序不同服务名的方法
 comments: true
 date: 2009-08-06
-categories:
+tags:
 - .Net其他
 - C#
 - Windows

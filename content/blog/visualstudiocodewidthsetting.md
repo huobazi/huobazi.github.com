@@ -3,7 +3,7 @@ layout: post
 title: 给Visual Studio 2005设置一个代码边界线，提醒自己，别写的太长哦。
 comments: true
 date: 2006-08-11
-categories:
+tags:
 - ASP.NET
 - Asp.net
 - Visual Studio

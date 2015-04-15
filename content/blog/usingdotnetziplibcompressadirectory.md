@@ -3,7 +3,7 @@ layout: post
 title: 使用dotNetZipLib轻松压缩目录/文件夹
 comments: true
 date: 2008-03-29
-categories:
+tags:
 - ASP.NET
 - Asp.net
 - .Net其他

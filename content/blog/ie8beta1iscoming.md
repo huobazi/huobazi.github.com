@@ -3,7 +3,7 @@ layout: post
 title: IE8 BETA1 来了....
 comments: true
 date: 2008-03-06
-categories:
+tags:
 - ASP.NET
 - Microsoft
 - IE8

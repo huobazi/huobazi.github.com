@@ -3,7 +3,7 @@ layout: post
 title: 在自定义控件中实现ICallbackEventHandler接口不经过回发而实现客户端回掉
 comments: true
 date: 2007-07-23
-categories:
+tags:
 - ASP.NET
 - Asp.net
 - 自定义控件

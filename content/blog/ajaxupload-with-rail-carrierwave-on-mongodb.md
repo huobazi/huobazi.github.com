@@ -2,7 +2,7 @@
 title: 使用AjaxUpload和Carrierwave在Rails Mongoid中批量上传图片
 date: 2012-08-15
 comments: true
-categories:
+tags:
 - Ruby on Rails
 - Rails
 - Mongoid

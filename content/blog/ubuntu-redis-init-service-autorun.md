@@ -3,7 +3,7 @@ layout: post
 title: 在 Ubuntu 下安装 Redis 并使用 init 脚本启动  && 添加 删除ubuntu自启动服务
 comments: true
 date: 2011-08-06
-categories:
+tags:
 - LAMP
 - Ubuntu
 - Redis

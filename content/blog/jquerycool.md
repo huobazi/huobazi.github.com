@@ -3,7 +3,7 @@ layout: post
 title: jQuery从此更牛了
 comments: true
 date: 2008-10-07
-categories:
+tags:
 - ASP.NET
 - 前端开发
 - jQuery

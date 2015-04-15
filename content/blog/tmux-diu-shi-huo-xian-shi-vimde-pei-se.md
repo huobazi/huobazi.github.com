@@ -3,7 +3,7 @@ layout: post
 title: tmux丢失或显示vim的配色
 date: 2012-11-02
 comments: true
-categories:
+tags:
 - tmux
 - vim
 ---

@@ -3,7 +3,7 @@ layout: post
 title: 得罪一下腾讯
 comments: true
 date: 2009-10-13
-categories:
+tags:
 - 闲言碎语
 - QQ
 - 腾讯

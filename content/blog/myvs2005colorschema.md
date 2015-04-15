@@ -3,7 +3,7 @@ layout: post
 title: 提供我现用的Vs配色（灰黑色调）下载，有兴趣的朋友玩玩。
 comments: true
 date: 2008-06-14
-categories:
+tags:
 - ASP.NET
 - .Net其他
 - Visual

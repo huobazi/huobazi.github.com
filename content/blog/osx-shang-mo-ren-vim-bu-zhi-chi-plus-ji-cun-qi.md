@@ -3,7 +3,7 @@ layout: post
 title: OSX 上默认 VIM 不支持 + 寄存器
 date: 2012-11-26
 comments: true
-categories:
+tags:
 - vim
 - OSX
 - Mac

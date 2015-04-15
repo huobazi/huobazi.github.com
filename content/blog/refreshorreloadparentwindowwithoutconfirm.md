@@ -3,7 +3,7 @@ layout: post
 title: 弹出窗口刷新它的父页面后。出现不重新发送信息，则无法刷新网页
 comments: true
 date: 2004-04-06
-categories:
+tags:
 - ASP.NET
 - Asp.net
 - 奇技淫巧

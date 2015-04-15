@@ -3,7 +3,7 @@ layout: post
 title: DbEntry.Net 又一个国产开源ORM数据访问及 WEB 框架
 comments: true
 date: 2008-01-31
-categories:
+tags:
 - ASP.NET
 - Asp.net
 - ORM

@@ -3,7 +3,7 @@ layout: post
 title: Google的投票站点在用Asp.net
 comments: true
 date: 2008-01-25
-categories:
+tags:
 - ASP.NET
 - Asp.net
 - .Net其他

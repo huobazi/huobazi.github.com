@@ -3,7 +3,7 @@ layout: post
 title: 如何在Web App Project 或者 Web Site Project的App_Code 内使用 Profile/ProfileCommon
 comments: true
 date: 2007-06-06
-categories:
+tags:
 - ASP.NET
 - Asp.net
 - ProfileCommon

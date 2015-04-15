@@ -3,7 +3,7 @@ layout: post
 title: 如何判断一个类型是nullable类型，并得知它的原始类型
 comments: true
 date: 2009-07-30
-categories:
+tags:
 - ORM
 - .Net其他
 - 代码片段

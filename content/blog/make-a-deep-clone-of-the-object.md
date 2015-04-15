@@ -3,7 +3,7 @@ layout: post
 title: C#中如何深度克隆一个对象？
 comments: true
 date: 2009-07-15
-categories:
+tags:
 - ASP.NET
 - Asp.net
 - .Net其他

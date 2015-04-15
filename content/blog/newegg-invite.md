@@ -3,7 +3,7 @@ layout: post
 title: 新蛋西安招聘.net软件工程师
 comments: true
 date: 2011-08-31
-categories:
+tags:
 - 闲言碎语
 - Newegg
 - Invite

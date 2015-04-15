@@ -3,7 +3,7 @@ layout: post
 title: 'rails里Mysql::Error: query: not connected'
 comments: true
 date: 2010-01-15
-categories:
+tags:
 - LAMP
 - 闲言碎语
 - Rails

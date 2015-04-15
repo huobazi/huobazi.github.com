@@ -3,7 +3,7 @@ layout: post
 title: Asp.Net发邮件，如何发送附件
 comments: true
 date: 2009-07-21
-categories:
+tags:
 - ASP.NET
 - Asp.net
 - .Net其他

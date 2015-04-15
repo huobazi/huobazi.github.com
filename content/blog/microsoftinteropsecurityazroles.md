@@ -3,7 +3,7 @@ layout: post
 title: 使用AzMan找不到Microsoft.Interop.Security.AzRoles的解决方法
 comments: true
 date: 2008-04-20
-categories:
+tags:
 - ASP.NET
 - .Net其他
 - Entlib

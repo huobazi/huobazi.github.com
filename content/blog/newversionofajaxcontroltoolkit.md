@@ -3,7 +3,7 @@ layout: post
 title: Ajax Control Toolkit 出新版了
 comments: true
 date: 2007-03-04
-categories:
+tags:
 - ASP.NET
 - Asp.net
 - Ajax

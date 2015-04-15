@@ -3,7 +3,7 @@ layout: post
 title: .Net专业人力资源网上线试运行.
 comments: true
 date: 2007-07-07
-categories:
+tags:
 - ASP.NET
 - 闲言碎语
 - Asp.net

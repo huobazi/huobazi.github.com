@@ -3,7 +3,7 @@ layout: post
 title: 优化Rails数据库查询性能 -- rails_reviewer插件
 comments: true
 date: 2010-01-21
-categories:
+tags:
 - LAMP
 - Rails
 - Mysql

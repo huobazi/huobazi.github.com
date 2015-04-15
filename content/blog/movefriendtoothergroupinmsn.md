@@ -3,7 +3,7 @@ layout: post
 title: 批量 移动 msn 联系人
 comments: true
 date: 2008-03-16
-categories:
+tags:
 - 闲言碎语
 - MSN
 ---

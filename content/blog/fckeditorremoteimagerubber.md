@@ -3,7 +3,7 @@ layout: post
 title: FckEditor,远程图片下载,插件
 comments: true
 date: 2007-11-02
-categories:
+tags:
 - ASP.NET
 - Asp.net
 - Ajax

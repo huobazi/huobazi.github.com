@@ -3,7 +3,7 @@ layout: post
 title: '2007最后一博,Url地址重写，利用HttpHander手工编译页面并按需生成静态HTML文件'
 comments: true
 date: 2007-12-31
-categories:
+tags:
 - ASP.NET
 - Asp.net
 - HttpHander

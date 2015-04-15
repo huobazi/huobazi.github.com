@@ -3,7 +3,7 @@ layout: post
 title: Wordpress从windows上迁移到linux上要注意路径设置
 comments: true
 date: 2009-08-02
-categories:
+tags:
 - LAMP
 - Wordpress
 - LAMP

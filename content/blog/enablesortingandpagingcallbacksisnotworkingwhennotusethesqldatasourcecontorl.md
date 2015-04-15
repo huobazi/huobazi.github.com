@@ -3,7 +3,7 @@ layout: post
 title: code-beside方式绑定GridView后EnableSortingAndPagingCallbacks不工作
 comments: true
 date: 2006-07-03
-categories:
+tags:
 - ASP.NET
 - Asp.net
 - GridView

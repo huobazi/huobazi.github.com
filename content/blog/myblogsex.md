@@ -3,7 +3,7 @@ layout: post
 title: 本人的博客性别鉴定
 comments: true
 date: 2007-08-29
-categories:
+tags:
 - 闲言碎语
 - Me
 ---

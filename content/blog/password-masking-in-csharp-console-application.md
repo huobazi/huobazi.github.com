@@ -3,7 +3,7 @@ layout: post
 title: 在Console下输入密码，以星号代替。
 comments: true
 date: 2011-06-22
-categories:
+tags:
 - ASP.NET
 - .Net其他
 - 代码片段

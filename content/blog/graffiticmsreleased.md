@@ -3,7 +3,7 @@ layout: post
 title: Telligent 发布了 CMS 系统
 comments: true
 date: 2008-02-22
-categories:
+tags:
 - ASP.NET
 - Asp.net
 - CMS

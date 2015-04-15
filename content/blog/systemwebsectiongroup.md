@@ -3,7 +3,7 @@ layout: post
 title: 在Asp.Net2.0中可以方便的访问配置文件web.config,如判断debug设置，验证类型等。
 comments: true
 date: 2006-05-18
-categories:
+tags:
 - ASP.NET
 - Asp.net
 ---

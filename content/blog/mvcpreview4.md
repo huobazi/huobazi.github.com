@@ -3,7 +3,7 @@ layout: post
 title: Latest preview of the ASP.Net MVC available on CodePlex
 comments: true
 date: 2008-07-17
-categories:
+tags:
 - ASP.NET
 - Asp.net
 - MVC

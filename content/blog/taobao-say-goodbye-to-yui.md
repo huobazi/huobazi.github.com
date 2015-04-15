@@ -3,7 +3,7 @@ layout: post
 title: 淘宝首页 say goodbye to YUI 了还是forever的
 comments: true
 date: 2010-08-06
-categories:
+tags:
 - 前端开发
 - kissy-editor
 - kissy

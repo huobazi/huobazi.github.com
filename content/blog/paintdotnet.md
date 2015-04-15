@@ -3,7 +3,7 @@ layout: post
 title: '推荐一个.Net做的图形处理软件--Paint.NET '
 comments: true
 date: 2006-05-10
-categories:
+tags:
 - ASP.NET
 - Asp.net
 - Paint.NET

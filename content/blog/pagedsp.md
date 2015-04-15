@@ -3,7 +3,7 @@ layout: post
 title: 分页存储过程
 comments: true
 date: 2004-02-09
-categories:
+tags:
 - ASP.NET
 - LAMP
 - Asp.net

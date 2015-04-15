@@ -3,7 +3,7 @@ layout: post
 title: office 2010 正在下载中。
 comments: true
 date: 2010-04-25
-categories:
+tags:
 - 闲言碎语
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: 从Wordpress转到Typecho了
 comments: true
 date: 2009-07-04
-categories:
+tags:
 - LAMP
 - Typecho
 - LAMP

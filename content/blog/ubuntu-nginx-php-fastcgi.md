@@ -3,7 +3,7 @@ layout: post
 title: 在ubuntu上配置 nginx和php+fastcgi
 comments: true
 date: 2011-01-01
-categories:
+tags:
 - LAMP
 - PHP
 - LAMP

@@ -3,7 +3,7 @@ layout: post
 title: 我的win7和ubuntu之旅
 comments: true
 date: 2009-12-02
-categories:
+tags:
 - 闲言碎语
 ---
 

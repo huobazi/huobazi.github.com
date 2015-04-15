@@ -3,7 +3,7 @@ layout: post
 title: Mysql adapter on Rails 2.3.3
 comments: true
 date: 2009-08-29
-categories:
+tags:
 - LAMP
 - Rails
 - 奇技淫巧

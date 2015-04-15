@@ -3,7 +3,7 @@ layout: post
 title: 打开一个Excel模板文件填充数据另存为一个文件
 comments: true
 date: 2004-04-27
-categories:
+tags:
 - ASP.NET
 - Asp.net
 - 它山之石

@@ -3,7 +3,7 @@ layout: post
 title: 如何判断一个网站是不是php做的？
 comments: true
 date: 2009-07-18
-categories:
+tags:
 - LAMP
 - 它山之石
 - 奇技淫巧

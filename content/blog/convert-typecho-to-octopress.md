@@ -3,7 +3,7 @@ layout: post
 title: 从typecho转换到Octopress了
 date: 2012-03-06
 comments: true
-categories:
+tags:
 - Octopress
 - Typecho
 - 数据转换

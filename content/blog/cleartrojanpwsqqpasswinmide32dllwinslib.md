@@ -3,7 +3,7 @@ layout: post
 title: 记Trojan.PWS.QQPass,winmide32.dll,wins.lib的清除
 comments: true
 date: 2006-03-08
-categories:
+tags:
 - 闲言碎语
 ---
 

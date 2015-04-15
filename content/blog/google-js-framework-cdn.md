@@ -3,7 +3,7 @@ layout: post
 title: Google 给几个Javascript Framework提供的CDN地址
 comments: true
 date: 2010-06-02
-categories:
+tags:
 - jQuery
 - Javascript
 - 代码片段

@@ -3,7 +3,7 @@ layout: post
 title: 四、六级证件真伪查询就是摆设
 comments: true
 date: 2006-03-14
-categories:
+tags:
 - 闲言碎语
 ---
 

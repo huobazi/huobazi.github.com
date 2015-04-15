@@ -3,7 +3,7 @@ layout: post
 title: 奇怪的下载进度显示
 comments: true
 date: 2007-08-01
-categories:
+tags:
 - 闲言碎语
 ---
 

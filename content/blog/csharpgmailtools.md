@@ -3,7 +3,7 @@ layout: post
 title: 'C# .Net Gmail Tools '
 comments: true
 date: 2008-02-21
-categories:
+tags:
 - ASP.NET
 - Asp.net
 - Gmail

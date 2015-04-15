@@ -3,7 +3,7 @@ layout: post
 title: 京东新蛋攻防
 comments: true
 date: 2010-04-30
-categories:
+tags:
 - 闲言碎语
 - 推荐阅读
 - Newegg

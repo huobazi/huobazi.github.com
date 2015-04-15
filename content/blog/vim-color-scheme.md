@@ -3,7 +3,7 @@ layout: post
 title: 漂亮的VIM配色方案
 comments: true
 date: 2010-01-11
-categories:
+tags:
 - 闲言碎语
 - 它山之石
 - 奇技淫巧

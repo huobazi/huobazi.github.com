@@ -3,7 +3,7 @@ layout: post
 title: 中国EDONG网（中国排名第16的IDC）的技术力量和他的24小时客服。
 comments: true
 date: 2007-07-28
-categories:
+tags:
 - ASP.NET
 - 闲言碎语
 - Edong

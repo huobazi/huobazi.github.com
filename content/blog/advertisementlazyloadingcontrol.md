@@ -4,7 +4,7 @@ published: treu
 title: 自定义控件实现广告内容后期加载，以及NamingContainer层次的应用
 comments: true
 date: 2007-08-05
-categories:
+tags:
 - ASP.NET
 - Asp.net
 - 自定义控件

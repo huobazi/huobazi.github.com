@@ -3,7 +3,7 @@ layout: post
 title: IIS7 beta FREE WEBHOSTING FREE HOSTING FOR ASP.NET 2.0 IIS7
 comments: true
 date: 2007-05-02
-categories:
+tags:
 - ASP.NET
 - Asp.net
 - IIS7

@@ -3,7 +3,7 @@ layout: post
 title: 使用SQL语句更改数据表的默认值
 comments: true
 date: 2009-12-09
-categories:
+tags:
 - ASP.NET
 - 代码片段
 - SQL

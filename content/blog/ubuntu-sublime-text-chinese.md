@@ -3,7 +3,7 @@ layout: post
 title: Ubuntu下设置 Sublime Text 2 显示中文 && 输入中文
 comments: true
 date: 2012-02-04
-categories:
+tags:
 - 闲言碎语
 - 奇技淫巧
 - 代码片段

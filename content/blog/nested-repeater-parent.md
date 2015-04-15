@@ -3,7 +3,7 @@ layout: post
 title: Repeater,DataList等嵌套如何绑定父repeater字段?
 comments: true
 date: 2009-12-11
-categories:
+tags:
 - ASP.NET
 - DataList
 - Repeater

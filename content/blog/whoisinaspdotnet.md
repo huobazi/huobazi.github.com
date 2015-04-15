@@ -3,7 +3,7 @@ layout: post
 title: 域名Whois信息查询(ASP.NET+C#)
 comments: true
 date: 2004-02-04
-categories:
+tags:
 - ASP.NET
 - Asp.net
 - .Net其他

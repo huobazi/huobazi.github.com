@@ -3,7 +3,7 @@ layout: post
 title: MS Ajax 客户端生命周期
 comments: true
 date: 2008-04-03
-categories:
+tags:
 - ASP.NET
 - Asp.net
 - Ajax

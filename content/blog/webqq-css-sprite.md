@@ -3,7 +3,7 @@ layout: post
 title: 腾讯webQQ的 CSS Sprite
 comments: true
 date: 2009-11-28
-categories:
+tags:
 - 前端开发
 - CSS
 - webQQ

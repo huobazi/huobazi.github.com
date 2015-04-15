@@ -3,7 +3,7 @@ layout: post
 title: iOS通过UIActionSheetDelegate来实现警告的方法
 comments: true
 date: 2012-02-13
-categories:
+tags:
 - 代码片段
 - iOS
 - iPhone

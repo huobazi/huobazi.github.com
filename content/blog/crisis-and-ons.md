@@ -3,7 +3,7 @@ layout: post
 title: 次贷危机和一夜情
 comments: true
 date: 2008-10-26
-categories:
+tags:
 - 闲言碎语
 - 推荐阅读
 - 它山之石

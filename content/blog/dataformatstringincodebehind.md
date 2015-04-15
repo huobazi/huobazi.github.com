@@ -3,7 +3,7 @@ layout: post
 title: 在Codebehind内动态设置显示内容的DataFormatString
 comments: true
 date: 2004-11-16
-categories:
+tags:
 - ASP.NET
 - Asp.net
 ---

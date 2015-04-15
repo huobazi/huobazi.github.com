@@ -3,7 +3,7 @@ layout: post
 title: 好像是 sqlserver mangage studio express 的bug
 comments: true
 date: 2006-09-21
-categories:
+tags:
 - 闲言碎语
 ---
 

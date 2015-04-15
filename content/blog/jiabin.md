@@ -3,7 +3,7 @@ layout: post
 title: 家滨面对面
 comments: true
 date: 2009-04-22
-categories:
+tags:
 - 闲言碎语
 - Newegg
 ---

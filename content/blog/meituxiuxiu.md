@@ -3,7 +3,7 @@ layout: post
 title: 我被ps了
 comments: true
 date: 2009-09-10
-categories:
+tags:
 - 闲言碎语
 - 美图秀秀
 - 偷菜

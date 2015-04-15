@@ -3,7 +3,7 @@ layout: post
 title: 关于女人这个神奇的东西，从网上找了些觉得同感的片片
 comments: true
 date: 2010-02-09
-categories:
+tags:
 - 闲言碎语
 - 女人
 - 男人

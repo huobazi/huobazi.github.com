@@ -3,7 +3,7 @@ layout: post
 title: Vs2005的倒退?
 comments: true
 date: 2006-05-04
-categories:
+tags:
 - ASP.NET
 - Visual Studio
 ---

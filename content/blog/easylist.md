@@ -3,7 +3,7 @@ layout: post
 title: 一个非常Strong 的ListBox控件EasyList
 comments: true
 date: 2006-04-13
-categories:
+tags:
 - ASP.NET
 - Asp.net
 ---

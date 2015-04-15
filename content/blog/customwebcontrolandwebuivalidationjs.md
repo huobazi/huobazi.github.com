@@ -3,7 +3,7 @@ layout: post
 title: 在写自定义控件时，如果控件某个属性允许被验证控件验证，需要注意微软在 WebUIValidation.js内的实现。
 comments: true
 date: 2006-12-01
-categories:
+tags:
 - ASP.NET
 - Asp.net
 - 自定义控件

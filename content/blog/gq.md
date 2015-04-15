@@ -3,7 +3,7 @@ layout: post
 title: 国庆节前期,我每晚都想找个小姐包夜
 comments: true
 date: 2009-09-14
-categories:
+tags:
 - 闲言碎语
 - 国庆节
 - 包夜

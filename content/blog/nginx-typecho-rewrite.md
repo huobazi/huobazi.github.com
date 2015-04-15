@@ -3,7 +3,7 @@ layout: post
 title: nginx下typecho的rewrite
 comments: true
 date: 2009-07-09
-categories:
+tags:
 - LAMP
 - Typecho
 - LAMP

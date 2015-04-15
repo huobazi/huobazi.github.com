@@ -3,7 +3,7 @@ layout: post
 title: Palm Centro(690)的软启动和硬启动
 comments: true
 date: 2009-08-25
-categories:
+tags:
 - 闲言碎语
 - palm
 - centro

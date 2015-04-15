@@ -3,7 +3,7 @@ layout: post
 title: 在线编辑器的一个新选择。
 comments: true
 date: 2009-10-27
-categories:
+tags:
 - ASP.NET
 - 前端开发
 - 推荐阅读

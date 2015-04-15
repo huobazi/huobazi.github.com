@@ -3,7 +3,7 @@ layout: post
 title: 把ASP.NET MVC的路由利用配置维护起来
 comments: true
 date: 2008-12-01
-categories:
+tags:
 - ASP.NET
 - Asp.net
 - MVC

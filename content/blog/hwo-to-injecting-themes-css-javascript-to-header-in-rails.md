@@ -3,7 +3,7 @@ layout: post
 title: 在rails中不同的view不同皮肤下的js，css，注入js和css到head区域
 comments: true
 date: 2010-03-30
-categories:
+tags:
 - LAMP
 - Rails
 - Ruby

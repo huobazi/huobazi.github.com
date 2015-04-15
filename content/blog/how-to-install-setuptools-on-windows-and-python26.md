@@ -3,7 +3,7 @@ layout: post
 title: 如何在windows xp下安装python2.6的setuptools
 comments: true
 date: 2009-08-11
-categories:
+tags:
 - LAMP
 - Windows
 - python

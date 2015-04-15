@@ -3,7 +3,7 @@ layout: post
 title: 郁闷啊，竟然用256M内存跑着VS2005 SP1 好几个月
 comments: true
 date: 2007-05-27
-categories:
+tags:
 - ASP.NET
 - 闲言碎语
 - Asp.net

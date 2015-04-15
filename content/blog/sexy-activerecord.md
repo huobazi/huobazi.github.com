@@ -3,7 +3,7 @@ layout: post
 title: rails中的ActiveRecord真性感！
 comments: true
 date: 2009-09-24
-categories:
+tags:
 - LAMP
 - Rails
 - 代码片段

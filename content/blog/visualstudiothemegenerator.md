@@ -3,7 +3,7 @@ layout: post
 title: 【分享】如何创建自己的Visual Studio 2005/2008配色
 comments: true
 date: 2008-08-09
-categories:
+tags:
 - ASP.NET
 - Visual Studio
 ---

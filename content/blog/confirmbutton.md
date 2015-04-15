@@ -3,7 +3,7 @@ layout: post
 title: 可以弹出确认对话框的自定义Web服务器控件ConfirmButton
 comments: true
 date: 2004-04-30
-categories:
+tags:
 - ASP.NET
 - Asp.net
 - 自定义控件
