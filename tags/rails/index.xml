@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rails on 武眉博</title>
+    <link>http://huobazi.aspxboy.com/tags/rails/</link>
+    <description>Recent content in Rails on 武眉博</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 15 Aug 2012 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://huobazi.aspxboy.com/tags/rails/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>使用AjaxUpload和Carrierwave在Rails Mongoid中批量上传图片</title>
+      <link>http://huobazi.aspxboy.com/blog/2012/08/15/ajaxupload-with-rail-carrierwave-on-mongodb/</link>
+      <pubDate>Wed, 15 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2012/08/15/ajaxupload-with-rail-carrierwave-on-mongodb/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/valums/file-uploader&#34;&gt;file-uploader&lt;/a&gt;是一个用 Javascrit 编写的文件上传 Libary,在这里我使用&lt;a href=&#34;https://github.com/jnicklas/carrierwave&#34;&gt;CarrierWave&lt;/a&gt;和 &lt;a href=&#34;https://github.com/mongoid/mongoid&#34;&gt;Mongoid&lt;/a&gt; 来完成多文件的无刷新上传功能&lt;/p&gt;
+
+&lt;h2 id=&#34;rubygems:7371c11e255b336e41edb223ab46297b&#34;&gt;RubyGems&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;gem &#39;mongoid&#39;, &#39;3.0.4&#39;
+gem &#39;carrierwave&#39;, &#39;0.6.2&#39;
+gem &#39;carrierwave-mongoid&#39;, :github =&amp;gt; &#39;jnicklas/carrierwave-mongoid&#39;, :branch =&amp;gt; &#39;mongoid-3.0&#39; 
+gem &#39;mini_magick&#39;, &#39;3.4&#39;
+gem &#39;rack-raw-upload&#39;, &#39;1.1.0&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;model:7371c11e255b336e41edb223ab46297b&#34;&gt;Model&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;class Screenshot
+  include Mongoid::Document
+  include Mongoid::Timestamps::Created
+  include Rails.application.routes.url_helpers
+
+  attr_accessible :image 
+  field :image 
+
+  mount_uploader :image, ScreenshotUploader 
+
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;controller:7371c11e255b336e41edb223ab46297b&#34;&gt;Controller&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;class ScreenshotsController &amp;lt; ApplicationController
+
+  def index
+    @screenshots = Screenshot.all.desc(:created_at)
+
+    respond_to do |format|
+      format.html # index.html.erb    
+      format.js{ render :layout =&amp;gt; false}
+    end
+  end
+
+  def create
+    file = params[:qqfile].is_a?(ActionDispatch::Http::UploadedFile) ? params[:qqfile] : params[:file]
+    @screenshot = Screenshot.new
+    @screenshot.image = file
+    if @screenshot.save
+      render json: { success: true, src: @screenshot.to_json }
+    else
+      render json: @screenshot.errors.to_json
+    end
+  end
+
+  def destroy
+    @screenshot = Screenshot.find(params[:id])
+    @screenshot.destroy
+
+    respond_to do |format|
+      format.html { redirect_to screenshots_path }
+      format.js{ 
+        @screenshots = Screenshot.all.desc(:created_at)
+        render :layout =&amp;gt; false
+      }
+    end
+
+  end
+
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;uploader:7371c11e255b336e41edb223ab46297b&#34;&gt;Uploader&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;# encoding: utf-8
+require &amp;quot;digest/md5&amp;quot;
+require &#39;carrierwave/processing/mini_magick&#39;
+
+class ScreenshotUploader &amp;lt; CarrierWave::Uploader::Base
+  include CarrierWave::MiniMagick
+
+  storage :file
+
+  # Override the directory where uploaded files will be stored.
+  def store_dir
+    &amp;quot;uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}&amp;quot;
+  end
+
+
+  process :convert =&amp;gt; &#39;png&#39;
+
+  # Create different versions of your uploaded files:
+  version :thumb do
+    process :resize_to_fill =&amp;gt; [120, 120]
+  end
+
+  # Add a white list of extensions which are allowed to be uploaded.
+  def extension_white_list
+    %w(jpg jpeg gif png)
+  end
+
+  # Override the filename of the uploaded files:
+  # see http://huacnlee.com/blog/carrierwave-upload-store-file-name-config/
+  def filename
+    if super.present?
+      # current_path 是 Carrierwave 上传过程临时创建的一个文件，有时间标记，所以它将是唯一的
+      @name ||= Digest::MD5.hexdigest(File.dirname(current_path))
+      &amp;quot;#{@name}.#{file.extension.downcase}&amp;quot;
+    end
+  end
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;javascript:7371c11e255b336e41edb223ab46297b&#34;&gt;Javascript&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;  $(document).ready(function(){
+
+    var uploader = new qq.FileUploader({
+      debug: true,
+      allowedExtensions: [&#39;jpg&#39;, &#39;jpeg&#39;, &#39;png&#39;, &#39;gif&#39;],
+      sizeLimit: 1048576, // max size: 1MB
+      minSizeLimit: 0, // min size
+      multiple: true,
+      element: document.getElementById(&#39;file-uploader&#39;),
+      action: &#39;&amp;lt;%= screenshots_path %&amp;gt;&#39;,
+      onComplete: function(id, fileName, responseJSON){
+        $.getScript(&amp;quot;&amp;lt;%= screenshots_path %&amp;gt;&amp;quot;);
+      },
+      onSubmit: function(id, fileName) {
+        uploader.setParams({
+          xx: &amp;quot;xx&amp;quot;,
+          yy: &#39;yy&#39;,
+          zz: &#39;zz&#39;,       
+          authenticity_token: &amp;quot;&amp;lt;%= form_authenticity_token.to_s %&amp;gt;&amp;quot;
+        });
+      }
+    });
+
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;你可以在 &lt;a href=&#34;https://github.com/huobazi/ajax-upload-with-carrierwave-mongoid&#34;&gt;https://github.com/huobazi/ajax-upload-with-carrierwave-mongoid&lt;/a&gt;下载完整的示例代码&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>在centos上装rubyee,passenger和memcached ,搭建rails环境</title>
+      <link>http://huobazi.aspxboy.com/blog/2010/07/24/ruby-on-rails-nginx-passenger-memcached-on-centos/</link>
+      <pubDate>Sat, 24 Jul 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2010/07/24/ruby-on-rails-nginx-passenger-memcached-on-centos/</guid>
+      <description>&lt;p&gt;流水笔记一则.&lt;/p&gt;
+&lt;p&gt;我之前已在服务器配置了nginx，php，mysql等，现在先安装ruby企业版&lt;/p&gt;
+&lt;div class=&#34;source&#34; style=&#39;font-family: &#34;[object HTMLOptionElement]&#34;,&#34;Consolas&#34;,&#34;Lucida Console&#34;,&#34;Courier New&#34;; color: #c0c0c0; background-color: #000000;&#39;&gt;
+&lt;span style=&#34;color: #c0c0c0;&#34;&gt;cd&lt;/span&gt;&lt;span style=&#34;color: #00bbbb;&#34;&gt; /tmp&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #00bbbb;&#34;&gt;wget http:/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;rubyforge&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;org&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;frs&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;download&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;php&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;71096&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;ruby&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;enterprise&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;8&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;7&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;2010&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;02&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;tar&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;gz&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;tar&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;xzvf&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;ruby&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;enterprise&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;8&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;7&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;2010&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;02&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;tar&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;gz&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;ruby&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;enterprise&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;8&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;7&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;2010&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;02&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/installer&lt;/span&gt;
+&lt;/div&gt;
+&lt;p&gt;然后按照提示做&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;设置一下环境变量 &lt;br /&gt;export PATH=/rubyee/bin:$PATH&lt;br /&gt;接着&lt;br /&gt;ruby -v&lt;br /&gt;gem -v&lt;br /&gt;看到版本号，说明rubyee 安装ok&lt;/p&gt;
+&lt;p&gt;下来&lt;br /&gt;gem install passenger&lt;br /&gt;passenger-install-nginx-module&lt;/p&gt;
+&lt;p&gt;按照提示在nginx配置文件里增加：&lt;/p&gt;
+&lt;div class=&#34;source&#34; style=&#39;font-family: &#34;[object HTMLOptionElement]&#34;,&#34;Consolas&#34;,&#34;Lucida Console&#34;,&#34;Courier New&#34;; color: #c0c0c0; background-color: #000000;&#39;&gt;
+&lt;p&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;http&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;{&lt;/span&gt;&lt;br /&gt;     &lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;br /&gt;     &lt;span style=&#34;color: #c0c0c0;&#34;&gt;passenger_root&lt;/span&gt;&lt;span style=&#34;color: #00bbbb;&#34;&gt; /rubyee/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;lib&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;ruby&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;gems&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;8&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;gems&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;passenger&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;14&lt;/span&gt;;&lt;br /&gt;     &lt;span style=&#34;color: #c0c0c0;&#34;&gt;passenger_ruby&lt;/span&gt;&lt;span style=&#34;color: #00bbbb;&#34;&gt; /rubyee/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;bin&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;ruby&lt;/span&gt;;&lt;br /&gt;     &lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;}&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;  &lt;span style=&#34;color: #c0c0c0;&#34;&gt;server&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;{&lt;/span&gt;&lt;br /&gt;     &lt;span style=&#34;color: #c0c0c0;&#34;&gt;listen&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;80&lt;/span&gt;;&lt;br /&gt;     &lt;span style=&#34;color: #c0c0c0;&#34;&gt;server_name&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;www&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;yourhost&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;com&lt;/span&gt;;&lt;br /&gt;     &lt;span style=&#34;color: #c0c0c0;&#34;&gt;root&lt;/span&gt;&lt;span style=&#34;color: #00bbbb;&#34;&gt; /somewhere/&lt;/span&gt;&lt;span style=&#34;color: #00ffff; font-weight: bold;&#34;&gt;public&lt;/span&gt;;   &lt;span style=&#34;color: #696969;&#34;&gt;# &amp;lt;--- be sure to point to &#39;public&#39;!&lt;/span&gt;&lt;br /&gt;     &lt;span style=&#34;color: #c0c0c0;&#34;&gt;passenger_enabled&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;on&lt;/span&gt;;&lt;br /&gt;  &lt;span style=&#34;color: #c0c0c0;&#34;&gt;}&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;rails 欧了~&lt;/p&gt;
+&lt;p&gt;下来开始装 memcached,&lt;/p&gt;
+&lt;p&gt;memcached 的使用需要libeven的支持&lt;/p&gt;
+&lt;div class=&#34;source&#34; style=&#39;font-family: &#34;[object HTMLOptionElement]&#34;,&#34;Consolas&#34;,&#34;Lucida Console&#34;,&#34;Courier New&#34;; color: #c0c0c0; background-color: #000000;&#39;&gt;
+&lt;p&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;cd&lt;/span&gt;&lt;span style=&#34;color: #00bbbb;&#34;&gt; /tmp&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #00bbbb;&#34;&gt;wget http:/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;www&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;monkey&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;org&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/~&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;provos&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;libevent&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;4&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;14&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;a&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;stable&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;tar&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;gz&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;tar&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;zxvf&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;libevent&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;4&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;14&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;a&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;stable&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;tar&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;gz&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;libevent&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;4&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;14&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;stable&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/configure&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;prefix&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #00bbbb;&#34;&gt;/usr&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #00bbbb;&#34;&gt;make &amp;amp;&amp;amp; make install&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;color: #00bbbb;&#34;&gt;cd /&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;tmp&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;wget&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;http&lt;/span&gt;&lt;span style=&#34;color: #00bbbb;&#34;&gt;:/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;memcached&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;org&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;latest&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;tar&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;zxvf&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;memcached&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;4&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;5&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;tar&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;gz&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;memcached&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;4&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;5&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/configure&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;prefix&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #00bbbb;&#34;&gt;/usr/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;local&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;make&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;make&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;install&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt; 现在可以用&lt;br /&gt;service memcached start  &lt;/p&gt;
+&lt;p&gt;和&lt;br /&gt;  service memcached stop  &lt;/p&gt;
+&lt;p&gt;这两个很骚的命令来管理memcached服务了,欧了~&lt;/p&gt;
+&lt;p&gt;安装mysql gem&lt;br /&gt;gem install --no-rdoc --no-ri mysql -- --with-mysql-dir=/usr/local/mysql --with-mysql-config=/usr/local/mysql/bin/mysql_config&lt;/p&gt;
+&lt;p&gt;安装 ImageMagick&lt;/p&gt;
+&lt;div class=&#34;source&#34; style=&#39;font-family: &#34;[object HTMLOptionElement]&#34;,&#34;Consolas&#34;,&#34;Lucida Console&#34;,&#34;Courier New&#34;; color: #c0c0c0; background-color: #000000;&#39;&gt;
+&lt;p&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;wget&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;ftp&lt;/span&gt;&lt;span style=&#34;color: #00bbbb;&#34;&gt;:/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;ftp&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;imagemagick&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;org&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;pub&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #00ffff;&#34;&gt;ImageMagick&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #00ffff;&#34;&gt;ImageMagick&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;tar&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;gz&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;tar&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;xvfz&lt;/span&gt; &lt;span style=&#34;color: #00ffff;&#34;&gt;ImageMagick&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;tar&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;gz&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color: #00ffff;&#34;&gt;ImageMagick&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;*&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/configure&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;disable&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;with&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;modules&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;with&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;gs&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;font&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;dir&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #00bbbb;&#34;&gt;/usr/s&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;hare&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;fonts&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;type1&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;gsfonts&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;make&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;sudo&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;make&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;install&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;rm&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #00ffff;&#34;&gt;Rf&lt;/span&gt; &lt;span style=&#34;color: #00ffff;&#34;&gt;ImageMagick&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;*&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;wget&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;http&lt;/span&gt;&lt;span style=&#34;color: #00bbbb;&#34;&gt;:/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;rubyforge&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;org&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;frs&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;download&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;php&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;70067&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #00ffff;&#34;&gt;RMagick&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;13&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;tar&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;bz2&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;tar&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;jxf&lt;/span&gt; &lt;span style=&#34;color: #00ffff;&#34;&gt;RMagick&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;13&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;tar&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;bz2&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color: #00ffff;&#34;&gt;RMagick&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;*&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/configure&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;disable&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;with&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;modules&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;without&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;perl&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;without&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;magick&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;plus&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;plus&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;with&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;jpeg&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;yes&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;with&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;png&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;yes&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;with&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;tiff&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;yes&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;with&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;quantum&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;depth&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;8&lt;/span&gt;  &lt;span style=&#34;color: #c0c0c0;&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;with&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;gs&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;font&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;dir&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #00bbbb;&#34;&gt;/usr/s&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;hare&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;fonts&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;type1&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;gsfonts&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;ruby&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;setup&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;rb&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;ruby&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;setup&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;rb&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;install&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;rm&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #00ffff;&#34;&gt;Rf&lt;/span&gt; &lt;span style=&#34;color: #00ffff;&#34;&gt;RMagick&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;*&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;最后 上传 rails 程序&lt;br /&gt;接着 rake gems:install&lt;/p&gt;
+&lt;p&gt;centos安装rmagick出现以下错误：&lt;br /&gt;libMagickCore.so.2: cannot open shared object file: No such file or directory – /usr/lib/ruby/gems/1.8/gems/rmagick-2.8.0/lib/RMagick2.so&lt;br /&gt;解决办法：&lt;/p&gt;
+&lt;p&gt;ldconfig /usr/local/lib&lt;/p&gt;
+&lt;p&gt;错误[memcache-client] Could not load SystemTimer gem, falling back to Ruby&#39;s slower/unsafe timeout library: no such file to load -- system_timer&lt;br /&gt;rake aborted!&lt;/p&gt;
+&lt;p&gt;sudo gem install system_timer&lt;/p&gt;
+&lt;p&gt;Magick::ImageMagickError (unable to read font `/usr/local/lib/ImageMagick-6.6.3/config//usr/share/fonts/type1/gsfonts/n019003l.pfb&#39; @ error/annotate.c/RenderFreetype/1056: `(null)&#39;):&lt;br /&gt;错误&lt;/p&gt;
+&lt;p&gt;wget http://sourceforge.net/projects/gs-fonts/files/gs-fonts/8.11%20%28base%2035%2C%20GPL%29/ghostscript-fonts-std-8.11.tar.gz/download&lt;br /&gt; tar -zxvf ghostscript-fonts-std-8.11.tar.gz&lt;br /&gt;解压后拷贝到需要的目录&lt;/p&gt;               
+</description>
+    </item>
+    
+    <item>
+      <title>在rails中不同的view不同皮肤下的js，css，注入js和css到head区域</title>
+      <link>http://huobazi.aspxboy.com/blog/2010/03/30/hwo-to-injecting-themes-css-javascript-to-header-in-rails/</link>
+      <pubDate>Tue, 30 Mar 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2010/03/30/hwo-to-injecting-themes-css-javascript-to-header-in-rails/</guid>
+      <description>&lt;p&gt;利用layout可以很好实现这个需求.&lt;/p&gt;
+&lt;p&gt;在ApplicationHelper内加入如下代码：&lt;/p&gt;
+&lt;div class=&#34;source&#34; style=&#39;font-family: &#34;[object HTMLOptionElement]&#34;,&#34;Consolas&#34;,&#34;Lucida Console&#34;,&#34;Courier New&#34;; color: #e6e1dc; background-color: #111111;&#39;&gt;
+&lt;p&gt;&lt;span style=&#34;color: #cc7833;&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #ffc66d;&#34;&gt;require_js&lt;/span&gt;(&lt;span style=&#34;color: #e6e1dc;&#34;&gt;path&lt;/span&gt;)&lt;br /&gt;    &lt;span style=&#34;color: #e6e1dc;&#34;&gt;content_for&lt;/span&gt; &lt;span style=&#34;color: #a5c261;&#34;&gt;:header_js&lt;/span&gt; &lt;span style=&#34;color: #cc7833;&#34;&gt;do&lt;/span&gt;&lt;br /&gt;      &lt;span style=&#34;color: #e6e1dc;&#34;&gt;include_js_tag&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;path&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #cc7833;&#34;&gt;end&lt;/span&gt;&lt;br /&gt;  &lt;span style=&#34;color: #cc7833;&#34;&gt;end&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;  &lt;span style=&#34;color: #cc7833;&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #ffc66d;&#34;&gt;require_css&lt;/span&gt;(&lt;span style=&#34;color: #e6e1dc;&#34;&gt;path&lt;/span&gt;)&lt;br /&gt;    &lt;span style=&#34;color: #e6e1dc;&#34;&gt;content_for&lt;/span&gt; &lt;span style=&#34;color: #a5c261;&#34;&gt;:header_css&lt;/span&gt; &lt;span style=&#34;color: #cc7833;&#34;&gt;do&lt;/span&gt;&lt;br /&gt;      &lt;span style=&#34;color: #e6e1dc;&#34;&gt;include_css_tag&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;path&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #cc7833;&#34;&gt;end&lt;/span&gt;&lt;br /&gt;  &lt;span style=&#34;color: #cc7833;&#34;&gt;end&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;  &lt;span style=&#34;color: #cc7833;&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #ffc66d;&#34;&gt;include_js_tag&lt;/span&gt;(&lt;span style=&#34;color: #e6e1dc;&#34;&gt;path&lt;/span&gt;)&lt;br /&gt;    &lt;span style=&#34;color: #cc7833;&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;not&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;path&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;starts_with?&lt;/span&gt;(&lt;span style=&#34;color: #a5c261;&#34;&gt;&#34;http:&#34;&lt;/span&gt;)&lt;br /&gt;      &lt;span style=&#34;color: #e6e1dc;&#34;&gt;path&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #a5c261;&#34;&gt;&#34;/themes/&lt;/span&gt;&lt;span style=&#34;color: #a5c261;&#34;&gt;#{&lt;/span&gt;&lt;span style=&#34;color: #6d9cbe;&#34;&gt;@setting&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #a5c261;&#34;&gt;:theme&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color: #a5c261;&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color: #a5c261;&#34;&gt;/javascripts/&#34;&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;path&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #cc7833;&#34;&gt;end&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #e6e1dc;&#34;&gt;javascript_include_tag&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;path&lt;/span&gt;&lt;br /&gt;  &lt;span style=&#34;color: #cc7833;&#34;&gt;end&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;   &lt;span style=&#34;color: #cc7833;&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #ffc66d;&#34;&gt;include_css_tag&lt;/span&gt;(&lt;span style=&#34;color: #e6e1dc;&#34;&gt;path&lt;/span&gt;)&lt;br /&gt;    &lt;span style=&#34;color: #cc7833;&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;not&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;path&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;starts_with?&lt;/span&gt;(&lt;span style=&#34;color: #a5c261;&#34;&gt;&#34;http:&#34;&lt;/span&gt;)&lt;br /&gt;      &lt;span style=&#34;color: #e6e1dc;&#34;&gt;path&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #a5c261;&#34;&gt;&#34;/themes/&lt;/span&gt;&lt;span style=&#34;color: #a5c261;&#34;&gt;#{&lt;/span&gt;&lt;span style=&#34;color: #6d9cbe;&#34;&gt;@setting&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #a5c261;&#34;&gt;:theme&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color: #a5c261;&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color: #a5c261;&#34;&gt;/stylesheets/&#34;&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;path&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #cc7833;&#34;&gt;end&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #e6e1dc;&#34;&gt;stylesheet_link_tag&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;path&lt;/span&gt;&lt;br /&gt;  &lt;span style=&#34;color: #cc7833;&#34;&gt;end&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;(如果你要直接在view或者layout内引入css则可以&amp;lt;%= include_css_tag &#34;global.css&#34; %&amp;gt;，这样生成的路径是带有皮肤目录的）&lt;/p&gt;
+&lt;p&gt;接下来，修改你的layout的head，加入如下代码：&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;%= yield :header_js %&amp;gt;&lt;br /&gt;&amp;lt;%= yield :header_css %&amp;gt;&lt;/p&gt;
+&lt;p&gt;然后在需要引入js的View内&lt;/p&gt;
+&lt;p&gt;&amp;lt;% require_js &#34;jquery/jquery.tools.min.js&#34; %&amp;gt;&lt;br /&gt;&amp;lt;% require_js &#34;jquery/jquery.colorbox.min.js&#34; %&amp;gt;&lt;/p&gt;
+&lt;p&gt;最后run一下，你会看到会在html的head内生成如下html&lt;/p&gt;
+&lt;p&gt;&amp;lt;script src=&#34;http://huobazi.aspxboy.com/themes/2010v1/javascripts/jquery/jquery.tools.min.js?1269949149&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;&lt;br /&gt;&amp;lt;script src=&#34;http://huobazi.aspxboy.com/themes/2010v1/javascripts/jquery/jquery.colorbox.min.js?1269949147&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;                
+</description>
+    </item>
+    
+    <item>
+      <title>优化Rails数据库查询性能 -- rails_reviewer插件</title>
+      <link>http://huobazi.aspxboy.com/blog/2010/01/21/rails-review-on-rails/</link>
+      <pubDate>Thu, 21 Jan 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2010/01/21/rails-review-on-rails/</guid>
+      <description>&lt;p&gt;发现一个很棒的插件&lt;a href=&#34;http://github.com/dsboulder/query_reviewer&#34; target=&#34;_blank&#34;&gt; rails_reviewer&lt;/a&gt;插件&lt;/p&gt;
+&lt;p&gt;安装:&lt;/p&gt;
+&lt;div class=&#34;source&#34; style=&#39;font-family: &#34;[object HTMLOptionElement]&#34;,&#34;Consolas&#34;,&#34;Lucida Console&#34;,&#34;Courier New&#34;; color: #e6e1dc; background-color: #111111;&#39;&gt;
+&lt;span style=&#34;color: #e6e1dc;&#34;&gt;$&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;script&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;plugin&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;install&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;git&lt;/span&gt;&lt;span style=&#34;color: #a5c261;&#34;&gt;:/&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;github&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;com&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;dsboulder&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;query_reviewer&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;git&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;$&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;rake&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;query_reviewer&lt;/span&gt;&lt;span style=&#34;color: #a5c261;&#34;&gt;:setup&lt;/span&gt;
+&lt;/div&gt;
+&lt;p&gt;完毕后重启server,页面左上角浮动一个SQL CRITICAL浮动窗口，里面记录页面加载时执行的所有SQL以及优化建议等。&lt;/p&gt;
+&lt;p&gt;强烈推荐 !!!&lt;/p&gt;             
+</description>
+    </item>
+    
+    <item>
+      <title>rails里Mysql::Error: query: not connected</title>
+      <link>http://huobazi.aspxboy.com/blog/2010/01/15/rails-mysqlerror-query-not-connected/</link>
+      <pubDate>Fri, 15 Jan 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2010/01/15/rails-mysqlerror-query-not-connected/</guid>
+      <description>&lt;p&gt;从ubuntu换回了win7后又慢慢开始折腾以前在本本上跑的一些LAMP网站， php和 mysql还是用以前的xampp里的，仍然可以用。&lt;/p&gt;
+&lt;p&gt;重装了 ruby 1.8.6, rails 2.3.5 等...发现运行rails网站，弹出messagebox提示找不到libmysql.dll尝试把mysql/bin里的dll来regsvr32，不可，直接拷贝到system32目录下错误没了，但打开网站仍然报错，终端显示“Mysql::Error: query: not connected....&#34;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;google来了结果&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://topic.csdn.net/u/20090823/12/2775f2e7-a73a-45b3-a047-5ed9330871cd.html&#34; target=&#34;_blank&#34;&gt;http://topic.csdn.net/u/20090823/12/2775f2e7-a73a-45b3-a047-5ed9330871cd.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://xiaolife.com/wordpress/rails-2-3-dbmigrate-issue-with-mysql-5-1-3/&#34; target=&#34;_blank&#34;&gt;http://xiaolife.com/wordpress/rails-2-3-dbmigrate-issue-with-mysql-5-1-3/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;猛然间想起来这些个问题上次玩的时候也出现过，真晕，还是写下来，希望SY一遍胜过脑子记忆千遍吧&lt;/p&gt;               
+</description>
+    </item>
+    
+    <item>
+      <title>rails中的ActiveRecord真性感！</title>
+      <link>http://huobazi.aspxboy.com/blog/2009/09/24/sexy-activerecord/</link>
+      <pubDate>Thu, 24 Sep 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2009/09/24/sexy-activerecord/</guid>
+      <description>&lt;p&gt;Rails使用的ActiveRecord真性感啊，see see吧&lt;/p&gt;
+&lt;div class=&#34;source&#34; style=&#34;COLOR: #dcdccc; FONT-FAMILY: &#39;[object]&#39;,&#39;Consolas&#39;,&#39;Lucida Console&#39;,&#39;Courier New&#39;; BACKGROUND-COLOR: #3f3f3f&#34;&gt;
+&lt;span style=&#34;COLOR: #e3ceab&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;User&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;FONT-WEIGHT: bold; COLOR: #dca3a3&#34;&gt;ActiveRecord&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;FONT-WEIGHT: bold; COLOR: #dca3a3&#34;&gt;Base&lt;/span&gt;  &lt;br /&gt;  &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;has_many&lt;/span&gt; &lt;span style=&#34;COLOR: #cc9393&#34;&gt;:articles&lt;/span&gt;  &lt;br /&gt;&lt;span style=&#34;COLOR: #e3ceab&#34;&gt;end&lt;/span&gt;  &lt;br /&gt; &lt;br /&gt;&lt;span style=&#34;COLOR: #e3ceab&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;Article&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;FONT-WEIGHT: bold; COLOR: #dca3a3&#34;&gt;ActiveRecord&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;FONT-WEIGHT: bold; COLOR: #dca3a3&#34;&gt;Base&lt;/span&gt;&lt;br /&gt;  &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;belongs_to&lt;/span&gt; &lt;span style=&#34;COLOR: #cc9393&#34;&gt;:user&lt;/span&gt;  &lt;br /&gt;&lt;span style=&#34;COLOR: #e3ceab&#34;&gt;end&lt;/span&gt;
+&lt;/div&gt;
+&lt;p&gt;然后执行&lt;br /&gt;&amp;gt;&amp;gt; &lt;strong&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;Article.find(1)&lt;/span&gt; &lt;/strong&gt;会得到延迟加载user对象的sql语句。如下：&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;div class=&#34;source&#34; style=&#34;COLOR: #dcdccc; FONT-FAMILY: &#39;[object]&#39;,&#39;Consolas&#39;,&#39;Lucida Console&#39;,&#39;Courier New&#39;; BACKGROUND-COLOR: #3f3f3f&#34;&gt;
+&lt;span style=&#34;COLOR: #e3ceab&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;WHERE&lt;/span&gt; (&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;id&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;COLOR: #8cd0d3&#34;&gt;1&lt;/span&gt;) &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;LIMIT&lt;/span&gt; &lt;span style=&#34;COLOR: #8cd0d3&#34;&gt;1&lt;/span&gt;
+&lt;/div&gt;
+&lt;p&gt;当需要访问user对象时，比如用article.user.name会再生成一个sql语句请求数据库。&lt;br /&gt;如果执行&lt;br /&gt;&amp;gt;&amp;gt; &lt;strong&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;Article.find(1,:include =&amp;gt; :user)&lt;/span&gt;&lt;/strong&gt; 会得到一次性加载了user的查询&lt;/p&gt;
+&lt;div class=&#34;source&#34; style=&#34;COLOR: #dcdccc; FONT-FAMILY: &#39;[object]&#39;,&#39;Consolas&#39;,&#39;Lucida Console&#39;,&#39;Courier New&#39;; BACKGROUND-COLOR: #3f3f3f&#34;&gt;
+&lt;span style=&#34;COLOR: #e3ceab&#34;&gt;SELECT&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;extended_html&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r6&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;excerpt&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r7&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;keywords&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r8&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;allow_pings&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r10&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;allow_comments&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r9&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;users&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t1_r0&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;published&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r11&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;users&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;login&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t1_r1&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;text_filter&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r12&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r0&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;users&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;password&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t1_r2&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;user_id&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r13&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;title&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r1&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;users&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t1_r3&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;created_at&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r14&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;author&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r2&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;users&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;email&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t1_r4&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;updated_at&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r15&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;body&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r3&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;permalink&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r16&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;body_html&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r4&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;guid&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r17&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;extended&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r5&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #e3ceab&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;LEFT&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;OUTER&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;JOIN&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;users&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #e3ceab&#34;&gt;ON&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;users&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;id&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;user_id&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #e3ceab&#34;&gt;WHERE&lt;/span&gt; (&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;id&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;COLOR: #8cd0d3&#34;&gt;1&lt;/span&gt;)&lt;/div&gt;
+&lt;p&gt;是不是很优美，很性感涅？&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;                
+</description>
+    </item>
+    
+    <item>
+      <title>Mysql adapter on Rails 2.3.3</title>
+      <link>http://huobazi.aspxboy.com/blog/2009/08/29/mysql-adapter-on-rails-2-3-3/</link>
+      <pubDate>Sat, 29 Aug 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2009/08/29/mysql-adapter-on-rails-2-3-3/</guid>
+      <description>&lt;p&gt;安装好Ruby on Rails 2.3.3后，运行简单的页面提示如下错误“&lt;span style=&#34;color: #ff0000;&#34;&gt;&lt;strong&gt;The bundled mysql.rb driver has been removed from Rails 2.2. Please install the mysql gem and try again: gem install mysql”&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt; gem 了n次也不成，搞了一早上，才google到一个比较山寨的方法解决&lt;/p&gt;
+&lt;pre&gt;1.  download older MySQL client library, for example one from InstantRails: http://instantrails.rubyforge.org/svn/trunk/InstantRails-win/InstantRails/mysql/bin/libmySQL.dll
+
+2.  copy the downloaded file to C:\Ruby\bin (or wherever you installed Ruby) 
+
+3. restart MySQL server&lt;/pre&gt;
+&lt;p&gt;另参考：&lt;a href=&#34;http://www.ruby-forum.com/topic/160358&#34;&gt;http://www.ruby-forum.com/topic/160358&lt;/a&gt;和&lt;a href=&#34;http://rdc.taobao.com/blog/qa/?p=523&#34;&gt;http://rdc.taobao.com/blog/qa/?p=523&lt;/a&gt;&lt;/p&gt;              
+</description>
+    </item>
+    
+    <item>
+      <title>DbEntry.Net 又一个国产开源ORM数据访问及 WEB 框架</title>
+      <link>http://huobazi.aspxboy.com/blog/2008/01/31/dbentry/</link>
+      <pubDate>Thu, 31 Jan 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2008/01/31/dbentry/</guid>
+      <description>&lt;p&gt;&lt;p&gt;今天去逛&lt;a href=&#34;http://www.codeplex.com&#34; target=&#34;_blank&#34;&gt;CodePlex&lt;/a&gt;发现这个东西&lt;br /&gt;&lt;br /&gt;链接到&lt;a href=&#34;http://www.javaeye.com/&#34; target=&#34;_blank&#34;&gt;JavaEye&lt;/a&gt;的&lt;a href=&#34;http://llf.javaeye.com/&#34; target=&#34;_blank&#34;&gt;blog&lt;/a&gt;，作者：&lt;span id=&#34;AuthorLabel&#34;&gt;梁利锋&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;中文描述：&lt;font face=&#34;Verdana&#34;&gt;&lt;a href=&#34;http://llf.hanzify.org/llf/show.asp?id=555&#34;&gt;http://llf.hanzify.org/llf/show.asp?id=555&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;/font&gt;&lt;font face=&#34;Verdana&#34;&gt;&lt;strong&gt;Features:&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;FluentInterface query syntax &lt;/font&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;RoR ActiveRecord style syntax&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Ambient transaction&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Dynamic object&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Partial update&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;1:1 1:Many Many:Many relations&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Auto create table&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Anti sql injection&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Multiple data source&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Object validation&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Paged selector and collection&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Nullable support&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;DbEntryDataSource&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;ASP.NET 2.0 Membership support&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Built-in Cache Support&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Ruby On Rails style MVC framework&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;High performance, almost same as using ADO.NET directly&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Lightwight, the binary file only about 268KB&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Rails Style MVC&lt;/strong&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;ol&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;a href=&#34;http://www.codeplex.com/DbEntry/Wiki/View.aspx?title=Rails%20Getting%20Started&amp;amp;referringTitle=Home&#34;&gt;Getting Started&lt;/a&gt;&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;http://www.codeplex.com/DbEntry/Wiki/View.aspx?title=Scaffolding&amp;amp;referringTitle=Home&#34;&gt;Scaffolding&lt;/a&gt;&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;http://www.codeplex.com/DbEntry/Wiki/View.aspx?title=Controller&amp;amp;referringTitle=Home&#34;&gt;Controller&lt;/a&gt;&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;http://www.codeplex.com/DbEntry/Wiki/View.aspx?title=Viewer&amp;amp;referringTitle=Home&#34;&gt;Viewer&lt;/a&gt;&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;http://www.codeplex.com/DbEntry/Wiki/View.aspx?title=Rails%20Configuration&amp;amp;referringTitle=Home&#34;&gt;Configuration&lt;/a&gt;&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.codeplex.com/DbEntry/Wiki/View.aspx?title=Rails%20Style%20MVC%20Deployment&amp;amp;referringTitle=Home&#34;&gt;Deployment&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;/ol&gt;
+&lt;br /&gt;&lt;p&gt;另外还有一些不错的东西比如他的 &lt;strong&gt;Rails Style MVC&lt;/strong&gt; 和&lt;strong&gt;&lt;a href=&#34;http://www.codeplex.com/DbEntry/Wiki/View.aspx?title=Tools&amp;amp;referringTitle=Home&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;TemplateBuilder&lt;/strong&gt;  &lt;/a&gt;&lt;/strong&gt;还有 &lt;a href=&#34;http://www.codeplex.com/DbEntry/Wiki/View.aspx?title=HtmlBuilder&amp;amp;referringTitle=Home&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;HtmlBuilder&lt;/strong&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;看了看并没有&lt;a href=&#34;http://www.codeplex.com/nbear&#34; target=&#34;_blank&#34;&gt;Nbear&lt;/a&gt;那样类似Linq的查询支持.&lt;br /&gt;&lt;br /&gt;令人欣慰的是这个东西一直从.net1.1做到现在，而且就一个人开发，从&lt;a href=&#34;http://www.codeplex.com&#34; target=&#34;_blank&#34;&gt;codeplex&lt;/a&gt;上来看，最近还有代码签入.&lt;br /&gt;&lt;br /&gt;&lt;font face=&#34;Verdana&#34;&gt;&lt;a href=&#34;http://www.codeplex.com/DbEntry/SourceControl/ListDownloadableCommits.aspx&#34;&gt;http://www.codeplex.com/DbEntry/SourceControl/ListDownloadableCommits.aspx&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;/font&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;最后贴一下地址：&lt;font face=&#34;Verdana&#34;&gt;&lt;a href=&#34;http://www.codeplex.com/DbEntry&#34;&gt;http://www.codeplex.com/DbEntry&lt;/a&gt;&lt;/font&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;br /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Debug on 武眉博</title>
+    <link>http://huobazi.aspxboy.com/tags/debug/</link>
+    <description>Recent content in Debug on 武眉博</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 26 Apr 2004 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://huobazi.aspxboy.com/tags/debug/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>关于 “编译器失败，错误代码为 128”</title>
+      <link>http://huobazi.aspxboy.com/blog/2004/04/26/cb-7697/</link>
+      <pubDate>Mon, 26 Apr 2004 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2004/04/26/cb-7697/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;csdn上有位兄弟遇到这个错误了&lt;br /&gt;&lt;a href=&#34;http://expert.csdn.net/Expert/topic/3009/3009791.xml?temp=2.024478E-02&#34;&gt;http://expert.csdn.net/Expert/topic/3009/3009791.xml?temp=2.024478E-02&lt;/a&gt;&lt;br /&gt;我先是搜索baidu发现一个帖子&lt;br /&gt;&lt;a href=&#34;http://www.devmanclub.com/showpost.aspx?PostID=1791&#34;&gt;http://www.devmanclub.com/showpost.aspx?PostID=1791&lt;/a&gt;&lt;br /&gt;没有解决办法&lt;br /&gt;翻google从gotdotnet翻出&lt;a href=&#34;http://www.gotdotnet.com/Community/MessageBoard/Thread.aspx?id=209899&amp;amp;Page=1#209899&#34;&gt;&lt;strike&gt;一贴&lt;/strike&gt; &lt;/a&gt;作者称其为“horrible dream”的错误，并给出解决方案&lt;br /&gt;&lt;br /&gt;&lt;font style=&#34;BACKGROUND-COLOR: #a9a9a9&#34;&gt;First of all, update your antivirus software and make a full scan on your computer. I guess the cause of the problem is that some hacker has entered in my computer and made some change in my account and security settings, so the sensitive asp.net found it and then stopped working. &lt;br /&gt;&lt;br /&gt;After u are sure no viruse is in your computer, u can follow the steps below. &lt;br /&gt;&lt;br /&gt;1. run &#34;aspnet_regiis -ua&#34; in the cmd. u can start the cmd from the vs.net tools in the start menu, otherwise u need type the full path. &lt;br /&gt;&lt;br /&gt;2. remove the aspnet account from your computer &lt;br /&gt;&lt;br /&gt;3. uninstall iis &lt;br /&gt;&lt;br /&gt;4. restart your computer &lt;br /&gt;&lt;br /&gt;5. reinstall iis &lt;br /&gt;&lt;br /&gt;6. run &#34;aspnet_regiss -i&#34; in the cmd &lt;br /&gt;&lt;br /&gt;7. add vs_developers group to iis operators (u can operation in iis) &lt;br /&gt;&lt;br /&gt;8. open the file &#34;machine.config&#34; which is in &#34;C:\WINNT\Microsoft.NET\Framework\v1.1.xxxx\CONFIG&#34;, then find and replace &lt;br /&gt;userName=&#34;machine&#34; &lt;br /&gt;with &lt;br /&gt;userName=&#34;SYSTEM&#34; &lt;br /&gt;&lt;br /&gt;9. restart your computer and pray silently &lt;br /&gt;&lt;br /&gt;&lt;font style=&#34;BACKGROUND-COLOR: #ffffff&#34;&gt;地址 &lt;/font&gt;&lt;a href=&#34;http://www.gotdotnet.com/Community/MessageBoard/Thread.aspx?id=209899&amp;amp;Page=1#209899&#34;&gt;&lt;font style=&#34;BACKGROUND-COLOR: #ffffff&#34;&gt;http://www.gotdotnet.com/Community/MessageBoard/Thread.aspx?id=209899&amp;amp;Page=1#209899&lt;/font&gt;&lt;/a&gt;&lt;br /&gt;&lt;font style=&#34;BACKGROUND-COLOR: #ffffff&#34;&gt;记在这里，免今后自己和其他朋友遇到&lt;br /&gt;&lt;br /&gt;---------------------------------------------------------------------------------------------------------&lt;br /&gt;&lt;br /&gt;2004-7-1补记&lt;br /&gt;&lt;br /&gt;&lt;font style=&#34;BACKGROUND-COLOR: #d3d3d3&#34;&gt;我们一个客户机器也出了这个问题&lt;br /&gt;咨询了微软动力营专家，专家提出2点：&lt;br /&gt;//＝＝＝＝＝以下内容来字微软动力营＝＝＝＝＝＝＝&lt;br /&gt;您好！&lt;br /&gt;    谢谢您使用微软动力营！&lt;br /&gt;    对于你的这个问题，通常都是由于以下两个原因引起的，你可以去查看一下：&lt;br /&gt;1. 你的客户的机器可能感染了这个病毒&lt;/font&gt;&lt;a href=&#34;http://de.mcafee.com/root/genericVIL.asp?genericURL=/VirusInfo/VIL/dispVirus.asp&amp;amp;virus_k=100252&#34;&gt;&lt;font style=&#34;BACKGROUND-COLOR: #d3d3d3&#34;&gt;http://de.mcafee.com/root/genericVIL.asp?genericURL=/VirusInfo/VIL/dispVirus.asp&amp;amp;virus_k=100252&lt;/font&gt;&lt;/a&gt;&lt;br /&gt;&lt;/font&gt;&lt;/font&gt;&lt;font style=&#34;BACKGROUND-COLOR: #d3d3d3&#34;&gt;2. 你的客户的服务器运行着一些防病毒软件(象norton)，这有可能导致了这个错误。&lt;/font&gt;&lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;&lt;font style=&#34;BACKGROUND-COLOR: #d3d3d3&#34;&gt;对于第一个可能，我提供的那篇网页里面提供了清除方法。对于第二个可能你可以将防病毒软件关闭掉试试。&lt;/font&gt;&lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;&lt;font style=&#34;BACKGROUND-COLOR: #d3d3d3&#34;&gt;希望对你有帮助&lt;/font&gt;&lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;&lt;font style=&#34;BACKGROUND-COLOR: #d3d3d3&#34;&gt;谭映辉 [微软]  &lt;br /&gt;微软全球技术中心 微软动力营合作伙伴技术支持&lt;/font&gt;&lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;&lt;font style=&#34;BACKGROUND-COLOR: #a9a9a9&#34;&gt;&lt;font style=&#34;BACKGROUND-COLOR: #ffffff&#34;&gt;&lt;font style=&#34;BACKGROUND-COLOR: #d3d3d3&#34;&gt;使您100%满意是&#34;微软动力营&#34;合作伙伴支持服务的唯一目标。我们真诚希望您能够对&#34;微软动力营&#34;服务提出宝贵建议和意见，我们将针对您的反馈不断改进服务质量。如有任何问题，请发信至：&lt;br /&gt;&lt;/font&gt;&lt;a href=&#34;mailto:cmsdn@microsoft.com&#34;&gt;&lt;font style=&#34;BACKGROUND-COLOR: #d3d3d3&#34;&gt;cmsdn@microsoft.com&lt;/font&gt;&lt;/a&gt;&lt;br /&gt;&lt;font style=&#34;BACKGROUND-COLOR: #d3d3d3&#34;&gt;本贴子以“现状”提供且没有任何担保，同时也没有授予任何权利。&lt;/font&gt;&lt;br /&gt;//＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝&lt;br /&gt;&lt;/font&gt;&lt;br /&gt;&lt;/font&gt;&lt;/p&gt;                
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Orm on 武眉博</title>
+    <link>http://huobazi.aspxboy.com/tags/orm/</link>
+    <description>Recent content in Orm on 武眉博</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 30 Jul 2009 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://huobazi.aspxboy.com/tags/orm/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>如何判断一个类型是nullable类型，并得知它的原始类型</title>
+      <link>http://huobazi.aspxboy.com/blog/2009/07/30/how-to-determine-whether-an-type-is-nullable-and-get-the-underlying-type/</link>
+      <pubDate>Thu, 30 Jul 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2009/07/30/how-to-determine-whether-an-type-is-nullable-and-get-the-underlying-type/</guid>
+      <description>&lt;p&gt;&lt;p&gt;有些时候我们需要判断某个类型是否是Nullable类型，并且可能需要知道它的原始类型，&lt;br /&gt;比如在做些ORM相关工作时，就需要这方面的应用，如下代码使用可以实现这个要求&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;pre&gt;class Program
+    {
+        static void Main( string[] args )
+        {
+            RL( );&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;        Type type =  typeof( DateTime? );
+        Type originalType;
+
+        if ( IsNullable( type , out originalType ) )
+        {
+            WL( originalType.ToString( ) );
+        }
+        else
+        {
+            WL( &amp;quot;NOT Nullable&amp;quot; );
+        }
+
+        type =  typeof( DateTime );
+
+        if ( IsNullable( type , out originalType ) )
+        {
+            WL( originalType.ToString( ) );
+        }
+        else
+        {
+            WL( &amp;quot;NOT Nullable&amp;quot; );
+        }
+
+        RL( );
+    }
+
+    private static bool IsNullable( Type p , out Type originalType )
+    {
+        bool result = false;
+
+        if ( p.IsGenericType &amp;amp;amp;&amp;amp;amp; p.GetGenericTypeDefinition( ) == typeof( Nullable&amp;amp;lt;&amp;amp;gt; ) )
+        {
+            result = true;
+            originalType = p.GetGenericArguments( )[0];
+        }
+        else
+        {
+            originalType = null;
+        }
+
+        return result;
+    }
+
+    #region Helper methods
+
+    private static void WL( object text , params object[] args )
+    {
+        Console.WriteLine( text.ToString( ) , args );
+    }
+
+    private static void RL( )
+    {
+        Console.ReadLine( );
+    }
+
+    private static void Break( )
+    {
+        System.Diagnostics.Debugger.Break( );
+    }
+
+    #endregion
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;&lt;/pre&gt;                
+</description>
+    </item>
+    
+    <item>
+      <title>DbEntry.Net 又一个国产开源ORM数据访问及 WEB 框架</title>
+      <link>http://huobazi.aspxboy.com/blog/2008/01/31/dbentry/</link>
+      <pubDate>Thu, 31 Jan 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2008/01/31/dbentry/</guid>
+      <description>&lt;p&gt;&lt;p&gt;今天去逛&lt;a href=&#34;http://www.codeplex.com&#34; target=&#34;_blank&#34;&gt;CodePlex&lt;/a&gt;发现这个东西&lt;br /&gt;&lt;br /&gt;链接到&lt;a href=&#34;http://www.javaeye.com/&#34; target=&#34;_blank&#34;&gt;JavaEye&lt;/a&gt;的&lt;a href=&#34;http://llf.javaeye.com/&#34; target=&#34;_blank&#34;&gt;blog&lt;/a&gt;，作者：&lt;span id=&#34;AuthorLabel&#34;&gt;梁利锋&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;中文描述：&lt;font face=&#34;Verdana&#34;&gt;&lt;a href=&#34;http://llf.hanzify.org/llf/show.asp?id=555&#34;&gt;http://llf.hanzify.org/llf/show.asp?id=555&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;/font&gt;&lt;font face=&#34;Verdana&#34;&gt;&lt;strong&gt;Features:&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;FluentInterface query syntax &lt;/font&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;RoR ActiveRecord style syntax&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Ambient transaction&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Dynamic object&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Partial update&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;1:1 1:Many Many:Many relations&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Auto create table&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Anti sql injection&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Multiple data source&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Object validation&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Paged selector and collection&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Nullable support&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;DbEntryDataSource&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;ASP.NET 2.0 Membership support&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Built-in Cache Support&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Ruby On Rails style MVC framework&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;High performance, almost same as using ADO.NET directly&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Lightwight, the binary file only about 268KB&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Rails Style MVC&lt;/strong&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;ol&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;a href=&#34;http://www.codeplex.com/DbEntry/Wiki/View.aspx?title=Rails%20Getting%20Started&amp;amp;referringTitle=Home&#34;&gt;Getting Started&lt;/a&gt;&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;http://www.codeplex.com/DbEntry/Wiki/View.aspx?title=Scaffolding&amp;amp;referringTitle=Home&#34;&gt;Scaffolding&lt;/a&gt;&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;http://www.codeplex.com/DbEntry/Wiki/View.aspx?title=Controller&amp;amp;referringTitle=Home&#34;&gt;Controller&lt;/a&gt;&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;http://www.codeplex.com/DbEntry/Wiki/View.aspx?title=Viewer&amp;amp;referringTitle=Home&#34;&gt;Viewer&lt;/a&gt;&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;http://www.codeplex.com/DbEntry/Wiki/View.aspx?title=Rails%20Configuration&amp;amp;referringTitle=Home&#34;&gt;Configuration&lt;/a&gt;&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.codeplex.com/DbEntry/Wiki/View.aspx?title=Rails%20Style%20MVC%20Deployment&amp;amp;referringTitle=Home&#34;&gt;Deployment&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;/ol&gt;
+&lt;br /&gt;&lt;p&gt;另外还有一些不错的东西比如他的 &lt;strong&gt;Rails Style MVC&lt;/strong&gt; 和&lt;strong&gt;&lt;a href=&#34;http://www.codeplex.com/DbEntry/Wiki/View.aspx?title=Tools&amp;amp;referringTitle=Home&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;TemplateBuilder&lt;/strong&gt;  &lt;/a&gt;&lt;/strong&gt;还有 &lt;a href=&#34;http://www.codeplex.com/DbEntry/Wiki/View.aspx?title=HtmlBuilder&amp;amp;referringTitle=Home&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;HtmlBuilder&lt;/strong&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;看了看并没有&lt;a href=&#34;http://www.codeplex.com/nbear&#34; target=&#34;_blank&#34;&gt;Nbear&lt;/a&gt;那样类似Linq的查询支持.&lt;br /&gt;&lt;br /&gt;令人欣慰的是这个东西一直从.net1.1做到现在，而且就一个人开发，从&lt;a href=&#34;http://www.codeplex.com&#34; target=&#34;_blank&#34;&gt;codeplex&lt;/a&gt;上来看，最近还有代码签入.&lt;br /&gt;&lt;br /&gt;&lt;font face=&#34;Verdana&#34;&gt;&lt;a href=&#34;http://www.codeplex.com/DbEntry/SourceControl/ListDownloadableCommits.aspx&#34;&gt;http://www.codeplex.com/DbEntry/SourceControl/ListDownloadableCommits.aspx&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;/font&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;最后贴一下地址：&lt;font face=&#34;Verdana&#34;&gt;&lt;a href=&#34;http://www.codeplex.com/DbEntry&#34;&gt;http://www.codeplex.com/DbEntry&lt;/a&gt;&lt;/font&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;br /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

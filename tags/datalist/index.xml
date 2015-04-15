@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Datalist on 武眉博</title>
+    <link>http://huobazi.aspxboy.com/tags/datalist/</link>
+    <description>Recent content in Datalist on 武眉博</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 11 Dec 2009 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://huobazi.aspxboy.com/tags/datalist/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Repeater,DataList等嵌套如何绑定父repeater字段?</title>
+      <link>http://huobazi.aspxboy.com/blog/2009/12/11/nested-repeater-parent/</link>
+      <pubDate>Fri, 11 Dec 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2009/12/11/nested-repeater-parent/</guid>
+      <description>&lt;p&gt;&lt;p&gt;嘿嘿，其实Container有个Parent属性,把它转换为RepeaterItem再取其DataItem&lt;/p&gt;
+&lt;p&gt;DataBinder.Eval(((System.W&lt;/p&gt;
+&lt;div style=&#34;font-size: 9pt; color: #000000; direction: ltr;&#34;&gt;eb.UI.WebControls.Repeat erItem)Container.Parent.Parent.Parent).DataItem&lt;/div&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows on 武眉博</title>
+    <link>http://huobazi.aspxboy.com/tags/windows/</link>
+    <description>Recent content in Windows on 武眉博</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 11 Aug 2009 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://huobazi.aspxboy.com/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>如何在windows xp下安装python2.6的setuptools</title>
+      <link>http://huobazi.aspxboy.com/blog/2009/08/11/how-to-install-setuptools-on-windows-and-python26/</link>
+      <pubDate>Tue, 11 Aug 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2009/08/11/how-to-install-setuptools-on-windows-and-python26/</guid>
+      <description>&lt;p&gt;&lt;p&gt;最近开始学python，要安装很多egg文件，但发现&lt;a href=&#34;http://pypi.python.org/pypi/setuptools#downloads&#34;&gt;http://pypi.python.org/pypi/setuptools#downloads&lt;/a&gt;没有python2.6的MS Windows installer版本，google了一把，用如下方法解决：&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;1. 下载 setuptools-0.6c9.tar.gz&lt;br /&gt;2. 下载 setuptools-0.6c9-py2.6.egg （放在同一个目录）&lt;br /&gt;3. 用7-zip或者其他解压工具打开 setuptools-0.6c9.tar.gz ，并且把里面的 ez_setup.py 文件解压到同一个目录里。&lt;br /&gt;4. 打开cmd窗口，并进入你刚才下载和解压文件的目录里。（例如： d:\downloads\）&lt;br /&gt;5. 输入 python ez_setup.py setuptools-0.6c9-py2.6.egg&lt;/p&gt;
+&lt;p&gt;提示如下:&lt;/p&gt;
+&lt;pre&gt;E:\temp&amp;gt;python ez_setup.py setuptools-0.6c9-py2.6.egg
+Processing setuptools-0.6c9-py2.6.egg
+Copying setuptools-0.6c9-py2.6.egg to c:\python26\lib\site-packages
+Adding setuptools 0.6c9 to easy-install.pth file
+Installing easy_install-script.py script to C:\Python26\Scripts
+Installing easy_install.exe script to C:\Python26\Scripts
+Installing easy_install-2.6-script.py script to C:\Python26\Scripts
+Installing easy_install-2.6.exe script to C:\Python26\Scripts&lt;/p&gt;
+
+&lt;p&gt;Installed c:\python26\lib\site-packages\setuptools-0.6c9-py2.6.egg
+Processing dependencies for setuptools==0.6c9
+Finished processing dependencies for setuptools==0.6c9
+Processing setuptools-0.6c9-py2.6.egg
+Removing c:\python26\lib\site-packages\setuptools-0.6c9-py2.6.egg
+Copying setuptools-0.6c9-py2.6.egg to c:\python26\lib\site-packages
+setuptools 0.6c9 is already the active version in easy-install.pth
+Installing easy_install-script.py script to C:\Python26\Scripts
+Installing easy_install.exe script to C:\Python26\Scripts
+Installing easy_install-2.6-script.py script to C:\Python26\Scripts
+Installing easy_install-2.6.exe script to C:\Python26\Scripts&lt;/p&gt;
+
+&lt;p&gt;Installed c:\python26\lib\site-packages\setuptools-0.6c9-py2.6.egg
+Processing dependencies for setuptools==0.6c9
+Finished processing dependencies for setuptools==0.6c9&lt;/p&gt;
+
+&lt;p&gt;E:\temp&amp;gt;&lt;/pre&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>不改程序, 创建同一个程序不同服务名的方法</title>
+      <link>http://huobazi.aspxboy.com/blog/2009/08/06/mulit-window-service-one-exe/</link>
+      <pubDate>Thu, 06 Aug 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2009/08/06/mulit-window-service-one-exe/</guid>
+      <description>&lt;p&gt;&lt;p&gt;以往写windows service都需要个ProjectInstaller和serviceInstaller并配置serviceName，这样build出来的exe在install成windows service时我们会：&lt;/p&gt;
+&lt;pre&gt;@echo 安装WindowService
+@Set Path=C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727;
+@Set svn_dir=%cd%
+installutil %svn_dir%\MyServiceDemo.exe
+pause
+@echo 成功！&lt;/pre&gt;
+&lt;p&gt;但服务名被我们编译在程序里了，如果这个exe想被装很多次服务怎么办呢？&lt;br /&gt;今天从同事Martin Jia那里学来一个好方法，可以不用ProjectInstaller、serviceInstaller这种东西，直接安装exe为windows service并在安装时指定服务名称&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;安装服务：&lt;/p&gt;
+&lt;pre&gt;sc create 服务名 binpath= &amp;rdquo;路径&amp;rdquo; displayname= &amp;rdquo;显示名&amp;rdquo;&lt;/pre&gt;
+&lt;p&gt;卸载服务&lt;/p&gt;
+&lt;pre&gt;sc delete 服务名&lt;/pre&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

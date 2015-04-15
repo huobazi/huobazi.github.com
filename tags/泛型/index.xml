@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>泛型 on 武眉博</title>
+    <link>http://huobazi.aspxboy.com/tags/%E6%B3%9B%E5%9E%8B/</link>
+    <description>Recent content in 泛型 on 武眉博</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 30 Jul 2009 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://huobazi.aspxboy.com/tags/%E6%B3%9B%E5%9E%8B/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>如何判断一个类型是nullable类型，并得知它的原始类型</title>
+      <link>http://huobazi.aspxboy.com/blog/2009/07/30/how-to-determine-whether-an-type-is-nullable-and-get-the-underlying-type/</link>
+      <pubDate>Thu, 30 Jul 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2009/07/30/how-to-determine-whether-an-type-is-nullable-and-get-the-underlying-type/</guid>
+      <description>&lt;p&gt;&lt;p&gt;有些时候我们需要判断某个类型是否是Nullable类型，并且可能需要知道它的原始类型，&lt;br /&gt;比如在做些ORM相关工作时，就需要这方面的应用，如下代码使用可以实现这个要求&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;pre&gt;class Program
+    {
+        static void Main( string[] args )
+        {
+            RL( );&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;        Type type =  typeof( DateTime? );
+        Type originalType;
+
+        if ( IsNullable( type , out originalType ) )
+        {
+            WL( originalType.ToString( ) );
+        }
+        else
+        {
+            WL( &amp;quot;NOT Nullable&amp;quot; );
+        }
+
+        type =  typeof( DateTime );
+
+        if ( IsNullable( type , out originalType ) )
+        {
+            WL( originalType.ToString( ) );
+        }
+        else
+        {
+            WL( &amp;quot;NOT Nullable&amp;quot; );
+        }
+
+        RL( );
+    }
+
+    private static bool IsNullable( Type p , out Type originalType )
+    {
+        bool result = false;
+
+        if ( p.IsGenericType &amp;amp;amp;&amp;amp;amp; p.GetGenericTypeDefinition( ) == typeof( Nullable&amp;amp;lt;&amp;amp;gt; ) )
+        {
+            result = true;
+            originalType = p.GetGenericArguments( )[0];
+        }
+        else
+        {
+            originalType = null;
+        }
+
+        return result;
+    }
+
+    #region Helper methods
+
+    private static void WL( object text , params object[] args )
+    {
+        Console.WriteLine( text.ToString( ) , args );
+    }
+
+    private static void RL( )
+    {
+        Console.ReadLine( );
+    }
+
+    private static void Break( )
+    {
+        System.Diagnostics.Debugger.Break( );
+    }
+
+    #endregion
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;&lt;/pre&gt;                
+</description>
+    </item>
+    
+  </channel>
+</rss>

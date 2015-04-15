@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Entlib on 武眉博</title>
+    <link>http://huobazi.aspxboy.com/tags/entlib/</link>
+    <description>Recent content in Entlib on 武眉博</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 20 Apr 2008 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://huobazi.aspxboy.com/tags/entlib/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>使用AzMan找不到Microsoft.Interop.Security.AzRoles的解决方法</title>
+      <link>http://huobazi.aspxboy.com/blog/2008/04/20/microsoftinteropsecurityazroles/</link>
+      <pubDate>Sun, 20 Apr 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2008/04/20/microsoftinteropsecurityazroles/</guid>
+      <description>&lt;p&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;font face=&#34;Verdana&#34;&gt;在c:/Windows/system32下找到azRoles.dll&lt;br /&gt;&lt;br /&gt;&lt;/font&gt;&lt;font face=&#34;Verdana&#34;&gt;如果没有Xp/2003请安装&lt;a id=&#34;ctl00_rs1_mainContentContainer_ctl04&#34; onclick=&#34;javascript:Track(&#39;ctl00_rs1_mainContentContainer_ctl00|ctl00_rs1_mainContentContainer_ctl04&#39;,this);&#34; href=&#34;http://www.microsoft.com/downloads/details.aspx?FamilyID=e487f885-f0c7-436a-a392-25793a25bad7&amp;amp;DisplayLang=en&#34;&gt;&lt;a href=&#34;http://www.microsoft.com/downloads/details.aspx?FamilyID=e487f885-f0c7-436a-a392-25793a25bad7&amp;amp;DisplayLang=en&#34;&gt;http://www.microsoft.com/downloads/details.aspx?FamilyID=e487f885-f0c7-436a-a392-25793a25bad7&amp;amp;DisplayLang=en&lt;/a&gt;&lt;/a&gt;.&lt;br /&gt;&lt;br /&gt;&lt;/font&gt;&lt;font face=&#34;Verdana&#34;&gt;Win2000请安装&lt;a id=&#34;ctl00_rs1_mainContentContainer_ctl05&#34; onclick=&#34;javascript:Track(&#39;ctl00_rs1_mainContentContainer_ctl00|ctl00_rs1_mainContentContainer_ctl05&#39;,this);&#34; href=&#34;http://www.microsoft.com/downloads/details.aspx?FamilyID=7edde11f-bcea-4773-a292-84525f23baf7&amp;amp;DisplayLang=en&#34;&gt;&lt;a href=&#34;http://www.microsoft.com/downloads/details.aspx?FamilyID=7edde11f-bcea-4773-a292-84525f23baf7&amp;amp;DisplayLang=en&#34;&gt;http://www.microsoft.com/downloads/details.aspx?FamilyID=7edde11f-bcea-4773-a292-84525f23baf7&amp;amp;DisplayLang=en&lt;/a&gt;&lt;/a&gt;.&lt;br /&gt;&lt;br /&gt;&lt;/font&gt;&lt;font face=&#34;Verdana&#34;&gt;Vs2003/Vs2005/Vs2008命令行，或者Cmd命令行进入.net安装目录&lt;br /&gt;&lt;br /&gt;&lt;/font&gt;&lt;font face=&#34;Verdana&#34;&gt;敲入：&lt;br /&gt;&lt;br /&gt;&lt;/font&gt;&lt;font face=&#34;Verdana&#34;&gt;&lt;font face=&#34;Verdana&#34;&gt;d:\Program Files\Microsoft Visual Studio 9.0\VC&amp;gt;tlbimp azroles.dll /out:Microsof&lt;br /&gt;&lt;br /&gt;t.Interop.Security.AzRoles.dll /namespace:Microsoft.Interop.Security.AzRoles&lt;br /&gt;&lt;br /&gt;&lt;/font&gt;&lt;/font&gt;&lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;&lt;font face=&#34;Verdana&#34;&gt;&lt;font face=&#34;Verdana&#34;&gt;成功提示：&lt;br /&gt;&lt;br /&gt;&lt;/font&gt;&lt;/font&gt;&lt;font face=&#34;Verdana&#34;&gt;&lt;font face=&#34;Verdana&#34;&gt;&lt;/font&gt;&lt;/font&gt;&lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;&lt;font face=&#34;Verdana&#34;&gt;Microsoft &amp;reg; .NET Framework Type Library to Assembly Converter 3.5.21022.8&lt;br /&gt;&lt;br /&gt;Copyright &amp;copy; Microsoft Corporation.  All rights reserved.&lt;/font&gt;&lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;&lt;font face=&#34;Verdana&#34;&gt;Type library imported to d:\Program Files\Microsoft Visual Studio 9.0\VC\Microso&lt;br /&gt;&lt;br /&gt;ft.Interop.Security.AzRoles.dll&lt;br /&gt;&lt;br /&gt;&lt;/font&gt;&lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;&lt;br /&gt;&lt;br /&gt;引用这个文件就OK了。&lt;/p&gt;
+&lt;br /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

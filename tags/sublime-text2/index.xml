@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sublime Text2 on 武眉博</title>
+    <link>http://huobazi.aspxboy.com/tags/sublime-text2/</link>
+    <description>Recent content in Sublime Text2 on 武眉博</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 04 Feb 2012 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://huobazi.aspxboy.com/tags/sublime-text2/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Ubuntu下设置 Sublime Text 2 显示中文 &amp;&amp; 输入中文</title>
+      <link>http://huobazi.aspxboy.com/blog/2012/02/04/ubuntu-sublime-text-chinese/</link>
+      <pubDate>Sat, 04 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2012/02/04/ubuntu-sublime-text-chinese/</guid>
+      <description>&lt;p&gt;Sublime text 2在mac os 下用的很舒服，今天尝试在ubuntu下使用一下，发现汉字显示不了，&lt;/p&gt;
+&lt;p&gt;后来找到方法：&lt;/p&gt;
+&lt;p&gt;菜单栏 -&amp;gt; Preferences -&amp;gt; File Settings - User，在配置文件中增加：&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;// Settings in here override those in &#34;Default/Base File.sublime-settings&#34;, and&lt;br /&gt;// are overridden in turn by file type specific settings. Place your settings&lt;br /&gt;// here, to ensure they&#39;re preserved when upgrading.&lt;br /&gt;{&lt;br /&gt;    &#34;font_face&#34;: &#34;WenQuanYi Micro Hei Mono&#34;&lt;br /&gt;}&lt;br /&gt;就OK了，其中文泉驿是著名的开源字体 &lt;a title=&#34;http://wenq.org/&#34; href=&#34;http://wenq.org/&#34; target=&#34;_blank&#34;&gt;http://wenq.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;然后我们来解决中文输入的问题&lt;/p&gt;
+&lt;p&gt;sudo apt-get install scim&lt;/p&gt;
+&lt;p&gt;sudo apt-get install scim-pinyin&lt;/p&gt;
+&lt;p&gt;在“系统－首选项－scim设置里“&lt;/p&gt;
+&lt;p&gt;scim设置－&amp;gt;全局设置－&amp;gt;将预编辑字符串嵌入到客户端中  勾去掉&lt;br /&gt;scim设置-&amp;gt;gtk-&amp;gt;嵌入式候选词标 勾去掉&lt;/p&gt;
+&lt;p&gt;下来 在“系统－语言支持”里面选上“scim-bridge”就可以了,记得这些修改完要注销重新登录进来哦。&lt;/p&gt;
+&lt;p&gt;或者 ,打开终端,输入 pkill scim,然后输入 scim -d，如果不起作用，那还是建议你注销一下&lt;/p&gt;                
+</description>
+    </item>
+    
+  </channel>
+</rss>

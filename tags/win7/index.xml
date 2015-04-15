@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Win7 on 武眉博</title>
+    <link>http://huobazi.aspxboy.com/tags/win7/</link>
+    <description>Recent content in Win7 on 武眉博</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 13 Apr 2010 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://huobazi.aspxboy.com/tags/win7/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>win7上安装memcache</title>
+      <link>http://huobazi.aspxboy.com/blog/2010/04/13/win7-memcache/</link>
+      <pubDate>Tue, 13 Apr 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2010/04/13/win7-memcache/</guid>
+      <description>&lt;p&gt;像原来在xp下装一样&lt;/p&gt;
+&lt;p&gt;memcached.exe -d install&lt;br /&gt;memcached.exe -d start&lt;/p&gt;
+&lt;p&gt;报错“ failed to install service or service already installed”&lt;/p&gt;
+&lt;p&gt;解决方法：&lt;/p&gt;
+&lt;p&gt;管理员身份安装，首先找出cmd.exe的原文件（在c:\windows\system32\cmd.exe)，&lt;/p&gt;
+&lt;p&gt;右击以管理员进入，接下来的步骤就和xp安装方法一样了&lt;/p&gt;               
+</description>
+    </item>
+    
+  </channel>
+</rss>

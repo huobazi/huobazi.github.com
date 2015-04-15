@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Msn on 武眉博</title>
+    <link>http://huobazi.aspxboy.com/tags/msn/</link>
+    <description>Recent content in Msn on 武眉博</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 16 Mar 2008 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://huobazi.aspxboy.com/tags/msn/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>批量 移动 msn 联系人</title>
+      <link>http://huobazi.aspxboy.com/blog/2008/03/16/movefriendtoothergroupinmsn/</link>
+      <pubDate>Sun, 16 Mar 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2008/03/16/movefriendtoothergroupinmsn/</guid>
+      <description>&lt;p&gt;&lt;font face=&#34;Verdana&#34;&gt;MSN内导入一个联系人列表后，联系人都在“其他联系人”这个组，&lt;br /&gt;&lt;br /&gt;&lt;/font&gt;&lt;font face=&#34;Verdana&#34;&gt;我想把它重命名一下，不可以，转移到其他组，发现只能一个一个转移。&lt;/font&gt;&lt;br /&gt;&lt;br /&gt;最后发现，新建组然后按shift选择需要加入的联系人checkbox，确定。&lt;br /&gt;&lt;br /&gt;“其他联系人”内的联系人都到新组中去了。&lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;&lt;br /&gt;&lt;br /&gt; &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt; &lt;/p&gt;              
+</description>
+    </item>
+    
+    <item>
+      <title>MSN Toolbar 谁用了</title>
+      <link>http://huobazi.aspxboy.com/blog/2004/01/29/cb-506/</link>
+      <pubDate>Thu, 29 Jan 2004 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2004/01/29/cb-506/</guid>
+      <description>&lt;p&gt;&lt;a id=&#34;viewpost.ascx_TitleUrl&#34; href=&#34;http://toolbar.msn.com/&#34;&gt;MSN Toolbar Beta&lt;/a&gt;&lt;/p&gt;               
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rewirte on 武眉博</title>
+    <link>http://huobazi.aspxboy.com/tags/rewirte/</link>
+    <description>Recent content in Rewirte on 武眉博</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 09 Jul 2009 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://huobazi.aspxboy.com/tags/rewirte/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>nginx下typecho的rewrite</title>
+      <link>http://huobazi.aspxboy.com/blog/2009/07/09/nginx-typecho-rewrite/</link>
+      <pubDate>Thu, 09 Jul 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2009/07/09/nginx-typecho-rewrite/</guid>
+      <description>&lt;p&gt;导数据到typecho的时候是在localhost的windows xp系统上用的apache,部署时用的是nginx&lt;br /&gt;先是发现无法登陆按照&lt;a href=&#34;http://forum.typecho.org/viewtopic.php?f=4&amp;amp;t=238&amp;amp;p=852&amp;amp;hilit=nginx#p852&#34; target=&#34;_blank&#34;&gt;这篇帖子&lt;/a&gt;内的方法配置了vhost.conf，发现可以登陆了，接着又出现了&lt;br /&gt;无法编辑post的问题，具体症状见&lt;a href=&#34;http://forum.typecho.org/viewtopic.php?f=4&amp;amp;t=270&#34; target=&#34;_blank&#34;&gt;这篇帖子&lt;/a&gt;,甚是郁闷啊，google+baidu 找到一片描写wp的&lt;br /&gt;rewrite的&lt;a href=&#34;http://hi.baidu.com/3322/blog/item/95d254e7594a012bb93820bb.html&#34; target=&#34;_blank&#34;&gt;帖子&lt;/a&gt;,因typecho与wp笔记像，抱着试试看的想法,在测试站点试验了一下，嘿嘿&lt;br /&gt;能用，转寄在此，备忘&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;pre&gt;
+location / {
+        index index.html index.php;
+        if (-f $request_filename/index.html){
+            rewrite (.*) $1/index.html break;
+        }
+        if (-f $request_filename/index.php){
+            rewrite (.*) $1/index.php;
+        }
+        if (!-f $request_filename){
+            rewrite (.*) /index.php;
+        }
+    }
+&lt;/pre&gt;
+&lt;p&gt;同时感谢&lt;a class=&#34;titlink&#34; title=&#34;Atrhis的空间 http://hi.baidu.com/3322&#34; href=&#34;http://huobazi.aspxboy.com/3322&#34;&gt;Atlantis&lt;/a&gt;  :-)&lt;/p&gt;               
+</description>
+    </item>
+    
+  </channel>
+</rss>

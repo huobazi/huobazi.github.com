@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>代码片段 on 武眉博</title>
+    <link>http://huobazi.aspxboy.com/tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5/</link>
+    <description>Recent content in 代码片段 on 武眉博</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 25 Feb 2012 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://huobazi.aspxboy.com/tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>HG232破解一例</title>
+      <link>http://huobazi.aspxboy.com/blog/2012/02/25/hg232/</link>
+      <pubDate>Sat, 25 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2012/02/25/hg232/</guid>
+      <description>&lt;p&gt;###0. 默认超级账户&lt;/p&gt;
+
+&lt;p&gt;如果电信没有改过你的猫账户，可以尝试使用下面的信息登陆，如果不可以在进入后面的步骤1和2破解
+&lt;code&gt;帐号： telecomadmin 密码：nE7jA%5m (注意大小写)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;###1. 下载配置文件&lt;/p&gt;
+
+&lt;p&gt;猫上插入U盘，下面两种方法都可以，您挑一种吧。&lt;/p&gt;
+
+&lt;p&gt;#####1.1 手工操作&amp;mdash;-乐趣&lt;/p&gt;
+
+&lt;p&gt;用猫后面印刷的普通用户useradmin登陆，这个用户登陆进去什么高级全选都木有，但是表着急，我这么干的，浏览器用firefox，如果木有就去下载，然后装上firebug，去看隐藏的html元素吧，把样式表的disply:none;都禁止掉，什么 备份配置文件、启动从U盘加载配置、回复出厂值、日志等等都出来了吧，插入U盘，点击备份按钮，文件就下载下来了。&lt;/p&gt;
+
+&lt;p&gt;#####1.2 连接下载&amp;mdash;-直接&lt;/p&gt;
+
+&lt;p&gt;同时通过分析html和javascript代码，我直接把下载地址找到了，如果你不想或者木有firefox&amp;amp;&amp;amp;firebug，那就直接访问：
+&lt;a href=&#34;http://192.168.1.1/html/ehomeclient/cfgUSBRestore.cgi?coverusbpath=usb1_1&#34;&gt;http://192.168.1.1/html/ehomeclient/cfgUSBRestore.cgi?coverusbpath=usb1_1&lt;/a&gt; 这是firebug分析抓包后得到的地址，嘿嘿。
+配置文件就能成功被备份出了，在U盘根目录生成的e8_Config_backup文件夹里ctce8_HG232.cfg。&lt;/p&gt;
+
+&lt;p&gt;###2. 解密配置文件&lt;/p&gt;
+
+&lt;p&gt;网上有现成的编译好的工具可以直接用，不过作为技术宅男，当然要做点有挑战性的了，我弄了俩，一个javascript写的，一个ruby写的，开源滴，您用着放心哦&lt;/p&gt;
+
+&lt;p&gt;#####2.1 无ruby环境&lt;/p&gt;
+
+&lt;p&gt;将代码库里的decrypt.html另存到本地，然后用浏览器打开，在Source里粘贴用ctce8_HG232.cfg文件的内容，
+点击解密按钮,就可进行解密，加密同理。&lt;/p&gt;
+
+&lt;p&gt;#####2.2 有ruby环境&lt;/p&gt;
+
+&lt;p&gt;如果有ruby运行环境，则可以使用代码库里的decrypt.rb另存到本地来，把要破解或者加密的文件放入相同目录,在命令行运行 ruby decrypt.rb 按照提示做就可以了&lt;/p&gt;
+
+&lt;p&gt;#####2.3 超级管理员密码
+到文本编辑软件打开破解后的文件，查找telecomadmin，找到
+    &lt;X_ATP_UserInfoInstance InstanceID=&#34;1&#34; Username=&#34;telecomadmin&#34; Userpassword=&#34;telecomadmin******&#34; Userlevel=&#34;2&#34; Busy=&#34;0&#34; LoginIP=&#34;&#34;/&gt;
+Userpassword里面的就是超级管理员的密码了。一般是telecomadmin加串数字。&lt;/p&gt;
+
+&lt;p&gt;###3. 设置&lt;/p&gt;
+
+&lt;p&gt;后面的情况就大同小异了，网上很多介绍，开路由，，自动拨号，开无线，一堆一堆的教程，另外有些设置在管理平台是没有的，比如下面的ftp和telnet设置，如果又必要使用这些相功能，修改配置文件，加密后，登陆后台后启用从usb恢复设备这个功能，然后把配置文件夹自己修改后，再恢复回去，就可以了。
+    &lt;X_CT-COM_ServiceManage TelnetEnable=&#34;0&#34; TelnetUserName=&#34;!!Huawei&#34; TelnetPassword=&#34;@HuaweiHgw&#34; TelnetPort=&#34;23&#34; WebWanAccessEnable=&#34;0&#34; FtpEnable=&#34;1&#34; FtpUserName=&#34;ftp&#34; FtpPassword=&#34;ftp&#34; FtpPort=&#34;21&#34; FtpPath=&#34;/mnt&#34;/&gt;&lt;/p&gt;
+
+&lt;p&gt;###4. 代码&lt;/p&gt;
+
+&lt;p&gt;本文提及的代码可以在&lt;a href=&#34;https://github.com/huobazi/hg232&#34;&gt;https://github.com/huobazi/hg232&lt;/a&gt;下载到&lt;/p&gt;
+
+&lt;p&gt;###5.  其他&lt;/p&gt;
+
+&lt;p&gt;4个RJ45口理论上都可以设置成接电脑或者itv输出，并不局限于写了itv的那个口。另外，也可以增加一个itv无线网络，在你的机顶盒上加个无线网卡，机顶盒拨入此无线网络，这样就不用拉一堆堆的线了，很适用于前期没有做好布线设计的朋友。&lt;/p&gt;
+
+&lt;p&gt;itv 不选择 无线的话 要选VLAN透传，选无线是VLAN修改&lt;/p&gt;
+
+&lt;p&gt;另外，网上有现成的改好的配置文件下载，&lt;a href=&#34;http://email2me.blog.163.com/blog/static/34347033201101094128402/&#34;&gt;http://email2me.blog.163.com/blog/static/34347033201101094128402/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>iOS通过UIActionSheetDelegate来实现警告的方法</title>
+      <link>http://huobazi.aspxboy.com/blog/2012/02/13/ios-uiactionsheetdelegate/</link>
+      <pubDate>Mon, 13 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2012/02/13/ios-uiactionsheetdelegate/</guid>
+      <description>&lt;p&gt;&lt;p&gt;有时候需要用户确认一些操作，比如退出，删除数据等等，用UIActionSheetDelegate实现比较友好，实现也很简单，controller实现UIActionSheetDelegate协议就可以了，示例如下:&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;div class=&#34;source&#34; style=&#34;font-family: &#39;[object HTMLOptionElement]&#39;, Consolas, &#39;Lucida Console&#39;, &#39;Courier New&#39;; color: #e0eee0; background-color: #000000; &#34;&gt;
+&lt;span style=&#34;color: #7c7268; &#34;&gt;01&lt;/span&gt; &lt;span style=&#34;color: #8db6cd; &#34;&gt;#pragma mark-&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;02&lt;/span&gt; &lt;span style=&#34;color: #8db6cd; &#34;&gt;#pragma mark UIActionSheetDelegate with logOff&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;03&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;04&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;-&lt;/span&gt; (&lt;span style=&#34;color: #add8e6; &#34;&gt;void&lt;/span&gt;) &lt;span style=&#34;color: #e0eee0; &#34;&gt;onLogOffButtonClick:&lt;/span&gt;(&lt;span style=&#34;color: #add8e6; &#34;&gt;id&lt;/span&gt;)&lt;span style=&#34;color: #e0eee0; &#34;&gt;sender&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #f810b0; &#34;&gt;05&lt;/span&gt;     &lt;span style=&#34;color: #e0eee0; &#34;&gt;UIActionSheet&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;&lt;em&gt;&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;actionSheet&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;[[&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;UIActionSheet&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;alloc&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;initWithTitle:&lt;/span&gt;&lt;span style=&#34;color: #80a0ff; &#34;&gt;@&amp;ldquo;确认要退出登录吗？&amp;rdquo;&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;delegate:&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;self&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;cancelButtonTitle:&lt;/span&gt;&lt;span style=&#34;color: #80a0ff; &#34;&gt;@&amp;ldquo;不退出&amp;rdquo;&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;destructiveButtonTitle:&lt;/span&gt;&lt;span style=&#34;color: #80a0ff; &#34;&gt;@&amp;ldquo;退出&amp;rdquo;&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;otherButtonTitles:&lt;/span&gt;&lt;span style=&#34;color: #4eee94; &#34;&gt;nil&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #4eee94; &#34;&gt;nil&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;];&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;06&lt;/span&gt;    &lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;07&lt;/span&gt;     &lt;span style=&#34;color: #e0eee0; &#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;actionSheet&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;showFromTabBar:&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;navigationController&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;tabBarController&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;tabBar&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;];&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;08&lt;/span&gt;     XX&lt;span style=&#34;color: #e0eee0; &#34;&gt;_RELEASE_SAFELY&lt;/span&gt;(&lt;span style=&#34;color: #e0eee0; &#34;&gt;actionSheet&lt;/span&gt;);&lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;09&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #f810b0; &#34;&gt;10&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;-&lt;/span&gt; (&lt;span style=&#34;color: #add8e6; &#34;&gt;void&lt;/span&gt;)&lt;span style=&#34;color: #e0eee0; &#34;&gt;logOff&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;11&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;12&lt;/span&gt;     &lt;span style=&#34;color: #7c7268; &#34;&gt;//do logoff&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;13&lt;/span&gt;    &lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;14&lt;/span&gt;     &lt;span style=&#34;color: #e0eee0; &#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;navigationController&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;popViewControllerAnimated:&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;YES&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;];&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #f810b0; &#34;&gt;15&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;16&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;17&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;-&lt;/span&gt; (&lt;span style=&#34;color: #add8e6; &#34;&gt;void&lt;/span&gt;)&lt;span style=&#34;color: #e0eee0; &#34;&gt;actionSheet:&lt;/span&gt;(&lt;span style=&#34;color: #e0eee0; &#34;&gt;UIActionSheet&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;&lt;/em&gt;&lt;/span&gt;)&lt;span style=&#34;color: #e0eee0; &#34;&gt;actionSheet&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;didDismissWithButtonIndex:&lt;/span&gt;(&lt;span style=&#34;color: #e0eee0; &#34;&gt;NSInteger&lt;/span&gt;)&lt;span style=&#34;color: #e0eee0; &#34;&gt;buttonIndex&lt;/span&gt;; &lt;span style=&#34;color: #e0eee0; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;18&lt;/span&gt;     &lt;span style=&#34;color: #90ee90; &#34;&gt;switch&lt;/span&gt; (&lt;span style=&#34;color: #e0eee0; &#34;&gt;buttonIndex&lt;/span&gt;) &lt;span style=&#34;color: #e0eee0; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;19&lt;/span&gt;         &lt;span style=&#34;color: #90ee90; &#34;&gt;case&lt;/span&gt; &lt;span style=&#34;color: #00ffff; &#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;:&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #f810b0; &#34;&gt;20&lt;/span&gt;             &lt;span style=&#34;color: #e0eee0; &#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;self&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;logOff&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;];&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;21&lt;/span&gt;             &lt;span style=&#34;color: #90ee90; &#34;&gt;break&lt;/span&gt;;&lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;22&lt;/span&gt;         &lt;span style=&#34;color: #90ee90; &#34;&gt;case&lt;/span&gt; &lt;span style=&#34;color: #00ffff; &#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;:&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;23&lt;/span&gt;             &lt;span style=&#34;color: #e0eee0; &#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;tableView&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;deselectRowAtIndexPath:&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;tableView&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;indexPathForSelectedRow&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;animated:&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;YES&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;];&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;24&lt;/span&gt;             &lt;span style=&#34;color: #90ee90; &#34;&gt;break&lt;/span&gt;;&lt;br /&gt;&lt;span style=&#34;color: #f810b0; &#34;&gt;25&lt;/span&gt;         &lt;span style=&#34;color: #90ee90; &#34;&gt;default&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;:&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;26&lt;/span&gt;             &lt;span style=&#34;color: #90ee90; &#34;&gt;break&lt;/span&gt;;&lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;27&lt;/span&gt;     &lt;span style=&#34;color: #e0eee0; &#34;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;28&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;}&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu下设置 Sublime Text 2 显示中文 &amp;&amp; 输入中文</title>
+      <link>http://huobazi.aspxboy.com/blog/2012/02/04/ubuntu-sublime-text-chinese/</link>
+      <pubDate>Sat, 04 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2012/02/04/ubuntu-sublime-text-chinese/</guid>
+      <description>&lt;p&gt;Sublime text 2在mac os 下用的很舒服，今天尝试在ubuntu下使用一下，发现汉字显示不了，&lt;/p&gt;
+&lt;p&gt;后来找到方法：&lt;/p&gt;
+&lt;p&gt;菜单栏 -&amp;gt; Preferences -&amp;gt; File Settings - User，在配置文件中增加：&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;// Settings in here override those in &#34;Default/Base File.sublime-settings&#34;, and&lt;br /&gt;// are overridden in turn by file type specific settings. Place your settings&lt;br /&gt;// here, to ensure they&#39;re preserved when upgrading.&lt;br /&gt;{&lt;br /&gt;    &#34;font_face&#34;: &#34;WenQuanYi Micro Hei Mono&#34;&lt;br /&gt;}&lt;br /&gt;就OK了，其中文泉驿是著名的开源字体 &lt;a title=&#34;http://wenq.org/&#34; href=&#34;http://wenq.org/&#34; target=&#34;_blank&#34;&gt;http://wenq.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;然后我们来解决中文输入的问题&lt;/p&gt;
+&lt;p&gt;sudo apt-get install scim&lt;/p&gt;
+&lt;p&gt;sudo apt-get install scim-pinyin&lt;/p&gt;
+&lt;p&gt;在“系统－首选项－scim设置里“&lt;/p&gt;
+&lt;p&gt;scim设置－&amp;gt;全局设置－&amp;gt;将预编辑字符串嵌入到客户端中  勾去掉&lt;br /&gt;scim设置-&amp;gt;gtk-&amp;gt;嵌入式候选词标 勾去掉&lt;/p&gt;
+&lt;p&gt;下来 在“系统－语言支持”里面选上“scim-bridge”就可以了,记得这些修改完要注销重新登录进来哦。&lt;/p&gt;
+&lt;p&gt;或者 ,打开终端,输入 pkill scim,然后输入 scim -d，如果不起作用，那还是建议你注销一下&lt;/p&gt;                
+</description>
+    </item>
+    
+    <item>
+      <title>How to,在iOS中点击文本框以外区域，隐藏键盘</title>
+      <link>http://huobazi.aspxboy.com/blog/2011/12/09/ios-hide-keyboard-when-touch/</link>
+      <pubDate>Fri, 09 Dec 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2011/12/09/ios-hide-keyboard-when-touch/</guid>
+      <description>&lt;p&gt;当点击文本框以外部分时，隐藏键盘，实现很简单，加个Category就可以了，代码如下：&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;div class=&#34;source&#34; style=&#34;font-family: &#39;[object HTMLOptionElement]&#39;, Consolas, &#39;Lucida Console&#39;, &#39;Courier New&#39;; color: #e6e1dc; background-color: #111111; &#34;&gt;
+&lt;p&gt;&lt;span style=&#34;color: #cc7833; font-style: italic; &#34;&gt;#import &amp;lt;UIKit/UIKit.h&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #cc7833; &#34;&gt;@interface&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;UITextField&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;(HideKeyBoard)&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;-&lt;/span&gt;(&lt;span style=&#34;color: #da4939; &#34;&gt;void&lt;/span&gt;)&lt;span style=&#34;color: #e6e1dc; &#34;&gt;hideKeyBoard:&lt;/span&gt;(&lt;span style=&#34;color: #e6e1dc; &#34;&gt;UIView&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;*&lt;/span&gt;)&lt;span style=&#34;color: #e6e1dc; &#34;&gt;view&lt;/span&gt;;&lt;br /&gt;&lt;span style=&#34;color: #cc7833; &#34;&gt;@end&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;color: #cc7833; font-style: italic; &#34;&gt;#import &#34;UITextField+HideKeyBoard.h&#34;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;color: #cc7833; &#34;&gt;@implementation&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;UITextField&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;(HideKeyBoard)&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;-&lt;/span&gt; (&lt;span style=&#34;color: #da4939; &#34;&gt;void&lt;/span&gt;) &lt;span style=&#34;color: #e6e1dc; &#34;&gt;hideKeyBoard:&lt;/span&gt;(&lt;span style=&#34;color: #e6e1dc; &#34;&gt;UIView&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;*&lt;/span&gt;)&lt;span style=&#34;color: #e6e1dc; &#34;&gt;view&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #e6e1dc; &#34;&gt;UITapGestureRecognizer&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;tap&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;[[&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;UITapGestureRecognizer&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;alloc&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;]&lt;/span&gt;&lt;br /&gt;                                   &lt;span style=&#34;color: #e6e1dc; &#34;&gt;initWithTarget:&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;self&lt;/span&gt;&lt;br /&gt;                                   &lt;span style=&#34;color: #e6e1dc; &#34;&gt;action:&lt;/span&gt;&lt;span style=&#34;color: #cc7833; &#34;&gt;@selector&lt;/span&gt;(&lt;span style=&#34;color: #e6e1dc; &#34;&gt;doHideKeyBoard&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;)];&lt;/span&gt;&lt;br /&gt;   &lt;br /&gt;    &lt;span style=&#34;color: #e6e1dc; &#34;&gt;tap&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;numberOfTapsRequired&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #a5c261; &#34;&gt;1&lt;/span&gt;;&lt;br /&gt;    &lt;span style=&#34;color: #e6e1dc; &#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;view&lt;/span&gt;  &lt;span style=&#34;color: #e6e1dc; &#34;&gt;addGestureRecognizer:&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;tap&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;];&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #e6e1dc; &#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;tap&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;setCancelsTouchesInView:&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;NO&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;];&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #e6e1dc; &#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;tap&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;release&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;];&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;}&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;-&lt;/span&gt; (&lt;span style=&#34;color: #da4939; &#34;&gt;void&lt;/span&gt;)&lt;span style=&#34;color: #e6e1dc; &#34;&gt;doHideKeyBoard&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #e6e1dc; &#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;self&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;resignFirstResponder&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;];&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #cc7833; &#34;&gt;@end&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;-&lt;/span&gt; (&lt;span style=&#34;color: #da4939; &#34;&gt;void&lt;/span&gt;)&lt;span style=&#34;color: #e6e1dc; &#34;&gt;viewDidLoad&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #e6e1dc; &#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;super&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;viewDidLoad&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;];&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #bc9458; font-style: italic; &#34;&gt;// Do any additional setup after loading the view from its nib.&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #e6e1dc; &#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;txtInput&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;hideKeyBoard:&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;view&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;];&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;}&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;see also: &lt;a href=&#34;https://gist.github.com/1450404&#34;&gt;https://gist.github.com/1450404&lt;/a&gt;&lt;/p&gt;              
+</description>
+    </item>
+    
+    <item>
+      <title>AutoGenerateColumns=&#39;true&#39;的GridView如何支持htmlencode/htmldecode</title>
+      <link>http://huobazi.aspxboy.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/</link>
+      <pubDate>Wed, 09 Nov 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/</guid>
+      <description>&lt;p&gt;&lt;p&gt;我们知道BoundField.HtmlEncode 属性可以设置一个单元格是否能够htmlencode，我今天碰到的问题是：自动生成列的GridView，表头可能是包含html的比如&amp;lt;font color=red&amp;gt;邮件&amp;lt;/font&amp;gt;，默认被htmlencode了，而我不希望这样做，所以有了如下的代码:&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;div class=&#34;source&#34; style=&#34;font-family: &#39;[object HTMLOptionElement]&#39;, Consolas, &#39;Lucida Console&#39;, &#39;Courier New&#39;; color: #e6e1dc; background-color: #111111; &#34;&gt;
+&lt;span style=&#34;color: #bc9458; font-style: italic; &#34;&gt;/// &amp;lt;summary&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #bc9458; font-style: italic; &#34;&gt;/// Handles the PreRender event of the gvSource control.&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #bc9458; font-style: italic; &#34;&gt;/// &amp;lt;/summary&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #bc9458; font-style: italic; &#34;&gt;/// &amp;lt;param name=&amp;ldquo;sender&amp;rdquo;&amp;gt;The source of the event.&amp;lt;/param&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #bc9458; font-style: italic; &#34;&gt;/// &amp;lt;param name=&amp;ldquo;e&amp;rdquo;&amp;gt;The &amp;lt;see cref=&amp;ldquo;System.EventArgs&amp;rdquo;/&amp;gt; instance containing the event data.&amp;lt;/param&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #cc7833; &#34;&gt;protected&lt;/span&gt; &lt;span style=&#34;color: #cc7833; &#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color: #ffc66d; &#34;&gt;gvSource_PreRender&lt;/span&gt;( &lt;span style=&#34;color: #da4939; &#34;&gt;object&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;sender&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;EventArgs&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;e&lt;/span&gt; )&lt;br /&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #e6e1dc; &#34;&gt;GridView&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;gridView&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;sender&lt;/span&gt; &lt;span style=&#34;color: #cc7833; &#34;&gt;as&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;GridView&lt;/span&gt;;&lt;br /&gt;    &lt;span style=&#34;color: #cc7833; &#34;&gt;if&lt;/span&gt; ( &lt;span style=&#34;color: #e6e1dc; &#34;&gt;gridView&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color: #cc7833; &#34;&gt;null&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;gridView&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;HeaderRow&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color: #cc7833; &#34;&gt;null&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;gridView&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;HeaderRow&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Cells&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color: #cc7833; &#34;&gt;null&lt;/span&gt; )&lt;br /&gt;    &lt;span style=&#34;color: #e6e1dc; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;        &lt;span style=&#34;color: #cc7833; &#34;&gt;for&lt;/span&gt; ( &lt;span style=&#34;color: #da4939; &#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;j&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #a5c261; &#34;&gt;0&lt;/span&gt; ; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;j&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;gridView&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;HeaderRow&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Cells&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Count&lt;/span&gt; ; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;j&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;++&lt;/span&gt; )&lt;br /&gt;        &lt;span style=&#34;color: #e6e1dc; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;            &lt;span style=&#34;color: #e6e1dc; &#34;&gt;gridView&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;HeaderRow&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Cells&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;j&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;].&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Text&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;System&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Web&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;HttpUtility&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;HtmlDecode&lt;/span&gt;( &lt;span style=&#34;color: #e6e1dc; &#34;&gt;gridView&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;HeaderRow&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Cells&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;j&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;].&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Text&lt;/span&gt; );&lt;br /&gt;        &lt;span style=&#34;color: #e6e1dc; &#34;&gt;}&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #e6e1dc; &#34;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;}&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>在Console下输入密码，以星号代替。</title>
+      <link>http://huobazi.aspxboy.com/blog/2011/06/22/password-masking-in-csharp-console-application/</link>
+      <pubDate>Wed, 22 Jun 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2011/06/22/password-masking-in-csharp-console-application/</guid>
+      <description>&lt;p&gt;如何在Console下输入密码，像*unix系统下那样不显示，或者显示星号，如下代码经过测试：&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;div class=&#34;source&#34; style=&#34;font-family: &#39;[object HTMLOptionElement]&#39;, Consolas, &#39;Lucida Console&#39;, &#39;Courier New&#39;; color: #ffffff; background-color: #333333; &#34;&gt;
+&lt;p&gt;&lt;span style=&#34;color: #87ceeb; &#34;&gt;/// &amp;lt;summary&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #87ceeb; &#34;&gt;/// Gets the console secure password.&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #87ceeb; &#34;&gt;/// &amp;lt;/summary&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #87ceeb; &#34;&gt;/// &amp;lt;returns&amp;gt;&amp;lt;/returns&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #f0e68c; &#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color: #f0e68c; &#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;SecureString&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;GetConsoleSecurePassword&lt;/span&gt;( )&lt;br /&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #ffffff; &#34;&gt;SecureString&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;pwd&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #f0e68c; &#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;SecureString&lt;/span&gt;( );&lt;br /&gt;    &lt;span style=&#34;color: #f0e68c; &#34;&gt;while&lt;/span&gt; ( &lt;span style=&#34;color: #f0e68c; &#34;&gt;true&lt;/span&gt; )&lt;br /&gt;    &lt;span style=&#34;color: #ffffff; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;ConsoleKeyInfo&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;i&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;Console&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;ReadKey&lt;/span&gt;( &lt;span style=&#34;color: #f0e68c; &#34;&gt;true&lt;/span&gt; );&lt;br /&gt;        &lt;span style=&#34;color: #f0e68c; &#34;&gt;if&lt;/span&gt; ( &lt;span style=&#34;color: #ffffff; &#34;&gt;i&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Key&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;ConsoleKey&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Enter&lt;/span&gt; )&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;            &lt;span style=&#34;color: #f0e68c; &#34;&gt;break&lt;/span&gt;;&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;}&lt;/span&gt;&lt;br /&gt;        &lt;span style=&#34;color: #f0e68c; &#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;if&lt;/span&gt; ( &lt;span style=&#34;color: #ffffff; &#34;&gt;i&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Key&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;ConsoleKey&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Backspace&lt;/span&gt; )&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;            &lt;span style=&#34;color: #ffffff; &#34;&gt;pwd&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;RemoveAt&lt;/span&gt;( &lt;span style=&#34;color: #ffffff; &#34;&gt;pwd&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Length&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;1&lt;/span&gt; );&lt;br /&gt;            &lt;span style=&#34;color: #ffffff; &#34;&gt;Console&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Write&lt;/span&gt;( &lt;span style=&#34;color: #ffffff; &#34;&gt;&#34;\b \b&#34;&lt;/span&gt; );&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;}&lt;/span&gt;&lt;br /&gt;        &lt;span style=&#34;color: #f0e68c; &#34;&gt;else&lt;/span&gt;&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;            &lt;span style=&#34;color: #ffffff; &#34;&gt;pwd&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;AppendChar&lt;/span&gt;( &lt;span style=&#34;color: #ffffff; &#34;&gt;i&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;KeyChar&lt;/span&gt; );&lt;br /&gt;            &lt;span style=&#34;color: #ffffff; &#34;&gt;Console&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Write&lt;/span&gt;( &lt;span style=&#34;color: #ffffff; &#34;&gt;&#34;*&#34;&lt;/span&gt; );&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;}&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #ffffff; &#34;&gt;}&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #f0e68c; &#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;pwd&lt;/span&gt;;&lt;br /&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;}&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;color: #87ceeb; &#34;&gt;/// &amp;lt;summary&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #87ceeb; &#34;&gt;/// Gets the console password.&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #87ceeb; &#34;&gt;/// &amp;lt;/summary&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #87ceeb; &#34;&gt;/// &amp;lt;returns&amp;gt;&amp;lt;/returns&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #f0e68c; &#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color: #f0e68c; &#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color: #bdb76b; &#34;&gt;string&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;GetConsolePassword&lt;/span&gt;( )&lt;br /&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #ffffff; &#34;&gt;StringBuilder&lt;/span&gt; sb &lt;span style=&#34;color: #ffffff; &#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #f0e68c; &#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;StringBuilder&lt;/span&gt;( );&lt;br /&gt;    &lt;span style=&#34;color: #f0e68c; &#34;&gt;while&lt;/span&gt; ( &lt;span style=&#34;color: #f0e68c; &#34;&gt;true&lt;/span&gt; )&lt;br /&gt;    &lt;span style=&#34;color: #ffffff; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;ConsoleKeyInfo&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;cki&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;Console&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;ReadKey&lt;/span&gt;( &lt;span style=&#34;color: #f0e68c; &#34;&gt;true&lt;/span&gt; );&lt;br /&gt;        &lt;span style=&#34;color: #f0e68c; &#34;&gt;if&lt;/span&gt; ( &lt;span style=&#34;color: #ffffff; &#34;&gt;cki&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Key&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;ConsoleKey&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Enter&lt;/span&gt; )&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;            &lt;span style=&#34;color: #ffffff; &#34;&gt;Console&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;WriteLine&lt;/span&gt;( );&lt;br /&gt;            &lt;span style=&#34;color: #f0e68c; &#34;&gt;break&lt;/span&gt;;&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;}&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;        &lt;span style=&#34;color: #f0e68c; &#34;&gt;if&lt;/span&gt; ( &lt;span style=&#34;color: #ffffff; &#34;&gt;cki&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Key&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;ConsoleKey&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Backspace&lt;/span&gt; )&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;            &lt;span style=&#34;color: #f0e68c; &#34;&gt;if&lt;/span&gt; ( sb&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Length&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;0&lt;/span&gt; )&lt;br /&gt;            &lt;span style=&#34;color: #ffffff; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;                &lt;span style=&#34;color: #ffffff; &#34;&gt;Console&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Write&lt;/span&gt;( &lt;span style=&#34;color: #ffffff; &#34;&gt;&#34;\b\0\b&#34;&lt;/span&gt; );&lt;br /&gt;                sb&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Length&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;--;&lt;/span&gt;&lt;br /&gt;            &lt;span style=&#34;color: #ffffff; &#34;&gt;}&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;            &lt;span style=&#34;color: #f0e68c; &#34;&gt;continue&lt;/span&gt;;&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;}&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;Console&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Write&lt;/span&gt;( &lt;span style=&#34;color: #ffffff; &#34;&gt;&#39;*&#39;&lt;/span&gt; );&lt;br /&gt;        sb&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Append&lt;/span&gt;( &lt;span style=&#34;color: #ffffff; &#34;&gt;cki&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;KeyChar&lt;/span&gt; );&lt;br /&gt;    &lt;span style=&#34;color: #ffffff; &#34;&gt;}&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;    &lt;span style=&#34;color: #f0e68c; &#34;&gt;return&lt;/span&gt; sb&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;ToString&lt;/span&gt;( );&lt;br /&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;}&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;gist：&lt;a href=&#34;https://gist.github.com/1039424&#34;&gt;https://gist.github.com/1039424&lt;/a&gt;&lt;/p&gt;               
+</description>
+    </item>
+    
+    <item>
+      <title>Google 给几个Javascript Framework提供的CDN地址</title>
+      <link>http://huobazi.aspxboy.com/blog/2010/06/02/google-js-framework-cdn/</link>
+      <pubDate>Wed, 02 Jun 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2010/06/02/google-js-framework-cdn/</guid>
+      <description>&lt;p&gt;&lt;p&gt;Google 给几个Javascript Framework提供的CDN地址:&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;h2&gt;jquery&lt;/h2&gt;
+&lt;pre&gt;&amp;lt;script src=&amp;ldquo;&lt;a href=&#34;http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&#34;&gt;http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/a&gt;&lt;/pre&gt;
+&lt;h2&gt;jquery UI&lt;/h2&gt;
+&lt;pre&gt;&amp;lt;script src=&amp;ldquo;&lt;a href=&#34;http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&#34;&gt;http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/a&gt;&lt;/pre&gt;
+&lt;h2&gt;Chrome Frame&lt;/h2&gt;
+&lt;pre&gt;&amp;lt;script src=&amp;ldquo;&lt;a href=&#34;http://ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&#34;&gt;http://ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/a&gt;&lt;/pre&gt;
+&lt;h2&gt;swfobject&lt;/h2&gt;
+&lt;pre&gt;&amp;lt;script src=&amp;ldquo;&lt;a href=&#34;http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&#34;&gt;http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/a&gt;&lt;/pre&gt;
+&lt;h2&gt;mootools&lt;/h2&gt;
+&lt;pre&gt;&amp;lt;script src=&amp;ldquo;&lt;a href=&#34;http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools-yui-compressed.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&#34;&gt;http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools-yui-compressed.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/a&gt;&lt;/pre&gt;
+&lt;h2&gt;Yahoo! UI&lt;/h2&gt;
+&lt;pre&gt;&amp;lt;script src=&amp;ldquo;&lt;a href=&#34;http://ajax.googleapis.com/ajax/libs/yui/2.8.1/build/yuiloader/yuiloader-min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&#34;&gt;http://ajax.googleapis.com/ajax/libs/yui/2.8.1/build/yuiloader/yuiloader-min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/a&gt;&lt;/pre&gt;
+&lt;h2&gt;Prototype&lt;/h2&gt;
+&lt;pre&gt;&amp;lt;script src=&amp;ldquo;&lt;a href=&#34;http://ajax.googleapis.com/ajax/libs/prototype/1.6.1.0/prototype.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&#34;&gt;http://ajax.googleapis.com/ajax/libs/prototype/1.6.1.0/prototype.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/a&gt;&lt;/pre&gt;
+&lt;h2&gt;Ext.JS&lt;/h2&gt;
+&lt;pre&gt;&amp;lt;script src=&amp;ldquo;&lt;a href=&#34;http://ajax.googleapis.com/ajax/libs/ext-core/3.1.0/ext-core.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&#34;&gt;http://ajax.googleapis.com/ajax/libs/ext-core/3.1.0/ext-core.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/a&gt;&lt;/pre&gt;
+&lt;h2&gt;Dojo&lt;/h2&gt;
+&lt;pre&gt;&amp;lt;script src=&amp;ldquo;&lt;a href=&#34;http://ajax.googleapis.com/ajax/libs/dojo/1.4.3/dojo/dojo.xd.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&#34;&gt;http://ajax.googleapis.com/ajax/libs/dojo/1.4.3/dojo/dojo.xd.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/a&gt;&lt;/pre&gt;
+&lt;h2&gt;Scriptaculous&lt;/h2&gt;
+&lt;pre&gt;&amp;lt;script src=&amp;ldquo;&lt;a href=&#34;http://ajax.googleapis.com/ajax/libs/scriptaculous/1.8.3/scriptaculous.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&#34;&gt;http://ajax.googleapis.com/ajax/libs/scriptaculous/1.8.3/scriptaculous.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/a&gt;&lt;/pre&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>使用window.location跳转，在IE中UrlReffer不被记录</title>
+      <link>http://huobazi.aspxboy.com/blog/2010/01/21/window-location-href-ie-request-reffer/</link>
+      <pubDate>Thu, 21 Jan 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2010/01/21/window-location-href-ie-request-reffer/</guid>
+      <description>&lt;p&gt;使用window.location跳转，在FF中，没问题，下一页面可以取得UrlReffer，但在IE中UrlReffer不被记录&lt;/p&gt;
+&lt;p&gt;真变态，&lt;/p&gt;
+&lt;p&gt;让我头痛了半天，弄了个丑陋的办法做了如下实现：&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;div class=&#34;source&#34; style=&#34;COLOR: #f6f3e8; FONT-FAMILY: &#39;[object]&#39;,&#39;Consolas&#39;,&#39;Lucida Console&#39;,&#39;Courier New&#39;; BACKGROUND-COLOR: #242424&#34;&gt;
+&lt;span style=&#34;COLOR: #8ac6f2&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;safeRedirectToCart&lt;/span&gt;(&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;url&lt;/span&gt;) &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;{&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;COLOR: #8ac6f2&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;isIE&lt;/span&gt; &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;jQuery&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;browser&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;msie&lt;/span&gt;;&lt;br /&gt;    &lt;span style=&#34;COLOR: #8ac6f2&#34;&gt;if&lt;/span&gt; (&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;!&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;isIE&lt;/span&gt;) &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;{&lt;/span&gt;&lt;br /&gt;        &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;window&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;location&lt;/span&gt; &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;url&lt;/span&gt;;&lt;br /&gt;        &lt;span style=&#34;COLOR: #8ac6f2&#34;&gt;return&lt;/span&gt;;&lt;br /&gt;    &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;}&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;$&lt;/span&gt;(&lt;span style=&#34;COLOR: #95e454; FONT-STYLE: italic&#34;&gt;&#34;.btnCart&#34;&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;).&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;get&lt;/span&gt;(&lt;span style=&#34;COLOR: #e5786d&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;).&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;click&lt;/span&gt;();&lt;br /&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;}&lt;/span&gt;
+&lt;/div&gt;
+&lt;p&gt;说明：在页面上render一个连接(可以用样式表控制不显示），判断如果是IE浏览器然则调用其click，嘿嘿，就这个。&lt;/p&gt;              
+</description>
+    </item>
+    
+    <item>
+      <title>使用SQL语句更改数据表的默认值</title>
+      <link>http://huobazi.aspxboy.com/blog/2009/12/09/chang-sql-table-field-default/</link>
+      <pubDate>Wed, 09 Dec 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2009/12/09/chang-sql-table-field-default/</guid>
+      <description>&lt;p&gt;&lt;p&gt;以前还真没这么干过，都是手工去掉约束，再添加的，今天一边google一边搞啊搞啊的，最终下面这个脚本可以用了&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;div class=&#34;source&#34; style=&#39;font-family: &#34;Consolas&#34;,&#34;Lucida Console&#34;,&#34;Courier New&#34;; color: #ffffff; background-color: #333333;&#39;&gt;
+&lt;p&gt;&lt;span style=&#34;color: #f0e68c;&#34;&gt;alter&lt;/span&gt; &lt;span style=&#34;color: #f0e68c;&#34;&gt;table&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;dbo&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;SOTransaction&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #f0e68c;&#34;&gt;alter&lt;/span&gt; &lt;span style=&#34;color: #f0e68c;&#34;&gt;column&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;UnitCostWithoutTax&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;decimal&lt;/span&gt;(&lt;span style=&#34;color: #ffffff;&#34;&gt;10&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;2&lt;/span&gt;)  &lt;span style=&#34;color: #f0e68c;&#34;&gt;not&lt;/span&gt; &lt;span style=&#34;color: #f0e68c;&#34;&gt;null&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;color: #f0e68c;&#34;&gt;go&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;color: #f0e68c;&#34;&gt;declare&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;name&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;varchar&lt;/span&gt;(&lt;span style=&#34;color: #ffffff;&#34;&gt;1000&lt;/span&gt;)&lt;br /&gt;&lt;span style=&#34;color: #f0e68c;&#34;&gt;declare&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;tablename&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;varchar&lt;/span&gt;(&lt;span style=&#34;color: #ffffff;&#34;&gt;1000&lt;/span&gt;)&lt;br /&gt;&lt;span style=&#34;color: #f0e68c;&#34;&gt;declare&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;fieldname&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;varchar&lt;/span&gt;(&lt;span style=&#34;color: #ffffff;&#34;&gt;1000&lt;/span&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;color: #f0e68c;&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;tablename&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;&amp;lsquo;SOTransaction&amp;rsquo;&lt;/span&gt;;&lt;br /&gt;&lt;span style=&#34;color: #f0e68c;&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;fieldname&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;&amp;lsquo;UnitCostWithoutTax&amp;rsquo;&lt;/span&gt;;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;color: #f0e68c;&#34;&gt;select&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;name&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;=&lt;/span&gt; b&lt;span style=&#34;color: #ffffff;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;name&lt;/span&gt; &lt;span style=&#34;color: #f0e68c;&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;syscolumns&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color: #f0e68c;&#34;&gt;inner&lt;/span&gt; &lt;span style=&#34;color: #f0e68c;&#34;&gt;join&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;sysobjects&lt;/span&gt; b&lt;br /&gt;    &lt;span style=&#34;color: #f0e68c;&#34;&gt;on&lt;/span&gt; b&lt;span style=&#34;color: #ffffff;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;a&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;cdefault&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #f0e68c;&#34;&gt;where&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #ffffff;&#34;&gt;a&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;object_id&lt;/span&gt;(&lt;span style=&#34;color: #ffffff;&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;tablename&lt;/span&gt;)&lt;br /&gt;    &lt;span style=&#34;color: #f0e68c;&#34;&gt;and&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;a&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;=@&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;fieldname&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #f0e68c;&#34;&gt;and&lt;/span&gt; b&lt;span style=&#34;color: #ffffff;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;name&lt;/span&gt; &lt;span style=&#34;color: #f0e68c;&#34;&gt;like&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;&amp;lsquo;DF%&amp;rsquo;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #87ceeb;&#34;&gt;&amp;ndash;print @name&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;color: #f0e68c;&#34;&gt;exec&lt;/span&gt;(&lt;span style=&#34;color: #ffffff;&#34;&gt;&amp;rsquo; alter table SOTransaction drop constraint &amp;lsquo;&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;name&lt;/span&gt;);&lt;br /&gt;&lt;span style=&#34;color: #f0e68c;&#34;&gt;go&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #f0e68c;&#34;&gt;alter&lt;/span&gt; &lt;span style=&#34;color: #f0e68c;&#34;&gt;table&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;dbo&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;SOTransaction&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #f0e68c;&#34;&gt;add&lt;/span&gt; &lt;span style=&#34;color: #f0e68c;&#34;&gt;constraint&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;DF_SOTransaction_UnitCostWithoutTax&lt;/span&gt; &lt;span style=&#34;color: #f0e68c;&#34;&gt;default&lt;/span&gt; (&lt;span style=&#34;color: #ffffff;&#34;&gt;0&lt;/span&gt;) &lt;span style=&#34;color: #f0e68c;&#34;&gt;for&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;UnitCostWithoutTax&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>rails中的ActiveRecord真性感！</title>
+      <link>http://huobazi.aspxboy.com/blog/2009/09/24/sexy-activerecord/</link>
+      <pubDate>Thu, 24 Sep 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2009/09/24/sexy-activerecord/</guid>
+      <description>&lt;p&gt;Rails使用的ActiveRecord真性感啊，see see吧&lt;/p&gt;
+&lt;div class=&#34;source&#34; style=&#34;COLOR: #dcdccc; FONT-FAMILY: &#39;[object]&#39;,&#39;Consolas&#39;,&#39;Lucida Console&#39;,&#39;Courier New&#39;; BACKGROUND-COLOR: #3f3f3f&#34;&gt;
+&lt;span style=&#34;COLOR: #e3ceab&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;User&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;FONT-WEIGHT: bold; COLOR: #dca3a3&#34;&gt;ActiveRecord&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;FONT-WEIGHT: bold; COLOR: #dca3a3&#34;&gt;Base&lt;/span&gt;  &lt;br /&gt;  &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;has_many&lt;/span&gt; &lt;span style=&#34;COLOR: #cc9393&#34;&gt;:articles&lt;/span&gt;  &lt;br /&gt;&lt;span style=&#34;COLOR: #e3ceab&#34;&gt;end&lt;/span&gt;  &lt;br /&gt; &lt;br /&gt;&lt;span style=&#34;COLOR: #e3ceab&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;Article&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;FONT-WEIGHT: bold; COLOR: #dca3a3&#34;&gt;ActiveRecord&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;FONT-WEIGHT: bold; COLOR: #dca3a3&#34;&gt;Base&lt;/span&gt;&lt;br /&gt;  &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;belongs_to&lt;/span&gt; &lt;span style=&#34;COLOR: #cc9393&#34;&gt;:user&lt;/span&gt;  &lt;br /&gt;&lt;span style=&#34;COLOR: #e3ceab&#34;&gt;end&lt;/span&gt;
+&lt;/div&gt;
+&lt;p&gt;然后执行&lt;br /&gt;&amp;gt;&amp;gt; &lt;strong&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;Article.find(1)&lt;/span&gt; &lt;/strong&gt;会得到延迟加载user对象的sql语句。如下：&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;div class=&#34;source&#34; style=&#34;COLOR: #dcdccc; FONT-FAMILY: &#39;[object]&#39;,&#39;Consolas&#39;,&#39;Lucida Console&#39;,&#39;Courier New&#39;; BACKGROUND-COLOR: #3f3f3f&#34;&gt;
+&lt;span style=&#34;COLOR: #e3ceab&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;WHERE&lt;/span&gt; (&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;id&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;COLOR: #8cd0d3&#34;&gt;1&lt;/span&gt;) &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;LIMIT&lt;/span&gt; &lt;span style=&#34;COLOR: #8cd0d3&#34;&gt;1&lt;/span&gt;
+&lt;/div&gt;
+&lt;p&gt;当需要访问user对象时，比如用article.user.name会再生成一个sql语句请求数据库。&lt;br /&gt;如果执行&lt;br /&gt;&amp;gt;&amp;gt; &lt;strong&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;Article.find(1,:include =&amp;gt; :user)&lt;/span&gt;&lt;/strong&gt; 会得到一次性加载了user的查询&lt;/p&gt;
+&lt;div class=&#34;source&#34; style=&#34;COLOR: #dcdccc; FONT-FAMILY: &#39;[object]&#39;,&#39;Consolas&#39;,&#39;Lucida Console&#39;,&#39;Courier New&#39;; BACKGROUND-COLOR: #3f3f3f&#34;&gt;
+&lt;span style=&#34;COLOR: #e3ceab&#34;&gt;SELECT&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;extended_html&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r6&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;excerpt&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r7&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;keywords&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r8&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;allow_pings&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r10&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;allow_comments&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r9&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;users&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t1_r0&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;published&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r11&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;users&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;login&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t1_r1&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;text_filter&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r12&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r0&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;users&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;password&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t1_r2&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;user_id&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r13&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;title&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r1&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;users&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t1_r3&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;created_at&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r14&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;author&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r2&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;users&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;email&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t1_r4&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;updated_at&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r15&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;body&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r3&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;permalink&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r16&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;body_html&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r4&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;guid&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r17&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;extended&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r5&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #e3ceab&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;LEFT&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;OUTER&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;JOIN&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;users&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #e3ceab&#34;&gt;ON&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;users&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;id&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;user_id&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #e3ceab&#34;&gt;WHERE&lt;/span&gt; (&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;id&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;COLOR: #8cd0d3&#34;&gt;1&lt;/span&gt;)&lt;/div&gt;
+&lt;p&gt;是不是很优美，很性感涅？&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;                
+</description>
+    </item>
+    
+    <item>
+      <title>如何判断一个类型是nullable类型，并得知它的原始类型</title>
+      <link>http://huobazi.aspxboy.com/blog/2009/07/30/how-to-determine-whether-an-type-is-nullable-and-get-the-underlying-type/</link>
+      <pubDate>Thu, 30 Jul 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2009/07/30/how-to-determine-whether-an-type-is-nullable-and-get-the-underlying-type/</guid>
+      <description>&lt;p&gt;&lt;p&gt;有些时候我们需要判断某个类型是否是Nullable类型，并且可能需要知道它的原始类型，&lt;br /&gt;比如在做些ORM相关工作时，就需要这方面的应用，如下代码使用可以实现这个要求&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;pre&gt;class Program
+    {
+        static void Main( string[] args )
+        {
+            RL( );&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;        Type type =  typeof( DateTime? );
+        Type originalType;
+
+        if ( IsNullable( type , out originalType ) )
+        {
+            WL( originalType.ToString( ) );
+        }
+        else
+        {
+            WL( &amp;quot;NOT Nullable&amp;quot; );
+        }
+
+        type =  typeof( DateTime );
+
+        if ( IsNullable( type , out originalType ) )
+        {
+            WL( originalType.ToString( ) );
+        }
+        else
+        {
+            WL( &amp;quot;NOT Nullable&amp;quot; );
+        }
+
+        RL( );
+    }
+
+    private static bool IsNullable( Type p , out Type originalType )
+    {
+        bool result = false;
+
+        if ( p.IsGenericType &amp;amp;amp;&amp;amp;amp; p.GetGenericTypeDefinition( ) == typeof( Nullable&amp;amp;lt;&amp;amp;gt; ) )
+        {
+            result = true;
+            originalType = p.GetGenericArguments( )[0];
+        }
+        else
+        {
+            originalType = null;
+        }
+
+        return result;
+    }
+
+    #region Helper methods
+
+    private static void WL( object text , params object[] args )
+    {
+        Console.WriteLine( text.ToString( ) , args );
+    }
+
+    private static void RL( )
+    {
+        Console.ReadLine( );
+    }
+
+    private static void Break( )
+    {
+        System.Diagnostics.Debugger.Break( );
+    }
+
+    #endregion
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;&lt;/pre&gt;                
+</description>
+    </item>
+    
+    <item>
+      <title>Asp.Net发邮件，如何发送附件</title>
+      <link>http://huobazi.aspxboy.com/blog/2009/07/21/how-to-send-an-email-with-attachments/</link>
+      <pubDate>Tue, 21 Jul 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2009/07/21/how-to-send-an-email-with-attachments/</guid>
+      <description>&lt;p&gt;&lt;p&gt;使用如下代码可以发送附件&lt;/p&gt;
+&lt;pre&gt;MailMessage mail = new MailMessage();
+mail.To = &amp;rdquo;me@mycompany.com&amp;rdquo;;
+mail.From = &amp;rdquo;you@yourcompany.com&amp;rdquo;;
+mail.Subject = &amp;rdquo;this is a test email.&amp;ldquo;;
+mail.Body = &amp;rdquo;this is my test email body.&amp;ldquo;;
+MailAttachment attachment = new MailAttachment( Server.MapPath( &amp;rdquo;mailTest.txt&amp;rdquo; ) ); //create the attachment
+mail.Attachments.Add( attachment );
+SmtpMail.SmtpServer = &amp;rdquo;localhost&amp;rdquo;; 
+SmtpMail.Send( mail );&lt;/pre&gt;
+&lt;p&gt;使用如下代码可以在用户上传附件后发生邮件:&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;pre&gt;if  (FileUpload1.HasFile)
+{
+    string  toAddress  =  &amp;rdquo;you@yourprovider.com&amp;rdquo;;
+    string  fromAddress  =  you@yourprovider.com  (2);
+    string  mailServer  =  &amp;rdquo;smtp.yourprovider.com&amp;rdquo;;&lt;/p&gt;
+
+&lt;p&gt;    MailMessage  myMailMessage  =  new  MailMessage();&lt;/p&gt;
+
+&lt;p&gt;    myMailMessage.To.Add(toAddress);
+    myMailMessage.From  =  new  MailAddress(fromAddress);
+    myMailMessage.Subject  =  &amp;rdquo;Test  Message&amp;rdquo;;&lt;/p&gt;
+
+&lt;p&gt;    string  fileName  =  Path.GetFileName(FileUpload1.PostedFile.FileName);
+    Attachment  myAttachment  =  
+                                  new  Attachment(FileUpload1.FileContent,  fileName);
+    myMailMessage.Attachments.Add(myAttachment);&lt;/p&gt;
+
+&lt;p&gt;    SmtpClient  mySmtpClient  =  new  SmtpClient(mailServer);&lt;/p&gt;
+
+&lt;p&gt;    mySmtpClient.Send(myMailMessage);
+}&lt;/pre&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>C#中如何深度克隆一个对象？</title>
+      <link>http://huobazi.aspxboy.com/blog/2009/07/15/make-a-deep-clone-of-the-object/</link>
+      <pubDate>Wed, 15 Jul 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2009/07/15/make-a-deep-clone-of-the-object/</guid>
+      <description>&lt;p&gt;&lt;p&gt;如何深度克隆一个对象？&lt;/p&gt;
+&lt;p&gt;普通版:&lt;/p&gt;
+&lt;pre&gt;
+        public static object CloneObject( object obj )
+        {
+            using ( MemoryStream memStream = new MemoryStream( ) )
+            {
+                BinaryFormatter binaryFormatter = new BinaryFormatter( null ,
+                     new StreamingContext( StreamingContextStates.Clone ) );
+                binaryFormatter.Serialize( memStream , obj );
+                memStream.Seek( 0 , SeekOrigin.Begin );
+                return binaryFormatter.Deserialize( memStream );
+            }
+        }
+&lt;/pre&gt;
+&lt;p&gt;泛型版：&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;pre&gt;public  static  T  Clone&amp;lt;T&amp;gt;(T  obj)
+{
+        T  ret  =  default(T);
+        if  (obj  !=  null)
+        {
+                XmlSerializer  cloner  =  new  XmlSerializer(typeof(T));
+                MemoryStream  stream  =  new  MemoryStream();
+                cloner.Serialize(stream,  obj);
+                stream.Seek(0,  SeekOrigin.Begin);
+                ret  =  (T)cloner.Deserialize(stream);
+        }
+        return  ret;
+}&lt;/pre&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>nginx下typecho的rewrite</title>
+      <link>http://huobazi.aspxboy.com/blog/2009/07/09/nginx-typecho-rewrite/</link>
+      <pubDate>Thu, 09 Jul 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2009/07/09/nginx-typecho-rewrite/</guid>
+      <description>&lt;p&gt;导数据到typecho的时候是在localhost的windows xp系统上用的apache,部署时用的是nginx&lt;br /&gt;先是发现无法登陆按照&lt;a href=&#34;http://forum.typecho.org/viewtopic.php?f=4&amp;amp;t=238&amp;amp;p=852&amp;amp;hilit=nginx#p852&#34; target=&#34;_blank&#34;&gt;这篇帖子&lt;/a&gt;内的方法配置了vhost.conf，发现可以登陆了，接着又出现了&lt;br /&gt;无法编辑post的问题，具体症状见&lt;a href=&#34;http://forum.typecho.org/viewtopic.php?f=4&amp;amp;t=270&#34; target=&#34;_blank&#34;&gt;这篇帖子&lt;/a&gt;,甚是郁闷啊，google+baidu 找到一片描写wp的&lt;br /&gt;rewrite的&lt;a href=&#34;http://hi.baidu.com/3322/blog/item/95d254e7594a012bb93820bb.html&#34; target=&#34;_blank&#34;&gt;帖子&lt;/a&gt;,因typecho与wp笔记像，抱着试试看的想法,在测试站点试验了一下，嘿嘿&lt;br /&gt;能用，转寄在此，备忘&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;pre&gt;
+location / {
+        index index.html index.php;
+        if (-f $request_filename/index.html){
+            rewrite (.*) $1/index.html break;
+        }
+        if (-f $request_filename/index.php){
+            rewrite (.*) $1/index.php;
+        }
+        if (!-f $request_filename){
+            rewrite (.*) /index.php;
+        }
+    }
+&lt;/pre&gt;
+&lt;p&gt;同时感谢&lt;a class=&#34;titlink&#34; title=&#34;Atrhis的空间 http://hi.baidu.com/3322&#34; href=&#34;http://huobazi.aspxboy.com/3322&#34;&gt;Atlantis&lt;/a&gt;  :-)&lt;/p&gt;               
+</description>
+    </item>
+    
+    <item>
+      <title>我学Linq to SQL做的demo</title>
+      <link>http://huobazi.aspxboy.com/blog/2008/07/19/cb-1246773/</link>
+      <pubDate>Sat, 19 Jul 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2008/07/19/cb-1246773/</guid>
+      <description>&lt;p&gt;最近才开始学LINQ to SQL,&lt;/p&gt;
+&lt;p&gt;做了个demo，都是基本操作。&lt;/p&gt;
+&lt;p&gt;有兴趣的朋友看看。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://download.csdn.net/source/528628&#34;&gt;http://download.csdn.net/source/528628&lt;/a&gt;&lt;/p&gt;
+&lt;p mce_keep=&#34;true&#34;&gt; &lt;/p&gt;                
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Profilecommon on 武眉博</title>
+    <link>http://huobazi.aspxboy.com/tags/profilecommon/</link>
+    <description>Recent content in Profilecommon on 武眉博</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 06 Jun 2007 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://huobazi.aspxboy.com/tags/profilecommon/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>如何在Web App Project 或者 Web Site Project的App_Code 内使用 Profile/ProfileCommon</title>
+      <link>http://huobazi.aspxboy.com/blog/2007/06/06/howtouserprofileinwebsiteprojectinvs2005sp1/</link>
+      <pubDate>Wed, 06 Jun 2007 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2007/06/06/howtouserprofileinwebsiteprojectinvs2005sp1/</guid>
+      <description>&lt;p&gt;在 web site project 内 可以很方便的使用 Profile/ProfileCommon 来 访问我们在web.config 的profile节内定义的properties ， 并且有很爽的 intellisense &lt;br /&gt;然而在Web App Project或者Web Site Project的App_Code内使用的时候 编译都通不过的，因为 Profile 是 web site project 模型 在页面 执行时候创建在HttpContext的，Web Site Project 或者App_Code编译的时候还没有页面实例呢，何谈HttpContext, 当然无法使用了&lt;br /&gt;&lt;br /&gt;引用&lt;a title=&#34;http://weblogs.asp.net/scottgu/&#34; href=&#34;http://weblogs.asp.net/scottgu/&#34; target=&#34;_blank&#34;&gt;scottgu&lt;/a&gt;的原话解释“This is supported because with the VS 2005 Web Site Project option Visual Studio is dynamically creating and adding a &#34;ProfileCommon&#34; class named &#34;Profile&#34; into every code-behind instance”，那么怎么办呢 &lt;a title=&#34;http://weblogs.asp.net/scottgu/&#34; href=&#34;http://weblogs.asp.net/scottgu/&#34; target=&#34;_blank&#34;&gt;scottgu&lt;/a&gt; 支招------“VS 2005 Web Application Projects don&#39;t automatically support generating a strongly-typed Profile class proxy. &lt;strong style=&#34;FONT-SIZE: 18pt; COLOR: #ff0000&#34;&gt;However&lt;/strong&gt;, you &lt;a style=&#34;COLOR: #ff0000&#34; href=&#34;http://www.gotdotnet.com/workspaces/workspace.aspx?id=406eefba-2dd9-4d80-a48c-b4f135df4127&#34;&gt;&lt;strong&gt;can use this free download&lt;/strong&gt;&lt;/a&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt; &lt;/span&gt;to automatically keep your own proxy class in sync with the profile configuration”。&lt;br /&gt;&lt;br /&gt;我们可以到 &lt;a href=&#34;http://www.gotdotnet.com/&#34; target=&#34;_blank&#34;&gt;gotdotnet &lt;/a&gt;上下载这个 addin  安装，经我测试 这个东西装在中文VS2005 SP1 上右键不会出现菜单(只会出现在外部程序管理器内，看的到用不成，不开心)。&lt;br /&gt;好在他有源码的，我们用他的源码 找到 大概 40行上下&lt;br /&gt;string toolsMenuName ;定义部分 &lt;br /&gt;直接 string toolsMenuName = &#34;工具&#34;; 然后下面的 try catch 注释掉----编译---然后把dll文件&lt;br /&gt;替换到 C:\Documents and Settings\武眉博\My Documents\Visual Studio 2005\AddIns&lt;br /&gt;就可以用了（原因可能是他的资源文件有问题）&lt;br /&gt;接下来按照readme使用吧。&lt;br /&gt;==================================================&lt;br /&gt;To use the generator right click on web.config in a Web Application Project and&lt;br /&gt;select &#34;Generate WebProfile.&#34;  This will create a WebProfile class in your&lt;br /&gt;project based on the current profile setting sin Web.Config.  If you make a &lt;br /&gt;change to your profile setting you need to run the tool again to update the &lt;br /&gt;WebProfile class.  The WebProfile class is simply a thin wrapper that has&lt;br /&gt;strongly typed accessors to profile properties.&lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;To use the web profile class in a page create an accessor like this:&lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    // C# accessor&lt;br /&gt;    private WebProfile Profile&lt;br /&gt;    {&lt;br /&gt;        get { return new WebProfile(Context.Profile); }&lt;br /&gt;    }&lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    &#39; VB accessor&lt;br /&gt;    Private ReadOnly Property Profile() As WebProfile&lt;br /&gt;        Get&lt;br /&gt;            Return New WebProfile(Context.Profile)&lt;br /&gt;        End Get&lt;br /&gt;    End Property&lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;Then you can use it like this:&lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    // C# use or accessor&lt;br /&gt;    string s = Profile.MyProperty;&lt;br /&gt;    Profile.MyGroup.MyProperty = &#34;value&#34;;&lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    &#39; VB use of accessor&lt;br /&gt;    Dim prop As String = Profile.MyProperty&lt;br /&gt;    Profile.MyGroup.MyProperty = &#34;value&#34;&lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;You can also access the current profile using the static Current property&lt;br /&gt;like this:&lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    // C# use of Current property&lt;br /&gt;    string s = WebProfile.Current.MyProperty;&lt;br /&gt;    WebProfile.Current.MyGroup.MyProperty = &#34;value&#34;;&lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    // VB use of Current property&lt;br /&gt;    Dim s As String = WebProfile.Current.MyProperty&lt;br /&gt;    WebProfile.Current.MyGroup.MyProperty = &#34;value&#34;&lt;br /&gt;    ========================================================&lt;br /&gt;如果你用的是Web Site Project 想在App_Code内用Profile那么建议 创建一个WebSiteProject web.config拷贝过去仍然使用这个AddIn生成一个WebProfile.cs拷贝回你的app_code内就可以了（哎，怎么感觉像是说了个废话，还不如直接用Web App Project呢）&lt;br /&gt;OK,就这么几步了。记在这里希望对朋友们有用，睡觉了。&lt;br /&gt;&lt;br /&gt;参考资料： &lt;a href=&#34;http://webproject.scottgu.com/CSharp/migration2/migration2.aspx&#34;&gt;http://webproject.scottgu.com/CSharp/migration2/migration2.aspx&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;              
+</description>
+    </item>
+    
+  </channel>
+</rss>

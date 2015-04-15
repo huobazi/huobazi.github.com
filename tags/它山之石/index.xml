@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>它山之石 on 武眉博</title>
+    <link>http://huobazi.aspxboy.com/tags/%E5%AE%83%E5%B1%B1%E4%B9%8B%E7%9F%B3/</link>
+    <description>Recent content in 它山之石 on 武眉博</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 13 Apr 2010 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://huobazi.aspxboy.com/tags/%E5%AE%83%E5%B1%B1%E4%B9%8B%E7%9F%B3/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>win7上安装memcache</title>
+      <link>http://huobazi.aspxboy.com/blog/2010/04/13/win7-memcache/</link>
+      <pubDate>Tue, 13 Apr 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2010/04/13/win7-memcache/</guid>
+      <description>&lt;p&gt;像原来在xp下装一样&lt;/p&gt;
+&lt;p&gt;memcached.exe -d install&lt;br /&gt;memcached.exe -d start&lt;/p&gt;
+&lt;p&gt;报错“ failed to install service or service already installed”&lt;/p&gt;
+&lt;p&gt;解决方法：&lt;/p&gt;
+&lt;p&gt;管理员身份安装，首先找出cmd.exe的原文件（在c:\windows\system32\cmd.exe)，&lt;/p&gt;
+&lt;p&gt;右击以管理员进入，接下来的步骤就和xp安装方法一样了&lt;/p&gt;               
+</description>
+    </item>
+    
+    <item>
+      <title>漂亮的VIM配色方案</title>
+      <link>http://huobazi.aspxboy.com/blog/2010/01/11/vim-color-scheme/</link>
+      <pubDate>Mon, 11 Jan 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2010/01/11/vim-color-scheme/</guid>
+      <description>&lt;p&gt;&lt;p&gt;这里&lt;br /&gt;&lt;a href=&#34;http://code.google.com/p/vimcolorschemetest/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://code.google.com/p/vimcolorschemetest/&#34;&gt;http://code.google.com/p/vimcolorschemetest/&lt;/a&gt;&lt;/a&gt;&lt;br /&gt;有一堆一堆的配色方案&lt;/p&gt;
+&lt;h1&gt;&lt;a name=&#34;Browse_By_File_Type&#34;&gt;Browse By File Type&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a name=&#34;Browse_By_File_Type&#34;&gt;Featuring 428 schemes: &lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a rel=&#34;nofollow&#34; href=&#34;http://vimcolorschemetest.googlecode.com/svn/html/index-c.html&#34;&gt;C&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a rel=&#34;nofollow&#34; href=&#34;http://vimcolorschemetest.googlecode.com/svn/html/index-html.html&#34;&gt;HTML&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a rel=&#34;nofollow&#34; href=&#34;http://vimcolorschemetest.googlecode.com/svn/html/index-java.html&#34;&gt;Java&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a rel=&#34;nofollow&#34; href=&#34;http://vimcolorschemetest.googlecode.com/svn/html/index-pl.html&#34;&gt;Perl&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a rel=&#34;nofollow&#34; href=&#34;http://vimcolorschemetest.googlecode.com/svn/html/index-tex.html&#34;&gt;LaTeX&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>把你的netbeans变成英文版</title>
+      <link>http://huobazi.aspxboy.com/blog/2010/01/07/349/</link>
+      <pubDate>Thu, 07 Jan 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2010/01/07/349/</guid>
+      <description>&lt;p&gt;呵呵其实很简单，装完后再你使用的快捷方式内增加&lt;/p&gt;
+&lt;p&gt;--locale en:us就可以了，比如我的快捷方式里的设置为：&lt;/p&gt;
+&lt;p&gt;&#34;D:\Program Files\NetBeans 6.8\bin\netbeans.exe&#34; --locale en:us&lt;/p&gt;
+&lt;p&gt;ok 英文了.&lt;/p&gt;
+&lt;p&gt;按照这个方法你可以为自己定制很多套语言版本的netbeans，但只要一份安装。&lt;/p&gt;              
+</description>
+    </item>
+    
+    <item>
+      <title>Graffiti CMS  开源了</title>
+      <link>http://huobazi.aspxboy.com/blog/2009/12/18/graffiti-cms-is-now-free-open-source/</link>
+      <pubDate>Fri, 18 Dec 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2009/12/18/graffiti-cms-is-now-free-open-source/</guid>
+      <description>&lt;p&gt;&lt;table border=&#34;0&#34; cellspacing=&#34;0&#34; cellpadding=&#34;0&#34;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style=&#34;height: 90px;&#34; valign=&#34;middle&#34;&gt;&lt;div style=&#34;padding-left: 1.1em; padding-top: 1.1em; padding-bottom: 0.8em;&#34;&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;div class=&#34;ProjectTitleControl HalfMarginBottom&#34;&gt;
+&lt;a id=&#34;ctl00_ctl00_MasterContent_ProjectTitleControl1_ProjectTitleLink&#34; href=&#34;http://graffiticms.codeplex.com/&#34;&gt;&lt;img id=&#34;ctl00_ctl00_MasterContent_ProjectTitleControl1_ProjectLogo&#34; class=&#34;HalfPaddingRight&#34; style=&#34;border-width: 0px;&#34; src=&#34;http://download.codeplex.com/Project/Download/FileDownload.aspx?ProjectName=graffiticms&amp;amp;DownloadId=96612&amp;amp;Build=16135&#34; alt=&#34;&#34; align=&#34;absmiddle&#34;&gt;&lt;/a&gt; &lt;a id=&#34;ctl00_ctl00_MasterContent_ProjectTitleControl1_ProjectTitleLink1&#34; href=&#34;http://graffiticms.codeplex.com/&#34;&gt;&lt;h1 id=&#34;ctl00_ctl00_MasterContent_ProjectTitleControl1_ProjectHeader&#34; class=&#34;ProjectHeader NoMargin Inline&#34;&gt;&lt;span id=&#34;ctl00_ctl00_MasterContent_ProjectTitleControl1_TitleLabel&#34;&gt;Graffiti CMS&lt;/span&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;/p&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;see also:&lt;a href=&#34;http://weblogs.asp.net/kencox/archive/2009/12/17/graffiti-cms-is-now-free-open-source.aspx&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://weblogs.asp.net/kencox/archive/2009/12/17/graffiti-cms-is-now-free-open-source.aspx&#34;&gt;http://weblogs.asp.net/kencox/archive/2009/12/17/graffiti-cms-is-now-free-open-source.aspx&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>【How to】解决Visio虚线复制到word中变为实线</title>
+      <link>http://huobazi.aspxboy.com/blog/2009/10/10/visio-dashed/</link>
+      <pubDate>Sat, 10 Oct 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2009/10/10/visio-dashed/</guid>
+      <description>&lt;p&gt;添加 MetafileDashLineAsSolid 到以下注册表位置，类型DWORD。&lt;/p&gt;
+&lt;p&gt; • Visio 2007&lt;br /&gt;HKEY_CURRENT_USER\Software\Microsoft\Office\12.0\Visio\Application&lt;br /&gt;• Visio 2003&lt;br /&gt;HKEY_CURRENT_USER\Software\Microsoft\Office\11.0\Visio\Application&lt;br /&gt;属性值：&lt;/p&gt;
+&lt;p&gt;• 0：虚线或虚线行执行不替换为实线。&lt;br /&gt;• 1：虚线或虚线极端情形中行只替换为实线。 100 倍的原始文件大小时可能导致文件大小中增加例如, 替换实线为虚线或虚线行。 &lt;br /&gt;• 2：替换实线用于当合理虚线或虚线行。 这是默认值。 &lt;br /&gt;• 3：始终替换为实线虚线或虚线行。 &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;                
+</description>
+    </item>
+    
+    <item>
+      <title>服务器状态代码含义</title>
+      <link>http://huobazi.aspxboy.com/blog/2009/09/02/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8A%B6%E6%80%81%E4%BB%A3%E7%A0%81%E5%90%AB%E4%B9%89/</link>
+      <pubDate>Wed, 02 Sep 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2009/09/02/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8A%B6%E6%80%81%E4%BB%A3%E7%A0%81%E5%90%AB%E4%B9%89/</guid>
+      <description>&lt;p&gt;&lt;h2 class=&#34;title&#34;&gt;服务器状态代码含义google来的，存档。&lt;/h2&gt;
+&lt;p class=&#34;title&#34;&gt; &lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;table border=&#34;1&#34; cellspacing=&#34;1&#34; cellpadding=&#34;4&#34; width=&#34;100%&#34; align=&#34;center&#34; bordercolor=&#34;#009999&#34;&gt;&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td width=&#34;25&#34; align=&#34;center&#34;&gt;100&lt;/td&gt;
+&lt;td width=&#34;150&#34; align=&#34;center&#34;&gt;Continue&lt;/td&gt;
+&lt;td&gt;初始的请求已经接受，客户应当继续发送请求的其余部分。（HTTP 1.1新）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;101&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Switching Protocols&lt;/td&gt;
+&lt;td&gt;服务器将遵从客户的请求转换到另外一种协议（HTTP 1.1新）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;200&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;OK&lt;/td&gt;
+&lt;td&gt;一切正常，对GET和POST请求的应答文档跟在后面。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;201&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Created&lt;/td&gt;
+&lt;td&gt;服务器已经创建了文档，Location头给出了它的URL。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;202&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Accepted&lt;/td&gt;
+&lt;td&gt;已经接受请求，但处理尚未完成。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;203&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Non-Authoritative Information&lt;/td&gt;
+&lt;td&gt;文档已经正常地返回，但一些应答头可能不正确，因为使用的是文档的拷贝（HTTP 1.1新）。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;204&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;No Content&lt;/td&gt;
+&lt;td&gt;没有新文档，浏览器应该继续显示原来的文档。如果用户定期地刷新页面，而Servlet可以确定用户文档足够新，这个状态代码是很有用的。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;205&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Reset Content&lt;/td&gt;
+&lt;td&gt;没有新的内容，但浏览器应该重置它所显示的内容。用来强制浏览器清除表单输入内容（HTTP 1.1新）。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;206&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Partial Content&lt;/td&gt;
+&lt;td&gt;客户发送了一个带有Range头的GET请求，服务器完成了它（HTTP 1.1新）。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;300&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Multiple Choices&lt;/td&gt;
+&lt;td&gt;客户请求的文档可以在多个位置找到，这些位置已经在返回的文档内列出。如果服务器要提出优先选择，则应该在Location应答头指明。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;301&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Moved Permanently&lt;/td&gt;
+&lt;td&gt;客户请求的文档在其他地方，新的URL在Location头中给出，浏览器应该自动地访问新的URL。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;302&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Found&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt;类似于301，但新的URL应该被视为临时性的替代，而不是永久性的。注意，在HTTP1.0中对应的状态信息是“Moved Temporatily”。&lt;br /&gt;出现该状态代码时，浏览器能够自动访问新的URL，因此它是一个很有用的状态代码。&lt;/p&gt;
+&lt;p&gt;注意这个状态代码有时候可以和301替换使用。例如，如果浏览器错误地请求&lt;a href=&#34;http://host/~user（缺少了后面的斜杠），有的服务器返回301，有的则返回302。&#34;&gt;http://host/~user（缺少了后面的斜杠），有的服务器返回301，有的则返回302。&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;严格地说，我们只能假定只有当原来的请求是GET时浏览器才会自动重定向。请参见307。&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;303&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;See Other&lt;/td&gt;
+&lt;td&gt;类似于301/302，不同之处在于，如果原来的请求是POST，Location头指定的重定向目标文档应该通过GET提取（HTTP 1.1新）。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;304&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Not Modified&lt;/td&gt;
+&lt;td&gt;客户端有缓冲的文档并发出了一个条件性的请求（一般是提供If-Modified-Since头表示客户只想比指定日期更新的文档）。服务器告诉客户，原来缓冲的文档还可以继续使用。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;305&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Use Proxy&lt;/td&gt;
+&lt;td&gt;客户请求的文档应该通过Location头所指明的代理服务器提取（HTTP 1.1新）。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;307&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Temporary Redirect&lt;/td&gt;
+&lt;td&gt;和302（Found）相同。许多浏览器会错误地响应302应答进行重定向，即使原来的请求是POST，即使它实际上只能在POST请求的应答是303时才能重定向。由于这个原因，HTTP 1.1新增了307，以便更加清除地区分几个状态代码：当出现303应答时，浏览器可以跟随重定向的GET和POST请求；如果是307应答，则浏览器只能跟随对GET请求的重定向。（HTTP 1.1新）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;400&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Bad Request&lt;/td&gt;
+&lt;td&gt;请求出现语法错误。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;401&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Unauthorized&lt;/td&gt;
+&lt;td&gt;客户试图未经授权访问受密码保护的页面。应答中会包含一个WWW-Authenticate头，浏览器据此显示用户名字/密码对话框，然后在填写合适的Authorization头后再次发出请求。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;403&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Forbidden&lt;/td&gt;
+&lt;td&gt;资源不可用。服务器理解客户的请求，但拒绝处理它。通常由于服务器上文件或目录的权限设置导致。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;404&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Not Found&lt;/td&gt;
+&lt;td&gt;无法找到指定位置的资源。这也是一个常用的应答。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;405&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Method Not Allowed&lt;/td&gt;
+&lt;td&gt;请求方法（GET、POST、HEAD、DELETE、PUT、TRACE等）对指定的资源不适用。（HTTP 1.1新）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;406&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Not Acceptable&lt;/td&gt;
+&lt;td&gt;指定的资源已经找到，但它的MIME类型和客户在Accpet头中所指定的不兼容（HTTP 1.1新）。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;407&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Proxy Authentication Required&lt;/td&gt;
+&lt;td&gt;类似于401，表示客户必须先经过代理服务器的授权。（HTTP 1.1新）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;408&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Request Timeout&lt;/td&gt;
+&lt;td&gt;在服务器许可的等待时间内，客户一直没有发出任何请求。客户可以在以后重复同一请求。（HTTP 1.1新）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;409&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Conflict&lt;/td&gt;
+&lt;td&gt;通常和PUT请求有关。由于请求和资源的当前状态相冲突，因此请求不能成功。（HTTP 1.1新）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;410&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Gone&lt;/td&gt;
+&lt;td&gt;所请求的文档已经不再可用，而且服务器不知道应该重定向到哪一个地址。它和404的不同在于，返回407表示文档永久地离开了指定的位置，而404表示由于未知的原因文档不可用。（HTTP 1.1新）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;411&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Length Required&lt;/td&gt;
+&lt;td&gt;服务器不能处理请求，除非客户发送一个Content-Length头。（HTTP 1.1新）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;412&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Precondition Failed&lt;/td&gt;
+&lt;td&gt;请求头中指定的一些前提条件失败（HTTP 1.1新）。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;413&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Request Entity Too Large&lt;/td&gt;
+&lt;td&gt;目标文档的大小超过服务器当前愿意处理的大小。如果服务器认为自己能够稍后再处理该请求，则应该提供一个Retry-After头（HTTP 1.1新）。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;414&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Request URI Too Long&lt;/td&gt;
+&lt;td&gt;URI太长（HTTP 1.1新）。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;416&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Requested Range Not Satisfiable&lt;/td&gt;
+&lt;td&gt;服务器不能满足客户在请求中指定的Range头。（HTTP 1.1新）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;500&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Internal Server Error&lt;/td&gt;
+&lt;td&gt;服务器遇到了意料不到的情况，不能完成客户的请求。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;501&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Not Implemented&lt;/td&gt;
+&lt;td&gt;服务器不支持实现请求所需要的功能。例如，客户发出了一个服务器不支持的PUT请求。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;502&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Bad Gateway&lt;/td&gt;
+&lt;td&gt;服务器作为网关或者代理时，为了完成请求访问下一个服务器，但该服务器返回了非法的应答。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;503&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Service Unavailable&lt;/td&gt;
+&lt;td&gt;服务器由于维护或者负载过重未能应答。例如，Servlet可能在数据库连接池已满的情况下返回503。服务器返回503时可以提供一个Retry-After头。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;504&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Gateway Timeout&lt;/td&gt;
+&lt;td&gt;由作为代理或网关的服务器使用，表示不能及时地从远程服务器获得应答。（HTTP 1.1新）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;505&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;HTTP Version Not Supported&lt;/td&gt;
+&lt;td&gt;服务器不支持请求中所指明的HTTP版本。（HTTP 1.1新）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p class=&#34;aaa&#34;&gt; &lt;/p&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>如何判断一个网站是不是php做的？</title>
+      <link>http://huobazi.aspxboy.com/blog/2009/07/18/php-guid/</link>
+      <pubDate>Sat, 18 Jul 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2009/07/18/php-guid/</guid>
+      <description>&lt;p&gt;可以当作&lt;strong&gt;简易&lt;/strong&gt;判断站点是否用PHP架设。&lt;/p&gt;
+&lt;p&gt;PHP_LOGO_GUID&lt;br /&gt;&lt;a href=&#34;http://www.php.net/?=PHPE9568F34-D428-11d2-A769-00AA001ACF42&#34;&gt;http://www.php.net/?=PHPE9568F34-D428-11d2-A769-00AA001ACF42&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;PHP_EGG_LOGO_GUID&lt;br /&gt;&lt;a href=&#34;http://www.php.net/?=PHPE9568F36-D428-11d2-A769-00AA001ACF42&#34;&gt;http://www.php.net/?=PHPE9568F36-D428-11d2-A769-00AA001ACF42&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;ZEND_LOGO_GUID&lt;br /&gt;&lt;a href=&#34;http://www.php.net/?=PHPE9568F35-D428-11d2-A769-00AA001ACF42&#34;&gt;http://www.php.net/?=PHPE9568F35-D428-11d2-A769-00AA001ACF42&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;PHP_CREDITS_GUID&lt;br /&gt;&lt;a href=&#34;http://www.php.net/?=PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000&#34;&gt;http://www.php.net/?=PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;喜欢看愚人节的那个Logo就是第二个链接罗&lt;br /&gt;&lt;a href=&#34;http://www.php.net/&#34;&gt;http://www.php.net/&lt;/a&gt; 这个网址只是范例，只要是任一PHP的站点即可。&lt;/p&gt;
+&lt;p&gt;来源:&lt;a href=&#34;http://www.google.cn/search?client=aff-os-worldbrowser&amp;amp;forid=1&amp;amp;ie=utf-8&amp;amp;oe=UTF-8&amp;amp;hl=zh-CN&amp;amp;q=%E4%B8%80%E4%BA%9B%E5%86%85%E5%AE%9A%E7%9A%84PHP%E7%89%B9%E6%AE%8AGUID&#34; target=&#34;_blank&#34;&gt;http://www.google.cn/search?client=aff-os-worldbrowser&amp;amp;forid=1&amp;amp;ie=utf-8&amp;amp;oe=UTF-8&amp;amp;hl=zh-CN&amp;amp;q=%E4%B8%80%E4%BA%9B%E5%86%85%E5%AE%9A%E7%9A%84PHP%E7%89%B9%E6%AE%8AGUID&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;                
+</description>
+    </item>
+    
+    <item>
+      <title>哈佛经典案例，赶集卖猪记 </title>
+      <link>http://huobazi.aspxboy.com/blog/2008/11/01/hf/</link>
+      <pubDate>Sat, 01 Nov 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2008/11/01/hf/</guid>
+      <description>&lt;p&gt;哈佛经典案例，赶集卖猪记（次贷危机加强篇）&lt;br /&gt;　　&lt;br /&gt;　　这是目前为止关于次贷危机最通俗易懂的版本了。&lt;br /&gt;　　&lt;br /&gt;　　1&lt;br /&gt;　　&lt;br /&gt;　　大家都知道这个案例：&lt;br /&gt;　　&lt;br /&gt;　　一男赶集卖猪，天黑遇雨，二十头猪未卖成，到一农家借宿。&lt;br /&gt;　　&lt;br /&gt;　　少妇说：家里只一人不便。&lt;br /&gt;　&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;　&lt;br /&gt;　　男：求你了大妹子，给猪一头。&lt;br /&gt;　　&lt;br /&gt;　　女：好吧，但家只有一床。&lt;br /&gt;　　&lt;br /&gt;　　男：我也到床上睡，再给猪一头。&lt;br /&gt;　　&lt;br /&gt;　　女：同意。&lt;br /&gt;　　&lt;br /&gt;　　半夜男与女商量，我到你上面睡，女不肯。&lt;br /&gt;　　&lt;br /&gt;　　男：给猪两头。&lt;br /&gt;　　&lt;br /&gt;　　女允，要求上去不能动。&lt;br /&gt;　　&lt;br /&gt;　　少顷，男忍不住，央求动一下，女不肯。&lt;br /&gt;　　&lt;br /&gt;　　男：动一下给猪两头。女同意。&lt;br /&gt;　　&lt;br /&gt;　　男动了八次停下，女问为何不动？&lt;br /&gt;　　&lt;br /&gt;　　男说猪没了。&lt;br /&gt;　　&lt;br /&gt;　　女小声说：要不我给你猪……&lt;br /&gt;　　&lt;br /&gt;　　天亮后，男吹着口哨赶30头（含少妇家的10头）猪赶集去了……&lt;br /&gt;　　&lt;br /&gt;　　[ 哈佛导师评论 ]&lt;br /&gt;　　&lt;br /&gt;　　要发现用户潜在需求，前期必须引导，培养用户需求，因此产生的投入是符合发展规律的。&lt;br /&gt;　　&lt;br /&gt;　　2&lt;br /&gt;　　&lt;br /&gt;　　另一男得知此事，决意如法炮制，遂赶集卖猪，天黑遇雨，二十头猪未卖成，到一农家借宿&lt;br /&gt;　　&lt;br /&gt;　　少妇说：家里只一人不便。&lt;br /&gt;　　&lt;br /&gt;　　男：求你了大妹子，给猪一头&lt;br /&gt;　　&lt;br /&gt;　　女：好吧，但家只有一床。&lt;br /&gt;　　&lt;br /&gt;　　男：我也到床上睡，再给猪一头。&lt;br /&gt;　　&lt;br /&gt;　　女：同意。&lt;br /&gt;　　&lt;br /&gt;　　半夜男商女，我到你上面睡，女不肯。&lt;br /&gt;　　&lt;br /&gt;　　男：给猪两头。&lt;br /&gt;　　&lt;br /&gt;　　女允，要求上去不能动。&lt;br /&gt;　　&lt;br /&gt;　　少顷，男忍不住，央求动一下，女不肯。&lt;br /&gt;　　&lt;br /&gt;　　男：动一下给猪两头。女同意。&lt;br /&gt;　　&lt;br /&gt;　　男动了七次停下，女问为何不动？&lt;br /&gt;　　&lt;br /&gt;　　男说：完事了～～～女：......&lt;br /&gt;　　&lt;br /&gt;　　天亮后，男低著头赶2头猪赶集去了......&lt;br /&gt;　　&lt;br /&gt;　　[ 哈佛导师评论 ]&lt;br /&gt;　　&lt;br /&gt;　　要结合企业自身规模进行谨慎投资，谨防资金链断裂问题&lt;br /&gt;　　&lt;br /&gt;　　3&lt;br /&gt;　　&lt;br /&gt;　　又一男得知此事，决意如法炮制兼吸取教训，遂先用一头猪去换一粒伟哥，事必，天亮后，男吹着口哨赶38头（含少妇家的18头）猪赶集去了……&lt;br /&gt;　　&lt;br /&gt;　　[ 哈佛导师评论 ]&lt;br /&gt;　　&lt;br /&gt;　　企业如果获得金融资本的帮助，自身经营能力将得到倍增。&lt;br /&gt;　　&lt;br /&gt;　　4&lt;br /&gt;　　&lt;br /&gt;　　知道此法男多，伟哥供不应求，逐渐要2头，3头猪换一粒伟哥。&lt;br /&gt;　　&lt;br /&gt;　　[ 哈佛导师评论 ]&lt;br /&gt;　　&lt;br /&gt;　　这就是通货膨胀。&lt;br /&gt;　　&lt;br /&gt;　　5&lt;br /&gt;　　&lt;br /&gt;　　当伟哥价格涨到16头猪一颗的时候...&lt;br /&gt;　　&lt;br /&gt;　　[ 哈佛导师评论 ]&lt;br /&gt;　　&lt;br /&gt;　　该男已经进入边际成本，除了拥有对自身能力的自信和未来良好愿望以外，实际现猪流已经为零。&lt;br /&gt;　　&lt;br /&gt;　　6&lt;br /&gt;　　&lt;br /&gt;　　但换猪男越来越多，卖伟哥的决定，扩展生产能力，推出一种次级伟哥，如果你缺一头猪，只要你承诺可以到该女房中一夜，就可以先借，事成后补交猪款，这个方法大大促进了伟哥销售。&lt;br /&gt;　　&lt;br /&gt;　　[ 哈佛导师评论 ]&lt;br /&gt;　　&lt;br /&gt;　　这就是贷款，让企业可以根据未来的收益选择借支流动资金。&lt;br /&gt;　　&lt;br /&gt;　　7&lt;br /&gt;　　&lt;br /&gt;　　伟哥专卖店后来在即使你一头猪都没有，只要你承诺可以到该女房中一夜，就可以先借，事成后补交猪款。&lt;br /&gt;　　&lt;br /&gt;　　[ 哈佛导师评论 ]&lt;br /&gt;　　&lt;br /&gt;　　这就是金融创新，让现在的人花未来的钱，反正等你老了未来的钱你也花不动。&lt;br /&gt;　　&lt;br /&gt;　　8&lt;br /&gt;　　&lt;br /&gt;　　消息一出，换猪男越来越多，有人找伟哥专卖店，这个项目太好了，我们把它变成优质基金，对外销售债券，你们也就可以分享我的收益，如何？&lt;br /&gt;　　&lt;br /&gt;　　结果伟哥专卖店觉得甚好，于是该公司把换猪男分三类，一类是拿现猪换的，一类是一部分现猪贷的，一类是完全没有现猪借的，发行三种债券。大家踊跃而上。纷纷购买伟哥专卖店的债券，伟哥专卖店生意太好，就把债券销售外包给另外一家公司运作，该公司也一并大发其财，公司越做越大，甚至可以脱离实际伟哥销售情况来发行，给自己和伟哥专卖店带来巨大的现金收益。&lt;br /&gt;　　&lt;br /&gt;　　[ 哈佛导师评论 ]&lt;br /&gt;　　&lt;br /&gt;　　这就是专业的人做专业的事，从实体经营到资本运作，经济进入了更高的层次。&lt;br /&gt;　　&lt;br /&gt;　　9&lt;br /&gt;　　&lt;br /&gt;　　为了防止自己债券未来有损失，该公司决定给它买上保险，这样债券销售就更容易，因为一旦债券出现问题，还可以获得保险公司的赔付，哇，销售这下子太好了，保险公司也获得巨大平白无故的保险收入。&lt;br /&gt;　　&lt;br /&gt;　　[ 哈佛导师评论 ]&lt;br /&gt;　　&lt;br /&gt;　　这就是风险对冲，策略联盟，提高了企业的抗风险能力，也保护了消费者利益。&lt;br /&gt;　　&lt;br /&gt;　　10&lt;br /&gt;　　&lt;br /&gt;　　换猪男太多，排长队等待，该女无法承受，说老娘不干了，我搬家，一时间有无数拥有伟哥的欠猪男。&lt;br /&gt;　　&lt;br /&gt;　　[ 哈佛导师评论 ]&lt;br /&gt;　　&lt;br /&gt;　　这是个别现象，属于市场的正常波动，不会影响整个经济。&lt;br /&gt;　　&lt;br /&gt;　　11&lt;br /&gt;　　&lt;br /&gt;　　结果该女迟迟不肯搬回。一部分欠猪男没有收入，只好赖帐，结果大量债券到期无法换现猪吃，债券公司一看，一粒伟哥16头猪，这哪里还得起，宣布倒闭&lt;br /&gt;　　&lt;br /&gt;　　[ 哈佛导师评论 ]&lt;br /&gt;　　&lt;br /&gt;　　这是次贷危机，不会影响整个金融行业。&lt;br /&gt;　　&lt;br /&gt;　　12&lt;br /&gt;　　&lt;br /&gt;　　哪里晓得债券公司还把债券上了保险，保险公司一看，这哪里赔得起，于是也宣布要倒闭。&lt;br /&gt;　　&lt;br /&gt;　　[ 哈佛导师评论 ]&lt;br /&gt;　　&lt;br /&gt;　　这是金融危机，还不会影响整个实体经济。&lt;br /&gt;　　&lt;br /&gt;　　13&lt;br /&gt;　　&lt;br /&gt;　　后文：据说该女已搬到中国定居。&lt;/p&gt;
+&lt;p&gt;from:http://topic.csdn.net/u/20081030/09/0A743CDE-0A1D-4824-975C-B6984D545C3E.html&lt;/p&gt;               
+</description>
+    </item>
+    
+    <item>
+      <title>次贷危机和一夜情</title>
+      <link>http://huobazi.aspxboy.com/blog/2008/10/26/crisis-and-ons/</link>
+      <pubDate>Sun, 26 Oct 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2008/10/26/crisis-and-ons/</guid>
+      <description>&lt;p&gt;     有一天，一位其貌不扬的男士，带着一位十分艳丽的OL，来到Causeway Bay一家LV店。他为OL选了一价值6万5元的LV handbag。　　付款时，男士掏出支票本，十分潇洒地签了一张支票。店员有些为难，因为这对夫妇是第一次来店购物。&lt;br /&gt;　　男士看穿了店员的心思，十分冷静地对店员说： &#34;我感觉到，您担心这是一张是空头支票，对吗？今天是周六，银行关门。我建议您把支票和handbag都留下。等到星期一支票兑现之后，再请你们把 handbag 送到这位小姐的府上。您看这样行不行？&#34;&lt;br /&gt;　&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;　店员放了下心来，欣然地接受了这个建议，并且大方的承诺，递送handbag的费用由该店承担，他本人将会亲自把这件事情给办妥。&lt;br /&gt;　　星期一，店员拿着支票去银行入账，支票果真是张空头支票！愤怒的店员打电话给那位顾客，客户对他说： &#34;这没有什么要紧啊！你和我都没有损失。上星期六的晚上我已经同那个女孩上床了！哦，多谢您的合作。&#34; 这个故事揭示了次贷危机的本质。人们在对未来收益充满良好预期的时候，对于可能加大风险缺乏防范意识。美女认为周一六万多LV就到家了，自然也就放松了警惕，认为ONS的投资是值得的，对于投入产出的预期是建立在一个具有巨大不确定风险的情况下的。而对未来收益预期的包装则是这些投资机构最擅长的事情。中国的股民大多跟这个美女一样，所以亏钱基本上是活该，没有这些人，股市赚谁的钱呢。而媒体和分析家们，往往在其中扮演了LV店员的配合角色。from:http://www.im286.com/thread-2983005-1-10.html&lt;/p&gt;              
+</description>
+    </item>
+    
+    <item>
+      <title>员工辞职的十大原因！ </title>
+      <link>http://huobazi.aspxboy.com/blog/2007/09/02/cb-878740/</link>
+      <pubDate>Sun, 02 Sep 2007 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2007/09/02/cb-878740/</guid>
+      <description>&lt;p&gt;美国企管顾问史密斯（Gregory Smith），日前在《CEO Refresher》杂志上指出，根据他多年的顾问经验，员工辞职的十大原因为&lt;br /&gt;1、员工的工作量过重，造成他们必须在晚上或周末加班。 &lt;br /&gt;&lt;br /&gt;2、公司不愿意在办公室杂务上，另外再花费雇用专人负责，以致专业工作者必须自行做影印等工作。&lt;br /&gt;&lt;br /&gt;3、当员工可以在其他公司找到薪水高二至三成的工作时，公司却宣布暂时不帮员工加薪及升迁。&lt;br /&gt;&lt;br /&gt;　　4、公司不附予员工做决定的权力。&lt;br /&gt;&lt;br /&gt;　　5、公司不断重整部门、转调员工职务，以及改变公司走向。 &lt;br /&gt;&lt;br /&gt;6、公司不向员工清楚沟通目标及决定，以致有时候当员工完成一项工作时，却遭到公司的拒绝，严重打击士气。 &lt;br /&gt;&lt;br /&gt;　　7、主管对某些员工偏心，给予他们较好的办公室，或者较舒适的出差机会等。&lt;br /&gt;&lt;br /&gt;　　8、公司搬家，迫使员工通勤时间加倍等。 &lt;br /&gt;&lt;br /&gt;　　9、公司升迁没有能力的员工，真正的人才却没有受到重视。 &lt;br /&gt;&lt;br /&gt;　　10、公司虽然强调团队合作，但是却塑造部门或员工间必须激烈竞争的环境&lt;/p&gt;              
+</description>
+    </item>
+    
+    <item>
+      <title>转载, 春晚诗朗诵《心里话》之程序员版!! </title>
+      <link>http://huobazi.aspxboy.com/blog/2007/03/06/cb-665199/</link>
+      <pubDate>Tue, 06 Mar 2007 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2007/03/06/cb-665199/</guid>
+      <description>&lt;p&gt;要问我是谁？&lt;br /&gt;过去，我总不愿回答，&lt;br /&gt;因为我怕，&lt;br /&gt;我怕机关里的公务员笑话。&lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;我们的房间很小，放不下一个鞍马；&lt;br /&gt;我们的宿舍简陋，还经常搬家；&lt;br /&gt;我们的电脑很破，还经常乱码；&lt;br /&gt;我们的椅子很旧，坐上去吱吱哑哑……&lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;但是，&lt;br /&gt;我们代码工整，&lt;br /&gt;我们的业绩不差！&lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;要问我此刻最想要什么？&lt;br /&gt;我要我的笔记本，&lt;br /&gt;我要我的Vista！&lt;br /&gt;因为，有笔记本才能扛着到处出差；&lt;br /&gt;因为，有Vista客户才觉得够现代化。&lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;IT的2008，&lt;br /&gt;也是我们的2008，&lt;br /&gt;客户把需求说成了天书，&lt;br /&gt;我们把工程变成了神话，&lt;br /&gt;关于界面上，我们写了这样的话：&lt;br /&gt;别人与我比薪水，我和别人比明天！&lt;br /&gt;程序员和机关里的公务员不一样，&lt;br /&gt;你们是祖国的栋梁，我们是打工的傻瓜！&lt;br /&gt;&lt;br /&gt;From:&lt;br /&gt;&lt;br /&gt;&lt;a href=&#34;http://community.csdn.net/Expert/topic/5370/5370546.xml?temp=.6211817&#34;&gt;http://community.csdn.net/Expert/topic/5370/5370546.xml?temp=.6211817&lt;/a&gt;&lt;/p&gt;               
+</description>
+    </item>
+    
+    <item>
+      <title>原来验证码可以租的哦</title>
+      <link>http://huobazi.aspxboy.com/blog/2006/04/17/textdisguisecaptchaimage/</link>
+      <pubDate>Mon, 17 Apr 2006 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2006/04/17/textdisguisecaptchaimage/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.textdisguise.com/TextDisguise/default.aspx&#34;&gt;http://www.textdisguise.com/TextDisguise/default.aspx&lt;/a&gt;&lt;br /&gt;提供webservice生成防止机器人的CAPTCHA Image&lt;br /&gt;看样子&lt;a href=&#34;http://www.textdisguise.com/TextDisguise/ProductsComparison.aspx&#34;&gt;挺贵的&lt;/a&gt;，不过&lt;a href=&#34;http://www.textdisguise.com/TextDisguise/Demo.aspx&#34;&gt;Demo&lt;/a&gt;看起来很不错。&lt;/p&gt;               
+</description>
+    </item>
+    
+    <item>
+      <title>一个很全的教程站</title>
+      <link>http://huobazi.aspxboy.com/blog/2004/06/01/cb-12759/</link>
+      <pubDate>Tue, 01 Jun 2004 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2004/06/01/cb-12759/</guid>
+      <description>&lt;p&gt;很少见教程大全，不知道我是不是很落伍，今天才逛到这里&lt;br /&gt;&lt;a href=&#34;http://www.w3schools.com/&#34; target=&#34;_blank&#34;&gt;&lt;br /&gt;&lt;img style=&#34;border: 0px;&#34; src=&#34;http://huobazi.aspxboy.com/images/hbz_images/66c040d5-df17-43e3-ae0a-3afee8c63b96.jpg&#34; border=&#34;0&#34; alt=&#34;&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;HTML Tutorials&lt;/strong&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/html/default.asp&#34; target=&#34;_top&#34;&gt;Learn HTML&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/xhtml/default.asp&#34; target=&#34;_top&#34;&gt;Learn XHTML&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/css/default.asp&#34; target=&#34;_top&#34;&gt;Learn CSS&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/tcpip/default.asp&#34; target=&#34;_top&#34;&gt;Learn TCP/IP&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;XML Tutorials&lt;/strong&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/xml/default.asp&#34; target=&#34;_top&#34;&gt;Learn XML&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/xsl/xsl_languages.asp&#34; target=&#34;_top&#34;&gt;Learn XSL&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/xsl/default.asp&#34; target=&#34;_top&#34;&gt;Learn XSLT&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/xslfo/default.asp&#34; target=&#34;_top&#34;&gt;Learn XSL-FO&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/xpath/default.asp&#34; target=&#34;_top&#34;&gt;Learn XPath&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/xquery/default.asp&#34; target=&#34;_top&#34;&gt;Learn XQuery&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/dtd/default.asp&#34; target=&#34;_top&#34;&gt;Learn DTD&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/schema/default.asp&#34; target=&#34;_top&#34;&gt;Learn Schema&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/dom/default.asp&#34; target=&#34;_top&#34;&gt;Learn DOM&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/xforms/default.asp&#34; target=&#34;_top&#34;&gt;Learn XForms&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/soap/default.asp&#34; target=&#34;_top&#34;&gt;Learn SOAP&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/wsdl/default.asp&#34; target=&#34;_top&#34;&gt;Learn WSDL&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/rdf/default.asp&#34; target=&#34;_top&#34;&gt;Learn RDF&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/wap/default.asp&#34; target=&#34;_top&#34;&gt;Learn WAP&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Browser Scripting&lt;/strong&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/js/default.asp&#34; target=&#34;_top&#34;&gt;Learn JavaScript&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/dhtml/default.asp&#34; target=&#34;_top&#34;&gt;Learn DHTML&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/vbscript/default.asp&#34; target=&#34;_top&#34;&gt;Learn VBScript&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/wmlscript/default.asp&#34; target=&#34;_top&#34;&gt;Learn WMLScript&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Server Scripting&lt;/strong&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/sql/default.asp&#34; target=&#34;_top&#34;&gt;Learn SQL&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/asp/default.asp&#34; target=&#34;_top&#34;&gt;Learn ASP&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/ado/default.asp&#34; target=&#34;_top&#34;&gt;Learn ADO&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/php/default.asp&#34; target=&#34;_top&#34;&gt;Learn PHP&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;.NET (dotnet)&lt;/strong&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/ngws/default.asp&#34; target=&#34;_top&#34;&gt;.NET Microsoft&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/aspnet/default.asp&#34; target=&#34;_top&#34;&gt;.NET ASP&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/dotnetmobile/default.asp&#34; target=&#34;_top&#34;&gt;.NET Mobile&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Multimedia&lt;/strong&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/media/default.asp&#34; target=&#34;_top&#34;&gt;Learn Media&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/smil/default.asp&#34; target=&#34;_top&#34;&gt;Learn SMIL&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/svg/default.asp&#34; target=&#34;_top&#34;&gt;Learn SVG&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/flash/default.asp&#34; target=&#34;_top&#34;&gt;Learn Flash&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Web Building&lt;/strong&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/site/default.asp&#34; target=&#34;_top&#34;&gt;Web Building&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/w3c/default.asp&#34; target=&#34;_top&#34;&gt;Web W3C&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/browsers/default.asp&#34; target=&#34;_top&#34;&gt;Web Browsers&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/quality/default.asp&#34; target=&#34;_top&#34;&gt;Web Quality&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/graphics/default.asp&#34; target=&#34;_top&#34;&gt;Web Graphics&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/careers/default.asp&#34; target=&#34;_top&#34;&gt;Web Careers&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/hosting/default.asp&#34; target=&#34;_top&#34;&gt;Web Hosting&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/cert/default.asp&#34; target=&#34;_top&#34;&gt;Web Certification&lt;/a&gt;&lt;/p&gt;               
+</description>
+    </item>
+    
+    <item>
+      <title>打开一个Excel模板文件填充数据另存为一个文件</title>
+      <link>http://huobazi.aspxboy.com/blog/2004/04/27/filldatatoexceltemplate/</link>
+      <pubDate>Tue, 27 Apr 2004 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2004/04/27/filldatatoexceltemplate/</guid>
+      <description>&lt;p&gt;最近做的东西要求打开一个Excel文件模板后填充数据&lt;br /&gt;开始用OleDb连接该Excel文件更新老是出错误 “需要一个可更新的.....“&lt;br /&gt;&lt;a href=&#34;http://expert.csdn.net/Expert/topic/2992/2992809.xml?temp=.4825403&#34;&gt;http://expert.csdn.net/Expert/topic/2992/2992809.xml?temp=.4825403&lt;/a&gt;&lt;br /&gt;如果是access这个错误多半是权限引起的 可是我做的是winform 权限是admin啊&lt;br /&gt;未果&lt;br /&gt;后来用ODBC测试了几个字段 都成功了&lt;br /&gt;开始写程序 后发现就有那么2个单元格不听话 提示参数错误&lt;br /&gt;郁闷&lt;br /&gt;&lt;a href=&#34;http://expert.csdn.net/Expert/topic/3000/3000113.xml?temp=.3331262&#34;&gt;http://expert.csdn.net/Expert/topic/3000/3000113.xml?temp=.3331262&lt;/a&gt;&lt;br /&gt;仍未果&lt;br /&gt;没办法翻google&lt;br /&gt;获得&lt;br /&gt;&lt;a href=&#34;http://www.c-sharpcorner.com/winforms/ExcelReadMG.asp&#34;&gt;http://www.c-sharpcorner.com/winforms/ExcelReadMG.asp&lt;/a&gt;&lt;br /&gt;用com组件，可行哦，今早上csdn就有网友pm我问是如何搞定的&lt;br /&gt;那就写到这里，&lt;br /&gt;以下是部分代码，使用前要先按上文中的说明添加Com引用&lt;br /&gt;...........&lt;br /&gt;&lt;span style=&#34;background-color: #d3d3d3;&#34;&gt;string strFileName = &lt;/span&gt;&lt;a href=&#34;mailto:Environment.CurrentDirectory+@%22%5Ctemplate%5Ctemplate.tpl&#34;&gt;&lt;span style=&#34;background-color: #d3d3d3;&#34;&gt;Environment.CurrentDirectory+@&#34;\template\template.tpl&lt;/span&gt;&lt;/a&gt;&lt;span style=&#34;background-color: #d3d3d3;&#34;&gt;&#34;;&lt;br /&gt;    string strSaveFileName = &lt;/span&gt;&lt;a href=&#34;mailto:Environment.CurrentDirectory+@%22%5Cexcel%5C%22+System.DateTime.Now.ToString().Replace(%22:%22,%22%22).Replace(%22-%22,%22%22).Replace&#34;&gt;&lt;span style=&#34;background-color: #d3d3d3;&#34;&gt;Environment.CurrentDirectory+@&#34;\excel\&#34;+System.DateTime.Now.ToString().Replace(&#34;:&#34;,&#34;&#34;).Replace(&#34;-&#34;,&#34;&#34;).Replace&lt;/span&gt;&lt;/a&gt;&lt;span style=&#34;background-color: #d3d3d3;&#34;&gt;(&#34; &#34;,&#34;&#34;)+@&#34;.xls&#34;;&lt;br /&gt;    Excel.Application ThisApplication = new Excel.ApplicationClass();&lt;br /&gt;    Excel.Workbook ThisWorkBook;&lt;br /&gt;    object missing = System.Reflection.Missing.Value;&lt;br /&gt;    try&lt;br /&gt;    { &lt;br /&gt;     //加载Excel模板文件&lt;br /&gt;     ThisWorkBook = ThisApplication.Workbooks.Open(strFileName,missing,missing,missing,missing,missing,missing,missing,missing,missing,missing,missing,missing);&lt;br /&gt;     Excel.Worksheet ThisSheet = (Excel.Worksheet)ThisWorkBook.Sheets[1];&lt;br /&gt;     ThisSheet.Cells[7,1] = dtEnd.ToShortDateString();&lt;br /&gt;     progressBar.Value = 30;&lt;br /&gt;     ThisApplication.Visible = false;&lt;br /&gt;     DataRow dr = dt.Rows[0];&lt;br /&gt;     for( int i=0; i     {&lt;br /&gt;      ThisSheet.Cells[7,i+2] = dr[i].ToString();&lt;br /&gt;      progressBar.Value +=1;&lt;br /&gt;     }&lt;br /&gt;     //更新数据后另存为新文件&lt;br /&gt;     ThisSheet.SaveAs(strSaveFileName,missing,missing,missing,missing,missing,missing,missing,missing);&lt;br /&gt;    }&lt;br /&gt;    catch{}&lt;br /&gt;    finally&lt;br /&gt;    {&lt;br /&gt;     ThisApplication.Quit();&lt;br /&gt;     ThisWorkBook = null;&lt;br /&gt;     ThisApplication = null;&lt;br /&gt;     //dt = null;&lt;br /&gt;    }&lt;br /&gt;    try&lt;br /&gt;    { //打开刚才生成的Excel文件&lt;br /&gt;     Excel.Workbook NewWorkBook;&lt;br /&gt;     NewWorkBook = NewApplication.Workbooks.Open(strSaveFileName,missing,missing,missing,missing,missing,missing,missing,missing,missing,missing,missing,missing);&lt;br /&gt;     Excel.Worksheet NewSheet = (Excel.Worksheet)NewWorkBook.Sheets[1];&lt;br /&gt;     NewApplication.Visible = true;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;//也可以使用System.Diagnostics.Process.Start(strSaveFileName);来打开新文件&lt;/p&gt;
+&lt;p&gt;    }&lt;/p&gt;
+&lt;p&gt;打开Excel后进程内会多出一个excel进程&lt;br /&gt;需要手工清理&lt;br /&gt;参考这片文章&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.eggheadcafe.com/articles/20021012.asp&#34;&gt;http://www.eggheadcafe.com/articles/20021012.asp&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.aspxboy.com/476/archive.aspx&#34;&gt;http://www.aspxboy.com/476/archive.aspx&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;             
+</description>
+    </item>
+    
+  </channel>
+</rss>

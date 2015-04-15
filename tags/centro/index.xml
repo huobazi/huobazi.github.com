@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Centro on 武眉博</title>
+    <link>http://huobazi.aspxboy.com/tags/centro/</link>
+    <description>Recent content in Centro on 武眉博</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 25 Aug 2009 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://huobazi.aspxboy.com/tags/centro/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Palm Centro(690)的软启动和硬启动</title>
+      <link>http://huobazi.aspxboy.com/blog/2009/08/25/hwo-to--reset-palm-centro/</link>
+      <pubDate>Tue, 25 Aug 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2009/08/25/hwo-to--reset-palm-centro/</guid>
+      <description>&lt;p&gt;&lt;p&gt;给老婆买了部centro，结果不知道如何软起和硬起，泡了半天吹友吧，得知如下&lt;/p&gt;
+&lt;pre&gt;软启 下电池
+硬启 下电池后按住红色挂机件上电池 到PALM开机图不动后松开 按向上键&lt;/pre&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

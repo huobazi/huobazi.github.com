@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sprite on 武眉博</title>
+    <link>http://huobazi.aspxboy.com/tags/sprite/</link>
+    <description>Recent content in Sprite on 武眉博</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 28 Nov 2009 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://huobazi.aspxboy.com/tags/sprite/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>腾讯webQQ的 CSS Sprite</title>
+      <link>http://huobazi.aspxboy.com/blog/2009/11/28/webqq-css-sprite/</link>
+      <pubDate>Sat, 28 Nov 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2009/11/28/webqq-css-sprite/</guid>
+      <description>&lt;p&gt;web qq速度很快，很多图标处理的也很漂亮，偷偷看了一下sprite的图片，所有图标都在这个图里了20多k，性能压倒一切啊。&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://web.qq.com/images/icon.gif&#34; alt=&#34;webQQ CSS Sprite&#34; width=&#34;560&#34; height=&#34;1000&#34;&gt;&lt;/p&gt;               
+</description>
+    </item>
+    
+  </channel>
+</rss>

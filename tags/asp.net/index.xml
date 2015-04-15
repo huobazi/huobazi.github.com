@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Asp.Net on 武眉博</title>
+    <link>http://huobazi.aspxboy.com/tags/asp/index.net/</link>
+    <description>Recent content in Asp.Net on 武眉博</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 28 Nov 2011 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://huobazi.aspxboy.com/tags/asp.net/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title> [How to] 如何卸载Xcode</title>
+      <link>http://huobazi.aspxboy.com/blog/2011/11/28/how-to-uninstall-xcode/</link>
+      <pubDate>Mon, 28 Nov 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2011/11/28/how-to-uninstall-xcode/</guid>
+      <description>&lt;p&gt; &lt;/p&gt;
+&lt;pre&gt; $ sudo /Developer/Library/uninstall-devtools --mode=all&lt;/pre&gt;
+&lt;p&gt; &lt;/p&gt;                
+</description>
+    </item>
+    
+    <item>
+      <title>AutoGenerateColumns=&#39;true&#39;的GridView如何支持htmlencode/htmldecode</title>
+      <link>http://huobazi.aspxboy.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/</link>
+      <pubDate>Wed, 09 Nov 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/</guid>
+      <description>&lt;p&gt;&lt;p&gt;我们知道BoundField.HtmlEncode 属性可以设置一个单元格是否能够htmlencode，我今天碰到的问题是：自动生成列的GridView，表头可能是包含html的比如&amp;lt;font color=red&amp;gt;邮件&amp;lt;/font&amp;gt;，默认被htmlencode了，而我不希望这样做，所以有了如下的代码:&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;div class=&#34;source&#34; style=&#34;font-family: &#39;[object HTMLOptionElement]&#39;, Consolas, &#39;Lucida Console&#39;, &#39;Courier New&#39;; color: #e6e1dc; background-color: #111111; &#34;&gt;
+&lt;span style=&#34;color: #bc9458; font-style: italic; &#34;&gt;/// &amp;lt;summary&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #bc9458; font-style: italic; &#34;&gt;/// Handles the PreRender event of the gvSource control.&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #bc9458; font-style: italic; &#34;&gt;/// &amp;lt;/summary&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #bc9458; font-style: italic; &#34;&gt;/// &amp;lt;param name=&amp;ldquo;sender&amp;rdquo;&amp;gt;The source of the event.&amp;lt;/param&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #bc9458; font-style: italic; &#34;&gt;/// &amp;lt;param name=&amp;ldquo;e&amp;rdquo;&amp;gt;The &amp;lt;see cref=&amp;ldquo;System.EventArgs&amp;rdquo;/&amp;gt; instance containing the event data.&amp;lt;/param&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #cc7833; &#34;&gt;protected&lt;/span&gt; &lt;span style=&#34;color: #cc7833; &#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color: #ffc66d; &#34;&gt;gvSource_PreRender&lt;/span&gt;( &lt;span style=&#34;color: #da4939; &#34;&gt;object&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;sender&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;EventArgs&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;e&lt;/span&gt; )&lt;br /&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #e6e1dc; &#34;&gt;GridView&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;gridView&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;sender&lt;/span&gt; &lt;span style=&#34;color: #cc7833; &#34;&gt;as&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;GridView&lt;/span&gt;;&lt;br /&gt;    &lt;span style=&#34;color: #cc7833; &#34;&gt;if&lt;/span&gt; ( &lt;span style=&#34;color: #e6e1dc; &#34;&gt;gridView&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color: #cc7833; &#34;&gt;null&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;gridView&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;HeaderRow&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color: #cc7833; &#34;&gt;null&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;gridView&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;HeaderRow&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Cells&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color: #cc7833; &#34;&gt;null&lt;/span&gt; )&lt;br /&gt;    &lt;span style=&#34;color: #e6e1dc; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;        &lt;span style=&#34;color: #cc7833; &#34;&gt;for&lt;/span&gt; ( &lt;span style=&#34;color: #da4939; &#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;j&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #a5c261; &#34;&gt;0&lt;/span&gt; ; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;j&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;gridView&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;HeaderRow&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Cells&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Count&lt;/span&gt; ; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;j&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;++&lt;/span&gt; )&lt;br /&gt;        &lt;span style=&#34;color: #e6e1dc; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;            &lt;span style=&#34;color: #e6e1dc; &#34;&gt;gridView&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;HeaderRow&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Cells&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;j&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;].&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Text&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;System&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Web&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;HttpUtility&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;HtmlDecode&lt;/span&gt;( &lt;span style=&#34;color: #e6e1dc; &#34;&gt;gridView&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;HeaderRow&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Cells&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;j&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;].&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Text&lt;/span&gt; );&lt;br /&gt;        &lt;span style=&#34;color: #e6e1dc; &#34;&gt;}&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #e6e1dc; &#34;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;}&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>AutoGenerateColumns=&#39;true&#39;的GridView如何支持htmlencode/htmldecode</title>
+      <link>http://huobazi.aspxboy.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/</link>
+      <pubDate>Wed, 09 Nov 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/</guid>
+      <description>&lt;p&gt;&lt;p&gt;我们知道BoundField.HtmlEncode 属性可以设置一个单元格是否能够htmlencode，我今天碰到的问题是：自动生成列的GridView，表头可能是包含html的比如&amp;lt;font color=red&amp;gt;邮件&amp;lt;/font&amp;gt;，默认被htmlencode了，而我不希望这样做，所以有了如下的代码:&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;div class=&#34;source&#34; style=&#34;font-family: &#39;[object HTMLOptionElement]&#39;, Consolas, &#39;Lucida Console&#39;, &#39;Courier New&#39;; color: #e6e1dc; background-color: #111111; &#34;&gt;
+&lt;span style=&#34;color: #bc9458; font-style: italic; &#34;&gt;/// &amp;lt;summary&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #bc9458; font-style: italic; &#34;&gt;/// Handles the PreRender event of the gvSource control.&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #bc9458; font-style: italic; &#34;&gt;/// &amp;lt;/summary&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #bc9458; font-style: italic; &#34;&gt;/// &amp;lt;param name=&amp;ldquo;sender&amp;rdquo;&amp;gt;The source of the event.&amp;lt;/param&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #bc9458; font-style: italic; &#34;&gt;/// &amp;lt;param name=&amp;ldquo;e&amp;rdquo;&amp;gt;The &amp;lt;see cref=&amp;ldquo;System.EventArgs&amp;rdquo;/&amp;gt; instance containing the event data.&amp;lt;/param&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #cc7833; &#34;&gt;protected&lt;/span&gt; &lt;span style=&#34;color: #cc7833; &#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color: #ffc66d; &#34;&gt;gvSource_PreRender&lt;/span&gt;( &lt;span style=&#34;color: #da4939; &#34;&gt;object&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;sender&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;EventArgs&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;e&lt;/span&gt; )&lt;br /&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #e6e1dc; &#34;&gt;GridView&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;gridView&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;sender&lt;/span&gt; &lt;span style=&#34;color: #cc7833; &#34;&gt;as&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;GridView&lt;/span&gt;;&lt;br /&gt;    &lt;span style=&#34;color: #cc7833; &#34;&gt;if&lt;/span&gt; ( &lt;span style=&#34;color: #e6e1dc; &#34;&gt;gridView&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color: #cc7833; &#34;&gt;null&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;gridView&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;HeaderRow&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color: #cc7833; &#34;&gt;null&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;gridView&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;HeaderRow&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Cells&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color: #cc7833; &#34;&gt;null&lt;/span&gt; )&lt;br /&gt;    &lt;span style=&#34;color: #e6e1dc; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;        &lt;span style=&#34;color: #cc7833; &#34;&gt;for&lt;/span&gt; ( &lt;span style=&#34;color: #da4939; &#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;j&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #a5c261; &#34;&gt;0&lt;/span&gt; ; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;j&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;gridView&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;HeaderRow&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Cells&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Count&lt;/span&gt; ; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;j&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;++&lt;/span&gt; )&lt;br /&gt;        &lt;span style=&#34;color: #e6e1dc; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;            &lt;span style=&#34;color: #e6e1dc; &#34;&gt;gridView&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;HeaderRow&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Cells&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;j&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;].&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Text&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;System&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Web&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;HttpUtility&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;HtmlDecode&lt;/span&gt;( &lt;span style=&#34;color: #e6e1dc; &#34;&gt;gridView&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;HeaderRow&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Cells&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;j&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;].&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Text&lt;/span&gt; );&lt;br /&gt;        &lt;span style=&#34;color: #e6e1dc; &#34;&gt;}&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #e6e1dc; &#34;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;}&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>在Console下输入密码，以星号代替。</title>
+      <link>http://huobazi.aspxboy.com/blog/2011/06/22/password-masking-in-csharp-console-application/</link>
+      <pubDate>Wed, 22 Jun 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2011/06/22/password-masking-in-csharp-console-application/</guid>
+      <description>&lt;p&gt;如何在Console下输入密码，像*unix系统下那样不显示，或者显示星号，如下代码经过测试：&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;div class=&#34;source&#34; style=&#34;font-family: &#39;[object HTMLOptionElement]&#39;, Consolas, &#39;Lucida Console&#39;, &#39;Courier New&#39;; color: #ffffff; background-color: #333333; &#34;&gt;
+&lt;p&gt;&lt;span style=&#34;color: #87ceeb; &#34;&gt;/// &amp;lt;summary&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #87ceeb; &#34;&gt;/// Gets the console secure password.&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #87ceeb; &#34;&gt;/// &amp;lt;/summary&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #87ceeb; &#34;&gt;/// &amp;lt;returns&amp;gt;&amp;lt;/returns&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #f0e68c; &#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color: #f0e68c; &#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;SecureString&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;GetConsoleSecurePassword&lt;/span&gt;( )&lt;br /&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #ffffff; &#34;&gt;SecureString&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;pwd&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #f0e68c; &#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;SecureString&lt;/span&gt;( );&lt;br /&gt;    &lt;span style=&#34;color: #f0e68c; &#34;&gt;while&lt;/span&gt; ( &lt;span style=&#34;color: #f0e68c; &#34;&gt;true&lt;/span&gt; )&lt;br /&gt;    &lt;span style=&#34;color: #ffffff; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;ConsoleKeyInfo&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;i&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;Console&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;ReadKey&lt;/span&gt;( &lt;span style=&#34;color: #f0e68c; &#34;&gt;true&lt;/span&gt; );&lt;br /&gt;        &lt;span style=&#34;color: #f0e68c; &#34;&gt;if&lt;/span&gt; ( &lt;span style=&#34;color: #ffffff; &#34;&gt;i&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Key&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;ConsoleKey&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Enter&lt;/span&gt; )&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;            &lt;span style=&#34;color: #f0e68c; &#34;&gt;break&lt;/span&gt;;&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;}&lt;/span&gt;&lt;br /&gt;        &lt;span style=&#34;color: #f0e68c; &#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;if&lt;/span&gt; ( &lt;span style=&#34;color: #ffffff; &#34;&gt;i&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Key&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;ConsoleKey&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Backspace&lt;/span&gt; )&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;            &lt;span style=&#34;color: #ffffff; &#34;&gt;pwd&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;RemoveAt&lt;/span&gt;( &lt;span style=&#34;color: #ffffff; &#34;&gt;pwd&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Length&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;1&lt;/span&gt; );&lt;br /&gt;            &lt;span style=&#34;color: #ffffff; &#34;&gt;Console&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Write&lt;/span&gt;( &lt;span style=&#34;color: #ffffff; &#34;&gt;&#34;\b \b&#34;&lt;/span&gt; );&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;}&lt;/span&gt;&lt;br /&gt;        &lt;span style=&#34;color: #f0e68c; &#34;&gt;else&lt;/span&gt;&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;            &lt;span style=&#34;color: #ffffff; &#34;&gt;pwd&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;AppendChar&lt;/span&gt;( &lt;span style=&#34;color: #ffffff; &#34;&gt;i&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;KeyChar&lt;/span&gt; );&lt;br /&gt;            &lt;span style=&#34;color: #ffffff; &#34;&gt;Console&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Write&lt;/span&gt;( &lt;span style=&#34;color: #ffffff; &#34;&gt;&#34;*&#34;&lt;/span&gt; );&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;}&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #ffffff; &#34;&gt;}&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #f0e68c; &#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;pwd&lt;/span&gt;;&lt;br /&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;}&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;color: #87ceeb; &#34;&gt;/// &amp;lt;summary&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #87ceeb; &#34;&gt;/// Gets the console password.&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #87ceeb; &#34;&gt;/// &amp;lt;/summary&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #87ceeb; &#34;&gt;/// &amp;lt;returns&amp;gt;&amp;lt;/returns&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #f0e68c; &#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color: #f0e68c; &#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color: #bdb76b; &#34;&gt;string&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;GetConsolePassword&lt;/span&gt;( )&lt;br /&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #ffffff; &#34;&gt;StringBuilder&lt;/span&gt; sb &lt;span style=&#34;color: #ffffff; &#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #f0e68c; &#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;StringBuilder&lt;/span&gt;( );&lt;br /&gt;    &lt;span style=&#34;color: #f0e68c; &#34;&gt;while&lt;/span&gt; ( &lt;span style=&#34;color: #f0e68c; &#34;&gt;true&lt;/span&gt; )&lt;br /&gt;    &lt;span style=&#34;color: #ffffff; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;ConsoleKeyInfo&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;cki&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;Console&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;ReadKey&lt;/span&gt;( &lt;span style=&#34;color: #f0e68c; &#34;&gt;true&lt;/span&gt; );&lt;br /&gt;        &lt;span style=&#34;color: #f0e68c; &#34;&gt;if&lt;/span&gt; ( &lt;span style=&#34;color: #ffffff; &#34;&gt;cki&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Key&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;ConsoleKey&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Enter&lt;/span&gt; )&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;            &lt;span style=&#34;color: #ffffff; &#34;&gt;Console&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;WriteLine&lt;/span&gt;( );&lt;br /&gt;            &lt;span style=&#34;color: #f0e68c; &#34;&gt;break&lt;/span&gt;;&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;}&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;        &lt;span style=&#34;color: #f0e68c; &#34;&gt;if&lt;/span&gt; ( &lt;span style=&#34;color: #ffffff; &#34;&gt;cki&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Key&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;ConsoleKey&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Backspace&lt;/span&gt; )&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;            &lt;span style=&#34;color: #f0e68c; &#34;&gt;if&lt;/span&gt; ( sb&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Length&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;0&lt;/span&gt; )&lt;br /&gt;            &lt;span style=&#34;color: #ffffff; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;                &lt;span style=&#34;color: #ffffff; &#34;&gt;Console&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Write&lt;/span&gt;( &lt;span style=&#34;color: #ffffff; &#34;&gt;&#34;\b\0\b&#34;&lt;/span&gt; );&lt;br /&gt;                sb&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Length&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;--;&lt;/span&gt;&lt;br /&gt;            &lt;span style=&#34;color: #ffffff; &#34;&gt;}&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;            &lt;span style=&#34;color: #f0e68c; &#34;&gt;continue&lt;/span&gt;;&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;}&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;Console&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Write&lt;/span&gt;( &lt;span style=&#34;color: #ffffff; &#34;&gt;&#39;*&#39;&lt;/span&gt; );&lt;br /&gt;        sb&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Append&lt;/span&gt;( &lt;span style=&#34;color: #ffffff; &#34;&gt;cki&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;KeyChar&lt;/span&gt; );&lt;br /&gt;    &lt;span style=&#34;color: #ffffff; &#34;&gt;}&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;    &lt;span style=&#34;color: #f0e68c; &#34;&gt;return&lt;/span&gt; sb&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;ToString&lt;/span&gt;( );&lt;br /&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;}&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;gist：&lt;a href=&#34;https://gist.github.com/1039424&#34;&gt;https://gist.github.com/1039424&lt;/a&gt;&lt;/p&gt;               
+</description>
+    </item>
+    
+    <item>
+      <title>请珍爱自己的身体</title>
+      <link>http://huobazi.aspxboy.com/blog/2010/03/03/356/</link>
+      <pubDate>Wed, 03 Mar 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2010/03/03/356/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;&lt;span style=&#34;color: #008000;font-size:48px;&#34;&gt;see see:&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a title=&#34;程序员们，请珍爱自己的身体&#34; href=&#34;http://www.cnblogs.com/yiway/archive/2010/02/23/1672173.html&#34; target=&#34;_blank&#34;&gt;&lt;span style=&#34;color: #008000;&#34;&gt;&lt;strong&gt;http://www.cnblogs.com/yiway/archive/2010/02/23/1672173.html&lt;/strong&gt;&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;              
+</description>
+    </item>
+    
+    <item>
+      <title>使用window.location跳转，在IE中UrlReffer不被记录</title>
+      <link>http://huobazi.aspxboy.com/blog/2010/01/21/window-location-href-ie-request-reffer/</link>
+      <pubDate>Thu, 21 Jan 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2010/01/21/window-location-href-ie-request-reffer/</guid>
+      <description>&lt;p&gt;使用window.location跳转，在FF中，没问题，下一页面可以取得UrlReffer，但在IE中UrlReffer不被记录&lt;/p&gt;
+&lt;p&gt;真变态，&lt;/p&gt;
+&lt;p&gt;让我头痛了半天，弄了个丑陋的办法做了如下实现：&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;div class=&#34;source&#34; style=&#34;COLOR: #f6f3e8; FONT-FAMILY: &#39;[object]&#39;,&#39;Consolas&#39;,&#39;Lucida Console&#39;,&#39;Courier New&#39;; BACKGROUND-COLOR: #242424&#34;&gt;
+&lt;span style=&#34;COLOR: #8ac6f2&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;safeRedirectToCart&lt;/span&gt;(&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;url&lt;/span&gt;) &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;{&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;COLOR: #8ac6f2&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;isIE&lt;/span&gt; &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;jQuery&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;browser&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;msie&lt;/span&gt;;&lt;br /&gt;    &lt;span style=&#34;COLOR: #8ac6f2&#34;&gt;if&lt;/span&gt; (&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;!&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;isIE&lt;/span&gt;) &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;{&lt;/span&gt;&lt;br /&gt;        &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;window&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;location&lt;/span&gt; &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;url&lt;/span&gt;;&lt;br /&gt;        &lt;span style=&#34;COLOR: #8ac6f2&#34;&gt;return&lt;/span&gt;;&lt;br /&gt;    &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;}&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;$&lt;/span&gt;(&lt;span style=&#34;COLOR: #95e454; FONT-STYLE: italic&#34;&gt;&#34;.btnCart&#34;&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;).&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;get&lt;/span&gt;(&lt;span style=&#34;COLOR: #e5786d&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;).&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;click&lt;/span&gt;();&lt;br /&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;}&lt;/span&gt;
+&lt;/div&gt;
+&lt;p&gt;说明：在页面上render一个连接(可以用样式表控制不显示），判断如果是IE浏览器然则调用其click，嘿嘿，就这个。&lt;/p&gt;              
+</description>
+    </item>
+    
+    <item>
+      <title>使用window.location跳转，在IE中UrlReffer不被记录</title>
+      <link>http://huobazi.aspxboy.com/blog/2010/01/21/window-location-href-ie-request-reffer/</link>
+      <pubDate>Thu, 21 Jan 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2010/01/21/window-location-href-ie-request-reffer/</guid>
+      <description>&lt;p&gt;使用window.location跳转，在FF中，没问题，下一页面可以取得UrlReffer，但在IE中UrlReffer不被记录&lt;/p&gt;
+&lt;p&gt;真变态，&lt;/p&gt;
+&lt;p&gt;让我头痛了半天，弄了个丑陋的办法做了如下实现：&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;div class=&#34;source&#34; style=&#34;COLOR: #f6f3e8; FONT-FAMILY: &#39;[object]&#39;,&#39;Consolas&#39;,&#39;Lucida Console&#39;,&#39;Courier New&#39;; BACKGROUND-COLOR: #242424&#34;&gt;
+&lt;span style=&#34;COLOR: #8ac6f2&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;safeRedirectToCart&lt;/span&gt;(&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;url&lt;/span&gt;) &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;{&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;COLOR: #8ac6f2&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;isIE&lt;/span&gt; &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;jQuery&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;browser&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;msie&lt;/span&gt;;&lt;br /&gt;    &lt;span style=&#34;COLOR: #8ac6f2&#34;&gt;if&lt;/span&gt; (&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;!&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;isIE&lt;/span&gt;) &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;{&lt;/span&gt;&lt;br /&gt;        &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;window&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;location&lt;/span&gt; &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;url&lt;/span&gt;;&lt;br /&gt;        &lt;span style=&#34;COLOR: #8ac6f2&#34;&gt;return&lt;/span&gt;;&lt;br /&gt;    &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;}&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;$&lt;/span&gt;(&lt;span style=&#34;COLOR: #95e454; FONT-STYLE: italic&#34;&gt;&#34;.btnCart&#34;&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;).&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;get&lt;/span&gt;(&lt;span style=&#34;COLOR: #e5786d&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;).&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;click&lt;/span&gt;();&lt;br /&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;}&lt;/span&gt;
+&lt;/div&gt;
+&lt;p&gt;说明：在页面上render一个连接(可以用样式表控制不显示），判断如果是IE浏览器然则调用其click，嘿嘿，就这个。&lt;/p&gt;              
+</description>
+    </item>
+    
+    <item>
+      <title>Graffiti CMS  开源了</title>
+      <link>http://huobazi.aspxboy.com/blog/2009/12/18/graffiti-cms-is-now-free-open-source/</link>
+      <pubDate>Fri, 18 Dec 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2009/12/18/graffiti-cms-is-now-free-open-source/</guid>
+      <description>&lt;p&gt;&lt;table border=&#34;0&#34; cellspacing=&#34;0&#34; cellpadding=&#34;0&#34;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style=&#34;height: 90px;&#34; valign=&#34;middle&#34;&gt;&lt;div style=&#34;padding-left: 1.1em; padding-top: 1.1em; padding-bottom: 0.8em;&#34;&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;div class=&#34;ProjectTitleControl HalfMarginBottom&#34;&gt;
+&lt;a id=&#34;ctl00_ctl00_MasterContent_ProjectTitleControl1_ProjectTitleLink&#34; href=&#34;http://graffiticms.codeplex.com/&#34;&gt;&lt;img id=&#34;ctl00_ctl00_MasterContent_ProjectTitleControl1_ProjectLogo&#34; class=&#34;HalfPaddingRight&#34; style=&#34;border-width: 0px;&#34; src=&#34;http://download.codeplex.com/Project/Download/FileDownload.aspx?ProjectName=graffiticms&amp;amp;DownloadId=96612&amp;amp;Build=16135&#34; alt=&#34;&#34; align=&#34;absmiddle&#34;&gt;&lt;/a&gt; &lt;a id=&#34;ctl00_ctl00_MasterContent_ProjectTitleControl1_ProjectTitleLink1&#34; href=&#34;http://graffiticms.codeplex.com/&#34;&gt;&lt;h1 id=&#34;ctl00_ctl00_MasterContent_ProjectTitleControl1_ProjectHeader&#34; class=&#34;ProjectHeader NoMargin Inline&#34;&gt;&lt;span id=&#34;ctl00_ctl00_MasterContent_ProjectTitleControl1_TitleLabel&#34;&gt;Graffiti CMS&lt;/span&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;/p&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;see also:&lt;a href=&#34;http://weblogs.asp.net/kencox/archive/2009/12/17/graffiti-cms-is-now-free-open-source.aspx&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://weblogs.asp.net/kencox/archive/2009/12/17/graffiti-cms-is-now-free-open-source.aspx&#34;&gt;http://weblogs.asp.net/kencox/archive/2009/12/17/graffiti-cms-is-now-free-open-source.aspx&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Graffiti CMS  开源了</title>
+      <link>http://huobazi.aspxboy.com/blog/2009/12/18/graffiti-cms-is-now-free-open-source/</link>
+      <pubDate>Fri, 18 Dec 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2009/12/18/graffiti-cms-is-now-free-open-source/</guid>
+      <description>&lt;p&gt;&lt;table border=&#34;0&#34; cellspacing=&#34;0&#34; cellpadding=&#34;0&#34;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style=&#34;height: 90px;&#34; valign=&#34;middle&#34;&gt;&lt;div style=&#34;padding-left: 1.1em; padding-top: 1.1em; padding-bottom: 0.8em;&#34;&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;div class=&#34;ProjectTitleControl HalfMarginBottom&#34;&gt;
+&lt;a id=&#34;ctl00_ctl00_MasterContent_ProjectTitleControl1_ProjectTitleLink&#34; href=&#34;http://graffiticms.codeplex.com/&#34;&gt;&lt;img id=&#34;ctl00_ctl00_MasterContent_ProjectTitleControl1_ProjectLogo&#34; class=&#34;HalfPaddingRight&#34; style=&#34;border-width: 0px;&#34; src=&#34;http://download.codeplex.com/Project/Download/FileDownload.aspx?ProjectName=graffiticms&amp;amp;DownloadId=96612&amp;amp;Build=16135&#34; alt=&#34;&#34; align=&#34;absmiddle&#34;&gt;&lt;/a&gt; &lt;a id=&#34;ctl00_ctl00_MasterContent_ProjectTitleControl1_ProjectTitleLink1&#34; href=&#34;http://graffiticms.codeplex.com/&#34;&gt;&lt;h1 id=&#34;ctl00_ctl00_MasterContent_ProjectTitleControl1_ProjectHeader&#34; class=&#34;ProjectHeader NoMargin Inline&#34;&gt;&lt;span id=&#34;ctl00_ctl00_MasterContent_ProjectTitleControl1_TitleLabel&#34;&gt;Graffiti CMS&lt;/span&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;/p&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;see also:&lt;a href=&#34;http://weblogs.asp.net/kencox/archive/2009/12/17/graffiti-cms-is-now-free-open-source.aspx&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://weblogs.asp.net/kencox/archive/2009/12/17/graffiti-cms-is-now-free-open-source.aspx&#34;&gt;http://weblogs.asp.net/kencox/archive/2009/12/17/graffiti-cms-is-now-free-open-source.aspx&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Repeater,DataList等嵌套如何绑定父repeater字段?</title>
+      <link>http://huobazi.aspxboy.com/blog/2009/12/11/nested-repeater-parent/</link>
+      <pubDate>Fri, 11 Dec 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2009/12/11/nested-repeater-parent/</guid>
+      <description>&lt;p&gt;&lt;p&gt;嘿嘿，其实Container有个Parent属性,把它转换为RepeaterItem再取其DataItem&lt;/p&gt;
+&lt;p&gt;DataBinder.Eval(((System.W&lt;/p&gt;
+&lt;div style=&#34;font-size: 9pt; color: #000000; direction: ltr;&#34;&gt;eb.UI.WebControls.Repeat erItem)Container.Parent.Parent.Parent).DataItem&lt;/div&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>使用SQL语句更改数据表的默认值</title>
+      <link>http://huobazi.aspxboy.com/blog/2009/12/09/chang-sql-table-field-default/</link>
+      <pubDate>Wed, 09 Dec 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2009/12/09/chang-sql-table-field-default/</guid>
+      <description>&lt;p&gt;&lt;p&gt;以前还真没这么干过，都是手工去掉约束，再添加的，今天一边google一边搞啊搞啊的，最终下面这个脚本可以用了&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;div class=&#34;source&#34; style=&#39;font-family: &#34;Consolas&#34;,&#34;Lucida Console&#34;,&#34;Courier New&#34;; color: #ffffff; background-color: #333333;&#39;&gt;
+&lt;p&gt;&lt;span style=&#34;color: #f0e68c;&#34;&gt;alter&lt;/span&gt; &lt;span style=&#34;color: #f0e68c;&#34;&gt;table&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;dbo&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;SOTransaction&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #f0e68c;&#34;&gt;alter&lt;/span&gt; &lt;span style=&#34;color: #f0e68c;&#34;&gt;column&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;UnitCostWithoutTax&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;decimal&lt;/span&gt;(&lt;span style=&#34;color: #ffffff;&#34;&gt;10&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;2&lt;/span&gt;)  &lt;span style=&#34;color: #f0e68c;&#34;&gt;not&lt;/span&gt; &lt;span style=&#34;color: #f0e68c;&#34;&gt;null&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;color: #f0e68c;&#34;&gt;go&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;color: #f0e68c;&#34;&gt;declare&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;name&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;varchar&lt;/span&gt;(&lt;span style=&#34;color: #ffffff;&#34;&gt;1000&lt;/span&gt;)&lt;br /&gt;&lt;span style=&#34;color: #f0e68c;&#34;&gt;declare&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;tablename&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;varchar&lt;/span&gt;(&lt;span style=&#34;color: #ffffff;&#34;&gt;1000&lt;/span&gt;)&lt;br /&gt;&lt;span style=&#34;color: #f0e68c;&#34;&gt;declare&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;fieldname&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;varchar&lt;/span&gt;(&lt;span style=&#34;color: #ffffff;&#34;&gt;1000&lt;/span&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;color: #f0e68c;&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;tablename&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;&amp;lsquo;SOTransaction&amp;rsquo;&lt;/span&gt;;&lt;br /&gt;&lt;span style=&#34;color: #f0e68c;&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;fieldname&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;&amp;lsquo;UnitCostWithoutTax&amp;rsquo;&lt;/span&gt;;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;color: #f0e68c;&#34;&gt;select&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;name&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;=&lt;/span&gt; b&lt;span style=&#34;color: #ffffff;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;name&lt;/span&gt; &lt;span style=&#34;color: #f0e68c;&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;syscolumns&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color: #f0e68c;&#34;&gt;inner&lt;/span&gt; &lt;span style=&#34;color: #f0e68c;&#34;&gt;join&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;sysobjects&lt;/span&gt; b&lt;br /&gt;    &lt;span style=&#34;color: #f0e68c;&#34;&gt;on&lt;/span&gt; b&lt;span style=&#34;color: #ffffff;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;a&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;cdefault&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #f0e68c;&#34;&gt;where&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #ffffff;&#34;&gt;a&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;object_id&lt;/span&gt;(&lt;span style=&#34;color: #ffffff;&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;tablename&lt;/span&gt;)&lt;br /&gt;    &lt;span style=&#34;color: #f0e68c;&#34;&gt;and&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;a&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;=@&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;fieldname&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #f0e68c;&#34;&gt;and&lt;/span&gt; b&lt;span style=&#34;color: #ffffff;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;name&lt;/span&gt; &lt;span style=&#34;color: #f0e68c;&#34;&gt;like&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;&amp;lsquo;DF%&amp;rsquo;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #87ceeb;&#34;&gt;&amp;ndash;print @name&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;color: #f0e68c;&#34;&gt;exec&lt;/span&gt;(&lt;span style=&#34;color: #ffffff;&#34;&gt;&amp;rsquo; alter table SOTransaction drop constraint &amp;lsquo;&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;name&lt;/span&gt;);&lt;br /&gt;&lt;span style=&#34;color: #f0e68c;&#34;&gt;go&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #f0e68c;&#34;&gt;alter&lt;/span&gt; &lt;span style=&#34;color: #f0e68c;&#34;&gt;table&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;dbo&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff;&#34;&gt;SOTransaction&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #f0e68c;&#34;&gt;add&lt;/span&gt; &lt;span style=&#34;color: #f0e68c;&#34;&gt;constraint&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;DF_SOTransaction_UnitCostWithoutTax&lt;/span&gt; &lt;span style=&#34;color: #f0e68c;&#34;&gt;default&lt;/span&gt; (&lt;span style=&#34;color: #ffffff;&#34;&gt;0&lt;/span&gt;) &lt;span style=&#34;color: #f0e68c;&#34;&gt;for&lt;/span&gt; &lt;span style=&#34;color: #ffffff;&#34;&gt;UnitCostWithoutTax&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>在线编辑器的一个新选择。</title>
+      <link>http://huobazi.aspxboy.com/blog/2009/10/27/kissy-editor/</link>
+      <pubDate>Tue, 27 Oct 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2009/10/27/kissy-editor/</guid>
+      <description>&lt;p&gt;今天&lt;a title=&#34;http://lifesinger.org/&#34; href=&#34;http://lifesinger.org/&#34; target=&#34;_blank&#34;&gt;lifesinger&lt;/a&gt;发布了&lt;a title=&#34;kiss editor&#34; href=&#34;http://lifesinger.org/blog/2009/10/kissy-editor/&#34; target=&#34;_blank&#34;&gt;淘宝编辑器&lt;/a&gt;,&lt;/p&gt;
+&lt;p&gt;可以在这里看到&lt;a href=&#34;http://kissy.googlecode.com/svn/trunk/src/editor/demo/basic.html&#34; target=&#34;_blank&#34;&gt;演示&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;介绍可以看这里，&lt;a href=&#34;http://lifesinger.org/blog/2009/10/kissy-editor/&#34;&gt;http://lifesinger.org/blog/2009/10/kissy-editor/&lt;/a&gt;&lt;/p&gt;              
+</description>
+    </item>
+    
+    <item>
+      <title>拆箱记</title>
+      <link>http://huobazi.aspxboy.com/blog/2009/07/26/2009-mvp/</link>
+      <pubDate>Sun, 26 Jul 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2009/07/26/2009-mvp/</guid>
+      <description>&lt;p&gt;大洋彼岸寄来了一个纸箱&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://huobazi.aspxboy.com/images/hbz_images/mvp/1.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://huobazi.aspxboy.com/images/hbz_images/mvp/2.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://huobazi.aspxboy.com/images/hbz_images/mvp/3.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;哇，里面装了一个老外宅男&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://huobazi.aspxboy.com/images/hbz_images/mvp/4.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://huobazi.aspxboy.com/images/hbz_images/mvp/5.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://huobazi.aspxboy.com/images/hbz_images/mvp/6.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://huobazi.aspxboy.com/images/hbz_images/mvp/7.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://huobazi.aspxboy.com/images/hbz_images/mvp/8.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://huobazi.aspxboy.com/images/hbz_images/mvp/9.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;MVP奖杯&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://huobazi.aspxboy.com/images/hbz_images/mvp/10.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://huobazi.aspxboy.com/images/hbz_images/mvp/11.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;MVP证书&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://huobazi.aspxboy.com/images/hbz_images/mvp/12.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;               
+</description>
+    </item>
+    
+    <item>
+      <title>Asp.Net发邮件，如何发送附件</title>
+      <link>http://huobazi.aspxboy.com/blog/2009/07/21/how-to-send-an-email-with-attachments/</link>
+      <pubDate>Tue, 21 Jul 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2009/07/21/how-to-send-an-email-with-attachments/</guid>
+      <description>&lt;p&gt;&lt;p&gt;使用如下代码可以发送附件&lt;/p&gt;
+&lt;pre&gt;MailMessage mail = new MailMessage();
+mail.To = &amp;rdquo;me@mycompany.com&amp;rdquo;;
+mail.From = &amp;rdquo;you@yourcompany.com&amp;rdquo;;
+mail.Subject = &amp;rdquo;this is a test email.&amp;ldquo;;
+mail.Body = &amp;rdquo;this is my test email body.&amp;ldquo;;
+MailAttachment attachment = new MailAttachment( Server.MapPath( &amp;rdquo;mailTest.txt&amp;rdquo; ) ); //create the attachment
+mail.Attachments.Add( attachment );
+SmtpMail.SmtpServer = &amp;rdquo;localhost&amp;rdquo;; 
+SmtpMail.Send( mail );&lt;/pre&gt;
+&lt;p&gt;使用如下代码可以在用户上传附件后发生邮件:&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;pre&gt;if  (FileUpload1.HasFile)
+{
+    string  toAddress  =  &amp;rdquo;you@yourprovider.com&amp;rdquo;;
+    string  fromAddress  =  you@yourprovider.com  (2);
+    string  mailServer  =  &amp;rdquo;smtp.yourprovider.com&amp;rdquo;;&lt;/p&gt;
+
+&lt;p&gt;    MailMessage  myMailMessage  =  new  MailMessage();&lt;/p&gt;
+
+&lt;p&gt;    myMailMessage.To.Add(toAddress);
+    myMailMessage.From  =  new  MailAddress(fromAddress);
+    myMailMessage.Subject  =  &amp;rdquo;Test  Message&amp;rdquo;;&lt;/p&gt;
+
+&lt;p&gt;    string  fileName  =  Path.GetFileName(FileUpload1.PostedFile.FileName);
+    Attachment  myAttachment  =  
+                                  new  Attachment(FileUpload1.FileContent,  fileName);
+    myMailMessage.Attachments.Add(myAttachment);&lt;/p&gt;
+
+&lt;p&gt;    SmtpClient  mySmtpClient  =  new  SmtpClient(mailServer);&lt;/p&gt;
+
+&lt;p&gt;    mySmtpClient.Send(myMailMessage);
+}&lt;/pre&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Asp.Net发邮件，如何发送附件</title>
+      <link>http://huobazi.aspxboy.com/blog/2009/07/21/how-to-send-an-email-with-attachments/</link>
+      <pubDate>Tue, 21 Jul 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2009/07/21/how-to-send-an-email-with-attachments/</guid>
+      <description>&lt;p&gt;&lt;p&gt;使用如下代码可以发送附件&lt;/p&gt;
+&lt;pre&gt;MailMessage mail = new MailMessage();
+mail.To = &amp;rdquo;me@mycompany.com&amp;rdquo;;
+mail.From = &amp;rdquo;you@yourcompany.com&amp;rdquo;;
+mail.Subject = &amp;rdquo;this is a test email.&amp;ldquo;;
+mail.Body = &amp;rdquo;this is my test email body.&amp;ldquo;;
+MailAttachment attachment = new MailAttachment( Server.MapPath( &amp;rdquo;mailTest.txt&amp;rdquo; ) ); //create the attachment
+mail.Attachments.Add( attachment );
+SmtpMail.SmtpServer = &amp;rdquo;localhost&amp;rdquo;; 
+SmtpMail.Send( mail );&lt;/pre&gt;
+&lt;p&gt;使用如下代码可以在用户上传附件后发生邮件:&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;pre&gt;if  (FileUpload1.HasFile)
+{
+    string  toAddress  =  &amp;rdquo;you@yourprovider.com&amp;rdquo;;
+    string  fromAddress  =  you@yourprovider.com  (2);
+    string  mailServer  =  &amp;rdquo;smtp.yourprovider.com&amp;rdquo;;&lt;/p&gt;
+
+&lt;p&gt;    MailMessage  myMailMessage  =  new  MailMessage();&lt;/p&gt;
+
+&lt;p&gt;    myMailMessage.To.Add(toAddress);
+    myMailMessage.From  =  new  MailAddress(fromAddress);
+    myMailMessage.Subject  =  &amp;rdquo;Test  Message&amp;rdquo;;&lt;/p&gt;
+
+&lt;p&gt;    string  fileName  =  Path.GetFileName(FileUpload1.PostedFile.FileName);
+    Attachment  myAttachment  =  
+                                  new  Attachment(FileUpload1.FileContent,  fileName);
+    myMailMessage.Attachments.Add(myAttachment);&lt;/p&gt;
+
+&lt;p&gt;    SmtpClient  mySmtpClient  =  new  SmtpClient(mailServer);&lt;/p&gt;
+
+&lt;p&gt;    mySmtpClient.Send(myMailMessage);
+}&lt;/pre&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

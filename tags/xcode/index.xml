@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Xcode on 武眉博</title>
+    <link>http://huobazi.aspxboy.com/tags/xcode/</link>
+    <description>Recent content in Xcode on 武眉博</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 28 Nov 2011 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://huobazi.aspxboy.com/tags/xcode/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title> [How to] 如何卸载Xcode</title>
+      <link>http://huobazi.aspxboy.com/blog/2011/11/28/how-to-uninstall-xcode/</link>
+      <pubDate>Mon, 28 Nov 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2011/11/28/how-to-uninstall-xcode/</guid>
+      <description>&lt;p&gt; &lt;/p&gt;
+&lt;pre&gt; $ sudo /Developer/Library/uninstall-devtools --mode=all&lt;/pre&gt;
+&lt;p&gt; &lt;/p&gt;                
+</description>
+    </item>
+    
+  </channel>
+</rss>

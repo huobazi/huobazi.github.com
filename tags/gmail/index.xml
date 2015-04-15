@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gmail on 武眉博</title>
+    <link>http://huobazi.aspxboy.com/tags/gmail/</link>
+    <description>Recent content in Gmail on 武眉博</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 21 Feb 2008 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://huobazi.aspxboy.com/tags/gmail/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>C# .Net Gmail Tools </title>
+      <link>http://huobazi.aspxboy.com/blog/2008/02/21/csharpgmailtools/</link>
+      <pubDate>Thu, 21 Feb 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2008/02/21/csharpgmailtools/</guid>
+      <description>&lt;p&gt;&lt;p&gt;位于&lt;font face=&#34;Verdana&#34;&gt;code.msdn.microsoft.com&lt;/font&gt;的一个小型Library&lt;br /&gt;&lt;br /&gt;你可以很简单的使用它来通过gmail发送邮件或者获取Gmail Atom Feed 。&lt;br /&gt;&lt;br /&gt; &lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;div class=&#34;codeDiv&#34;&gt;   //Send a message with one line of code &lt;br /&gt;&lt;br /&gt;   RC.Gmail.GmailMessage.SendFromGmail(&amp;ldquo;username&amp;rdquo;, &amp;ldquo;password&amp;rdquo;, &amp;ldquo;toAddress@gmail.com&amp;rdquo;, &amp;ldquo;subject&amp;rdquo;, &amp;ldquo;message body&amp;rdquo;); &lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;   //Send a message with one line of code with a MailMessage object &lt;br /&gt;&lt;br /&gt;   RC.Gmail.GmailMessage.SendMailMessageFromGmail(&amp;ldquo;username&amp;rdquo;, &amp;ldquo;password&amp;rdquo;, mailMessageObject); &lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;   //Use the GmailMessage object to create and send your message &lt;br /&gt;&lt;br /&gt;   RC.Gmail.GmailMessage gmailMsg = new RC.Gmail.GmailMessage(&amp;ldquo;username&amp;rdquo;, &amp;ldquo;password&amp;rdquo;); &lt;br /&gt;&lt;br /&gt;   gmailMsg.To = &amp;ldquo;RCcode@gmail.com&amp;rdquo;; &lt;br /&gt;&lt;br /&gt;   gmailMsg.From = &amp;ldquo;fromAddress@gmail.com&amp;rdquo;; &lt;br /&gt;&lt;br /&gt;   gmailMsg.Subject = &amp;ldquo;C# Test Message&amp;rdquo;; &lt;br /&gt;&lt;br /&gt;   gmailMsg.Body = &amp;ldquo;Test body&amp;rdquo;; &lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;   MailAttachment attachment = new MailAttachment(@&amp;ldquo;c:\testfile.txt&amp;rdquo;); &lt;br /&gt;&lt;br /&gt;   gmailMsg.Attachments.Add(attachment); &lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;   gmailMsg.Send();&lt;br /&gt;&lt;br /&gt;&lt;p&gt; &lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://code.msdn.microsoft.com/CSharpGmail&#34; target=&#34;_blank&#34; mce_href=&#34;http://code.msdn.microsoft.com/CSharpGmail&#34;&gt;&lt;strong&gt;Visit here to download the GMail Tools&lt;/strong&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;div class=&#34;codeDiv&#34;&gt;
+&lt;p&gt;// Create the object and get the feed &lt;br /&gt;&lt;br /&gt;   RC.Gmail.GmailAtomFeed gmailFeed = new RC.Gmail.GmailAtomFeed(&amp;ldquo;username&amp;rdquo;, &amp;ldquo;password&amp;rdquo;); &lt;br /&gt;&lt;br /&gt;   gmailFeed.GetFeed(); &lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;   // Access the feeds XmlDocument &lt;br /&gt;&lt;br /&gt;   XmlDocument myXml = gmailFeed.FeedXml &lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;   // Access the raw feed as a string &lt;br /&gt;&lt;br /&gt;   string feedString = gmailFeed.RawFeed &lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;   // Access the feed through the object &lt;br /&gt;&lt;br /&gt;   string feedTitle = gmailFeed.Title; &lt;br /&gt;&lt;br /&gt;   string feedTagline = gmailFeed.Message; &lt;br /&gt;&lt;br /&gt;   DateTime feedModified = gmailFeed.Modified; &lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;   //Get the entries &lt;br /&gt;&lt;br /&gt;   for(int i = 0; i &amp;amp;lt; gmailFeed.FeedEntries.Count; i++) { &lt;br /&gt;&lt;br /&gt;      entryAuthorName = gmailFeed.FeedEntries[i].FromName; &lt;br /&gt;&lt;br /&gt;      entryAuthorEmail = gmailFeed.FeedEntries[i].FromEmail; &lt;br /&gt;&lt;br /&gt;      entryTitle = gmailFeed.FeedEntries[i].Subject; &lt;br /&gt;&lt;br /&gt;      entrySummary = gmailFeed.FeedEntries[i].Summary; &lt;br /&gt;&lt;br /&gt;      entryIssuedDate = gmailFeed.FeedEntries[i].Received; &lt;br /&gt;&lt;br /&gt;      entryId = gmailFeed.FeedEntries[i].Id; &lt;br /&gt;&lt;br /&gt;   }&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;&lt;a href=&#34;http://code.msdn.microsoft.com/CSharpGmail&#34; target=&#34;_blank&#34; mce_href=&#34;http://code.msdn.microsoft.com/CSharpGmail&#34;&gt;&lt;strong&gt;Visit here to download the GMail Tools&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

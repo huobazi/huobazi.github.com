@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on 武眉博</title>
+    <link>http://huobazi.aspxboy.com/blog/</link>
+    <description>Recent content in Blogs on 武眉博</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 26 Nov 2012 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://huobazi.aspxboy.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>OSX 上默认 VIM 不支持 &#43; 寄存器</title>
+      <link>http://huobazi.aspxboy.com/blog/2012/11/26/osx-shang-mo-ren-vim-bu-zhi-chi-plus-ji-cun-qi/</link>
+      <pubDate>Mon, 26 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2012/11/26/osx-shang-mo-ren-vim-bu-zhi-chi-plus-ji-cun-qi/</guid>
+      <description>&lt;p&gt;OSX 上默认 VIM 不支持 + 寄存器，所以从系统剪贴板相互复制东西就麻烦了
+所以,我重新装了一下vim&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;brew install vim
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;然后&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;which vim
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;发现还是 /usr/bin&lt;/p&gt;
+
+&lt;p&gt;于是，在 .zshrc内 把 /usr/local/bin 加入 PATH 就 ok 了
+其实后来想想，把原来的 move 到 old 上去，将 /usr/bin/vim ln 到/usr/local/vim 就 OK 了
+或者&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;brew install macvim --HEAD --override-system-vim
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;来安装 macvim 并覆盖系统原来的vim&lt;/p&gt;
+
+&lt;p&gt;下来，发现在OSX内用tmux后仍然无法访问＋和＊寄存器
+一直提示 Nothing in ＋ register
+SO上找找，发现&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt; brew install reattach-to-user-namespace
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;装这个补丁就可以访问tmux的buffer了
+最后贴一下.tmux.conf&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;set-option -g default-shell $SHELL
+set-option -g default-command &amp;quot;reattach-to-user-namespace -l zsh&amp;quot;
+bind y run &amp;quot;tmux save-buffer - | reattach-to-user-namespace pbcopy&amp;quot;
+unbind p
+bind p paste-buffer
+bind -t vi-copy v begin-selection
+bind -t vi-copy y copy-selection
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;另外不要忘记设置vim的&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;set clipboard=unnamed
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;完整的配置&lt;a href=&#34;https://github.com/huobazi/dotfiles&#34;&gt;https://github.com/huobazi/dotfiles&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>tmux丢失或显示vim的配色</title>
+      <link>http://huobazi.aspxboy.com/blog/2012/11/02/tmux-diu-shi-huo-xian-shi-vimde-pei-se/</link>
+      <pubDate>Fri, 02 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2012/11/02/tmux-diu-shi-huo-xian-shi-vimde-pei-se/</guid>
+      <description>&lt;p&gt;使用tmux，同时使用vim，发现配色总是和别人截图有差别
+在.tmux.conf内设置了&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;set -g default-terminal &amp;quot;screen-256color&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;还是木有作用，最后在SO上找到了解决的办法
+在.bashrc内(我是在.zshrc内)添加&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;alias tmux=&#39;tmux -2&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;就OK了&lt;/p&gt;
+
+&lt;p&gt;参见&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://vim.wikia.com/wiki/256_colors_setup_for_console_Vim&#34;&gt;http://vim.wikia.com/wiki/256_colors_setup_for_console_Vim&lt;/a&gt;
+&lt;a href=&#34;http://stackoverflow.com/questions/10158508/lose-vim-colorscheme-in-tmux-mode&#34;&gt;http://stackoverflow.com/questions/10158508/lose-vim-colorscheme-in-tmux-mode&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>将MySQL 的数据导入 PostgreSQL</title>
+      <link>http://huobazi.aspxboy.com/blog/2012/09/12/import-data-from-mysql-to-postgresql/</link>
+      <pubDate>Wed, 12 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2012/09/12/import-data-from-mysql-to-postgresql/</guid>
+      <description>
+
+&lt;p&gt;开始学习使用PostgreSQL, 先尝试将MySQL数据导入到PostgreSQL&lt;/p&gt;
+
+&lt;h2 id=&#34;安装postgresql:8e74d1f4d6a69d3ff86a984aac665b40&#34;&gt;安装PostgreSQL&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install postgresql postgresql-client postgresql-contrib  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;基本按照&lt;a href=&#34;http://kiki.ubuntu.org.cn/PostgreSQL&#34;&gt;http://wiki.ubuntu.org.cn/PostgreSQL&lt;/a&gt;进行设置就OK了&lt;/p&gt;
+
+&lt;h2 id=&#34;安装开发工具:8e74d1f4d6a69d3ff86a984aac665b40&#34;&gt;安装开发工具&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install libpq-dev pgadmin3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;PgAdmin3 这是一个桌面 GUI 工具, 可以很方便的管理 PostgreSQL&lt;/p&gt;
+
+&lt;h2 id=&#34;用到的rubygems:8e74d1f4d6a69d3ff86a984aac665b40&#34;&gt;用到的RubyGems&lt;/h2&gt;
+
+&lt;p&gt;在 Gemfile 中增加：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;gem &amp;quot;pg&amp;quot; 
+gem &amp;quot;mysql2&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;然后&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;bundle install
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;完整的-ruby-代码:8e74d1f4d6a69d3ff86a984aac665b40&#34;&gt;完整的 Ruby 代码&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;# coding: utf-8
+require &#39;mysql2&#39;
+require &#39;pg&#39;
+
+mysql_client = Mysql2::Client.new(:host =&amp;gt; &amp;quot;localhost&amp;quot;, :username =&amp;gt;&amp;quot;root&amp;quot;, :password =&amp;gt; &amp;quot;pa$$word&amp;quot;, :database =&amp;gt; &amp;quot;my_test&amp;quot;, :encoding =&amp;gt; &amp;quot;utf8&amp;quot;)
+
+postgres_client = PG::Connection.new(:host =&amp;gt; &amp;quot;localhost&amp;quot;, :dbname =&amp;gt; &#39;mydb&#39;, :user =&amp;gt; &amp;quot;postgres&amp;quot;, :password =&amp;gt; &amp;quot;pa$$word&amp;quot;)
+postgres_client.set_client_encoding(&#39;utf8&#39;)
+
+mysql_result = mysql_client.query(&#39;select `code`,`name`,`level` from `chinese_regions`&#39;)
+
+step = 0
+mysql_result.each do |row|
+
+  the_code = row[&#39;code&#39;]
+  the_name = row[&#39;name&#39;]
+  the_level = row[&#39;level&#39;].to_i
+  insert_sql_test = &amp;quot;insert into chinese_regions (\&amp;quot;code\&amp;quot;,\&amp;quot;name\&amp;quot;,\&amp;quot;level\&amp;quot;) values (&#39;#{the_code}&#39;,&#39;#{the_name}&#39;,&#39;#{the_level}&#39;);&amp;quot;
+  postgres_client.exec(insert_sql_test)
+
+  step += 1
+  puts &#39;-&#39; + step.to_s + &#39;-&#39; + the_code + &#39;--&#39; + the_name + &#39;--&#39; + the_level.to_s
+
+end
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Run 啊 Run 啊的就 OK 了&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>使用AjaxUpload和Carrierwave在Rails Mongoid中批量上传图片</title>
+      <link>http://huobazi.aspxboy.com/blog/2012/08/15/ajaxupload-with-rail-carrierwave-on-mongodb/</link>
+      <pubDate>Wed, 15 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2012/08/15/ajaxupload-with-rail-carrierwave-on-mongodb/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/valums/file-uploader&#34;&gt;file-uploader&lt;/a&gt;是一个用 Javascrit 编写的文件上传 Libary,在这里我使用&lt;a href=&#34;https://github.com/jnicklas/carrierwave&#34;&gt;CarrierWave&lt;/a&gt;和 &lt;a href=&#34;https://github.com/mongoid/mongoid&#34;&gt;Mongoid&lt;/a&gt; 来完成多文件的无刷新上传功能&lt;/p&gt;
+
+&lt;h2 id=&#34;rubygems:7371c11e255b336e41edb223ab46297b&#34;&gt;RubyGems&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;gem &#39;mongoid&#39;, &#39;3.0.4&#39;
+gem &#39;carrierwave&#39;, &#39;0.6.2&#39;
+gem &#39;carrierwave-mongoid&#39;, :github =&amp;gt; &#39;jnicklas/carrierwave-mongoid&#39;, :branch =&amp;gt; &#39;mongoid-3.0&#39; 
+gem &#39;mini_magick&#39;, &#39;3.4&#39;
+gem &#39;rack-raw-upload&#39;, &#39;1.1.0&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;model:7371c11e255b336e41edb223ab46297b&#34;&gt;Model&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;class Screenshot
+  include Mongoid::Document
+  include Mongoid::Timestamps::Created
+  include Rails.application.routes.url_helpers
+
+  attr_accessible :image 
+  field :image 
+
+  mount_uploader :image, ScreenshotUploader 
+
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;controller:7371c11e255b336e41edb223ab46297b&#34;&gt;Controller&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;class ScreenshotsController &amp;lt; ApplicationController
+
+  def index
+    @screenshots = Screenshot.all.desc(:created_at)
+
+    respond_to do |format|
+      format.html # index.html.erb    
+      format.js{ render :layout =&amp;gt; false}
+    end
+  end
+
+  def create
+    file = params[:qqfile].is_a?(ActionDispatch::Http::UploadedFile) ? params[:qqfile] : params[:file]
+    @screenshot = Screenshot.new
+    @screenshot.image = file
+    if @screenshot.save
+      render json: { success: true, src: @screenshot.to_json }
+    else
+      render json: @screenshot.errors.to_json
+    end
+  end
+
+  def destroy
+    @screenshot = Screenshot.find(params[:id])
+    @screenshot.destroy
+
+    respond_to do |format|
+      format.html { redirect_to screenshots_path }
+      format.js{ 
+        @screenshots = Screenshot.all.desc(:created_at)
+        render :layout =&amp;gt; false
+      }
+    end
+
+  end
+
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;uploader:7371c11e255b336e41edb223ab46297b&#34;&gt;Uploader&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;# encoding: utf-8
+require &amp;quot;digest/md5&amp;quot;
+require &#39;carrierwave/processing/mini_magick&#39;
+
+class ScreenshotUploader &amp;lt; CarrierWave::Uploader::Base
+  include CarrierWave::MiniMagick
+
+  storage :file
+
+  # Override the directory where uploaded files will be stored.
+  def store_dir
+    &amp;quot;uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}&amp;quot;
+  end
+
+
+  process :convert =&amp;gt; &#39;png&#39;
+
+  # Create different versions of your uploaded files:
+  version :thumb do
+    process :resize_to_fill =&amp;gt; [120, 120]
+  end
+
+  # Add a white list of extensions which are allowed to be uploaded.
+  def extension_white_list
+    %w(jpg jpeg gif png)
+  end
+
+  # Override the filename of the uploaded files:
+  # see http://huacnlee.com/blog/carrierwave-upload-store-file-name-config/
+  def filename
+    if super.present?
+      # current_path 是 Carrierwave 上传过程临时创建的一个文件，有时间标记，所以它将是唯一的
+      @name ||= Digest::MD5.hexdigest(File.dirname(current_path))
+      &amp;quot;#{@name}.#{file.extension.downcase}&amp;quot;
+    end
+  end
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;javascript:7371c11e255b336e41edb223ab46297b&#34;&gt;Javascript&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;  $(document).ready(function(){
+
+    var uploader = new qq.FileUploader({
+      debug: true,
+      allowedExtensions: [&#39;jpg&#39;, &#39;jpeg&#39;, &#39;png&#39;, &#39;gif&#39;],
+      sizeLimit: 1048576, // max size: 1MB
+      minSizeLimit: 0, // min size
+      multiple: true,
+      element: document.getElementById(&#39;file-uploader&#39;),
+      action: &#39;&amp;lt;%= screenshots_path %&amp;gt;&#39;,
+      onComplete: function(id, fileName, responseJSON){
+        $.getScript(&amp;quot;&amp;lt;%= screenshots_path %&amp;gt;&amp;quot;);
+      },
+      onSubmit: function(id, fileName) {
+        uploader.setParams({
+          xx: &amp;quot;xx&amp;quot;,
+          yy: &#39;yy&#39;,
+          zz: &#39;zz&#39;,       
+          authenticity_token: &amp;quot;&amp;lt;%= form_authenticity_token.to_s %&amp;gt;&amp;quot;
+        });
+      }
+    });
+
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;你可以在 &lt;a href=&#34;https://github.com/huobazi/ajax-upload-with-carrierwave-mongoid&#34;&gt;https://github.com/huobazi/ajax-upload-with-carrierwave-mongoid&lt;/a&gt;下载完整的示例代码&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>从typecho转换到Octopress了</title>
+      <link>http://huobazi.aspxboy.com/blog/2012/03/06/convert-typecho-to-octopress/</link>
+      <pubDate>Tue, 06 Mar 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2012/03/06/convert-typecho-to-octopress/</guid>
+      <description>&lt;p&gt;人生在于折腾,所以将博客转换到Octopress了&lt;br /&gt;
+我的博客经历了如下几次变动：&lt;br /&gt;
+2003年1月,&lt;a href=&#34;http://aspxboy.com/private/&#34;&gt;自己装了个SnowForum&lt;/a&gt;，用来写些技术记录之类的东西&lt;br /&gt;
+&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;&amp;gt;&lt;br /&gt;
+2004年4月,&lt;a href=&#34;http://huobazi.cnblogs.com/&#34;&gt;搬到博客园，以前的记录停止维护，后来数据丢失&lt;/a&gt;&lt;br /&gt;
+&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;&amp;gt;&lt;br /&gt;
+2009年6月,&lt;a href=&#34;http://huobazi.aspxboy.com/blog/2009/06/21/my-blog-moved-to-wp/&#34;&gt;搬出博客园,转换到Wordpress&lt;/a&gt;当时在旧博客上写了script，告知访问者此处停止更新，询问访问者是否停留在当前页，或转向新页面(可能有更新),因此被封号 @_@|||&lt;br /&gt;
+&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;&amp;gt;&lt;br /&gt;
+2009年7月,&lt;a href=&#34;http://huobazi.aspxboy.com/blog/2009/07/04/myblog-from-wordpress-to-typecho/&#34;&gt;博客又转换到Typecho平台&lt;/a&gt;&lt;br /&gt;
+&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;&amp;gt;&lt;br /&gt;
+2012年3月,转到Octopress了，一个静态博客生成引擎，现在看到的全都是html页面,我写了几行ruby代码做了转换，在&lt;a href=&#34;https://github.com/huobazi/typecho-to-octopress&#34;&gt;https://github.com/huobazi/typecho-to-octopress&lt;/a&gt;，希望对想转换的朋友有用。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>HG232破解一例</title>
+      <link>http://huobazi.aspxboy.com/blog/2012/02/25/hg232/</link>
+      <pubDate>Sat, 25 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2012/02/25/hg232/</guid>
+      <description>&lt;p&gt;###0. 默认超级账户&lt;/p&gt;
+
+&lt;p&gt;如果电信没有改过你的猫账户，可以尝试使用下面的信息登陆，如果不可以在进入后面的步骤1和2破解
+&lt;code&gt;帐号： telecomadmin 密码：nE7jA%5m (注意大小写)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;###1. 下载配置文件&lt;/p&gt;
+
+&lt;p&gt;猫上插入U盘，下面两种方法都可以，您挑一种吧。&lt;/p&gt;
+
+&lt;p&gt;#####1.1 手工操作&amp;mdash;-乐趣&lt;/p&gt;
+
+&lt;p&gt;用猫后面印刷的普通用户useradmin登陆，这个用户登陆进去什么高级全选都木有，但是表着急，我这么干的，浏览器用firefox，如果木有就去下载，然后装上firebug，去看隐藏的html元素吧，把样式表的disply:none;都禁止掉，什么 备份配置文件、启动从U盘加载配置、回复出厂值、日志等等都出来了吧，插入U盘，点击备份按钮，文件就下载下来了。&lt;/p&gt;
+
+&lt;p&gt;#####1.2 连接下载&amp;mdash;-直接&lt;/p&gt;
+
+&lt;p&gt;同时通过分析html和javascript代码，我直接把下载地址找到了，如果你不想或者木有firefox&amp;amp;&amp;amp;firebug，那就直接访问：
+&lt;a href=&#34;http://192.168.1.1/html/ehomeclient/cfgUSBRestore.cgi?coverusbpath=usb1_1&#34;&gt;http://192.168.1.1/html/ehomeclient/cfgUSBRestore.cgi?coverusbpath=usb1_1&lt;/a&gt; 这是firebug分析抓包后得到的地址，嘿嘿。
+配置文件就能成功被备份出了，在U盘根目录生成的e8_Config_backup文件夹里ctce8_HG232.cfg。&lt;/p&gt;
+
+&lt;p&gt;###2. 解密配置文件&lt;/p&gt;
+
+&lt;p&gt;网上有现成的编译好的工具可以直接用，不过作为技术宅男，当然要做点有挑战性的了，我弄了俩，一个javascript写的，一个ruby写的，开源滴，您用着放心哦&lt;/p&gt;
+
+&lt;p&gt;#####2.1 无ruby环境&lt;/p&gt;
+
+&lt;p&gt;将代码库里的decrypt.html另存到本地，然后用浏览器打开，在Source里粘贴用ctce8_HG232.cfg文件的内容，
+点击解密按钮,就可进行解密，加密同理。&lt;/p&gt;
+
+&lt;p&gt;#####2.2 有ruby环境&lt;/p&gt;
+
+&lt;p&gt;如果有ruby运行环境，则可以使用代码库里的decrypt.rb另存到本地来，把要破解或者加密的文件放入相同目录,在命令行运行 ruby decrypt.rb 按照提示做就可以了&lt;/p&gt;
+
+&lt;p&gt;#####2.3 超级管理员密码
+到文本编辑软件打开破解后的文件，查找telecomadmin，找到
+    &lt;X_ATP_UserInfoInstance InstanceID=&#34;1&#34; Username=&#34;telecomadmin&#34; Userpassword=&#34;telecomadmin******&#34; Userlevel=&#34;2&#34; Busy=&#34;0&#34; LoginIP=&#34;&#34;/&gt;
+Userpassword里面的就是超级管理员的密码了。一般是telecomadmin加串数字。&lt;/p&gt;
+
+&lt;p&gt;###3. 设置&lt;/p&gt;
+
+&lt;p&gt;后面的情况就大同小异了，网上很多介绍，开路由，，自动拨号，开无线，一堆一堆的教程，另外有些设置在管理平台是没有的，比如下面的ftp和telnet设置，如果又必要使用这些相功能，修改配置文件，加密后，登陆后台后启用从usb恢复设备这个功能，然后把配置文件夹自己修改后，再恢复回去，就可以了。
+    &lt;X_CT-COM_ServiceManage TelnetEnable=&#34;0&#34; TelnetUserName=&#34;!!Huawei&#34; TelnetPassword=&#34;@HuaweiHgw&#34; TelnetPort=&#34;23&#34; WebWanAccessEnable=&#34;0&#34; FtpEnable=&#34;1&#34; FtpUserName=&#34;ftp&#34; FtpPassword=&#34;ftp&#34; FtpPort=&#34;21&#34; FtpPath=&#34;/mnt&#34;/&gt;&lt;/p&gt;
+
+&lt;p&gt;###4. 代码&lt;/p&gt;
+
+&lt;p&gt;本文提及的代码可以在&lt;a href=&#34;https://github.com/huobazi/hg232&#34;&gt;https://github.com/huobazi/hg232&lt;/a&gt;下载到&lt;/p&gt;
+
+&lt;p&gt;###5.  其他&lt;/p&gt;
+
+&lt;p&gt;4个RJ45口理论上都可以设置成接电脑或者itv输出，并不局限于写了itv的那个口。另外，也可以增加一个itv无线网络，在你的机顶盒上加个无线网卡，机顶盒拨入此无线网络，这样就不用拉一堆堆的线了，很适用于前期没有做好布线设计的朋友。&lt;/p&gt;
+
+&lt;p&gt;itv 不选择 无线的话 要选VLAN透传，选无线是VLAN修改&lt;/p&gt;
+
+&lt;p&gt;另外，网上有现成的改好的配置文件下载，&lt;a href=&#34;http://email2me.blog.163.com/blog/static/34347033201101094128402/&#34;&gt;http://email2me.blog.163.com/blog/static/34347033201101094128402/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>iOS通过UIActionSheetDelegate来实现警告的方法</title>
+      <link>http://huobazi.aspxboy.com/blog/2012/02/13/ios-uiactionsheetdelegate/</link>
+      <pubDate>Mon, 13 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2012/02/13/ios-uiactionsheetdelegate/</guid>
+      <description>&lt;p&gt;&lt;p&gt;有时候需要用户确认一些操作，比如退出，删除数据等等，用UIActionSheetDelegate实现比较友好，实现也很简单，controller实现UIActionSheetDelegate协议就可以了，示例如下:&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;div class=&#34;source&#34; style=&#34;font-family: &#39;[object HTMLOptionElement]&#39;, Consolas, &#39;Lucida Console&#39;, &#39;Courier New&#39;; color: #e0eee0; background-color: #000000; &#34;&gt;
+&lt;span style=&#34;color: #7c7268; &#34;&gt;01&lt;/span&gt; &lt;span style=&#34;color: #8db6cd; &#34;&gt;#pragma mark-&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;02&lt;/span&gt; &lt;span style=&#34;color: #8db6cd; &#34;&gt;#pragma mark UIActionSheetDelegate with logOff&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;03&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;04&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;-&lt;/span&gt; (&lt;span style=&#34;color: #add8e6; &#34;&gt;void&lt;/span&gt;) &lt;span style=&#34;color: #e0eee0; &#34;&gt;onLogOffButtonClick:&lt;/span&gt;(&lt;span style=&#34;color: #add8e6; &#34;&gt;id&lt;/span&gt;)&lt;span style=&#34;color: #e0eee0; &#34;&gt;sender&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #f810b0; &#34;&gt;05&lt;/span&gt;     &lt;span style=&#34;color: #e0eee0; &#34;&gt;UIActionSheet&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;&lt;em&gt;&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;actionSheet&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;[[&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;UIActionSheet&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;alloc&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;initWithTitle:&lt;/span&gt;&lt;span style=&#34;color: #80a0ff; &#34;&gt;@&amp;ldquo;确认要退出登录吗？&amp;rdquo;&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;delegate:&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;self&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;cancelButtonTitle:&lt;/span&gt;&lt;span style=&#34;color: #80a0ff; &#34;&gt;@&amp;ldquo;不退出&amp;rdquo;&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;destructiveButtonTitle:&lt;/span&gt;&lt;span style=&#34;color: #80a0ff; &#34;&gt;@&amp;ldquo;退出&amp;rdquo;&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;otherButtonTitles:&lt;/span&gt;&lt;span style=&#34;color: #4eee94; &#34;&gt;nil&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #4eee94; &#34;&gt;nil&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;];&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;06&lt;/span&gt;    &lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;07&lt;/span&gt;     &lt;span style=&#34;color: #e0eee0; &#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;actionSheet&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;showFromTabBar:&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;navigationController&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;tabBarController&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;tabBar&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;];&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;08&lt;/span&gt;     XX&lt;span style=&#34;color: #e0eee0; &#34;&gt;_RELEASE_SAFELY&lt;/span&gt;(&lt;span style=&#34;color: #e0eee0; &#34;&gt;actionSheet&lt;/span&gt;);&lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;09&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #f810b0; &#34;&gt;10&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;-&lt;/span&gt; (&lt;span style=&#34;color: #add8e6; &#34;&gt;void&lt;/span&gt;)&lt;span style=&#34;color: #e0eee0; &#34;&gt;logOff&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;11&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;12&lt;/span&gt;     &lt;span style=&#34;color: #7c7268; &#34;&gt;//do logoff&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;13&lt;/span&gt;    &lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;14&lt;/span&gt;     &lt;span style=&#34;color: #e0eee0; &#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;navigationController&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;popViewControllerAnimated:&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;YES&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;];&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #f810b0; &#34;&gt;15&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;16&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;17&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;-&lt;/span&gt; (&lt;span style=&#34;color: #add8e6; &#34;&gt;void&lt;/span&gt;)&lt;span style=&#34;color: #e0eee0; &#34;&gt;actionSheet:&lt;/span&gt;(&lt;span style=&#34;color: #e0eee0; &#34;&gt;UIActionSheet&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;&lt;/em&gt;&lt;/span&gt;)&lt;span style=&#34;color: #e0eee0; &#34;&gt;actionSheet&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;didDismissWithButtonIndex:&lt;/span&gt;(&lt;span style=&#34;color: #e0eee0; &#34;&gt;NSInteger&lt;/span&gt;)&lt;span style=&#34;color: #e0eee0; &#34;&gt;buttonIndex&lt;/span&gt;; &lt;span style=&#34;color: #e0eee0; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;18&lt;/span&gt;     &lt;span style=&#34;color: #90ee90; &#34;&gt;switch&lt;/span&gt; (&lt;span style=&#34;color: #e0eee0; &#34;&gt;buttonIndex&lt;/span&gt;) &lt;span style=&#34;color: #e0eee0; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;19&lt;/span&gt;         &lt;span style=&#34;color: #90ee90; &#34;&gt;case&lt;/span&gt; &lt;span style=&#34;color: #00ffff; &#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;:&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #f810b0; &#34;&gt;20&lt;/span&gt;             &lt;span style=&#34;color: #e0eee0; &#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;self&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;logOff&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;];&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;21&lt;/span&gt;             &lt;span style=&#34;color: #90ee90; &#34;&gt;break&lt;/span&gt;;&lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;22&lt;/span&gt;         &lt;span style=&#34;color: #90ee90; &#34;&gt;case&lt;/span&gt; &lt;span style=&#34;color: #00ffff; &#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;:&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;23&lt;/span&gt;             &lt;span style=&#34;color: #e0eee0; &#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;tableView&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;deselectRowAtIndexPath:&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;tableView&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;indexPathForSelectedRow&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;animated:&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;YES&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;];&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;24&lt;/span&gt;             &lt;span style=&#34;color: #90ee90; &#34;&gt;break&lt;/span&gt;;&lt;br /&gt;&lt;span style=&#34;color: #f810b0; &#34;&gt;25&lt;/span&gt;         &lt;span style=&#34;color: #90ee90; &#34;&gt;default&lt;/span&gt;&lt;span style=&#34;color: #e0eee0; &#34;&gt;:&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;26&lt;/span&gt;             &lt;span style=&#34;color: #90ee90; &#34;&gt;break&lt;/span&gt;;&lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;27&lt;/span&gt;     &lt;span style=&#34;color: #e0eee0; &#34;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #7c7268; &#34;&gt;28&lt;/span&gt; &lt;span style=&#34;color: #e0eee0; &#34;&gt;}&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu下设置 Sublime Text 2 显示中文 &amp;&amp; 输入中文</title>
+      <link>http://huobazi.aspxboy.com/blog/2012/02/04/ubuntu-sublime-text-chinese/</link>
+      <pubDate>Sat, 04 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2012/02/04/ubuntu-sublime-text-chinese/</guid>
+      <description>&lt;p&gt;Sublime text 2在mac os 下用的很舒服，今天尝试在ubuntu下使用一下，发现汉字显示不了，&lt;/p&gt;
+&lt;p&gt;后来找到方法：&lt;/p&gt;
+&lt;p&gt;菜单栏 -&amp;gt; Preferences -&amp;gt; File Settings - User，在配置文件中增加：&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;// Settings in here override those in &#34;Default/Base File.sublime-settings&#34;, and&lt;br /&gt;// are overridden in turn by file type specific settings. Place your settings&lt;br /&gt;// here, to ensure they&#39;re preserved when upgrading.&lt;br /&gt;{&lt;br /&gt;    &#34;font_face&#34;: &#34;WenQuanYi Micro Hei Mono&#34;&lt;br /&gt;}&lt;br /&gt;就OK了，其中文泉驿是著名的开源字体 &lt;a title=&#34;http://wenq.org/&#34; href=&#34;http://wenq.org/&#34; target=&#34;_blank&#34;&gt;http://wenq.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;然后我们来解决中文输入的问题&lt;/p&gt;
+&lt;p&gt;sudo apt-get install scim&lt;/p&gt;
+&lt;p&gt;sudo apt-get install scim-pinyin&lt;/p&gt;
+&lt;p&gt;在“系统－首选项－scim设置里“&lt;/p&gt;
+&lt;p&gt;scim设置－&amp;gt;全局设置－&amp;gt;将预编辑字符串嵌入到客户端中  勾去掉&lt;br /&gt;scim设置-&amp;gt;gtk-&amp;gt;嵌入式候选词标 勾去掉&lt;/p&gt;
+&lt;p&gt;下来 在“系统－语言支持”里面选上“scim-bridge”就可以了,记得这些修改完要注销重新登录进来哦。&lt;/p&gt;
+&lt;p&gt;或者 ,打开终端,输入 pkill scim,然后输入 scim -d，如果不起作用，那还是建议你注销一下&lt;/p&gt;                
+</description>
+    </item>
+    
+    <item>
+      <title>How to,在iOS中点击文本框以外区域，隐藏键盘</title>
+      <link>http://huobazi.aspxboy.com/blog/2011/12/09/ios-hide-keyboard-when-touch/</link>
+      <pubDate>Fri, 09 Dec 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2011/12/09/ios-hide-keyboard-when-touch/</guid>
+      <description>&lt;p&gt;当点击文本框以外部分时，隐藏键盘，实现很简单，加个Category就可以了，代码如下：&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;div class=&#34;source&#34; style=&#34;font-family: &#39;[object HTMLOptionElement]&#39;, Consolas, &#39;Lucida Console&#39;, &#39;Courier New&#39;; color: #e6e1dc; background-color: #111111; &#34;&gt;
+&lt;p&gt;&lt;span style=&#34;color: #cc7833; font-style: italic; &#34;&gt;#import &amp;lt;UIKit/UIKit.h&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #cc7833; &#34;&gt;@interface&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;UITextField&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;(HideKeyBoard)&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;-&lt;/span&gt;(&lt;span style=&#34;color: #da4939; &#34;&gt;void&lt;/span&gt;)&lt;span style=&#34;color: #e6e1dc; &#34;&gt;hideKeyBoard:&lt;/span&gt;(&lt;span style=&#34;color: #e6e1dc; &#34;&gt;UIView&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;*&lt;/span&gt;)&lt;span style=&#34;color: #e6e1dc; &#34;&gt;view&lt;/span&gt;;&lt;br /&gt;&lt;span style=&#34;color: #cc7833; &#34;&gt;@end&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;color: #cc7833; font-style: italic; &#34;&gt;#import &#34;UITextField+HideKeyBoard.h&#34;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;color: #cc7833; &#34;&gt;@implementation&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;UITextField&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;(HideKeyBoard)&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;-&lt;/span&gt; (&lt;span style=&#34;color: #da4939; &#34;&gt;void&lt;/span&gt;) &lt;span style=&#34;color: #e6e1dc; &#34;&gt;hideKeyBoard:&lt;/span&gt;(&lt;span style=&#34;color: #e6e1dc; &#34;&gt;UIView&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;*&lt;/span&gt;)&lt;span style=&#34;color: #e6e1dc; &#34;&gt;view&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #e6e1dc; &#34;&gt;UITapGestureRecognizer&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;tap&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;[[&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;UITapGestureRecognizer&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;alloc&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;]&lt;/span&gt;&lt;br /&gt;                                   &lt;span style=&#34;color: #e6e1dc; &#34;&gt;initWithTarget:&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;self&lt;/span&gt;&lt;br /&gt;                                   &lt;span style=&#34;color: #e6e1dc; &#34;&gt;action:&lt;/span&gt;&lt;span style=&#34;color: #cc7833; &#34;&gt;@selector&lt;/span&gt;(&lt;span style=&#34;color: #e6e1dc; &#34;&gt;doHideKeyBoard&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;)];&lt;/span&gt;&lt;br /&gt;   &lt;br /&gt;    &lt;span style=&#34;color: #e6e1dc; &#34;&gt;tap&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;numberOfTapsRequired&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #a5c261; &#34;&gt;1&lt;/span&gt;;&lt;br /&gt;    &lt;span style=&#34;color: #e6e1dc; &#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;view&lt;/span&gt;  &lt;span style=&#34;color: #e6e1dc; &#34;&gt;addGestureRecognizer:&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;tap&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;];&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #e6e1dc; &#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;tap&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;setCancelsTouchesInView:&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;NO&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;];&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #e6e1dc; &#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;tap&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;release&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;];&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;}&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;-&lt;/span&gt; (&lt;span style=&#34;color: #da4939; &#34;&gt;void&lt;/span&gt;)&lt;span style=&#34;color: #e6e1dc; &#34;&gt;doHideKeyBoard&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #e6e1dc; &#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;self&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;resignFirstResponder&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;];&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #cc7833; &#34;&gt;@end&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;-&lt;/span&gt; (&lt;span style=&#34;color: #da4939; &#34;&gt;void&lt;/span&gt;)&lt;span style=&#34;color: #e6e1dc; &#34;&gt;viewDidLoad&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #e6e1dc; &#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;super&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;viewDidLoad&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;];&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #bc9458; font-style: italic; &#34;&gt;// Do any additional setup after loading the view from its nib.&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #e6e1dc; &#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;txtInput&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;hideKeyBoard:&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;view&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;];&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;}&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;see also: &lt;a href=&#34;https://gist.github.com/1450404&#34;&gt;https://gist.github.com/1450404&lt;/a&gt;&lt;/p&gt;              
+</description>
+    </item>
+    
+    <item>
+      <title> [How to] 如何卸载Xcode</title>
+      <link>http://huobazi.aspxboy.com/blog/2011/11/28/how-to-uninstall-xcode/</link>
+      <pubDate>Mon, 28 Nov 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2011/11/28/how-to-uninstall-xcode/</guid>
+      <description>&lt;p&gt; &lt;/p&gt;
+&lt;pre&gt; $ sudo /Developer/Library/uninstall-devtools --mode=all&lt;/pre&gt;
+&lt;p&gt; &lt;/p&gt;                
+</description>
+    </item>
+    
+    <item>
+      <title>AutoGenerateColumns=&#39;true&#39;的GridView如何支持htmlencode/htmldecode</title>
+      <link>http://huobazi.aspxboy.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/</link>
+      <pubDate>Wed, 09 Nov 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/</guid>
+      <description>&lt;p&gt;&lt;p&gt;我们知道BoundField.HtmlEncode 属性可以设置一个单元格是否能够htmlencode，我今天碰到的问题是：自动生成列的GridView，表头可能是包含html的比如&amp;lt;font color=red&amp;gt;邮件&amp;lt;/font&amp;gt;，默认被htmlencode了，而我不希望这样做，所以有了如下的代码:&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;div class=&#34;source&#34; style=&#34;font-family: &#39;[object HTMLOptionElement]&#39;, Consolas, &#39;Lucida Console&#39;, &#39;Courier New&#39;; color: #e6e1dc; background-color: #111111; &#34;&gt;
+&lt;span style=&#34;color: #bc9458; font-style: italic; &#34;&gt;/// &amp;lt;summary&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #bc9458; font-style: italic; &#34;&gt;/// Handles the PreRender event of the gvSource control.&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #bc9458; font-style: italic; &#34;&gt;/// &amp;lt;/summary&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #bc9458; font-style: italic; &#34;&gt;/// &amp;lt;param name=&amp;ldquo;sender&amp;rdquo;&amp;gt;The source of the event.&amp;lt;/param&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #bc9458; font-style: italic; &#34;&gt;/// &amp;lt;param name=&amp;ldquo;e&amp;rdquo;&amp;gt;The &amp;lt;see cref=&amp;ldquo;System.EventArgs&amp;rdquo;/&amp;gt; instance containing the event data.&amp;lt;/param&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #cc7833; &#34;&gt;protected&lt;/span&gt; &lt;span style=&#34;color: #cc7833; &#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color: #ffc66d; &#34;&gt;gvSource_PreRender&lt;/span&gt;( &lt;span style=&#34;color: #da4939; &#34;&gt;object&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;sender&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;EventArgs&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;e&lt;/span&gt; )&lt;br /&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #e6e1dc; &#34;&gt;GridView&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;gridView&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;sender&lt;/span&gt; &lt;span style=&#34;color: #cc7833; &#34;&gt;as&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;GridView&lt;/span&gt;;&lt;br /&gt;    &lt;span style=&#34;color: #cc7833; &#34;&gt;if&lt;/span&gt; ( &lt;span style=&#34;color: #e6e1dc; &#34;&gt;gridView&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color: #cc7833; &#34;&gt;null&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;gridView&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;HeaderRow&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color: #cc7833; &#34;&gt;null&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;gridView&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;HeaderRow&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Cells&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color: #cc7833; &#34;&gt;null&lt;/span&gt; )&lt;br /&gt;    &lt;span style=&#34;color: #e6e1dc; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;        &lt;span style=&#34;color: #cc7833; &#34;&gt;for&lt;/span&gt; ( &lt;span style=&#34;color: #da4939; &#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;j&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #a5c261; &#34;&gt;0&lt;/span&gt; ; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;j&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;gridView&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;HeaderRow&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Cells&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Count&lt;/span&gt; ; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;j&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;++&lt;/span&gt; )&lt;br /&gt;        &lt;span style=&#34;color: #e6e1dc; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;            &lt;span style=&#34;color: #e6e1dc; &#34;&gt;gridView&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;HeaderRow&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Cells&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;j&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;].&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Text&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;System&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Web&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;HttpUtility&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;HtmlDecode&lt;/span&gt;( &lt;span style=&#34;color: #e6e1dc; &#34;&gt;gridView&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;HeaderRow&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Cells&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;j&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;].&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Text&lt;/span&gt; );&lt;br /&gt;        &lt;span style=&#34;color: #e6e1dc; &#34;&gt;}&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #e6e1dc; &#34;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;}&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>新蛋西安招聘.net软件工程师</title>
+      <link>http://huobazi.aspxboy.com/blog/2011/08/31/newegg-invite/</link>
+      <pubDate>Wed, 31 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2011/08/31/newegg-invite/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;岗位职责&lt;/strong&gt;：&lt;/p&gt;
+&lt;div style=&#34;font-size: 12px; line-height: 1.5; padding-bottom: 30px;&#34;&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;div style=&#34;font-size: 12px; line-height: 1.5;&#34;&gt;1、参与公司内部业务系统的分析、设计工作 &lt;br style=&#34;font-size: 12px;&#34;&gt;2、协助ProjectManager保证项目质量； &lt;br style=&#34;font-size: 12px;&#34;&gt;3、负责Project中主要功能的代码实现； &lt;br style=&#34;font-size: 12px;&#34;&gt;4、解决Project中的关键问题和技术难题； &lt;br style=&#34;font-size: 12px;&#34;&gt;5、指导程序员的工作。 &lt;br style=&#34;font-size: 12px;&#34;&gt;&lt;br /&gt; &lt;br /&gt; 
+
+&lt;p&gt;&lt;br style=&#34;font-size: 12px;&#34;&gt;&lt;strong&gt;任职要求&lt;/strong&gt;：&lt;br style=&#34;font-size: 12px;&#34;&gt;1、熟悉VS .Net 框架， ASP.NET，掌握 C#（或VB、NET），有 VS2008 项目经验者优先&lt;br style=&#34;font-size: 12px;&#34;&gt;2、熟悉MS SQL Server 应用，有SQL Server 2008项目经验者优先&lt;br style=&#34;font-size: 12px;&#34;&gt;3、具备具有、NET企业框架下多层应用程序开发经验&lt;br style=&#34;font-size: 12px;&#34;&gt;4、熟悉面向对象思想，具备一定系统分析和设计能力 &lt;br style=&#34;font-size: 12px;&#34;&gt;5、有WCF相关开发经验者优先&lt;/p&gt;
+&lt;/div&gt;
+&lt;div style=&#34;font-size: 12px; line-height: 1.5;&#34;&gt;6、熟悉Silverlight，WPF相关开发者优先&lt;br style=&#34;font-size: 12px;&#34;&gt;7、熟练阅读英文文档，具备一定英语沟通和写作能力者优先&lt;br style=&#34;font-size: 12px;&#34;&gt;8、熟练使用Javascript，有JQuery开发经验优先。&lt;br style=&#34;font-size: 12px;&#34;&gt;9、二年以上的程序员经验，一年以上、NET开发经验； &lt;br style=&#34;font-size: 12px;&#34;&gt;10、正规院校计算机以及相关专业，本科以上学历； &lt;br style=&#34;font-size: 12px;&#34;&gt;11、协作能力、学习能力强&lt;br style=&#34;font-size: 12px;&#34;&gt;12、诚实、正直、客观，良好的团队合作精神； &lt;br style=&#34;font-size: 12px;&#34;&gt;13、微软、Net、C#、ASP、Net、SqlServer 方向的MVP优先&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div style=&#34;font-size: 12px; line-height: 1.5;&#34;&gt;有意从事大规模电子商务解决方案研发的童鞋可发简历 至 Marble.M.Wu {AT} newegg.com，谢谢。&lt;/div&gt;
+&lt;p&gt; &lt;/p&gt;                
+</description>
+    </item>
+    
+    <item>
+      <title>在 Ubuntu 下安装 Redis 并使用 init 脚本启动  &amp;&amp; 添加 删除ubuntu自启动服务</title>
+      <link>http://huobazi.aspxboy.com/blog/2011/08/06/ubuntu-redis-init-service-autorun/</link>
+      <pubDate>Sat, 06 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2011/08/06/ubuntu-redis-init-service-autorun/</guid>
+      <description>&lt;pre style=&#34;margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; font: normal normal normal 12px/normal Monaco, &#39;Courier New&#39;, &#39;DejaVu Sans Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, monospace;  font-family: &#39;Bitstream Vera Sans Mono&#39;, &#39;Courier New&#39;, monospace; &#34;&gt;&lt;span style=&#34;font-family: helvetica, arial, freesans, clean, sans-serif; line-height: 14px; white-space: normal;&#34;&gt;
+
+&lt;div id=&#34;LC1&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;1. 下载安装：&lt;/div&gt;
+
+&lt;div id=&#34;LC2&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;&lt;/div&gt;
+
+&lt;div id=&#34;LC3&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;cd /tmp&lt;/div&gt;
+
+&lt;div id=&#34;LC4&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;wget http://redis.googlecode.com/files/redis-*.*.*.tar.gz&lt;/div&gt;
+
+&lt;div id=&#34;LC5&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;tar -zxf redis-*.*.*.tar.gz&lt;/div&gt;
+
+&lt;div id=&#34;LC6&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;cd redis-*.*.*&lt;/div&gt;
+
+&lt;div id=&#34;LC7&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;make&lt;/div&gt;
+
+&lt;div id=&#34;LC8&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;sudo make install&lt;/div&gt;
+
+&lt;div id=&#34;LC8&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;&lt;/div&gt;
+
+&lt;div id=&#34;LC9&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;2. 配置init脚本：&lt;/div&gt;
+
+&lt;div id=&#34;LC10&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;&lt;/div&gt;
+
+&lt;div id=&#34;LC11&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;wget https://github.com/ijonas/dotfiles/raw/master/etc/init.d/redis-server&lt;/div&gt;
+
+&lt;div id=&#34;LC12&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;wget https://github.com/ijonas/dotfiles/raw/master/etc/redis.conf&lt;/div&gt;
+
+&lt;div id=&#34;LC13&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;sudo mv redis-server /etc/init.d/redis-server&lt;/div&gt;
+
+&lt;div id=&#34;LC14&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;sudo chmod +x /etc/init.d/redis-server&lt;/div&gt;
+
+&lt;div id=&#34;LC15&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;sudo mv redis.conf /etc/redis.conf&lt;/div&gt;
+
+&lt;div id=&#34;LC15&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;&lt;/div&gt;
+
+&lt;div id=&#34;LC16&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;3. 初始化用户和日志路径&lt;/div&gt;
+
+&lt;div id=&#34;LC17&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;&lt;/div&gt;
+
+&lt;div id=&#34;LC18&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;sudo useradd redis&lt;/div&gt;
+
+&lt;div id=&#34;LC19&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;sudo mkdir -p /var/lib/redis&lt;/div&gt;
+
+&lt;div id=&#34;LC20&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;sudo mkdir -p /var/log/redis&lt;/div&gt;
+
+&lt;div id=&#34;LC21&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;sudo chown redis.redis /var/lib/redis&lt;/div&gt;
+
+&lt;div id=&#34;LC22&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;sudo chown redis.redis /var/log/redis&lt;/div&gt;
+
+&lt;div id=&#34;LC22&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;&lt;/div&gt;
+
+&lt;div id=&#34;LC23&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;4. 启动Redis：&lt;/div&gt;
+
+&lt;div id=&#34;LC24&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;&lt;/div&gt;
+
+&lt;div id=&#34;LC25&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;sudo /etc/init.d/redis-server start&lt;/div&gt;
+
+&lt;div id=&#34;LC25&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;&lt;/div&gt;
+
+&lt;/span&gt;&lt;/pre&gt;
+&lt;pre style=&#34;margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; font: normal normal normal 12px/normal Monaco, &#39;Courier New&#39;, &#39;DejaVu Sans Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, monospace;  font-family: &#39;Bitstream Vera Sans Mono&#39;, &#39;Courier New&#39;, monospace; &#34;&gt;
+&lt;span style=&#34;font-family: helvetica, arial, freesans, clean, sans-serif; line-height: 14px; white-space: normal;&#34;&gt;
+
+&lt;div id=&#34;LC1&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;添加一个服务&lt;/div&gt;
+
+&lt;div id=&#34;LC2&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;#sudo update-rc.d 服务名 defaults 99&lt;/div&gt;
+
+&lt;div id=&#34;LC4&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;删除一个服务&lt;/div&gt;
+
+&lt;div id=&#34;LC5&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;#sudo update-rc.d 服务名 remove&lt;/div&gt;
+
+&lt;div id=&#34;LC7&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;临时重启一个服务&lt;/div&gt;
+
+&lt;div id=&#34;LC8&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;#/etc/init.d/服务名 restart&lt;/div&gt;
+
+&lt;div id=&#34;LC10&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;临时关闭一个服务&lt;/div&gt;
+
+&lt;div id=&#34;LC11&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;#/etc/init.d/服务名 stop&lt;/div&gt;
+
+&lt;div id=&#34;LC13&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;临时启动一个服务&lt;/div&gt;
+
+&lt;div id=&#34;LC14&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;#/etc/init.d/服务名 start&lt;/div&gt;
+
+&lt;/span&gt;
+&lt;/pre&gt;              
+</description>
+    </item>
+    
+    <item>
+      <title>在Console下输入密码，以星号代替。</title>
+      <link>http://huobazi.aspxboy.com/blog/2011/06/22/password-masking-in-csharp-console-application/</link>
+      <pubDate>Wed, 22 Jun 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2011/06/22/password-masking-in-csharp-console-application/</guid>
+      <description>&lt;p&gt;如何在Console下输入密码，像*unix系统下那样不显示，或者显示星号，如下代码经过测试：&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;div class=&#34;source&#34; style=&#34;font-family: &#39;[object HTMLOptionElement]&#39;, Consolas, &#39;Lucida Console&#39;, &#39;Courier New&#39;; color: #ffffff; background-color: #333333; &#34;&gt;
+&lt;p&gt;&lt;span style=&#34;color: #87ceeb; &#34;&gt;/// &amp;lt;summary&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #87ceeb; &#34;&gt;/// Gets the console secure password.&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #87ceeb; &#34;&gt;/// &amp;lt;/summary&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #87ceeb; &#34;&gt;/// &amp;lt;returns&amp;gt;&amp;lt;/returns&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #f0e68c; &#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color: #f0e68c; &#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;SecureString&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;GetConsoleSecurePassword&lt;/span&gt;( )&lt;br /&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #ffffff; &#34;&gt;SecureString&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;pwd&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #f0e68c; &#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;SecureString&lt;/span&gt;( );&lt;br /&gt;    &lt;span style=&#34;color: #f0e68c; &#34;&gt;while&lt;/span&gt; ( &lt;span style=&#34;color: #f0e68c; &#34;&gt;true&lt;/span&gt; )&lt;br /&gt;    &lt;span style=&#34;color: #ffffff; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;ConsoleKeyInfo&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;i&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;Console&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;ReadKey&lt;/span&gt;( &lt;span style=&#34;color: #f0e68c; &#34;&gt;true&lt;/span&gt; );&lt;br /&gt;        &lt;span style=&#34;color: #f0e68c; &#34;&gt;if&lt;/span&gt; ( &lt;span style=&#34;color: #ffffff; &#34;&gt;i&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Key&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;ConsoleKey&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Enter&lt;/span&gt; )&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;            &lt;span style=&#34;color: #f0e68c; &#34;&gt;break&lt;/span&gt;;&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;}&lt;/span&gt;&lt;br /&gt;        &lt;span style=&#34;color: #f0e68c; &#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;if&lt;/span&gt; ( &lt;span style=&#34;color: #ffffff; &#34;&gt;i&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Key&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;ConsoleKey&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Backspace&lt;/span&gt; )&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;            &lt;span style=&#34;color: #ffffff; &#34;&gt;pwd&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;RemoveAt&lt;/span&gt;( &lt;span style=&#34;color: #ffffff; &#34;&gt;pwd&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Length&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;1&lt;/span&gt; );&lt;br /&gt;            &lt;span style=&#34;color: #ffffff; &#34;&gt;Console&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Write&lt;/span&gt;( &lt;span style=&#34;color: #ffffff; &#34;&gt;&#34;\b \b&#34;&lt;/span&gt; );&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;}&lt;/span&gt;&lt;br /&gt;        &lt;span style=&#34;color: #f0e68c; &#34;&gt;else&lt;/span&gt;&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;            &lt;span style=&#34;color: #ffffff; &#34;&gt;pwd&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;AppendChar&lt;/span&gt;( &lt;span style=&#34;color: #ffffff; &#34;&gt;i&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;KeyChar&lt;/span&gt; );&lt;br /&gt;            &lt;span style=&#34;color: #ffffff; &#34;&gt;Console&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Write&lt;/span&gt;( &lt;span style=&#34;color: #ffffff; &#34;&gt;&#34;*&#34;&lt;/span&gt; );&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;}&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #ffffff; &#34;&gt;}&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #f0e68c; &#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;pwd&lt;/span&gt;;&lt;br /&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;}&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;color: #87ceeb; &#34;&gt;/// &amp;lt;summary&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #87ceeb; &#34;&gt;/// Gets the console password.&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #87ceeb; &#34;&gt;/// &amp;lt;/summary&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #87ceeb; &#34;&gt;/// &amp;lt;returns&amp;gt;&amp;lt;/returns&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #f0e68c; &#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color: #f0e68c; &#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color: #bdb76b; &#34;&gt;string&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;GetConsolePassword&lt;/span&gt;( )&lt;br /&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #ffffff; &#34;&gt;StringBuilder&lt;/span&gt; sb &lt;span style=&#34;color: #ffffff; &#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #f0e68c; &#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;StringBuilder&lt;/span&gt;( );&lt;br /&gt;    &lt;span style=&#34;color: #f0e68c; &#34;&gt;while&lt;/span&gt; ( &lt;span style=&#34;color: #f0e68c; &#34;&gt;true&lt;/span&gt; )&lt;br /&gt;    &lt;span style=&#34;color: #ffffff; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;ConsoleKeyInfo&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;cki&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;Console&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;ReadKey&lt;/span&gt;( &lt;span style=&#34;color: #f0e68c; &#34;&gt;true&lt;/span&gt; );&lt;br /&gt;        &lt;span style=&#34;color: #f0e68c; &#34;&gt;if&lt;/span&gt; ( &lt;span style=&#34;color: #ffffff; &#34;&gt;cki&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Key&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;ConsoleKey&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Enter&lt;/span&gt; )&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;            &lt;span style=&#34;color: #ffffff; &#34;&gt;Console&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;WriteLine&lt;/span&gt;( );&lt;br /&gt;            &lt;span style=&#34;color: #f0e68c; &#34;&gt;break&lt;/span&gt;;&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;}&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;        &lt;span style=&#34;color: #f0e68c; &#34;&gt;if&lt;/span&gt; ( &lt;span style=&#34;color: #ffffff; &#34;&gt;cki&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Key&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;ConsoleKey&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Backspace&lt;/span&gt; )&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;            &lt;span style=&#34;color: #f0e68c; &#34;&gt;if&lt;/span&gt; ( sb&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Length&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;0&lt;/span&gt; )&lt;br /&gt;            &lt;span style=&#34;color: #ffffff; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;                &lt;span style=&#34;color: #ffffff; &#34;&gt;Console&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Write&lt;/span&gt;( &lt;span style=&#34;color: #ffffff; &#34;&gt;&#34;\b\0\b&#34;&lt;/span&gt; );&lt;br /&gt;                sb&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Length&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;--;&lt;/span&gt;&lt;br /&gt;            &lt;span style=&#34;color: #ffffff; &#34;&gt;}&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;            &lt;span style=&#34;color: #f0e68c; &#34;&gt;continue&lt;/span&gt;;&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;}&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;Console&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Write&lt;/span&gt;( &lt;span style=&#34;color: #ffffff; &#34;&gt;&#39;*&#39;&lt;/span&gt; );&lt;br /&gt;        sb&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Append&lt;/span&gt;( &lt;span style=&#34;color: #ffffff; &#34;&gt;cki&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;KeyChar&lt;/span&gt; );&lt;br /&gt;    &lt;span style=&#34;color: #ffffff; &#34;&gt;}&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;    &lt;span style=&#34;color: #f0e68c; &#34;&gt;return&lt;/span&gt; sb&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;ToString&lt;/span&gt;( );&lt;br /&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;}&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;gist：&lt;a href=&#34;https://gist.github.com/1039424&#34;&gt;https://gist.github.com/1039424&lt;/a&gt;&lt;/p&gt;               
+</description>
+    </item>
+    
+    <item>
+      <title>在ubuntu上配置 nginx和php&#43;fastcgi</title>
+      <link>http://huobazi.aspxboy.com/blog/2011/01/01/ubuntu-nginx-php-fastcgi/</link>
+      <pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2011/01/01/ubuntu-nginx-php-fastcgi/</guid>
+      <description>&lt;p&gt;(1)安装php5&lt;br /&gt;apt-get install php5 php-pear php5-cli php5-common php5-xcache php5-cgi php5-mysql php5-curl  php5-gd  php5-imagick  php5-xmlrpc  php5-dev php5-memcache&lt;br /&gt;(2)安装nginx&lt;br /&gt;apt-get install nginx&lt;br /&gt;(3)安装spawn-fcgi&lt;br /&gt; apt-get install spawn-fcgi&lt;br /&gt;(4)设置，也是最头疼滴地方哦&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;在/etc/nginx/fastcgi_params 文件最后，加入一行，可以用sudo gedit /etc/nginx/fastcgi_params打开文件&lt;br /&gt;&lt;strong&gt;fastcgi_param SCRIPT_FILENAME     $document_root$fastcgi_script_name;&lt;/strong&gt;&lt;br /&gt;设置php.ini的 cgi.fix_pathinfo=1;doc_root=&lt;br /&gt;拷贝/etc/nginx/sites-availab修改本机hosts文件，指定一个域名&lt;br /&gt;修改server_name&lt;br /&gt;在server_name同级增加root 设置为网站根目录&lt;br /&gt;location里 加上 index.php&lt;br /&gt;php的fast-cgi配置&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;color: #fff; background-color:#000;&#34;&gt;    location ~ \.php$ {&lt;br /&gt;        fastcgi_pass   127.0.0.1:9000;&lt;br /&gt;        fastcgi_index  index.php;&lt;br /&gt;        include fastcgi_params;     &lt;br /&gt;    }&lt;/span&gt;&lt;br /&gt;$ sudo killall -HUP php5-cgi&lt;br /&gt;$ sudo /usr/bin/spawn-fcgi -a 127.0.0.1 -p 9000 -C 5 -u www-data -g www-data -f /usr/bin/php5-cgi -P /var/run/fastcgi-php.pid&lt;br /&gt;$ /etc/init.d# sudo /etc/init.d/nginx restart &lt;br /&gt;在网站内放个phpinfo测试一下，ok了。&lt;/p&gt;                
+</description>
+    </item>
+    
+  </channel>
+</rss>

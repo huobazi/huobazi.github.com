@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Css on 武眉博</title>
+    <link>http://huobazi.aspxboy.com/tags/css/</link>
+    <description>Recent content in Css on 武眉博</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 28 Nov 2009 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://huobazi.aspxboy.com/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>腾讯webQQ的 CSS Sprite</title>
+      <link>http://huobazi.aspxboy.com/blog/2009/11/28/webqq-css-sprite/</link>
+      <pubDate>Sat, 28 Nov 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2009/11/28/webqq-css-sprite/</guid>
+      <description>&lt;p&gt;web qq速度很快，很多图标处理的也很漂亮，偷偷看了一下sprite的图片，所有图标都在这个图里了20多k，性能压倒一切啊。&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://web.qq.com/images/icon.gif&#34; alt=&#34;webQQ CSS Sprite&#34; width=&#34;560&#34; height=&#34;1000&#34;&gt;&lt;/p&gt;               
+</description>
+    </item>
+    
+    <item>
+      <title>一个很全的教程站</title>
+      <link>http://huobazi.aspxboy.com/blog/2004/06/01/cb-12759/</link>
+      <pubDate>Tue, 01 Jun 2004 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2004/06/01/cb-12759/</guid>
+      <description>&lt;p&gt;很少见教程大全，不知道我是不是很落伍，今天才逛到这里&lt;br /&gt;&lt;a href=&#34;http://www.w3schools.com/&#34; target=&#34;_blank&#34;&gt;&lt;br /&gt;&lt;img style=&#34;border: 0px;&#34; src=&#34;http://huobazi.aspxboy.com/images/hbz_images/66c040d5-df17-43e3-ae0a-3afee8c63b96.jpg&#34; border=&#34;0&#34; alt=&#34;&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;HTML Tutorials&lt;/strong&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/html/default.asp&#34; target=&#34;_top&#34;&gt;Learn HTML&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/xhtml/default.asp&#34; target=&#34;_top&#34;&gt;Learn XHTML&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/css/default.asp&#34; target=&#34;_top&#34;&gt;Learn CSS&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/tcpip/default.asp&#34; target=&#34;_top&#34;&gt;Learn TCP/IP&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;XML Tutorials&lt;/strong&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/xml/default.asp&#34; target=&#34;_top&#34;&gt;Learn XML&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/xsl/xsl_languages.asp&#34; target=&#34;_top&#34;&gt;Learn XSL&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/xsl/default.asp&#34; target=&#34;_top&#34;&gt;Learn XSLT&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/xslfo/default.asp&#34; target=&#34;_top&#34;&gt;Learn XSL-FO&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/xpath/default.asp&#34; target=&#34;_top&#34;&gt;Learn XPath&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/xquery/default.asp&#34; target=&#34;_top&#34;&gt;Learn XQuery&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/dtd/default.asp&#34; target=&#34;_top&#34;&gt;Learn DTD&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/schema/default.asp&#34; target=&#34;_top&#34;&gt;Learn Schema&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/dom/default.asp&#34; target=&#34;_top&#34;&gt;Learn DOM&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/xforms/default.asp&#34; target=&#34;_top&#34;&gt;Learn XForms&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/soap/default.asp&#34; target=&#34;_top&#34;&gt;Learn SOAP&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/wsdl/default.asp&#34; target=&#34;_top&#34;&gt;Learn WSDL&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/rdf/default.asp&#34; target=&#34;_top&#34;&gt;Learn RDF&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/wap/default.asp&#34; target=&#34;_top&#34;&gt;Learn WAP&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Browser Scripting&lt;/strong&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/js/default.asp&#34; target=&#34;_top&#34;&gt;Learn JavaScript&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/dhtml/default.asp&#34; target=&#34;_top&#34;&gt;Learn DHTML&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/vbscript/default.asp&#34; target=&#34;_top&#34;&gt;Learn VBScript&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/wmlscript/default.asp&#34; target=&#34;_top&#34;&gt;Learn WMLScript&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Server Scripting&lt;/strong&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/sql/default.asp&#34; target=&#34;_top&#34;&gt;Learn SQL&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/asp/default.asp&#34; target=&#34;_top&#34;&gt;Learn ASP&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/ado/default.asp&#34; target=&#34;_top&#34;&gt;Learn ADO&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/php/default.asp&#34; target=&#34;_top&#34;&gt;Learn PHP&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;.NET (dotnet)&lt;/strong&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/ngws/default.asp&#34; target=&#34;_top&#34;&gt;.NET Microsoft&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/aspnet/default.asp&#34; target=&#34;_top&#34;&gt;.NET ASP&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/dotnetmobile/default.asp&#34; target=&#34;_top&#34;&gt;.NET Mobile&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Multimedia&lt;/strong&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/media/default.asp&#34; target=&#34;_top&#34;&gt;Learn Media&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/smil/default.asp&#34; target=&#34;_top&#34;&gt;Learn SMIL&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/svg/default.asp&#34; target=&#34;_top&#34;&gt;Learn SVG&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/flash/default.asp&#34; target=&#34;_top&#34;&gt;Learn Flash&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Web Building&lt;/strong&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/site/default.asp&#34; target=&#34;_top&#34;&gt;Web Building&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/w3c/default.asp&#34; target=&#34;_top&#34;&gt;Web W3C&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/browsers/default.asp&#34; target=&#34;_top&#34;&gt;Web Browsers&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/quality/default.asp&#34; target=&#34;_top&#34;&gt;Web Quality&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/graphics/default.asp&#34; target=&#34;_top&#34;&gt;Web Graphics&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/careers/default.asp&#34; target=&#34;_top&#34;&gt;Web Careers&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/hosting/default.asp&#34; target=&#34;_top&#34;&gt;Web Hosting&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/cert/default.asp&#34; target=&#34;_top&#34;&gt;Web Certification&lt;/a&gt;&lt;/p&gt;               
+</description>
+    </item>
+    
+  </channel>
+</rss>

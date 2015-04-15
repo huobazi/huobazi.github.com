@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Paint.Net on 武眉博</title>
+    <link>http://huobazi.aspxboy.com/tags/paint/index.net/</link>
+    <description>Recent content in Paint.Net on 武眉博</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 10 May 2006 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://huobazi.aspxboy.com/tags/paint.net/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>推荐一个.Net做的图形处理软件--Paint.NET </title>
+      <link>http://huobazi.aspxboy.com/blog/2006/05/10/paintdotnet/</link>
+      <pubDate>Wed, 10 May 2006 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2006/05/10/paintdotnet/</guid>
+      <description>&lt;p align=&#34;left&#34;&gt;&lt;a href=&#34;http://www.eecs.wsu.edu/paint.net/index.html&#34; target=&#34;_blank&#34;&gt;&lt;img style=&#34;border: 0px;&#34; src=&#34;http://huobazi.aspxboy.com/images/hbz_images/e526efd8-b249-490f-81ec-3b929541201f.png&#34; border=&#34;0&#34; alt=&#34;&#34;&gt;&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;h5&gt;
+&lt;a href=&#34;http://www.eecs.wsu.edu/paint.net/index.html&#34; target=&#34;_blank&#34;&gt;Home&lt;/a&gt;   &lt;a href=&#34;http://www.eecs.wsu.edu/paint.net/features.html&#34; target=&#34;_blank&#34;&gt;Features&lt;/a&gt;     &lt;a href=&#34;http://www.eecs.wsu.edu/paint.net/download.html&#34; target=&#34;_blank&#34;&gt;Download&lt;/a&gt;   &lt;a href=&#34;http://www.eecs.wsu.edu/paint.net/roadmap.html&#34; target=&#34;_blank&#34;&gt;Roadmap&lt;/a&gt;   &lt;a href=&#34;http://www.eecs.wsu.edu/paint.net/screenshots.html&#34; target=&#34;_blank&#34;&gt;Screenshots&lt;/a&gt;   &lt;a href=&#34;http://paintdotnet.12.forumer.com/index.php&#34; target=&#34;_blank&#34;&gt;Forum&lt;/a&gt;  &lt;/h5&gt;
+&lt;br /&gt;&lt;h5&gt;&lt;span style=&#34;color: #0000ff; background-color: #ffffff;&#34;&gt;AboutPaint.NET is image and photo manipulation software designed to be used on computers that run Windows 2000, XP, Vista, or Server 2003. It supports layers, unlimited undo, special effects, and a wide variety of useful and powerful tools.&lt;/span&gt;&lt;/h5&gt;
+&lt;br /&gt;&lt;h5&gt;&lt;span style=&#34;color: #0000ff; background-color: #ffffff;&#34;&gt;&lt;span style=&#34;color: #000000;&#34;&gt;The programming language used to create Paint.NET is C#, with a small amount of C++ for setup and shell-integration related functionality&lt;/span&gt;&lt;/span&gt;&lt;/h5&gt;
+&lt;br /&gt;&lt;p align=&#34;left&#34;&gt;&lt;br /&gt;&lt;a href=&#34;http://huobazi.aspxboy.com/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png6&#34; target=&#34;_blank&#34;&gt;&lt;img style=&#34;margin-left: 0px; width: 493px; margin-right: 0px; height: 399px; border: 0px;&#34; src=&#34;http://huobazi.aspxboy.com/images/hbz_images/25f59beb-2867-4f91-987d-364ecfd344e0.jpg&#34; border=&#34;0&#34; alt=&#34;&#34; hspace=&#34;0&#34; align=&#34;baseline&#34;&gt;&lt;/a&gt;&lt;/p&gt;             
+</description>
+    </item>
+    
+  </channel>
+</rss>

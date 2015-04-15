@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ruby On Rails on 武眉博</title>
+    <link>http://huobazi.aspxboy.com/tags/ruby-on-rails/</link>
+    <description>Recent content in Ruby On Rails on 武眉博</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 15 Aug 2012 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://huobazi.aspxboy.com/tags/ruby-on-rails/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>使用AjaxUpload和Carrierwave在Rails Mongoid中批量上传图片</title>
+      <link>http://huobazi.aspxboy.com/blog/2012/08/15/ajaxupload-with-rail-carrierwave-on-mongodb/</link>
+      <pubDate>Wed, 15 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2012/08/15/ajaxupload-with-rail-carrierwave-on-mongodb/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/valums/file-uploader&#34;&gt;file-uploader&lt;/a&gt;是一个用 Javascrit 编写的文件上传 Libary,在这里我使用&lt;a href=&#34;https://github.com/jnicklas/carrierwave&#34;&gt;CarrierWave&lt;/a&gt;和 &lt;a href=&#34;https://github.com/mongoid/mongoid&#34;&gt;Mongoid&lt;/a&gt; 来完成多文件的无刷新上传功能&lt;/p&gt;
+
+&lt;h2 id=&#34;rubygems:7371c11e255b336e41edb223ab46297b&#34;&gt;RubyGems&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;gem &#39;mongoid&#39;, &#39;3.0.4&#39;
+gem &#39;carrierwave&#39;, &#39;0.6.2&#39;
+gem &#39;carrierwave-mongoid&#39;, :github =&amp;gt; &#39;jnicklas/carrierwave-mongoid&#39;, :branch =&amp;gt; &#39;mongoid-3.0&#39; 
+gem &#39;mini_magick&#39;, &#39;3.4&#39;
+gem &#39;rack-raw-upload&#39;, &#39;1.1.0&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;model:7371c11e255b336e41edb223ab46297b&#34;&gt;Model&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;class Screenshot
+  include Mongoid::Document
+  include Mongoid::Timestamps::Created
+  include Rails.application.routes.url_helpers
+
+  attr_accessible :image 
+  field :image 
+
+  mount_uploader :image, ScreenshotUploader 
+
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;controller:7371c11e255b336e41edb223ab46297b&#34;&gt;Controller&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;class ScreenshotsController &amp;lt; ApplicationController
+
+  def index
+    @screenshots = Screenshot.all.desc(:created_at)
+
+    respond_to do |format|
+      format.html # index.html.erb    
+      format.js{ render :layout =&amp;gt; false}
+    end
+  end
+
+  def create
+    file = params[:qqfile].is_a?(ActionDispatch::Http::UploadedFile) ? params[:qqfile] : params[:file]
+    @screenshot = Screenshot.new
+    @screenshot.image = file
+    if @screenshot.save
+      render json: { success: true, src: @screenshot.to_json }
+    else
+      render json: @screenshot.errors.to_json
+    end
+  end
+
+  def destroy
+    @screenshot = Screenshot.find(params[:id])
+    @screenshot.destroy
+
+    respond_to do |format|
+      format.html { redirect_to screenshots_path }
+      format.js{ 
+        @screenshots = Screenshot.all.desc(:created_at)
+        render :layout =&amp;gt; false
+      }
+    end
+
+  end
+
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;uploader:7371c11e255b336e41edb223ab46297b&#34;&gt;Uploader&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;# encoding: utf-8
+require &amp;quot;digest/md5&amp;quot;
+require &#39;carrierwave/processing/mini_magick&#39;
+
+class ScreenshotUploader &amp;lt; CarrierWave::Uploader::Base
+  include CarrierWave::MiniMagick
+
+  storage :file
+
+  # Override the directory where uploaded files will be stored.
+  def store_dir
+    &amp;quot;uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}&amp;quot;
+  end
+
+
+  process :convert =&amp;gt; &#39;png&#39;
+
+  # Create different versions of your uploaded files:
+  version :thumb do
+    process :resize_to_fill =&amp;gt; [120, 120]
+  end
+
+  # Add a white list of extensions which are allowed to be uploaded.
+  def extension_white_list
+    %w(jpg jpeg gif png)
+  end
+
+  # Override the filename of the uploaded files:
+  # see http://huacnlee.com/blog/carrierwave-upload-store-file-name-config/
+  def filename
+    if super.present?
+      # current_path 是 Carrierwave 上传过程临时创建的一个文件，有时间标记，所以它将是唯一的
+      @name ||= Digest::MD5.hexdigest(File.dirname(current_path))
+      &amp;quot;#{@name}.#{file.extension.downcase}&amp;quot;
+    end
+  end
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;javascript:7371c11e255b336e41edb223ab46297b&#34;&gt;Javascript&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;  $(document).ready(function(){
+
+    var uploader = new qq.FileUploader({
+      debug: true,
+      allowedExtensions: [&#39;jpg&#39;, &#39;jpeg&#39;, &#39;png&#39;, &#39;gif&#39;],
+      sizeLimit: 1048576, // max size: 1MB
+      minSizeLimit: 0, // min size
+      multiple: true,
+      element: document.getElementById(&#39;file-uploader&#39;),
+      action: &#39;&amp;lt;%= screenshots_path %&amp;gt;&#39;,
+      onComplete: function(id, fileName, responseJSON){
+        $.getScript(&amp;quot;&amp;lt;%= screenshots_path %&amp;gt;&amp;quot;);
+      },
+      onSubmit: function(id, fileName) {
+        uploader.setParams({
+          xx: &amp;quot;xx&amp;quot;,
+          yy: &#39;yy&#39;,
+          zz: &#39;zz&#39;,       
+          authenticity_token: &amp;quot;&amp;lt;%= form_authenticity_token.to_s %&amp;gt;&amp;quot;
+        });
+      }
+    });
+
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;你可以在 &lt;a href=&#34;https://github.com/huobazi/ajax-upload-with-carrierwave-mongoid&#34;&gt;https://github.com/huobazi/ajax-upload-with-carrierwave-mongoid&lt;/a&gt;下载完整的示例代码&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>在rails中不同的view不同皮肤下的js，css，注入js和css到head区域</title>
+      <link>http://huobazi.aspxboy.com/blog/2010/03/30/hwo-to-injecting-themes-css-javascript-to-header-in-rails/</link>
+      <pubDate>Tue, 30 Mar 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2010/03/30/hwo-to-injecting-themes-css-javascript-to-header-in-rails/</guid>
+      <description>&lt;p&gt;利用layout可以很好实现这个需求.&lt;/p&gt;
+&lt;p&gt;在ApplicationHelper内加入如下代码：&lt;/p&gt;
+&lt;div class=&#34;source&#34; style=&#39;font-family: &#34;[object HTMLOptionElement]&#34;,&#34;Consolas&#34;,&#34;Lucida Console&#34;,&#34;Courier New&#34;; color: #e6e1dc; background-color: #111111;&#39;&gt;
+&lt;p&gt;&lt;span style=&#34;color: #cc7833;&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #ffc66d;&#34;&gt;require_js&lt;/span&gt;(&lt;span style=&#34;color: #e6e1dc;&#34;&gt;path&lt;/span&gt;)&lt;br /&gt;    &lt;span style=&#34;color: #e6e1dc;&#34;&gt;content_for&lt;/span&gt; &lt;span style=&#34;color: #a5c261;&#34;&gt;:header_js&lt;/span&gt; &lt;span style=&#34;color: #cc7833;&#34;&gt;do&lt;/span&gt;&lt;br /&gt;      &lt;span style=&#34;color: #e6e1dc;&#34;&gt;include_js_tag&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;path&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #cc7833;&#34;&gt;end&lt;/span&gt;&lt;br /&gt;  &lt;span style=&#34;color: #cc7833;&#34;&gt;end&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;  &lt;span style=&#34;color: #cc7833;&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #ffc66d;&#34;&gt;require_css&lt;/span&gt;(&lt;span style=&#34;color: #e6e1dc;&#34;&gt;path&lt;/span&gt;)&lt;br /&gt;    &lt;span style=&#34;color: #e6e1dc;&#34;&gt;content_for&lt;/span&gt; &lt;span style=&#34;color: #a5c261;&#34;&gt;:header_css&lt;/span&gt; &lt;span style=&#34;color: #cc7833;&#34;&gt;do&lt;/span&gt;&lt;br /&gt;      &lt;span style=&#34;color: #e6e1dc;&#34;&gt;include_css_tag&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;path&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #cc7833;&#34;&gt;end&lt;/span&gt;&lt;br /&gt;  &lt;span style=&#34;color: #cc7833;&#34;&gt;end&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;  &lt;span style=&#34;color: #cc7833;&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #ffc66d;&#34;&gt;include_js_tag&lt;/span&gt;(&lt;span style=&#34;color: #e6e1dc;&#34;&gt;path&lt;/span&gt;)&lt;br /&gt;    &lt;span style=&#34;color: #cc7833;&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;not&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;path&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;starts_with?&lt;/span&gt;(&lt;span style=&#34;color: #a5c261;&#34;&gt;&#34;http:&#34;&lt;/span&gt;)&lt;br /&gt;      &lt;span style=&#34;color: #e6e1dc;&#34;&gt;path&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #a5c261;&#34;&gt;&#34;/themes/&lt;/span&gt;&lt;span style=&#34;color: #a5c261;&#34;&gt;#{&lt;/span&gt;&lt;span style=&#34;color: #6d9cbe;&#34;&gt;@setting&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #a5c261;&#34;&gt;:theme&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color: #a5c261;&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color: #a5c261;&#34;&gt;/javascripts/&#34;&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;path&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #cc7833;&#34;&gt;end&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #e6e1dc;&#34;&gt;javascript_include_tag&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;path&lt;/span&gt;&lt;br /&gt;  &lt;span style=&#34;color: #cc7833;&#34;&gt;end&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;   &lt;span style=&#34;color: #cc7833;&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #ffc66d;&#34;&gt;include_css_tag&lt;/span&gt;(&lt;span style=&#34;color: #e6e1dc;&#34;&gt;path&lt;/span&gt;)&lt;br /&gt;    &lt;span style=&#34;color: #cc7833;&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;not&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;path&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;starts_with?&lt;/span&gt;(&lt;span style=&#34;color: #a5c261;&#34;&gt;&#34;http:&#34;&lt;/span&gt;)&lt;br /&gt;      &lt;span style=&#34;color: #e6e1dc;&#34;&gt;path&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #a5c261;&#34;&gt;&#34;/themes/&lt;/span&gt;&lt;span style=&#34;color: #a5c261;&#34;&gt;#{&lt;/span&gt;&lt;span style=&#34;color: #6d9cbe;&#34;&gt;@setting&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #a5c261;&#34;&gt;:theme&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color: #a5c261;&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color: #a5c261;&#34;&gt;/stylesheets/&#34;&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;path&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #cc7833;&#34;&gt;end&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #e6e1dc;&#34;&gt;stylesheet_link_tag&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;path&lt;/span&gt;&lt;br /&gt;  &lt;span style=&#34;color: #cc7833;&#34;&gt;end&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;(如果你要直接在view或者layout内引入css则可以&amp;lt;%= include_css_tag &#34;global.css&#34; %&amp;gt;，这样生成的路径是带有皮肤目录的）&lt;/p&gt;
+&lt;p&gt;接下来，修改你的layout的head，加入如下代码：&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;%= yield :header_js %&amp;gt;&lt;br /&gt;&amp;lt;%= yield :header_css %&amp;gt;&lt;/p&gt;
+&lt;p&gt;然后在需要引入js的View内&lt;/p&gt;
+&lt;p&gt;&amp;lt;% require_js &#34;jquery/jquery.tools.min.js&#34; %&amp;gt;&lt;br /&gt;&amp;lt;% require_js &#34;jquery/jquery.colorbox.min.js&#34; %&amp;gt;&lt;/p&gt;
+&lt;p&gt;最后run一下，你会看到会在html的head内生成如下html&lt;/p&gt;
+&lt;p&gt;&amp;lt;script src=&#34;http://huobazi.aspxboy.com/themes/2010v1/javascripts/jquery/jquery.tools.min.js?1269949149&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;&lt;br /&gt;&amp;lt;script src=&#34;http://huobazi.aspxboy.com/themes/2010v1/javascripts/jquery/jquery.colorbox.min.js?1269949147&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;                
+</description>
+    </item>
+    
+  </channel>
+</rss>

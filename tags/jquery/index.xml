@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jquery on 武眉博</title>
+    <link>http://huobazi.aspxboy.com/tags/jquery/</link>
+    <description>Recent content in Jquery on 武眉博</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 02 Jun 2010 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://huobazi.aspxboy.com/tags/jquery/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Google 给几个Javascript Framework提供的CDN地址</title>
+      <link>http://huobazi.aspxboy.com/blog/2010/06/02/google-js-framework-cdn/</link>
+      <pubDate>Wed, 02 Jun 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2010/06/02/google-js-framework-cdn/</guid>
+      <description>&lt;p&gt;&lt;p&gt;Google 给几个Javascript Framework提供的CDN地址:&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;h2&gt;jquery&lt;/h2&gt;
+&lt;pre&gt;&amp;lt;script src=&amp;ldquo;&lt;a href=&#34;http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&#34;&gt;http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/a&gt;&lt;/pre&gt;
+&lt;h2&gt;jquery UI&lt;/h2&gt;
+&lt;pre&gt;&amp;lt;script src=&amp;ldquo;&lt;a href=&#34;http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&#34;&gt;http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/a&gt;&lt;/pre&gt;
+&lt;h2&gt;Chrome Frame&lt;/h2&gt;
+&lt;pre&gt;&amp;lt;script src=&amp;ldquo;&lt;a href=&#34;http://ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&#34;&gt;http://ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/a&gt;&lt;/pre&gt;
+&lt;h2&gt;swfobject&lt;/h2&gt;
+&lt;pre&gt;&amp;lt;script src=&amp;ldquo;&lt;a href=&#34;http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&#34;&gt;http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/a&gt;&lt;/pre&gt;
+&lt;h2&gt;mootools&lt;/h2&gt;
+&lt;pre&gt;&amp;lt;script src=&amp;ldquo;&lt;a href=&#34;http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools-yui-compressed.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&#34;&gt;http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools-yui-compressed.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/a&gt;&lt;/pre&gt;
+&lt;h2&gt;Yahoo! UI&lt;/h2&gt;
+&lt;pre&gt;&amp;lt;script src=&amp;ldquo;&lt;a href=&#34;http://ajax.googleapis.com/ajax/libs/yui/2.8.1/build/yuiloader/yuiloader-min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&#34;&gt;http://ajax.googleapis.com/ajax/libs/yui/2.8.1/build/yuiloader/yuiloader-min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/a&gt;&lt;/pre&gt;
+&lt;h2&gt;Prototype&lt;/h2&gt;
+&lt;pre&gt;&amp;lt;script src=&amp;ldquo;&lt;a href=&#34;http://ajax.googleapis.com/ajax/libs/prototype/1.6.1.0/prototype.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&#34;&gt;http://ajax.googleapis.com/ajax/libs/prototype/1.6.1.0/prototype.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/a&gt;&lt;/pre&gt;
+&lt;h2&gt;Ext.JS&lt;/h2&gt;
+&lt;pre&gt;&amp;lt;script src=&amp;ldquo;&lt;a href=&#34;http://ajax.googleapis.com/ajax/libs/ext-core/3.1.0/ext-core.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&#34;&gt;http://ajax.googleapis.com/ajax/libs/ext-core/3.1.0/ext-core.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/a&gt;&lt;/pre&gt;
+&lt;h2&gt;Dojo&lt;/h2&gt;
+&lt;pre&gt;&amp;lt;script src=&amp;ldquo;&lt;a href=&#34;http://ajax.googleapis.com/ajax/libs/dojo/1.4.3/dojo/dojo.xd.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&#34;&gt;http://ajax.googleapis.com/ajax/libs/dojo/1.4.3/dojo/dojo.xd.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/a&gt;&lt;/pre&gt;
+&lt;h2&gt;Scriptaculous&lt;/h2&gt;
+&lt;pre&gt;&amp;lt;script src=&amp;ldquo;&lt;a href=&#34;http://ajax.googleapis.com/ajax/libs/scriptaculous/1.8.3/scriptaculous.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&#34;&gt;http://ajax.googleapis.com/ajax/libs/scriptaculous/1.8.3/scriptaculous.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/a&gt;&lt;/pre&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>jQuery从此更牛了</title>
+      <link>http://huobazi.aspxboy.com/blog/2008/10/07/jquerycool/</link>
+      <pubDate>Tue, 07 Oct 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2008/10/07/jquerycool/</guid>
+      <description>&lt;p&gt;为什么更牛了?&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;26日回家，昨天才返回，这么好的消息自己错过了，补记一下。&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;see see&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://weblogs.asp.net/scottgu/&#34;&gt;Scott Guthrie&lt;/a&gt;的&lt;a href=&#34;http://weblogs.asp.net/scottgu/archive/2008/09/28/jquery-and-microsoft.aspx&#34;&gt;公告 &lt;/a&gt;(jQuery将成为Visual Studio的一部分等更多好消息...)&lt;/p&gt;
+&lt;p&gt; &lt;br /&gt;jQuery头儿&lt;a href=&#34;http://ejohn.org/&#34;&gt;John Resig&lt;/a&gt;的&lt;a href=&#34;http://jquery.com/blog/2008/09/28/jquery-microsoft-nokia/&#34;&gt;公告&lt;/a&gt;（jQuery, Microsoft, and Nokia）&lt;/p&gt;
+&lt;p&gt; &lt;br /&gt;&lt;a href=&#34;http://www.hanselman.com/blog/&#34;&gt;Scott Hanselman&lt;/a&gt;的jQuery的&lt;a href=&#34;http://www.hanselman.com/blog/jQueryToShipWithASPNETMVCAndVisualStudio.aspx&#34;&gt;演示&lt;/a&gt;&lt;/p&gt;              
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Live Writer on 武眉博</title>
+    <link>http://huobazi.aspxboy.com/tags/live-writer/</link>
+    <description>Recent content in Live Writer on 武眉博</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 19 Nov 2006 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://huobazi.aspxboy.com/tags/live-writer/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Test live writer</title>
+      <link>http://huobazi.aspxboy.com/blog/2006/11/19/cb-565070/</link>
+      <pubDate>Sun, 19 Nov 2006 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2006/11/19/cb-565070/</guid>
+      <description>&lt;p&gt;Test live writer&lt;/p&gt;             
+</description>
+    </item>
+    
+    <item>
+      <title>Test remote images for live writer</title>
+      <link>http://huobazi.aspxboy.com/blog/2006/11/19/cb-565071/</link>
+      <pubDate>Sun, 19 Nov 2006 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2006/11/19/cb-565071/</guid>
+      <description>&lt;p&gt;&lt;p&gt; &lt;br /&gt;&lt;/p&gt;
+&lt;h6&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;如&lt;span style=&#34;text-decoration: underline;&#34;&gt;何设置能使远程图片直接上传呢&lt;/span&gt;&lt;img style=&#34;margin: 15px 20px 20px 0px;&#34; onmousemove=&#34;SetStatus();&#34; onmouseout=&#34;SetStatus();&#34; src=&#34;http://huobazi.aspxboy.com/images/hbz_images/24543b21-2430-4533-8398-c9b76c444d0c.jpg&#34; alt=&#34;  衰锅就是这样的 :-)  &#34; align=&#34;left&#34;&gt;&lt;/span&gt;&lt;/h6&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

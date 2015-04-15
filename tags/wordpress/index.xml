@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wordpress on 武眉博</title>
+    <link>http://huobazi.aspxboy.com/tags/wordpress/</link>
+    <description>Recent content in Wordpress on 武眉博</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 06 Mar 2012 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://huobazi.aspxboy.com/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>从typecho转换到Octopress了</title>
+      <link>http://huobazi.aspxboy.com/blog/2012/03/06/convert-typecho-to-octopress/</link>
+      <pubDate>Tue, 06 Mar 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2012/03/06/convert-typecho-to-octopress/</guid>
+      <description>&lt;p&gt;人生在于折腾,所以将博客转换到Octopress了&lt;br /&gt;
+我的博客经历了如下几次变动：&lt;br /&gt;
+2003年1月,&lt;a href=&#34;http://aspxboy.com/private/&#34;&gt;自己装了个SnowForum&lt;/a&gt;，用来写些技术记录之类的东西&lt;br /&gt;
+&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;&amp;gt;&lt;br /&gt;
+2004年4月,&lt;a href=&#34;http://huobazi.cnblogs.com/&#34;&gt;搬到博客园，以前的记录停止维护，后来数据丢失&lt;/a&gt;&lt;br /&gt;
+&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;&amp;gt;&lt;br /&gt;
+2009年6月,&lt;a href=&#34;http://huobazi.aspxboy.com/blog/2009/06/21/my-blog-moved-to-wp/&#34;&gt;搬出博客园,转换到Wordpress&lt;/a&gt;当时在旧博客上写了script，告知访问者此处停止更新，询问访问者是否停留在当前页，或转向新页面(可能有更新),因此被封号 @_@|||&lt;br /&gt;
+&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;&amp;gt;&lt;br /&gt;
+2009年7月,&lt;a href=&#34;http://huobazi.aspxboy.com/blog/2009/07/04/myblog-from-wordpress-to-typecho/&#34;&gt;博客又转换到Typecho平台&lt;/a&gt;&lt;br /&gt;
+&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;&amp;gt;&lt;br /&gt;
+2012年3月,转到Octopress了，一个静态博客生成引擎，现在看到的全都是html页面,我写了几行ruby代码做了转换，在&lt;a href=&#34;https://github.com/huobazi/typecho-to-octopress&#34;&gt;https://github.com/huobazi/typecho-to-octopress&lt;/a&gt;，希望对想转换的朋友有用。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Wordpress真的不错</title>
+      <link>http://huobazi.aspxboy.com/blog/2009/10/20/342/</link>
+      <pubDate>Tue, 20 Oct 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2009/10/20/342/</guid>
+      <description>&lt;p&gt;另外一个博客，用的wp，自动升级使用了一下，很不错，速度很快&lt;br /&gt;Upgrade WordPress&lt;br /&gt;Downloading update from &lt;a href=&#34;http://wordpress.org/wordpress-2.8.4.zip&#34;&gt;http://wordpress.org/wordpress-2.8.4.zip&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Unpacking the update.&lt;/p&gt;
+&lt;p&gt;Verifying the unpacked files&lt;/p&gt;
+&lt;p&gt;Installing the latest version&lt;/p&gt;
+&lt;p&gt;Upgrading database&lt;/p&gt;
+&lt;p&gt;WordPress upgraded successfully&lt;/p&gt;              
+</description>
+    </item>
+    
+    <item>
+      <title>Wordpress从windows上迁移到linux上要注意路径设置</title>
+      <link>http://huobazi.aspxboy.com/blog/2009/08/02/wordpress-from-windows-to-linux/</link>
+      <pubDate>Sun, 02 Aug 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2009/08/02/wordpress-from-windows-to-linux/</guid>
+      <description>&lt;p&gt;今天在localhost上用xampp装了个&lt;a title=&#34;Wordpress&#34; href=&#34;http://www.wp.com&#34; target=&#34;_blank&#34;&gt;wordpress&lt;/a&gt; 2.8.2,本地导入原来&lt;a title=&#34;www.codeplex.com/blogengine&#34; href=&#34;http://www.codeplex.com/blogengine&#34; target=&#34;_blank&#34;&gt;blogengine.net&lt;/a&gt;的数据调整好，没有任何问题，就&lt;a title=&#34;帝国备份王&#34; href=&#34;http://www.phome.net/product/Ebak.html&#34; target=&#34;_blank&#34;&gt;用帝国备份王&lt;/a&gt;打包数据在远程linunx上恢复，ftp上传本地站点内的文件到服务器对应目录，修改wp-config.php，兴冲冲的去访问首页，发现打不开，任何跟wp有关的页面都打不开，html可以打开和wp无关的页面比如探针是可以打开的，郁闷啊，检查了好久配置文件没有任何问题，思前想后想不通啊。本地和远程只是web服务器不同，本地是apache远程是nginx，不会是因为这个吧，其他几个站点都是这么弄的啊，是在想不到什么原因，&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;就打开phpmyadmin随便翻，翻到wp-options表，发现里面有几个站点域名啊的字段，倒上去的数据是本地的，玉米对应不上，修改之，还是没好，仍然打不开，再翻最后发现upload_path这个字段的设置时E:\xxx\yyy\zzz\这样的尝试修改成linux内的/home/usr/local/vhost/xxx/yyy/zzz，再访问首页，OK啦，估计wp在页面打开时要校验这些选项，而他不认识E:\XX\YY\ZZ这样的路径，就报错了。&lt;/p&gt;             
+</description>
+    </item>
+    
+    <item>
+      <title>博客园到Wordpress搬家成功！</title>
+      <link>http://huobazi.aspxboy.com/blog/2009/06/21/my-blog-moved-to-wp/</link>
+      <pubDate>Sun, 21 Jun 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2009/06/21/my-blog-moved-to-wp/</guid>
+      <description>&lt;p&gt;终于把在博客园的博客的数据导入到Wordpress内了，包括随笔/文章，图片,标签，评论等，是写了两个C# console程序做到的，程序我传到博客园了，如果有需要的朋友可以试试。但请注意，要自己在博客园后台备份RSS文件放到Reader的Data目录内，设置为编译选项为永远复制，运行后会生成一个Entry.xml并且把博客内的图片和分类、Tag、评论等抓下来，然后将此xml文件拷贝到Writer内，在代码内修改一下你的Wordress的数据库连接，然后跑一下Writer，就可以完成数据导入到Wordpress了，时间匆忙，代码写的很乱，有些地方是针对本人需求处理的，如果你想要直接运行此程序完成你的博客园博客到Wordpress的转换，&lt;strong&gt;那是不可能滴！&lt;/strong&gt;你一定要有简单的C#调试基础哦。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://files.cnblogs.com/huobazi/MyBlogTools.rar&#34;&gt;http://files.cnblogs.com/huobazi/MyBlogTools.rar&lt;/a&gt;&lt;/p&gt;              
+</description>
+    </item>
+    
+  </channel>
+</rss>

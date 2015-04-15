@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ez_setup on 武眉博</title>
+    <link>http://huobazi.aspxboy.com/tags/ez_setup/</link>
+    <description>Recent content in Ez_setup on 武眉博</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 11 Aug 2009 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://huobazi.aspxboy.com/tags/ez_setup/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>如何在windows xp下安装python2.6的setuptools</title>
+      <link>http://huobazi.aspxboy.com/blog/2009/08/11/how-to-install-setuptools-on-windows-and-python26/</link>
+      <pubDate>Tue, 11 Aug 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2009/08/11/how-to-install-setuptools-on-windows-and-python26/</guid>
+      <description>&lt;p&gt;&lt;p&gt;最近开始学python，要安装很多egg文件，但发现&lt;a href=&#34;http://pypi.python.org/pypi/setuptools#downloads&#34;&gt;http://pypi.python.org/pypi/setuptools#downloads&lt;/a&gt;没有python2.6的MS Windows installer版本，google了一把，用如下方法解决：&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;1. 下载 setuptools-0.6c9.tar.gz&lt;br /&gt;2. 下载 setuptools-0.6c9-py2.6.egg （放在同一个目录）&lt;br /&gt;3. 用7-zip或者其他解压工具打开 setuptools-0.6c9.tar.gz ，并且把里面的 ez_setup.py 文件解压到同一个目录里。&lt;br /&gt;4. 打开cmd窗口，并进入你刚才下载和解压文件的目录里。（例如： d:\downloads\）&lt;br /&gt;5. 输入 python ez_setup.py setuptools-0.6c9-py2.6.egg&lt;/p&gt;
+&lt;p&gt;提示如下:&lt;/p&gt;
+&lt;pre&gt;E:\temp&amp;gt;python ez_setup.py setuptools-0.6c9-py2.6.egg
+Processing setuptools-0.6c9-py2.6.egg
+Copying setuptools-0.6c9-py2.6.egg to c:\python26\lib\site-packages
+Adding setuptools 0.6c9 to easy-install.pth file
+Installing easy_install-script.py script to C:\Python26\Scripts
+Installing easy_install.exe script to C:\Python26\Scripts
+Installing easy_install-2.6-script.py script to C:\Python26\Scripts
+Installing easy_install-2.6.exe script to C:\Python26\Scripts&lt;/p&gt;
+
+&lt;p&gt;Installed c:\python26\lib\site-packages\setuptools-0.6c9-py2.6.egg
+Processing dependencies for setuptools==0.6c9
+Finished processing dependencies for setuptools==0.6c9
+Processing setuptools-0.6c9-py2.6.egg
+Removing c:\python26\lib\site-packages\setuptools-0.6c9-py2.6.egg
+Copying setuptools-0.6c9-py2.6.egg to c:\python26\lib\site-packages
+setuptools 0.6c9 is already the active version in easy-install.pth
+Installing easy_install-script.py script to C:\Python26\Scripts
+Installing easy_install.exe script to C:\Python26\Scripts
+Installing easy_install-2.6-script.py script to C:\Python26\Scripts
+Installing easy_install-2.6.exe script to C:\Python26\Scripts&lt;/p&gt;
+
+&lt;p&gt;Installed c:\python26\lib\site-packages\setuptools-0.6c9-py2.6.egg
+Processing dependencies for setuptools==0.6c9
+Finished processing dependencies for setuptools==0.6c9&lt;/p&gt;
+
+&lt;p&gt;E:\temp&amp;gt;&lt;/pre&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

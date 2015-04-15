@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>推荐阅读 on 武眉博</title>
+    <link>http://huobazi.aspxboy.com/tags/%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB/</link>
+    <description>Recent content in 推荐阅读 on 武眉博</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 25 Feb 2012 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://huobazi.aspxboy.com/tags/%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>HG232破解一例</title>
+      <link>http://huobazi.aspxboy.com/blog/2012/02/25/hg232/</link>
+      <pubDate>Sat, 25 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2012/02/25/hg232/</guid>
+      <description>&lt;p&gt;###0. 默认超级账户&lt;/p&gt;
+
+&lt;p&gt;如果电信没有改过你的猫账户，可以尝试使用下面的信息登陆，如果不可以在进入后面的步骤1和2破解
+&lt;code&gt;帐号： telecomadmin 密码：nE7jA%5m (注意大小写)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;###1. 下载配置文件&lt;/p&gt;
+
+&lt;p&gt;猫上插入U盘，下面两种方法都可以，您挑一种吧。&lt;/p&gt;
+
+&lt;p&gt;#####1.1 手工操作&amp;mdash;-乐趣&lt;/p&gt;
+
+&lt;p&gt;用猫后面印刷的普通用户useradmin登陆，这个用户登陆进去什么高级全选都木有，但是表着急，我这么干的，浏览器用firefox，如果木有就去下载，然后装上firebug，去看隐藏的html元素吧，把样式表的disply:none;都禁止掉，什么 备份配置文件、启动从U盘加载配置、回复出厂值、日志等等都出来了吧，插入U盘，点击备份按钮，文件就下载下来了。&lt;/p&gt;
+
+&lt;p&gt;#####1.2 连接下载&amp;mdash;-直接&lt;/p&gt;
+
+&lt;p&gt;同时通过分析html和javascript代码，我直接把下载地址找到了，如果你不想或者木有firefox&amp;amp;&amp;amp;firebug，那就直接访问：
+&lt;a href=&#34;http://192.168.1.1/html/ehomeclient/cfgUSBRestore.cgi?coverusbpath=usb1_1&#34;&gt;http://192.168.1.1/html/ehomeclient/cfgUSBRestore.cgi?coverusbpath=usb1_1&lt;/a&gt; 这是firebug分析抓包后得到的地址，嘿嘿。
+配置文件就能成功被备份出了，在U盘根目录生成的e8_Config_backup文件夹里ctce8_HG232.cfg。&lt;/p&gt;
+
+&lt;p&gt;###2. 解密配置文件&lt;/p&gt;
+
+&lt;p&gt;网上有现成的编译好的工具可以直接用，不过作为技术宅男，当然要做点有挑战性的了，我弄了俩，一个javascript写的，一个ruby写的，开源滴，您用着放心哦&lt;/p&gt;
+
+&lt;p&gt;#####2.1 无ruby环境&lt;/p&gt;
+
+&lt;p&gt;将代码库里的decrypt.html另存到本地，然后用浏览器打开，在Source里粘贴用ctce8_HG232.cfg文件的内容，
+点击解密按钮,就可进行解密，加密同理。&lt;/p&gt;
+
+&lt;p&gt;#####2.2 有ruby环境&lt;/p&gt;
+
+&lt;p&gt;如果有ruby运行环境，则可以使用代码库里的decrypt.rb另存到本地来，把要破解或者加密的文件放入相同目录,在命令行运行 ruby decrypt.rb 按照提示做就可以了&lt;/p&gt;
+
+&lt;p&gt;#####2.3 超级管理员密码
+到文本编辑软件打开破解后的文件，查找telecomadmin，找到
+    &lt;X_ATP_UserInfoInstance InstanceID=&#34;1&#34; Username=&#34;telecomadmin&#34; Userpassword=&#34;telecomadmin******&#34; Userlevel=&#34;2&#34; Busy=&#34;0&#34; LoginIP=&#34;&#34;/&gt;
+Userpassword里面的就是超级管理员的密码了。一般是telecomadmin加串数字。&lt;/p&gt;
+
+&lt;p&gt;###3. 设置&lt;/p&gt;
+
+&lt;p&gt;后面的情况就大同小异了，网上很多介绍，开路由，，自动拨号，开无线，一堆一堆的教程，另外有些设置在管理平台是没有的，比如下面的ftp和telnet设置，如果又必要使用这些相功能，修改配置文件，加密后，登陆后台后启用从usb恢复设备这个功能，然后把配置文件夹自己修改后，再恢复回去，就可以了。
+    &lt;X_CT-COM_ServiceManage TelnetEnable=&#34;0&#34; TelnetUserName=&#34;!!Huawei&#34; TelnetPassword=&#34;@HuaweiHgw&#34; TelnetPort=&#34;23&#34; WebWanAccessEnable=&#34;0&#34; FtpEnable=&#34;1&#34; FtpUserName=&#34;ftp&#34; FtpPassword=&#34;ftp&#34; FtpPort=&#34;21&#34; FtpPath=&#34;/mnt&#34;/&gt;&lt;/p&gt;
+
+&lt;p&gt;###4. 代码&lt;/p&gt;
+
+&lt;p&gt;本文提及的代码可以在&lt;a href=&#34;https://github.com/huobazi/hg232&#34;&gt;https://github.com/huobazi/hg232&lt;/a&gt;下载到&lt;/p&gt;
+
+&lt;p&gt;###5.  其他&lt;/p&gt;
+
+&lt;p&gt;4个RJ45口理论上都可以设置成接电脑或者itv输出，并不局限于写了itv的那个口。另外，也可以增加一个itv无线网络，在你的机顶盒上加个无线网卡，机顶盒拨入此无线网络，这样就不用拉一堆堆的线了，很适用于前期没有做好布线设计的朋友。&lt;/p&gt;
+
+&lt;p&gt;itv 不选择 无线的话 要选VLAN透传，选无线是VLAN修改&lt;/p&gt;
+
+&lt;p&gt;另外，网上有现成的改好的配置文件下载，&lt;a href=&#34;http://email2me.blog.163.com/blog/static/34347033201101094128402/&#34;&gt;http://email2me.blog.163.com/blog/static/34347033201101094128402/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>京东新蛋攻防</title>
+      <link>http://huobazi.aspxboy.com/blog/2010/04/30/360buy-vs-newegg/</link>
+      <pubDate>Fri, 30 Apr 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2010/04/30/360buy-vs-newegg/</guid>
+      <description>&lt;p&gt;这是一片不断膨胀、愈演愈烈的虚拟战场。每一位统帅都着迷于它的独特魅力——任何势力的盛衰都取决于无数素未谋面的人的鼠标点击。每一位统帅也都必须铭记：实体世界里“强攻弱守”的军事规律已经在此失效。这里唯一可以遵循的生死法则是，无论势力强弱，一旦站到防守的位置上，那么溃败将接踵而来，且来得出乎意料地快&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://finance.ifeng.com/news/20100429/2128118.shtml&#34;&gt;http://finance.ifeng.com/news/20100429/2128118.shtml&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;京东新蛋攻防&lt;br /&gt;来源：凤凰网    日期：10年04月30日 10:35:18&lt;/p&gt;              
+</description>
+    </item>
+    
+    <item>
+      <title>在线编辑器的一个新选择。</title>
+      <link>http://huobazi.aspxboy.com/blog/2009/10/27/kissy-editor/</link>
+      <pubDate>Tue, 27 Oct 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2009/10/27/kissy-editor/</guid>
+      <description>&lt;p&gt;今天&lt;a title=&#34;http://lifesinger.org/&#34; href=&#34;http://lifesinger.org/&#34; target=&#34;_blank&#34;&gt;lifesinger&lt;/a&gt;发布了&lt;a title=&#34;kiss editor&#34; href=&#34;http://lifesinger.org/blog/2009/10/kissy-editor/&#34; target=&#34;_blank&#34;&gt;淘宝编辑器&lt;/a&gt;,&lt;/p&gt;
+&lt;p&gt;可以在这里看到&lt;a href=&#34;http://kissy.googlecode.com/svn/trunk/src/editor/demo/basic.html&#34; target=&#34;_blank&#34;&gt;演示&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;介绍可以看这里，&lt;a href=&#34;http://lifesinger.org/blog/2009/10/kissy-editor/&#34;&gt;http://lifesinger.org/blog/2009/10/kissy-editor/&lt;/a&gt;&lt;/p&gt;              
+</description>
+    </item>
+    
+    <item>
+      <title>【How to】解决Visio虚线复制到word中变为实线</title>
+      <link>http://huobazi.aspxboy.com/blog/2009/10/10/visio-dashed/</link>
+      <pubDate>Sat, 10 Oct 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2009/10/10/visio-dashed/</guid>
+      <description>&lt;p&gt;添加 MetafileDashLineAsSolid 到以下注册表位置，类型DWORD。&lt;/p&gt;
+&lt;p&gt; • Visio 2007&lt;br /&gt;HKEY_CURRENT_USER\Software\Microsoft\Office\12.0\Visio\Application&lt;br /&gt;• Visio 2003&lt;br /&gt;HKEY_CURRENT_USER\Software\Microsoft\Office\11.0\Visio\Application&lt;br /&gt;属性值：&lt;/p&gt;
+&lt;p&gt;• 0：虚线或虚线行执行不替换为实线。&lt;br /&gt;• 1：虚线或虚线极端情形中行只替换为实线。 100 倍的原始文件大小时可能导致文件大小中增加例如, 替换实线为虚线或虚线行。 &lt;br /&gt;• 2：替换实线用于当合理虚线或虚线行。 这是默认值。 &lt;br /&gt;• 3：始终替换为实线虚线或虚线行。 &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;                
+</description>
+    </item>
+    
+    <item>
+      <title>服务器状态代码含义</title>
+      <link>http://huobazi.aspxboy.com/blog/2009/09/02/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8A%B6%E6%80%81%E4%BB%A3%E7%A0%81%E5%90%AB%E4%B9%89/</link>
+      <pubDate>Wed, 02 Sep 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2009/09/02/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8A%B6%E6%80%81%E4%BB%A3%E7%A0%81%E5%90%AB%E4%B9%89/</guid>
+      <description>&lt;p&gt;&lt;h2 class=&#34;title&#34;&gt;服务器状态代码含义google来的，存档。&lt;/h2&gt;
+&lt;p class=&#34;title&#34;&gt; &lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;table border=&#34;1&#34; cellspacing=&#34;1&#34; cellpadding=&#34;4&#34; width=&#34;100%&#34; align=&#34;center&#34; bordercolor=&#34;#009999&#34;&gt;&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td width=&#34;25&#34; align=&#34;center&#34;&gt;100&lt;/td&gt;
+&lt;td width=&#34;150&#34; align=&#34;center&#34;&gt;Continue&lt;/td&gt;
+&lt;td&gt;初始的请求已经接受，客户应当继续发送请求的其余部分。（HTTP 1.1新）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;101&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Switching Protocols&lt;/td&gt;
+&lt;td&gt;服务器将遵从客户的请求转换到另外一种协议（HTTP 1.1新）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;200&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;OK&lt;/td&gt;
+&lt;td&gt;一切正常，对GET和POST请求的应答文档跟在后面。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;201&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Created&lt;/td&gt;
+&lt;td&gt;服务器已经创建了文档，Location头给出了它的URL。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;202&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Accepted&lt;/td&gt;
+&lt;td&gt;已经接受请求，但处理尚未完成。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;203&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Non-Authoritative Information&lt;/td&gt;
+&lt;td&gt;文档已经正常地返回，但一些应答头可能不正确，因为使用的是文档的拷贝（HTTP 1.1新）。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;204&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;No Content&lt;/td&gt;
+&lt;td&gt;没有新文档，浏览器应该继续显示原来的文档。如果用户定期地刷新页面，而Servlet可以确定用户文档足够新，这个状态代码是很有用的。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;205&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Reset Content&lt;/td&gt;
+&lt;td&gt;没有新的内容，但浏览器应该重置它所显示的内容。用来强制浏览器清除表单输入内容（HTTP 1.1新）。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;206&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Partial Content&lt;/td&gt;
+&lt;td&gt;客户发送了一个带有Range头的GET请求，服务器完成了它（HTTP 1.1新）。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;300&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Multiple Choices&lt;/td&gt;
+&lt;td&gt;客户请求的文档可以在多个位置找到，这些位置已经在返回的文档内列出。如果服务器要提出优先选择，则应该在Location应答头指明。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;301&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Moved Permanently&lt;/td&gt;
+&lt;td&gt;客户请求的文档在其他地方，新的URL在Location头中给出，浏览器应该自动地访问新的URL。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;302&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Found&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt;类似于301，但新的URL应该被视为临时性的替代，而不是永久性的。注意，在HTTP1.0中对应的状态信息是“Moved Temporatily”。&lt;br /&gt;出现该状态代码时，浏览器能够自动访问新的URL，因此它是一个很有用的状态代码。&lt;/p&gt;
+&lt;p&gt;注意这个状态代码有时候可以和301替换使用。例如，如果浏览器错误地请求&lt;a href=&#34;http://host/~user（缺少了后面的斜杠），有的服务器返回301，有的则返回302。&#34;&gt;http://host/~user（缺少了后面的斜杠），有的服务器返回301，有的则返回302。&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;严格地说，我们只能假定只有当原来的请求是GET时浏览器才会自动重定向。请参见307。&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;303&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;See Other&lt;/td&gt;
+&lt;td&gt;类似于301/302，不同之处在于，如果原来的请求是POST，Location头指定的重定向目标文档应该通过GET提取（HTTP 1.1新）。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;304&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Not Modified&lt;/td&gt;
+&lt;td&gt;客户端有缓冲的文档并发出了一个条件性的请求（一般是提供If-Modified-Since头表示客户只想比指定日期更新的文档）。服务器告诉客户，原来缓冲的文档还可以继续使用。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;305&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Use Proxy&lt;/td&gt;
+&lt;td&gt;客户请求的文档应该通过Location头所指明的代理服务器提取（HTTP 1.1新）。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;307&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Temporary Redirect&lt;/td&gt;
+&lt;td&gt;和302（Found）相同。许多浏览器会错误地响应302应答进行重定向，即使原来的请求是POST，即使它实际上只能在POST请求的应答是303时才能重定向。由于这个原因，HTTP 1.1新增了307，以便更加清除地区分几个状态代码：当出现303应答时，浏览器可以跟随重定向的GET和POST请求；如果是307应答，则浏览器只能跟随对GET请求的重定向。（HTTP 1.1新）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;400&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Bad Request&lt;/td&gt;
+&lt;td&gt;请求出现语法错误。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;401&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Unauthorized&lt;/td&gt;
+&lt;td&gt;客户试图未经授权访问受密码保护的页面。应答中会包含一个WWW-Authenticate头，浏览器据此显示用户名字/密码对话框，然后在填写合适的Authorization头后再次发出请求。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;403&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Forbidden&lt;/td&gt;
+&lt;td&gt;资源不可用。服务器理解客户的请求，但拒绝处理它。通常由于服务器上文件或目录的权限设置导致。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;404&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Not Found&lt;/td&gt;
+&lt;td&gt;无法找到指定位置的资源。这也是一个常用的应答。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;405&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Method Not Allowed&lt;/td&gt;
+&lt;td&gt;请求方法（GET、POST、HEAD、DELETE、PUT、TRACE等）对指定的资源不适用。（HTTP 1.1新）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;406&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Not Acceptable&lt;/td&gt;
+&lt;td&gt;指定的资源已经找到，但它的MIME类型和客户在Accpet头中所指定的不兼容（HTTP 1.1新）。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;407&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Proxy Authentication Required&lt;/td&gt;
+&lt;td&gt;类似于401，表示客户必须先经过代理服务器的授权。（HTTP 1.1新）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;408&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Request Timeout&lt;/td&gt;
+&lt;td&gt;在服务器许可的等待时间内，客户一直没有发出任何请求。客户可以在以后重复同一请求。（HTTP 1.1新）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;409&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Conflict&lt;/td&gt;
+&lt;td&gt;通常和PUT请求有关。由于请求和资源的当前状态相冲突，因此请求不能成功。（HTTP 1.1新）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;410&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Gone&lt;/td&gt;
+&lt;td&gt;所请求的文档已经不再可用，而且服务器不知道应该重定向到哪一个地址。它和404的不同在于，返回407表示文档永久地离开了指定的位置，而404表示由于未知的原因文档不可用。（HTTP 1.1新）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;411&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Length Required&lt;/td&gt;
+&lt;td&gt;服务器不能处理请求，除非客户发送一个Content-Length头。（HTTP 1.1新）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;412&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Precondition Failed&lt;/td&gt;
+&lt;td&gt;请求头中指定的一些前提条件失败（HTTP 1.1新）。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;413&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Request Entity Too Large&lt;/td&gt;
+&lt;td&gt;目标文档的大小超过服务器当前愿意处理的大小。如果服务器认为自己能够稍后再处理该请求，则应该提供一个Retry-After头（HTTP 1.1新）。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;414&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Request URI Too Long&lt;/td&gt;
+&lt;td&gt;URI太长（HTTP 1.1新）。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;416&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Requested Range Not Satisfiable&lt;/td&gt;
+&lt;td&gt;服务器不能满足客户在请求中指定的Range头。（HTTP 1.1新）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;500&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Internal Server Error&lt;/td&gt;
+&lt;td&gt;服务器遇到了意料不到的情况，不能完成客户的请求。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;501&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Not Implemented&lt;/td&gt;
+&lt;td&gt;服务器不支持实现请求所需要的功能。例如，客户发出了一个服务器不支持的PUT请求。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;502&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Bad Gateway&lt;/td&gt;
+&lt;td&gt;服务器作为网关或者代理时，为了完成请求访问下一个服务器，但该服务器返回了非法的应答。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;503&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Service Unavailable&lt;/td&gt;
+&lt;td&gt;服务器由于维护或者负载过重未能应答。例如，Servlet可能在数据库连接池已满的情况下返回503。服务器返回503时可以提供一个Retry-After头。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;504&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Gateway Timeout&lt;/td&gt;
+&lt;td&gt;由作为代理或网关的服务器使用，表示不能及时地从远程服务器获得应答。（HTTP 1.1新）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;505&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;HTTP Version Not Supported&lt;/td&gt;
+&lt;td&gt;服务器不支持请求中所指明的HTTP版本。（HTTP 1.1新）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p class=&#34;aaa&#34;&gt; &lt;/p&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>哈佛经典案例，赶集卖猪记 </title>
+      <link>http://huobazi.aspxboy.com/blog/2008/11/01/hf/</link>
+      <pubDate>Sat, 01 Nov 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2008/11/01/hf/</guid>
+      <description>&lt;p&gt;哈佛经典案例，赶集卖猪记（次贷危机加强篇）&lt;br /&gt;　　&lt;br /&gt;　　这是目前为止关于次贷危机最通俗易懂的版本了。&lt;br /&gt;　　&lt;br /&gt;　　1&lt;br /&gt;　　&lt;br /&gt;　　大家都知道这个案例：&lt;br /&gt;　　&lt;br /&gt;　　一男赶集卖猪，天黑遇雨，二十头猪未卖成，到一农家借宿。&lt;br /&gt;　　&lt;br /&gt;　　少妇说：家里只一人不便。&lt;br /&gt;　&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;　&lt;br /&gt;　　男：求你了大妹子，给猪一头。&lt;br /&gt;　　&lt;br /&gt;　　女：好吧，但家只有一床。&lt;br /&gt;　　&lt;br /&gt;　　男：我也到床上睡，再给猪一头。&lt;br /&gt;　　&lt;br /&gt;　　女：同意。&lt;br /&gt;　　&lt;br /&gt;　　半夜男与女商量，我到你上面睡，女不肯。&lt;br /&gt;　　&lt;br /&gt;　　男：给猪两头。&lt;br /&gt;　　&lt;br /&gt;　　女允，要求上去不能动。&lt;br /&gt;　　&lt;br /&gt;　　少顷，男忍不住，央求动一下，女不肯。&lt;br /&gt;　　&lt;br /&gt;　　男：动一下给猪两头。女同意。&lt;br /&gt;　　&lt;br /&gt;　　男动了八次停下，女问为何不动？&lt;br /&gt;　　&lt;br /&gt;　　男说猪没了。&lt;br /&gt;　　&lt;br /&gt;　　女小声说：要不我给你猪……&lt;br /&gt;　　&lt;br /&gt;　　天亮后，男吹着口哨赶30头（含少妇家的10头）猪赶集去了……&lt;br /&gt;　　&lt;br /&gt;　　[ 哈佛导师评论 ]&lt;br /&gt;　　&lt;br /&gt;　　要发现用户潜在需求，前期必须引导，培养用户需求，因此产生的投入是符合发展规律的。&lt;br /&gt;　　&lt;br /&gt;　　2&lt;br /&gt;　　&lt;br /&gt;　　另一男得知此事，决意如法炮制，遂赶集卖猪，天黑遇雨，二十头猪未卖成，到一农家借宿&lt;br /&gt;　　&lt;br /&gt;　　少妇说：家里只一人不便。&lt;br /&gt;　　&lt;br /&gt;　　男：求你了大妹子，给猪一头&lt;br /&gt;　　&lt;br /&gt;　　女：好吧，但家只有一床。&lt;br /&gt;　　&lt;br /&gt;　　男：我也到床上睡，再给猪一头。&lt;br /&gt;　　&lt;br /&gt;　　女：同意。&lt;br /&gt;　　&lt;br /&gt;　　半夜男商女，我到你上面睡，女不肯。&lt;br /&gt;　　&lt;br /&gt;　　男：给猪两头。&lt;br /&gt;　　&lt;br /&gt;　　女允，要求上去不能动。&lt;br /&gt;　　&lt;br /&gt;　　少顷，男忍不住，央求动一下，女不肯。&lt;br /&gt;　　&lt;br /&gt;　　男：动一下给猪两头。女同意。&lt;br /&gt;　　&lt;br /&gt;　　男动了七次停下，女问为何不动？&lt;br /&gt;　　&lt;br /&gt;　　男说：完事了～～～女：......&lt;br /&gt;　　&lt;br /&gt;　　天亮后，男低著头赶2头猪赶集去了......&lt;br /&gt;　　&lt;br /&gt;　　[ 哈佛导师评论 ]&lt;br /&gt;　　&lt;br /&gt;　　要结合企业自身规模进行谨慎投资，谨防资金链断裂问题&lt;br /&gt;　　&lt;br /&gt;　　3&lt;br /&gt;　　&lt;br /&gt;　　又一男得知此事，决意如法炮制兼吸取教训，遂先用一头猪去换一粒伟哥，事必，天亮后，男吹着口哨赶38头（含少妇家的18头）猪赶集去了……&lt;br /&gt;　　&lt;br /&gt;　　[ 哈佛导师评论 ]&lt;br /&gt;　　&lt;br /&gt;　　企业如果获得金融资本的帮助，自身经营能力将得到倍增。&lt;br /&gt;　　&lt;br /&gt;　　4&lt;br /&gt;　　&lt;br /&gt;　　知道此法男多，伟哥供不应求，逐渐要2头，3头猪换一粒伟哥。&lt;br /&gt;　　&lt;br /&gt;　　[ 哈佛导师评论 ]&lt;br /&gt;　　&lt;br /&gt;　　这就是通货膨胀。&lt;br /&gt;　　&lt;br /&gt;　　5&lt;br /&gt;　　&lt;br /&gt;　　当伟哥价格涨到16头猪一颗的时候...&lt;br /&gt;　　&lt;br /&gt;　　[ 哈佛导师评论 ]&lt;br /&gt;　　&lt;br /&gt;　　该男已经进入边际成本，除了拥有对自身能力的自信和未来良好愿望以外，实际现猪流已经为零。&lt;br /&gt;　　&lt;br /&gt;　　6&lt;br /&gt;　　&lt;br /&gt;　　但换猪男越来越多，卖伟哥的决定，扩展生产能力，推出一种次级伟哥，如果你缺一头猪，只要你承诺可以到该女房中一夜，就可以先借，事成后补交猪款，这个方法大大促进了伟哥销售。&lt;br /&gt;　　&lt;br /&gt;　　[ 哈佛导师评论 ]&lt;br /&gt;　　&lt;br /&gt;　　这就是贷款，让企业可以根据未来的收益选择借支流动资金。&lt;br /&gt;　　&lt;br /&gt;　　7&lt;br /&gt;　　&lt;br /&gt;　　伟哥专卖店后来在即使你一头猪都没有，只要你承诺可以到该女房中一夜，就可以先借，事成后补交猪款。&lt;br /&gt;　　&lt;br /&gt;　　[ 哈佛导师评论 ]&lt;br /&gt;　　&lt;br /&gt;　　这就是金融创新，让现在的人花未来的钱，反正等你老了未来的钱你也花不动。&lt;br /&gt;　　&lt;br /&gt;　　8&lt;br /&gt;　　&lt;br /&gt;　　消息一出，换猪男越来越多，有人找伟哥专卖店，这个项目太好了，我们把它变成优质基金，对外销售债券，你们也就可以分享我的收益，如何？&lt;br /&gt;　　&lt;br /&gt;　　结果伟哥专卖店觉得甚好，于是该公司把换猪男分三类，一类是拿现猪换的，一类是一部分现猪贷的，一类是完全没有现猪借的，发行三种债券。大家踊跃而上。纷纷购买伟哥专卖店的债券，伟哥专卖店生意太好，就把债券销售外包给另外一家公司运作，该公司也一并大发其财，公司越做越大，甚至可以脱离实际伟哥销售情况来发行，给自己和伟哥专卖店带来巨大的现金收益。&lt;br /&gt;　　&lt;br /&gt;　　[ 哈佛导师评论 ]&lt;br /&gt;　　&lt;br /&gt;　　这就是专业的人做专业的事，从实体经营到资本运作，经济进入了更高的层次。&lt;br /&gt;　　&lt;br /&gt;　　9&lt;br /&gt;　　&lt;br /&gt;　　为了防止自己债券未来有损失，该公司决定给它买上保险，这样债券销售就更容易，因为一旦债券出现问题，还可以获得保险公司的赔付，哇，销售这下子太好了，保险公司也获得巨大平白无故的保险收入。&lt;br /&gt;　　&lt;br /&gt;　　[ 哈佛导师评论 ]&lt;br /&gt;　　&lt;br /&gt;　　这就是风险对冲，策略联盟，提高了企业的抗风险能力，也保护了消费者利益。&lt;br /&gt;　　&lt;br /&gt;　　10&lt;br /&gt;　　&lt;br /&gt;　　换猪男太多，排长队等待，该女无法承受，说老娘不干了，我搬家，一时间有无数拥有伟哥的欠猪男。&lt;br /&gt;　　&lt;br /&gt;　　[ 哈佛导师评论 ]&lt;br /&gt;　　&lt;br /&gt;　　这是个别现象，属于市场的正常波动，不会影响整个经济。&lt;br /&gt;　　&lt;br /&gt;　　11&lt;br /&gt;　　&lt;br /&gt;　　结果该女迟迟不肯搬回。一部分欠猪男没有收入，只好赖帐，结果大量债券到期无法换现猪吃，债券公司一看，一粒伟哥16头猪，这哪里还得起，宣布倒闭&lt;br /&gt;　　&lt;br /&gt;　　[ 哈佛导师评论 ]&lt;br /&gt;　　&lt;br /&gt;　　这是次贷危机，不会影响整个金融行业。&lt;br /&gt;　　&lt;br /&gt;　　12&lt;br /&gt;　　&lt;br /&gt;　　哪里晓得债券公司还把债券上了保险，保险公司一看，这哪里赔得起，于是也宣布要倒闭。&lt;br /&gt;　　&lt;br /&gt;　　[ 哈佛导师评论 ]&lt;br /&gt;　　&lt;br /&gt;　　这是金融危机，还不会影响整个实体经济。&lt;br /&gt;　　&lt;br /&gt;　　13&lt;br /&gt;　　&lt;br /&gt;　　后文：据说该女已搬到中国定居。&lt;/p&gt;
+&lt;p&gt;from:http://topic.csdn.net/u/20081030/09/0A743CDE-0A1D-4824-975C-B6984D545C3E.html&lt;/p&gt;               
+</description>
+    </item>
+    
+    <item>
+      <title>次贷危机和一夜情</title>
+      <link>http://huobazi.aspxboy.com/blog/2008/10/26/crisis-and-ons/</link>
+      <pubDate>Sun, 26 Oct 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2008/10/26/crisis-and-ons/</guid>
+      <description>&lt;p&gt;     有一天，一位其貌不扬的男士，带着一位十分艳丽的OL，来到Causeway Bay一家LV店。他为OL选了一价值6万5元的LV handbag。　　付款时，男士掏出支票本，十分潇洒地签了一张支票。店员有些为难，因为这对夫妇是第一次来店购物。&lt;br /&gt;　　男士看穿了店员的心思，十分冷静地对店员说： &#34;我感觉到，您担心这是一张是空头支票，对吗？今天是周六，银行关门。我建议您把支票和handbag都留下。等到星期一支票兑现之后，再请你们把 handbag 送到这位小姐的府上。您看这样行不行？&#34;&lt;br /&gt;　&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;　店员放了下心来，欣然地接受了这个建议，并且大方的承诺，递送handbag的费用由该店承担，他本人将会亲自把这件事情给办妥。&lt;br /&gt;　　星期一，店员拿着支票去银行入账，支票果真是张空头支票！愤怒的店员打电话给那位顾客，客户对他说： &#34;这没有什么要紧啊！你和我都没有损失。上星期六的晚上我已经同那个女孩上床了！哦，多谢您的合作。&#34; 这个故事揭示了次贷危机的本质。人们在对未来收益充满良好预期的时候，对于可能加大风险缺乏防范意识。美女认为周一六万多LV就到家了，自然也就放松了警惕，认为ONS的投资是值得的，对于投入产出的预期是建立在一个具有巨大不确定风险的情况下的。而对未来收益预期的包装则是这些投资机构最擅长的事情。中国的股民大多跟这个美女一样，所以亏钱基本上是活该，没有这些人，股市赚谁的钱呢。而媒体和分析家们，往往在其中扮演了LV店员的配合角色。from:http://www.im286.com/thread-2983005-1-10.html&lt;/p&gt;              
+</description>
+    </item>
+    
+    <item>
+      <title>员工辞职的十大原因！ </title>
+      <link>http://huobazi.aspxboy.com/blog/2007/09/02/cb-878740/</link>
+      <pubDate>Sun, 02 Sep 2007 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2007/09/02/cb-878740/</guid>
+      <description>&lt;p&gt;美国企管顾问史密斯（Gregory Smith），日前在《CEO Refresher》杂志上指出，根据他多年的顾问经验，员工辞职的十大原因为&lt;br /&gt;1、员工的工作量过重，造成他们必须在晚上或周末加班。 &lt;br /&gt;&lt;br /&gt;2、公司不愿意在办公室杂务上，另外再花费雇用专人负责，以致专业工作者必须自行做影印等工作。&lt;br /&gt;&lt;br /&gt;3、当员工可以在其他公司找到薪水高二至三成的工作时，公司却宣布暂时不帮员工加薪及升迁。&lt;br /&gt;&lt;br /&gt;　　4、公司不附予员工做决定的权力。&lt;br /&gt;&lt;br /&gt;　　5、公司不断重整部门、转调员工职务，以及改变公司走向。 &lt;br /&gt;&lt;br /&gt;6、公司不向员工清楚沟通目标及决定，以致有时候当员工完成一项工作时，却遭到公司的拒绝，严重打击士气。 &lt;br /&gt;&lt;br /&gt;　　7、主管对某些员工偏心，给予他们较好的办公室，或者较舒适的出差机会等。&lt;br /&gt;&lt;br /&gt;　　8、公司搬家，迫使员工通勤时间加倍等。 &lt;br /&gt;&lt;br /&gt;　　9、公司升迁没有能力的员工，真正的人才却没有受到重视。 &lt;br /&gt;&lt;br /&gt;　　10、公司虽然强调团队合作，但是却塑造部门或员工间必须激烈竞争的环境&lt;/p&gt;              
+</description>
+    </item>
+    
+    <item>
+      <title>上班人员必读：“五险一金”详解！</title>
+      <link>http://huobazi.aspxboy.com/blog/2007/03/31/cb-694846/</link>
+      <pubDate>Sat, 31 Mar 2007 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2007/03/31/cb-694846/</guid>
+      <description>&lt;p&gt;问：什么是五险一金？ &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    答：“五险一金”讲的是五种保险，包括养老保险、医疗保险、失业保险、工伤保险和生育保险；“一金”指的是住房公积金。 &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    其中养老保险、医疗保险和失业保险，这三种险是由企业和个人共同缴纳的保费，工伤保险和生育保险完全是由企业承担的。个人不需要缴纳。这里要注意的是“五险”是法定的，而“一金”不是法定的。 &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    问：“五险一金”的缴费比例是什么？ &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    答：目前北京养老保险缴费比例：单位20%(其中17%划入统筹基金，3%划入个人帐户)，个人8%(全部划入个人帐户)；医疗保险缴费比例：单位10%，个人2%+3元。 &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    失业保险缴费比例：单位1.5%，个人0.5%；工伤保险根据单位被划分的行业范围来确定它的工伤费率；生育保险缴费比例：单位0.8%，个人不交钱。 &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    公积金缴费比例：　根据企业的实际情况，选择住房公积金缴费比例。但原则上最高缴费额不得超过北京市职工平均工资300%的10%。 &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    统筹基金即：在养老保险制度从国家—单位制逐渐向国家—社会制转变的过程中需要国家统筹，以解决经济发展不平衡及人口老龄化等问题。 &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    (1)以企业缴费为主建立社会统筹基金；(2)由职工和企业缴费为主建立个人帐户；(3)政府负担养老保险基金的管理费用。这种社会统筹和个人帐户相结合的半基金制有利于应付中国人口老龄化危机，逐渐分散旧制度到新制度的转轨成本，逐步实现由企业养老保险制度到个人养老保险制度的转变。 &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    四险一金的缴纳额度每个地区的规定都不同，基数是以工资总额为基数。有的企业在发放时有基本工资，有相关一些补贴，但有的企业在缴纳时，只是基本工资，这是违反法律规定的。具体比例要向当地的劳动部门去咨询。 &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    关于养老保险、失业保险和医疗保险的支取，是在法定允许的情况下才可以领取，是由设保登记部门来发放，比如“养老保险，要达到法定的年龄才可以，失业保险金的领取也是要具备条件，比如你到户口所在地的街道办事处办理失业证明，同时又办了求职证，就是指你失业以后还必须有求职的意愿，这样的条件才可以领取。 &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    如果失业之后你不想工作，那么就不能给你发保险金。另外，养老金和失业金是不能同时享受的。 &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    问：试用期内是否享有保险？ &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    答：在试用期内也应该有享受保险，因为试用期是合同期的一个组成部分，它不是隔离在合同期之外的。所以在试用期内也应该上保险。另外，企业给员工上保险是一个法定的义务，不取决于当事人的意思或自愿与否，即使员工表示不需要交保险也不行，而且商业保险不能替代社会保险。养老保险的享受待遇。 &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    累计缴纳养老保险15年以上，并达到法定退休年龄，可以享受养老保险待遇： &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    1、按月领取按规定计发的基本养老金，直至死亡。 &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    基本养老金的计算公式如下： &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    基本养老金=基础养老金+个人账户养老金+过渡性养老金=退休前一年全市职工月平均工资×20%(缴费年限不满15年的按15%)+个人账户本息和÷120+指数化月平均缴费工资×1997年底前缴费年限×1.4%。 &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    2、死亡待遇。(1)丧葬费(2)一次性抚恤费(3)符合供养条件的直系亲属生活困难补助费，按月发放，直至供养直系亲属死亡。 &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    注意：养老保险应尽量连续缴纳，根据有关文件规定，凡企业或被保险人间断缴纳基本养老保险费的(失业人员领取失业保险金期间或按有关规定不缴费的人员除外)，被保险人符合国家规定的养老条件，计算基本养老金时，其基础性养老金的计算基数，按累计间断的缴费时间逐年前推至相应年度上一年的本市职工平均工资计算(累计间断的缴费时间，按每满12个月为一个间断缴费年度计算，不满12个月不计算) &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    举例来说吧： &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    如果你2020年退休，正常你的基础养老金是2019年的社会平均工资×20%，但是如果你在退休之前养老保险中断了30个月，就是中断了2.5年，按2年算，你的基础养老金就是2017年社会平均工资×20% &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    问：参加医疗保险享受哪些待遇？ &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    答：1、门、急诊医疗费用。在职职工年度内(1月1日-12月31日)符合基本医疗保险规定范围的医疗费累计超过2000元以上部分； &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    2、结算比例。合同期内派遣人员2000元以上部分报销50%，个人自付50%；在一个年度内累计支付派遣人员门、急诊报销最高数额为2万元。 &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    3、参保人员要妥善保管好在定点医院就诊的门诊医疗单据(含大额以下部分的收据、处方底方等)，作为医疗费用报销凭证；　 &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    4、三种特殊病的门诊就医：参保人员患恶性肿瘤放射治疗和化学治疗、肾透析、肾移植后服抗排异药需在门诊就医时，由参保人就医的二、三级定点医院开据”疾病诊断证明”，并填写《北京市医疗保险特殊病种申报审批表》，报区医保中心审批备案。这三种特殊病的门诊就医及取药仅限在批准就诊的定点医院，不能到定点零售药店购买。发生的医疗费符合门诊特殊病规定范围的，参照住院进行结算。 &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    5、住院医疗 &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    ●住院押金：符合住院条件的参保人员，在收入住院时，医院收取参保人员部分押金，押金数额由医院根据病情按比例确定。如被派遣人员单位和参保人员未能按时足额缴纳医疗保险费的，住院押金由派遣人员个人全额垫付。 &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    ●结算周期：参保人员住院治疗每90天为一个结算周期：不超过90天的，每次住院为一个结算周期。 &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    ●恶性肿瘤患者门诊放射治疗和化学治疗、肾透析、肾移植后服抗排异药、患有精神病需常年住院的患者其发生的医疗费用每360天为一个结算周期。 &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    ●参保人员在定点的社区卫生服务中心(站)的家庭病床治疗发生的医疗费用，每90天为一个结算周期。 &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    ●参保人员出院或阶段治疗结束时，需由派遣人员个人先与医院结清应由派遣人员个人自费和自付的费用，应由基本医疗保险统筹基金和大额医疗互助资金支付的医疗费用，由医院向医保中心申报审核、结算。 &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    ●参保人员住院治疗，符合基本医疗保险规定范围的医疗费的结算，设定基本医疗统筹基金支付起付线和最高支付额。 &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    ●起付线第一次住院为1300元，以后住院为650元，最高支付限额为5万元；超过最高支付上限的(不含起付标准以下以及派遣人员个人负担部分)大额医疗费用互助。 &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    资金支付70%，派遣人员个人负担30%。在一个年度内最高支付10万元。住院费用的结算标准，在一个结算周期内按医院等级和费用数额采取分段计算、累加支付的办法。（各项比例有调整时，按新的标准执行） &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    注意：非因公交通事故，医保是免责的！ &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    问：参加失业保险将能享受待遇？ &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    答：失业保险连续缴纳一年以上，档案退回街道后。可以在街道享受失业保险待遇。 &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    1.失业保险金：是指失业保险经办机构按规定支付给符合条件的失业人员的基本生活费用，它是最主要的失业保险待遇。失业保险待遇根据北京市相关文件执行。 &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    2.领取失业保险金期间的医疗补助金：是指支付给失业人员领取失业保险金期间发生的医疗费用的补助。根据北京市有关政策法规执行。 &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    3.领取失业保险金期间死亡的失业人员的丧葬补助金和其供养的配偶、直系亲属的抚恤金按有关规定执行。 &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    问：参加工伤保险享受哪些待遇？ &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    答：在合同期内不幸发生意外，需向企业索取情况说明，并加盖企业公章，尽快(最好在三个工作日内)申请工伤认定并需提供下列材料。 &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    1、初次治疗诊断书或住院病历。 &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    2、职业病诊断证明(原件、复印件各一份)。 &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    3、交通事故需提供交通大队的事故裁决书或交通部门的交通事故证明。 &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    4、身份证复印件。 &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    5、有效期内的劳动合同原件。 &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    问：参加生育保险享受哪些待遇？ &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    答：可以报销与生育有关费用。报销范围包括，生育津贴、生育医疗费用、计划生育手术医疗费用、国家和本市规定的其他与生育有关的费用。　 &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    生育津贴按照女职工本人生育当月的缴费基数除以30再乘以产假天数计算。生育津贴为女职工产假期间的工资，生育津贴低于本人工资标准的，差额部分由企业补足。　 &lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;    生育医疗费用包括女职工因怀孕、生育发生的医疗检查费、接生费、手术费、住院费和药品费。计划生育手术医疗费用包括职工因计划生育发生的医疗费用。 &lt;br /&gt; 现在要求，医保缴够20年，养老交够15年才有资格领养老金和享受退休后的医保报销。（完）&lt;br /&gt;&lt;br /&gt;from:http://community.csdn.net/Expert/topic/5369/5369833.xml?temp=.5263025&lt;br /&gt;&lt;/p&gt;               
+</description>
+    </item>
+    
+    <item>
+      <title>转载, 春晚诗朗诵《心里话》之程序员版!! </title>
+      <link>http://huobazi.aspxboy.com/blog/2007/03/06/cb-665199/</link>
+      <pubDate>Tue, 06 Mar 2007 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2007/03/06/cb-665199/</guid>
+      <description>&lt;p&gt;要问我是谁？&lt;br /&gt;过去，我总不愿回答，&lt;br /&gt;因为我怕，&lt;br /&gt;我怕机关里的公务员笑话。&lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;我们的房间很小，放不下一个鞍马；&lt;br /&gt;我们的宿舍简陋，还经常搬家；&lt;br /&gt;我们的电脑很破，还经常乱码；&lt;br /&gt;我们的椅子很旧，坐上去吱吱哑哑……&lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;但是，&lt;br /&gt;我们代码工整，&lt;br /&gt;我们的业绩不差！&lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;要问我此刻最想要什么？&lt;br /&gt;我要我的笔记本，&lt;br /&gt;我要我的Vista！&lt;br /&gt;因为，有笔记本才能扛着到处出差；&lt;br /&gt;因为，有Vista客户才觉得够现代化。&lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;IT的2008，&lt;br /&gt;也是我们的2008，&lt;br /&gt;客户把需求说成了天书，&lt;br /&gt;我们把工程变成了神话，&lt;br /&gt;关于界面上，我们写了这样的话：&lt;br /&gt;别人与我比薪水，我和别人比明天！&lt;br /&gt;程序员和机关里的公务员不一样，&lt;br /&gt;你们是祖国的栋梁，我们是打工的傻瓜！&lt;br /&gt;&lt;br /&gt;From:&lt;br /&gt;&lt;br /&gt;&lt;a href=&#34;http://community.csdn.net/Expert/topic/5370/5370546.xml?temp=.6211817&#34;&gt;http://community.csdn.net/Expert/topic/5370/5370546.xml?temp=.6211817&lt;/a&gt;&lt;/p&gt;               
+</description>
+    </item>
+    
+    <item>
+      <title>多收了三五斗（TCL mm版）(收藏.搞笑) </title>
+      <link>http://huobazi.aspxboy.com/blog/2004/08/17/cb-34217/</link>
+      <pubDate>Tue, 17 Aug 2004 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2004/08/17/cb-34217/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;
+&lt;h2&gt;from:  http://computer.mblogger.cn/vcbear/posts/13163.aspx&lt;/h2&gt;
+&lt;br /&gt;&lt;p&gt;&lt;font size=&#34;2&#34;&gt;   TCL的停车场里，横七竖八停着各处来的自行车,助动车。门口排队的是UT的GG，把门口 &lt;br /&gt;塞得很满。厚厚的履历表和财产证明用各色的夹子夹者,一捆一捆地,填没了这只手和那只手 &lt;br /&gt;之间的空隙.门口进去就是TCL最大的会议厅了,联谊的MM就排在市场的那一边。朝晨的太阳 &lt;br /&gt;光从整洁的玻璃天棚斜射下来，光柱子落在吧台外面晃动着的几双Gucci高跟鞋上。 &lt;br /&gt;　　那些UTGG大清早骑自行车出来，穿越了半个高新区,到了TCL，早饭也不吃一下，便来到 &lt;br /&gt;吧台前面占卜他们的命运。“Manager 30万，Team Leader 20W，Engineer不要。”TCL的联 &lt;br /&gt;谊小姐有气没力地回答他们。　 &lt;br /&gt;　　“什么！”UT的朋友几乎不相信自己的耳朵。美满的希望突然一沉，一会儿大家都呆 &lt;br /&gt;了。　 &lt;br /&gt;　　“在六月里，你们不是说IT年薪10万么？”　 &lt;br /&gt;　　“8万也要过，不要说10万。”　 &lt;br /&gt;　　“哪里有涨得这样厉害的！”　 &lt;br /&gt;　　“现在是什么时候，你们不知道么？各处的GG象潮水一般涌来,过几天还要涨呢！” &lt;/font&gt;&lt;/p&gt;
+&lt;br /&gt;&lt;p&gt;&lt;font size=&#34;2&#34;&gt;　　原来出来犹如赛龙船似的一股劲儿，现在在每个人的身体里松懈下来了。最近天照应， &lt;br /&gt;很多人加了薪，税务局的兄台也不来作梗, 很快就拿到了年薪，有的还是优秀 Staff的头 &lt;br /&gt;衔,谁都以为该得透一透气了。　 &lt;br /&gt;　　哪里知道临到最后的占卜，却得到比IT冬天或公司开除更坏的课兆！　 &lt;br /&gt;　　“还是不要娶的好，我们回去呆在家里吧！”从简单的心里喷出了这样的愤激的话。 &lt;br /&gt;　　“嗤，”小姐冷笑着，“你们不干，人家就关门了么？各处地方多的是新来的GG,头几 &lt;br /&gt;批还没分派完，华为，中兴的优秀GG就要涌来了.现在各地的海归,硕士,博士,MBA也多得是. &lt;br /&gt;高素质的丫头是为他们留着的&#34; &lt;br /&gt;　　华为，中兴的优秀GG,硕士,博士,MBA,那是遥远的事情，仿佛可以不管。而已经30的GG &lt;br /&gt;不找LP，却只能作为一句愤激的话说说罢了。怎么能够不娶呢？在家父母的命令是要遵守 &lt;br /&gt;的，为了来联谊，买了体面的西装革履，当初父向亲母亲夸下的海口,自己向狐朋狗友吹的 &lt;br /&gt;牛是要还的。　 &lt;br /&gt;　　“我们到创维去找MM吧，”在创维，或许有比较好的命运等候着他，有人这么想。　 &lt;br /&gt;　　但是，小姐又来了一个“嗤”，眨着微翘的睫毛说道：“不要说创维，就是找到康佳&lt;br /&gt;去也一样。我们同行公议，这两天的价钱是Manager 30万，Team Leader 20W，Engineer &lt;br /&gt;不要”。 &lt;br /&gt;　　“到创维去找没有好处，”同伴间也提出了驳议。“创维的还要深圳户口，天知道他们 &lt;br /&gt;多收我们多少钱！就说依他们给，哪里来的钱？”　 &lt;br /&gt;　　“小姐，能不能降低一点？”差不多是哀求的声气。　 &lt;br /&gt;　　“降低一点，说说倒是很容易的一句话。我们的MM都是金枝玉叶养的，你们要知道，降 &lt;br /&gt;低一点，就没有SK-II，没有资生堂，没有TOYOTA，这样的傻事谁肯干？” &lt;br /&gt;　　“这个价钱实在太高了，我们做梦也没想到。去年的要求是15万，今年有的只要12万， &lt;br /&gt;不，你小姐说的，10万也招过；我们想，今年总该比15万少一点吧。哪里知道只有20 &lt;br /&gt;万！” &lt;br /&gt;　　“小姐，就是去年的老价钱，年薪15万吧。”　 &lt;br /&gt;　　“小姐，灰领GG可怜，你们行行好心，少赚一点吧。”　 &lt;br /&gt;　　另一位小姐听得厌烦，把手里的空咖啡杯扔到街心，睁大了眼睛说,“你们嫌价钱低， &lt;br /&gt;不要来找好了。是你们自己来的，并没有请你们来。只管多罗嗦做什么！我们有的是 &lt;br /&gt;Offer，不给你们，有别人的好给。你们看，又有几群GG挤过来了.”　 &lt;br /&gt;　　三四张Glasses好不容易从人堆里挤过来，Glasses后面是充满着希望的年轻的脸。他们 &lt;br /&gt;随即加入先到的一群。斜伸下来的光柱子落在他们的西服的肩背上。　 &lt;br /&gt;　　“听听看，今年什么价钱。”　 &lt;br /&gt;　　“比去年都不如，要求Team Leader 20W”伴着一副懊丧到无可奈何的神色。　 &lt;br /&gt;　　“什么！”希望犹如肥皂泡，一会儿又进裂了三四个。　&lt;/font&gt;&lt;/p&gt;               
+</description>
+    </item>
+    
+    <item>
+      <title>一个很全的教程站</title>
+      <link>http://huobazi.aspxboy.com/blog/2004/06/01/cb-12759/</link>
+      <pubDate>Tue, 01 Jun 2004 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2004/06/01/cb-12759/</guid>
+      <description>&lt;p&gt;很少见教程大全，不知道我是不是很落伍，今天才逛到这里&lt;br /&gt;&lt;a href=&#34;http://www.w3schools.com/&#34; target=&#34;_blank&#34;&gt;&lt;br /&gt;&lt;img style=&#34;border: 0px;&#34; src=&#34;http://huobazi.aspxboy.com/images/hbz_images/66c040d5-df17-43e3-ae0a-3afee8c63b96.jpg&#34; border=&#34;0&#34; alt=&#34;&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;HTML Tutorials&lt;/strong&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/html/default.asp&#34; target=&#34;_top&#34;&gt;Learn HTML&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/xhtml/default.asp&#34; target=&#34;_top&#34;&gt;Learn XHTML&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/css/default.asp&#34; target=&#34;_top&#34;&gt;Learn CSS&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/tcpip/default.asp&#34; target=&#34;_top&#34;&gt;Learn TCP/IP&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;XML Tutorials&lt;/strong&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/xml/default.asp&#34; target=&#34;_top&#34;&gt;Learn XML&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/xsl/xsl_languages.asp&#34; target=&#34;_top&#34;&gt;Learn XSL&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/xsl/default.asp&#34; target=&#34;_top&#34;&gt;Learn XSLT&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/xslfo/default.asp&#34; target=&#34;_top&#34;&gt;Learn XSL-FO&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/xpath/default.asp&#34; target=&#34;_top&#34;&gt;Learn XPath&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/xquery/default.asp&#34; target=&#34;_top&#34;&gt;Learn XQuery&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/dtd/default.asp&#34; target=&#34;_top&#34;&gt;Learn DTD&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/schema/default.asp&#34; target=&#34;_top&#34;&gt;Learn Schema&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/dom/default.asp&#34; target=&#34;_top&#34;&gt;Learn DOM&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/xforms/default.asp&#34; target=&#34;_top&#34;&gt;Learn XForms&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/soap/default.asp&#34; target=&#34;_top&#34;&gt;Learn SOAP&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/wsdl/default.asp&#34; target=&#34;_top&#34;&gt;Learn WSDL&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/rdf/default.asp&#34; target=&#34;_top&#34;&gt;Learn RDF&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/wap/default.asp&#34; target=&#34;_top&#34;&gt;Learn WAP&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Browser Scripting&lt;/strong&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/js/default.asp&#34; target=&#34;_top&#34;&gt;Learn JavaScript&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/dhtml/default.asp&#34; target=&#34;_top&#34;&gt;Learn DHTML&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/vbscript/default.asp&#34; target=&#34;_top&#34;&gt;Learn VBScript&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/wmlscript/default.asp&#34; target=&#34;_top&#34;&gt;Learn WMLScript&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Server Scripting&lt;/strong&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/sql/default.asp&#34; target=&#34;_top&#34;&gt;Learn SQL&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/asp/default.asp&#34; target=&#34;_top&#34;&gt;Learn ASP&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/ado/default.asp&#34; target=&#34;_top&#34;&gt;Learn ADO&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/php/default.asp&#34; target=&#34;_top&#34;&gt;Learn PHP&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;.NET (dotnet)&lt;/strong&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/ngws/default.asp&#34; target=&#34;_top&#34;&gt;.NET Microsoft&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/aspnet/default.asp&#34; target=&#34;_top&#34;&gt;.NET ASP&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/dotnetmobile/default.asp&#34; target=&#34;_top&#34;&gt;.NET Mobile&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Multimedia&lt;/strong&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/media/default.asp&#34; target=&#34;_top&#34;&gt;Learn Media&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/smil/default.asp&#34; target=&#34;_top&#34;&gt;Learn SMIL&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/svg/default.asp&#34; target=&#34;_top&#34;&gt;Learn SVG&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/flash/default.asp&#34; target=&#34;_top&#34;&gt;Learn Flash&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Web Building&lt;/strong&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/site/default.asp&#34; target=&#34;_top&#34;&gt;Web Building&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/w3c/default.asp&#34; target=&#34;_top&#34;&gt;Web W3C&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/browsers/default.asp&#34; target=&#34;_top&#34;&gt;Web Browsers&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/quality/default.asp&#34; target=&#34;_top&#34;&gt;Web Quality&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/graphics/default.asp&#34; target=&#34;_top&#34;&gt;Web Graphics&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/careers/default.asp&#34; target=&#34;_top&#34;&gt;Web Careers&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/hosting/default.asp&#34; target=&#34;_top&#34;&gt;Web Hosting&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/cert/default.asp&#34; target=&#34;_top&#34;&gt;Web Certification&lt;/a&gt;&lt;/p&gt;               
+</description>
+    </item>
+    
+  </channel>
+</rss>

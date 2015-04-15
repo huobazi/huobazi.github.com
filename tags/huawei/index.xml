@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Huawei on 武眉博</title>
+    <link>http://huobazi.aspxboy.com/tags/huawei/</link>
+    <description>Recent content in Huawei on 武眉博</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 25 Feb 2012 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://huobazi.aspxboy.com/tags/huawei/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>HG232破解一例</title>
+      <link>http://huobazi.aspxboy.com/blog/2012/02/25/hg232/</link>
+      <pubDate>Sat, 25 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2012/02/25/hg232/</guid>
+      <description>&lt;p&gt;###0. 默认超级账户&lt;/p&gt;
+
+&lt;p&gt;如果电信没有改过你的猫账户，可以尝试使用下面的信息登陆，如果不可以在进入后面的步骤1和2破解
+&lt;code&gt;帐号： telecomadmin 密码：nE7jA%5m (注意大小写)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;###1. 下载配置文件&lt;/p&gt;
+
+&lt;p&gt;猫上插入U盘，下面两种方法都可以，您挑一种吧。&lt;/p&gt;
+
+&lt;p&gt;#####1.1 手工操作&amp;mdash;-乐趣&lt;/p&gt;
+
+&lt;p&gt;用猫后面印刷的普通用户useradmin登陆，这个用户登陆进去什么高级全选都木有，但是表着急，我这么干的，浏览器用firefox，如果木有就去下载，然后装上firebug，去看隐藏的html元素吧，把样式表的disply:none;都禁止掉，什么 备份配置文件、启动从U盘加载配置、回复出厂值、日志等等都出来了吧，插入U盘，点击备份按钮，文件就下载下来了。&lt;/p&gt;
+
+&lt;p&gt;#####1.2 连接下载&amp;mdash;-直接&lt;/p&gt;
+
+&lt;p&gt;同时通过分析html和javascript代码，我直接把下载地址找到了，如果你不想或者木有firefox&amp;amp;&amp;amp;firebug，那就直接访问：
+&lt;a href=&#34;http://192.168.1.1/html/ehomeclient/cfgUSBRestore.cgi?coverusbpath=usb1_1&#34;&gt;http://192.168.1.1/html/ehomeclient/cfgUSBRestore.cgi?coverusbpath=usb1_1&lt;/a&gt; 这是firebug分析抓包后得到的地址，嘿嘿。
+配置文件就能成功被备份出了，在U盘根目录生成的e8_Config_backup文件夹里ctce8_HG232.cfg。&lt;/p&gt;
+
+&lt;p&gt;###2. 解密配置文件&lt;/p&gt;
+
+&lt;p&gt;网上有现成的编译好的工具可以直接用，不过作为技术宅男，当然要做点有挑战性的了，我弄了俩，一个javascript写的，一个ruby写的，开源滴，您用着放心哦&lt;/p&gt;
+
+&lt;p&gt;#####2.1 无ruby环境&lt;/p&gt;
+
+&lt;p&gt;将代码库里的decrypt.html另存到本地，然后用浏览器打开，在Source里粘贴用ctce8_HG232.cfg文件的内容，
+点击解密按钮,就可进行解密，加密同理。&lt;/p&gt;
+
+&lt;p&gt;#####2.2 有ruby环境&lt;/p&gt;
+
+&lt;p&gt;如果有ruby运行环境，则可以使用代码库里的decrypt.rb另存到本地来，把要破解或者加密的文件放入相同目录,在命令行运行 ruby decrypt.rb 按照提示做就可以了&lt;/p&gt;
+
+&lt;p&gt;#####2.3 超级管理员密码
+到文本编辑软件打开破解后的文件，查找telecomadmin，找到
+    &lt;X_ATP_UserInfoInstance InstanceID=&#34;1&#34; Username=&#34;telecomadmin&#34; Userpassword=&#34;telecomadmin******&#34; Userlevel=&#34;2&#34; Busy=&#34;0&#34; LoginIP=&#34;&#34;/&gt;
+Userpassword里面的就是超级管理员的密码了。一般是telecomadmin加串数字。&lt;/p&gt;
+
+&lt;p&gt;###3. 设置&lt;/p&gt;
+
+&lt;p&gt;后面的情况就大同小异了，网上很多介绍，开路由，，自动拨号，开无线，一堆一堆的教程，另外有些设置在管理平台是没有的，比如下面的ftp和telnet设置，如果又必要使用这些相功能，修改配置文件，加密后，登陆后台后启用从usb恢复设备这个功能，然后把配置文件夹自己修改后，再恢复回去，就可以了。
+    &lt;X_CT-COM_ServiceManage TelnetEnable=&#34;0&#34; TelnetUserName=&#34;!!Huawei&#34; TelnetPassword=&#34;@HuaweiHgw&#34; TelnetPort=&#34;23&#34; WebWanAccessEnable=&#34;0&#34; FtpEnable=&#34;1&#34; FtpUserName=&#34;ftp&#34; FtpPassword=&#34;ftp&#34; FtpPort=&#34;21&#34; FtpPath=&#34;/mnt&#34;/&gt;&lt;/p&gt;
+
+&lt;p&gt;###4. 代码&lt;/p&gt;
+
+&lt;p&gt;本文提及的代码可以在&lt;a href=&#34;https://github.com/huobazi/hg232&#34;&gt;https://github.com/huobazi/hg232&lt;/a&gt;下载到&lt;/p&gt;
+
+&lt;p&gt;###5.  其他&lt;/p&gt;
+
+&lt;p&gt;4个RJ45口理论上都可以设置成接电脑或者itv输出，并不局限于写了itv的那个口。另外，也可以增加一个itv无线网络，在你的机顶盒上加个无线网卡，机顶盒拨入此无线网络，这样就不用拉一堆堆的线了，很适用于前期没有做好布线设计的朋友。&lt;/p&gt;
+
+&lt;p&gt;itv 不选择 无线的话 要选VLAN透传，选无线是VLAN修改&lt;/p&gt;
+
+&lt;p&gt;另外，网上有现成的改好的配置文件下载，&lt;a href=&#34;http://email2me.blog.163.com/blog/static/34347033201101094128402/&#34;&gt;http://email2me.blog.163.com/blog/static/34347033201101094128402/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

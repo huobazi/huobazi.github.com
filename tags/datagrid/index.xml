@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Datagrid on 武眉博</title>
+    <link>http://huobazi.aspxboy.com/tags/datagrid/</link>
+    <description>Recent content in Datagrid on 武眉博</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 30 Apr 2004 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://huobazi.aspxboy.com/tags/datagrid/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>一个关于DataGrid的打印类,分享,感谢作者</title>
+      <link>http://huobazi.aspxboy.com/blog/2004/04/30/cb-8176/</link>
+      <pubDate>Fri, 30 Apr 2004 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2004/04/30/cb-8176/</guid>
+      <description>&lt;p&gt;&lt;p&gt;&lt;font size=&#34;2&#34;&gt;手中的活计需要打印,就到处找找。&lt;br /&gt;从&lt;/font&gt;&lt;a href=&#34;http://www.google.com/&#34;&gt;&lt;font size=&#34;2&#34;&gt;google&lt;/font&gt;&lt;/a&gt;&lt;font size=&#34;2&#34;&gt;中扑获,挺不错的，大家共享～&lt;br /&gt;how can i print the data in DataGrid?&lt;/font&gt;&lt;a href=&#34;http://forums.aspfree.com/archive/t-17107&#34;&gt;&lt;br /&gt;&lt;font size=&#34;2&#34;&gt;&lt;a href=&#34;http://forums.aspfree.com/archive/t-17107&#34;&gt;http://forums.aspfree.com/archive/t-17107&lt;/a&gt;&lt;/font&gt;&lt;/a&gt;&lt;br /&gt;&lt;a href=&#34;http://forums.aspfree.com/t17107/s.html&#34;&gt;&lt;font size=&#34;2&#34;&gt;&lt;a href=&#34;http://forums.aspfree.com/t17107/s.html&#34;&gt;http://forums.aspfree.com/t17107/s.html&lt;/a&gt;&lt;/font&gt;&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;pre&gt;using System;
+using System.Collections;
+using System.ComponentModel;
+using System.Drawing;
+using System.Drawing.Printing;
+using System.Data;&lt;/p&gt;
+
+&lt;p&gt;using System.Windows.Forms;&lt;/p&gt;
+
+&lt;p&gt;namespace Hooooo.Print
+{
+public class DataGridPrinter
+{
+private DataGrid dataGrid;
+private PrintDocument printDocument;
+private PageSetupDialog pageSetupDialog;
+private PrintPreviewDialog printPreviewDialog;&lt;/p&gt;
+
+&lt;p&gt;public DataGridPrinter(DataGrid dataGrid)
+{
+this.dataGrid = dataGrid;
+printDocument = new PrintDocument();
+printDocument.PrintPage += new PrintPageEventHandler(this.printDocument_PrintPage);
+}&lt;/p&gt;
+
+&lt;p&gt;private void printDocument_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+{
+int rowCount = 0;
+int colCount = 0;
+int x = 0;
+int y = 0;
+int rowGap = 20;
+int colGap = 5;
+int leftMargin = 50;
+Font font = new Font(&amp;ldquo;Arial&amp;rdquo;, 10);
+Font headingFont = new Font(&amp;ldquo;Arial&amp;rdquo;, 11, FontStyle.Underline);
+Font captionFont = new Font(&amp;ldquo;Arial&amp;rdquo;, 10, FontStyle.Bold);
+Brush brush = new SolidBrush(Color.Black);
+string cellValue = &amp;ldquo;&amp;rdquo;;&lt;/p&gt;
+
+&lt;p&gt;if(dataGrid.DataSource.GetType().ToString() == &amp;ldquo;System.Data.DataTable&amp;rdquo;)
+{
+rowCount = ((DataTable)dataGrid.DataSource).Rows.Count;
+}
+else if(dataGrid.DataSource.GetType().ToString() == &amp;ldquo;System.Collections.ArrayList&amp;rdquo;)
+{
+rowCount = ((ArrayList)dataGrid.DataSource).Count;
+}
+colCount = dataGrid.TableStyles[0].GridColumnStyles.Count;&lt;/p&gt;
+
+&lt;p&gt;//print caption
+if(dataGrid.CaptionVisible)
+{
+y += rowGap;
+x = leftMargin;
+e.Graphics.DrawString(dataGrid.CaptionText, captionFont, brush, x, y);
+}&lt;/p&gt;
+
+&lt;p&gt;//print headings
+y += rowGap;
+x = leftMargin;
+for(int j = 0; j &amp;lt; colCount; j++)
+{
+if(dataGrid.TableStyles[0].GridColumnStyles[j].Width &amp;gt; 0)
+{
+cellValue = dataGrid.TableStyles[0].GridColumnStyles[j].HeaderText;
+e.Graphics.DrawString(cellValue, headingFont, brush, x, y);
+x += dataGrid.TableStyles[0].GridColumnStyles[j].Width + colGap;
+}
+}&lt;/p&gt;
+
+&lt;p&gt;//print all rows
+for(int i = 0; i &amp;lt; rowCount; i++)
+{
+y += rowGap;
+x = leftMargin;
+for(int j = 0; j &amp;lt; colCount; j++)
+{
+if(dataGrid.TableStyles[0].GridColumnStyles[j].Width &amp;gt; 0)
+{
+cellValue = dataGrid[i,j].ToString();
+e.Graphics.DrawString(cellValue, font, brush, x, y);
+x += dataGrid.TableStyles[0].GridColumnStyles[j].Width + colGap;
+y = y + rowGap * (cellValue.Split(new char[] {&amp;rsquo;\r&amp;rsquo;, &amp;lsquo;\n&amp;rsquo;}).Length - 1);
+}
+}
+}
+string s = cellValue;
+string f3 = cellValue;
+}&lt;/p&gt;
+
+&lt;p&gt;public PrintDocument GetPrintDocument()
+{
+return printDocument;
+}&lt;/p&gt;
+
+&lt;p&gt;public void Print()
+{
+try
+{
+pageSetupDialog = new PageSetupDialog();
+pageSetupDialog.Document = printDocument;
+pageSetupDialog.ShowDialog();
+printPreviewDialog = new PrintPreviewDialog();
+printPreviewDialog.Document = printDocument;
+printPreviewDialog.Height = 600;
+printPreviewDialog.Width = 800;
+printPreviewDialog.ShowDialog();
+}
+catch(Exception e)
+{
+throw new Exception(&amp;ldquo;Printer error.&amp;rdquo; + e.Message);
+}&lt;/p&gt;
+
+&lt;p&gt;}
+}
+}
+&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;需要打印表格线条及分页的朋友，可以看一下下面这篇文章：&lt;br /&gt; &lt;br /&gt;&lt;/p&gt;
+&lt;div&gt;&lt;strong&gt;&lt;font face=&#34;Verdana&#34; size=&#34;4&#34;&gt;&lt;a title=&#34;How to Print a DataGrid in C# and .NET&#34; style=&#34;COLOR: #0000ff&#34; href=&#34;http://www.c-sharpcorner.com/Graphics/DataGridPrinterMG.asp&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;&lt;font face=&#34;Verdana&#34; size=&#34;4&#34;&gt;How to Print a DataGrid in C# and .NET&lt;/font&gt; &lt;/strong&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;/font&gt;&lt;br /&gt;&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;
+&lt;img style=&#34;WIDTH: 672px; HEIGHT: 352px&#34; height=&#34;245&#34; src=&#34;http://huobazi.aspxboy.com/images/hbz_images/e01387bd-8f4f-4638-8131-226ce244e723.jpg50&#34; width=&#34;510&#34;&gt; &lt;/div&gt;
+&lt;div&gt; &lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;&lt;/strong&gt;&lt;/div&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

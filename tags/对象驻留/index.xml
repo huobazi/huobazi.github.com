@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>对象驻留 on 武眉博</title>
+    <link>http://huobazi.aspxboy.com/tags/%E5%AF%B9%E8%B1%A1%E9%A9%BB%E7%95%99/</link>
+    <description>Recent content in 对象驻留 on 武眉博</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 21 Aug 2009 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://huobazi.aspxboy.com/tags/%E5%AF%B9%E8%B1%A1%E9%A9%BB%E7%95%99/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>python的对象驻留</title>
+      <link>http://huobazi.aspxboy.com/blog/2009/08/21/python-object-interning/</link>
+      <pubDate>Fri, 21 Aug 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2009/08/21/python-object-interning/</guid>
+      <description>&lt;p&gt;在C#中为了提高性能使用了&lt;a title=&#34;字符串驻留&#34; href=&#34;http://www.google.com.sg/search?hl=zh-CN&amp;amp;source=hp&amp;amp;q=string+interning&amp;amp;aq=f&amp;amp;oq=&#34; target=&#34;_blank&#34;&gt;字符串驻留技术&lt;/a&gt;，而在Python中不光是字符串，连整数都有使用类似的驻留技术哦，看下面的测试：&lt;/p&gt;
+&lt;pre&gt;C:\Documents and Settings\Marble Wu&amp;gt;python
+Python 2.6.2 (r262:71605, Apr 14 2009, 22:40:02) [MSC v.1500 32 bit (Intel)] on
+win32
+Type &#34;help&#34;, &#34;copyright&#34;, &#34;credits&#34; or &#34;license&#34; for more information.
+&amp;gt;&amp;gt;&amp;gt; a=1
+&amp;gt;&amp;gt;&amp;gt; b=1
+&amp;gt;&amp;gt;&amp;gt; id(1)
+10446048
+&amp;gt;&amp;gt;&amp;gt; id(a)
+10446048
+&amp;gt;&amp;gt;&amp;gt; import sys
+&amp;gt;&amp;gt;&amp;gt; sys.getrefcount(a)
+245
+&amp;gt;&amp;gt;&amp;gt; sys.getrefcount(b)
+245
+&amp;gt;&amp;gt;&amp;gt;&lt;/pre&gt;
+&lt;p&gt;&lt;span style=&#34;font-family: Courier New; background-color: #eaf7ff;&#34;&gt;其实也很容易理解，因为在Python&lt;a title=&#34;Python的对象&#34; href=&#34;http://wiki.woodpecker.org.cn/moin/PythonEssentialRef3&#34; target=&#34;_blank&#34;&gt;一切皆对象&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;             
+</description>
+    </item>
+    
+  </channel>
+</rss>

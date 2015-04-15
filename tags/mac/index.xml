@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mac on 武眉博</title>
+    <link>http://huobazi.aspxboy.com/tags/mac/</link>
+    <description>Recent content in Mac on 武眉博</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 26 Nov 2012 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://huobazi.aspxboy.com/tags/mac/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>OSX 上默认 VIM 不支持 &#43; 寄存器</title>
+      <link>http://huobazi.aspxboy.com/blog/2012/11/26/osx-shang-mo-ren-vim-bu-zhi-chi-plus-ji-cun-qi/</link>
+      <pubDate>Mon, 26 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2012/11/26/osx-shang-mo-ren-vim-bu-zhi-chi-plus-ji-cun-qi/</guid>
+      <description>&lt;p&gt;OSX 上默认 VIM 不支持 + 寄存器，所以从系统剪贴板相互复制东西就麻烦了
+所以,我重新装了一下vim&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;brew install vim
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;然后&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;which vim
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;发现还是 /usr/bin&lt;/p&gt;
+
+&lt;p&gt;于是，在 .zshrc内 把 /usr/local/bin 加入 PATH 就 ok 了
+其实后来想想，把原来的 move 到 old 上去，将 /usr/bin/vim ln 到/usr/local/vim 就 OK 了
+或者&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;brew install macvim --HEAD --override-system-vim
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;来安装 macvim 并覆盖系统原来的vim&lt;/p&gt;
+
+&lt;p&gt;下来，发现在OSX内用tmux后仍然无法访问＋和＊寄存器
+一直提示 Nothing in ＋ register
+SO上找找，发现&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt; brew install reattach-to-user-namespace
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;装这个补丁就可以访问tmux的buffer了
+最后贴一下.tmux.conf&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;set-option -g default-shell $SHELL
+set-option -g default-command &amp;quot;reattach-to-user-namespace -l zsh&amp;quot;
+bind y run &amp;quot;tmux save-buffer - | reattach-to-user-namespace pbcopy&amp;quot;
+unbind p
+bind p paste-buffer
+bind -t vi-copy v begin-selection
+bind -t vi-copy y copy-selection
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;另外不要忘记设置vim的&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;set clipboard=unnamed
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;完整的配置&lt;a href=&#34;https://github.com/huobazi/dotfiles&#34;&gt;https://github.com/huobazi/dotfiles&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

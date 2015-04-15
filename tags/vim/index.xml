@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vim on 武眉博</title>
+    <link>http://huobazi.aspxboy.com/tags/vim/</link>
+    <description>Recent content in Vim on 武眉博</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 26 Nov 2012 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://huobazi.aspxboy.com/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>OSX 上默认 VIM 不支持 &#43; 寄存器</title>
+      <link>http://huobazi.aspxboy.com/blog/2012/11/26/osx-shang-mo-ren-vim-bu-zhi-chi-plus-ji-cun-qi/</link>
+      <pubDate>Mon, 26 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2012/11/26/osx-shang-mo-ren-vim-bu-zhi-chi-plus-ji-cun-qi/</guid>
+      <description>&lt;p&gt;OSX 上默认 VIM 不支持 + 寄存器，所以从系统剪贴板相互复制东西就麻烦了
+所以,我重新装了一下vim&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;brew install vim
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;然后&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;which vim
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;发现还是 /usr/bin&lt;/p&gt;
+
+&lt;p&gt;于是，在 .zshrc内 把 /usr/local/bin 加入 PATH 就 ok 了
+其实后来想想，把原来的 move 到 old 上去，将 /usr/bin/vim ln 到/usr/local/vim 就 OK 了
+或者&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;brew install macvim --HEAD --override-system-vim
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;来安装 macvim 并覆盖系统原来的vim&lt;/p&gt;
+
+&lt;p&gt;下来，发现在OSX内用tmux后仍然无法访问＋和＊寄存器
+一直提示 Nothing in ＋ register
+SO上找找，发现&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt; brew install reattach-to-user-namespace
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;装这个补丁就可以访问tmux的buffer了
+最后贴一下.tmux.conf&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;set-option -g default-shell $SHELL
+set-option -g default-command &amp;quot;reattach-to-user-namespace -l zsh&amp;quot;
+bind y run &amp;quot;tmux save-buffer - | reattach-to-user-namespace pbcopy&amp;quot;
+unbind p
+bind p paste-buffer
+bind -t vi-copy v begin-selection
+bind -t vi-copy y copy-selection
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;另外不要忘记设置vim的&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;set clipboard=unnamed
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;完整的配置&lt;a href=&#34;https://github.com/huobazi/dotfiles&#34;&gt;https://github.com/huobazi/dotfiles&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>tmux丢失或显示vim的配色</title>
+      <link>http://huobazi.aspxboy.com/blog/2012/11/02/tmux-diu-shi-huo-xian-shi-vimde-pei-se/</link>
+      <pubDate>Fri, 02 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2012/11/02/tmux-diu-shi-huo-xian-shi-vimde-pei-se/</guid>
+      <description>&lt;p&gt;使用tmux，同时使用vim，发现配色总是和别人截图有差别
+在.tmux.conf内设置了&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;set -g default-terminal &amp;quot;screen-256color&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;还是木有作用，最后在SO上找到了解决的办法
+在.bashrc内(我是在.zshrc内)添加&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;alias tmux=&#39;tmux -2&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;就OK了&lt;/p&gt;
+
+&lt;p&gt;参见&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://vim.wikia.com/wiki/256_colors_setup_for_console_Vim&#34;&gt;http://vim.wikia.com/wiki/256_colors_setup_for_console_Vim&lt;/a&gt;
+&lt;a href=&#34;http://stackoverflow.com/questions/10158508/lose-vim-colorscheme-in-tmux-mode&#34;&gt;http://stackoverflow.com/questions/10158508/lose-vim-colorscheme-in-tmux-mode&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>漂亮的VIM配色方案</title>
+      <link>http://huobazi.aspxboy.com/blog/2010/01/11/vim-color-scheme/</link>
+      <pubDate>Mon, 11 Jan 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2010/01/11/vim-color-scheme/</guid>
+      <description>&lt;p&gt;&lt;p&gt;这里&lt;br /&gt;&lt;a href=&#34;http://code.google.com/p/vimcolorschemetest/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://code.google.com/p/vimcolorschemetest/&#34;&gt;http://code.google.com/p/vimcolorschemetest/&lt;/a&gt;&lt;/a&gt;&lt;br /&gt;有一堆一堆的配色方案&lt;/p&gt;
+&lt;h1&gt;&lt;a name=&#34;Browse_By_File_Type&#34;&gt;Browse By File Type&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a name=&#34;Browse_By_File_Type&#34;&gt;Featuring 428 schemes: &lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a rel=&#34;nofollow&#34; href=&#34;http://vimcolorschemetest.googlecode.com/svn/html/index-c.html&#34;&gt;C&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a rel=&#34;nofollow&#34; href=&#34;http://vimcolorschemetest.googlecode.com/svn/html/index-html.html&#34;&gt;HTML&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a rel=&#34;nofollow&#34; href=&#34;http://vimcolorschemetest.googlecode.com/svn/html/index-java.html&#34;&gt;Java&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a rel=&#34;nofollow&#34; href=&#34;http://vimcolorschemetest.googlecode.com/svn/html/index-pl.html&#34;&gt;Perl&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a rel=&#34;nofollow&#34; href=&#34;http://vimcolorschemetest.googlecode.com/svn/html/index-tex.html&#34;&gt;LaTeX&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

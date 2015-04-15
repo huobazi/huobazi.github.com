@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>分页 on 武眉博</title>
+    <link>http://huobazi.aspxboy.com/tags/%E5%88%86%E9%A1%B5/</link>
+    <description>Recent content in 分页 on 武眉博</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 09 Feb 2004 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://huobazi.aspxboy.com/tags/%E5%88%86%E9%A1%B5/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>分页存储过程</title>
+      <link>http://huobazi.aspxboy.com/blog/2004/02/09/pagedsp/</link>
+      <pubDate>Mon, 09 Feb 2004 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2004/02/09/pagedsp/</guid>
+      <description>&lt;p&gt;搞了一中午终于可以用了 但不知道效率如何.郁闷的是我要用php去调用它&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;color: #008000;&#34;&gt;  /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;br /&gt;    CopyRight：   ******&lt;br /&gt;    CreateData：   2004-02-09&lt;br /&gt;    Language：   MS SQL SERVER 存储过程&lt;br /&gt;    AuthorName：  Meibo Wu&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #008000;&#34;&gt;    实现功能：   分页显示当用户选择了图片大分类时(按手机)的数据&lt;br /&gt;    参数说明：   @bigtype为大分类&lt;br /&gt;    @gid为传入的图片类型           &lt;br /&gt;        $PageSize为每页显示的记录数量&lt;br /&gt;    @pageindex为当前页码                             &lt;br /&gt;    LastUpdate:            &lt;br /&gt;    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/&lt;br /&gt;CREATE procedure sms_img_page_no_smalltype&lt;br /&gt;(&lt;br /&gt; @bigtype nvarchar(20),&lt;br /&gt; @gid int,&lt;br /&gt; @pagesize int,&lt;br /&gt; @pageindex int&lt;br /&gt;)&lt;br /&gt;as&lt;br /&gt;set nocount on&lt;br /&gt; declare @LikeBigType nvarchar(20)&lt;br /&gt; declare @PageLowerBound int&lt;br /&gt; declare @PageUpperBound int&lt;br /&gt; declare @indextable table(id int identity(1,1),nid int)&lt;br /&gt;  set @PageLowerBound=(@pageindex-1)*@pagesize&lt;br /&gt;  set @PageUpperBound= @PageLowerBound+@pagesize&lt;br /&gt;  set @LikeBigType= @bigtype+&#39;%&#39;&lt;br /&gt;  set rowcount @PageUpperBound&lt;br /&gt; insert into @indextable(nid)&lt;br /&gt;  select  a.col_id&lt;br /&gt;   from web_sms_data_img as a join web_sms_data_mobile as q&lt;br /&gt;   on a.col_mobile_type=q.col_mobile_type&lt;br /&gt;   where &lt;/span&gt;&lt;a href=&#34;mailto:a.col_img_group=@gid&#34;&gt;&lt;span style=&#34;color: #008000;&#34;&gt;a.col_img_group=@gid&lt;/span&gt;&lt;/a&gt;&lt;span style=&#34;color: #008000;&#34;&gt;&lt;br /&gt;    and q.col_mobile_comment  like @LikeBigType&lt;br /&gt;   order by a.col_id desc &lt;br /&gt; /*&lt;br /&gt; select  @LikeBigType&lt;br /&gt; select * from @indextable &lt;br /&gt; */&lt;br /&gt; select q.col_mobile_comment,&lt;br /&gt;  a.col_id,&lt;br /&gt;  a.col_img_hits,&lt;br /&gt;  a.col_img_dir,&lt;br /&gt;  a.col_img_name&lt;br /&gt;  from web_sms_data_img as a join web_sms_data_mobile as q&lt;br /&gt;   on a.col_mobile_type=q.col_mobile_type&lt;br /&gt;    join @indextable  as p&lt;br /&gt;    on a.col_id=p.nid&lt;br /&gt;  where p.id&amp;gt;@PageLowerBound and p.id&amp;lt;&lt;/span&gt;&lt;a href=&#34;mailto:=@PageUpperBound&#34;&gt;&lt;span style=&#34;color: #008000;&#34;&gt;=@PageUpperBound&lt;/span&gt;&lt;/a&gt;&lt;span style=&#34;color: #008000;&#34;&gt;&lt;br /&gt;   and &lt;/span&gt;&lt;a href=&#34;mailto:a.col_img_group=@gid&#34;&gt;&lt;span style=&#34;color: #008000;&#34;&gt;a.col_img_group=@gid&lt;/span&gt;&lt;/a&gt;&lt;span style=&#34;color: #008000;&#34;&gt;&lt;br /&gt;   and q.col_mobile_comment like @LikeBigType&lt;br /&gt; &lt;br /&gt; order by p.id&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;color: #008000;&#34;&gt;set nocount off&lt;br /&gt;GO&lt;br /&gt;&lt;/span&gt;&lt;/p&gt;               
+</description>
+    </item>
+    
+  </channel>
+</rss>

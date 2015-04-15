@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Service on 武眉博</title>
+    <link>http://huobazi.aspxboy.com/tags/service/</link>
+    <description>Recent content in Service on 武眉博</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 06 Aug 2009 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://huobazi.aspxboy.com/tags/service/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>不改程序, 创建同一个程序不同服务名的方法</title>
+      <link>http://huobazi.aspxboy.com/blog/2009/08/06/mulit-window-service-one-exe/</link>
+      <pubDate>Thu, 06 Aug 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://huobazi.aspxboy.com/blog/2009/08/06/mulit-window-service-one-exe/</guid>
+      <description>&lt;p&gt;&lt;p&gt;以往写windows service都需要个ProjectInstaller和serviceInstaller并配置serviceName，这样build出来的exe在install成windows service时我们会：&lt;/p&gt;
+&lt;pre&gt;@echo 安装WindowService
+@Set Path=C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727;
+@Set svn_dir=%cd%
+installutil %svn_dir%\MyServiceDemo.exe
+pause
+@echo 成功！&lt;/pre&gt;
+&lt;p&gt;但服务名被我们编译在程序里了，如果这个exe想被装很多次服务怎么办呢？&lt;br /&gt;今天从同事Martin Jia那里学来一个好方法，可以不用ProjectInstaller、serviceInstaller这种东西，直接安装exe为windows service并在安装时指定服务名称&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;安装服务：&lt;/p&gt;
+&lt;pre&gt;sc create 服务名 binpath= &amp;rdquo;路径&amp;rdquo; displayname= &amp;rdquo;显示名&amp;rdquo;&lt;/pre&gt;
+&lt;p&gt;卸载服务&lt;/p&gt;
+&lt;pre&gt;sc delete 服务名&lt;/pre&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
