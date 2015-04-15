@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: centro | 武眉博]]></title>
+  <link href="http://huobazi.github.com/blog/tag/centro/atom.xml" rel="self"/>
+  <link href="http://huobazi.github.com/"/>
+  <updated>2013-07-14T11:11:48+08:00</updated>
+  <id>http://huobazi.github.com/</id>
+  <author>
+    <name><![CDATA[Marble Wu]]></name>
+    <email><![CDATA[huobazi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Palm Centro(690)的软启动和硬启动]]></title>
+    <link href="http://huobazi.github.com/blog/2009/08/25/hwo-to--reset-palm-centro/"/>
+    <updated>2009-08-25T19:57:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2009/08/25/hwo-to--reset-palm-centro</id>
+    <content type="html"><![CDATA[<p>给老婆买了部centro，结果不知道如何软起和硬起，泡了半天吹友吧，得知如下</p>
+
+
+<pre>软启 下电池
+硬启 下电池后按住红色挂机件上电池 到PALM开机图不动后松开 按向上键</pre>
+
+
+<p></p>
+]]></content>
+  </entry>
+  
+</feed>

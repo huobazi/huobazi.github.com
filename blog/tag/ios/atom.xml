@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: iOS | 武眉博]]></title>
+  <link href="http://huobazi.github.com/blog/tag/ios/atom.xml" rel="self"/>
+  <link href="http://huobazi.github.com/"/>
+  <updated>2013-07-14T11:11:48+08:00</updated>
+  <id>http://huobazi.github.com/</id>
+  <author>
+    <name><![CDATA[Marble Wu]]></name>
+    <email><![CDATA[huobazi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[iOS通过UIActionSheetDelegate来实现警告的方法]]></title>
+    <link href="http://huobazi.github.com/blog/2012/02/13/ios-uiactionsheetdelegate/"/>
+    <updated>2012-02-13T23:38:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2012/02/13/ios-uiactionsheetdelegate</id>
+    <content type="html"><![CDATA[<p>有时候需要用户确认一些操作，比如退出，删除数据等等，用UIActionSheetDelegate实现比较友好，实现也很简单，controller实现UIActionSheetDelegate协议就可以了，示例如下:</p>
+
+
+<p><!--more--></p>
+
+
+<div class="source" style="font-family: '[object HTMLOptionElement]', Consolas, 'Lucida Console', 'Courier New'; color: #e0eee0; background-color: #000000; ">
+<span style="color: #7c7268; ">01</span> <span style="color: #8db6cd; ">#pragma mark-</span><br /><span style="color: #7c7268; ">02</span> <span style="color: #8db6cd; ">#pragma mark UIActionSheetDelegate with logOff</span><br /><span style="color: #7c7268; ">03</span><br /><span style="color: #7c7268; ">04</span> <span style="color: #e0eee0; ">-</span> (<span style="color: #add8e6; ">void</span>) <span style="color: #e0eee0; ">onLogOffButtonClick:</span>(<span style="color: #add8e6; ">id</span>)<span style="color: #e0eee0; ">sender</span><span style="color: #e0eee0; ">{</span><br /><span style="color: #f810b0; ">05</span>     <span style="color: #e0eee0; ">UIActionSheet</span> <span style="color: #e0eee0; ">*</span><span style="color: #e0eee0; ">actionSheet</span> <span style="color: #e0eee0; ">=</span> <span style="color: #e0eee0; ">[[</span><span style="color: #e0eee0; ">UIActionSheet</span> <span style="color: #e0eee0; ">alloc</span><span style="color: #e0eee0; ">]</span> <span style="color: #e0eee0; ">initWithTitle:</span><span style="color: #80a0ff; ">@"确认要退出登录吗？"</span> <span style="color: #e0eee0; ">delegate:</span><span style="color: #e0eee0; ">self</span> <span style="color: #e0eee0; ">cancelButtonTitle:</span><span style="color: #80a0ff; ">@"不退出"</span> <span style="color: #e0eee0; ">destructiveButtonTitle:</span><span style="color: #80a0ff; ">@"退出"</span> <span style="color: #e0eee0; ">otherButtonTitles:</span><span style="color: #4eee94; ">nil</span><span style="color: #e0eee0; ">,</span> <span style="color: #4eee94; ">nil</span><span style="color: #e0eee0; ">];</span><br /><span style="color: #7c7268; ">06</span>    <br /><span style="color: #7c7268; ">07</span>     <span style="color: #e0eee0; ">[</span><span style="color: #e0eee0; ">actionSheet</span> <span style="color: #e0eee0; ">showFromTabBar:</span><span style="color: #e0eee0; ">self</span><span style="color: #e0eee0; ">.</span><span style="color: #e0eee0; ">navigationController</span><span style="color: #e0eee0; ">.</span><span style="color: #e0eee0; ">tabBarController</span><span style="color: #e0eee0; ">.</span><span style="color: #e0eee0; ">tabBar</span><span style="color: #e0eee0; ">];</span><br /><span style="color: #7c7268; ">08</span>     XX<span style="color: #e0eee0; ">_RELEASE_SAFELY</span>(<span style="color: #e0eee0; ">actionSheet</span>);<br /><span style="color: #7c7268; ">09</span> <span style="color: #e0eee0; ">}</span><br /><span style="color: #f810b0; ">10</span> <span style="color: #e0eee0; ">-</span> (<span style="color: #add8e6; ">void</span>)<span style="color: #e0eee0; ">logOff</span><span style="color: #e0eee0; ">{</span><br /><span style="color: #7c7268; ">11</span><br /><span style="color: #7c7268; ">12</span>     <span style="color: #7c7268; ">//do logoff</span><br /><span style="color: #7c7268; ">13</span>    <br /><span style="color: #7c7268; ">14</span>     <span style="color: #e0eee0; ">[</span><span style="color: #e0eee0; ">self</span><span style="color: #e0eee0; ">.</span><span style="color: #e0eee0; ">navigationController</span> <span style="color: #e0eee0; ">popViewControllerAnimated:</span><span style="color: #e0eee0; ">YES</span><span style="color: #e0eee0; ">];</span><br /><span style="color: #f810b0; ">15</span> <span style="color: #e0eee0; ">}</span><br /><span style="color: #7c7268; ">16</span><br /><span style="color: #7c7268; ">17</span> <span style="color: #e0eee0; ">-</span> (<span style="color: #add8e6; ">void</span>)<span style="color: #e0eee0; ">actionSheet:</span>(<span style="color: #e0eee0; ">UIActionSheet</span> <span style="color: #e0eee0; ">*</span>)<span style="color: #e0eee0; ">actionSheet</span> <span style="color: #e0eee0; ">didDismissWithButtonIndex:</span>(<span style="color: #e0eee0; ">NSInteger</span>)<span style="color: #e0eee0; ">buttonIndex</span>; <span style="color: #e0eee0; ">{</span><br /><span style="color: #7c7268; ">18</span>     <span style="color: #90ee90; ">switch</span> (<span style="color: #e0eee0; ">buttonIndex</span>) <span style="color: #e0eee0; ">{</span><br /><span style="color: #7c7268; ">19</span>         <span style="color: #90ee90; ">case</span> <span style="color: #00ffff; ">0</span><span style="color: #e0eee0; ">:</span><br /><span style="color: #f810b0; ">20</span>             <span style="color: #e0eee0; ">[</span><span style="color: #e0eee0; ">self</span> <span style="color: #e0eee0; ">logOff</span><span style="color: #e0eee0; ">];</span><br /><span style="color: #7c7268; ">21</span>             <span style="color: #90ee90; ">break</span>;<br /><span style="color: #7c7268; ">22</span>         <span style="color: #90ee90; ">case</span> <span style="color: #00ffff; ">1</span><span style="color: #e0eee0; ">:</span><br /><span style="color: #7c7268; ">23</span>             <span style="color: #e0eee0; ">[</span><span style="color: #e0eee0; ">self</span><span style="color: #e0eee0; ">.</span><span style="color: #e0eee0; ">tableView</span> <span style="color: #e0eee0; ">deselectRowAtIndexPath:</span><span style="color: #e0eee0; ">[</span><span style="color: #e0eee0; ">self</span><span style="color: #e0eee0; ">.</span><span style="color: #e0eee0; ">tableView</span> <span style="color: #e0eee0; ">indexPathForSelectedRow</span><span style="color: #e0eee0; ">]</span> <span style="color: #e0eee0; ">animated:</span><span style="color: #e0eee0; ">YES</span><span style="color: #e0eee0; ">];</span><br /><span style="color: #7c7268; ">24</span>             <span style="color: #90ee90; ">break</span>;<br /><span style="color: #f810b0; ">25</span>         <span style="color: #90ee90; ">default</span><span style="color: #e0eee0; ">:</span><br /><span style="color: #7c7268; ">26</span>             <span style="color: #90ee90; ">break</span>;<br /><span style="color: #7c7268; ">27</span>     <span style="color: #e0eee0; ">}</span><br /><span style="color: #7c7268; ">28</span> <span style="color: #e0eee0; ">}</span>
+</div>
+
+
+<p></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[[How to]在iOS中点击文本框以外区域，隐藏键盘]]></title>
+    <link href="http://huobazi.github.com/blog/2011/12/09/ios-hide-keyboard-when-touch/"/>
+    <updated>2011-12-09T22:02:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2011/12/09/ios-hide-keyboard-when-touch</id>
+    <content type="html"><![CDATA[<p>当点击文本框以外部分时，隐藏键盘，实现很简单，加个Category就可以了，代码如下：</p>
+
+
+<p><!--more--></p>
+
+
+<div class="source" style="font-family: '[object HTMLOptionElement]', Consolas, 'Lucida Console', 'Courier New'; color: #e6e1dc; background-color: #111111; ">
+<p><span style="color: #cc7833; font-style: italic; ">#import &lt;UIKit/UIKit.h&gt;</span><br /><span style="color: #cc7833; ">@interface</span> <span style="color: #e6e1dc; ">UITextField</span> <span style="color: #e6e1dc; ">(HideKeyBoard)</span><br /><span style="color: #e6e1dc; ">-</span>(<span style="color: #da4939; ">void</span>)<span style="color: #e6e1dc; ">hideKeyBoard:</span>(<span style="color: #e6e1dc; ">UIView</span> <span style="color: #e6e1dc; ">*</span>)<span style="color: #e6e1dc; ">view</span>;<br /><span style="color: #cc7833; ">@end</span></p>
+<p><span style="color: #cc7833; font-style: italic; ">#import "UITextField+HideKeyBoard.h"</span></p>
+<p><span style="color: #cc7833; ">@implementation</span> <span style="color: #e6e1dc; ">UITextField</span> <span style="color: #e6e1dc; ">(HideKeyBoard)</span><br /><span style="color: #e6e1dc; ">-</span> (<span style="color: #da4939; ">void</span>) <span style="color: #e6e1dc; ">hideKeyBoard:</span>(<span style="color: #e6e1dc; ">UIView</span><span style="color: #e6e1dc; ">*</span>)<span style="color: #e6e1dc; ">view</span><span style="color: #e6e1dc; ">{</span><br />    <span style="color: #e6e1dc; ">UITapGestureRecognizer</span> <span style="color: #e6e1dc; ">*</span><span style="color: #e6e1dc; ">tap</span> <span style="color: #e6e1dc; ">=</span> <span style="color: #e6e1dc; ">[[</span><span style="color: #e6e1dc; ">UITapGestureRecognizer</span> <span style="color: #e6e1dc; ">alloc</span><span style="color: #e6e1dc; ">]</span><br />                                   <span style="color: #e6e1dc; ">initWithTarget:</span><span style="color: #e6e1dc; ">self</span><br />                                   <span style="color: #e6e1dc; ">action:</span><span style="color: #cc7833; ">@selector</span>(<span style="color: #e6e1dc; ">doHideKeyBoard</span><span style="color: #e6e1dc; ">)];</span><br />   <br />    <span style="color: #e6e1dc; ">tap</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">numberOfTapsRequired</span> <span style="color: #e6e1dc; ">=</span> <span style="color: #a5c261; ">1</span>;<br />    <span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">view</span>  <span style="color: #e6e1dc; ">addGestureRecognizer:</span> <span style="color: #e6e1dc; ">tap</span><span style="color: #e6e1dc; ">];</span><br />    <span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">tap</span> <span style="color: #e6e1dc; ">setCancelsTouchesInView:</span><span style="color: #e6e1dc; ">NO</span><span style="color: #e6e1dc; ">];</span><br />    <span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">tap</span> <span style="color: #e6e1dc; ">release</span><span style="color: #e6e1dc; ">];</span><br /><span style="color: #e6e1dc; ">}</span></p>
+<p><span style="color: #e6e1dc; ">-</span> (<span style="color: #da4939; ">void</span>)<span style="color: #e6e1dc; ">doHideKeyBoard</span><span style="color: #e6e1dc; ">{</span><br />    <span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">self</span> <span style="color: #e6e1dc; ">resignFirstResponder</span><span style="color: #e6e1dc; ">];</span><br /><span style="color: #e6e1dc; ">}</span><br /><span style="color: #cc7833; ">@end</span></p>
+<p><span style="color: #e6e1dc; ">-</span> (<span style="color: #da4939; ">void</span>)<span style="color: #e6e1dc; ">viewDidLoad</span><br /><span style="color: #e6e1dc; ">{</span><br />    <span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">super</span> <span style="color: #e6e1dc; ">viewDidLoad</span><span style="color: #e6e1dc; ">];</span><br />    <span style="color: #bc9458; font-style: italic; ">// Do any additional setup after loading the view from its nib.</span><br />    <span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">self</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">txtInput</span> <span style="color: #e6e1dc; ">hideKeyBoard:</span><span style="color: #e6e1dc; ">self</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">view</span><span style="color: #e6e1dc; ">];</span><br /><span style="color: #e6e1dc; ">}</span></p>
+</div>
+
+
+<p>see also: <a href="https://gist.github.com/1450404">https://gist.github.com/1450404</a></p>
+
+
+<p></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[ [How to] 如何卸载Xcode]]></title>
+    <link href="http://huobazi.github.com/blog/2011/11/28/how-to-uninstall-xcode/"/>
+    <updated>2011-11-28T15:27:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2011/11/28/how-to-uninstall-xcode</id>
+    <content type="html"><![CDATA[<p> </p>
+
+
+<pre> $ sudo /Developer/Library/uninstall-devtools --mode=all</pre>
+
+
+<p> </p>
+
+
+<p></p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: LINQ | 武眉博]]></title>
+  <link href="http://huobazi.github.com/blog/tag/linq/atom.xml" rel="self"/>
+  <link href="http://huobazi.github.com/"/>
+  <updated>2013-07-14T11:11:48+08:00</updated>
+  <id>http://huobazi.github.com/</id>
+  <author>
+    <name><![CDATA[Marble Wu]]></name>
+    <email><![CDATA[huobazi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[我学Linq to SQL做的demo]]></title>
+    <link href="http://huobazi.github.com/blog/2008/07/19/cb-1246773/"/>
+    <updated>2008-07-19T19:19:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2008/07/19/cb-1246773</id>
+    <content type="html"><![CDATA[<p>最近才开始学LINQ to SQL,</p>
+
+
+<p>做了个demo，都是基本操作。</p>
+
+
+<p>有兴趣的朋友看看。</p>
+
+
+<p><a href="http://download.csdn.net/source/528628">http://download.csdn.net/source/528628</a></p>
+
+
+<p mce_keep="true"> </p>
+
+
+<p></p>
+]]></content>
+  </entry>
+  
+</feed>

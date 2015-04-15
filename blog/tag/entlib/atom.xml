@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Entlib | 武眉博]]></title>
+  <link href="http://huobazi.github.com/blog/tag/entlib/atom.xml" rel="self"/>
+  <link href="http://huobazi.github.com/"/>
+  <updated>2013-07-14T11:11:48+08:00</updated>
+  <id>http://huobazi.github.com/</id>
+  <author>
+    <name><![CDATA[Marble Wu]]></name>
+    <email><![CDATA[huobazi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[使用AzMan找不到Microsoft.Interop.Security.AzRoles的解决方法]]></title>
+    <link href="http://huobazi.github.com/blog/2008/04/20/microsoftinteropsecurityazroles/"/>
+    <updated>2008-04-20T18:07:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2008/04/20/microsoftinteropsecurityazroles</id>
+    <content type="html"><![CDATA[<p></p>
+
+
+<p><font face="Verdana">在c:/Windows/system32下找到azRoles.dll<br /><br /></font><font face="Verdana">如果没有Xp/2003请安装<a id="ctl00_rs1_mainContentContainer_ctl04" onclick="javascript:Track('ctl00_rs1_mainContentContainer_ctl00|ctl00_rs1_mainContentContainer_ctl04',this);" href="http://www.microsoft.com/downloads/details.aspx?FamilyID=e487f885-f0c7-436a-a392-25793a25bad7&amp;DisplayLang=en">http://www.microsoft.com/downloads/details.aspx?FamilyID=e487f885-f0c7-436a-a392-25793a25bad7&amp;DisplayLang=en</a>.<br /><br /></font><font face="Verdana">Win2000请安装<a id="ctl00_rs1_mainContentContainer_ctl05" onclick="javascript:Track('ctl00_rs1_mainContentContainer_ctl00|ctl00_rs1_mainContentContainer_ctl05',this);" href="http://www.microsoft.com/downloads/details.aspx?FamilyID=7edde11f-bcea-4773-a292-84525f23baf7&amp;DisplayLang=en">http://www.microsoft.com/downloads/details.aspx?FamilyID=7edde11f-bcea-4773-a292-84525f23baf7&amp;DisplayLang=en</a>.<br /><br /></font><font face="Verdana">Vs2003/Vs2005/Vs2008命令行，或者Cmd命令行进入.net安装目录<br /><br /></font><font face="Verdana">敲入：<br /><br /></font><font face="Verdana"><font face="Verdana">d:\Program Files\Microsoft Visual Studio 9.0\VC&gt;tlbimp azroles.dll /out:Microsof<br /><br />t.Interop.Security.AzRoles.dll /namespace:Microsoft.Interop.Security.AzRoles<br /><br /></font></font></p>
+
+
+<br /><p><font face="Verdana"><font face="Verdana">成功提示：<br /><br /></font></font><font face="Verdana"><font face="Verdana"></font></font></p>
+
+
+<br /><p><font face="Verdana">Microsoft (R) .NET Framework Type Library to Assembly Converter 3.5.21022.8<br /><br />Copyright (C) Microsoft Corporation.  All rights reserved.</font></p>
+
+
+<br /><p><font face="Verdana">Type library imported to d:\Program Files\Microsoft Visual Studio 9.0\VC\Microso<br /><br />ft.Interop.Security.AzRoles.dll<br /><br /></font></p>
+
+
+<br /><p><br /><br />引用这个文件就OK了。</p>
+
+
+<br />
+
+]]></content>
+  </entry>
+  
+</feed>

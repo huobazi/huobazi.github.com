@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: webQQ | 武眉博]]></title>
+  <link href="http://huobazi.github.com/blog/tag/webqq/atom.xml" rel="self"/>
+  <link href="http://huobazi.github.com/"/>
+  <updated>2013-07-14T11:11:48+08:00</updated>
+  <id>http://huobazi.github.com/</id>
+  <author>
+    <name><![CDATA[Marble Wu]]></name>
+    <email><![CDATA[huobazi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[腾讯webQQ的 CSS Sprite]]></title>
+    <link href="http://huobazi.github.com/blog/2009/11/28/webqq-css-sprite/"/>
+    <updated>2009-11-28T15:34:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2009/11/28/webqq-css-sprite</id>
+    <content type="html"><![CDATA[<p>web qq速度很快，很多图标处理的也很漂亮，偷偷看了一下sprite的图片，所有图标都在这个图里了20多k，性能压倒一切啊。</p>
+
+
+<p><!--more--></p>
+
+
+<p><img src="http://web.qq.com/images/icon.gif" alt="webQQ CSS Sprite" width="560" height="1000"></p>
+
+
+<p></p>
+]]></content>
+  </entry>
+  
+</feed>

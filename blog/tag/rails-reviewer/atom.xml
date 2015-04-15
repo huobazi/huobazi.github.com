@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: rails_reviewer | 武眉博]]></title>
+  <link href="http://huobazi.github.com/blog/tag/rails-reviewer/atom.xml" rel="self"/>
+  <link href="http://huobazi.github.com/"/>
+  <updated>2013-07-14T11:11:48+08:00</updated>
+  <id>http://huobazi.github.com/</id>
+  <author>
+    <name><![CDATA[Marble Wu]]></name>
+    <email><![CDATA[huobazi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[优化Rails数据库查询性能 -- rails_reviewer插件]]></title>
+    <link href="http://huobazi.github.com/blog/2010/01/21/rails-review-on-rails/"/>
+    <updated>2010-01-21T20:28:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2010/01/21/rails-review-on-rails</id>
+    <content type="html"><![CDATA[<p>发现一个很棒的插件<a href="http://github.com/dsboulder/query_reviewer" target="_blank"> rails_reviewer</a>插件</p>
+
+
+<p>安装:</p>
+
+
+<div class="source" style='font-family: "[object HTMLOptionElement]","Consolas","Lucida Console","Courier New"; color: #e6e1dc; background-color: #111111;'>
+<span style="color: #e6e1dc;">$</span> <span style="color: #e6e1dc;">script</span><span style="color: #e6e1dc;">/</span><span style="color: #e6e1dc;">plugin</span> <span style="color: #e6e1dc;">install</span> <span style="color: #e6e1dc;">git</span><span style="color: #a5c261;">:/</span><span style="color: #e6e1dc;">/</span><span style="color: #e6e1dc;">github</span><span style="color: #e6e1dc;">.</span><span style="color: #e6e1dc;">com</span><span style="color: #e6e1dc;">/</span><span style="color: #e6e1dc;">dsboulder</span><span style="color: #e6e1dc;">/</span><span style="color: #e6e1dc;">query_reviewer</span><span style="color: #e6e1dc;">.</span><span style="color: #e6e1dc;">git</span><br /><span style="color: #e6e1dc;">$</span> <span style="color: #e6e1dc;">rake</span> <span style="color: #e6e1dc;">query_reviewer</span><span style="color: #a5c261;">:setup</span>
+</div>
+
+
+<p>完毕后重启server,页面左上角浮动一个SQL CRITICAL浮动窗口，里面记录页面加载时执行的所有SQL以及优化建议等。</p>
+
+
+<p>强烈推荐 !!!</p>
+
+
+<p></p>
+]]></content>
+  </entry>
+  
+</feed>

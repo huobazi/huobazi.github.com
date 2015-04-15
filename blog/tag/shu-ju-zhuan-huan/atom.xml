@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 数据转换 | 武眉博]]></title>
+  <link href="http://huobazi.github.com/blog/tag/shu-ju-zhuan-huan/atom.xml" rel="self"/>
+  <link href="http://huobazi.github.com/"/>
+  <updated>2013-07-14T11:11:48+08:00</updated>
+  <id>http://huobazi.github.com/</id>
+  <author>
+    <name><![CDATA[Marble Wu]]></name>
+    <email><![CDATA[huobazi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[从typecho转换到Octopress了]]></title>
+    <link href="http://huobazi.github.com/blog/2012/03/06/convert-typecho-to-octopress/"/>
+    <updated>2012-03-06T21:55:00+08:00</updated>
+    <id>http://huobazi.github.com/blog/2012/03/06/convert-typecho-to-octopress</id>
+    <content type="html"><![CDATA[<p>人生在于折腾,所以将博客转换到Octopress了<br/>
+我的博客经历了如下几次变动：<br/>
+2003年1月,<a href="http://aspxboy.com/private/">自己装了个SnowForum</a>，用来写些技术记录之类的东西<br/>
+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;><br/>
+2004年4月,<a href="http://huobazi.cnblogs.com/">搬到博客园，以前的记录停止维护，后来数据丢失</a><br/>
+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;><br/>
+2009年6月,<a href="http://huobazi.aspxboy.com/blog/2009/06/21/my-blog-moved-to-wp/">搬出博客园,转换到Wordpress</a>当时在旧博客上写了script，告知访问者此处停止更新，询问访问者是否停留在当前页，或转向新页面(可能有更新),因此被封号 @_@|||<br/>
+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;><br/>
+2009年7月,<a href="http://huobazi.aspxboy.com/blog/2009/07/04/myblog-from-wordpress-to-typecho/">博客又转换到Typecho平台</a><br/>
+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;><br/>
+2012年3月,转到Octopress了，一个静态博客生成引擎，现在看到的全都是html页面,我写了几行ruby代码做了转换，在<a href="https://github.com/huobazi/typecho-to-octopress">https://github.com/huobazi/typecho-to-octopress</a>，希望对想转换的朋友有用。</p>
+]]></content>
+  </entry>
+  
+</feed>
