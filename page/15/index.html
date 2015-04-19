@@ -65,6 +65,29 @@
                 <section class="post">
                     <header class="post-header">
 
+                        <a href="http://huobazi.aspxboy.com/blog/2005/10/04/cb-248674/" class="post-title">使ExpanderPanel的文本带上连接</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                
+                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p>ExpanderPanel.cs 增加TextHref属性<br />修改了Text属性的Get方法</p>
+<div class="codeDiv">
+<br />if(ResourceName != null) <br />{  if(TextHref == null)<br /> {<br />  return CommunityServer.Components.ResourceManager.GetString(ResourceName);<br /> } <br /> else<br /> {<br />  return String.Format(&rdquo;&lt;a href=\&ldquo;{0}\&rdquo;&gt;{1}&lt;/a&gt;&rdquo;,this.TextHref,CommunityServer.Components.ResourceManager.GetString(ResourceName));<br /> }<br />}</div></p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">04 Oct 2005</h1>
+                <section class="post">
+                    <header class="post-header">
+
                         <a href="http://huobazi.aspxboy.com/blog/2005/10/04/cb-248673/" class="post-title">C Community Server 群发Email MassEmailingAdmin.aspx页面内插入表情和代码时，404错误</a>
 
                         <p class="post-meta">
@@ -91,29 +114,6 @@
 <br /><p> var codeWin = window.open("/insertcode.aspx","codeWin","width=530,height=420,status=0,toolbars=0");<br /></p>
 </div>
 <p></p>             
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">04 Oct 2005</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://huobazi.aspxboy.com/blog/2005/10/04/cb-248674/" class="post-title">使ExpanderPanel的文本带上连接</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                
-                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a>
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p><p>ExpanderPanel.cs 增加TextHref属性<br />修改了Text属性的Get方法</p>
-<div class="codeDiv">
-<br />if(ResourceName != null) <br />{  if(TextHref == null)<br /> {<br />  return CommunityServer.Components.ResourceManager.GetString(ResourceName);<br /> } <br /> else<br /> {<br />  return String.Format(&rdquo;&lt;a href=\&ldquo;{0}\&rdquo;&gt;{1}&lt;/a&gt;&rdquo;,this.TextHref,CommunityServer.Components.ResourceManager.GetString(ResourceName));<br /> }<br />}</div></p>
 
                     </div>
                 </section>
