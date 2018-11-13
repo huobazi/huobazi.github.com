@@ -59,6 +59,140 @@
             
             <div class="posts">
                 
+                <h1 class="content-subhead">07 Oct 2005</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2005/10/07/cb-249806/" class="post-title">Communtiy Server论坛的帖子显示页面分页部分的Url Rewrite的构造方法</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                
+                                    <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
+                                
+                                    <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
+                                
+                                    <a class="post-category post-category-.Net其他" href='/tags/.net%E5%85%B6%E4%BB%96'>.Net其他</a>
+                                
+                                    <a class="post-category post-category-Communtiy Server" href='/tags/communtiy-server'>Communtiy Server</a>
+                                
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>你可能会发现在Communtiy Server的论坛帖子列表页面</p>
+<p>比如<a href="http://communityserver.org/forums/129/ShowForum.aspx">http://communityserver.org/forums/129/ShowForum.aspx</a></p>
+<p>看下面分页处的连接使用的地址是类似ShowForum.aspx?PageIndex=2这样的地址<br />没有做到SearchFriendly,我们稍微改造一下代码就可以实现类似帖子显示页面内那样的地址<br />先在siteUrl.config内增加</p>
+<p> </p>
+<div style="padding-right: 5px; padding-left: 4px; font-size: 13px; padding-bottom: 4px; width: 98%; word-break: break-all; padding-top: 4px; background-color: #eeeeee; border: #cccccc 1px solid;">
+<span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">url </span><span style="COLOR: #ff0000">name</span><span style="COLOR: #0000ff">="forum_Paged"</span><span style="COLOR: #ff0000"> location </span><span style="COLOR: #0000ff">= "forums"</span><span style="COLOR: #ff0000"> path </span><span style="COLOR: #0000ff">= "{0}/{1}/ShowForum.aspx"</span><span style="COLOR: #ff0000"> pattern </span><span style="COLOR: #0000ff">= "(\d+)/(\d+)/ShowForum.aspx"</span><span style="COLOR: #ff0000"> vanity</span><span style="COLOR: #0000ff">="ShowForum.aspx?PageIndex=$1^ForumID=$2"</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span>
+</div>
+<p>然后siteUrl.cs内增加<br /> </p>
+<div class="codeDiv">public virtual string FormPagedFormat (int forumID)<br />{<br /> return urlData.FormatUrl("forum_Paged", "{0}", forumID.ToString(), forumID.ToString());<br />}</div>
+<p>接着ThreadView.cs内paer数据绑定处增加</p>
+<div class="codeDiv">pager.UrlPattern = SiteUrls.Instance().FormPagedFormat(csContext.ForumID);<br /> </div>
+<p>重新编译，OK，看看效果吧～～</p>
+<p><a href="http://www.3pub.com/bbs/3/default.aspx">http://www.3pub.com/bbs/3/default.aspx</a></p>              
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">14 Apr 2005</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2005/04/14/cb-137712/" class="post-title">今天头又晕了</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                
+                                    <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
+                                
+                                    <a class="post-category post-category-.Net其他" href='/tags/.net%E5%85%B6%E4%BB%96'>.Net其他</a>
+                                
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p>写了如下代码，还跟踪了半个多小时，没找出来问题<img style="border: 0px;" src="/images/hbz_images/036aa5c2-64f8-4fe7-8ccc-983e17d8c364.gif" border="0" alt=""></p>
+<div style="padding-right: 5.4pt; padding-left: 5.4pt; background: #e6e6e6; padding-bottom: 4px; width: 98%; word-break: break-all; padding-top: 4px; border: windowtext 0.5pt solid;">
+<div>
+<span style="COLOR: #0000ff">if</span><span style="COLOR: #000000">(strCarId.StartsWith(</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000"><strong></span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">))<br />                                    </span><span id="Codehighlighter1_39_89_Closed_Text" style="BORDER-RIGHT: #808080 1px solid; BORDER-TOP: #808080 1px solid; DISPLAY: none; BORDER-LEFT: #808080 1px solid; BORDER-BOTTOM: #808080 1px solid; BACKGROUND-COLOR: #ffffff"> </span><span id="Codehighlighter1_39_89_Open_Text"><span style="COLOR: #000000">{<br />                                         strCarId.Replace(</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000"></strong></span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">,</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">U</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">);<br />                                    }</span></span><span style="COLOR: #000000"><br />                                    </span><span style="COLOR: #0000ff">else</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">if</span><span style="COLOR: #000000">(strCarId.StartsWith(</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000"><em></span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">))<br />                                    </span><span id="Codehighlighter1_143_192_Open_Text"><span style="COLOR: #000000">{<br />                                         strCarId.Replace(</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000"></em></span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">,</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">T</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">);<br />                                    }</span></span>
+</div>
+<p></p>
+</div></p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">18 Sep 2004</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2004/09/18/cb-44424/" class="post-title">撞墙吧 Array.IndexOf(xxx)</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                
+                                    <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
+                                
+                                    <a class="post-category post-category-闲言碎语" href='/tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD'>闲言碎语</a>
+                                
+                                    <a class="post-category post-category-.Net其他" href='/tags/.net%E5%85%B6%E4%BB%96'>.Net其他</a>
+                                
+                                    <a class="post-category post-category-C#" href='/tags/c'>C#</a>
+                                
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p>要在后台把CheckBoxList的某个ListItem 的selected给true了<br />遍历该CheckBoxList,写下了下面注释内的代码，死活不能选中我的第个CheckBox</p>
+<div style="padding-right: 5.4pt; padding-left: 5.4pt; background: #e6e6e6; padding-bottom: 4px; width: 98%; padding-top: 4px; border: windowtext 0.5pt solid;">
+<p></p>
+<div>
+<span style="COLOR: #000000">            </span><span style="COLOR: #0000ff">string</span><span style="COLOR: #000000"> bigClassId </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> ( ( DataRowView)e.Item.DataItem )[</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">模块编号</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">].ToString();<br />            </span><span style="COLOR: #0000ff">string</span><span style="COLOR: #000000"> bigClassName </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000">  ( ( DataRowView)e.Item.DataItem )[</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">模块名称</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">].ToString();<br />            CheckBoxList chk_list_big </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> (CheckBoxList)e.Item.FindControl(</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">chk_list_big</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">) </span><span style="COLOR: #0000ff">as</span><span style="COLOR: #000000"> CheckBoxList;<br />            </span><span style="COLOR: #0000ff">if</span><span style="COLOR: #000000">(chk_list_big </span><span style="COLOR: #000000">!=</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">null</span><span style="COLOR: #000000">)<br />            </span><span id="Codehighlighter1_285_1018_Open_Text"><span style="COLOR: #000000">{                    <br />                chk_list_big.Items.Clear();<br />                ListItem item </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">new</span><span style="COLOR: #000000"> ListItem();<br />                item.Text </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> bigClassName;<br />                item.Value </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> bigClassId;<br />                chk_list_big.Items.Add(item);<br />                chk_list_big.Attributes[</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">onclick</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">] </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> String.Format(</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">CheckAll(&lsquo;{0}&rsquo;)</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">,chk_list_big.ClientID);<br />                </span><span style="COLOR: #008000">//</span><span style="COLOR: #008000">将符合用户模块的ListItem选定    </span><span style="COLOR: #008000"><br /></span><span style="COLOR: #000000">    <br />                </span><span style="COLOR: #0000ff">for</span><span style="COLOR: #000000">(</span><span style="COLOR: #0000ff">int</span><span style="COLOR: #000000"> i</span><span style="COLOR: #000000">=</span><span style="COLOR: #000000">0</span><span style="COLOR: #000000">; i</span><span style="COLOR: #000000">&lt;</span><span style="COLOR: #0000ff">this</span><span style="COLOR: #000000">.taxiUser.Modules.Length; i</span><span style="COLOR: #000000">++</span><span style="COLOR: #000000">)<br />                </span><span id="Codehighlighter1_636_786_Open_Text"><span style="COLOR: #000000">{<br />                    </span><span style="COLOR: #0000ff">if</span><span style="COLOR: #000000">( bigClassId </span><span style="COLOR: #000000">==</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">this</span><span style="COLOR: #000000">.taxiUser.Modules[i] )<br />                    </span><span id="Codehighlighter1_693_780_Open_Text"><span style="COLOR: #000000">{<br />                        chk_list_big.Items.FindByValue(</span><span style="COLOR: #0000ff">this</span><span style="COLOR: #000000">.taxiUser.Modules[i]).Selected </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">true</span><span style="COLOR: #000000">;<br />                    }</span></span><span style="COLOR: #000000"><br />                }</span></span><span style="COLOR: #000000"><p>                </p></span><span style="COLOR: #008000">//</span><span style="COLOR: #008000">真是见了鬼了！为什么用这样的方法不能选定该ListItem？？？<p></p></span><span style="COLOR: #008000">//</span><span style="COLOR: #008000">                foreach(ListItem listItem in chk_list_big.Items)<br /></span><span style="COLOR: #008000">//</span><span style="COLOR: #008000">                {<br /></span><span style="COLOR: #008000">//</span><span style="COLOR: #008000">                    if(Array.IndexOf(this.taxiUser.Modules,listItem.Value) &gt; 0)<br /></span><span style="COLOR: #008000">//</span><span style="COLOR: #008000">                    {<br /></span><span style="COLOR: #008000">//</span><span style="COLOR: #008000">                        listItem.Selected = true;<br /></span><span style="COLOR: #008000">//</span><span style="COLOR: #008000">                    }<br /></span><span style="COLOR: #008000">//</span><span style="COLOR: #008000">                }</span></span><br />半天不能醒悟就想着换道道，写了”该死”那行上面的几行代码把数组放倒来，（站着不行我就躺着来），发现可行，然后就开始发楞，命名原理一摸一样的啊，真是“见鬼”，对者这几行代码发了会愣，就决定<img src="/images/hbz_images/282365e9-a145-466f-a9c1-d7a23735c340.gif" alt="">还要狠狠的<img src="/images/hbz_images/282365e9-a145-466f-a9c1-d7a23735c340.gif" alt="">，<br />if (Array.IndexOf(xxxxx) &gt; 0) 用力<img src="/images/hbz_images/282365e9-a145-466f-a9c1-d7a23735c340.gif" alt=""><img src="/images/hbz_images/282365e9-a145-466f-a9c1-d7a23735c340.gif" alt="">吧<img src="/images/hbz_images/282365e9-a145-466f-a9c1-d7a23735c340.gif" alt=""><br />555555，撞的头都疼了.<img src="/images/hbz_images/282365e9-a145-466f-a9c1-d7a23735c340.gif" alt=""><img src="/images/hbz_images/282365e9-a145-466f-a9c1-d7a23735c340.gif" alt=""><img src="/images/hbz_images/282365e9-a145-466f-a9c1-d7a23735c340.gif" alt=""><img src="/images/hbz_images/282365e9-a145-466f-a9c1-d7a23735c340.gif" alt=""><img src="/images/hbz_images/282365e9-a145-466f-a9c1-d7a23735c340.gif" alt=""><img src="/images/hbz_images/282365e9-a145-466f-a9c1-d7a23735c340.gif" alt="">
+</div>
+<p></p>
+</div></p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">11 May 2004</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2004/05/11/cb-8865/" class="post-title">TechNet月度光盘资料&#43;贺卡&#43;msn贴纸&#43;TechNet体恤 被哄抢而光</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                
+                                    <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
+                                
+                                    <a class="post-category post-category-.Net其他" href='/tags/.net%E5%85%B6%E4%BB%96'>.Net其他</a>
+                                
+                                    <a class="post-category post-category-TechNet" href='/tags/technet'>TechNet</a>
+                                
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>前阵子换了工作，没有及时的更新TechNet的资料4月份的光盘资料被寄到原来单位去了<br />连同一张贺卡，msn贴纸，TechNet的体恤 昨天同事带给了我。<br />好消息和MM共享之... ...</p>
+<p>随之贺卡和msn贴纸全部被没收（单人哄抢），XL号的体恤我竟然穿上象紧身装(PS:俺190多斤重的)，也被剥夺，MM曰：这体恤我晚上穿出去乘凉，宽宽松松的，刚好。</p>
+<p>55555......</p>
+<p>一堆东西只剩下张光盘是我的了。<br />MM的话“微软是关心你们这些开发人员，不想让你们打光棍，这些卡啊贴纸啊的就是让你送女朋友的！”<br />惊人之语啊～～<br />当然MM也不忘抚慰一下我，把贴纸里那只美丽的MSN蝴蝶贴在我的手机上，剩下的MSN小人一个也不许我要了</p>               
+
+                    </div>
+                </section>
+                
                 <h1 class="content-subhead">30 Apr 2004</h1>
                 <section class="post">
                     <header class="post-header">

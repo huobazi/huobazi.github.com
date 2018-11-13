@@ -59,11 +59,11 @@
             
             <div class="posts">
                 
-                <h1 class="content-subhead">14 Jul 2004</h1>
+                <h1 class="content-subhead">21 Sep 2005</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2004/07/14/cb-24010/" class="post-title">数据从SqlServer6.5到SqlServer2000</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2005/09/21/cb-241048/" class="post-title">文本块内的文本的空格、制表符和换行处理</a>
 
                         <p class="post-meta">
                             
@@ -71,149 +71,56 @@
                                 
                                     <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
                                 
-                                    <a class="post-category post-category-SQL Server" href='/tags/sql-server'>SQL Server</a>
-                                
                             
                         </p>
                     </header>
 
                     <div class="post-description">
-                        <p></p>
+                        <p><p>最近在做我的<a href="http://www.aspxboy.com/">AspxBoy.Com</a>时遇到一个郁闷的问题<br /></p>
+<div><font style="BACKGROUND-COLOR: #ffffff" color="#808080">在使用ftb２.0做编辑器的时候</font></div>
+<div>
+<p><font style="BACKGROUND-COLOR: #ffffff" color="#808080">在内容筐内粘贴进</font></p>
+<pre>&hellip;.</pre>
 <p></p>
-<div style="FONT-SIZE: 13px">一台SqlServer65上的数据需要导到SqlServer200下<br />源机器:WinNt4 sp6 SqlServer65 Sp5a<br />目的机器: Win2000 sp4 SqlServer2000 sp3a<br />导入的过程非常艰辛,必尽这两个产品版本相距太远了.<br />微软动力营的专家Mingqing Cheng给予了很多帮助,在此表示由衷的感谢!<br />以下摘自微软动力营<br /><textarea style="WIDTH: 558px; HEIGHT: 88px" rows="4" cols="60">活靶子，您好 根据您的描述，我对您问题的理解是您希望将原来SQL Server 6.5 上的数据升级到SQL Server 2000上。不知道我理解的正确吗？ 根据我的经验，在升级之前您需要首先将SQL Server 6.5升级到下列版本 SQL Server 6.5 Post Service Pack 5a Update (Intel) http://www.microsoft.com/downloads/details.aspx?FamilyID=6bf98310-4fea-405f-9ee0-c1e22580776b&amp;DisplayLang=en 然后您准备升级的SQL Server 6.5是否和SQL Server 2000安装在同一台服务器上呢？在升级的过程中您需要从SQL Server 2000的SQL Server Upgrade Wizard来进行升级。 在下面的这篇文档中罗列了三点在升级中可能要考虑的地方，以及可能的影响 How To Upgrade from SQL Server 6.5 http://msdn.microsoft.com/library/default.asp?url=/library/en-us/howtosql/ht_install_48l5.asp 具体的升级要求和标准，您可以参照下列白皮书 How to Upgrade SQL Server 6.5 and 7.0 to SQL Server 2000 http://www.microsoft.com/technet/prodtechnol/sql/2000/deploy/sqlugrd.mspx 最后，您可以从这里找到一些常见的在升级到SQL Server 2000时可能遇到的问题 INF: Frequently Asked Questions - SQL Server 2000 - Upgrade http://support.microsoft.com/default.aspx?scid=kb;en-us;261334 在这篇文章中，我愿意向您重点推荐的针对问题8的回答：对于SQL Server 6.5的大小可能对升级时间带来的影响 希望我回答并且解决了您的问题，而且所附上的这些信息对您有所帮助！如有任何疑问或需要进一步帮助，请您直接在新闻组里发贴，我们非常乐意帮助您解决问题！ 希望您能满意我的支持服务！感谢您选择微软产品并使用微软动力营合作伙伴新闻组技术支持！ Mingqing Cheng [微软] 微软全球技术中心 微软动力营合作伙伴技术支持 ----------------------------------------------- 使您100%满意是"微软动力s营"合作伙伴支持服务的唯一目标。我们真诚希望您能够对"微软动力营"服务提出宝贵建议和意见，我们将针对您的反馈不断改进服务质量。如有任何问题，请发信至：cmsdn@microsoft.com </textarea><br /><br /><textarea style="WIDTH: 558px; HEIGHT: 88px" rows="4" cols="60">您好, 能麻烦您具体和我说一下您采用什么方式升级的吗?在SQL Server Upgrade Wizard选择的时候，您是否选择了Object and Data呢？您升级的时候，最好能够直接升级到SQL Server默认的Instance。您是否已经将SQL Server 6.5和SQL server 2000分别升级到Service Pack 5a和Service Pack 3a呢？ 您在升级的过程中有没有遇到什么错误的信息呢？您对于该过程越详细地描述就能有助于我们越快越准确地找到问题的所在。 下面我将SQL Server Books Online上有关如何从SQL Server 6.5升级到SQL Server 2000的需要注意的事项粘贴在下面 =================================== 从 SQL Server 6.5 升级时的注意事项： 在升级过程中，SQL Server 6.5 服务器将停止并启动，同时将对象编为脚本并析取数据。数据传输开始后，只有 SQL Server 2000 在运行，无法访问 SQL Server 6.5。 如果将现有的 SQL Server 6.5 服务器升级到运行 SQL Server 2000 的另一台计算机，则这两台计算机都应配置为对 MSSQLServer 服务使用域用户名和密码。 在该升级过程中，在 SQL Server 6.5 中使用 sp_addmessage 创建的用户定义消息不转换到 SQL Server 2000。若要保留这些自定义消息，请将在 SQL Server 6.5 中添加的消息手工复制到 SQL Server 2000 安装。 =================================== 下面的这篇联机手册中的文档详细介绍了如何使用SQL Server Upgrade Wizard来升级的步骤 “如何使用直接管道将 SQL Server 6.5 版升级到 SQL Server 2000（SQL Server 升级向导）” 希望您能满意我的支持服务！感谢您选择微软产品并使用微软动力营合作伙伴新闻组技术支持！ Mingqing Cheng [微软] 微软全球技术中心 微软动力营合作伙伴技术支持 ----------------------------------------------- 使您100%满意是"微软动力s营"合作伙伴支持服务的唯一目标。我们真诚希望您能够对"微软动力营"服务提出宝贵建议和意见，我们将针对您的反馈不断改进服务质量。如有任何问题，请发信至：cmsdn@microsoft.com 本贴子以“现状”提供且没有任何担保，同时也没有授予任何权利。</textarea><br /><br /><textarea style="WIDTH: 558px; HEIGHT: 88px" rows="4" cols="60">您好， 不知道您的问题解决了吗？我给您的那些建议是否有用呢？ 您能够成功地从SQL Server 6.5中将数据导入SQL Server 2000，而不是只有表的结构了吗？ 如果您在导入的过程中遇到问题，您可以继续在这个贴字后面提问或者发新的帖子提问。我会很愿意在这方面尽我的所能来帮助您：） 希望您能满意我的支持服务！感谢您选择微软产品并使用微软动力营合作伙伴新闻组技术支持！ Mingqing Cheng [微软] 微软全球技术中心 微软动力营合作伙伴技术支持 ----------------------------------------------- 使您100%满意是"微软动力s营"合作伙伴支持服务的唯一目标。我们真诚希望您能够对"微软动力营"服务提出宝贵建议和意见，我们将针对您的反馈不断改进服务质量。如有任何问题，请发信至：cmsdn@microsoft.com 本贴子以“现状”提供且没有任何担保，同时也没有授予任何权利。 </textarea><br />我们在升级过程中发现很难将SQL65升级通过"一切版本切换"升级过来,期间碰到了很多错误,<br />也不知道是什么原因.这里就不在罗列了.<br />又尝试了好多方法,后来,我们采用如下步骤达到了目的!<br /><br /><div style="FONT-SIZE: 13px; COLOR: blue; BACKGROUND-COLOR: beige">1,在Sql65中选择生成Sql脚本,对于所有的过程,视图,表,用户,等信息生成Sql脚本.<br />该脚本无法在Sql2000下直接运行,我们发现Sql65所生成的脚本中对于字符串均用""括起来的,在文<br />本编辑器中采用批量替换"为'后可以运行.<br />2,在Sql2000下,建立原Sql2000数据库内的所有用户,密码均相同,运行该Sql脚本<br />3,在Sql2000下,对于刚新并运行了Sql脚本的建数据库导入数据,源服务器和数据库选择SQL65<br />下的数据库,导入. 选择所有对象后,再去掉视图,因为我们发现导过来后会把视图也当作一个表处理,<br />但是该视图已经存在,会报错: "已经存在对象..."<br />经过几次尝试数据成功导入,所有的主建,视图,过程等均未丢失.<br /><br />
 </div>
-<p>以上步是在NT sp6 SqlServer6.5 和Win2000 sp4 SqlServer2000 Sp3a下. <br />再次感谢微软动力营,感谢Mingqing Cheng给我们的帮助! </p>
+<div><font style="BACKGROUND-COLOR: #ffffff" color="#808080">的代码</font></div>
+<div>
+<p><font style="BACKGROUND-COLOR: #ffffff" color="#808080">当提交后显示页面(如<a href="http://www.aspxboy.com/433/archive.aspx">http://www.aspxboy.com/433/archive.aspx</a>)内</font></p>
+<pre>内的制表符都变没了<br />求助与csdn:<br /><br /></pre>
 </div>
-<br /><p></p>               
+<p><a title="http://community.csdn.net/Expert/topic/4282/4282303.xml?temp=.5363428" href="http://community.csdn.net/Expert/topic/4282/4282303.xml?temp=.5363428"><a href="http://community.csdn.net/Expert/topic/4282/4282303.xml?temp=.5363428">http://community.csdn.net/Expert/topic/4282/4282303.xml?temp=.5363428</a></a><br /><br />经网友指点采用新的ftb版本,发现提交到数据库内<font color="#000000">制表符没有被替换,<br />但是显示的时候还是全部被替换了<br />找啊找啊,一夜没睡,终于在</font><font color="#000000">苏昱的样式表中文手册内找到了答案<br />原来在写</font></p>
+<pre>样式的时候<br />写上了<br />white-space:normal;<br />却没有用 去替换制表符,<br />我改用如下样式则显示正确了<br /><strong><font color="#ff0000">white-space:pre;</font></strong><br /><br />而正确的使用方法是<br /><div class="cssColumnTitle"><font style="BACKGROUND-COLOR: #d3d3d3">语法：</font></div>
+<div><font style="BACKGROUND-COLOR: #d3d3d3"><b>white-space : </b><span class="cssDefault"><b>normal</b></span> | <b>pre</b> | <b>nowrap</b> </font></div>
+<div class="cssColumnTitle"><font style="BACKGROUND-COLOR: #d3d3d3">取值：</font></div>
+</pre>
+<table><tbody>
+<tr>
+<td nowrap><b><font style="BACKGROUND-COLOR: #d3d3d3">normal </font></b></td>
+<td nowrap><b><font style="BACKGROUND-COLOR: #d3d3d3">:</font></b></td>
+<td><font style="BACKGROUND-COLOR: #d3d3d3"><b>默认值</b>。默认处理方式。文本自动处理换行。假如抵达容器边界内容会转到下一行</font></td>
+</tr>
+<tr>
+<td nowrap><b><font style="BACKGROUND-COLOR: #d3d3d3">pre </font></b></td>
+<td nowrap><b><font style="BACKGROUND-COLOR: #d3d3d3">:</font></b></td>
+<td><font style="BACKGROUND-COLOR: #d3d3d3">换行和其他空白字符都将受到保护。这个值需要IE6+或者<b> !DOCTYPE </b>声明为<b> <br /><br />standards-compliant mode <br /></b>支持。如果<b> !DOCTYPE </b>声明没有指定<br />为<b> standards-compliant mode </b>，此属性可以使用，但是不会发生作用。结果等同于<b> normal </b>。参阅<b> pre </b>对象</font></td>
+</tr>
+<tr>
+<td nowrap><b><font style="BACKGROUND-COLOR: #d3d3d3">nowrap </font></b></td>
+<td nowrap><b><font style="BACKGROUND-COLOR: #d3d3d3">:</font></b></td>
+<td><font style="BACKGROUND-COLOR: #d3d3d3">强制在同一行内显示所有文本，直到文本结束或者遭遇<b> br </b>对象。参阅<b> noWrap </b>属性</font></td>
+</tr>
+</tbody></table>
+<div class="cssColumnTitle"><font style="BACKGROUND-COLOR: #d3d3d3">说明：</font></div>
+<div><font style="BACKGROUND-COLOR: #d3d3d3">设置或检索对象内空格字符的处理方式。<br />空格字符，像换行，空格，TAB，在HTML文档中默认的是被忽略的。<font color="#0000ff">当此属性设置为<b> normal <br /></b>或者<b> nowrap </b>时，你可以使用不换行空格的命名实体<b>   </b>来添加空格，用<b> br </b>元素来添加换行。<br /></font>此属性对你使用文档对象模型(DOM)操作的内容的影响与其对IE显示内容的影响一样。<br />此属性作用于块对象。<br />此属性对于<b> currentStyle </b>对象而言是只读的。对于其他对象而言是可读写的。<br />对应的脚本特性为<b> whiteSpace </b>。</font></div></p>
 
                     </div>
                 </section>
                 
-                <h1 class="content-subhead">14 Jul 2004</h1>
+                <h1 class="content-subhead">12 May 2005</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2004/07/14/cb-24084/" class="post-title">能在微软的网站找到IeWebcontrols的安装文件吗</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                
-                                    <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
-                                
-                                    <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
-                                
-                                    <a class="post-category post-category-TreeView" href='/tags/treeview'>TreeView</a>
-                                
-                                    <a class="post-category post-category-IeWebcontrol" href='/tags/iewebcontrol'>IeWebcontrol</a>
-                                
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>你们能在微软的网站找到IeWebcontrols的安装文件吗?<br />这个地址不行了<br /> <a href="http://msdn.microsoft.com/downloads/samples/internet/ASP_DOT_NET_ServerControls/WebControls/default.asp">http://msdn.microsoft.com/downloads/samples/internet/ASP_DOT_NET_ServerControls/WebControls/default.asp</a><br />我指的是IeWebControls.<font color="#ff3333">msi</font>这个安装文件 装完后就会自动注册程序集了<br />而<a href="http://www.microsoft.com/china/MSDN/library/archives/library/DNAspp/html/aspnet-usingtreeviewieWebcontrol.asp#aspnet-usingtreeviewiewebcontrol_topic2">不是</a>这里说的<a href="http://asp.net/IEWebControls/Download.aspx">地址</a>里的包含源代码还需要自己build的文件,.<br />后来还是发动同事们在所有电脑里search终于找到了一份.<br />为什么ms不提供msi的安装文件了呢,竟然在google也找不到了.</p>                
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">14 Jul 2004</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="https://huobazi.aspxboy.com/blog/2004/07/14/cb-24084/" class="post-title">能在微软的网站找到IeWebcontrols的安装文件吗</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                
-                                    <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
-                                
-                                    <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
-                                
-                                    <a class="post-category post-category-TreeView" href='/tags/treeview'>TreeView</a>
-                                
-                                    <a class="post-category post-category-IeWebcontrol" href='/tags/iewebcontrol'>IeWebcontrol</a>
-                                
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>你们能在微软的网站找到IeWebcontrols的安装文件吗?<br />这个地址不行了<br /> <a href="http://msdn.microsoft.com/downloads/samples/internet/ASP_DOT_NET_ServerControls/WebControls/default.asp">http://msdn.microsoft.com/downloads/samples/internet/ASP_DOT_NET_ServerControls/WebControls/default.asp</a><br />我指的是IeWebControls.<font color="#ff3333">msi</font>这个安装文件 装完后就会自动注册程序集了<br />而<a href="http://www.microsoft.com/china/MSDN/library/archives/library/DNAspp/html/aspnet-usingtreeviewieWebcontrol.asp#aspnet-usingtreeviewiewebcontrol_topic2">不是</a>这里说的<a href="http://asp.net/IEWebControls/Download.aspx">地址</a>里的包含源代码还需要自己build的文件,.<br />后来还是发动同事们在所有电脑里search终于找到了一份.<br />为什么ms不提供msi的安装文件了呢,竟然在google也找不到了.</p>                
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">10 Jul 2004</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="https://huobazi.aspxboy.com/blog/2004/07/10/cb-7697-1/" class="post-title">小雕虫,不被Google工具条拦截的弹出窗口</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                
-                                    <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
-                                
-                                    <a class="post-category post-category-前端开发" href='/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91'>前端开发</a>
-                                
-                                    <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
-                                
-                                    <a class="post-category post-category-奇技淫巧" href='/tags/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7'>奇技淫巧</a>
-                                
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>如果做项目必须用到弹出窗口可以考虑以下</p>
-<p>不保证任何时候能用<br />更不保证在那个myie新版本下能用<br />如果myie等浏览器屏蔽掉了地址内的某些字比如我演示中有“pop“字样,那也出不来</p>
-<p>demo+code:</p>
-<p><a href="http://www.aspxboy.com/popWindow/" target="_blank"><span style="color: #003366;">http://www.aspxboy.com/popWindow/</span></a></p>
-<p><span style="font-size: x-large;"><strong>测试</strong>通过日期： <span style="color: #002c99;"><a href="http://huobazi.cnblogs.com/archive/2004/07/10/22926.html"><strong>2004/07/10/</strong></a>  ！！！<br /></span></span></p>                
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">10 Jul 2004</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="https://huobazi.aspxboy.com/blog/2004/07/10/cb-7697-1/" class="post-title">小雕虫,不被Google工具条拦截的弹出窗口</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                
-                                    <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
-                                
-                                    <a class="post-category post-category-前端开发" href='/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91'>前端开发</a>
-                                
-                                    <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
-                                
-                                    <a class="post-category post-category-奇技淫巧" href='/tags/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7'>奇技淫巧</a>
-                                
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>如果做项目必须用到弹出窗口可以考虑以下</p>
-<p>不保证任何时候能用<br />更不保证在那个myie新版本下能用<br />如果myie等浏览器屏蔽掉了地址内的某些字比如我演示中有“pop“字样,那也出不来</p>
-<p>demo+code:</p>
-<p><a href="http://www.aspxboy.com/popWindow/" target="_blank"><span style="color: #003366;">http://www.aspxboy.com/popWindow/</span></a></p>
-<p><span style="font-size: x-large;"><strong>测试</strong>通过日期： <span style="color: #002c99;"><a href="http://huobazi.cnblogs.com/archive/2004/07/10/22926.html"><strong>2004/07/10/</strong></a>  ！！！<br /></span></span></p>                
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">07 Jul 2004</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="https://huobazi.aspxboy.com/blog/2004/07/07/cb-22127/" class="post-title">AspNet2.0的QuickStart出了</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2005/05/12/cb-154060/" class="post-title">从VB的语法理解 抽象方法</a>
 
                         <p class="post-meta">
                             
@@ -228,16 +135,18 @@
                     </header>
 
                     <div class="post-description">
-                        <p><a href="http://beta.asp.net/quickstart/aspnet/">http://beta.asp.net/quickstart/aspnet/</a><br />英文的</p>             
+                        <p> </p>
+<br /><p>C#中 abstract void MethodName(....<br /> <br />VB中 MustOverride Sub MethodName(....</p>
+<br /><p>“<font style="BACKGROUND-COLOR: #d3d3d3" color="#ff1493"><strong><font color="#ff0000">Must</font></strong><font color="#0000ff">Override</font></font>”多容易理解啊<img height="19" src="/images/hbz_images/0a603e93-b2ed-47bf-86c0-ebbf83a0f832.png7" width="19" border="0"><br /></p>             
 
                     </div>
                 </section>
                 
-                <h1 class="content-subhead">07 Jul 2004</h1>
+                <h1 class="content-subhead">12 May 2005</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2004/07/07/cb-22127/" class="post-title">AspNet2.0的QuickStart出了</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2005/05/12/cb-154060/" class="post-title">从VB的语法理解 抽象方法</a>
 
                         <p class="post-meta">
                             
@@ -252,16 +161,48 @@
                     </header>
 
                     <div class="post-description">
-                        <p><a href="http://beta.asp.net/quickstart/aspnet/">http://beta.asp.net/quickstart/aspnet/</a><br />英文的</p>             
+                        <p> </p>
+<br /><p>C#中 abstract void MethodName(....<br /> <br />VB中 MustOverride Sub MethodName(....</p>
+<br /><p>“<font style="BACKGROUND-COLOR: #d3d3d3" color="#ff1493"><strong><font color="#ff0000">Must</font></strong><font color="#0000ff">Override</font></font>”多容易理解啊<img height="19" src="/images/hbz_images/0a603e93-b2ed-47bf-86c0-ebbf83a0f832.png7" width="19" border="0"><br /></p>             
 
                     </div>
                 </section>
                 
-                <h1 class="content-subhead">15 Jun 2004</h1>
+                <h1 class="content-subhead">14 Apr 2005</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2004/06/15/cb-15786/" class="post-title">项目的发布的方法</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2005/04/14/cb-137712/" class="post-title">今天头又晕了</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                
+                                    <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
+                                
+                                    <a class="post-category post-category-.Net其他" href='/tags/.net%E5%85%B6%E4%BB%96'>.Net其他</a>
+                                
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p>写了如下代码，还跟踪了半个多小时，没找出来问题<img style="border: 0px;" src="/images/hbz_images/036aa5c2-64f8-4fe7-8ccc-983e17d8c364.gif" border="0" alt=""></p>
+<div style="padding-right: 5.4pt; padding-left: 5.4pt; background: #e6e6e6; padding-bottom: 4px; width: 98%; word-break: break-all; padding-top: 4px; border: windowtext 0.5pt solid;">
+<div>
+<span style="COLOR: #0000ff">if</span><span style="COLOR: #000000">(strCarId.StartsWith(</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000"><strong></span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">))<br />                                    </span><span id="Codehighlighter1_39_89_Closed_Text" style="BORDER-RIGHT: #808080 1px solid; BORDER-TOP: #808080 1px solid; DISPLAY: none; BORDER-LEFT: #808080 1px solid; BORDER-BOTTOM: #808080 1px solid; BACKGROUND-COLOR: #ffffff"> </span><span id="Codehighlighter1_39_89_Open_Text"><span style="COLOR: #000000">{<br />                                         strCarId.Replace(</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000"></strong></span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">,</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">U</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">);<br />                                    }</span></span><span style="COLOR: #000000"><br />                                    </span><span style="COLOR: #0000ff">else</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">if</span><span style="COLOR: #000000">(strCarId.StartsWith(</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000"><em></span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">))<br />                                    </span><span id="Codehighlighter1_143_192_Open_Text"><span style="COLOR: #000000">{<br />                                         strCarId.Replace(</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000"></em></span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">,</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">T</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">);<br />                                    }</span></span>
+</div>
+<p></p>
+</div></p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">24 Feb 2005</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2005/02/24/cb-108606/" class="post-title">1bu.com用的什么方法？</a>
 
                         <p class="post-meta">
                             
@@ -274,16 +215,16 @@
                     </header>
 
                     <div class="post-description">
-                        <p>在<a href="http://www.cnblogs.com/aierong/archive/2004/06/12/15264.aspx">http://www.cnblogs.com/aierong/archive/2004/06/12/15264.aspx</a><br />看到大家讨论关于项目的发布。<br />我们的做法是：<br /><font style="BACKGROUND-COLOR: #f5f5dc">如果您使用的是VS2003<br />那么<br />假设你的虚拟目录为WebApp1<br />位于C:\Inetpub\wwwroot\WebApp1<br />在你的电脑上新建一个虚拟目录<br />假设命名为WebApp2<br />位于C:\Inetpub\wwwroot\WebApp2<br />点击项目菜单---复制项目<br />在弹出的对话筐内选择目标项目文件夹<br />“http://localhost/WebApp2/”<br />web方法为(RadioButton)：文件共享<br />路径为“C:\Inetpub\wwwroot\WebApp2”<br />复制(RadioButton)为：<br />“仅限运行该应用程序所需的文件”<br />点击确定<br />就可以把需要发布的内容放到“C:\Inetpub\wwwroot\WebApp2”内<br /></font></p>               
+                        <p>http://www.cnblogs.com.1bu.com/<br />可以访问<br />某些论坛竟然都可以登录甚至回复帖子<br />如：<br /><a href="http://www.im286.com.1bu.com/viewthread.php?tid=817721&amp;extra=page%3D1">http://www.im286.com.1bu.com/viewthread.php?tid=817721&amp;extra=page%3D1</a><br />长次以往，1bu强奸了所有搜索引擎，先看看<br /><a href="http://www.baidu.com/s?wd=site%3A1bu.com&amp;cl=3">http://www.baidu.com/s?wd=site%3A1bu.com&amp;cl=3</a><br />神奇哦<img height="20" src="/images/hbz_images/4b94bd6c-01e6-4ad4-b64e-fe905bb6b3eb.png7" width="20" border="0"><img height="19" src="/images/hbz_images/4b94bd6c-01e6-4ad4-b64e-fe905bb6b3eb.png8" width="19" border="0">，据说这个是8U8弄的<br /><a href="http://www.im286.com/viewthread.php?tid=817711&amp;extra=page%3D1">http://www.im286.com/viewthread.php?tid=817711&amp;extra=page%3D1</a><br /><br />暂时放首页，吸引眼球讨论，谢谢！</p>             
 
                     </div>
                 </section>
                 
-                <h1 class="content-subhead">14 Jun 2004</h1>
+                <h1 class="content-subhead">16 Nov 2004</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2004/06/14/cb-15458/" class="post-title">ASP.NET Developer&#39;s Cookbook</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2004/11/16/dataformatstringincodebehind/" class="post-title">在Codebehind内动态设置显示内容的DataFormatString</a>
 
                         <p class="post-meta">
                             
@@ -298,16 +239,23 @@
                     </header>
 
                     <div class="post-description">
-                        <p align="justify">一个很系统的ASP.NET示例教程?lt;BR&gt;类似于QuickStart,但感觉详细的多?lt;BR&gt;可以象某些书一样起个名字－－“从入门到精通?lt;BR&gt;<a href="http://aspalliance.com/cookbook/default.aspx"><br /><font style="BACKGROUND-COLOR: #ffffff" color="#0033ff">ASP.NET Developer's Cookbook</font></a><br /><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=1"><font color="#0000cc">Chapter 1: Web Form Basics</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=2"><font color="#0000cc">Chapter 2: User Controls</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=3"><font color="#0000cc">Chapter 3: Custom Controls</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=4"><font color="#0000cc">Chapter 4: Caching</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=5"><font color="#0000cc">Chapter 5: Mobile Controls</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=6"><font color="#0000cc">Chapter 6: ASP.NET Application Configuration</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=7"><font color="#0000cc">Chapter 7: State Management</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=8"><font color="#0000cc">Chapter 8: Security</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=9"><font color="#0000cc">Chapter 9: Debugging and Error Handling</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=10"><font color="#0000cc">Chapter 10: Basic Data Operations with ADO.NET</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=11"><font color="#0000cc">Chapter 11: Working with DataReaders and DataSets</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=12"><font color="#0000cc">Chapter 12: XML</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=13"><font color="#0000cc">Chapter 13: Rendering Data with ASP.NET WebControls</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=14"><font color="#0000cc">Chapter 14: Working with Classes</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=15"><font color="#0000cc">Chapter 15: Manipulating Strings</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=16"><font color="#0000cc">Chapter 16: Working with Numbers, Dates, and Times</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=17"><font color="#0000cc">Chapter 17: Working with Files and Folders</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=18"><font color="#0000cc">Chapter 18: Working with Collections</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=19"><font color="#0000cc">Chapter 19: Web Services</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=20"><font color="#0000cc">Chapter 20: LDAP/ADSI Directory Services</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=21"><font color="#0000cc">Chapter 21: Internet Tasks and Techniques</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=22"><font color="#0000cc">Chapter 22: Generating and Manipulating Images</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=23"><font color="#0000cc">Chapter 23: Threading, Reflection, and CodeDOM</font></a></p>             
-
+                        <p>在DataGrid内控制单元格显示内容的格式，如时间格式的时候<br />如果AutoGenerateColumns=false<br />那么绑定列中设置 DataFormatString="{0:dd/mm/yyyy}" 就可以做到了<br />可是AutoGenerateColumns=true的时候,就不好办了<br />一个办法,可以在sql语句中使用convert或者cast函数转换一下。<br />我们正在做的一个项目中<br />有个动态查询功能,是根据用户选择的条件、需显示的字段来动态生成Sql语句(破坏了三层结构，不知道其他朋友如何做？)来查询的。<br />如果用Sql的函数将非常麻烦，我采用了如下方法，在后台绑定数据的时候设置内容格式。</p>
+<p>示例：</p>
+<div style="padding-right: 5.4pt; padding-left: 5.4pt; background: #e6e6e6; padding-bottom: 4px; width: 98%; word-break: break-all; padding-top: 4px; border: windowtext 0.5pt solid;">
+<div>
+<span style="COLOR: #000000; BACKGROUND-COLOR: #ffff00">&lt;%</span><span id="Codehighlighter1_2_35_Open_Text"><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">@ Page Language</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">=</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">"</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">C#</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">"</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> Debug</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">=</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">"</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">true</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">"</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> </span></span><span style="COLOR: #000000; BACKGROUND-COLOR: #ffff00">%&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #000000; BACKGROUND-COLOR: #ffff00">&lt;%</span><span id="Codehighlighter1_41_73_Open_Text"><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">@ Import Namespace</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">=</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">"</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">System.Data</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">"</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> </span></span><span style="COLOR: #000000; BACKGROUND-COLOR: #ffff00">%&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;!</span><span style="COLOR: #ff00ff">DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">html </span><span style="COLOR: #ff0000">xmlns</span><span style="COLOR: #0000ff">="http://www.w3.org/1999/xhtml"</span><span style="COLOR: #ff0000"> xml:lang</span><span style="COLOR: #0000ff">="gb2312"</span><span style="COLOR: #ff0000"> lang</span><span style="COLOR: #0000ff">="gb2312"</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">head</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">title</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"> AutoGenerateColumns为true时,在Codebehind内设置内容的DataFormatString </span><span style="COLOR: #0000ff">&lt;/</span><span style="COLOR: #800000">title</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">meta </span><span style="COLOR: #ff0000">http-equiv</span><span style="COLOR: #0000ff">="Content-Type"</span><span style="COLOR: #ff0000"> content</span><span style="COLOR: #0000ff">="text/html; charset=gb2312"</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">meta </span><span style="COLOR: #ff0000">name</span><span style="COLOR: #0000ff">="title"</span><span style="COLOR: #ff0000"> content</span><span style="COLOR: #0000ff">=""</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">meta </span><span style="COLOR: #ff0000">name</span><span style="COLOR: #0000ff">="author"</span><span style="COLOR: #ff0000"> content</span><span style="COLOR: #0000ff">="活靶子,Huobazi,www.AspxBoy.com"</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">meta </span><span style="COLOR: #ff0000">name</span><span style="COLOR: #0000ff">="subject"</span><span style="COLOR: #ff0000"> content</span><span style="COLOR: #0000ff">=""</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">meta </span><span style="COLOR: #ff0000">name</span><span style="COLOR: #0000ff">="language"</span><span style="COLOR: #ff0000"> content</span><span style="COLOR: #0000ff">="gb2312"</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">meta </span><span style="COLOR: #ff0000">name</span><span style="COLOR: #0000ff">="keywords"</span><span style="COLOR: #ff0000"> content</span><span style="COLOR: #0000ff">=""</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">meta </span><span style="COLOR: #ff0000">name</span><span style="COLOR: #0000ff">="Copyright"</span><span style="COLOR: #ff0000"> content</span><span style="COLOR: #0000ff">="www.AspxBoy.com"</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">meta </span><span style="COLOR: #ff0000">name</span><span style="COLOR: #0000ff">="robots"</span><span style="COLOR: #ff0000"> content</span><span style="COLOR: #0000ff">="all"</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">script </span><span style="COLOR: #ff0000">language</span><span style="COLOR: #0000ff">="c#"</span><span style="COLOR: #ff0000"> runat</span><span style="COLOR: #0000ff">="server"</span><span style="COLOR: #0000ff">&gt;</span><span id="Codehighlighter1_763_2162_Open_Text"><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"><br /></span><span style="COLOR: #0000ff; BACKGROUND-COLOR: #f5f5f5">void</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> BindGrid()<br /></span><span id="Codehighlighter1_780_1285_Open_Text"><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">{<br />        DataTable dt </span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">=</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> </span><span style="COLOR: #0000ff; BACKGROUND-COLOR: #f5f5f5">new</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> DataTable();<br />        DataRow dr;<br />        dt.Columns.Add(</span><span style="COLOR: #0000ff; BACKGROUND-COLOR: #f5f5f5">new</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> DataColumn(</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">"</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">我是日期</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">"</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">, </span><span style="COLOR: #0000ff; BACKGROUND-COLOR: #f5f5f5">typeof</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">(DateTime)));<br />        dt.Columns.Add(</span><span style="COLOR: #0000ff; BACKGROUND-COLOR: #f5f5f5">new</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> DataColumn(</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">"</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">俺也是日期</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">"</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">, </span><span style="COLOR: #0000ff; BACKGROUND-COLOR: #f5f5f5">typeof</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">(DateTime))); <br />        dt.Columns.Add(</span><span style="COLOR: #0000ff; BACKGROUND-COLOR: #f5f5f5">new</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> DataColumn(</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">"</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">偶也是日期啊,怎么我还带着时间?</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">"</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">,</span><span style="COLOR: #0000ff; BACKGROUND-COLOR: #f5f5f5">typeof</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">(DateTime)));<br />        </span><span style="COLOR: #0000ff; BACKGROUND-COLOR: #f5f5f5">for</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> (</span><span style="COLOR: #0000ff; BACKGROUND-COLOR: #f5f5f5">int</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> i </span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">=</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> </span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">0</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">; i </span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">&lt;</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> </span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">10</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">; i</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">++</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">) <br />        </span><span id="Codehighlighter1_1081_1245_Open_Text"><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">{<br />            dr </span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">=</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> dt.NewRow();<br />            dr[</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">0</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">] </span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">=</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> DateTime.Now;<br />            dr[</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">1</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">] </span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">=</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> DateTime.Now;<br />            dr[</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">2</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">] </span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">=</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> DateTime.Now;  <br />            dt.Rows.Add(dr);<br />        }</span></span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"><br />        dg.DataSource</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">=</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> dt;<br />        dg.DataBind();<br />}</span></span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"><br /></span><span style="COLOR: #0000ff; BACKGROUND-COLOR: #f5f5f5">void</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> Page_Load(object o, EventArgs e)<br /></span><span id="Codehighlighter1_1325_1364_Open_Text"><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">{<br />    </span><span style="COLOR: #0000ff; BACKGROUND-COLOR: #f5f5f5">if</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">(</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">!</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">IsPostBack)<br />    </span><span id="Codehighlighter1_1345_1362_Open_Text"><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">{<br />        BindGrid();<br />    }</span></span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"><br />}</span></span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"><br /></span><span style="COLOR: #0000ff; BACKGROUND-COLOR: #f5f5f5">void</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> ItemDataBound(object o , DataGridItemEventArgs e)<br /></span><span id="Codehighlighter1_1421_2161_Open_Text"><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">{<br />    </span><span style="COLOR: #0000ff; BACKGROUND-COLOR: #f5f5f5">if</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">(e.Item.ItemType</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">==</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">ListItemType.Item </span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">||</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">e.Item.ItemType</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">==</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">ListItemType.AlternatingItem )<br />    </span><span id="Codehighlighter1_1513_2159_Open_Text"><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">{<br />        DataRowView drv </span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">=</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> (DataRowView)e.Item.DataItem;<br />        </span><span style="COLOR: #0000ff; BACKGROUND-COLOR: #f5f5f5">for</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">(</span><span style="COLOR: #0000ff; BACKGROUND-COLOR: #f5f5f5">int</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> i</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">=</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">0</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">;i</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">&lt;</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">e.Item.Cells.Count;i</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">++</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">)<br />        </span><span id="Codehighlighter1_1607_2156_Open_Text"><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">{     <br />            e.Item.Cells[i].Wrap </span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">=</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">    </span><span style="COLOR: #0000ff; BACKGROUND-COLOR: #f5f5f5">false</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">;<br />            string columnName</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">=</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">drv.Row.Table.Columns[i].ColumnName;<br />            </span><span style="COLOR: #0000ff; BACKGROUND-COLOR: #f5f5f5">if</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">( columnName.StartsWith(</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">"</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">我</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">"</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">) )<br />            </span><span id="Codehighlighter1_1741_1928_Open_Text"><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">{<br />                e.Item.Cells[i].Text </span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">=</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> ((DateTime)drv[columnName]).ToString(</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">"</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">yyyy-MM-dd</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">"</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">);<br />                </span><span style="COLOR: #008000; BACKGROUND-COLOR: #f5f5f5">//</span><span style="COLOR: #008000; BACKGROUND-COLOR: #f5f5f5">也可以这样</span><span style="COLOR: #008000; BACKGROUND-COLOR: #f5f5f5"><br /></span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">                </span><span style="COLOR: #008000; BACKGROUND-COLOR: #f5f5f5">//</span><span style="COLOR: #008000; BACKGROUND-COLOR: #f5f5f5">e.Item.Cells[i].Text = DataBinder.Eval(e.Item.DataItem,columnName,"{0:yyyy-MM-dd}");</span><span style="COLOR: #008000; BACKGROUND-COLOR: #f5f5f5"><br /></span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">            }</span></span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"><br />            </span><span style="COLOR: #0000ff; BACKGROUND-COLOR: #f5f5f5">if</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">( columnName.StartsWith(</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">"</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">俺</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">"</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">) )<br />            </span><span id="Codehighlighter1_1969_2152_Open_Text"><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">{<br />                e.Item.Cells[i].Text </span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">=</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> ((DateTime)drv[columnName]).ToString(</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">"</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">dd/MM/yy</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">"</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">);<br />                </span><span style="COLOR: #008000; BACKGROUND-COLOR: #f5f5f5">//</span><span style="COLOR: #008000; BACKGROUND-COLOR: #f5f5f5">也可以这样</span><span style="COLOR: #008000; BACKGROUND-COLOR: #f5f5f5"><br /></span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">                </span><span style="COLOR: #008000; BACKGROUND-COLOR: #f5f5f5">//</span><span style="COLOR: #008000; BACKGROUND-COLOR: #f5f5f5">e.Item.Cells[i].Text = DataBinder.Eval(e.Item.DataItem,columnName,"{0:yy-MM-dd}");</span><span style="COLOR: #008000; BACKGROUND-COLOR: #f5f5f5"><br /></span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">            }</span></span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"><br />        }</span></span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"><br />    }</span></span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"><br />}</span></span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"><br /></span></span><span style="COLOR: #0000ff">&lt;/</span><span style="COLOR: #800000">script</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;/</span><span style="COLOR: #800000">head</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">body</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">form </span><span style="COLOR: #ff0000">runat</span><span style="COLOR: #0000ff">="server"</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"><br />        </span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">ASP:DataGrid </span><span style="COLOR: #ff0000">id</span><span style="COLOR: #0000ff">="dg"</span><span style="COLOR: #ff0000"> runat</span><span style="COLOR: #0000ff">="server"</span><span style="COLOR: #ff0000">       <br />            HeaderStyle-BackColor</span><span style="COLOR: #0000ff">="#aaaadd"</span><span style="COLOR: #ff0000"><br />            AutoGenerateColumns</span><span style="COLOR: #0000ff">="true"</span><span style="COLOR: #ff0000"><br />            OnItemDataBound</span><span style="COLOR: #0000ff">="ItemDataBound"</span><span style="COLOR: #ff0000"><br />            Width</span><span style="COLOR: #0000ff">="100%"</span><span style="COLOR: #ff0000"><br />        </span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"><br />        </span><span style="COLOR: #0000ff">&lt;/</span><span style="COLOR: #800000">asp:DataGrid</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000">        <br /></span><span style="COLOR: #0000ff">&lt;/</span><span style="COLOR: #800000">form</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;/</span><span style="COLOR: #800000">body</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;/</span><span style="COLOR: #800000">html</span><span style="COLOR: #0000ff">&gt;</span>
+</div>
+<p></p>
+</div>
+<br /> <p><a href="http://www.aspxboy.com/Files/71/66/285.Aspx">http://www.aspxboy.com/Files/71/66/285.Aspx</a></p>
                     </div>
                 </section>
                 
-                <h1 class="content-subhead">14 Jun 2004</h1>
+                <h1 class="content-subhead">16 Nov 2004</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2004/06/14/cb-15458/" class="post-title">ASP.NET Developer&#39;s Cookbook</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2004/11/16/dataformatstringincodebehind/" class="post-title">在Codebehind内动态设置显示内容的DataFormatString</a>
 
                         <p class="post-meta">
                             
@@ -322,16 +270,23 @@
                     </header>
 
                     <div class="post-description">
-                        <p align="justify">一个很系统的ASP.NET示例教程?lt;BR&gt;类似于QuickStart,但感觉详细的多?lt;BR&gt;可以象某些书一样起个名字－－“从入门到精通?lt;BR&gt;<a href="http://aspalliance.com/cookbook/default.aspx"><br /><font style="BACKGROUND-COLOR: #ffffff" color="#0033ff">ASP.NET Developer's Cookbook</font></a><br /><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=1"><font color="#0000cc">Chapter 1: Web Form Basics</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=2"><font color="#0000cc">Chapter 2: User Controls</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=3"><font color="#0000cc">Chapter 3: Custom Controls</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=4"><font color="#0000cc">Chapter 4: Caching</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=5"><font color="#0000cc">Chapter 5: Mobile Controls</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=6"><font color="#0000cc">Chapter 6: ASP.NET Application Configuration</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=7"><font color="#0000cc">Chapter 7: State Management</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=8"><font color="#0000cc">Chapter 8: Security</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=9"><font color="#0000cc">Chapter 9: Debugging and Error Handling</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=10"><font color="#0000cc">Chapter 10: Basic Data Operations with ADO.NET</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=11"><font color="#0000cc">Chapter 11: Working with DataReaders and DataSets</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=12"><font color="#0000cc">Chapter 12: XML</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=13"><font color="#0000cc">Chapter 13: Rendering Data with ASP.NET WebControls</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=14"><font color="#0000cc">Chapter 14: Working with Classes</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=15"><font color="#0000cc">Chapter 15: Manipulating Strings</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=16"><font color="#0000cc">Chapter 16: Working with Numbers, Dates, and Times</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=17"><font color="#0000cc">Chapter 17: Working with Files and Folders</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=18"><font color="#0000cc">Chapter 18: Working with Collections</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=19"><font color="#0000cc">Chapter 19: Web Services</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=20"><font color="#0000cc">Chapter 20: LDAP/ADSI Directory Services</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=21"><font color="#0000cc">Chapter 21: Internet Tasks and Techniques</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=22"><font color="#0000cc">Chapter 22: Generating and Manipulating Images</font></a><br /><a href="http://aspalliance.com/cookbook/ViewChapter.aspx?Chapter=23"><font color="#0000cc">Chapter 23: Threading, Reflection, and CodeDOM</font></a></p>             
-
+                        <p>在DataGrid内控制单元格显示内容的格式，如时间格式的时候<br />如果AutoGenerateColumns=false<br />那么绑定列中设置 DataFormatString="{0:dd/mm/yyyy}" 就可以做到了<br />可是AutoGenerateColumns=true的时候,就不好办了<br />一个办法,可以在sql语句中使用convert或者cast函数转换一下。<br />我们正在做的一个项目中<br />有个动态查询功能,是根据用户选择的条件、需显示的字段来动态生成Sql语句(破坏了三层结构，不知道其他朋友如何做？)来查询的。<br />如果用Sql的函数将非常麻烦，我采用了如下方法，在后台绑定数据的时候设置内容格式。</p>
+<p>示例：</p>
+<div style="padding-right: 5.4pt; padding-left: 5.4pt; background: #e6e6e6; padding-bottom: 4px; width: 98%; word-break: break-all; padding-top: 4px; border: windowtext 0.5pt solid;">
+<div>
+<span style="COLOR: #000000; BACKGROUND-COLOR: #ffff00">&lt;%</span><span id="Codehighlighter1_2_35_Open_Text"><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">@ Page Language</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">=</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">"</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">C#</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">"</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> Debug</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">=</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">"</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">true</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">"</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> </span></span><span style="COLOR: #000000; BACKGROUND-COLOR: #ffff00">%&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #000000; BACKGROUND-COLOR: #ffff00">&lt;%</span><span id="Codehighlighter1_41_73_Open_Text"><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">@ Import Namespace</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">=</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">"</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">System.Data</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">"</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> </span></span><span style="COLOR: #000000; BACKGROUND-COLOR: #ffff00">%&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;!</span><span style="COLOR: #ff00ff">DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">html </span><span style="COLOR: #ff0000">xmlns</span><span style="COLOR: #0000ff">="http://www.w3.org/1999/xhtml"</span><span style="COLOR: #ff0000"> xml:lang</span><span style="COLOR: #0000ff">="gb2312"</span><span style="COLOR: #ff0000"> lang</span><span style="COLOR: #0000ff">="gb2312"</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">head</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">title</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"> AutoGenerateColumns为true时,在Codebehind内设置内容的DataFormatString </span><span style="COLOR: #0000ff">&lt;/</span><span style="COLOR: #800000">title</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">meta </span><span style="COLOR: #ff0000">http-equiv</span><span style="COLOR: #0000ff">="Content-Type"</span><span style="COLOR: #ff0000"> content</span><span style="COLOR: #0000ff">="text/html; charset=gb2312"</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">meta </span><span style="COLOR: #ff0000">name</span><span style="COLOR: #0000ff">="title"</span><span style="COLOR: #ff0000"> content</span><span style="COLOR: #0000ff">=""</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">meta </span><span style="COLOR: #ff0000">name</span><span style="COLOR: #0000ff">="author"</span><span style="COLOR: #ff0000"> content</span><span style="COLOR: #0000ff">="活靶子,Huobazi,www.AspxBoy.com"</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">meta </span><span style="COLOR: #ff0000">name</span><span style="COLOR: #0000ff">="subject"</span><span style="COLOR: #ff0000"> content</span><span style="COLOR: #0000ff">=""</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">meta </span><span style="COLOR: #ff0000">name</span><span style="COLOR: #0000ff">="language"</span><span style="COLOR: #ff0000"> content</span><span style="COLOR: #0000ff">="gb2312"</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">meta </span><span style="COLOR: #ff0000">name</span><span style="COLOR: #0000ff">="keywords"</span><span style="COLOR: #ff0000"> content</span><span style="COLOR: #0000ff">=""</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">meta </span><span style="COLOR: #ff0000">name</span><span style="COLOR: #0000ff">="Copyright"</span><span style="COLOR: #ff0000"> content</span><span style="COLOR: #0000ff">="www.AspxBoy.com"</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">meta </span><span style="COLOR: #ff0000">name</span><span style="COLOR: #0000ff">="robots"</span><span style="COLOR: #ff0000"> content</span><span style="COLOR: #0000ff">="all"</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">script </span><span style="COLOR: #ff0000">language</span><span style="COLOR: #0000ff">="c#"</span><span style="COLOR: #ff0000"> runat</span><span style="COLOR: #0000ff">="server"</span><span style="COLOR: #0000ff">&gt;</span><span id="Codehighlighter1_763_2162_Open_Text"><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"><br /></span><span style="COLOR: #0000ff; BACKGROUND-COLOR: #f5f5f5">void</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> BindGrid()<br /></span><span id="Codehighlighter1_780_1285_Open_Text"><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">{<br />        DataTable dt </span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">=</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> </span><span style="COLOR: #0000ff; BACKGROUND-COLOR: #f5f5f5">new</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> DataTable();<br />        DataRow dr;<br />        dt.Columns.Add(</span><span style="COLOR: #0000ff; BACKGROUND-COLOR: #f5f5f5">new</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> DataColumn(</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">"</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">我是日期</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">"</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">, </span><span style="COLOR: #0000ff; BACKGROUND-COLOR: #f5f5f5">typeof</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">(DateTime)));<br />        dt.Columns.Add(</span><span style="COLOR: #0000ff; BACKGROUND-COLOR: #f5f5f5">new</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> DataColumn(</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">"</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">俺也是日期</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">"</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">, </span><span style="COLOR: #0000ff; BACKGROUND-COLOR: #f5f5f5">typeof</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">(DateTime))); <br />        dt.Columns.Add(</span><span style="COLOR: #0000ff; BACKGROUND-COLOR: #f5f5f5">new</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> DataColumn(</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">"</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">偶也是日期啊,怎么我还带着时间?</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">"</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">,</span><span style="COLOR: #0000ff; BACKGROUND-COLOR: #f5f5f5">typeof</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">(DateTime)));<br />        </span><span style="COLOR: #0000ff; BACKGROUND-COLOR: #f5f5f5">for</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> (</span><span style="COLOR: #0000ff; BACKGROUND-COLOR: #f5f5f5">int</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> i </span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">=</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> </span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">0</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">; i </span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">&lt;</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> </span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">10</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">; i</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">++</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">) <br />        </span><span id="Codehighlighter1_1081_1245_Open_Text"><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">{<br />            dr </span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">=</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> dt.NewRow();<br />            dr[</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">0</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">] </span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">=</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> DateTime.Now;<br />            dr[</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">1</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">] </span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">=</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> DateTime.Now;<br />            dr[</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">2</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">] </span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">=</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> DateTime.Now;  <br />            dt.Rows.Add(dr);<br />        }</span></span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"><br />        dg.DataSource</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">=</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> dt;<br />        dg.DataBind();<br />}</span></span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"><br /></span><span style="COLOR: #0000ff; BACKGROUND-COLOR: #f5f5f5">void</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> Page_Load(object o, EventArgs e)<br /></span><span id="Codehighlighter1_1325_1364_Open_Text"><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">{<br />    </span><span style="COLOR: #0000ff; BACKGROUND-COLOR: #f5f5f5">if</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">(</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">!</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">IsPostBack)<br />    </span><span id="Codehighlighter1_1345_1362_Open_Text"><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">{<br />        BindGrid();<br />    }</span></span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"><br />}</span></span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"><br /></span><span style="COLOR: #0000ff; BACKGROUND-COLOR: #f5f5f5">void</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> ItemDataBound(object o , DataGridItemEventArgs e)<br /></span><span id="Codehighlighter1_1421_2161_Open_Text"><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">{<br />    </span><span style="COLOR: #0000ff; BACKGROUND-COLOR: #f5f5f5">if</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">(e.Item.ItemType</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">==</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">ListItemType.Item </span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">||</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">e.Item.ItemType</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">==</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">ListItemType.AlternatingItem )<br />    </span><span id="Codehighlighter1_1513_2159_Open_Text"><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">{<br />        DataRowView drv </span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">=</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> (DataRowView)e.Item.DataItem;<br />        </span><span style="COLOR: #0000ff; BACKGROUND-COLOR: #f5f5f5">for</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">(</span><span style="COLOR: #0000ff; BACKGROUND-COLOR: #f5f5f5">int</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> i</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">=</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">0</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">;i</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">&lt;</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">e.Item.Cells.Count;i</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">++</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">)<br />        </span><span id="Codehighlighter1_1607_2156_Open_Text"><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">{     <br />            e.Item.Cells[i].Wrap </span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">=</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">    </span><span style="COLOR: #0000ff; BACKGROUND-COLOR: #f5f5f5">false</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">;<br />            string columnName</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">=</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">drv.Row.Table.Columns[i].ColumnName;<br />            </span><span style="COLOR: #0000ff; BACKGROUND-COLOR: #f5f5f5">if</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">( columnName.StartsWith(</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">"</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">我</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">"</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">) )<br />            </span><span id="Codehighlighter1_1741_1928_Open_Text"><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">{<br />                e.Item.Cells[i].Text </span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">=</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> ((DateTime)drv[columnName]).ToString(</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">"</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">yyyy-MM-dd</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">"</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">);<br />                </span><span style="COLOR: #008000; BACKGROUND-COLOR: #f5f5f5">//</span><span style="COLOR: #008000; BACKGROUND-COLOR: #f5f5f5">也可以这样</span><span style="COLOR: #008000; BACKGROUND-COLOR: #f5f5f5"><br /></span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">                </span><span style="COLOR: #008000; BACKGROUND-COLOR: #f5f5f5">//</span><span style="COLOR: #008000; BACKGROUND-COLOR: #f5f5f5">e.Item.Cells[i].Text = DataBinder.Eval(e.Item.DataItem,columnName,"{0:yyyy-MM-dd}");</span><span style="COLOR: #008000; BACKGROUND-COLOR: #f5f5f5"><br /></span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">            }</span></span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"><br />            </span><span style="COLOR: #0000ff; BACKGROUND-COLOR: #f5f5f5">if</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">( columnName.StartsWith(</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">"</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">俺</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">"</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">) )<br />            </span><span id="Codehighlighter1_1969_2152_Open_Text"><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">{<br />                e.Item.Cells[i].Text </span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">=</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"> ((DateTime)drv[columnName]).ToString(</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">"</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">dd/MM/yy</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">"</span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">);<br />                </span><span style="COLOR: #008000; BACKGROUND-COLOR: #f5f5f5">//</span><span style="COLOR: #008000; BACKGROUND-COLOR: #f5f5f5">也可以这样</span><span style="COLOR: #008000; BACKGROUND-COLOR: #f5f5f5"><br /></span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">                </span><span style="COLOR: #008000; BACKGROUND-COLOR: #f5f5f5">//</span><span style="COLOR: #008000; BACKGROUND-COLOR: #f5f5f5">e.Item.Cells[i].Text = DataBinder.Eval(e.Item.DataItem,columnName,"{0:yy-MM-dd}");</span><span style="COLOR: #008000; BACKGROUND-COLOR: #f5f5f5"><br /></span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5">            }</span></span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"><br />        }</span></span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"><br />    }</span></span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"><br />}</span></span><span style="COLOR: #000000; BACKGROUND-COLOR: #f5f5f5"><br /></span></span><span style="COLOR: #0000ff">&lt;/</span><span style="COLOR: #800000">script</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;/</span><span style="COLOR: #800000">head</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">body</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">form </span><span style="COLOR: #ff0000">runat</span><span style="COLOR: #0000ff">="server"</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"><br />        </span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">ASP:DataGrid </span><span style="COLOR: #ff0000">id</span><span style="COLOR: #0000ff">="dg"</span><span style="COLOR: #ff0000"> runat</span><span style="COLOR: #0000ff">="server"</span><span style="COLOR: #ff0000">       <br />            HeaderStyle-BackColor</span><span style="COLOR: #0000ff">="#aaaadd"</span><span style="COLOR: #ff0000"><br />            AutoGenerateColumns</span><span style="COLOR: #0000ff">="true"</span><span style="COLOR: #ff0000"><br />            OnItemDataBound</span><span style="COLOR: #0000ff">="ItemDataBound"</span><span style="COLOR: #ff0000"><br />            Width</span><span style="COLOR: #0000ff">="100%"</span><span style="COLOR: #ff0000"><br />        </span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"><br />        </span><span style="COLOR: #0000ff">&lt;/</span><span style="COLOR: #800000">asp:DataGrid</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000">        <br /></span><span style="COLOR: #0000ff">&lt;/</span><span style="COLOR: #800000">form</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;/</span><span style="COLOR: #800000">body</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #0000ff">&lt;/</span><span style="COLOR: #800000">html</span><span style="COLOR: #0000ff">&gt;</span>
+</div>
+<p></p>
+</div>
+<br /> <p><a href="http://www.aspxboy.com/Files/71/66/285.Aspx">http://www.aspxboy.com/Files/71/66/285.Aspx</a></p>
                     </div>
                 </section>
                 
-                <h1 class="content-subhead">14 Jun 2004</h1>
+                <h1 class="content-subhead">30 Sep 2004</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2004/06/14/cb-15450/" class="post-title">一个有关水晶报表的Blog</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2004/09/30/verifyemailwebservice/" class="post-title">检测email地址是否存在的Web Service</a>
 
                         <p class="post-meta">
                             
@@ -339,23 +294,23 @@
                                 
                                     <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
                                 
-                                    <a class="post-category post-category-水晶报表" href='/tags/%E6%B0%B4%E6%99%B6%E6%8A%A5%E8%A1%A8'>水晶报表</a>
+                                    <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
                                 
                             
                         </p>
                     </header>
 
                     <div class="post-description">
-                        <p><a href="http://blogs.aspadvice.com/crystal/">http://blogs.aspadvice.com/crystal/</a><br />有很多的faq，很实用的技巧。</p>               
+                        <p>检测email地址是否存在的Web Service<a href="http://ws.cdyne.com/emailverify/ev.asmx?op=VerifyEmail"><br />http://ws.cdyne.com/emailverify/ev.asmx?op=VerifyEmail</a></p>               
 
                     </div>
                 </section>
                 
-                <h1 class="content-subhead">07 Jun 2004</h1>
+                <h1 class="content-subhead">30 Sep 2004</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2004/06/07/cb-13934/" class="post-title">C-omega语言什么东东？</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2004/09/30/verifyemailwebservice/" class="post-title">检测email地址是否存在的Web Service</a>
 
                         <p class="post-meta">
                             
@@ -363,12 +318,66 @@
                                 
                                     <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
                                 
+                                    <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
+                                
                             
                         </p>
                     </header>
 
                     <div class="post-description">
-                        <p>谁研究过？<br />和DotNet什么关系？<br />好像是C#的扩展<a href="http://research.microsoft.com/Comega/"><br />http://research.microsoft.com/Comega/</a></p>             
+                        <p>检测email地址是否存在的Web Service<a href="http://ws.cdyne.com/emailverify/ev.asmx?op=VerifyEmail"><br />http://ws.cdyne.com/emailverify/ev.asmx?op=VerifyEmail</a></p>               
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">20 Sep 2004</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2004/09/20/cb-44837/" class="post-title">验证控件中显示的信息要换行竟然要用“&#34; 啊</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                
+                                    <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
+                                
+                                    <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
+                                
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p>如果在javascript内<br />要用alert显示换行的信息则</p>
+<div style="padding-right: 5.4pt; padding-left: 5.4pt; background: #e6e6e6; padding-bottom: 4px; width: 98%; padding-top: 4px; border: windowtext 0.5pt solid;">
+<div>
+<span style="COLOR: #000000">&lt;</span><span style="COLOR: #000000">script language</span><span style="COLOR: #000000">=</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">javascript</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">&gt;</span><span style="COLOR: #000000"><br />alert(</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">1 2 3</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">)<br /></span><span style="COLOR: #000000">&lt;/</span><span style="COLOR: #000000">script</span><span style="COLOR: #000000">&gt;</span>
+</div>
+<p></p>
+</div>
+<br />今天我想RegularExpressionValidator的错误信息ValidationSummary被显示用MessageBox方式显示的时候<br />随手写下了ErrorMessage=&ldquo;电话号码格式不正确！\r\n 正确的格式是8为数字&rdquo;<div style="padding-right: 5.4pt; padding-left: 5.4pt; background: #e6e6e6; padding-bottom: 4px; width: 98%; padding-top: 4px; border: windowtext 0.5pt solid;">
+<div>
+<span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">asp:RegularExpressionValidator </span><span style="COLOR: #ff0000">id</span><span style="COLOR: #0000ff">=&ldquo;RegularExpressionValidator1&rdquo;</span><span style="COLOR: #ff0000"> runat</span><span style="COLOR: #0000ff">=&ldquo;server&rdquo;</span><span style="COLOR: #ff0000"> ErrorMessage</span><span style="COLOR: #0000ff">=&ldquo;电话号码格式不正确！  正确的格式是8为数字&rdquo;</span><span style="COLOR: #ff0000"><br />                                ValidationExpression</span><span style="COLOR: #0000ff">=&ldquo;<sup class="footnote-ref" id="fnref:1-9"><a href="#fn:1-9">1</a></sup>{1}d{7}$&rdquo;</span><span style="COLOR: #ff0000"> ControlToValidate</span><span style="COLOR: #0000ff">=&ldquo;box_danweiTelephone&rdquo;</span><span style="COLOR: #ff0000"> Display</span><span style="COLOR: #0000ff">=&ldquo;Dynamic&rdquo;</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"><em></span><span style="COLOR: #0000ff">&lt;/</span><span style="COLOR: #800000">asp:RegularExpressionValidator</span><span style="COLOR: #0000ff">&gt;</span>
+</div>
+<p></p>
+</div>
+<br />“\r\n”竟然被原样显示了<br />改为<div style="padding-right: 5.4pt; padding-left: 5.4pt; background: #e6e6e6; padding-bottom: 4px; width: 98%; padding-top: 4px; border: windowtext 0.5pt solid;">
+<div>
+<span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">asp:RegularExpressionValidator </span><span style="COLOR: #ff0000">id</span><span style="COLOR: #0000ff">=&ldquo;RegularExpressionValidator1&rdquo;</span><span style="COLOR: #ff0000"> runat</span><span style="COLOR: #0000ff">=&ldquo;server&rdquo;</span><span style="COLOR: #ff0000"> ErrorMessage</span><span style="COLOR: #0000ff">=&ldquo;电话号码格式不正确！&lt;br&gt; 正确的格式是8为数字&rdquo;</span><span style="COLOR: #ff0000"><br />                                ValidationExpression</span><span style="COLOR: #0000ff">=&ldquo;<sup class="footnote-ref" id="fnref:1-9"><a href="#fn:1-9">2</a></sup>{1}d{7}$&rdquo;</span><span style="COLOR: #ff0000"> ControlToValidate</span><span style="COLOR: #0000ff">=&ldquo;box_danweiTelephone&rdquo;</span><span style="COLOR: #ff0000"> Display</span><span style="COLOR: #0000ff">=&ldquo;Dynamic&rdquo;</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"></em></span><span style="COLOR: #0000ff">&lt;/</span><span style="COLOR: #800000">asp:RegularExpressionValidator</span><span style="COLOR: #0000ff">&gt;</span>
+</div>
+<p></p>
+</div>
+<br />居然可以了 真是有点想不通哦</p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1-9">1-9 <a class="footnote-return" href="#fnref:1-9"><sup>[return]</sup></a></li>
+<li id="fn:1-9">1-9 <a class="footnote-return" href="#fnref:1-9"><sup>[return]</sup></a></li>
+</ol>
+</div>
 
                     </div>
                 </section>
@@ -382,7 +391,7 @@
         <i class="fa fa-angle-double-left"></i>&nbsp;Newer
       </a>
       
-    <span class="post-list-pagination-item post-list-pagination-item-current">Page 12 of 16</span>
+    <span class="post-list-pagination-item post-list-pagination-item-current">Page 12 of 19</span>
     
       <a href="/tags/asp.net/page/13/" class="post-list-pagination-item pure-button post-list-pagination-item-next">
         Older&nbsp;<i class="fa fa-angle-double-right"></i>

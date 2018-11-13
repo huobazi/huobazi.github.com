@@ -424,82 +424,12 @@
                     </div>
                 </section>
                 
-                <h1 class="content-subhead">09 Dec 2009</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="https://huobazi.aspxboy.com/blog/2009/12/09/chang-sql-table-field-default/" class="post-title">使用SQL语句更改数据表的默认值</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                
-                                    <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
-                                
-                                    <a class="post-category post-category-代码片段" href='/tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5'>代码片段</a>
-                                
-                                    <a class="post-category post-category-SQL" href='/tags/sql'>SQL</a>
-                                
-                                    <a class="post-category post-category-Server" href='/tags/server'>Server</a>
-                                
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p><p>以前还真没这么干过，都是手工去掉约束，再添加的，今天一边google一边搞啊搞啊的，最终下面这个脚本可以用了</p>
-<p></p>
-
-<p></p>
-<div class="source" style='font-family: "Consolas","Lucida Console","Courier New"; color: #ffffff; background-color: #333333;'>
-<p><span style="color: #f0e68c;">alter</span> <span style="color: #f0e68c;">table</span> <span style="color: #ffffff;">dbo</span><span style="color: #ffffff;">.</span><span style="color: #ffffff;">SOTransaction</span><br />    <span style="color: #f0e68c;">alter</span> <span style="color: #f0e68c;">column</span> <span style="color: #ffffff;">UnitCostWithoutTax</span> <span style="color: #ffffff;">decimal</span>(<span style="color: #ffffff;">10</span><span style="color: #ffffff;">,</span> <span style="color: #ffffff;">2</span>)  <span style="color: #f0e68c;">not</span> <span style="color: #f0e68c;">null</span></p>
-<p><span style="color: #f0e68c;">go</span></p>
-<p><span style="color: #f0e68c;">declare</span> <span style="color: #ffffff;">@</span><span style="color: #ffffff;">name</span> <span style="color: #ffffff;">varchar</span>(<span style="color: #ffffff;">1000</span>)<br /><span style="color: #f0e68c;">declare</span> <span style="color: #ffffff;">@</span><span style="color: #ffffff;">tablename</span> <span style="color: #ffffff;">varchar</span>(<span style="color: #ffffff;">1000</span>)<br /><span style="color: #f0e68c;">declare</span> <span style="color: #ffffff;">@</span><span style="color: #ffffff;">fieldname</span> <span style="color: #ffffff;">varchar</span>(<span style="color: #ffffff;">1000</span>)</p>
-<p><span style="color: #f0e68c;">set</span> <span style="color: #ffffff;">@</span><span style="color: #ffffff;">tablename</span> <span style="color: #ffffff;">=</span> <span style="color: #ffffff;">&lsquo;SOTransaction&rsquo;</span>;<br /><span style="color: #f0e68c;">set</span> <span style="color: #ffffff;">@</span><span style="color: #ffffff;">fieldname</span> <span style="color: #ffffff;">=</span> <span style="color: #ffffff;">&lsquo;UnitCostWithoutTax&rsquo;</span>;</p>
-<p><span style="color: #f0e68c;">select</span> <span style="color: #ffffff;">@</span><span style="color: #ffffff;">name</span> <span style="color: #ffffff;">=</span> b<span style="color: #ffffff;">.</span><span style="color: #ffffff;">name</span> <span style="color: #f0e68c;">from</span> <span style="color: #ffffff;">syscolumns</span> <span style="color: #ffffff;">a</span> <span style="color: #f0e68c;">inner</span> <span style="color: #f0e68c;">join</span> <span style="color: #ffffff;">sysobjects</span> b<br />    <span style="color: #f0e68c;">on</span> b<span style="color: #ffffff;">.</span><span style="color: #ffffff;">id</span><span style="color: #ffffff;">=</span><span style="color: #ffffff;">a</span><span style="color: #ffffff;">.</span><span style="color: #ffffff;">cdefault</span><br /><span style="color: #f0e68c;">where</span><br />    <span style="color: #ffffff;">a</span><span style="color: #ffffff;">.</span><span style="color: #ffffff;">id</span><span style="color: #ffffff;">=</span> <span style="color: #ffffff;">object_id</span>(<span style="color: #ffffff;">@</span><span style="color: #ffffff;">tablename</span>)<br />    <span style="color: #f0e68c;">and</span> <span style="color: #ffffff;">a</span><span style="color: #ffffff;">.</span><span style="color: #ffffff;">name</span><span style="color: #ffffff;">=@</span><span style="color: #ffffff;">fieldname</span><br />    <span style="color: #f0e68c;">and</span> b<span style="color: #ffffff;">.</span><span style="color: #ffffff;">name</span> <span style="color: #f0e68c;">like</span> <span style="color: #ffffff;">&lsquo;DF%&rsquo;</span><br /><span style="color: #87ceeb;">&ndash;print @name</span></p>
-<p><span style="color: #f0e68c;">exec</span>(<span style="color: #ffffff;">&rsquo; alter table SOTransaction drop constraint &lsquo;</span> <span style="color: #ffffff;">+</span> <span style="color: #ffffff;">@</span><span style="color: #ffffff;">name</span>);<br /><span style="color: #f0e68c;">go</span><br /><span style="color: #f0e68c;">alter</span> <span style="color: #f0e68c;">table</span> <span style="color: #ffffff;">dbo</span><span style="color: #ffffff;">.</span><span style="color: #ffffff;">SOTransaction</span><br />    <span style="color: #f0e68c;">add</span> <span style="color: #f0e68c;">constraint</span> <span style="color: #ffffff;">DF_SOTransaction_UnitCostWithoutTax</span> <span style="color: #f0e68c;">default</span> (<span style="color: #ffffff;">0</span>) <span style="color: #f0e68c;">for</span> <span style="color: #ffffff;">UnitCostWithoutTax</span></p>
-</div></p>
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">27 Oct 2009</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="https://huobazi.aspxboy.com/blog/2009/10/27/kissy-editor/" class="post-title">在线编辑器的一个新选择。</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                
-                                    <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
-                                
-                                    <a class="post-category post-category-前端开发" href='/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91'>前端开发</a>
-                                
-                                    <a class="post-category post-category-推荐阅读" href='/tags/%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB'>推荐阅读</a>
-                                
-                                    <a class="post-category post-category-FckEditor" href='/tags/fckeditor'>FckEditor</a>
-                                
-                                    <a class="post-category post-category-kissy-editor" href='/tags/kissy-editor'>kissy-editor</a>
-                                
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>今天<a title="http://lifesinger.org/" href="http://lifesinger.org/" target="_blank">lifesinger</a>发布了<a title="kiss editor" href="http://lifesinger.org/blog/2009/10/kissy-editor/" target="_blank">淘宝编辑器</a>,</p>
-<p>可以在这里看到<a href="http://kissy.googlecode.com/svn/trunk/src/editor/demo/basic.html" target="_blank">演示</a></p>
-<p>介绍可以看这里，<a href="http://lifesinger.org/blog/2009/10/kissy-editor/">http://lifesinger.org/blog/2009/10/kissy-editor/</a></p>              
-
-                    </div>
-                </section>
-                
             </div>
             
 <div class="pagination">
   <nav role="pagination" class="post-list-pagination">
       
-    <span class="post-list-pagination-item post-list-pagination-item-current">Page 1 of 16</span>
+    <span class="post-list-pagination-item post-list-pagination-item-current">Page 1 of 19</span>
     
       <a href="/tags/asp.net/page/2/" class="post-list-pagination-item pure-button post-list-pagination-item-next">
         Older&nbsp;<i class="fa fa-angle-double-right"></i>

@@ -59,11 +59,11 @@
             
             <div class="posts">
                 
-                <h1 class="content-subhead">16 Oct 2005</h1>
+                <h1 class="content-subhead">17 Apr 2006</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2005/10/16/cb-256133/" class="post-title">买了edong的空间没有db_securityadmin权限</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2006/04/17/textdisguisecaptchaimage/" class="post-title">原来验证码可以租的哦</a>
 
                         <p class="post-meta">
                             
@@ -71,37 +71,25 @@
                                 
                                     <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
                                 
-                                    <a class="post-category post-category-闲言碎语" href='/tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD'>闲言碎语</a>
+                                    <a class="post-category post-category-它山之石" href='/tags/%E5%AE%83%E5%B1%B1%E4%B9%8B%E7%9F%B3'>它山之石</a>
                                 
-                                    <a class="post-category post-category-Community Server" href='/tags/community-server'>Community Server</a>
-                                
-                                    <a class="post-category post-category-Edong" href='/tags/edong'>Edong</a>
+                                    <a class="post-category post-category-Captcha" href='/tags/captcha'>Captcha</a>
                                 
                             
                         </p>
                     </header>
 
                     <div class="post-description">
-                        <p><p>买了edong的<a href="http://www.edong.com/v8/webhosting/K1000.php">http://www.edong.com/v8/webhosting/K1000.php</a>这个k1000空间<br />没有db_securityadmin权限装不了CommunityServer和DotNetNuke</p>
-<div class="CodeDiv">
-<p></p>
-<div style="padding-right: 5px; padding-left: 4px; font-size: 13px; padding-bottom: 4px; width: 98%; padding-top: 4px; background-color: #eeeeee; border: #cccccc 1px solid;">
-<span style="COLOR: #000000">The account you use to run CS under must have the following minimum database roles to function corrected:<p>db_securityadmin<br />db_ddladmin<br />db_datareader<br />db_datawriter</p>
-<p>Use the following from Query Analyzer to ensure that your account has sufficent permissions. If you are in a host environment and can not change your database roles you will need to requrest these roles from your ISP</p>
-<p>sp_addrolemember &rsquo;db_securityadmin&rsquo;, &rsquo;</p></span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">your </span><span style="COLOR: #ff0000">login name</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000">&lsquo;<br />sp_addrolemember &rsquo;db_ddladmin&rsquo;, &rsquo;</span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">your </span><span style="COLOR: #ff0000">login name</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000">&lsquo;<br />sp_addrolemember &rsquo;db_datareader&rsquo;, &rsquo;</span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">your </span><span style="COLOR: #ff0000">login name</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000">&lsquo;<br />sp_addrolemember &rsquo;db_datawriter&rsquo;, &rsquo;</span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">your </span><span style="COLOR: #ff0000">login name</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000">&lsquo;</span>
-</div>
-<p></p>
-</div>
-<br />郁闷。<br />看来要自己租服务器了。<br />另注：本随笔不接受枪手评论，谢谢！</p>
+                        <p><a href="http://www.textdisguise.com/TextDisguise/default.aspx">http://www.textdisguise.com/TextDisguise/default.aspx</a><br />提供webservice生成防止机器人的CAPTCHA Image<br />看样子<a href="http://www.textdisguise.com/TextDisguise/ProductsComparison.aspx">挺贵的</a>，不过<a href="http://www.textdisguise.com/TextDisguise/Demo.aspx">Demo</a>看起来很不错。</p>               
 
                     </div>
                 </section>
                 
-                <h1 class="content-subhead">15 Oct 2005</h1>
+                <h1 class="content-subhead">13 Apr 2006</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2005/10/15/subdomainswithhttpmoduleinaspdotnet/" class="post-title">在Asp.Net中使用HttpModule实现多个域名分别“绑定”到子目录 </a>
+                        <a href="https://huobazi.aspxboy.com/blog/2006/04/13/easylist/" class="post-title">一个非常Strong 的ListBox控件EasyList</a>
 
                         <p class="post-meta">
                             
@@ -116,127 +104,16 @@
                     </header>
 
                     <div class="post-description">
-                        <p>作者：活靶子 发表于：<a href="http://www.aspxboy.com/">AspxBoy.Com</a> &amp;&amp; <a href="http://im286.com/">im286.com</a> &amp;&amp; <a href="http://cnblogs.com/">Cnblogs.com</a></p>
-<br /><p>目前虚拟主机商提供将多个域名绑定到站点根目录，但是不提供类似CPanel那样可以将域名绑定到站点的子目录。<br />而当你手上有多个域名，网站空间和流量又有闲置的时候，是很希望<br />将这些资源利用起来，而且要做到降低做站的成本。而网络上流传的多域名绑到子目录多为判断HTTP_HOST再使用Asp的Response.Redirect或者php的header方法重订向到子目录去。这种方法在地址的请求上发生了变化，大家都知道Redirect的定向是很不友好的，在服务器端控制自动跳转会令访问者感到不安。<br />所以我需要的是对这个域名下面的所有请求都转接到对应的子目录里去<br />比如<
-<br /><a href="http://www.xaradio.com/default.aspx">http://www.xaradio.com/default.aspx</a><br />实际访问的是<a href="http://www.3pub.com/xaradio/default.aspx">http://www.3pub.com/xaradio/default.aspx</a><br /><br /><a href="http://www.xaradio.com/album.aspx?id=722">http://www.xaradio.com/album.aspx?id=722</a><br />实际访问的是<a href="http://www.3pub.com/xaradio/album.aspx?id=722">http://www.3pub.com/xaradio/album.aspx?id=722</a><br /><br />http://www.xaradio.com/*.aspx<br />实际要访问到http://www.3pub.com/xaradio/*.aspx<br /><br />而绑定到该站点根目录的其他域名和地址仍然不受影响<br />如: <a href="http://www.3pub.com/">http://www.3pub.com/</a> 和<a href="http://3pub.com/">http://3pub.com/</a><br /> <a href="http://www.3pub.com/default.aspx">http://www.3pub.com/default.aspx</a>和<a href="http://3pub.com/default.aspx">http://3pub.com/default.aspx</a></p>
-<br /><p><br /><a href="http://www.aspxboy.com/484/default.aspx"><strong>http://www.aspxboy.com/484/default.aspx</strong></a>该文章详细的描述了在Asp.Net中使用HttpModule和HttpHander来重写Url,读懂他特别是<a href="http://www.aspxboy.com/484/archive.aspx#ekaa"><strong>http://www.aspxboy.com/484/archive.aspx#ekaa</strong></a><strong>节</strong>将是我们下面工作的前提朋友们可以下载该文章附带的代码研究。<br /><br />如果您对HttpModule的编成非常熟悉那么可以向下进行了<br /><br />一。 先把配置文件从web.config内移出为了不让web.config变的非常臃肿，我们将配置文件从web.config内移出<br />假设我们的多域名绑定配置文件为“MulitDomain.config“<br />将RewriterConfiguration.cs的public static RewriterConfiguration GetConfig()方法<br />修改如下:<br /></p>
-<pre>/// <summary>
-/// 从XML配置文件中返回重写信息
-/// </summary>
-/// <returns>RewriterConfiguration</returns>
-public static RewriterConfiguration GetConfig()
-{
-RewriterConfiguration config = (RewriterConfiguration) BoovooCache.Get(CacheKey);
-if(config == null)
-{
-// 2005-08-18 wu meibo update the config file to SiteUrls.config
-// HttpContext.Current.Cache.Insert("RewriterConfig", ConfigurationSettings.GetConfig("RewriterConfig"));
-///************************************************************************************
-///
-///  Author:武眉博&lt;活靶子.Net&gt;，huobazi
-///　Date:2005-08-18
-///
-///  Description:将配置文件移到单独的文件内，更新以下代码，原代码（上一行）停止工作
-///
-///************************************************************************************
-string filePath = String.Empty;
-if(HttpContext.Current != null)
-{
-filePath = HttpContext.Current.Server.MapPath("~/MulitDomain.config");
-}
-else
-{
-filePath = Directory.GetCurrentDirectory() + Path.DirectorySeparatorChar + "MulitDomain.config";
-}
-XmlSerializer ser = new XmlSerializer(typeof(RewriterConfiguration));
-FileStream fileReader = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.Read);
-StreamReader reader = new StreamReader(fileReader);
-config = (ser.Deserialize(reader)) as RewriterConfiguration;
-reader.Close();
-fileReader.Close();
-if (File.Exists(filePath))
-{
-CacheDependency dep = new CacheDependency(filePath);
-BoovooCache.Max(CacheKey,config,dep);
-BoovooCache.ReSetFactor(config.CacheFactor);
-}
-}
-return config;
-} </pre>
-<p>二。做一些修补<br />RewriterModule.cs内<br /></p>
-<pre>public virtual void Init(HttpApplication app)
-{
-///**********************************************************************************
-///  Author:武眉博&lt;活靶子.Net&gt;，huobazi
-///　Date:2005-08-18
-///  Description:增加BeginRequest,在内增加防止黑客可能利用的某些Url漏洞攻击的代码
-///**********************************************************************************
-app.BeginRequest += new EventHandler(this.RewriterModule_BeginRequest);
-// 警告！此代码不适用于 Windows 身份验证！
-// 如果使用 Windows 身份验证，
-// 请改为 app.BeginRequest
-app.AuthorizeRequest += new EventHandler(this.RewriterModule_AuthorizeRequest);
-} </pre>
-<pre>protected virtual void RewriterModule_BeginRequest(object o , EventArgs e)
-{
-HttpApplication app = ((HttpApplication)(o));
-HttpServerUtility Server = app.Server;
-HttpRequest Request = app.Request;
-///************************************************************
-///  Author:vv，huobazi
-///　Date:2005-08-18
-///　Description:修补黑客可能采用".."的方法进入其他目录的问题
-///************************************************************
-string strURL = Server.UrlDecode(Request.RawUrl);
-if (strURL.IndexOf("..") != -1)
-{
-throw new HttpException(404, "Not Found");
-}
-///**********************************************************************************
-///  Author:武眉博&lt;活靶子.Net&gt;，huobazi
-///　Date:2005-08-18
-///　Description:修补"规范化"问题　see: http://support.microsoft.com/?kbid=887459
-///***********************************************************************************
-if (Request.Path.IndexOf('\\') &gt;= 0 ||
-Path.GetFullPath(Request.PhysicalPath) != Request.PhysicalPath)
-{
-throw new HttpException(404, "Not Found");
-}
-} </pre>
-<p>三。开始匹配域名<br /></p>
-<pre>protected void Rewrite(string requestedPath, System.Web.HttpApplication app)
-{
-string host = app.Context.Request.Url.Host.ToString().ToLower();
-app.Context.Trace.Write("RewriterModule", "Entering ModuleRewriter");
-RewriterRuleCollection rules = RewriterConfiguration.GetConfig().Rules;
-for(int i = 0; i &lt; rules.Count; i++)
-{//将MulitDomain.config内定义的规则LookFor的值逐个匹配当前主机名判断否被定义了需要重写
-//如果匹配则需要重写，那将请求重写到SendTo定义的目录内的该文件
-string lookFor = "^" + rules[i].LookFor + "$";
-//string lookFor = "^" + Rewriter.ResolveUrl(app.Context.Request.ApplicationPath, rules[i].LookFor + requestedPath) + "$";
-Regex re = new Regex(lookFor, RegexOptions.IgnoreCase);
-if (re.IsMatch(host))
-{
-string sendToUrl = Rewriter.ResolveUrl(app.Context.Request.ApplicationPath,  rules[i].SendTo + requestedPath);
-app.Context.Trace.Write("RewriterModule", "Rewriting URL to " + sendToUrl);
-Rewriter.RewriteUrl(app.Context, sendToUrl);
-break;
-}
-}
-app.Context.Trace.Write("RewriterModule", "Exiting ModuleRewriter");
-}
-</pre>
-<p>四。写规则文件<br />MulitDomain.config的匹配规则如下：<br /></p>
-<div class="codeDiv">&lt;?xml version="1.0" encoding="utf-8" ?&gt; <br /> &lt;RewriterConfig&gt;<br /> &lt;Rules&gt;<br />  &lt;RewriterRule&gt;<br />   &lt;LookFor&gt;www\.xaradio\.com&lt;/LookFor&gt;<br />   &lt;SendTo&gt;~/xaradio&lt;/SendTo&gt;<br />  &lt;/RewriterRule&gt;<br />  &lt;RewriterRule&gt;<br />   &lt;LookFor&gt;xaradio\.com&lt;/LookFor&gt;<br />   &lt;SendTo&gt;~/xaradio&lt;/SendTo&gt;<br />  &lt;/RewriterRule&gt;<br /> &lt;/Rules&gt;<br />  &lt;/RewriterConfig&gt;</div>
-<p>最后说明一下，根目录下一定要有一个Default.aspx如果你的所有域名都按照这种方式“绑定”那么根目录下放置一个空Default.aspx就可以，该文件来“欺骗IIS” ，防止直接使用域名访问的时候IIS查找不到default或者index文件就报404错误，等到该检查过去之后权利已经移交到aspnet_isapi.dll那里了。<br /><br /><strong><span style="COLOR: #339966"> <span style="COLOR: #0000ff">全部</span><span style="COLOR: #0000ff">代码</span></span>：</strong><a href="http://www.aspxboy.com/code/"><strong>http://www.aspxboy.com/code/</strong></a>  Other节点</p>
+                        <p><a href="http://www.microsoft.com/china/MSDN/library/enterprisedevelopment/softwaredev/NewStuff.mspx?mfr=true" target="_blank"><br />用于开发人员工具箱的资源</a>提到的<a href="http://easylistbox.com/home.aspx" target="_blank">EasyListBox</a>是一款功能非常<span style="color: #0000ff;">强大</span>的ListBox控件<br />功能嘛我不说了                                                                                                             <br />去<a href="http://easylistbox.com/demoColumns.aspx" target="_blank">http://easylistbox.com/demoColumns.aspx</a>体验一下那20几个demo就知道了</p>                
+
                     </div>
                 </section>
                 
-                <h1 class="content-subhead">15 Oct 2005</h1>
+                <h1 class="content-subhead">13 Apr 2006</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2005/10/15/subdomainswithhttpmoduleinaspdotnet/" class="post-title">在Asp.Net中使用HttpModule实现多个域名分别“绑定”到子目录 </a>
+                        <a href="https://huobazi.aspxboy.com/blog/2006/04/13/easylist/" class="post-title">一个非常Strong 的ListBox控件EasyList</a>
 
                         <p class="post-meta">
                             
@@ -251,127 +128,16 @@ app.Context.Trace.Write("RewriterModule", "Exiting ModuleRewriter");
                     </header>
 
                     <div class="post-description">
-                        <p>作者：活靶子 发表于：<a href="http://www.aspxboy.com/">AspxBoy.Com</a> &amp;&amp; <a href="http://im286.com/">im286.com</a> &amp;&amp; <a href="http://cnblogs.com/">Cnblogs.com</a></p>
-<br /><p>目前虚拟主机商提供将多个域名绑定到站点根目录，但是不提供类似CPanel那样可以将域名绑定到站点的子目录。<br />而当你手上有多个域名，网站空间和流量又有闲置的时候，是很希望<br />将这些资源利用起来，而且要做到降低做站的成本。而网络上流传的多域名绑到子目录多为判断HTTP_HOST再使用Asp的Response.Redirect或者php的header方法重订向到子目录去。这种方法在地址的请求上发生了变化，大家都知道Redirect的定向是很不友好的，在服务器端控制自动跳转会令访问者感到不安。<br />所以我需要的是对这个域名下面的所有请求都转接到对应的子目录里去<br />比如<
-<br /><a href="http://www.xaradio.com/default.aspx">http://www.xaradio.com/default.aspx</a><br />实际访问的是<a href="http://www.3pub.com/xaradio/default.aspx">http://www.3pub.com/xaradio/default.aspx</a><br /><br /><a href="http://www.xaradio.com/album.aspx?id=722">http://www.xaradio.com/album.aspx?id=722</a><br />实际访问的是<a href="http://www.3pub.com/xaradio/album.aspx?id=722">http://www.3pub.com/xaradio/album.aspx?id=722</a><br /><br />http://www.xaradio.com/*.aspx<br />实际要访问到http://www.3pub.com/xaradio/*.aspx<br /><br />而绑定到该站点根目录的其他域名和地址仍然不受影响<br />如: <a href="http://www.3pub.com/">http://www.3pub.com/</a> 和<a href="http://3pub.com/">http://3pub.com/</a><br /> <a href="http://www.3pub.com/default.aspx">http://www.3pub.com/default.aspx</a>和<a href="http://3pub.com/default.aspx">http://3pub.com/default.aspx</a></p>
-<br /><p><br /><a href="http://www.aspxboy.com/484/default.aspx"><strong>http://www.aspxboy.com/484/default.aspx</strong></a>该文章详细的描述了在Asp.Net中使用HttpModule和HttpHander来重写Url,读懂他特别是<a href="http://www.aspxboy.com/484/archive.aspx#ekaa"><strong>http://www.aspxboy.com/484/archive.aspx#ekaa</strong></a><strong>节</strong>将是我们下面工作的前提朋友们可以下载该文章附带的代码研究。<br /><br />如果您对HttpModule的编成非常熟悉那么可以向下进行了<br /><br />一。 先把配置文件从web.config内移出为了不让web.config变的非常臃肿，我们将配置文件从web.config内移出<br />假设我们的多域名绑定配置文件为“MulitDomain.config“<br />将RewriterConfiguration.cs的public static RewriterConfiguration GetConfig()方法<br />修改如下:<br /></p>
-<pre>/// <summary>
-/// 从XML配置文件中返回重写信息
-/// </summary>
-/// <returns>RewriterConfiguration</returns>
-public static RewriterConfiguration GetConfig()
-{
-RewriterConfiguration config = (RewriterConfiguration) BoovooCache.Get(CacheKey);
-if(config == null)
-{
-// 2005-08-18 wu meibo update the config file to SiteUrls.config
-// HttpContext.Current.Cache.Insert("RewriterConfig", ConfigurationSettings.GetConfig("RewriterConfig"));
-///************************************************************************************
-///
-///  Author:武眉博&lt;活靶子.Net&gt;，huobazi
-///　Date:2005-08-18
-///
-///  Description:将配置文件移到单独的文件内，更新以下代码，原代码（上一行）停止工作
-///
-///************************************************************************************
-string filePath = String.Empty;
-if(HttpContext.Current != null)
-{
-filePath = HttpContext.Current.Server.MapPath("~/MulitDomain.config");
-}
-else
-{
-filePath = Directory.GetCurrentDirectory() + Path.DirectorySeparatorChar + "MulitDomain.config";
-}
-XmlSerializer ser = new XmlSerializer(typeof(RewriterConfiguration));
-FileStream fileReader = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.Read);
-StreamReader reader = new StreamReader(fileReader);
-config = (ser.Deserialize(reader)) as RewriterConfiguration;
-reader.Close();
-fileReader.Close();
-if (File.Exists(filePath))
-{
-CacheDependency dep = new CacheDependency(filePath);
-BoovooCache.Max(CacheKey,config,dep);
-BoovooCache.ReSetFactor(config.CacheFactor);
-}
-}
-return config;
-} </pre>
-<p>二。做一些修补<br />RewriterModule.cs内<br /></p>
-<pre>public virtual void Init(HttpApplication app)
-{
-///**********************************************************************************
-///  Author:武眉博&lt;活靶子.Net&gt;，huobazi
-///　Date:2005-08-18
-///  Description:增加BeginRequest,在内增加防止黑客可能利用的某些Url漏洞攻击的代码
-///**********************************************************************************
-app.BeginRequest += new EventHandler(this.RewriterModule_BeginRequest);
-// 警告！此代码不适用于 Windows 身份验证！
-// 如果使用 Windows 身份验证，
-// 请改为 app.BeginRequest
-app.AuthorizeRequest += new EventHandler(this.RewriterModule_AuthorizeRequest);
-} </pre>
-<pre>protected virtual void RewriterModule_BeginRequest(object o , EventArgs e)
-{
-HttpApplication app = ((HttpApplication)(o));
-HttpServerUtility Server = app.Server;
-HttpRequest Request = app.Request;
-///************************************************************
-///  Author:vv，huobazi
-///　Date:2005-08-18
-///　Description:修补黑客可能采用".."的方法进入其他目录的问题
-///************************************************************
-string strURL = Server.UrlDecode(Request.RawUrl);
-if (strURL.IndexOf("..") != -1)
-{
-throw new HttpException(404, "Not Found");
-}
-///**********************************************************************************
-///  Author:武眉博&lt;活靶子.Net&gt;，huobazi
-///　Date:2005-08-18
-///　Description:修补"规范化"问题　see: http://support.microsoft.com/?kbid=887459
-///***********************************************************************************
-if (Request.Path.IndexOf('\\') &gt;= 0 ||
-Path.GetFullPath(Request.PhysicalPath) != Request.PhysicalPath)
-{
-throw new HttpException(404, "Not Found");
-}
-} </pre>
-<p>三。开始匹配域名<br /></p>
-<pre>protected void Rewrite(string requestedPath, System.Web.HttpApplication app)
-{
-string host = app.Context.Request.Url.Host.ToString().ToLower();
-app.Context.Trace.Write("RewriterModule", "Entering ModuleRewriter");
-RewriterRuleCollection rules = RewriterConfiguration.GetConfig().Rules;
-for(int i = 0; i &lt; rules.Count; i++)
-{//将MulitDomain.config内定义的规则LookFor的值逐个匹配当前主机名判断否被定义了需要重写
-//如果匹配则需要重写，那将请求重写到SendTo定义的目录内的该文件
-string lookFor = "^" + rules[i].LookFor + "$";
-//string lookFor = "^" + Rewriter.ResolveUrl(app.Context.Request.ApplicationPath, rules[i].LookFor + requestedPath) + "$";
-Regex re = new Regex(lookFor, RegexOptions.IgnoreCase);
-if (re.IsMatch(host))
-{
-string sendToUrl = Rewriter.ResolveUrl(app.Context.Request.ApplicationPath,  rules[i].SendTo + requestedPath);
-app.Context.Trace.Write("RewriterModule", "Rewriting URL to " + sendToUrl);
-Rewriter.RewriteUrl(app.Context, sendToUrl);
-break;
-}
-}
-app.Context.Trace.Write("RewriterModule", "Exiting ModuleRewriter");
-}
-</pre>
-<p>四。写规则文件<br />MulitDomain.config的匹配规则如下：<br /></p>
-<div class="codeDiv">&lt;?xml version="1.0" encoding="utf-8" ?&gt; <br /> &lt;RewriterConfig&gt;<br /> &lt;Rules&gt;<br />  &lt;RewriterRule&gt;<br />   &lt;LookFor&gt;www\.xaradio\.com&lt;/LookFor&gt;<br />   &lt;SendTo&gt;~/xaradio&lt;/SendTo&gt;<br />  &lt;/RewriterRule&gt;<br />  &lt;RewriterRule&gt;<br />   &lt;LookFor&gt;xaradio\.com&lt;/LookFor&gt;<br />   &lt;SendTo&gt;~/xaradio&lt;/SendTo&gt;<br />  &lt;/RewriterRule&gt;<br /> &lt;/Rules&gt;<br />  &lt;/RewriterConfig&gt;</div>
-<p>最后说明一下，根目录下一定要有一个Default.aspx如果你的所有域名都按照这种方式“绑定”那么根目录下放置一个空Default.aspx就可以，该文件来“欺骗IIS” ，防止直接使用域名访问的时候IIS查找不到default或者index文件就报404错误，等到该检查过去之后权利已经移交到aspnet_isapi.dll那里了。<br /><br /><strong><span style="COLOR: #339966"> <span style="COLOR: #0000ff">全部</span><span style="COLOR: #0000ff">代码</span></span>：</strong><a href="http://www.aspxboy.com/code/"><strong>http://www.aspxboy.com/code/</strong></a>  Other节点</p>
+                        <p><a href="http://www.microsoft.com/china/MSDN/library/enterprisedevelopment/softwaredev/NewStuff.mspx?mfr=true" target="_blank"><br />用于开发人员工具箱的资源</a>提到的<a href="http://easylistbox.com/home.aspx" target="_blank">EasyListBox</a>是一款功能非常<span style="color: #0000ff;">强大</span>的ListBox控件<br />功能嘛我不说了                                                                                                             <br />去<a href="http://easylistbox.com/demoColumns.aspx" target="_blank">http://easylistbox.com/demoColumns.aspx</a>体验一下那20几个demo就知道了</p>                
+
                     </div>
                 </section>
                 
-                <h1 class="content-subhead">10 Oct 2005</h1>
+                <h1 class="content-subhead">11 Apr 2006</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2005/10/10/cb-251251/" class="post-title">哭使用Data Access 2 插入Ntext类型数据时SqlParameter不指定类型的问题 ， ，请为我解惑</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2006/04/11/cb-372413/" class="post-title">Yetanotherforum 编辑表情后不立即更新</a>
 
                         <p class="post-meta">
                             
@@ -381,55 +147,26 @@ app.Context.Trace.Write("RewriterModule", "Exiting ModuleRewriter");
                                 
                                     <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
                                 
-                                    <a class="post-category post-category-SQL Server" href='/tags/sql-server'>SQL Server</a>
+                                    <a class="post-category post-category-Yetanotherforum" href='/tags/yetanotherforum'>Yetanotherforum</a>
                                 
                             
                         </p>
                     </header>
 
                     <div class="post-description">
-                        <p>实在郁闷 <img height="19" src="/images/hbz_images/0a603e93-b2ed-47bf-86c0-ebbf83a0f832.png3" width="19" border="0">，请大家为我解惑。<br />同发csdn：<a href="http://community.csdn.net/Expert/topic/4315/4315539.xml?temp=.3931848">http://community.csdn.net/Expert/topic/4315/4315539.xml?temp=.3931848</a><br /><br />原来的代码 <br /></p>
-<p></p>
-<div class="codeDiv"> SqlHelper.ExecuteNonQuery(connectionString, CommandType.StoredProcedure, <br />  FullyQualifiedSprocName("P_InsertNtextData"), <br />  new SqlParameter("@Id", f.Id),<br />  new SqlParameter("@NtextData",f.Data));<br />
-</div>
-<p>如果 f.Data过长，就莫名其妙的异常， <br /></p>
-<p></p>
-<div class="codeDiv">
-<p>---------------------------</p>
-<br /><p>---------------------------<br />当前命令发生了严重错误。应放弃任何可能产生的结果。<br />---------------------------<br />确定   <br />---------------------------</p>
-<br /><p>---------------------------</p>
-<br /><p>---------------------------<br />常规网络错误。请检查您的网络文档。<br />---------------------------<br />确定   <br />---------------------------<br /></p>
-</div>
-<p>Google baidu 都翻了个底朝天，也没个能安慰我的信息。<br />试验了一下午，最后试出来写个测试字符串"aaaa"就能插入<br />尝试了如下代码 <br /></p>
-<p></p>
-<div class="codeDiv"> SqlParameter ntext = new SqlParameter("@NtextData",SqlDbType.NText);<br /> ntext.Value = f.Data;<br /> SqlHelper.ExecuteNonQuery(connectionString, CommandType.StoredProcedure, <br />  FullyQualifiedSprocName("P_InsertNtextData"), <br />  new SqlParameter("@Id", f.Id),<br />  ntext);<br />
-</div>
-<p></p>
-<p>成功，怎么也想不通这换汤不换药的方法为何能够成功，<br />翻msdn，<br />打自己一巴掌<img height="19" src="/images/hbz_images/0a603e93-b2ed-47bf-86c0-ebbf83a0f832.png4" width="19" border="0"><img height="20" src="/images/hbz_images/0a603e93-b2ed-47bf-86c0-ebbf83a0f832.png5" width="25" border="0"><br /></p>
-<p></p>
-<div class="codeDiv">获取或设置参数的 SqlDbType。 <br /><p></p>
-<br /><p>[Visual Basic]<br />Public Property SqlDbType As SqlDbType</p>
-<br /><p>[C#]<br />public SqlDbType SqlDbType {get; set;}</p>
-<br /><p><br />属性值<br />SqlDbType 值之一。默认值为 <font color="#0000ff">NVarChar</font>。 </p>
-</div>
-<p></p>
-<p>然而我又看到另外一个构造器的重载这样说明<br /></p>
-<p></p>
-<div class="codeDiv">[Visual Basic]<br />Public Sub New( _<br />   ByVal parameterName As String, _<br />   ByVal value As Object _<br />) <br /><p></p>
-<br /><p>[C#]<br />public SqlParameter(<br />   string parameterName,<br />   object value<br />);</p>
-<br /><p><br />参数<br />parameterName <br />要映射的参数的名称。 <br />value <br />一个 Object，它是 SqlParameter 的值。 <br />备注<br /><font color="#0000ff">当在 value 参数中指定 Object 时，SqlDbType 将从 Object 的 .NET Framework 类型推断出。</font></p>
-</div>
-<p></p>
-<p>这又如何解释？？</p>             
+                        <p>文件  FormatMsg.cs</p>
+<br /><p>方法iAddSmiles内 </p>
+<br /><p>Code:<br />strTemp = strTemp.Replace(code.ToLower(),String.Format("&lt;img src=\"{0}\" alt=\"{1}\" /&gt;",basePage.Smiley(Convert.ToString(row["Icon"])),basePage.Server.HtmlEncode(row["Emoticon"].ToString())));<br />调用了两次可能导致被转化成html后有乱码出现</p>
+<br /><p>在方法GetSmilies内<br />Code:<br />System.Web.HttpContext.Current.Cache.Insert("Smilies",dt,null,DateTime.Now.AddMinutes(60),TimeSpan.Zero);<br />加入缓存项的Key和更新/删除时移除缓存的Key不一致 导致编辑表情后不立即更新<br />DB.cs<br />Code:<br />System.Web.HttpContext.Current.Cache.Remove("Smiles");<br /></p>             
 
                     </div>
                 </section>
                 
-                <h1 class="content-subhead">10 Oct 2005</h1>
+                <h1 class="content-subhead">11 Apr 2006</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2005/10/10/cb-251251/" class="post-title">哭使用Data Access 2 插入Ntext类型数据时SqlParameter不指定类型的问题 ， ，请为我解惑</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2006/04/11/cb-372413/" class="post-title">Yetanotherforum 编辑表情后不立即更新</a>
 
                         <p class="post-meta">
                             
@@ -439,55 +176,26 @@ app.Context.Trace.Write("RewriterModule", "Exiting ModuleRewriter");
                                 
                                     <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
                                 
-                                    <a class="post-category post-category-SQL Server" href='/tags/sql-server'>SQL Server</a>
+                                    <a class="post-category post-category-Yetanotherforum" href='/tags/yetanotherforum'>Yetanotherforum</a>
                                 
                             
                         </p>
                     </header>
 
                     <div class="post-description">
-                        <p>实在郁闷 <img height="19" src="/images/hbz_images/0a603e93-b2ed-47bf-86c0-ebbf83a0f832.png3" width="19" border="0">，请大家为我解惑。<br />同发csdn：<a href="http://community.csdn.net/Expert/topic/4315/4315539.xml?temp=.3931848">http://community.csdn.net/Expert/topic/4315/4315539.xml?temp=.3931848</a><br /><br />原来的代码 <br /></p>
-<p></p>
-<div class="codeDiv"> SqlHelper.ExecuteNonQuery(connectionString, CommandType.StoredProcedure, <br />  FullyQualifiedSprocName("P_InsertNtextData"), <br />  new SqlParameter("@Id", f.Id),<br />  new SqlParameter("@NtextData",f.Data));<br />
-</div>
-<p>如果 f.Data过长，就莫名其妙的异常， <br /></p>
-<p></p>
-<div class="codeDiv">
-<p>---------------------------</p>
-<br /><p>---------------------------<br />当前命令发生了严重错误。应放弃任何可能产生的结果。<br />---------------------------<br />确定   <br />---------------------------</p>
-<br /><p>---------------------------</p>
-<br /><p>---------------------------<br />常规网络错误。请检查您的网络文档。<br />---------------------------<br />确定   <br />---------------------------<br /></p>
-</div>
-<p>Google baidu 都翻了个底朝天，也没个能安慰我的信息。<br />试验了一下午，最后试出来写个测试字符串"aaaa"就能插入<br />尝试了如下代码 <br /></p>
-<p></p>
-<div class="codeDiv"> SqlParameter ntext = new SqlParameter("@NtextData",SqlDbType.NText);<br /> ntext.Value = f.Data;<br /> SqlHelper.ExecuteNonQuery(connectionString, CommandType.StoredProcedure, <br />  FullyQualifiedSprocName("P_InsertNtextData"), <br />  new SqlParameter("@Id", f.Id),<br />  ntext);<br />
-</div>
-<p></p>
-<p>成功，怎么也想不通这换汤不换药的方法为何能够成功，<br />翻msdn，<br />打自己一巴掌<img height="19" src="/images/hbz_images/0a603e93-b2ed-47bf-86c0-ebbf83a0f832.png4" width="19" border="0"><img height="20" src="/images/hbz_images/0a603e93-b2ed-47bf-86c0-ebbf83a0f832.png5" width="25" border="0"><br /></p>
-<p></p>
-<div class="codeDiv">获取或设置参数的 SqlDbType。 <br /><p></p>
-<br /><p>[Visual Basic]<br />Public Property SqlDbType As SqlDbType</p>
-<br /><p>[C#]<br />public SqlDbType SqlDbType {get; set;}</p>
-<br /><p><br />属性值<br />SqlDbType 值之一。默认值为 <font color="#0000ff">NVarChar</font>。 </p>
-</div>
-<p></p>
-<p>然而我又看到另外一个构造器的重载这样说明<br /></p>
-<p></p>
-<div class="codeDiv">[Visual Basic]<br />Public Sub New( _<br />   ByVal parameterName As String, _<br />   ByVal value As Object _<br />) <br /><p></p>
-<br /><p>[C#]<br />public SqlParameter(<br />   string parameterName,<br />   object value<br />);</p>
-<br /><p><br />参数<br />parameterName <br />要映射的参数的名称。 <br />value <br />一个 Object，它是 SqlParameter 的值。 <br />备注<br /><font color="#0000ff">当在 value 参数中指定 Object 时，SqlDbType 将从 Object 的 .NET Framework 类型推断出。</font></p>
-</div>
-<p></p>
-<p>这又如何解释？？</p>             
+                        <p>文件  FormatMsg.cs</p>
+<br /><p>方法iAddSmiles内 </p>
+<br /><p>Code:<br />strTemp = strTemp.Replace(code.ToLower(),String.Format("&lt;img src=\"{0}\" alt=\"{1}\" /&gt;",basePage.Smiley(Convert.ToString(row["Icon"])),basePage.Server.HtmlEncode(row["Emoticon"].ToString())));<br />调用了两次可能导致被转化成html后有乱码出现</p>
+<br /><p>在方法GetSmilies内<br />Code:<br />System.Web.HttpContext.Current.Cache.Insert("Smilies",dt,null,DateTime.Now.AddMinutes(60),TimeSpan.Zero);<br />加入缓存项的Key和更新/删除时移除缓存的Key不一致 导致编辑表情后不立即更新<br />DB.cs<br />Code:<br />System.Web.HttpContext.Current.Cache.Remove("Smiles");<br /></p>             
 
                     </div>
                 </section>
                 
-                <h1 class="content-subhead">07 Oct 2005</h1>
+                <h1 class="content-subhead">08 Apr 2006</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2005/10/07/cb-249806/" class="post-title">Communtiy Server论坛的帖子显示页面分页部分的Url Rewrite的构造方法</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2006/04/08/twodropdownlistindatagridandbubbleevent/" class="post-title">两个DropDownList在Repeater、DataList、DataGrid内的连动和冒泡事件(BubbleEvent) </a>
 
                         <p class="post-meta">
                             
@@ -497,77 +205,291 @@ app.Context.Trace.Write("RewriterModule", "Exiting ModuleRewriter");
                                 
                                     <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
                                 
-                                    <a class="post-category post-category-.Net其他" href='/tags/.net%E5%85%B6%E4%BB%96'>.Net其他</a>
+                                    <a class="post-category post-category-DataGrid" href='/tags/datagrid'>DataGrid</a>
                                 
-                                    <a class="post-category post-category-Communtiy Server" href='/tags/communtiy-server'>Communtiy Server</a>
+                                    <a class="post-category post-category-GridView" href='/tags/gridview'>GridView</a>
+                                
+                                    <a class="post-category post-category-代码片段" href='/tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5'>代码片段</a>
+                                
+                                    <a class="post-category post-category-Grid" href='/tags/grid'>Grid</a>
+                                
+                                    <a class="post-category post-category-DataList" href='/tags/datalist'>DataList</a>
+                                
+                                    <a class="post-category post-category-Repeater" href='/tags/repeater'>Repeater</a>
+                                
+                                    <a class="post-category post-category-DropDownList" href='/tags/dropdownlist'>DropDownList</a>
+                                
+                                    <a class="post-category post-category-BubbleEvent" href='/tags/bubbleevent'>BubbleEvent</a>
                                 
                             
                         </p>
                     </header>
 
                     <div class="post-description">
-                        <p>你可能会发现在Communtiy Server的论坛帖子列表页面</p>
-<p>比如<a href="http://communityserver.org/forums/129/ShowForum.aspx">http://communityserver.org/forums/129/ShowForum.aspx</a></p>
-<p>看下面分页处的连接使用的地址是类似ShowForum.aspx?PageIndex=2这样的地址<br />没有做到SearchFriendly,我们稍微改造一下代码就可以实现类似帖子显示页面内那样的地址<br />先在siteUrl.config内增加</p>
+                        <p><span style="font-size: medium;"><strong>两个DropDownList在Repeater、DataList、DataGrid内的连动和冒泡事件(BubbleEvent)<br /></strong><span style="font-size: small;">        问题</span><strong>:</strong></span> <a href="http://community.csdn.net/Expert/topic/4670/4670056.xml?temp=3.944033E-02" target="_blank">http://community.csdn.net/Expert/topic/4670/4670056.xml?temp=3.944033E-02</a><br />        刚看第一眼觉得在第一个DDL的SelectedIndexChanged事件内绑定第二个DDL就ok了，页面上写或者ItemDataBound内写事件挂接代码都可以。打开VS写测试却发现有点<span style="color: #ff0000;"><strong><span style="text-decoration: underline;">障碍</span></strong></span>哦，<br /><span style="color: #008000;"><span style="text-decoration: underline;"><em>在SelectedIndexChanged内要知道去绑定哪个行哪个列的DDL要费些周折</em></span></span>。<br /><strong><span style="color: #0000ff;">只有从DDL一级一级的向上找Parent最后找到DataGridItem，再利用其ItemIndex定位到行然后FindControl到要绑定的DDL</span></strong>，最终可以实现，好像比较累哦。<br />        随又想到DataGrid的ItemCommand事件，但发现WebControl内只有<a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/cpref/html/frlrfSystemWebUIWebControlsButtonClassTopic.asp"><strong><span style="color: #a52a2a;">Button</span></strong></a><span style="color: #a52a2a;"> </span><a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/cpref/html/frlrfSystemWebUIWebControlsImageButtonClassTopic.asp"><strong><span style="color: #a52a2a;">ImageButton</span></strong></a><span style="color: #a52a2a;"> <strong><span style="text-decoration: underline;"><a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/cpref/html/frlrfsystemwebuiwebcontrolslinkbuttonclasstopic.asp">LinkButton</a></span></strong></span>有<a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/cpref/html/frlrfsystemwebuiwebcontrolslinkbuttonclasscommandnametopic.asp">CommandName</a>属性和 <a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/cpref/html/frlrfsystemwebuiwebcontrolslinkbuttonclasscommandargumenttopic.asp">CommandArgument</a>属性，并可以将事件<span style="text-decoration: underline;"><strong><a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/cpguide/html/cpconbubblingcommandevent.asp">上浮（冒泡）</a>.</strong></span><a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/cpref/html/frlrfsystemwebuiwebcontrolsdropdownlistclasstopic.asp">DropDownLis</a>t先天不足！真是郁闷~~~~~ 能不能自己改造呢？<span style="color: #ff0000; background-color: #000080;"><strong>动手试试</strong></span>就知道了。</p>
+<code><span style="color: #000000">
+&lt;%@ Page Language="C#" Debug="true" %&gt;
+<br />&lt;%@ Import Namespace="System.Data" %&gt;
+<br />&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+<br />&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="gb2312" lang="gb2312"&gt;
+<br />&lt;head&gt;
+<br />&lt;title&gt; ItemDataBoundGetColumnName &lt;/title&gt;
+<br />&lt;meta http-equiv="Content-Type" content="text/html; charset=gb2312" /&gt;
+<br />&lt;meta name="title" content="" /&gt;
+<br />&lt;meta name="author" content="活靶子,Huobazi,www.AspxBoy.com" /&gt;
+<br />&lt;meta name="subject" content="" /&gt;
+<br />&lt;meta name="language" content="gb2312" /&gt;
+<br />&lt;meta name="keywords" content="" /&gt;
+<br />&lt;meta name="Copyright" content="www.AspxBoy.com" /&gt;
+<br />&lt;meta name="robots" content="all" /&gt;<br /><br />&lt;script language="c#" runat="server"&gt;
+<br />void BindGrid()
+<br />{
+<br />        DataTable dt = new DataTable();
+<br />        DataRow dr;
+<br />        dt.Columns.Add(new DataColumn("IntegerValue", typeof(Int32)));
+<br />        dt.Columns.Add(new DataColumn("StringValue", typeof(string)));
+<br />        dt.Columns.Add(new DataColumn("DateTimeValue", typeof(DateTime)));
+<br />        dt.Columns.Add(new DataColumn("BoolValue", typeof(bool)));
+<br />        dt.Columns.Add(new DataColumn("CurrencyValue", typeof(double)));
+<br />        for (int i = 0; i &lt; 36; i++) {
+<br />            dr = dt.NewRow();
+<br />            dr[0] = i;
+<br />            dr[1] = "项 " + i.ToString();
+<br />            dr[2] = DateTime.Now;
+<br />            dr[3] = (i % 2 != 0) ? true : false;
+<br />            dr[4] = 1.23 * (i+1);
+<br />            dt.Rows.Add(dr);
+<br />        }
+<br />  dg.DataSource= dt;
+<br />  dg.DataBind();
+<br />}
+<br />void Page_Load(object o, EventArgs e)
+<br />{
+<br />     dg.PagerStyle.Mode = PagerMode.NumericPages;
+<br />     if(!IsPostBack)
+<br />     {
+<br />        BindGrid();
+<br />     }
+<br />}
+<br /> 
+<br />void btnClick(object o , EventArgs e)
+<br />{
+<br />     Response.Write("页面回发,但是不执行ItemDataBound");
+<br />}
+<br /> 
+<br />void PageChange(object o , DataGridPageChangedEventArgs e)
+<br />{
+<br />     dg.CurrentPageIndex = e.NewPageIndex;
+<br />     BindGrid();
+<br />}
+<br />void ItemDataBound(object o , DataGridItemEventArgs e)
+<br />{
+<br />     if(e.Item.ItemIndex &gt; -1 )//必须
+<br />     {
+<br />          DataRowView drv = (DataRowView)e.Item.DataItem;
+<br />          for (int i=0; i&lt;drv.Row.Table.Columns.Count ; i++)
+<br />          { 
+<br />            Response.Write(drv.Row.Table.Columns[i].ColumnName + "&amp;nbsp;&amp;nbsp;");
+<br />          }
+<br />     }
+<br />}
+<br />&lt;/script&gt;<br /><br />&lt;/head&gt;
+<br />&lt;body&gt;
+<br />&lt;form runat="server"&gt;
+<br />  &lt;ASP:DataGrid id="dg" runat="server"      
+<br />   HeaderStyle-BackColor="#aaaadd"
+<br />   AutoGenerateColumns="true"
+<br />   AllowPaging="true"
+<br />   PageSize="6"
+<br />    OnItemDataBound="ItemDataBound"
+<br />    OnPageIndexChanged="PageChange"
+<br />  &gt;
+<br />  &lt;/asp:DataGrid&gt;
+<br />  &lt;/br&gt;
+<br />   &lt;asp:button id="btn" runat="server" onclick="btnClick" Text="我是按钮,按我一下"&gt;&lt;/asp:button&gt;<br />在AutoGenerateColumns="false"使用绑定列或者模板列的时候只需要使用 <br /><br />&lt;font color="blut"&gt;YourDataGrid.Columns[编号].HeaderText&lt;/font&gt; 去获取
+<br />  <br />&lt;/form&gt;
+<br />&lt;/body&gt;
+<br />&lt;/html&gt;</span>
+</code><p><a href="http://www.aspxboy.com/Files/71/66/284.Aspx" target="_blank">http://www.aspxboy.com/Files/71/66/284.Aspx</a></p>
+<p> </p>                
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">08 Apr 2006</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2006/04/08/twodropdownlistindatagridandbubbleevent/" class="post-title">两个DropDownList在Repeater、DataList、DataGrid内的连动和冒泡事件(BubbleEvent) </a>
+
+                        <p class="post-meta">
+                            
+                            
+                                
+                                    <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
+                                
+                                    <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
+                                
+                                    <a class="post-category post-category-DataGrid" href='/tags/datagrid'>DataGrid</a>
+                                
+                                    <a class="post-category post-category-GridView" href='/tags/gridview'>GridView</a>
+                                
+                                    <a class="post-category post-category-代码片段" href='/tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5'>代码片段</a>
+                                
+                                    <a class="post-category post-category-Grid" href='/tags/grid'>Grid</a>
+                                
+                                    <a class="post-category post-category-DataList" href='/tags/datalist'>DataList</a>
+                                
+                                    <a class="post-category post-category-Repeater" href='/tags/repeater'>Repeater</a>
+                                
+                                    <a class="post-category post-category-DropDownList" href='/tags/dropdownlist'>DropDownList</a>
+                                
+                                    <a class="post-category post-category-BubbleEvent" href='/tags/bubbleevent'>BubbleEvent</a>
+                                
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><span style="font-size: medium;"><strong>两个DropDownList在Repeater、DataList、DataGrid内的连动和冒泡事件(BubbleEvent)<br /></strong><span style="font-size: small;">        问题</span><strong>:</strong></span> <a href="http://community.csdn.net/Expert/topic/4670/4670056.xml?temp=3.944033E-02" target="_blank">http://community.csdn.net/Expert/topic/4670/4670056.xml?temp=3.944033E-02</a><br />        刚看第一眼觉得在第一个DDL的SelectedIndexChanged事件内绑定第二个DDL就ok了，页面上写或者ItemDataBound内写事件挂接代码都可以。打开VS写测试却发现有点<span style="color: #ff0000;"><strong><span style="text-decoration: underline;">障碍</span></strong></span>哦，<br /><span style="color: #008000;"><span style="text-decoration: underline;"><em>在SelectedIndexChanged内要知道去绑定哪个行哪个列的DDL要费些周折</em></span></span>。<br /><strong><span style="color: #0000ff;">只有从DDL一级一级的向上找Parent最后找到DataGridItem，再利用其ItemIndex定位到行然后FindControl到要绑定的DDL</span></strong>，最终可以实现，好像比较累哦。<br />        随又想到DataGrid的ItemCommand事件，但发现WebControl内只有<a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/cpref/html/frlrfSystemWebUIWebControlsButtonClassTopic.asp"><strong><span style="color: #a52a2a;">Button</span></strong></a><span style="color: #a52a2a;"> </span><a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/cpref/html/frlrfSystemWebUIWebControlsImageButtonClassTopic.asp"><strong><span style="color: #a52a2a;">ImageButton</span></strong></a><span style="color: #a52a2a;"> <strong><span style="text-decoration: underline;"><a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/cpref/html/frlrfsystemwebuiwebcontrolslinkbuttonclasstopic.asp">LinkButton</a></span></strong></span>有<a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/cpref/html/frlrfsystemwebuiwebcontrolslinkbuttonclasscommandnametopic.asp">CommandName</a>属性和 <a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/cpref/html/frlrfsystemwebuiwebcontrolslinkbuttonclasscommandargumenttopic.asp">CommandArgument</a>属性，并可以将事件<span style="text-decoration: underline;"><strong><a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/cpguide/html/cpconbubblingcommandevent.asp">上浮（冒泡）</a>.</strong></span><a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/cpref/html/frlrfsystemwebuiwebcontrolsdropdownlistclasstopic.asp">DropDownLis</a>t先天不足！真是郁闷~~~~~ 能不能自己改造呢？<span style="color: #ff0000; background-color: #000080;"><strong>动手试试</strong></span>就知道了。</p>
+<code><span style="color: #000000">
+&lt;%@ Page Language="C#" Debug="true" %&gt;
+<br />&lt;%@ Import Namespace="System.Data" %&gt;
+<br />&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+<br />&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="gb2312" lang="gb2312"&gt;
+<br />&lt;head&gt;
+<br />&lt;title&gt; ItemDataBoundGetColumnName &lt;/title&gt;
+<br />&lt;meta http-equiv="Content-Type" content="text/html; charset=gb2312" /&gt;
+<br />&lt;meta name="title" content="" /&gt;
+<br />&lt;meta name="author" content="活靶子,Huobazi,www.AspxBoy.com" /&gt;
+<br />&lt;meta name="subject" content="" /&gt;
+<br />&lt;meta name="language" content="gb2312" /&gt;
+<br />&lt;meta name="keywords" content="" /&gt;
+<br />&lt;meta name="Copyright" content="www.AspxBoy.com" /&gt;
+<br />&lt;meta name="robots" content="all" /&gt;<br /><br />&lt;script language="c#" runat="server"&gt;
+<br />void BindGrid()
+<br />{
+<br />        DataTable dt = new DataTable();
+<br />        DataRow dr;
+<br />        dt.Columns.Add(new DataColumn("IntegerValue", typeof(Int32)));
+<br />        dt.Columns.Add(new DataColumn("StringValue", typeof(string)));
+<br />        dt.Columns.Add(new DataColumn("DateTimeValue", typeof(DateTime)));
+<br />        dt.Columns.Add(new DataColumn("BoolValue", typeof(bool)));
+<br />        dt.Columns.Add(new DataColumn("CurrencyValue", typeof(double)));
+<br />        for (int i = 0; i &lt; 36; i++) {
+<br />            dr = dt.NewRow();
+<br />            dr[0] = i;
+<br />            dr[1] = "项 " + i.ToString();
+<br />            dr[2] = DateTime.Now;
+<br />            dr[3] = (i % 2 != 0) ? true : false;
+<br />            dr[4] = 1.23 * (i+1);
+<br />            dt.Rows.Add(dr);
+<br />        }
+<br />  dg.DataSource= dt;
+<br />  dg.DataBind();
+<br />}
+<br />void Page_Load(object o, EventArgs e)
+<br />{
+<br />     dg.PagerStyle.Mode = PagerMode.NumericPages;
+<br />     if(!IsPostBack)
+<br />     {
+<br />        BindGrid();
+<br />     }
+<br />}
+<br /> 
+<br />void btnClick(object o , EventArgs e)
+<br />{
+<br />     Response.Write("页面回发,但是不执行ItemDataBound");
+<br />}
+<br /> 
+<br />void PageChange(object o , DataGridPageChangedEventArgs e)
+<br />{
+<br />     dg.CurrentPageIndex = e.NewPageIndex;
+<br />     BindGrid();
+<br />}
+<br />void ItemDataBound(object o , DataGridItemEventArgs e)
+<br />{
+<br />     if(e.Item.ItemIndex &gt; -1 )//必须
+<br />     {
+<br />          DataRowView drv = (DataRowView)e.Item.DataItem;
+<br />          for (int i=0; i&lt;drv.Row.Table.Columns.Count ; i++)
+<br />          { 
+<br />            Response.Write(drv.Row.Table.Columns[i].ColumnName + "&amp;nbsp;&amp;nbsp;");
+<br />          }
+<br />     }
+<br />}
+<br />&lt;/script&gt;<br /><br />&lt;/head&gt;
+<br />&lt;body&gt;
+<br />&lt;form runat="server"&gt;
+<br />  &lt;ASP:DataGrid id="dg" runat="server"      
+<br />   HeaderStyle-BackColor="#aaaadd"
+<br />   AutoGenerateColumns="true"
+<br />   AllowPaging="true"
+<br />   PageSize="6"
+<br />    OnItemDataBound="ItemDataBound"
+<br />    OnPageIndexChanged="PageChange"
+<br />  &gt;
+<br />  &lt;/asp:DataGrid&gt;
+<br />  &lt;/br&gt;
+<br />   &lt;asp:button id="btn" runat="server" onclick="btnClick" Text="我是按钮,按我一下"&gt;&lt;/asp:button&gt;<br />在AutoGenerateColumns="false"使用绑定列或者模板列的时候只需要使用 <br /><br />&lt;font color="blut"&gt;YourDataGrid.Columns[编号].HeaderText&lt;/font&gt; 去获取
+<br />  <br />&lt;/form&gt;
+<br />&lt;/body&gt;
+<br />&lt;/html&gt;</span>
+</code><p><a href="http://www.aspxboy.com/Files/71/66/284.Aspx" target="_blank">http://www.aspxboy.com/Files/71/66/284.Aspx</a></p>
+<p> </p>                
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">24 Mar 2006</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2006/03/24/cb-357546/" class="post-title">关于Data Access Blok (SqlHelper.cs)使用时出现</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                
+                                    <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
+                                
+                                    <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
+                                
+                                    <a class="post-category post-category-代码片段" href='/tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5'>代码片段</a>
+                                
+                                    <a class="post-category post-category-SQL" href='/tags/sql'>SQL</a>
+                                
+                                    <a class="post-category post-category-Server" href='/tags/server'>Server</a>
+                                
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>关于Data Access Blok (SqlHelper.cs)使用时出现"对象必须实现 IConvertible/Object must implement IConvertible."异常</p>
+<p>在使用低版本 Data Access Blok  时，出现如下异常<br />“/”应用程序中的服务器错误。<br />--------------------------------------------------------------------------------</p>
 <p> </p>
-<div style="padding-right: 5px; padding-left: 4px; font-size: 13px; padding-bottom: 4px; width: 98%; word-break: break-all; padding-top: 4px; background-color: #eeeeee; border: #cccccc 1px solid;">
-<span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">url </span><span style="COLOR: #ff0000">name</span><span style="COLOR: #0000ff">="forum_Paged"</span><span style="COLOR: #ff0000"> location </span><span style="COLOR: #0000ff">= "forums"</span><span style="COLOR: #ff0000"> path </span><span style="COLOR: #0000ff">= "{0}/{1}/ShowForum.aspx"</span><span style="COLOR: #ff0000"> pattern </span><span style="COLOR: #0000ff">= "(\d+)/(\d+)/ShowForum.aspx"</span><span style="COLOR: #ff0000"> vanity</span><span style="COLOR: #0000ff">="ShowForum.aspx?PageIndex=$1^ForumID=$2"</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span>
-</div>
-<p>然后siteUrl.cs内增加<br /> </p>
-<div class="codeDiv">public virtual string FormPagedFormat (int forumID)<br />{<br /> return urlData.FormatUrl("forum_Paged", "{0}", forumID.ToString(), forumID.ToString());<br />}</div>
-<p>接着ThreadView.cs内paer数据绑定处增加</p>
-<div class="codeDiv">pager.UrlPattern = SiteUrls.Instance().FormPagedFormat(csContext.ForumID);<br /> </div>
-<p>重新编译，OK，看看效果吧～～</p>
-<p><a href="http://www.3pub.com/bbs/3/default.aspx">http://www.3pub.com/bbs/3/default.aspx</a></p>              
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">07 Oct 2005</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="https://huobazi.aspxboy.com/blog/2005/10/07/cb-249806/" class="post-title">Communtiy Server论坛的帖子显示页面分页部分的Url Rewrite的构造方法</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                
-                                    <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
-                                
-                                    <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
-                                
-                                    <a class="post-category post-category-.Net其他" href='/tags/.net%E5%85%B6%E4%BB%96'>.Net其他</a>
-                                
-                                    <a class="post-category post-category-Communtiy Server" href='/tags/communtiy-server'>Communtiy Server</a>
-                                
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>你可能会发现在Communtiy Server的论坛帖子列表页面</p>
-<p>比如<a href="http://communityserver.org/forums/129/ShowForum.aspx">http://communityserver.org/forums/129/ShowForum.aspx</a></p>
-<p>看下面分页处的连接使用的地址是类似ShowForum.aspx?PageIndex=2这样的地址<br />没有做到SearchFriendly,我们稍微改造一下代码就可以实现类似帖子显示页面内那样的地址<br />先在siteUrl.config内增加</p>
+<p><span style="color: #0000ff;">对象必须实现 IConvertible。<br />说明: 执行当前 Web 请求期间，出现未处理的异常。请检查堆栈跟踪信息，以了解有关该错误以及代码中导致错误的出处的详细信息。 </span></p>
 <p> </p>
-<div style="padding-right: 5px; padding-left: 4px; font-size: 13px; padding-bottom: 4px; width: 98%; word-break: break-all; padding-top: 4px; background-color: #eeeeee; border: #cccccc 1px solid;">
-<span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">url </span><span style="COLOR: #ff0000">name</span><span style="COLOR: #0000ff">="forum_Paged"</span><span style="COLOR: #ff0000"> location </span><span style="COLOR: #0000ff">= "forums"</span><span style="COLOR: #ff0000"> path </span><span style="COLOR: #0000ff">= "{0}/{1}/ShowForum.aspx"</span><span style="COLOR: #ff0000"> pattern </span><span style="COLOR: #0000ff">= "(\d+)/(\d+)/ShowForum.aspx"</span><span style="COLOR: #ff0000"> vanity</span><span style="COLOR: #0000ff">="ShowForum.aspx?PageIndex=$1^ForumID=$2"</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span>
-</div>
-<p>然后siteUrl.cs内增加<br /> </p>
-<div class="codeDiv">public virtual string FormPagedFormat (int forumID)<br />{<br /> return urlData.FormatUrl("forum_Paged", "{0}", forumID.ToString(), forumID.ToString());<br />}</div>
-<p>接着ThreadView.cs内paer数据绑定处增加</p>
-<div class="codeDiv">pager.UrlPattern = SiteUrls.Instance().FormPagedFormat(csContext.ForumID);<br /> </div>
-<p>重新编译，OK，看看效果吧～～</p>
-<p><a href="http://www.3pub.com/bbs/3/default.aspx">http://www.3pub.com/bbs/3/default.aspx</a></p>              
+<p><span style="color: #0000ff;">异常详细信息: System.InvalidCastException: 对象必须实现 IConvertible。</span></p>
+<p> </p>
+<p><span style="color: #0000ff;">源错误: </span></p>
+<p> <br /><span style="color: #0000ff;">行 360：   <br />行 361：   //finally, execute the command.<br />行 362：   int retval = cmd.ExecuteNonQuery();<br />行 363：   <br />行 364：   // detach the SqlParameters from the command object, so they can be used again.</span></p>
+<p> </p>
+<p>参考<a href="http://weblogs.asp.net/ssmith/archive/2003/08/19/24524.aspx#92222" target="_blank">http://weblogs.asp.net/ssmith/archive/2003/08/19/24524.aspx#92222</a><br />做修改<br />the simple fix is to change line 93 to read:<br />commandParameters[i].Value = ((SqlParameter)parameterValues[i]).Value;</p>
+<p> </p>
+<p>instead of:<br />commandParameters[i].Value = parameterValues[i];</p>
+<p> </p>
+<p>正常工作。</p>                
 
                     </div>
                 </section>
                 
-                <h1 class="content-subhead">04 Oct 2005</h1>
+                <h1 class="content-subhead">24 Mar 2006</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2005/10/04/cb-248673/" class="post-title">C Community Server 群发Email MassEmailingAdmin.aspx页面内插入表情和代码时，404错误</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2006/03/24/cb-357546/" class="post-title">关于Data Access Blok (SqlHelper.cs)使用时出现</a>
 
                         <p class="post-meta">
                             
@@ -577,36 +499,41 @@ app.Context.Trace.Write("RewriterModule", "Exiting ModuleRewriter");
                                 
                                     <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
                                 
-                                    <a class="post-category post-category-Community Server" href='/tags/community-server'>Community Server</a>
+                                    <a class="post-category post-category-代码片段" href='/tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5'>代码片段</a>
+                                
+                                    <a class="post-category post-category-SQL" href='/tags/sql'>SQL</a>
+                                
+                                    <a class="post-category post-category-Server" href='/tags/server'>Server</a>
                                 
                             
                         </p>
                     </header>
 
                     <div class="post-description">
-                        <p>Email群发的时候：MassEmailingAdmin.aspx页面内插入表情和代码时，404错误 <br /></p>
-<p>发现是Js文件内路径的问题<br />FTB-FreeTextBox.js内<br /></p>
-<div class="codeDiv">
-<br /> this.iPopup.document.location.href = "../emoticons.aspx"; <br /><p></p>
-<br /><p>改成</p>
-<br /><p> this.iPopup.document.location.href = "/emoticons.aspx";<br /><br /></p>
-</div>
-<div class="codeDiv">
-<br />FTB-Pro.js内 <br /><p></p>
-<br /><p> var codeWin = window.open("../insertcode.aspx","codeWin","width=530,height=420,status=0,toolbars=0");</p>
-<br /><p>改成</p>
-<br /><p> var codeWin = window.open("/insertcode.aspx","codeWin","width=530,height=420,status=0,toolbars=0");<br /></p>
-</div>
-<p></p>             
+                        <p>关于Data Access Blok (SqlHelper.cs)使用时出现"对象必须实现 IConvertible/Object must implement IConvertible."异常</p>
+<p>在使用低版本 Data Access Blok  时，出现如下异常<br />“/”应用程序中的服务器错误。<br />--------------------------------------------------------------------------------</p>
+<p> </p>
+<p><span style="color: #0000ff;">对象必须实现 IConvertible。<br />说明: 执行当前 Web 请求期间，出现未处理的异常。请检查堆栈跟踪信息，以了解有关该错误以及代码中导致错误的出处的详细信息。 </span></p>
+<p> </p>
+<p><span style="color: #0000ff;">异常详细信息: System.InvalidCastException: 对象必须实现 IConvertible。</span></p>
+<p> </p>
+<p><span style="color: #0000ff;">源错误: </span></p>
+<p> <br /><span style="color: #0000ff;">行 360：   <br />行 361：   //finally, execute the command.<br />行 362：   int retval = cmd.ExecuteNonQuery();<br />行 363：   <br />行 364：   // detach the SqlParameters from the command object, so they can be used again.</span></p>
+<p> </p>
+<p>参考<a href="http://weblogs.asp.net/ssmith/archive/2003/08/19/24524.aspx#92222" target="_blank">http://weblogs.asp.net/ssmith/archive/2003/08/19/24524.aspx#92222</a><br />做修改<br />the simple fix is to change line 93 to read:<br />commandParameters[i].Value = ((SqlParameter)parameterValues[i]).Value;</p>
+<p> </p>
+<p>instead of:<br />commandParameters[i].Value = parameterValues[i];</p>
+<p> </p>
+<p>正常工作。</p>                
 
                     </div>
                 </section>
                 
-                <h1 class="content-subhead">04 Oct 2005</h1>
+                <h1 class="content-subhead">05 Jan 2006</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2005/10/04/cb-248673/" class="post-title">C Community Server 群发Email MassEmailingAdmin.aspx页面内插入表情和代码时，404错误</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2006/01/05/sourcecodeviewer01/" class="post-title">SourceCodeViewer 0.1  and  Ms treeview &#39;s problem</a>
 
                         <p class="post-meta">
                             
@@ -616,103 +543,14 @@ app.Context.Trace.Write("RewriterModule", "Exiting ModuleRewriter");
                                 
                                     <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
                                 
-                                    <a class="post-category post-category-Community Server" href='/tags/community-server'>Community Server</a>
-                                
                             
                         </p>
                     </header>
 
                     <div class="post-description">
-                        <p>Email群发的时候：MassEmailingAdmin.aspx页面内插入表情和代码时，404错误 <br /></p>
-<p>发现是Js文件内路径的问题<br />FTB-FreeTextBox.js内<br /></p>
-<div class="codeDiv">
-<br /> this.iPopup.document.location.href = "../emoticons.aspx"; <br /><p></p>
-<br /><p>改成</p>
-<br /><p> this.iPopup.document.location.href = "/emoticons.aspx";<br /><br /></p>
-</div>
-<div class="codeDiv">
-<br />FTB-Pro.js内 <br /><p></p>
-<br /><p> var codeWin = window.open("../insertcode.aspx","codeWin","width=530,height=420,status=0,toolbars=0");</p>
-<br /><p>改成</p>
-<br /><p> var codeWin = window.open("/insertcode.aspx","codeWin","width=530,height=420,status=0,toolbars=0");<br /></p>
-</div>
-<p></p>             
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">04 Oct 2005</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="https://huobazi.aspxboy.com/blog/2005/10/04/cb-248674/" class="post-title">使ExpanderPanel的文本带上连接</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                
-                                    <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
-                                
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p><p>ExpanderPanel.cs 增加TextHref属性<br />修改了Text属性的Get方法</p>
-<div class="codeDiv">
-<br />if(ResourceName != null) <br />{  if(TextHref == null)<br /> {<br />  return CommunityServer.Components.ResourceManager.GetString(ResourceName);<br /> } <br /> else<br /> {<br />  return String.Format(&rdquo;&lt;a href=\&ldquo;{0}\&rdquo;&gt;{1}&lt;/a&gt;&rdquo;,this.TextHref,CommunityServer.Components.ResourceManager.GetString(ResourceName));<br /> }<br />}</div></p>
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">02 Oct 2005</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="https://huobazi.aspxboy.com/blog/2005/10/02/cb-248084/" class="post-title">Community Server的新功能－－快速回复</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                
-                                    <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
-                                
-                                    <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
-                                
-                                    <a class="post-category post-category-Community Server" href='/tags/community-server'>Community Server</a>
-                                
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>进入<br /><a href="http://communityserver.org/forums/498047/ShowPost.aspx">http://communityserver.org/forums/498047/ShowPost.aspx</a><br /><br />双击鼠标,看效果<br /><br />但是Firefox/1.0下无效...</p>               
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">02 Oct 2005</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="https://huobazi.aspxboy.com/blog/2005/10/02/cb-248084/" class="post-title">Community Server的新功能－－快速回复</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                
-                                    <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
-                                
-                                    <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
-                                
-                                    <a class="post-category post-category-Community Server" href='/tags/community-server'>Community Server</a>
-                                
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>进入<br /><a href="http://communityserver.org/forums/498047/ShowPost.aspx">http://communityserver.org/forums/498047/ShowPost.aspx</a><br /><br />双击鼠标,看效果<br /><br />但是Firefox/1.0下无效...</p>               
+                        <table style="TABLE-LAYOUT: fixed; WORD-WRAP: break-word" height="100%" cellspacing="0" cellpadding="0" width="100%" border="0"><tbody><tr><td valign="top">
+<a href="http://www.im286.com/misc.php?action=viewratings&amp;tid=1241659&amp;pid=12694846" name="pid12694846" alt="查看评分记录"></a><strong><span class="smalltxt"><span class="bold">SourceCodeViewer 0.1</span></span><br /><br /></strong><span style="FONT-SIZE: 12px"><font size="3">一直想给自己网站放一个源码浏览器，发现<a href="http://scottwater.com/blog/default.aspx" target="_blank">Scott Watermasysk</a>做的</font><a href="http://code.communityserver.org/" target="_blank"><font color="#237299" size="3">Cojax</font></a><font size="3">很酷，但却找不到同类的asp.net的开源项目，就决定自己做一个，顺便学习ajax .基本做出了个雏形，语法高亮也只能支持到 C#,Jscript,htm.<br />树用的是MS treeview ，但郁闷的事情也来了，MS treeview在firefox下render出的html竟然和ie下一点都不相同，而且是采用postback方式展开节点，我给tree上加的onclick不起作用，导致目前这个<a href="http://www.aspxboy.com/code/">东东</a>在firefox下不能用<img height="19" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png9" width="19" border="0">,继续研究中....<br /></font><br />An open source web based Source Code Viewer system application <br />written in ASP.NET / C#.NET / Javascript with ajax for the Windows OS and .Net FrameWork platform.<br /><br />Homepage : <a href="http://www.aspxboy.com/scv/" target="_blank"><font color="#003366">http://www.aspxboy.com/scv/</font></a> <br />Online demo : <a href="http://www.aspxboy.com/code/" target="_blank"><font color="#003366">http://www.aspxboy.com/code/</font></a> <br />Online screenshots : <a href="http://sourceforge.net/project/screenshots.php?group_id=155912" target="_blank"><font color="#003366">http://sourceforge.net/project/screenshots.php?group_id=155912</font></a> <br />On Sourceforge : <a href="http://sourceforge.net/projects/scv" target="_blank"><font color="#003366">http://sourceforge.net/projects/scv</font></a> <br />Download the latest version 0.1 including the source code :<br /><a href="http://sourceforge.net/project/showfiles.php?group_id=155912&amp;package_id=174984&amp;release_id=382944" target="_blank"><font color="#003366">http://sourceforge.net/project/s ... p;release_id=382944</font></a><br /><br />Screenshots:<br /><img onmousewheel="return imgzoom(this);" onmouseover="if(this.width&gt;screen.width*0.7) {this.resized=true; this.width=screen.width*0.7; this.style.cursor='hand'; this.alt='Click here to open new window\nCTRL+Mouse wheel to zoom in/out';}" onclick="if(!this.resized) {return true;} else {window.open('http://sourceforge.net/dbimage.php?id=54076');}" src="http://sourceforge.net/dbimage.php?id=54076" onload="if(this.width&gt;screen.width*0.7) {this.resized=true; this.width=screen.width*0.7; this.alt='Click here to open new window\nCTRL+Mouse wheel to zoom in/out';}" border="0"><br /><img onmousewheel="return imgzoom(this);" onmouseover="if(this.width&gt;screen.width*0.7) {this.resized=true; this.width=screen.width*0.7; this.style.cursor='hand'; this.alt='Click here to open new window\nCTRL+Mouse wheel to zoom in/out';}" onclick="if(!this.resized) {return true;} else {window.open('http://sourceforge.net/dbimage.php?id=54080');}" src="http://sourceforge.net/dbimage.php?id=54080" onload="if(this.width&gt;screen.width*0.7) {this.resized=true; this.width=screen.width*0.7; this.alt='Click here to open new window\nCTRL+Mouse wheel to zoom in/out';}" border="0"><br /><img onmousewheel="return imgzoom(this);" onmouseover="if(this.width&gt;screen.width*0.7) {this.resized=true; this.width=screen.width*0.7; this.style.cursor='hand'; this.alt='Click here to open new window\nCTRL+Mouse wheel to zoom in/out';}" onclick="if(!this.resized) {return true;} else {window.open('http://sourceforge.net/dbimage.php?id=54082');}" src="http://sourceforge.net/dbimage.php?id=54082" onload="if(this.width&gt;screen.width*0.7) {this.resized=true; this.width=screen.width*0.7; this.alt='Click here to open new window\nCTRL+Mouse wheel to zoom in/out';}" border="0"><br /><br /></span>
+</td></tr></tbody></table>
 
                     </div>
                 </section>
@@ -726,7 +564,7 @@ app.Context.Trace.Write("RewriterModule", "Exiting ModuleRewriter");
         <i class="fa fa-angle-double-left"></i>&nbsp;Newer
       </a>
       
-    <span class="post-list-pagination-item post-list-pagination-item-current">Page 9 of 16</span>
+    <span class="post-list-pagination-item post-list-pagination-item-current">Page 9 of 19</span>
     
       <a href="/tags/asp.net/page/10/" class="post-list-pagination-item pure-button post-list-pagination-item-next">
         Older&nbsp;<i class="fa fa-angle-double-right"></i>

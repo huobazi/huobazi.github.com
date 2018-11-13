@@ -59,11 +59,11 @@
             
             <div class="posts">
                 
-                <h1 class="content-subhead">11 Apr 2006</h1>
+                <h1 class="content-subhead">03 Jul 2006</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2006/04/11/cb-372413/" class="post-title">Yetanotherforum 编辑表情后不立即更新</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2006/07/03/enablesortingandpagingcallbacksisnotworkingwhennotusethesqldatasourcecontorl/" class="post-title">code-beside方式绑定GridView后EnableSortingAndPagingCallbacks不工作</a>
 
                         <p class="post-meta">
                             
@@ -72,152 +72,36 @@
                                     <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
                                 
                                     <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
-                                
-                                    <a class="post-category post-category-Yetanotherforum" href='/tags/yetanotherforum'>Yetanotherforum</a>
-                                
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>文件  FormatMsg.cs</p>
-<br /><p>方法iAddSmiles内 </p>
-<br /><p>Code:<br />strTemp = strTemp.Replace(code.ToLower(),String.Format("&lt;img src=\"{0}\" alt=\"{1}\" /&gt;",basePage.Smiley(Convert.ToString(row["Icon"])),basePage.Server.HtmlEncode(row["Emoticon"].ToString())));<br />调用了两次可能导致被转化成html后有乱码出现</p>
-<br /><p>在方法GetSmilies内<br />Code:<br />System.Web.HttpContext.Current.Cache.Insert("Smilies",dt,null,DateTime.Now.AddMinutes(60),TimeSpan.Zero);<br />加入缓存项的Key和更新/删除时移除缓存的Key不一致 导致编辑表情后不立即更新<br />DB.cs<br />Code:<br />System.Web.HttpContext.Current.Cache.Remove("Smiles");<br /></p>             
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">08 Apr 2006</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="https://huobazi.aspxboy.com/blog/2006/04/08/twodropdownlistindatagridandbubbleevent/" class="post-title">两个DropDownList在Repeater、DataList、DataGrid内的连动和冒泡事件(BubbleEvent) </a>
-
-                        <p class="post-meta">
-                            
-                            
-                                
-                                    <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
-                                
-                                    <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
-                                
-                                    <a class="post-category post-category-DataGrid" href='/tags/datagrid'>DataGrid</a>
                                 
                                     <a class="post-category post-category-GridView" href='/tags/gridview'>GridView</a>
                                 
-                                    <a class="post-category post-category-代码片段" href='/tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5'>代码片段</a>
-                                
-                                    <a class="post-category post-category-Grid" href='/tags/grid'>Grid</a>
-                                
-                                    <a class="post-category post-category-DataList" href='/tags/datalist'>DataList</a>
-                                
-                                    <a class="post-category post-category-Repeater" href='/tags/repeater'>Repeater</a>
-                                
-                                    <a class="post-category post-category-DropDownList" href='/tags/dropdownlist'>DropDownList</a>
-                                
-                                    <a class="post-category post-category-BubbleEvent" href='/tags/bubbleevent'>BubbleEvent</a>
-                                
                             
                         </p>
                     </header>
 
                     <div class="post-description">
-                        <p><span style="font-size: medium;"><strong>两个DropDownList在Repeater、DataList、DataGrid内的连动和冒泡事件(BubbleEvent)<br /></strong><span style="font-size: small;">        问题</span><strong>:</strong></span> <a href="http://community.csdn.net/Expert/topic/4670/4670056.xml?temp=3.944033E-02" target="_blank">http://community.csdn.net/Expert/topic/4670/4670056.xml?temp=3.944033E-02</a><br />        刚看第一眼觉得在第一个DDL的SelectedIndexChanged事件内绑定第二个DDL就ok了，页面上写或者ItemDataBound内写事件挂接代码都可以。打开VS写测试却发现有点<span style="color: #ff0000;"><strong><span style="text-decoration: underline;">障碍</span></strong></span>哦，<br /><span style="color: #008000;"><span style="text-decoration: underline;"><em>在SelectedIndexChanged内要知道去绑定哪个行哪个列的DDL要费些周折</em></span></span>。<br /><strong><span style="color: #0000ff;">只有从DDL一级一级的向上找Parent最后找到DataGridItem，再利用其ItemIndex定位到行然后FindControl到要绑定的DDL</span></strong>，最终可以实现，好像比较累哦。<br />        随又想到DataGrid的ItemCommand事件，但发现WebControl内只有<a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/cpref/html/frlrfSystemWebUIWebControlsButtonClassTopic.asp"><strong><span style="color: #a52a2a;">Button</span></strong></a><span style="color: #a52a2a;"> </span><a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/cpref/html/frlrfSystemWebUIWebControlsImageButtonClassTopic.asp"><strong><span style="color: #a52a2a;">ImageButton</span></strong></a><span style="color: #a52a2a;"> <strong><span style="text-decoration: underline;"><a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/cpref/html/frlrfsystemwebuiwebcontrolslinkbuttonclasstopic.asp">LinkButton</a></span></strong></span>有<a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/cpref/html/frlrfsystemwebuiwebcontrolslinkbuttonclasscommandnametopic.asp">CommandName</a>属性和 <a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/cpref/html/frlrfsystemwebuiwebcontrolslinkbuttonclasscommandargumenttopic.asp">CommandArgument</a>属性，并可以将事件<span style="text-decoration: underline;"><strong><a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/cpguide/html/cpconbubblingcommandevent.asp">上浮（冒泡）</a>.</strong></span><a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/cpref/html/frlrfsystemwebuiwebcontrolsdropdownlistclasstopic.asp">DropDownLis</a>t先天不足！真是郁闷~~~~~ 能不能自己改造呢？<span style="color: #ff0000; background-color: #000080;"><strong>动手试试</strong></span>就知道了。</p>
-<code><span style="color: #000000">
-&lt;%@ Page Language="C#" Debug="true" %&gt;
-<br />&lt;%@ Import Namespace="System.Data" %&gt;
-<br />&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
-<br />&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="gb2312" lang="gb2312"&gt;
-<br />&lt;head&gt;
-<br />&lt;title&gt; ItemDataBoundGetColumnName &lt;/title&gt;
-<br />&lt;meta http-equiv="Content-Type" content="text/html; charset=gb2312" /&gt;
-<br />&lt;meta name="title" content="" /&gt;
-<br />&lt;meta name="author" content="活靶子,Huobazi,www.AspxBoy.com" /&gt;
-<br />&lt;meta name="subject" content="" /&gt;
-<br />&lt;meta name="language" content="gb2312" /&gt;
-<br />&lt;meta name="keywords" content="" /&gt;
-<br />&lt;meta name="Copyright" content="www.AspxBoy.com" /&gt;
-<br />&lt;meta name="robots" content="all" /&gt;<br /><br />&lt;script language="c#" runat="server"&gt;
-<br />void BindGrid()
-<br />{
-<br />        DataTable dt = new DataTable();
-<br />        DataRow dr;
-<br />        dt.Columns.Add(new DataColumn("IntegerValue", typeof(Int32)));
-<br />        dt.Columns.Add(new DataColumn("StringValue", typeof(string)));
-<br />        dt.Columns.Add(new DataColumn("DateTimeValue", typeof(DateTime)));
-<br />        dt.Columns.Add(new DataColumn("BoolValue", typeof(bool)));
-<br />        dt.Columns.Add(new DataColumn("CurrencyValue", typeof(double)));
-<br />        for (int i = 0; i &lt; 36; i++) {
-<br />            dr = dt.NewRow();
-<br />            dr[0] = i;
-<br />            dr[1] = "项 " + i.ToString();
-<br />            dr[2] = DateTime.Now;
-<br />            dr[3] = (i % 2 != 0) ? true : false;
-<br />            dr[4] = 1.23 * (i+1);
-<br />            dt.Rows.Add(dr);
-<br />        }
-<br />  dg.DataSource= dt;
-<br />  dg.DataBind();
-<br />}
-<br />void Page_Load(object o, EventArgs e)
-<br />{
-<br />     dg.PagerStyle.Mode = PagerMode.NumericPages;
-<br />     if(!IsPostBack)
-<br />     {
-<br />        BindGrid();
-<br />     }
-<br />}
-<br /> 
-<br />void btnClick(object o , EventArgs e)
-<br />{
-<br />     Response.Write("页面回发,但是不执行ItemDataBound");
-<br />}
-<br /> 
-<br />void PageChange(object o , DataGridPageChangedEventArgs e)
-<br />{
-<br />     dg.CurrentPageIndex = e.NewPageIndex;
-<br />     BindGrid();
-<br />}
-<br />void ItemDataBound(object o , DataGridItemEventArgs e)
-<br />{
-<br />     if(e.Item.ItemIndex &gt; -1 )//必须
-<br />     {
-<br />          DataRowView drv = (DataRowView)e.Item.DataItem;
-<br />          for (int i=0; i&lt;drv.Row.Table.Columns.Count ; i++)
-<br />          { 
-<br />            Response.Write(drv.Row.Table.Columns[i].ColumnName + "&amp;nbsp;&amp;nbsp;");
-<br />          }
-<br />     }
-<br />}
-<br />&lt;/script&gt;<br /><br />&lt;/head&gt;
-<br />&lt;body&gt;
-<br />&lt;form runat="server"&gt;
-<br />  &lt;ASP:DataGrid id="dg" runat="server"      
-<br />   HeaderStyle-BackColor="#aaaadd"
-<br />   AutoGenerateColumns="true"
-<br />   AllowPaging="true"
-<br />   PageSize="6"
-<br />    OnItemDataBound="ItemDataBound"
-<br />    OnPageIndexChanged="PageChange"
-<br />  &gt;
-<br />  &lt;/asp:DataGrid&gt;
-<br />  &lt;/br&gt;
-<br />   &lt;asp:button id="btn" runat="server" onclick="btnClick" Text="我是按钮,按我一下"&gt;&lt;/asp:button&gt;<br />在AutoGenerateColumns="false"使用绑定列或者模板列的时候只需要使用 <br /><br />&lt;font color="blut"&gt;YourDataGrid.Columns[编号].HeaderText&lt;/font&gt; 去获取
-<br />  <br />&lt;/form&gt;
-<br />&lt;/body&gt;
-<br />&lt;/html&gt;</span>
-</code><p><a href="http://www.aspxboy.com/Files/71/66/284.Aspx" target="_blank">http://www.aspxboy.com/Files/71/66/284.Aspx</a></p>
-<p> </p>                
+                        <p><p>今天对GridView的学习中发现 当用 code-beside方式绑定GridView后（比如我绑一个DataTable)<br />EnableSortingAndPagingCallbacks不起作用。<br />在下面地址找到 一些说法</p>
+<p><a href="http://forums.asp.net/thread/1230450.aspx">http://forums.asp.net/thread/1230450.aspx</a></p>
+<p><a href="http://connect.microsoft.com/VisualStudio/feedback/ViewFeedback.aspx?FeedbackID=103040">http://connect.microsoft.com/VisualStudio/feedback/ViewFeedback.aspx?FeedbackID=103040</a><br />记之&hellip;</p>
+<div style="padding-right: 5px; padding-left: 4px; font-size: 13px; padding-bottom: 4px; width: 98%; word-break: break-all; padding-top: 4px; background-color: #eeeeee; border: #cccccc 1px solid;">
+<span style="COLOR: #008080"> 1</span><span style="COLOR: #000000">    </span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">asp:GridView </span><span style="COLOR: #ff0000">id</span><span style="COLOR: #0000ff">=&ldquo;Gridviewex1&rdquo;</span><span style="COLOR: #ff0000"> <br /></span><span style="COLOR: #008080"> 2</span><span style="COLOR: #ff0000">    runat</span><span style="COLOR: #0000ff">=&ldquo;server&rdquo;</span><span style="COLOR: #ff0000"> <br /></span><span style="COLOR: #008080"> 3</span><span style="COLOR: #ff0000">    AllowSorting</span><span style="COLOR: #0000ff">=&ldquo;True&rdquo;</span><span style="COLOR: #ff0000"> <br /></span><span style="COLOR: #008080"> 4</span><span style="COLOR: #ff0000">    AutoGenerateColumns</span><span style="COLOR: #0000ff">=&ldquo;False&rdquo;</span><span style="COLOR: #ff0000"><br /></span><span style="COLOR: #008080"> 5</span><span style="COLOR: #ff0000">    EnableSortingAndPagingCallbacks</span><span style="COLOR: #0000ff">=&ldquo;True&rdquo;</span><span style="COLOR: #ff0000"> <br /></span><span style="COLOR: #008080"> 6</span><span style="COLOR: #ff0000">    OnSorting</span><span style="COLOR: #0000ff">=&ldquo;Gridviewex1_Sorting&rdquo;</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080"> 7</span><span style="COLOR: #000000">        </span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">Columns</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080"> 8</span><span style="COLOR: #000000">            </span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">asp:BoundField </span><span style="COLOR: #ff0000">DataField</span><span style="COLOR: #0000ff">=&ldquo;ProductId&rdquo;</span><span style="COLOR: #ff0000"> HeaderText</span><span style="COLOR: #0000ff">=&ldquo;ProductId&rdquo;</span><span style="COLOR: #ff0000"> SortExpression</span><span style="COLOR: #0000ff">=&ldquo;ProductId&rdquo;</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080"> 9</span><span style="COLOR: #000000">            </span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">asp:BoundField </span><span style="COLOR: #ff0000">DataField</span><span style="COLOR: #0000ff">=&ldquo;ProductName&rdquo;</span><span style="COLOR: #ff0000"> HeaderText</span><span style="COLOR: #0000ff">=&ldquo;ProductName&rdquo;</span><span style="COLOR: #ff0000"> SortExpression</span><span style="COLOR: #0000ff">=&ldquo;ProductName&rdquo;</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080">10</span><span style="COLOR: #000000">            </span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">asp:BoundField </span><span style="COLOR: #ff0000">DataField</span><span style="COLOR: #0000ff">=&ldquo;QuantityPerUnit&rdquo;</span><span style="COLOR: #ff0000"> HeaderText</span><span style="COLOR: #0000ff">=&ldquo;QuantityPerUnit&rdquo;</span><span style="COLOR: #ff0000"> SortExpression</span><span style="COLOR: #0000ff">=&ldquo;QuantityPerUnit&rdquo;</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080">11</span><span style="COLOR: #000000">            </span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">asp:BoundField </span><span style="COLOR: #ff0000">DataField</span><span style="COLOR: #0000ff">=&ldquo;UnitsInStock&rdquo;</span><span style="COLOR: #ff0000"> HeaderText</span><span style="COLOR: #0000ff">=&ldquo;UnitsInStock&rdquo;</span><span style="COLOR: #ff0000"> SortExpression</span><span style="COLOR: #0000ff">=&ldquo;UnitsInStock&rdquo;</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080">12</span><span style="COLOR: #000000">            </span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">asp:BoundField </span><span style="COLOR: #ff0000">DataField</span><span style="COLOR: #0000ff">=&ldquo;ReorderLevel&rdquo;</span><span style="COLOR: #ff0000"> HeaderText</span><span style="COLOR: #0000ff">=&ldquo;ReorderLevel&rdquo;</span><span style="COLOR: #ff0000"> SortExpression</span><span style="COLOR: #0000ff">=&ldquo;ReorderLevel&rdquo;</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080">13</span><span style="COLOR: #000000">            </span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">asp:BoundField </span><span style="COLOR: #ff0000">DataField</span><span style="COLOR: #0000ff">=&ldquo;Discontinued&rdquo;</span><span style="COLOR: #ff0000"> HeaderText</span><span style="COLOR: #0000ff">=&ldquo;Discontinued&rdquo;</span><span style="COLOR: #ff0000"> SortExpression</span><span style="COLOR: #0000ff">=&ldquo;Discontinued&rdquo;</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080">14</span><span style="COLOR: #000000">        </span><span style="COLOR: #0000ff">&lt;/</span><span style="COLOR: #800000">Columns</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080">15</span><span style="COLOR: #000000">    </span><span style="COLOR: #0000ff">&lt;/</span><span style="COLOR: #800000">aspx:GridView</span><span style="COLOR: #0000ff">&gt;</span>
+</div>
+<div style="padding-right: 5px; padding-left: 4px; font-size: 13px; padding-bottom: 4px; width: 98%; word-break: break-all; padding-top: 4px; background-color: #eeeeee; border: #cccccc 1px solid;">
+<span style="COLOR: #008080"> 1</span><span style="COLOR: #000000">    </span><span style="COLOR: #0000ff">protected</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">void</span><span style="COLOR: #000000"> Page_Load(</span><span style="COLOR: #0000ff">object</span><span style="COLOR: #000000"> sender, EventArgs e)<br /></span><span style="COLOR: #008080"> 2</span><span style="COLOR: #000000">    </span><span id="Codehighlighter1_61_159_Open_Text"><span style="COLOR: #000000">{<br /></span><span style="COLOR: #008080"> 3</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080"> 4</span><span style="COLOR: #000000">        </span><span style="COLOR: #0000ff">if</span><span style="COLOR: #000000"> (</span><span style="COLOR: #000000">!</span><span style="COLOR: #000000">Page.IsPostBack)<br /></span><span style="COLOR: #008080"> 5</span><span style="COLOR: #000000">        </span><span id="Codehighlighter1_102_153_Open_Text"><span style="COLOR: #000000">{<br /></span><span style="COLOR: #008080"> 6</span><span style="COLOR: #000000">            </span><span style="COLOR: #0000ff">this</span><span style="COLOR: #000000">.BindGrid(</span><span style="COLOR: #0000ff">string</span><span style="COLOR: #000000">.Empty);<br /></span><span style="COLOR: #008080"> 7</span><span style="COLOR: #000000">        }</span></span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080"> 8</span><span style="COLOR: #000000">    }</span></span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080"> 9</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080">10</span><span style="COLOR: #000000">    </span><span style="COLOR: #0000ff">private</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">void</span><span style="COLOR: #000000"> BindGrid(</span><span style="COLOR: #0000ff">string</span><span style="COLOR: #000000"> sortExpression)<br /></span><span style="COLOR: #008080">11</span><span style="COLOR: #000000">    </span><span id="Codehighlighter1_215_967_Open_Text"><span style="COLOR: #000000">{<br /></span><span style="COLOR: #008080">12</span><span style="COLOR: #000000">        DataTable dt </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">new</span><span style="COLOR: #000000"> DataTable();<br /></span><span style="COLOR: #008080">13</span><span style="COLOR: #000000">        SqlConnection conn </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">new</span><span style="COLOR: #000000"> SqlConnection();<br /></span><span style="COLOR: #008080">14</span><span style="COLOR: #000000">        conn.ConnectionString </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">server=wumeibo\wmb;database=northwind;uid=sa;pwd=sa;</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">;<br /></span><span style="COLOR: #008080">15</span><span style="COLOR: #000000">        SqlCommand cmd </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">new</span><span style="COLOR: #000000"> SqlCommand();<br /></span><span style="COLOR: #008080">16</span><span style="COLOR: #000000">        cmd.Connection </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> conn;<br /></span><span style="COLOR: #008080">17</span><span style="COLOR: #000000">        cmd.CommandType </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> CommandType.Text;<br /></span><span style="COLOR: #008080">18</span><span style="COLOR: #000000">        cmd.CommandText </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">select * from products</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">;<br /></span><span style="COLOR: #008080">19</span><span style="COLOR: #000000">        SqlDataAdapter adapter </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">new</span><span style="COLOR: #000000"> SqlDataAdapter();<br /></span><span style="COLOR: #008080">20</span><span style="COLOR: #000000">        adapter.SelectCommand </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> cmd;<br /></span><span style="COLOR: #008080">21</span><span style="COLOR: #000000">        adapter.Fill(dt);<br /></span><span style="COLOR: #008080">22</span><span style="COLOR: #000000">        DataView dv </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> dt.DefaultView;;<br /></span><span style="COLOR: #008080">23</span><span style="COLOR: #000000">        </span><span style="COLOR: #0000ff">if</span><span style="COLOR: #000000"> (</span><span style="COLOR: #000000">!</span><span style="COLOR: #0000ff">string</span><span style="COLOR: #000000">.IsNullOrEmpty(sortExpression))        <br /></span><span style="COLOR: #008080">24</span><span style="COLOR: #000000">        </span><span id="Codehighlighter1_792_873_Open_Text"><span style="COLOR: #000000">{<br /></span><span style="COLOR: #008080">25</span><span style="COLOR: #000000">            dv </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> dt.DefaultView;<br /></span><span style="COLOR: #008080">26</span><span style="COLOR: #000000">            dv.Sort </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> sortExpression;<br /></span><span style="COLOR: #008080">27</span><span style="COLOR: #000000">        }</span></span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080">28</span><span style="COLOR: #000000">        </span><span style="COLOR: #0000ff">this</span><span style="COLOR: #000000">.Gridviewex1.DataSource </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> dv;<br /></span><span style="COLOR: #008080">29</span><span style="COLOR: #000000">        </span><span style="COLOR: #0000ff">this</span><span style="COLOR: #000000">.Gridviewex1.DataBind();<br /></span><span style="COLOR: #008080">30</span><span style="COLOR: #000000">        <br /></span><span style="COLOR: #008080">31</span><span style="COLOR: #000000">    }</span></span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080">32</span><span style="COLOR: #000000">    </span><span style="COLOR: #0000ff">protected</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">void</span><span style="COLOR: #000000"> Gridviewex1_Sorting(</span><span style="COLOR: #0000ff">object</span><span style="COLOR: #000000"> sender, GridViewSortEventArgs e)<br /></span><span style="COLOR: #008080">33</span><span style="COLOR: #000000">    </span><span id="Codehighlighter1_1052_1094_Open_Text"><span style="COLOR: #000000">{<br /></span><span style="COLOR: #008080">34</span><span style="COLOR: #000000">        BindGrid(e.SortExpression);<br /></span><span style="COLOR: #008080">35</span><span style="COLOR: #000000">    }</span></span>
+</div>
+<p>经过测试 如下方法 可用</p>
+<div style="padding-right: 5px; padding-left: 4px; font-size: 13px; padding-bottom: 4px; width: 98%; word-break: break-all; padding-top: 4px; background-color: #eeeeee; border: #cccccc 1px solid;">
+<span style="COLOR: #008080"> 1</span> <span style="COLOR: #000000">    </span><span style="COLOR: #0000ff">protected</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">void</span><span style="COLOR: #000000"> Page_Load(</span><span style="COLOR: #0000ff">object</span><span style="COLOR: #000000"> sender, EventArgs e)<br /></span><span style="COLOR: #008080"> 2</span> <span style="COLOR: #000000">    {<br /></span><span style="COLOR: #008080"> 3</span> <span style="COLOR: #000000">            xx();<br /></span><span style="COLOR: #008080"> 4</span> <span style="COLOR: #000000">        <br /></span><span style="COLOR: #008080"> 5</span> <span style="COLOR: #000000">    }<br /></span><span style="COLOR: #008080"> 6</span> <span style="COLOR: #000000"><br /></span><span style="COLOR: #008080"> 7</span> <span style="COLOR: #000000">    </span><span style="COLOR: #0000ff">private</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">void</span><span style="COLOR: #000000"> xx()<br /></span><span style="COLOR: #008080"> 8</span> <span style="COLOR: #000000">    {<br /></span><span style="COLOR: #008080"> 9</span> <span style="COLOR: #000000">        SqlConnection conn </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">new</span><span style="COLOR: #000000"> SqlConnection();<br /></span><span style="COLOR: #008080">10</span> <span style="COLOR: #000000">        conn.ConnectionString </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">server=wumeibo\wmb;database=northwind;uid=sa;pwd=sa;</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">;<br /></span><span style="COLOR: #008080">11</span> <span style="COLOR: #000000">   <br /></span><span style="COLOR: #008080">12</span> <span style="COLOR: #000000">        SqlDataSource source </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">new</span><span style="COLOR: #000000"> SqlDataSource();<br /></span><span style="COLOR: #008080">13</span> <span style="COLOR: #000000">        source.ConnectionString </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">server=wumeibo\wmb;database=northwind;uid=sa;pwd=sa;</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">;<br /></span><span style="COLOR: #008080">14</span> <span style="COLOR: #000000">        source.SelectCommand </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">select * from products</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">;<br /></span><span style="COLOR: #008080">15</span> <span style="COLOR: #000000"><br /></span><span style="COLOR: #008080">16</span> <span style="COLOR: #000000">        </span><span style="COLOR: #0000ff">this</span><span style="COLOR: #000000">.Gridviewex1.DataSource </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> source;<br /></span><span style="COLOR: #008080">17</span> <span style="COLOR: #000000">        </span><span style="COLOR: #0000ff">this</span><span style="COLOR: #000000">.Gridviewex1.DataBind();<br /></span><span style="COLOR: #008080">18</span> <span style="COLOR: #000000">    }</span>
+</div></p>
 
                     </div>
                 </section>
                 
-                <h1 class="content-subhead">08 Apr 2006</h1>
+                <h1 class="content-subhead">03 Jul 2006</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2006/04/08/twodropdownlistindatagridandbubbleevent/" class="post-title">两个DropDownList在Repeater、DataList、DataGrid内的连动和冒泡事件(BubbleEvent) </a>
+                        <a href="https://huobazi.aspxboy.com/blog/2006/07/03/enablesortingandpagingcallbacksisnotworkingwhennotusethesqldatasourcecontorl/" class="post-title">code-beside方式绑定GridView后EnableSortingAndPagingCallbacks不工作</a>
 
                         <p class="post-meta">
                             
@@ -226,211 +110,36 @@
                                     <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
                                 
                                     <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
-                                
-                                    <a class="post-category post-category-DataGrid" href='/tags/datagrid'>DataGrid</a>
                                 
                                     <a class="post-category post-category-GridView" href='/tags/gridview'>GridView</a>
                                 
-                                    <a class="post-category post-category-代码片段" href='/tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5'>代码片段</a>
-                                
-                                    <a class="post-category post-category-Grid" href='/tags/grid'>Grid</a>
-                                
-                                    <a class="post-category post-category-DataList" href='/tags/datalist'>DataList</a>
-                                
-                                    <a class="post-category post-category-Repeater" href='/tags/repeater'>Repeater</a>
-                                
-                                    <a class="post-category post-category-DropDownList" href='/tags/dropdownlist'>DropDownList</a>
-                                
-                                    <a class="post-category post-category-BubbleEvent" href='/tags/bubbleevent'>BubbleEvent</a>
-                                
                             
                         </p>
                     </header>
 
                     <div class="post-description">
-                        <p><span style="font-size: medium;"><strong>两个DropDownList在Repeater、DataList、DataGrid内的连动和冒泡事件(BubbleEvent)<br /></strong><span style="font-size: small;">        问题</span><strong>:</strong></span> <a href="http://community.csdn.net/Expert/topic/4670/4670056.xml?temp=3.944033E-02" target="_blank">http://community.csdn.net/Expert/topic/4670/4670056.xml?temp=3.944033E-02</a><br />        刚看第一眼觉得在第一个DDL的SelectedIndexChanged事件内绑定第二个DDL就ok了，页面上写或者ItemDataBound内写事件挂接代码都可以。打开VS写测试却发现有点<span style="color: #ff0000;"><strong><span style="text-decoration: underline;">障碍</span></strong></span>哦，<br /><span style="color: #008000;"><span style="text-decoration: underline;"><em>在SelectedIndexChanged内要知道去绑定哪个行哪个列的DDL要费些周折</em></span></span>。<br /><strong><span style="color: #0000ff;">只有从DDL一级一级的向上找Parent最后找到DataGridItem，再利用其ItemIndex定位到行然后FindControl到要绑定的DDL</span></strong>，最终可以实现，好像比较累哦。<br />        随又想到DataGrid的ItemCommand事件，但发现WebControl内只有<a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/cpref/html/frlrfSystemWebUIWebControlsButtonClassTopic.asp"><strong><span style="color: #a52a2a;">Button</span></strong></a><span style="color: #a52a2a;"> </span><a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/cpref/html/frlrfSystemWebUIWebControlsImageButtonClassTopic.asp"><strong><span style="color: #a52a2a;">ImageButton</span></strong></a><span style="color: #a52a2a;"> <strong><span style="text-decoration: underline;"><a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/cpref/html/frlrfsystemwebuiwebcontrolslinkbuttonclasstopic.asp">LinkButton</a></span></strong></span>有<a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/cpref/html/frlrfsystemwebuiwebcontrolslinkbuttonclasscommandnametopic.asp">CommandName</a>属性和 <a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/cpref/html/frlrfsystemwebuiwebcontrolslinkbuttonclasscommandargumenttopic.asp">CommandArgument</a>属性，并可以将事件<span style="text-decoration: underline;"><strong><a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/cpguide/html/cpconbubblingcommandevent.asp">上浮（冒泡）</a>.</strong></span><a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/cpref/html/frlrfsystemwebuiwebcontrolsdropdownlistclasstopic.asp">DropDownLis</a>t先天不足！真是郁闷~~~~~ 能不能自己改造呢？<span style="color: #ff0000; background-color: #000080;"><strong>动手试试</strong></span>就知道了。</p>
-<code><span style="color: #000000">
-&lt;%@ Page Language="C#" Debug="true" %&gt;
-<br />&lt;%@ Import Namespace="System.Data" %&gt;
-<br />&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
-<br />&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="gb2312" lang="gb2312"&gt;
-<br />&lt;head&gt;
-<br />&lt;title&gt; ItemDataBoundGetColumnName &lt;/title&gt;
-<br />&lt;meta http-equiv="Content-Type" content="text/html; charset=gb2312" /&gt;
-<br />&lt;meta name="title" content="" /&gt;
-<br />&lt;meta name="author" content="活靶子,Huobazi,www.AspxBoy.com" /&gt;
-<br />&lt;meta name="subject" content="" /&gt;
-<br />&lt;meta name="language" content="gb2312" /&gt;
-<br />&lt;meta name="keywords" content="" /&gt;
-<br />&lt;meta name="Copyright" content="www.AspxBoy.com" /&gt;
-<br />&lt;meta name="robots" content="all" /&gt;<br /><br />&lt;script language="c#" runat="server"&gt;
-<br />void BindGrid()
-<br />{
-<br />        DataTable dt = new DataTable();
-<br />        DataRow dr;
-<br />        dt.Columns.Add(new DataColumn("IntegerValue", typeof(Int32)));
-<br />        dt.Columns.Add(new DataColumn("StringValue", typeof(string)));
-<br />        dt.Columns.Add(new DataColumn("DateTimeValue", typeof(DateTime)));
-<br />        dt.Columns.Add(new DataColumn("BoolValue", typeof(bool)));
-<br />        dt.Columns.Add(new DataColumn("CurrencyValue", typeof(double)));
-<br />        for (int i = 0; i &lt; 36; i++) {
-<br />            dr = dt.NewRow();
-<br />            dr[0] = i;
-<br />            dr[1] = "项 " + i.ToString();
-<br />            dr[2] = DateTime.Now;
-<br />            dr[3] = (i % 2 != 0) ? true : false;
-<br />            dr[4] = 1.23 * (i+1);
-<br />            dt.Rows.Add(dr);
-<br />        }
-<br />  dg.DataSource= dt;
-<br />  dg.DataBind();
-<br />}
-<br />void Page_Load(object o, EventArgs e)
-<br />{
-<br />     dg.PagerStyle.Mode = PagerMode.NumericPages;
-<br />     if(!IsPostBack)
-<br />     {
-<br />        BindGrid();
-<br />     }
-<br />}
-<br /> 
-<br />void btnClick(object o , EventArgs e)
-<br />{
-<br />     Response.Write("页面回发,但是不执行ItemDataBound");
-<br />}
-<br /> 
-<br />void PageChange(object o , DataGridPageChangedEventArgs e)
-<br />{
-<br />     dg.CurrentPageIndex = e.NewPageIndex;
-<br />     BindGrid();
-<br />}
-<br />void ItemDataBound(object o , DataGridItemEventArgs e)
-<br />{
-<br />     if(e.Item.ItemIndex &gt; -1 )//必须
-<br />     {
-<br />          DataRowView drv = (DataRowView)e.Item.DataItem;
-<br />          for (int i=0; i&lt;drv.Row.Table.Columns.Count ; i++)
-<br />          { 
-<br />            Response.Write(drv.Row.Table.Columns[i].ColumnName + "&amp;nbsp;&amp;nbsp;");
-<br />          }
-<br />     }
-<br />}
-<br />&lt;/script&gt;<br /><br />&lt;/head&gt;
-<br />&lt;body&gt;
-<br />&lt;form runat="server"&gt;
-<br />  &lt;ASP:DataGrid id="dg" runat="server"      
-<br />   HeaderStyle-BackColor="#aaaadd"
-<br />   AutoGenerateColumns="true"
-<br />   AllowPaging="true"
-<br />   PageSize="6"
-<br />    OnItemDataBound="ItemDataBound"
-<br />    OnPageIndexChanged="PageChange"
-<br />  &gt;
-<br />  &lt;/asp:DataGrid&gt;
-<br />  &lt;/br&gt;
-<br />   &lt;asp:button id="btn" runat="server" onclick="btnClick" Text="我是按钮,按我一下"&gt;&lt;/asp:button&gt;<br />在AutoGenerateColumns="false"使用绑定列或者模板列的时候只需要使用 <br /><br />&lt;font color="blut"&gt;YourDataGrid.Columns[编号].HeaderText&lt;/font&gt; 去获取
-<br />  <br />&lt;/form&gt;
-<br />&lt;/body&gt;
-<br />&lt;/html&gt;</span>
-</code><p><a href="http://www.aspxboy.com/Files/71/66/284.Aspx" target="_blank">http://www.aspxboy.com/Files/71/66/284.Aspx</a></p>
-<p> </p>                
+                        <p><p>今天对GridView的学习中发现 当用 code-beside方式绑定GridView后（比如我绑一个DataTable)<br />EnableSortingAndPagingCallbacks不起作用。<br />在下面地址找到 一些说法</p>
+<p><a href="http://forums.asp.net/thread/1230450.aspx">http://forums.asp.net/thread/1230450.aspx</a></p>
+<p><a href="http://connect.microsoft.com/VisualStudio/feedback/ViewFeedback.aspx?FeedbackID=103040">http://connect.microsoft.com/VisualStudio/feedback/ViewFeedback.aspx?FeedbackID=103040</a><br />记之&hellip;</p>
+<div style="padding-right: 5px; padding-left: 4px; font-size: 13px; padding-bottom: 4px; width: 98%; word-break: break-all; padding-top: 4px; background-color: #eeeeee; border: #cccccc 1px solid;">
+<span style="COLOR: #008080"> 1</span><span style="COLOR: #000000">    </span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">asp:GridView </span><span style="COLOR: #ff0000">id</span><span style="COLOR: #0000ff">=&ldquo;Gridviewex1&rdquo;</span><span style="COLOR: #ff0000"> <br /></span><span style="COLOR: #008080"> 2</span><span style="COLOR: #ff0000">    runat</span><span style="COLOR: #0000ff">=&ldquo;server&rdquo;</span><span style="COLOR: #ff0000"> <br /></span><span style="COLOR: #008080"> 3</span><span style="COLOR: #ff0000">    AllowSorting</span><span style="COLOR: #0000ff">=&ldquo;True&rdquo;</span><span style="COLOR: #ff0000"> <br /></span><span style="COLOR: #008080"> 4</span><span style="COLOR: #ff0000">    AutoGenerateColumns</span><span style="COLOR: #0000ff">=&ldquo;False&rdquo;</span><span style="COLOR: #ff0000"><br /></span><span style="COLOR: #008080"> 5</span><span style="COLOR: #ff0000">    EnableSortingAndPagingCallbacks</span><span style="COLOR: #0000ff">=&ldquo;True&rdquo;</span><span style="COLOR: #ff0000"> <br /></span><span style="COLOR: #008080"> 6</span><span style="COLOR: #ff0000">    OnSorting</span><span style="COLOR: #0000ff">=&ldquo;Gridviewex1_Sorting&rdquo;</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080"> 7</span><span style="COLOR: #000000">        </span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">Columns</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080"> 8</span><span style="COLOR: #000000">            </span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">asp:BoundField </span><span style="COLOR: #ff0000">DataField</span><span style="COLOR: #0000ff">=&ldquo;ProductId&rdquo;</span><span style="COLOR: #ff0000"> HeaderText</span><span style="COLOR: #0000ff">=&ldquo;ProductId&rdquo;</span><span style="COLOR: #ff0000"> SortExpression</span><span style="COLOR: #0000ff">=&ldquo;ProductId&rdquo;</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080"> 9</span><span style="COLOR: #000000">            </span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">asp:BoundField </span><span style="COLOR: #ff0000">DataField</span><span style="COLOR: #0000ff">=&ldquo;ProductName&rdquo;</span><span style="COLOR: #ff0000"> HeaderText</span><span style="COLOR: #0000ff">=&ldquo;ProductName&rdquo;</span><span style="COLOR: #ff0000"> SortExpression</span><span style="COLOR: #0000ff">=&ldquo;ProductName&rdquo;</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080">10</span><span style="COLOR: #000000">            </span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">asp:BoundField </span><span style="COLOR: #ff0000">DataField</span><span style="COLOR: #0000ff">=&ldquo;QuantityPerUnit&rdquo;</span><span style="COLOR: #ff0000"> HeaderText</span><span style="COLOR: #0000ff">=&ldquo;QuantityPerUnit&rdquo;</span><span style="COLOR: #ff0000"> SortExpression</span><span style="COLOR: #0000ff">=&ldquo;QuantityPerUnit&rdquo;</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080">11</span><span style="COLOR: #000000">            </span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">asp:BoundField </span><span style="COLOR: #ff0000">DataField</span><span style="COLOR: #0000ff">=&ldquo;UnitsInStock&rdquo;</span><span style="COLOR: #ff0000"> HeaderText</span><span style="COLOR: #0000ff">=&ldquo;UnitsInStock&rdquo;</span><span style="COLOR: #ff0000"> SortExpression</span><span style="COLOR: #0000ff">=&ldquo;UnitsInStock&rdquo;</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080">12</span><span style="COLOR: #000000">            </span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">asp:BoundField </span><span style="COLOR: #ff0000">DataField</span><span style="COLOR: #0000ff">=&ldquo;ReorderLevel&rdquo;</span><span style="COLOR: #ff0000"> HeaderText</span><span style="COLOR: #0000ff">=&ldquo;ReorderLevel&rdquo;</span><span style="COLOR: #ff0000"> SortExpression</span><span style="COLOR: #0000ff">=&ldquo;ReorderLevel&rdquo;</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080">13</span><span style="COLOR: #000000">            </span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">asp:BoundField </span><span style="COLOR: #ff0000">DataField</span><span style="COLOR: #0000ff">=&ldquo;Discontinued&rdquo;</span><span style="COLOR: #ff0000"> HeaderText</span><span style="COLOR: #0000ff">=&ldquo;Discontinued&rdquo;</span><span style="COLOR: #ff0000"> SortExpression</span><span style="COLOR: #0000ff">=&ldquo;Discontinued&rdquo;</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080">14</span><span style="COLOR: #000000">        </span><span style="COLOR: #0000ff">&lt;/</span><span style="COLOR: #800000">Columns</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080">15</span><span style="COLOR: #000000">    </span><span style="COLOR: #0000ff">&lt;/</span><span style="COLOR: #800000">aspx:GridView</span><span style="COLOR: #0000ff">&gt;</span>
+</div>
+<div style="padding-right: 5px; padding-left: 4px; font-size: 13px; padding-bottom: 4px; width: 98%; word-break: break-all; padding-top: 4px; background-color: #eeeeee; border: #cccccc 1px solid;">
+<span style="COLOR: #008080"> 1</span><span style="COLOR: #000000">    </span><span style="COLOR: #0000ff">protected</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">void</span><span style="COLOR: #000000"> Page_Load(</span><span style="COLOR: #0000ff">object</span><span style="COLOR: #000000"> sender, EventArgs e)<br /></span><span style="COLOR: #008080"> 2</span><span style="COLOR: #000000">    </span><span id="Codehighlighter1_61_159_Open_Text"><span style="COLOR: #000000">{<br /></span><span style="COLOR: #008080"> 3</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080"> 4</span><span style="COLOR: #000000">        </span><span style="COLOR: #0000ff">if</span><span style="COLOR: #000000"> (</span><span style="COLOR: #000000">!</span><span style="COLOR: #000000">Page.IsPostBack)<br /></span><span style="COLOR: #008080"> 5</span><span style="COLOR: #000000">        </span><span id="Codehighlighter1_102_153_Open_Text"><span style="COLOR: #000000">{<br /></span><span style="COLOR: #008080"> 6</span><span style="COLOR: #000000">            </span><span style="COLOR: #0000ff">this</span><span style="COLOR: #000000">.BindGrid(</span><span style="COLOR: #0000ff">string</span><span style="COLOR: #000000">.Empty);<br /></span><span style="COLOR: #008080"> 7</span><span style="COLOR: #000000">        }</span></span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080"> 8</span><span style="COLOR: #000000">    }</span></span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080"> 9</span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080">10</span><span style="COLOR: #000000">    </span><span style="COLOR: #0000ff">private</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">void</span><span style="COLOR: #000000"> BindGrid(</span><span style="COLOR: #0000ff">string</span><span style="COLOR: #000000"> sortExpression)<br /></span><span style="COLOR: #008080">11</span><span style="COLOR: #000000">    </span><span id="Codehighlighter1_215_967_Open_Text"><span style="COLOR: #000000">{<br /></span><span style="COLOR: #008080">12</span><span style="COLOR: #000000">        DataTable dt </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">new</span><span style="COLOR: #000000"> DataTable();<br /></span><span style="COLOR: #008080">13</span><span style="COLOR: #000000">        SqlConnection conn </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">new</span><span style="COLOR: #000000"> SqlConnection();<br /></span><span style="COLOR: #008080">14</span><span style="COLOR: #000000">        conn.ConnectionString </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">server=wumeibo\wmb;database=northwind;uid=sa;pwd=sa;</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">;<br /></span><span style="COLOR: #008080">15</span><span style="COLOR: #000000">        SqlCommand cmd </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">new</span><span style="COLOR: #000000"> SqlCommand();<br /></span><span style="COLOR: #008080">16</span><span style="COLOR: #000000">        cmd.Connection </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> conn;<br /></span><span style="COLOR: #008080">17</span><span style="COLOR: #000000">        cmd.CommandType </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> CommandType.Text;<br /></span><span style="COLOR: #008080">18</span><span style="COLOR: #000000">        cmd.CommandText </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">select * from products</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">;<br /></span><span style="COLOR: #008080">19</span><span style="COLOR: #000000">        SqlDataAdapter adapter </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">new</span><span style="COLOR: #000000"> SqlDataAdapter();<br /></span><span style="COLOR: #008080">20</span><span style="COLOR: #000000">        adapter.SelectCommand </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> cmd;<br /></span><span style="COLOR: #008080">21</span><span style="COLOR: #000000">        adapter.Fill(dt);<br /></span><span style="COLOR: #008080">22</span><span style="COLOR: #000000">        DataView dv </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> dt.DefaultView;;<br /></span><span style="COLOR: #008080">23</span><span style="COLOR: #000000">        </span><span style="COLOR: #0000ff">if</span><span style="COLOR: #000000"> (</span><span style="COLOR: #000000">!</span><span style="COLOR: #0000ff">string</span><span style="COLOR: #000000">.IsNullOrEmpty(sortExpression))        <br /></span><span style="COLOR: #008080">24</span><span style="COLOR: #000000">        </span><span id="Codehighlighter1_792_873_Open_Text"><span style="COLOR: #000000">{<br /></span><span style="COLOR: #008080">25</span><span style="COLOR: #000000">            dv </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> dt.DefaultView;<br /></span><span style="COLOR: #008080">26</span><span style="COLOR: #000000">            dv.Sort </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> sortExpression;<br /></span><span style="COLOR: #008080">27</span><span style="COLOR: #000000">        }</span></span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080">28</span><span style="COLOR: #000000">        </span><span style="COLOR: #0000ff">this</span><span style="COLOR: #000000">.Gridviewex1.DataSource </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> dv;<br /></span><span style="COLOR: #008080">29</span><span style="COLOR: #000000">        </span><span style="COLOR: #0000ff">this</span><span style="COLOR: #000000">.Gridviewex1.DataBind();<br /></span><span style="COLOR: #008080">30</span><span style="COLOR: #000000">        <br /></span><span style="COLOR: #008080">31</span><span style="COLOR: #000000">    }</span></span><span style="COLOR: #000000"><br /></span><span style="COLOR: #008080">32</span><span style="COLOR: #000000">    </span><span style="COLOR: #0000ff">protected</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">void</span><span style="COLOR: #000000"> Gridviewex1_Sorting(</span><span style="COLOR: #0000ff">object</span><span style="COLOR: #000000"> sender, GridViewSortEventArgs e)<br /></span><span style="COLOR: #008080">33</span><span style="COLOR: #000000">    </span><span id="Codehighlighter1_1052_1094_Open_Text"><span style="COLOR: #000000">{<br /></span><span style="COLOR: #008080">34</span><span style="COLOR: #000000">        BindGrid(e.SortExpression);<br /></span><span style="COLOR: #008080">35</span><span style="COLOR: #000000">    }</span></span>
+</div>
+<p>经过测试 如下方法 可用</p>
+<div style="padding-right: 5px; padding-left: 4px; font-size: 13px; padding-bottom: 4px; width: 98%; word-break: break-all; padding-top: 4px; background-color: #eeeeee; border: #cccccc 1px solid;">
+<span style="COLOR: #008080"> 1</span> <span style="COLOR: #000000">    </span><span style="COLOR: #0000ff">protected</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">void</span><span style="COLOR: #000000"> Page_Load(</span><span style="COLOR: #0000ff">object</span><span style="COLOR: #000000"> sender, EventArgs e)<br /></span><span style="COLOR: #008080"> 2</span> <span style="COLOR: #000000">    {<br /></span><span style="COLOR: #008080"> 3</span> <span style="COLOR: #000000">            xx();<br /></span><span style="COLOR: #008080"> 4</span> <span style="COLOR: #000000">        <br /></span><span style="COLOR: #008080"> 5</span> <span style="COLOR: #000000">    }<br /></span><span style="COLOR: #008080"> 6</span> <span style="COLOR: #000000"><br /></span><span style="COLOR: #008080"> 7</span> <span style="COLOR: #000000">    </span><span style="COLOR: #0000ff">private</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">void</span><span style="COLOR: #000000"> xx()<br /></span><span style="COLOR: #008080"> 8</span> <span style="COLOR: #000000">    {<br /></span><span style="COLOR: #008080"> 9</span> <span style="COLOR: #000000">        SqlConnection conn </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">new</span><span style="COLOR: #000000"> SqlConnection();<br /></span><span style="COLOR: #008080">10</span> <span style="COLOR: #000000">        conn.ConnectionString </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">server=wumeibo\wmb;database=northwind;uid=sa;pwd=sa;</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">;<br /></span><span style="COLOR: #008080">11</span> <span style="COLOR: #000000">   <br /></span><span style="COLOR: #008080">12</span> <span style="COLOR: #000000">        SqlDataSource source </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">new</span><span style="COLOR: #000000"> SqlDataSource();<br /></span><span style="COLOR: #008080">13</span> <span style="COLOR: #000000">        source.ConnectionString </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">server=wumeibo\wmb;database=northwind;uid=sa;pwd=sa;</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">;<br /></span><span style="COLOR: #008080">14</span> <span style="COLOR: #000000">        source.SelectCommand </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">select * from products</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">;<br /></span><span style="COLOR: #008080">15</span> <span style="COLOR: #000000"><br /></span><span style="COLOR: #008080">16</span> <span style="COLOR: #000000">        </span><span style="COLOR: #0000ff">this</span><span style="COLOR: #000000">.Gridviewex1.DataSource </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> source;<br /></span><span style="COLOR: #008080">17</span> <span style="COLOR: #000000">        </span><span style="COLOR: #0000ff">this</span><span style="COLOR: #000000">.Gridviewex1.DataBind();<br /></span><span style="COLOR: #008080">18</span> <span style="COLOR: #000000">    }</span>
+</div></p>
 
                     </div>
                 </section>
                 
-                <h1 class="content-subhead">24 Mar 2006</h1>
+                <h1 class="content-subhead">29 Jun 2006</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2006/03/24/cb-357546/" class="post-title">关于Data Access Blok (SqlHelper.cs)使用时出现</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                
-                                    <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
-                                
-                                    <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
-                                
-                                    <a class="post-category post-category-代码片段" href='/tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5'>代码片段</a>
-                                
-                                    <a class="post-category post-category-SQL" href='/tags/sql'>SQL</a>
-                                
-                                    <a class="post-category post-category-Server" href='/tags/server'>Server</a>
-                                
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>关于Data Access Blok (SqlHelper.cs)使用时出现"对象必须实现 IConvertible/Object must implement IConvertible."异常</p>
-<p>在使用低版本 Data Access Blok  时，出现如下异常<br />“/”应用程序中的服务器错误。<br />--------------------------------------------------------------------------------</p>
-<p> </p>
-<p><span style="color: #0000ff;">对象必须实现 IConvertible。<br />说明: 执行当前 Web 请求期间，出现未处理的异常。请检查堆栈跟踪信息，以了解有关该错误以及代码中导致错误的出处的详细信息。 </span></p>
-<p> </p>
-<p><span style="color: #0000ff;">异常详细信息: System.InvalidCastException: 对象必须实现 IConvertible。</span></p>
-<p> </p>
-<p><span style="color: #0000ff;">源错误: </span></p>
-<p> <br /><span style="color: #0000ff;">行 360：   <br />行 361：   //finally, execute the command.<br />行 362：   int retval = cmd.ExecuteNonQuery();<br />行 363：   <br />行 364：   // detach the SqlParameters from the command object, so they can be used again.</span></p>
-<p> </p>
-<p>参考<a href="http://weblogs.asp.net/ssmith/archive/2003/08/19/24524.aspx#92222" target="_blank">http://weblogs.asp.net/ssmith/archive/2003/08/19/24524.aspx#92222</a><br />做修改<br />the simple fix is to change line 93 to read:<br />commandParameters[i].Value = ((SqlParameter)parameterValues[i]).Value;</p>
-<p> </p>
-<p>instead of:<br />commandParameters[i].Value = parameterValues[i];</p>
-<p> </p>
-<p>正常工作。</p>                
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">24 Mar 2006</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="https://huobazi.aspxboy.com/blog/2006/03/24/cb-357546/" class="post-title">关于Data Access Blok (SqlHelper.cs)使用时出现</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                
-                                    <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
-                                
-                                    <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
-                                
-                                    <a class="post-category post-category-代码片段" href='/tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5'>代码片段</a>
-                                
-                                    <a class="post-category post-category-SQL" href='/tags/sql'>SQL</a>
-                                
-                                    <a class="post-category post-category-Server" href='/tags/server'>Server</a>
-                                
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>关于Data Access Blok (SqlHelper.cs)使用时出现"对象必须实现 IConvertible/Object must implement IConvertible."异常</p>
-<p>在使用低版本 Data Access Blok  时，出现如下异常<br />“/”应用程序中的服务器错误。<br />--------------------------------------------------------------------------------</p>
-<p> </p>
-<p><span style="color: #0000ff;">对象必须实现 IConvertible。<br />说明: 执行当前 Web 请求期间，出现未处理的异常。请检查堆栈跟踪信息，以了解有关该错误以及代码中导致错误的出处的详细信息。 </span></p>
-<p> </p>
-<p><span style="color: #0000ff;">异常详细信息: System.InvalidCastException: 对象必须实现 IConvertible。</span></p>
-<p> </p>
-<p><span style="color: #0000ff;">源错误: </span></p>
-<p> <br /><span style="color: #0000ff;">行 360：   <br />行 361：   //finally, execute the command.<br />行 362：   int retval = cmd.ExecuteNonQuery();<br />行 363：   <br />行 364：   // detach the SqlParameters from the command object, so they can be used again.</span></p>
-<p> </p>
-<p>参考<a href="http://weblogs.asp.net/ssmith/archive/2003/08/19/24524.aspx#92222" target="_blank">http://weblogs.asp.net/ssmith/archive/2003/08/19/24524.aspx#92222</a><br />做修改<br />the simple fix is to change line 93 to read:<br />commandParameters[i].Value = ((SqlParameter)parameterValues[i]).Value;</p>
-<p> </p>
-<p>instead of:<br />commandParameters[i].Value = parameterValues[i];</p>
-<p> </p>
-<p>正常工作。</p>                
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">05 Jan 2006</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="https://huobazi.aspxboy.com/blog/2006/01/05/sourcecodeviewer01/" class="post-title">SourceCodeViewer 0.1  and  Ms treeview &#39;s problem</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2006/06/29/smartnavigationwasobsoletedtherecommendedalternativeispagemaintainscrollpositiononpostback/" class="post-title">还记得 Page.SmartNavigation 属性么，此属性已被否决。</a>
 
                         <p class="post-meta">
                             
@@ -445,18 +154,24 @@
                     </header>
 
                     <div class="post-description">
-                        <table style="TABLE-LAYOUT: fixed; WORD-WRAP: break-word" height="100%" cellspacing="0" cellpadding="0" width="100%" border="0"><tbody><tr><td valign="top">
-<a href="http://www.im286.com/misc.php?action=viewratings&amp;tid=1241659&amp;pid=12694846" name="pid12694846" alt="查看评分记录"></a><strong><span class="smalltxt"><span class="bold">SourceCodeViewer 0.1</span></span><br /><br /></strong><span style="FONT-SIZE: 12px"><font size="3">一直想给自己网站放一个源码浏览器，发现<a href="http://scottwater.com/blog/default.aspx" target="_blank">Scott Watermasysk</a>做的</font><a href="http://code.communityserver.org/" target="_blank"><font color="#237299" size="3">Cojax</font></a><font size="3">很酷，但却找不到同类的asp.net的开源项目，就决定自己做一个，顺便学习ajax .基本做出了个雏形，语法高亮也只能支持到 C#,Jscript,htm.<br />树用的是MS treeview ，但郁闷的事情也来了，MS treeview在firefox下render出的html竟然和ie下一点都不相同，而且是采用postback方式展开节点，我给tree上加的onclick不起作用，导致目前这个<a href="http://www.aspxboy.com/code/">东东</a>在firefox下不能用<img height="19" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png9" width="19" border="0">,继续研究中....<br /></font><br />An open source web based Source Code Viewer system application <br />written in ASP.NET / C#.NET / Javascript with ajax for the Windows OS and .Net FrameWork platform.<br /><br />Homepage : <a href="http://www.aspxboy.com/scv/" target="_blank"><font color="#003366">http://www.aspxboy.com/scv/</font></a> <br />Online demo : <a href="http://www.aspxboy.com/code/" target="_blank"><font color="#003366">http://www.aspxboy.com/code/</font></a> <br />Online screenshots : <a href="http://sourceforge.net/project/screenshots.php?group_id=155912" target="_blank"><font color="#003366">http://sourceforge.net/project/screenshots.php?group_id=155912</font></a> <br />On Sourceforge : <a href="http://sourceforge.net/projects/scv" target="_blank"><font color="#003366">http://sourceforge.net/projects/scv</font></a> <br />Download the latest version 0.1 including the source code :<br /><a href="http://sourceforge.net/project/showfiles.php?group_id=155912&amp;package_id=174984&amp;release_id=382944" target="_blank"><font color="#003366">http://sourceforge.net/project/s ... p;release_id=382944</font></a><br /><br />Screenshots:<br /><img onmousewheel="return imgzoom(this);" onmouseover="if(this.width&gt;screen.width*0.7) {this.resized=true; this.width=screen.width*0.7; this.style.cursor='hand'; this.alt='Click here to open new window\nCTRL+Mouse wheel to zoom in/out';}" onclick="if(!this.resized) {return true;} else {window.open('http://sourceforge.net/dbimage.php?id=54076');}" src="http://sourceforge.net/dbimage.php?id=54076" onload="if(this.width&gt;screen.width*0.7) {this.resized=true; this.width=screen.width*0.7; this.alt='Click here to open new window\nCTRL+Mouse wheel to zoom in/out';}" border="0"><br /><img onmousewheel="return imgzoom(this);" onmouseover="if(this.width&gt;screen.width*0.7) {this.resized=true; this.width=screen.width*0.7; this.style.cursor='hand'; this.alt='Click here to open new window\nCTRL+Mouse wheel to zoom in/out';}" onclick="if(!this.resized) {return true;} else {window.open('http://sourceforge.net/dbimage.php?id=54080');}" src="http://sourceforge.net/dbimage.php?id=54080" onload="if(this.width&gt;screen.width*0.7) {this.resized=true; this.width=screen.width*0.7; this.alt='Click here to open new window\nCTRL+Mouse wheel to zoom in/out';}" border="0"><br /><img onmousewheel="return imgzoom(this);" onmouseover="if(this.width&gt;screen.width*0.7) {this.resized=true; this.width=screen.width*0.7; this.style.cursor='hand'; this.alt='Click here to open new window\nCTRL+Mouse wheel to zoom in/out';}" onclick="if(!this.resized) {return true;} else {window.open('http://sourceforge.net/dbimage.php?id=54082');}" src="http://sourceforge.net/dbimage.php?id=54082" onload="if(this.width&gt;screen.width*0.7) {this.resized=true; this.width=screen.width*0.7; this.alt='Click here to open new window\nCTRL+Mouse wheel to zoom in/out';}" border="0"><br /><br /></span>
-</td></tr></tbody></table>
+                        <p><span style="color: #ff0000;"><strong><span style="color: #000000;">还记得在.Net 1.x 中我们为了保持在页面回发后 保持滚动条位置的做法么？<br />Page.SmartNavigation 可以做到，但会带来这样那样的问题。<br />我们也曾经用这样那样的方法实现这个效果，如：</span></strong></span></p>
+<p><a href="http://huobazi.cnblogs.com/archive/2004/09/20/ScrollPage.aspx"><span style="color: #0000ff;">http://huobazi.cnblogs.com/archive/2004/09/20/ScrollPage.aspx</span></a><br /><a href="http://www.cnblogs.com/birdshome/archive/2004/12/13/76521.html"><span style="color: #0000ff;">http://www.cnblogs.com/birdshome/archive/2004/12/13/76521.html</span></a></p>
+<p><span style="color: #000000;">在.Net 2.0 中，该类型被描述为：<br /></span> <br /><span style="color: #000000;">[<span style="color: #0000ff;">ObsoleteAttribute</span>("The recommended alternative is Page.SetFocus and Page.MaintainScrollPositionOnPostBack. http://go.microsoft.com/fwlink/?linkid=14202")]<br /><span class="keyword">public</span> bool <span class="identifier">SmartNavigation</span> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</span></p>
+<p><br /><span style="color: #ff0000;"><strong>注意：此属性现在已过时。</strong></span></p>
+<p> </p>
+<p>获取或设置指示是否启用智能导航的值。</p>
+<p>同时在备注内有提到：</p>
+<p><strong>SmartNavigation</strong> 属性已被<strong>否决</strong>。请改用 <a href="ms-help://MS.VSCC.v80/MS.MSDN.v80/MS.NETDEVFX.v20.chs/cpref13/html/O_T_System_Web_UI_Page_SetFocus.htm"><span style="color: #002c99;">SetFocus</span></a> 方法和 <a href="ms-help://MS.VSCC.v80/MS.MSDN.v80/MS.NETDEVFX.v20.chs/cpref13/html/P_System_Web_UI_Page_MaintainScrollPositionOnPostBack.htm">MaintainScrollPositionOnPostback </a>属性。</p>
+<p>园子里<a href="http://birdshome.cnblogs.com/">birdshome</a> 也早有post了 <a id="viewpost1_TitleUrl" href="http://birdshome.cnblogs.com/archive/2005/06/20/177404.html"><strong><span style="color: #223355;">SmartNavigation在Fx2.0中下岗了</span></strong></a></p>              
 
                     </div>
                 </section>
                 
-                <h1 class="content-subhead">05 Jan 2006</h1>
+                <h1 class="content-subhead">29 Jun 2006</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2006/01/05/sourcecodeviewer01/" class="post-title">SourceCodeViewer 0.1  and  Ms treeview &#39;s problem</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2006/06/29/smartnavigationwasobsoletedtherecommendedalternativeispagemaintainscrollpositiononpostback/" class="post-title">还记得 Page.SmartNavigation 属性么，此属性已被否决。</a>
 
                         <p class="post-meta">
                             
@@ -471,18 +186,51 @@
                     </header>
 
                     <div class="post-description">
-                        <table style="TABLE-LAYOUT: fixed; WORD-WRAP: break-word" height="100%" cellspacing="0" cellpadding="0" width="100%" border="0"><tbody><tr><td valign="top">
-<a href="http://www.im286.com/misc.php?action=viewratings&amp;tid=1241659&amp;pid=12694846" name="pid12694846" alt="查看评分记录"></a><strong><span class="smalltxt"><span class="bold">SourceCodeViewer 0.1</span></span><br /><br /></strong><span style="FONT-SIZE: 12px"><font size="3">一直想给自己网站放一个源码浏览器，发现<a href="http://scottwater.com/blog/default.aspx" target="_blank">Scott Watermasysk</a>做的</font><a href="http://code.communityserver.org/" target="_blank"><font color="#237299" size="3">Cojax</font></a><font size="3">很酷，但却找不到同类的asp.net的开源项目，就决定自己做一个，顺便学习ajax .基本做出了个雏形，语法高亮也只能支持到 C#,Jscript,htm.<br />树用的是MS treeview ，但郁闷的事情也来了，MS treeview在firefox下render出的html竟然和ie下一点都不相同，而且是采用postback方式展开节点，我给tree上加的onclick不起作用，导致目前这个<a href="http://www.aspxboy.com/code/">东东</a>在firefox下不能用<img height="19" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png9" width="19" border="0">,继续研究中....<br /></font><br />An open source web based Source Code Viewer system application <br />written in ASP.NET / C#.NET / Javascript with ajax for the Windows OS and .Net FrameWork platform.<br /><br />Homepage : <a href="http://www.aspxboy.com/scv/" target="_blank"><font color="#003366">http://www.aspxboy.com/scv/</font></a> <br />Online demo : <a href="http://www.aspxboy.com/code/" target="_blank"><font color="#003366">http://www.aspxboy.com/code/</font></a> <br />Online screenshots : <a href="http://sourceforge.net/project/screenshots.php?group_id=155912" target="_blank"><font color="#003366">http://sourceforge.net/project/screenshots.php?group_id=155912</font></a> <br />On Sourceforge : <a href="http://sourceforge.net/projects/scv" target="_blank"><font color="#003366">http://sourceforge.net/projects/scv</font></a> <br />Download the latest version 0.1 including the source code :<br /><a href="http://sourceforge.net/project/showfiles.php?group_id=155912&amp;package_id=174984&amp;release_id=382944" target="_blank"><font color="#003366">http://sourceforge.net/project/s ... p;release_id=382944</font></a><br /><br />Screenshots:<br /><img onmousewheel="return imgzoom(this);" onmouseover="if(this.width&gt;screen.width*0.7) {this.resized=true; this.width=screen.width*0.7; this.style.cursor='hand'; this.alt='Click here to open new window\nCTRL+Mouse wheel to zoom in/out';}" onclick="if(!this.resized) {return true;} else {window.open('http://sourceforge.net/dbimage.php?id=54076');}" src="http://sourceforge.net/dbimage.php?id=54076" onload="if(this.width&gt;screen.width*0.7) {this.resized=true; this.width=screen.width*0.7; this.alt='Click here to open new window\nCTRL+Mouse wheel to zoom in/out';}" border="0"><br /><img onmousewheel="return imgzoom(this);" onmouseover="if(this.width&gt;screen.width*0.7) {this.resized=true; this.width=screen.width*0.7; this.style.cursor='hand'; this.alt='Click here to open new window\nCTRL+Mouse wheel to zoom in/out';}" onclick="if(!this.resized) {return true;} else {window.open('http://sourceforge.net/dbimage.php?id=54080');}" src="http://sourceforge.net/dbimage.php?id=54080" onload="if(this.width&gt;screen.width*0.7) {this.resized=true; this.width=screen.width*0.7; this.alt='Click here to open new window\nCTRL+Mouse wheel to zoom in/out';}" border="0"><br /><img onmousewheel="return imgzoom(this);" onmouseover="if(this.width&gt;screen.width*0.7) {this.resized=true; this.width=screen.width*0.7; this.style.cursor='hand'; this.alt='Click here to open new window\nCTRL+Mouse wheel to zoom in/out';}" onclick="if(!this.resized) {return true;} else {window.open('http://sourceforge.net/dbimage.php?id=54082');}" src="http://sourceforge.net/dbimage.php?id=54082" onload="if(this.width&gt;screen.width*0.7) {this.resized=true; this.width=screen.width*0.7; this.alt='Click here to open new window\nCTRL+Mouse wheel to zoom in/out';}" border="0"><br /><br /></span>
-</td></tr></tbody></table>
+                        <p><span style="color: #ff0000;"><strong><span style="color: #000000;">还记得在.Net 1.x 中我们为了保持在页面回发后 保持滚动条位置的做法么？<br />Page.SmartNavigation 可以做到，但会带来这样那样的问题。<br />我们也曾经用这样那样的方法实现这个效果，如：</span></strong></span></p>
+<p><a href="http://huobazi.cnblogs.com/archive/2004/09/20/ScrollPage.aspx"><span style="color: #0000ff;">http://huobazi.cnblogs.com/archive/2004/09/20/ScrollPage.aspx</span></a><br /><a href="http://www.cnblogs.com/birdshome/archive/2004/12/13/76521.html"><span style="color: #0000ff;">http://www.cnblogs.com/birdshome/archive/2004/12/13/76521.html</span></a></p>
+<p><span style="color: #000000;">在.Net 2.0 中，该类型被描述为：<br /></span> <br /><span style="color: #000000;">[<span style="color: #0000ff;">ObsoleteAttribute</span>("The recommended alternative is Page.SetFocus and Page.MaintainScrollPositionOnPostBack. http://go.microsoft.com/fwlink/?linkid=14202")]<br /><span class="keyword">public</span> bool <span class="identifier">SmartNavigation</span> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</span></p>
+<p><br /><span style="color: #ff0000;"><strong>注意：此属性现在已过时。</strong></span></p>
+<p> </p>
+<p>获取或设置指示是否启用智能导航的值。</p>
+<p>同时在备注内有提到：</p>
+<p><strong>SmartNavigation</strong> 属性已被<strong>否决</strong>。请改用 <a href="ms-help://MS.VSCC.v80/MS.MSDN.v80/MS.NETDEVFX.v20.chs/cpref13/html/O_T_System_Web_UI_Page_SetFocus.htm"><span style="color: #002c99;">SetFocus</span></a> 方法和 <a href="ms-help://MS.VSCC.v80/MS.MSDN.v80/MS.NETDEVFX.v20.chs/cpref13/html/P_System_Web_UI_Page_MaintainScrollPositionOnPostBack.htm">MaintainScrollPositionOnPostback </a>属性。</p>
+<p>园子里<a href="http://birdshome.cnblogs.com/">birdshome</a> 也早有post了 <a id="viewpost1_TitleUrl" href="http://birdshome.cnblogs.com/archive/2005/06/20/177404.html"><strong><span style="color: #223355;">SmartNavigation在Fx2.0中下岗了</span></strong></a></p>              
 
                     </div>
                 </section>
                 
-                <h1 class="content-subhead">12 Dec 2005</h1>
+                <h1 class="content-subhead">25 May 2006</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2005/12/12/freeaspdotnetsqlserverexpresswebhosting/" class="post-title">免费的Asp.net2.0 Sqlserver express的学习空间</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2006/05/25/iiswebsite/" class="post-title">比尔盖茨的又一个网站</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                
+                                    <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
+                                
+                                    <a class="post-category post-category-.Net其他" href='/tags/.net%E5%85%B6%E4%BB%96'>.Net其他</a>
+                                
+                                    <a class="post-category post-category-Microsoft" href='/tags/microsoft'>Microsoft</a>
+                                
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p> </p>
+<p><a href="http://www.iis.net/default.aspx?tabid=1"><br />http://www.iis.net/default.aspx?tabid=1</a></p>              
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">18 May 2006</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2006/05/18/systemwebsectiongroup/" class="post-title">在Asp.Net2.0中可以方便的访问配置文件web.config,如判断debug设置，验证类型等。</a>
 
                         <p class="post-meta">
                             
@@ -492,46 +240,379 @@
                                 
                                     <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
                                 
-                                    <a class="post-category post-category-SQL Server" href='/tags/sql-server'>SQL Server</a>
-                                
                             
                         </p>
                     </header>
 
                     <div class="post-description">
-                        <p><p></p>
-<p><b><font face="Tahoma" color="black"> <font color="#0000ff">dotnetspider.com</font>提供Asp.net2.0 Sqlserver express的学习空间<br /><br /><font color="#ff0000">- Learn ASP.NET 2.0</font></font><font color="#ff0000"> <br /><font face="Tahoma">- Develop your web site</font> <br /><font face="Tahoma">- Host it for free.</font> </font></b></p>
-<b><br /></b><p><font color="#ff0000"><font face="Tahoma" color="#000000">Web hosting package <br />For ASP.NET programmers</font><font face="Tahoma"> </font></font></p>
-<li>
-<font color="#ff0000">$0.00 monthly fee. </font><br />
-</li>
-<li>
-<font color="#ff0000">No advertisements in your site. </font><br />
-</li>
-<li>
-<font color="#ff0000">SQL Server Express support. </font><br />
-</li>
-<li>
-<font color="#ff0000">MS Access support. </font><br />
-</li>
-<li>
-<font color="#ff0000">Up to 100 MB Space. </font><br />
-</li>
-<li>
-<font color="#ff0000">2 GB monthly data transfer. </font><br />
-</li>
-<li>
-<font color="#ff0000">Your own </font><font color="#ff0000">domain name</font><font color="#ff0000">.</font><font color="#000000"> </font> <br /><p>详细描述参考下面的页面：<br /><a href="http://www.aspxboy.com/private/5271/default.aspx" target="_blank"><font face="Tahoma" color="#0000ff" size="4"><a href="http://www.aspxboy.com/private/5271/default.aspx">http://www.aspxboy.com/private/5271/default.aspx</a></font></a></p>
-</li></p>
+                        <p><p>Asp.Net2.0中我们可以方便的访问配置文件中，.NetFrameWork2.0新增加了 SystemWebSectionGroup 类。<br />允许用户以编程方式访问配置文件的 <b>system.web</b> 组。<br />比如判断web.config内是否为 debug=&ldquo;true&rdquo;,或者判断身份验证形式<br /><br />    SystemWebSectionGroup ws = new SystemWebSectionGroup();<br />    CompilationSection cp = ws.Compilation;<br />    用cp.Debug;就可以得到compilation节内关于&rdquo;debug&rdquo;的配置<br />     AuthenticationSection  as = ws.Authentication; <br />    用 as.Mode  可以获取 authentication节中关于&rdquo;mode&rdquo;的配置，值为AuthenticationMode 枚举之一<br />AuthenticationMode的取值如下：<font size="2"> </font></p>
+<div id="ctl00_LibFrame_ctl09"><table class="VSShowTableBorder" cellspacing="2" cellpadding="5" width="500"><tbody>
+<tr>
+<th><font size="2"> </font></th>
+<th align="left" width="25%"><font size="2">成员名称</font></th>
+<th align="left"><font size="2">说明</font></th>
+</tr>
+<tr valign="top">
+<td><font size="2"> </font></td>
+<td><b><font size="2">Forms</font></b></td>
+<td><font size="2">将基于 ASP.NET 窗体的身份验证指定为身份验证模式。 </font></td>
+</tr>
+<tr valign="top">
+<td><font size="2"> </font></td>
+<td><b><font size="2">None</font></b></td>
+<td><font size="2">不指定身份验证。 </font></td>
+</tr>
+<tr valign="top">
+<td><font size="2"> </font></td>
+<td><b><font size="2">Passport</font></b></td>
+<td><font size="2">将 Microsoft Passport 指定为身份验证模式。 </font></td>
+</tr>
+<tr valign="top">
+<td><font size="2"> </font></td>
+<td><b><font size="2">Windows</font></b></td>
+<td><font size="2">将 Windows 指定为身份验证模式。在使用 Internet 信息服务 (IIS) 身份验证方法（基本、简要、集成 Windows (NTLM/Kerberos) 或证书）时适用此模式。 </font></td>
+</tr>
+</tbody></table></div>
+<p><font size="2">     <br /><strong><font color="#0000ff">附：SystemWebSectionGroup 类的公共属性:</font></strong></font></p>
+<script type="text/Javascript">
+var ExpCollDivStr=ExpCollDivStr;
+ExpCollDivStr = ExpCollDivStr + &ldquo;ctl00_LibFrame_ctl066893b77,&ldquo;;
+var ExpCollImgStr = ExpCollImgStr;
+ ExpCollImgStr = ExpCollImgStr + &ldquo;ctl00_LibFrame_ctl06img,&ldquo;;
+</script><p> </p>
+<div class="section" id="ctl00_LibFrame_ctl066893b77" style="DISPLAY: block">
+<p></p>
+<div id="ctl00_LibFrame_ctl06"><table class="memberListTable" cellspacing="2" cellpadding="5" width="500">
+<colgroup><font size="2"><col width="10%">
+<col width="30%">
+<col width="60%"></font></colgroup>
+<tbody>
+<tr>
+<th style="BORDER-RIGHT-STYLE: none"><font size="2"> </font></th>
+<th style="BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none" align="left"><font size="2">名称 </font></th>
+<th style="BORDER-LEFT-STYLE: none" align="left"><font size="2">说明 </font></th>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl07',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.anonymousidentification.aspx"><font size="2">AnonymousIdentification</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>anonymousIdentification</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl08',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.authentication.aspx"><font size="2">Authentication</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>authentication</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl09',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.authorization.aspx"><font size="2">Authorization</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>authorization</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl10',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.browsercaps.aspx"><font size="2">BrowserCaps</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>browserCaps</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl11',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.clienttarget.aspx"><font size="2">ClientTarget</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>clientTarget</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl12',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.compilation.aspx"><font size="2">Compilation</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>compilation</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl13',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.customerrors.aspx"><font size="2">CustomErrors</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>customErrors</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl14',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.deployment.aspx"><font size="2">Deployment</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>deployment</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl15',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.devicefilters.aspx"><font size="2">DeviceFilters</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>deviceFilters</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl16',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.globalization.aspx"><font size="2">Globalization</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>globalization</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl17',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.healthmonitoring.aspx"><font size="2">HealthMonitoring</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>healthMonitoring</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl18',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.hostingenvironment.aspx"><font size="2">HostingEnvironment</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>hostingEnvironment</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl19',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.httpcookies.aspx"><font size="2">HttpCookies</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>httpCookies</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl20',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.httphandlers.aspx"><font size="2">HttpHandlers</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>httpHandlers</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl21',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.httpmodules.aspx"><font size="2">HttpModules</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>httpModules</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl22',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.httpruntime.aspx"><font size="2">HttpRuntime</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>httpRuntime</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl23',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.identity.aspx"><font size="2">Identity</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>identity</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf" name="inheritedMember">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl24',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.isdeclarationrequired.aspx"><font size="2">IsDeclarationRequired</font></a><font size="2">  </font>
+</td>
+<td>
+<font size="2">获取一个值，该值指示是否需要声明此 <b>ConfigurationSectionGroup</b> 对象。 （从 </font><a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl25',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.aspx"><font size="2">ConfigurationSectionGroup</font></a><font size="2"> 继承。）</font>
+</td>
+</tr>
+<tr valign="top" notsupportedon="netcf" name="inheritedMember">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl26',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.isdeclared.aspx"><font size="2">IsDeclared</font></a><font size="2">  </font>
+</td>
+<td>
+<font size="2">获取一个值，该值指示是否已声明此 <b>ConfigurationSectionGroup</b> 对象。（从 </font><a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl27',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.aspx"><font size="2">ConfigurationSectionGroup</font></a><font size="2"> 继承。）</font>
+</td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl28',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.machinekey.aspx"><font size="2">MachineKey</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>machineKey</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl29',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.membership.aspx"><font size="2">Membership</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>membership</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl30',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.mobilecontrols.aspx"><font size="2">MobileControls</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>mobileControls</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf" name="inheritedMember">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl31',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.name.aspx"><font size="2">Name</font></a><font size="2">  </font>
+</td>
+<td>
+<font size="2">获取此 <b>ConfigurationSectionGroup</b> 对象的名称属性。（从 </font><a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl32',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.aspx"><font size="2">ConfigurationSectionGroup</font></a><font size="2"> 继承。）</font>
+</td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl33',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.pages.aspx"><font size="2">Pages</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>pages</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl34',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.processmodel.aspx"><font size="2">ProcessModel</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>processModel</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl35',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.profile.aspx"><font size="2">Profile</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>profile</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl36',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.protocols.aspx"><font size="2">Protocols</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>protocols</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl37',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.rolemanager.aspx"><font size="2">RoleManager</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>roleManager</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf" name="inheritedMember">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl38',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.sectiongroupname.aspx"><font size="2">SectionGroupName</font></a><font size="2">  </font>
+</td>
+<td>
+<font size="2">获取与此 <b>ConfigurationSectionGroup</b> 关联的节组名称。（从 </font><a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl39',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.aspx"><font size="2">ConfigurationSectionGroup</font></a><font size="2"> 继承。）</font>
+</td>
+</tr>
+<tr valign="top" notsupportedon="netcf" name="inheritedMember">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl40',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.sectiongroups.aspx"><font size="2">SectionGroups</font></a><font size="2">  </font>
+</td>
+<td>
+<font size="2">获取一个包含所有 <b>ConfigurationSectionGroup</b> 对象的 <b>ConfigurationSectionGroup</b> 对象，这些对象是此 <b>ConfigurationSectionGroup</b> 对象的子对象。（从 </font><a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl41',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.aspx"><font size="2">ConfigurationSectionGroup</font></a><font size="2"> 继承。）</font>
+</td>
+</tr>
+<tr valign="top" notsupportedon="netcf" name="inheritedMember">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl42',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.sections.aspx"><font size="2">Sections</font></a><font size="2">  </font>
+</td>
+<td>
+<font size="2">获取一个 </font><a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl43',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectioncollection.aspx"><font size="2">ConfigurationSectionCollection</font></a><font size="2">，它包含此 <b>ConfigurationSectionGroup</b> 中的所有 </font><a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl44',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsection.aspx"><font size="2">ConfigurationSection</font></a><font size="2"> 对象。（从 </font><a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl45',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.aspx"><font size="2">ConfigurationSectionGroup</font></a><font size="2"> 继承。）</font>
+</td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl46',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.securitypolicy.aspx"><font size="2">SecurityPolicy</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>securityPolicy</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl47',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.sessionstate.aspx"><font size="2">SessionState</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>sessionState</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl48',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.sitemap.aspx"><font size="2">SiteMap</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>siteMap</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl49',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.trace.aspx"><font size="2">Trace</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>trace</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl50',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.trust.aspx"><font size="2">Trust</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>trust</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf" name="inheritedMember">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl51',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.type.aspx"><font size="2">Type</font></a><font size="2">  </font>
+</td>
+<td>
+<font size="2">获取或设置此 <b>ConfigurationSectionGroup</b> 对象的类型。（从 </font><a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl52',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.aspx"><font size="2">ConfigurationSectionGroup</font></a><font size="2"> 继承。）</font>
+</td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl53',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.urlmappings.aspx"><font size="2">UrlMappings</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>urlMappings</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl54',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.webcontrols.aspx"><font size="2">WebControls</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>webControls</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl55',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.webparts.aspx"><font size="2">WebParts</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>webParts</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl56',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.webservices.aspx"><font size="2">WebServices</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>webServices</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl57',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.xhtmlconformance.aspx"><font size="2">XhtmlConformance</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>xhtmlConformance</b> 节。</font></td>
+</tr>
+</tbody>
+</table></div>
+<p></p>
+</div></p>
 
                     </div>
                 </section>
                 
-                <h1 class="content-subhead">12 Dec 2005</h1>
+                <h1 class="content-subhead">18 May 2006</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2005/12/12/freeaspdotnetsqlserverexpresswebhosting/" class="post-title">免费的Asp.net2.0 Sqlserver express的学习空间</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2006/05/18/systemwebsectiongroup/" class="post-title">在Asp.Net2.0中可以方便的访问配置文件web.config,如判断debug设置，验证类型等。</a>
 
                         <p class="post-meta">
                             
@@ -541,46 +622,379 @@
                                 
                                     <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
                                 
-                                    <a class="post-category post-category-SQL Server" href='/tags/sql-server'>SQL Server</a>
-                                
                             
                         </p>
                     </header>
 
                     <div class="post-description">
-                        <p><p></p>
-<p><b><font face="Tahoma" color="black"> <font color="#0000ff">dotnetspider.com</font>提供Asp.net2.0 Sqlserver express的学习空间<br /><br /><font color="#ff0000">- Learn ASP.NET 2.0</font></font><font color="#ff0000"> <br /><font face="Tahoma">- Develop your web site</font> <br /><font face="Tahoma">- Host it for free.</font> </font></b></p>
-<b><br /></b><p><font color="#ff0000"><font face="Tahoma" color="#000000">Web hosting package <br />For ASP.NET programmers</font><font face="Tahoma"> </font></font></p>
-<li>
-<font color="#ff0000">$0.00 monthly fee. </font><br />
-</li>
-<li>
-<font color="#ff0000">No advertisements in your site. </font><br />
-</li>
-<li>
-<font color="#ff0000">SQL Server Express support. </font><br />
-</li>
-<li>
-<font color="#ff0000">MS Access support. </font><br />
-</li>
-<li>
-<font color="#ff0000">Up to 100 MB Space. </font><br />
-</li>
-<li>
-<font color="#ff0000">2 GB monthly data transfer. </font><br />
-</li>
-<li>
-<font color="#ff0000">Your own </font><font color="#ff0000">domain name</font><font color="#ff0000">.</font><font color="#000000"> </font> <br /><p>详细描述参考下面的页面：<br /><a href="http://www.aspxboy.com/private/5271/default.aspx" target="_blank"><font face="Tahoma" color="#0000ff" size="4"><a href="http://www.aspxboy.com/private/5271/default.aspx">http://www.aspxboy.com/private/5271/default.aspx</a></font></a></p>
-</li></p>
+                        <p><p>Asp.Net2.0中我们可以方便的访问配置文件中，.NetFrameWork2.0新增加了 SystemWebSectionGroup 类。<br />允许用户以编程方式访问配置文件的 <b>system.web</b> 组。<br />比如判断web.config内是否为 debug=&ldquo;true&rdquo;,或者判断身份验证形式<br /><br />    SystemWebSectionGroup ws = new SystemWebSectionGroup();<br />    CompilationSection cp = ws.Compilation;<br />    用cp.Debug;就可以得到compilation节内关于&rdquo;debug&rdquo;的配置<br />     AuthenticationSection  as = ws.Authentication; <br />    用 as.Mode  可以获取 authentication节中关于&rdquo;mode&rdquo;的配置，值为AuthenticationMode 枚举之一<br />AuthenticationMode的取值如下：<font size="2"> </font></p>
+<div id="ctl00_LibFrame_ctl09"><table class="VSShowTableBorder" cellspacing="2" cellpadding="5" width="500"><tbody>
+<tr>
+<th><font size="2"> </font></th>
+<th align="left" width="25%"><font size="2">成员名称</font></th>
+<th align="left"><font size="2">说明</font></th>
+</tr>
+<tr valign="top">
+<td><font size="2"> </font></td>
+<td><b><font size="2">Forms</font></b></td>
+<td><font size="2">将基于 ASP.NET 窗体的身份验证指定为身份验证模式。 </font></td>
+</tr>
+<tr valign="top">
+<td><font size="2"> </font></td>
+<td><b><font size="2">None</font></b></td>
+<td><font size="2">不指定身份验证。 </font></td>
+</tr>
+<tr valign="top">
+<td><font size="2"> </font></td>
+<td><b><font size="2">Passport</font></b></td>
+<td><font size="2">将 Microsoft Passport 指定为身份验证模式。 </font></td>
+</tr>
+<tr valign="top">
+<td><font size="2"> </font></td>
+<td><b><font size="2">Windows</font></b></td>
+<td><font size="2">将 Windows 指定为身份验证模式。在使用 Internet 信息服务 (IIS) 身份验证方法（基本、简要、集成 Windows (NTLM/Kerberos) 或证书）时适用此模式。 </font></td>
+</tr>
+</tbody></table></div>
+<p><font size="2">     <br /><strong><font color="#0000ff">附：SystemWebSectionGroup 类的公共属性:</font></strong></font></p>
+<script type="text/Javascript">
+var ExpCollDivStr=ExpCollDivStr;
+ExpCollDivStr = ExpCollDivStr + &ldquo;ctl00_LibFrame_ctl066893b77,&ldquo;;
+var ExpCollImgStr = ExpCollImgStr;
+ ExpCollImgStr = ExpCollImgStr + &ldquo;ctl00_LibFrame_ctl06img,&ldquo;;
+</script><p> </p>
+<div class="section" id="ctl00_LibFrame_ctl066893b77" style="DISPLAY: block">
+<p></p>
+<div id="ctl00_LibFrame_ctl06"><table class="memberListTable" cellspacing="2" cellpadding="5" width="500">
+<colgroup><font size="2"><col width="10%">
+<col width="30%">
+<col width="60%"></font></colgroup>
+<tbody>
+<tr>
+<th style="BORDER-RIGHT-STYLE: none"><font size="2"> </font></th>
+<th style="BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none" align="left"><font size="2">名称 </font></th>
+<th style="BORDER-LEFT-STYLE: none" align="left"><font size="2">说明 </font></th>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl07',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.anonymousidentification.aspx"><font size="2">AnonymousIdentification</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>anonymousIdentification</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl08',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.authentication.aspx"><font size="2">Authentication</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>authentication</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl09',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.authorization.aspx"><font size="2">Authorization</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>authorization</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl10',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.browsercaps.aspx"><font size="2">BrowserCaps</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>browserCaps</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl11',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.clienttarget.aspx"><font size="2">ClientTarget</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>clientTarget</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl12',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.compilation.aspx"><font size="2">Compilation</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>compilation</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl13',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.customerrors.aspx"><font size="2">CustomErrors</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>customErrors</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl14',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.deployment.aspx"><font size="2">Deployment</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>deployment</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl15',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.devicefilters.aspx"><font size="2">DeviceFilters</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>deviceFilters</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl16',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.globalization.aspx"><font size="2">Globalization</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>globalization</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl17',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.healthmonitoring.aspx"><font size="2">HealthMonitoring</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>healthMonitoring</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl18',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.hostingenvironment.aspx"><font size="2">HostingEnvironment</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>hostingEnvironment</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl19',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.httpcookies.aspx"><font size="2">HttpCookies</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>httpCookies</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl20',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.httphandlers.aspx"><font size="2">HttpHandlers</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>httpHandlers</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl21',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.httpmodules.aspx"><font size="2">HttpModules</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>httpModules</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl22',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.httpruntime.aspx"><font size="2">HttpRuntime</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>httpRuntime</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl23',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.identity.aspx"><font size="2">Identity</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>identity</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf" name="inheritedMember">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl24',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.isdeclarationrequired.aspx"><font size="2">IsDeclarationRequired</font></a><font size="2">  </font>
+</td>
+<td>
+<font size="2">获取一个值，该值指示是否需要声明此 <b>ConfigurationSectionGroup</b> 对象。 （从 </font><a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl25',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.aspx"><font size="2">ConfigurationSectionGroup</font></a><font size="2"> 继承。）</font>
+</td>
+</tr>
+<tr valign="top" notsupportedon="netcf" name="inheritedMember">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl26',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.isdeclared.aspx"><font size="2">IsDeclared</font></a><font size="2">  </font>
+</td>
+<td>
+<font size="2">获取一个值，该值指示是否已声明此 <b>ConfigurationSectionGroup</b> 对象。（从 </font><a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl27',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.aspx"><font size="2">ConfigurationSectionGroup</font></a><font size="2"> 继承。）</font>
+</td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl28',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.machinekey.aspx"><font size="2">MachineKey</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>machineKey</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl29',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.membership.aspx"><font size="2">Membership</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>membership</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl30',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.mobilecontrols.aspx"><font size="2">MobileControls</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>mobileControls</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf" name="inheritedMember">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl31',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.name.aspx"><font size="2">Name</font></a><font size="2">  </font>
+</td>
+<td>
+<font size="2">获取此 <b>ConfigurationSectionGroup</b> 对象的名称属性。（从 </font><a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl32',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.aspx"><font size="2">ConfigurationSectionGroup</font></a><font size="2"> 继承。）</font>
+</td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl33',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.pages.aspx"><font size="2">Pages</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>pages</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl34',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.processmodel.aspx"><font size="2">ProcessModel</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>processModel</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl35',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.profile.aspx"><font size="2">Profile</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>profile</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl36',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.protocols.aspx"><font size="2">Protocols</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>protocols</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl37',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.rolemanager.aspx"><font size="2">RoleManager</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>roleManager</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf" name="inheritedMember">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl38',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.sectiongroupname.aspx"><font size="2">SectionGroupName</font></a><font size="2">  </font>
+</td>
+<td>
+<font size="2">获取与此 <b>ConfigurationSectionGroup</b> 关联的节组名称。（从 </font><a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl39',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.aspx"><font size="2">ConfigurationSectionGroup</font></a><font size="2"> 继承。）</font>
+</td>
+</tr>
+<tr valign="top" notsupportedon="netcf" name="inheritedMember">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl40',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.sectiongroups.aspx"><font size="2">SectionGroups</font></a><font size="2">  </font>
+</td>
+<td>
+<font size="2">获取一个包含所有 <b>ConfigurationSectionGroup</b> 对象的 <b>ConfigurationSectionGroup</b> 对象，这些对象是此 <b>ConfigurationSectionGroup</b> 对象的子对象。（从 </font><a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl41',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.aspx"><font size="2">ConfigurationSectionGroup</font></a><font size="2"> 继承。）</font>
+</td>
+</tr>
+<tr valign="top" notsupportedon="netcf" name="inheritedMember">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl42',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.sections.aspx"><font size="2">Sections</font></a><font size="2">  </font>
+</td>
+<td>
+<font size="2">获取一个 </font><a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl43',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectioncollection.aspx"><font size="2">ConfigurationSectionCollection</font></a><font size="2">，它包含此 <b>ConfigurationSectionGroup</b> 中的所有 </font><a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl44',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsection.aspx"><font size="2">ConfigurationSection</font></a><font size="2"> 对象。（从 </font><a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl45',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.aspx"><font size="2">ConfigurationSectionGroup</font></a><font size="2"> 继承。）</font>
+</td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl46',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.securitypolicy.aspx"><font size="2">SecurityPolicy</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>securityPolicy</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl47',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.sessionstate.aspx"><font size="2">SessionState</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>sessionState</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl48',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.sitemap.aspx"><font size="2">SiteMap</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>siteMap</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl49',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.trace.aspx"><font size="2">Trace</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>trace</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl50',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.trust.aspx"><font size="2">Trust</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>trust</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf" name="inheritedMember">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl51',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.type.aspx"><font size="2">Type</font></a><font size="2">  </font>
+</td>
+<td>
+<font size="2">获取或设置此 <b>ConfigurationSectionGroup</b> 对象的类型。（从 </font><a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl52',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.aspx"><font size="2">ConfigurationSectionGroup</font></a><font size="2"> 继承。）</font>
+</td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl53',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.urlmappings.aspx"><font size="2">UrlMappings</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>urlMappings</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl54',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.webcontrols.aspx"><font size="2">WebControls</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>webControls</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl55',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.webparts.aspx"><font size="2">WebParts</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>webParts</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl56',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.webservices.aspx"><font size="2">WebServices</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>webServices</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl57',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.xhtmlconformance.aspx"><font size="2">XhtmlConformance</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>xhtmlConformance</b> 节。</font></td>
+</tr>
+</tbody>
+</table></div>
+<p></p>
+</div></p>
 
                     </div>
                 </section>
                 
-                <h1 class="content-subhead">21 Nov 2005</h1>
+                <h1 class="content-subhead">10 May 2006</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2005/11/21/nodirurlrewrite/" class="post-title">关于请求的目录不存在而需要url重写</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2006/05/10/paintdotnet/" class="post-title">推荐一个.Net做的图形处理软件--Paint.NET </a>
 
                         <p class="post-meta">
                             
@@ -590,28 +1004,29 @@
                                 
                                     <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
                                 
-                                    <a class="post-category post-category-Url Rewrite" href='/tags/url-rewrite'>Url Rewrite</a>
+                                    <a class="post-category post-category-Paint.NET" href='/tags/paint.net'>Paint.NET</a>
                                 
                             
                         </p>
                     </header>
 
                     <div class="post-description">
-                        <p>在<a href="http://pwqzc.cnblogs.com/archive/2005/11/21/281331.html" target="_blank">http://pwqzc.cnblogs.com/archive/2005/11/21/281331.html</a>看到的讨论<br />其实csdn的那两个帖子<br /><a href="http://community.csdn.net/Expert/topic/4401/4401936.xml?temp=.317898" target="_blank">http://community.csdn.net/Expert/topic/4401/4401936.xml?temp=.317898</a></p>
-<p><a href="http://community.csdn.net/Expert/topic/4406/4406615.xml?temp=.513714" target="_blank">http://community.csdn.net/Expert/topic/4406/4406615.xml?temp=.513714</a><br />中已经有网友们说到方法了，hander module 都可以做<br />在iis中设置*.*映射到 aspnet_isapi.dll ISAPI 扩展，我测试后没有发现什么访问被拒绝访问的401.3错误,<br />需要输入用户名的问题。<br /><img style="width: 627px; height: 396px; border: 0px;" src="/images/hbz_images/5c851a33-204d-4d19-a338-3220cd1979ae.gif" border="0" alt=""><br />  </p>
-<p>以下在代码xpsp2 .net1.1 sp1 下测试通过</p>
-<div style="cursor: hand; color: blue; text-align: left; text-decoration: underline;" title="&gt;-点此复制到剪贴板-&lt;" onclick='function anonymous() { var obj = document.getElementById("code_huobazi_code");    if( obj != null )   {       var rng = document.body.createTextRange();      rng.moveToElementText(obj);         rng.scrollIntoView();       rng.select();       rng.execCommand("Copy");        rng.collapse(false);    } }'>[Copy to clipboard]</div>
-<p><textarea id="code_huobazi_code" style="width: 632px; height: 298px; background-color: #ffcc00;" cols="84" rows="4">using System;&lt;br /&gt; using System.Web;&lt;br /&gt; using System.Web.UI;&lt;/div&gt; &lt;div  mce_tmp="1"&gt;namespace AspxBoy.VisualUrl&lt;br /&gt; {&lt;br /&gt;   /// &lt;summary&gt;&lt;br /&gt;     /// VisualUrlHttpHander 的摘要说明。&lt;br /&gt;  /// &lt;/summary&gt;&lt;br /&gt;    public class VisualUrlHttpHander : IHttpHandlerFactory&lt;br /&gt;  {&lt;br /&gt;       #region IHttpHandlerFactory 成员&lt;/div&gt; &lt;div  mce_tmp="1"&gt;     public void ReleaseHandler(IHttpHandler handler)&lt;br /&gt;        {&lt;br /&gt;           // TODO:  添加 VisualUrlHttpHander.ReleaseHandler 实现&lt;br /&gt;      }&lt;/div&gt; &lt;div  mce_tmp="1"&gt;      public IHttpHandler GetHandler(HttpContext context, string requestType, string url, string pathTranslated)&lt;br /&gt;      {&lt;br /&gt;           // TODO:  添加 VisualUrlHttpHander.GetHandler 实现&lt;/div&gt; &lt;div  mce_tmp="1"&gt;         string rawUrl = context.Request.RawUrl.Trim();&lt;/div&gt; &lt;div  mce_tmp="1"&gt;         ///&lt;br /&gt;             ///这里只示范地址是http://domainname/xxx&lt;br /&gt;            ///和http://domainname/xxx/这样的地址&lt;br /&gt;             ///&lt;br /&gt;             string userName = rawUrl.TrimStart('/').TrimEnd('/');&lt;br /&gt;           string sendToUrl = url;&lt;br /&gt;             string filePath = pathTranslated;&lt;br /&gt;           string sendToUrlLessQString;&lt;/div&gt; &lt;div  mce_tmp="1"&gt;           sendToUrl = Globals.AppPath + "/get.aspx?username=" + userName;&lt;/div&gt; &lt;div  mce_tmp="1"&gt;            Globals.RewriteUrl(context, sendToUrl, out sendToUrlLessQString, out filePath);&lt;/div&gt; &lt;div  mce_tmp="1"&gt;            return PageParser.GetCompiledPageInstance(sendToUrlLessQString, filePath, context);&lt;br /&gt;         }&lt;/div&gt; &lt;div  mce_tmp="1"&gt;      #endregion&lt;/div&gt; &lt;div  mce_tmp="1"&gt; }&lt;/div&gt; &lt;div  mce_tmp="1"&gt;  public class Globals&lt;br /&gt;    {&lt;br /&gt;       /// &lt;summary&gt;&lt;br /&gt;         /// 应用程序路径&lt;br /&gt;      /// &lt;/summary&gt;&lt;br /&gt;        public static string AppPath&lt;br /&gt;        {&lt;/div&gt; &lt;div  mce_tmp="1"&gt;          get&lt;br /&gt;             {&lt;br /&gt;               string applicationPath = "/";&lt;/div&gt; &lt;div  mce_tmp="1"&gt;              if(HttpContext.Current != null)&lt;br /&gt;                 {&lt;br /&gt; applicationPath = HttpContext.Current.Request.ApplicationPath;&lt;br /&gt;                }&lt;/div&gt; &lt;div  mce_tmp="1"&gt;              if (applicationPath == "/")&lt;br /&gt;                 {&lt;br /&gt; return string.Empty;&lt;br /&gt;              }&lt;br /&gt;               else&lt;br /&gt;                {&lt;br /&gt; if (applicationPath.EndsWith("/"))&lt;br /&gt; {&lt;br /&gt;  return applicationPath;&lt;br /&gt; }&lt;br /&gt; else&lt;br /&gt; {&lt;br /&gt;    return applicationPath + "/";&lt;br /&gt; }&lt;br /&gt;                 }&lt;/div&gt; &lt;div  mce_tmp="1"&gt;          }&lt;br /&gt;       }&lt;br /&gt;       /// &lt;summary&gt;&lt;br /&gt;         /// 在ASP.NET中执行URL重写&lt;br /&gt;        /// see http://www.aspxboy.com/484/archive.aspx&lt;br /&gt;         /// &lt;/summary&gt;&lt;br /&gt;        /// &lt;param name="context"&gt;&lt;/param&gt;&lt;br /&gt;      /// &lt;param name="sendToUrl"&gt;&lt;/param&gt;&lt;br /&gt;        /// &lt;param name="sendToUrlLessQString"&gt;&lt;/param&gt;&lt;br /&gt;         /// &lt;param name="filePath"&gt;&lt;/param&gt;&lt;br /&gt;         public static  void RewriteUrl(HttpContext context, string sendToUrl, out string sendToUrlLessQString, out string filePath)&lt;br /&gt;         {&lt;br /&gt;           if (context.Request.QueryString.Count &gt; 0)&lt;br /&gt;           {&lt;br /&gt;               if (sendToUrl.IndexOf('?') != -1)&lt;br /&gt;               {&lt;br /&gt; sendToUrl += "&amp;" + context.Request.QueryString.ToString();&lt;br /&gt;                }&lt;br /&gt;               else&lt;br /&gt;                {&lt;br /&gt; sendToUrl += "?" + context.Request.QueryString.ToString();&lt;br /&gt;                }&lt;br /&gt;           }&lt;/div&gt; &lt;div  mce_tmp="1"&gt;          string queryString = String.Empty;&lt;br /&gt;          sendToUrlLessQString = sendToUrl;&lt;br /&gt;           if (sendToUrl.IndexOf('?') &gt; 0)&lt;br /&gt;          {&lt;br /&gt;               sendToUrlLessQString = sendToUrl.Substring(0, sendToUrl.IndexOf('?'));&lt;br /&gt;              queryString = sendToUrl.Substring(sendToUrl.IndexOf('?') + 1);&lt;br /&gt;          }&lt;/div&gt; &lt;div  mce_tmp="1"&gt;          filePath = string.Empty;&lt;br /&gt;            filePath = context.Server.MapPath(sendToUrlLessQString);&lt;/div&gt; &lt;div  mce_tmp="1"&gt;           context.RewritePath(sendToUrlLessQString, String.Empty, queryString);&lt;br /&gt;       }&lt;br /&gt;   }&lt;br /&gt; }&lt;/div&gt; &lt;div  mce_tmp="1"&gt;</textarea></p>
-<p>下载<br /><a href="http://www.cnblogs.com/Files/huobazi/VisualUrl.rar">http://www.cnblogs.com/Files/huobazi/VisualUrl.rar</a></p>              
+                        <p align="left"><a href="http://www.eecs.wsu.edu/paint.net/index.html" target="_blank"><img style="border: 0px;" src="/images/hbz_images/e526efd8-b249-490f-81ec-3b929541201f.png" border="0" alt=""></a> </p>
+<p></p>
+<h5>
+<a href="http://www.eecs.wsu.edu/paint.net/index.html" target="_blank">Home</a>   <a href="http://www.eecs.wsu.edu/paint.net/features.html" target="_blank">Features</a>     <a href="http://www.eecs.wsu.edu/paint.net/download.html" target="_blank">Download</a>   <a href="http://www.eecs.wsu.edu/paint.net/roadmap.html" target="_blank">Roadmap</a>   <a href="http://www.eecs.wsu.edu/paint.net/screenshots.html" target="_blank">Screenshots</a>   <a href="http://paintdotnet.12.forumer.com/index.php" target="_blank">Forum</a>  </h5>
+<br /><h5><span style="color: #0000ff; background-color: #ffffff;">AboutPaint.NET is image and photo manipulation software designed to be used on computers that run Windows 2000, XP, Vista, or Server 2003. It supports layers, unlimited undo, special effects, and a wide variety of useful and powerful tools.</span></h5>
+<br /><h5><span style="color: #0000ff; background-color: #ffffff;"><span style="color: #000000;">The programming language used to create Paint.NET is C#, with a small amount of C++ for setup and shell-integration related functionality</span></span></h5>
+<br /><p align="left"><br /><a href="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png6" target="_blank"><img style="margin-left: 0px; width: 493px; margin-right: 0px; height: 399px; border: 0px;" src="/images/hbz_images/25f59beb-2867-4f91-987d-364ecfd344e0.jpg" border="0" alt="" hspace="0" align="baseline"></a></p>             
 
                     </div>
                 </section>
                 
-                <h1 class="content-subhead">21 Nov 2005</h1>
+                <h1 class="content-subhead">10 May 2006</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2005/11/21/nodirurlrewrite/" class="post-title">关于请求的目录不存在而需要url重写</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2006/05/10/paintdotnet/" class="post-title">推荐一个.Net做的图形处理软件--Paint.NET </a>
 
                         <p class="post-meta">
                             
@@ -621,28 +1036,29 @@
                                 
                                     <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
                                 
-                                    <a class="post-category post-category-Url Rewrite" href='/tags/url-rewrite'>Url Rewrite</a>
+                                    <a class="post-category post-category-Paint.NET" href='/tags/paint.net'>Paint.NET</a>
                                 
                             
                         </p>
                     </header>
 
                     <div class="post-description">
-                        <p>在<a href="http://pwqzc.cnblogs.com/archive/2005/11/21/281331.html" target="_blank">http://pwqzc.cnblogs.com/archive/2005/11/21/281331.html</a>看到的讨论<br />其实csdn的那两个帖子<br /><a href="http://community.csdn.net/Expert/topic/4401/4401936.xml?temp=.317898" target="_blank">http://community.csdn.net/Expert/topic/4401/4401936.xml?temp=.317898</a></p>
-<p><a href="http://community.csdn.net/Expert/topic/4406/4406615.xml?temp=.513714" target="_blank">http://community.csdn.net/Expert/topic/4406/4406615.xml?temp=.513714</a><br />中已经有网友们说到方法了，hander module 都可以做<br />在iis中设置*.*映射到 aspnet_isapi.dll ISAPI 扩展，我测试后没有发现什么访问被拒绝访问的401.3错误,<br />需要输入用户名的问题。<br /><img style="width: 627px; height: 396px; border: 0px;" src="/images/hbz_images/5c851a33-204d-4d19-a338-3220cd1979ae.gif" border="0" alt=""><br />  </p>
-<p>以下在代码xpsp2 .net1.1 sp1 下测试通过</p>
-<div style="cursor: hand; color: blue; text-align: left; text-decoration: underline;" title="&gt;-点此复制到剪贴板-&lt;" onclick='function anonymous() { var obj = document.getElementById("code_huobazi_code");    if( obj != null )   {       var rng = document.body.createTextRange();      rng.moveToElementText(obj);         rng.scrollIntoView();       rng.select();       rng.execCommand("Copy");        rng.collapse(false);    } }'>[Copy to clipboard]</div>
-<p><textarea id="code_huobazi_code" style="width: 632px; height: 298px; background-color: #ffcc00;" cols="84" rows="4">using System;&lt;br /&gt; using System.Web;&lt;br /&gt; using System.Web.UI;&lt;/div&gt; &lt;div  mce_tmp="1"&gt;namespace AspxBoy.VisualUrl&lt;br /&gt; {&lt;br /&gt;   /// &lt;summary&gt;&lt;br /&gt;     /// VisualUrlHttpHander 的摘要说明。&lt;br /&gt;  /// &lt;/summary&gt;&lt;br /&gt;    public class VisualUrlHttpHander : IHttpHandlerFactory&lt;br /&gt;  {&lt;br /&gt;       #region IHttpHandlerFactory 成员&lt;/div&gt; &lt;div  mce_tmp="1"&gt;     public void ReleaseHandler(IHttpHandler handler)&lt;br /&gt;        {&lt;br /&gt;           // TODO:  添加 VisualUrlHttpHander.ReleaseHandler 实现&lt;br /&gt;      }&lt;/div&gt; &lt;div  mce_tmp="1"&gt;      public IHttpHandler GetHandler(HttpContext context, string requestType, string url, string pathTranslated)&lt;br /&gt;      {&lt;br /&gt;           // TODO:  添加 VisualUrlHttpHander.GetHandler 实现&lt;/div&gt; &lt;div  mce_tmp="1"&gt;         string rawUrl = context.Request.RawUrl.Trim();&lt;/div&gt; &lt;div  mce_tmp="1"&gt;         ///&lt;br /&gt;             ///这里只示范地址是http://domainname/xxx&lt;br /&gt;            ///和http://domainname/xxx/这样的地址&lt;br /&gt;             ///&lt;br /&gt;             string userName = rawUrl.TrimStart('/').TrimEnd('/');&lt;br /&gt;           string sendToUrl = url;&lt;br /&gt;             string filePath = pathTranslated;&lt;br /&gt;           string sendToUrlLessQString;&lt;/div&gt; &lt;div  mce_tmp="1"&gt;           sendToUrl = Globals.AppPath + "/get.aspx?username=" + userName;&lt;/div&gt; &lt;div  mce_tmp="1"&gt;            Globals.RewriteUrl(context, sendToUrl, out sendToUrlLessQString, out filePath);&lt;/div&gt; &lt;div  mce_tmp="1"&gt;            return PageParser.GetCompiledPageInstance(sendToUrlLessQString, filePath, context);&lt;br /&gt;         }&lt;/div&gt; &lt;div  mce_tmp="1"&gt;      #endregion&lt;/div&gt; &lt;div  mce_tmp="1"&gt; }&lt;/div&gt; &lt;div  mce_tmp="1"&gt;  public class Globals&lt;br /&gt;    {&lt;br /&gt;       /// &lt;summary&gt;&lt;br /&gt;         /// 应用程序路径&lt;br /&gt;      /// &lt;/summary&gt;&lt;br /&gt;        public static string AppPath&lt;br /&gt;        {&lt;/div&gt; &lt;div  mce_tmp="1"&gt;          get&lt;br /&gt;             {&lt;br /&gt;               string applicationPath = "/";&lt;/div&gt; &lt;div  mce_tmp="1"&gt;              if(HttpContext.Current != null)&lt;br /&gt;                 {&lt;br /&gt; applicationPath = HttpContext.Current.Request.ApplicationPath;&lt;br /&gt;                }&lt;/div&gt; &lt;div  mce_tmp="1"&gt;              if (applicationPath == "/")&lt;br /&gt;                 {&lt;br /&gt; return string.Empty;&lt;br /&gt;              }&lt;br /&gt;               else&lt;br /&gt;                {&lt;br /&gt; if (applicationPath.EndsWith("/"))&lt;br /&gt; {&lt;br /&gt;  return applicationPath;&lt;br /&gt; }&lt;br /&gt; else&lt;br /&gt; {&lt;br /&gt;    return applicationPath + "/";&lt;br /&gt; }&lt;br /&gt;                 }&lt;/div&gt; &lt;div  mce_tmp="1"&gt;          }&lt;br /&gt;       }&lt;br /&gt;       /// &lt;summary&gt;&lt;br /&gt;         /// 在ASP.NET中执行URL重写&lt;br /&gt;        /// see http://www.aspxboy.com/484/archive.aspx&lt;br /&gt;         /// &lt;/summary&gt;&lt;br /&gt;        /// &lt;param name="context"&gt;&lt;/param&gt;&lt;br /&gt;      /// &lt;param name="sendToUrl"&gt;&lt;/param&gt;&lt;br /&gt;        /// &lt;param name="sendToUrlLessQString"&gt;&lt;/param&gt;&lt;br /&gt;         /// &lt;param name="filePath"&gt;&lt;/param&gt;&lt;br /&gt;         public static  void RewriteUrl(HttpContext context, string sendToUrl, out string sendToUrlLessQString, out string filePath)&lt;br /&gt;         {&lt;br /&gt;           if (context.Request.QueryString.Count &gt; 0)&lt;br /&gt;           {&lt;br /&gt;               if (sendToUrl.IndexOf('?') != -1)&lt;br /&gt;               {&lt;br /&gt; sendToUrl += "&amp;" + context.Request.QueryString.ToString();&lt;br /&gt;                }&lt;br /&gt;               else&lt;br /&gt;                {&lt;br /&gt; sendToUrl += "?" + context.Request.QueryString.ToString();&lt;br /&gt;                }&lt;br /&gt;           }&lt;/div&gt; &lt;div  mce_tmp="1"&gt;          string queryString = String.Empty;&lt;br /&gt;          sendToUrlLessQString = sendToUrl;&lt;br /&gt;           if (sendToUrl.IndexOf('?') &gt; 0)&lt;br /&gt;          {&lt;br /&gt;               sendToUrlLessQString = sendToUrl.Substring(0, sendToUrl.IndexOf('?'));&lt;br /&gt;              queryString = sendToUrl.Substring(sendToUrl.IndexOf('?') + 1);&lt;br /&gt;          }&lt;/div&gt; &lt;div  mce_tmp="1"&gt;          filePath = string.Empty;&lt;br /&gt;            filePath = context.Server.MapPath(sendToUrlLessQString);&lt;/div&gt; &lt;div  mce_tmp="1"&gt;           context.RewritePath(sendToUrlLessQString, String.Empty, queryString);&lt;br /&gt;       }&lt;br /&gt;   }&lt;br /&gt; }&lt;/div&gt; &lt;div  mce_tmp="1"&gt;</textarea></p>
-<p>下载<br /><a href="http://www.cnblogs.com/Files/huobazi/VisualUrl.rar">http://www.cnblogs.com/Files/huobazi/VisualUrl.rar</a></p>              
+                        <p align="left"><a href="http://www.eecs.wsu.edu/paint.net/index.html" target="_blank"><img style="border: 0px;" src="/images/hbz_images/e526efd8-b249-490f-81ec-3b929541201f.png" border="0" alt=""></a> </p>
+<p></p>
+<h5>
+<a href="http://www.eecs.wsu.edu/paint.net/index.html" target="_blank">Home</a>   <a href="http://www.eecs.wsu.edu/paint.net/features.html" target="_blank">Features</a>     <a href="http://www.eecs.wsu.edu/paint.net/download.html" target="_blank">Download</a>   <a href="http://www.eecs.wsu.edu/paint.net/roadmap.html" target="_blank">Roadmap</a>   <a href="http://www.eecs.wsu.edu/paint.net/screenshots.html" target="_blank">Screenshots</a>   <a href="http://paintdotnet.12.forumer.com/index.php" target="_blank">Forum</a>  </h5>
+<br /><h5><span style="color: #0000ff; background-color: #ffffff;">AboutPaint.NET is image and photo manipulation software designed to be used on computers that run Windows 2000, XP, Vista, or Server 2003. It supports layers, unlimited undo, special effects, and a wide variety of useful and powerful tools.</span></h5>
+<br /><h5><span style="color: #0000ff; background-color: #ffffff;"><span style="color: #000000;">The programming language used to create Paint.NET is C#, with a small amount of C++ for setup and shell-integration related functionality</span></span></h5>
+<br /><p align="left"><br /><a href="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png6" target="_blank"><img style="margin-left: 0px; width: 493px; margin-right: 0px; height: 399px; border: 0px;" src="/images/hbz_images/25f59beb-2867-4f91-987d-364ecfd344e0.jpg" border="0" alt="" hspace="0" align="baseline"></a></p>             
 
                     </div>
                 </section>
                 
-                <h1 class="content-subhead">03 Nov 2005</h1>
+                <h1 class="content-subhead">04 May 2006</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2005/11/03/cb-268350/" class="post-title">新的GotDotNet</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2006/05/04/int32tostringinvs2005/" class="post-title">Vs2005的倒退?</a>
 
                         <p class="post-meta">
                             
@@ -650,12 +1066,14 @@
                                 
                                     <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
                                 
+                                    <a class="post-category post-category-Visual Studio" href='/tags/visual-studio'>Visual Studio</a>
+                                
                             
                         </p>
                     </header>
 
                     <div class="post-description">
-                        <p><a href="http://gotdotnet.com/">http://gotdotnet.com/</a></p>                
+                        <p>String abc = 123.ToString;<br /><br />代码在Vs2003内编译将得到错误信息<br /><br /><font color="#0000ff">“<font size="2">在不带括号的情况下引用了方法.....</font>”</font><br /><br />在Vs2005（8.050727.42 /rtm 50727 4200）内编译则得到错误信息:<br /><br /><font color="#ff1493">“无法将方法组“ToString”转换为非委托类型“string”。您是要调用方法吗?”<br /></font><br />而上边代码等号右边的部分如果位于一个方法内做参数，那将得到一个错误信息：<br /><br /><font color="#ff1493">参数“1”: 无法从“方法组”转换为“string”<br /></font><br />语气上更加亲切了，比如多了个“您”字，可是语意上却更加看不懂了....</p>              
 
                     </div>
                 </section>
@@ -669,7 +1087,7 @@
         <i class="fa fa-angle-double-left"></i>&nbsp;Newer
       </a>
       
-    <span class="post-list-pagination-item post-list-pagination-item-current">Page 8 of 16</span>
+    <span class="post-list-pagination-item post-list-pagination-item-current">Page 8 of 19</span>
     
       <a href="/tags/asp.net/page/9/" class="post-list-pagination-item pure-button post-list-pagination-item-next">
         Older&nbsp;<i class="fa fa-angle-double-right"></i>
