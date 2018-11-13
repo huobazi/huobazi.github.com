@@ -59,11 +59,11 @@
             
             <div class="posts">
                 
-                <h1 class="content-subhead">27 May 2007</h1>
+                <h1 class="content-subhead">29 Jun 2006</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2007/05/27/vs2005sp1256andmram/" class="post-title">郁闷啊，竟然用256M内存跑着VS2005 SP1 好几个月</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2006/06/29/smartnavigationwasobsoletedtherecommendedalternativeispagemaintainscrollpositiononpostback/" class="post-title">还记得 Page.SmartNavigation 属性么，此属性已被否决。</a>
 
                         <p class="post-meta">
                             
@@ -71,59 +71,90 @@
                                 
                                     <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
                                 
-                                    <a class="post-category post-category-闲言碎语" href='/tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD'>闲言碎语</a>
+                                    <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
+                                
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><span style="color: #ff0000;"><strong><span style="color: #000000;">还记得在.Net 1.x 中我们为了保持在页面回发后 保持滚动条位置的做法么？<br />Page.SmartNavigation 可以做到，但会带来这样那样的问题。<br />我们也曾经用这样那样的方法实现这个效果，如：</span></strong></span></p>
+<p><a href="http://huobazi.cnblogs.com/archive/2004/09/20/ScrollPage.aspx"><span style="color: #0000ff;">http://huobazi.cnblogs.com/archive/2004/09/20/ScrollPage.aspx</span></a><br /><a href="http://www.cnblogs.com/birdshome/archive/2004/12/13/76521.html"><span style="color: #0000ff;">http://www.cnblogs.com/birdshome/archive/2004/12/13/76521.html</span></a></p>
+<p><span style="color: #000000;">在.Net 2.0 中，该类型被描述为：<br /></span> <br /><span style="color: #000000;">[<span style="color: #0000ff;">ObsoleteAttribute</span>("The recommended alternative is Page.SetFocus and Page.MaintainScrollPositionOnPostBack. http://go.microsoft.com/fwlink/?linkid=14202")]<br /><span class="keyword">public</span> bool <span class="identifier">SmartNavigation</span> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</span></p>
+<p><br /><span style="color: #ff0000;"><strong>注意：此属性现在已过时。</strong></span></p>
+<p> </p>
+<p>获取或设置指示是否启用智能导航的值。</p>
+<p>同时在备注内有提到：</p>
+<p><strong>SmartNavigation</strong> 属性已被<strong>否决</strong>。请改用 <a href="ms-help://MS.VSCC.v80/MS.MSDN.v80/MS.NETDEVFX.v20.chs/cpref13/html/O_T_System_Web_UI_Page_SetFocus.htm"><span style="color: #002c99;">SetFocus</span></a> 方法和 <a href="ms-help://MS.VSCC.v80/MS.MSDN.v80/MS.NETDEVFX.v20.chs/cpref13/html/P_System_Web_UI_Page_MaintainScrollPositionOnPostBack.htm">MaintainScrollPositionOnPostback </a>属性。</p>
+<p>园子里<a href="http://birdshome.cnblogs.com/">birdshome</a> 也早有post了 <a id="viewpost1_TitleUrl" href="http://birdshome.cnblogs.com/archive/2005/06/20/177404.html"><strong><span style="color: #223355;">SmartNavigation在Fx2.0中下岗了</span></strong></a></p>              
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">29 Jun 2006</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2006/06/29/smartnavigationwasobsoletedtherecommendedalternativeispagemaintainscrollpositiononpostback/" class="post-title">还记得 Page.SmartNavigation 属性么，此属性已被否决。</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                
+                                    <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
                                 
                                     <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
                                 
-                                    <a class="post-category post-category-Visual Studio" href='/tags/visual-studio'>Visual Studio</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><span style="color: #ff0000;"><strong><span style="color: #000000;">还记得在.Net 1.x 中我们为了保持在页面回发后 保持滚动条位置的做法么？<br />Page.SmartNavigation 可以做到，但会带来这样那样的问题。<br />我们也曾经用这样那样的方法实现这个效果，如：</span></strong></span></p>
+<p><a href="http://huobazi.cnblogs.com/archive/2004/09/20/ScrollPage.aspx"><span style="color: #0000ff;">http://huobazi.cnblogs.com/archive/2004/09/20/ScrollPage.aspx</span></a><br /><a href="http://www.cnblogs.com/birdshome/archive/2004/12/13/76521.html"><span style="color: #0000ff;">http://www.cnblogs.com/birdshome/archive/2004/12/13/76521.html</span></a></p>
+<p><span style="color: #000000;">在.Net 2.0 中，该类型被描述为：<br /></span> <br /><span style="color: #000000;">[<span style="color: #0000ff;">ObsoleteAttribute</span>("The recommended alternative is Page.SetFocus and Page.MaintainScrollPositionOnPostBack. http://go.microsoft.com/fwlink/?linkid=14202")]<br /><span class="keyword">public</span> bool <span class="identifier">SmartNavigation</span> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</span></p>
+<p><br /><span style="color: #ff0000;"><strong>注意：此属性现在已过时。</strong></span></p>
+<p> </p>
+<p>获取或设置指示是否启用智能导航的值。</p>
+<p>同时在备注内有提到：</p>
+<p><strong>SmartNavigation</strong> 属性已被<strong>否决</strong>。请改用 <a href="ms-help://MS.VSCC.v80/MS.MSDN.v80/MS.NETDEVFX.v20.chs/cpref13/html/O_T_System_Web_UI_Page_SetFocus.htm"><span style="color: #002c99;">SetFocus</span></a> 方法和 <a href="ms-help://MS.VSCC.v80/MS.MSDN.v80/MS.NETDEVFX.v20.chs/cpref13/html/P_System_Web_UI_Page_MaintainScrollPositionOnPostBack.htm">MaintainScrollPositionOnPostback </a>属性。</p>
+<p>园子里<a href="http://birdshome.cnblogs.com/">birdshome</a> 也早有post了 <a id="viewpost1_TitleUrl" href="http://birdshome.cnblogs.com/archive/2005/06/20/177404.html"><strong><span style="color: #223355;">SmartNavigation在Fx2.0中下岗了</span></strong></a></p>              
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">25 May 2006</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2006/05/25/iiswebsite/" class="post-title">比尔盖茨的又一个网站</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                
+                                    <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
                                 
                                     <a class="post-category post-category-.Net其他" href='/tags/.net%E5%85%B6%E4%BB%96'>.Net其他</a>
                                 
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p><span class="bold">还有什么比这更郁闷的啊<br />几个月前 为了装 VS2005 SP1 加了160G硬盘，然后开新的装系统装VS2005 装SP1<br />后来的这几个月发现机子慢如牛啊，今天早上，无意间看到了开机前的一幕256M ？？？？<br />怎么会事？赶紧关机，单根内存试验 都OK，就是插一起不行，两个换位OK了 512了，进到系统内，感觉爽多了。<br />可怜我竟然在256M内存下跑VS2005SP1好几个月啊</span></p>               
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">27 May 2007</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="https://huobazi.aspxboy.com/blog/2007/05/27/vs2005sp1256andmram/" class="post-title">郁闷啊，竟然用256M内存跑着VS2005 SP1 好几个月</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                
-                                    <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
-                                
-                                    <a class="post-category post-category-闲言碎语" href='/tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD'>闲言碎语</a>
-                                
-                                    <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
-                                
-                                    <a class="post-category post-category-Visual Studio" href='/tags/visual-studio'>Visual Studio</a>
-                                
-                                    <a class="post-category post-category-.Net其他" href='/tags/.net%E5%85%B6%E4%BB%96'>.Net其他</a>
+                                    <a class="post-category post-category-Microsoft" href='/tags/microsoft'>Microsoft</a>
                                 
                             
                         </p>
                     </header>
 
                     <div class="post-description">
-                        <p><span class="bold">还有什么比这更郁闷的啊<br />几个月前 为了装 VS2005 SP1 加了160G硬盘，然后开新的装系统装VS2005 装SP1<br />后来的这几个月发现机子慢如牛啊，今天早上，无意间看到了开机前的一幕256M ？？？？<br />怎么会事？赶紧关机，单根内存试验 都OK，就是插一起不行，两个换位OK了 512了，进到系统内，感觉爽多了。<br />可怜我竟然在256M内存下跑VS2005SP1好几个月啊</span></p>               
+                        <p> </p>
+<p><a href="http://www.iis.net/default.aspx?tabid=1"><br />http://www.iis.net/default.aspx?tabid=1</a></p>              
 
                     </div>
                 </section>
                 
-                <h1 class="content-subhead">02 May 2007</h1>
+                <h1 class="content-subhead">18 May 2006</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2007/05/02/free-iis7-aspnet2-web-hosting/" class="post-title">IIS7 beta FREE WEBHOSTING FREE HOSTING FOR ASP.NET 2.0 IIS7</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2006/05/18/systemwebsectiongroup/" class="post-title">在Asp.Net2.0中可以方便的访问配置文件web.config,如判断debug设置，验证类型等。</a>
 
                         <p class="post-meta">
                             
@@ -133,214 +164,379 @@
                                 
                                     <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
                                 
-                                    <a class="post-category post-category-IIS7" href='/tags/iis7'>IIS7</a>
-                                
                             
                         </p>
                     </header>
 
                     <div class="post-description">
-                        <p><h2 class="first bucket-header">Free IIS 7 Beta Hosting</h2>
-<table class="row-fade" cellspacing="0" cellpadding="0"><tbody>
+                        <p><p>Asp.Net2.0中我们可以方便的访问配置文件中，.NetFrameWork2.0新增加了 SystemWebSectionGroup 类。<br />允许用户以编程方式访问配置文件的 <b>system.web</b> 组。<br />比如判断web.config内是否为 debug=&ldquo;true&rdquo;,或者判断身份验证形式<br /><br />    SystemWebSectionGroup ws = new SystemWebSectionGroup();<br />    CompilationSection cp = ws.Compilation;<br />    用cp.Debug;就可以得到compilation节内关于&rdquo;debug&rdquo;的配置<br />     AuthenticationSection  as = ws.Authentication; <br />    用 as.Mode  可以获取 authentication节中关于&rdquo;mode&rdquo;的配置，值为AuthenticationMode 枚举之一<br />AuthenticationMode的取值如下：<font size="2"> </font></p>
+<div id="ctl00_LibFrame_ctl09"><table class="VSShowTableBorder" cellspacing="2" cellpadding="5" width="500"><tbody>
 <tr>
-<th class="column-downloads">
-<br /><br />
-</th>
-<td class="column-name">
-<h3><a href="https://iis7.maximumaspbeta.com/"><font color="#002c99">Maximum ASP</font></a></h3>
-<br /><p>MaximumASP is proud to be the first Hoster partnered with Microsoft to help cutting edge developers and IT pros learn IIS 7, and showcase their applications to the world. We&rsquo;ll provide you with 50MB of disk space for your application, and a 10MB SQL Server 2005 database that will remain active through the Longhorn Server RC1 period.</p>
-</td>
+<th><font size="2"> </font></th>
+<th align="left" width="25%"><font size="2">成员名称</font></th>
+<th align="left"><font size="2">说明</font></th>
 </tr>
-<tr>
-<th class="column-downloads">
-<br /><br />
-</th>
-<td class="column-name">
-<h3><a href="http://www.discountasp.net/sp_iis7hosting.aspx"><font color="#002c99">Discount ASP.net</font></a></h3>
-<br /><p>DiscountASP.NET is proud to be one of the few ASP.NET Hosting providers to offer Free Internet Information Services 7.0 Beta Hosting (IIS7 Hosting)!! All DiscountASP.NET customers can activate an IIS7 Hosting beta account as an optional addon at no additional cost. This FREE IIS7 Hosting beta program will continue until the official release of IIS 7.0.</p>
-</td>
+<tr valign="top">
+<td><font size="2"> </font></td>
+<td><b><font size="2">Forms</font></b></td>
+<td><font size="2">将基于 ASP.NET 窗体的身份验证指定为身份验证模式。 </font></td>
 </tr>
-<tr>
-<th class="column-downloads">
-<br /><br />
-</th>
-<td class="column-name">
-<h3><a href="http://www.appliedi.net/iis7-hosting/"><font color="#002c99">Applied Innovations</font></a></h3>
-<br /><p>Applied Innovations is one of a select few Windows Hosting services to be invited by Microsoft&rsquo;s Internet Information Services team to offer IIS 7 beta hosting through the IIS7.0 Early Adopter Program. Best of all we&rsquo;re not just offering IIS 7 beta hosting, but we&rsquo;re offering FREE IIS7 Beta hosting to all web developers and not limiting it to just our customers. Plus we&rsquo;re the first to provide full support for FastCGI and PHP on IIS7.</p>
-</td>
+<tr valign="top">
+<td><font size="2"> </font></td>
+<td><b><font size="2">None</font></b></td>
+<td><font size="2">不指定身份验证。 </font></td>
 </tr>
-<tr>
-<th class="column-downloads">
-<br /><br />
-</th>
-<td class="column-name">
-<h3><a href="http://www.hostmysite.com/iis7/"><font color="#002c99">HostMySite.com</font></a></h3>
-<br /><p>HostMySite is one of the first to offer FREE hosting beta accounts for IIS7 through our exclusive partnership with Microsoft&rsquo;s IIS7 product team. Sign up now for FREE! The free IIS7 Beta trial will be in effect as long as IIS7 is in beta. </p>
-</td>
+<tr valign="top">
+<td><font size="2"> </font></td>
+<td><b><font size="2">Passport</font></b></td>
+<td><font size="2">将 Microsoft Passport 指定为身份验证模式。 </font></td>
 </tr>
-<tr>
-<th class="column-downloads">
-<br /><br />
-</th>
-<td class="column-name">
-<h3><a href="http://www.webfusion.co.uk/webhosting/hosting.php?package=fusion_developer_.net_2.0&amp;platform=Windows"><font color="#002c99">Web Fusion</font></a></h3>
-<br /><p>Get a sneak preview of brand new beta Microsoft development technology, free with your Fusion Developer account! <br />You can activate an IIS7 Beta Hosting account as an additional option at no extra cost when you buy one of our Fusion Developer accounts, giving you the chance to try IIS7 before it’s released. IIS7 fully supports ASP.NET features, so you’ll find ASP.NET components like Forms Authentication will now be able to process all requests. </p>
-</td>
+<tr valign="top">
+<td><font size="2"> </font></td>
+<td><b><font size="2">Windows</font></b></td>
+<td><font size="2">将 Windows 指定为身份验证模式。在使用 Internet 信息服务 (IIS) 身份验证方法（基本、简要、集成 Windows (NTLM/Kerberos) 或证书）时适用此模式。 </font></td>
 </tr>
-</tbody></table>
-<p><br /><br />From:<a href="http://blogs.iis.net/bills/archive/2007/04/28/free-iis7-web-hosting.aspx"><br /><a href="http://blogs.iis.net/bills/archive/2007/04/28/free-iis7-web-hosting.aspx">http://blogs.iis.net/bills/archive/2007/04/28/free-iis7-web-hosting.aspx</a></a></p></p>
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">02 May 2007</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="https://huobazi.aspxboy.com/blog/2007/05/02/free-iis7-aspnet2-web-hosting/" class="post-title">IIS7 beta FREE WEBHOSTING FREE HOSTING FOR ASP.NET 2.0 IIS7</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                
-                                    <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
-                                
-                                    <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
-                                
-                                    <a class="post-category post-category-IIS7" href='/tags/iis7'>IIS7</a>
-                                
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p><h2 class="first bucket-header">Free IIS 7 Beta Hosting</h2>
-<table class="row-fade" cellspacing="0" cellpadding="0"><tbody>
-<tr>
-<th class="column-downloads">
-<br /><br />
-</th>
-<td class="column-name">
-<h3><a href="https://iis7.maximumaspbeta.com/"><font color="#002c99">Maximum ASP</font></a></h3>
-<br /><p>MaximumASP is proud to be the first Hoster partnered with Microsoft to help cutting edge developers and IT pros learn IIS 7, and showcase their applications to the world. We&rsquo;ll provide you with 50MB of disk space for your application, and a 10MB SQL Server 2005 database that will remain active through the Longhorn Server RC1 period.</p>
-</td>
-</tr>
-<tr>
-<th class="column-downloads">
-<br /><br />
-</th>
-<td class="column-name">
-<h3><a href="http://www.discountasp.net/sp_iis7hosting.aspx"><font color="#002c99">Discount ASP.net</font></a></h3>
-<br /><p>DiscountASP.NET is proud to be one of the few ASP.NET Hosting providers to offer Free Internet Information Services 7.0 Beta Hosting (IIS7 Hosting)!! All DiscountASP.NET customers can activate an IIS7 Hosting beta account as an optional addon at no additional cost. This FREE IIS7 Hosting beta program will continue until the official release of IIS 7.0.</p>
-</td>
-</tr>
-<tr>
-<th class="column-downloads">
-<br /><br />
-</th>
-<td class="column-name">
-<h3><a href="http://www.appliedi.net/iis7-hosting/"><font color="#002c99">Applied Innovations</font></a></h3>
-<br /><p>Applied Innovations is one of a select few Windows Hosting services to be invited by Microsoft&rsquo;s Internet Information Services team to offer IIS 7 beta hosting through the IIS7.0 Early Adopter Program. Best of all we&rsquo;re not just offering IIS 7 beta hosting, but we&rsquo;re offering FREE IIS7 Beta hosting to all web developers and not limiting it to just our customers. Plus we&rsquo;re the first to provide full support for FastCGI and PHP on IIS7.</p>
-</td>
-</tr>
-<tr>
-<th class="column-downloads">
-<br /><br />
-</th>
-<td class="column-name">
-<h3><a href="http://www.hostmysite.com/iis7/"><font color="#002c99">HostMySite.com</font></a></h3>
-<br /><p>HostMySite is one of the first to offer FREE hosting beta accounts for IIS7 through our exclusive partnership with Microsoft&rsquo;s IIS7 product team. Sign up now for FREE! The free IIS7 Beta trial will be in effect as long as IIS7 is in beta. </p>
-</td>
-</tr>
-<tr>
-<th class="column-downloads">
-<br /><br />
-</th>
-<td class="column-name">
-<h3><a href="http://www.webfusion.co.uk/webhosting/hosting.php?package=fusion_developer_.net_2.0&amp;platform=Windows"><font color="#002c99">Web Fusion</font></a></h3>
-<br /><p>Get a sneak preview of brand new beta Microsoft development technology, free with your Fusion Developer account! <br />You can activate an IIS7 Beta Hosting account as an additional option at no extra cost when you buy one of our Fusion Developer accounts, giving you the chance to try IIS7 before it’s released. IIS7 fully supports ASP.NET features, so you’ll find ASP.NET components like Forms Authentication will now be able to process all requests. </p>
-</td>
-</tr>
-</tbody></table>
-<p><br /><br />From:<a href="http://blogs.iis.net/bills/archive/2007/04/28/free-iis7-web-hosting.aspx"><br /><a href="http://blogs.iis.net/bills/archive/2007/04/28/free-iis7-web-hosting.aspx">http://blogs.iis.net/bills/archive/2007/04/28/free-iis7-web-hosting.aspx</a></a></p></p>
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">04 Mar 2007</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="https://huobazi.aspxboy.com/blog/2007/03/04/newversionofajaxcontroltoolkit/" class="post-title">Ajax Control Toolkit 出新版了</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                
-                                    <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
-                                
-                                    <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
-                                
-                                    <a class="post-category post-category-Ajax" href='/tags/ajax'>Ajax</a>
-                                
-                                    <a class="post-category post-category-MS Ajax" href='/tags/ms-ajax'>MS Ajax</a>
-                                
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p><p></p>
-<table id="ctl00_ctl00_ctl00_Content_ProjectBaseMain_ProjectMain_releaseDetailsTable" style="WIDTH: 100%" border="0">
+</tbody></table></div>
+<p><font size="2">     <br /><strong><font color="#0000ff">附：SystemWebSectionGroup 类的公共属性:</font></strong></font></p>
+<script type="text/Javascript">
+var ExpCollDivStr=ExpCollDivStr;
+ExpCollDivStr = ExpCollDivStr + &ldquo;ctl00_LibFrame_ctl066893b77,&ldquo;;
+var ExpCollImgStr = ExpCollImgStr;
+ ExpCollImgStr = ExpCollImgStr + &ldquo;ctl00_LibFrame_ctl06img,&ldquo;;
+</script><p> </p>
+<div class="section" id="ctl00_LibFrame_ctl066893b77" style="DISPLAY: block">
+<p></p>
+<div id="ctl00_LibFrame_ctl06"><table class="memberListTable" cellspacing="2" cellpadding="5" width="500">
+<colgroup><font size="2"><col width="10%">
+<col width="30%">
+<col width="60%"></font></colgroup>
 <tbody>
 <tr>
-<td valign="top"><span class="ReleaseDetailsHeader"><a href="http://www.codeplex.com/AtlasControlToolkit/Release/ProjectReleases.aspx"><br /><h1>Ajax Control Toolkit 出新版了<br /><a href="http://www.codeplex.com/AtlasControlToolkit/Release/ProjectReleases.aspx">http://www.codeplex.com/AtlasControlToolkit/Release/ProjectReleases.aspx</a></h1></a><br /><br />Release 10301 Production</span></td>
-<td valign="top" align="right"></td>
+<th style="BORDER-RIGHT-STYLE: none"><font size="2"> </font></th>
+<th style="BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none" align="left"><font size="2">名称 </font></th>
+<th style="BORDER-LEFT-STYLE: none" align="left"><font size="2">说明 </font></th>
 </tr>
-<tr><td valign="top" align="left" colspan="2">
-<span class="ReleaseDateLabel">三月-01-2007</span><span class="ReleaseFilesCountLabel">2 Files</span>
-</td></tr>
-<tr><td valign="top" align="left" colspan="2"></td></tr>
-<tr><td valign="top" align="left" colspan="2"></td></tr>
-<tr><td valign="top" align="left" colspan="2"><span class="ReleaseSubHeading">Description</span></td></tr>
-<tr><td valign="top" align="left" colspan="2"><span class="content">2007-03-01 release of the AJAX Control Toolkit includes two new controls (ListSearch and SlideShow), a number of fixes identified as important by the community, and three significant enhancements: localization support, automatic JavaScript comment stripping, and ASP.NET theme/skin support. It continues to target the new ASP.NET AJAX v1.0 release (<a href="http://ajax.asp.net/">http://ajax.asp.net/</a>).<br /><br />AjaxControlToolkit.zip is the full release package with complete source code to all controls, the test framework, VSI, and more.<br /><br />AjaxControlToolkit-NoSource.zip contains only the sample web site and VSI and is for people who don&rsquo;t need or want the source code for the controls.</span></td></tr>
-<tr>
-<td valign="top" align="left" colspan="2">
-<div>
-<br /><table class="ReleaseFilesGridView" id="ctl00_ctl00_ctl00_Content_ProjectBaseMain_ProjectMain_runTimeBinariesGridView" style="BORDER-COLLAPSE: collapse" cellspacing="0" rules="all" border="1">
-<br /><tbody>
-<br /><tr>
-<th scope="col">Runtime Binaries</th>                    </tr>
-<br /><tr>
-<br /><td>
-<a class="ReleaseFileDownloadLink" href="javascript:WebForm_DoPostBackWithOptions(new%20WebForm_PostBackOptions(%22ctl00%24ctl00%24ctl00%24Content%24ProjectBaseMain%24ProjectMain%24runTimeBinariesGridView%24ctl02%24ctl00%22,%20%22%22,%20false,%20%22%22,%20%22http://www.codeplex.com/AtlasControlToolkit/Project/FileDownload.aspx?DownloadId=7712%22,%20false,%20true))">AjaxControlToolkit-NoSource.zip</a><span> - 1542 Downloads (2.3 MB)</span>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl07',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.anonymousidentification.aspx"><font size="2">AnonymousIdentification</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>anonymousIdentification</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl08',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.authentication.aspx"><font size="2">Authentication</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>authentication</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl09',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.authorization.aspx"><font size="2">Authorization</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>authorization</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl10',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.browsercaps.aspx"><font size="2">BrowserCaps</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>browserCaps</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl11',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.clienttarget.aspx"><font size="2">ClientTarget</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>clientTarget</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl12',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.compilation.aspx"><font size="2">Compilation</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>compilation</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl13',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.customerrors.aspx"><font size="2">CustomErrors</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>customErrors</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl14',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.deployment.aspx"><font size="2">Deployment</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>deployment</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl15',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.devicefilters.aspx"><font size="2">DeviceFilters</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>deviceFilters</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl16',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.globalization.aspx"><font size="2">Globalization</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>globalization</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl17',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.healthmonitoring.aspx"><font size="2">HealthMonitoring</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>healthMonitoring</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl18',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.hostingenvironment.aspx"><font size="2">HostingEnvironment</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>hostingEnvironment</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl19',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.httpcookies.aspx"><font size="2">HttpCookies</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>httpCookies</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl20',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.httphandlers.aspx"><font size="2">HttpHandlers</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>httpHandlers</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl21',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.httpmodules.aspx"><font size="2">HttpModules</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>httpModules</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl22',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.httpruntime.aspx"><font size="2">HttpRuntime</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>httpRuntime</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl23',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.identity.aspx"><font size="2">Identity</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>identity</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf" name="inheritedMember">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl24',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.isdeclarationrequired.aspx"><font size="2">IsDeclarationRequired</font></a><font size="2">  </font>
+</td>
+<td>
+<font size="2">获取一个值，该值指示是否需要声明此 <b>ConfigurationSectionGroup</b> 对象。 （从 </font><a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl25',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.aspx"><font size="2">ConfigurationSectionGroup</font></a><font size="2"> 继承。）</font>
 </td>
 </tr>
-<tr><td>
-<a class="ReleaseFileDownloadLink" href="javascript:WebForm_DoPostBackWithOptions(new%20WebForm_PostBackOptions(%22ctl00%24ctl00%24ctl00%24Content%24ProjectBaseMain%24ProjectMain%24runTimeBinariesGridView%24ctl03%24ctl00%22,%20%22%22,%20false,%20%22%22,%20%22http://www.codeplex.com/AtlasControlToolkit/Project/FileDownload.aspx?DownloadId=7711%22,%20false,%20true))">AjaxControlToolkit.zip</a><span> - 4334 Downloads (3.3 MB)</span>
-</td></tr>
-</tbody>
-</table>
-<p>            </p>
-</div>
-<br />
+<tr valign="top" notsupportedon="netcf" name="inheritedMember">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl26',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.isdeclared.aspx"><font size="2">IsDeclared</font></a><font size="2">  </font>
 </td>
-<br />
+<td>
+<font size="2">获取一个值，该值指示是否已声明此 <b>ConfigurationSectionGroup</b> 对象。（从 </font><a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl27',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.aspx"><font size="2">ConfigurationSectionGroup</font></a><font size="2"> 继承。）</font>
+</td>
 </tr>
-<br />
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl28',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.machinekey.aspx"><font size="2">MachineKey</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>machineKey</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl29',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.membership.aspx"><font size="2">Membership</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>membership</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl30',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.mobilecontrols.aspx"><font size="2">MobileControls</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>mobileControls</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf" name="inheritedMember">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl31',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.name.aspx"><font size="2">Name</font></a><font size="2">  </font>
+</td>
+<td>
+<font size="2">获取此 <b>ConfigurationSectionGroup</b> 对象的名称属性。（从 </font><a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl32',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.aspx"><font size="2">ConfigurationSectionGroup</font></a><font size="2"> 继承。）</font>
+</td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl33',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.pages.aspx"><font size="2">Pages</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>pages</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl34',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.processmodel.aspx"><font size="2">ProcessModel</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>processModel</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl35',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.profile.aspx"><font size="2">Profile</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>profile</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl36',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.protocols.aspx"><font size="2">Protocols</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>protocols</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl37',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.rolemanager.aspx"><font size="2">RoleManager</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>roleManager</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf" name="inheritedMember">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl38',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.sectiongroupname.aspx"><font size="2">SectionGroupName</font></a><font size="2">  </font>
+</td>
+<td>
+<font size="2">获取与此 <b>ConfigurationSectionGroup</b> 关联的节组名称。（从 </font><a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl39',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.aspx"><font size="2">ConfigurationSectionGroup</font></a><font size="2"> 继承。）</font>
+</td>
+</tr>
+<tr valign="top" notsupportedon="netcf" name="inheritedMember">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl40',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.sectiongroups.aspx"><font size="2">SectionGroups</font></a><font size="2">  </font>
+</td>
+<td>
+<font size="2">获取一个包含所有 <b>ConfigurationSectionGroup</b> 对象的 <b>ConfigurationSectionGroup</b> 对象，这些对象是此 <b>ConfigurationSectionGroup</b> 对象的子对象。（从 </font><a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl41',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.aspx"><font size="2">ConfigurationSectionGroup</font></a><font size="2"> 继承。）</font>
+</td>
+</tr>
+<tr valign="top" notsupportedon="netcf" name="inheritedMember">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl42',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.sections.aspx"><font size="2">Sections</font></a><font size="2">  </font>
+</td>
+<td>
+<font size="2">获取一个 </font><a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl43',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectioncollection.aspx"><font size="2">ConfigurationSectionCollection</font></a><font size="2">，它包含此 <b>ConfigurationSectionGroup</b> 中的所有 </font><a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl44',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsection.aspx"><font size="2">ConfigurationSection</font></a><font size="2"> 对象。（从 </font><a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl45',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.aspx"><font size="2">ConfigurationSectionGroup</font></a><font size="2"> 继承。）</font>
+</td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl46',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.securitypolicy.aspx"><font size="2">SecurityPolicy</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>securityPolicy</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl47',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.sessionstate.aspx"><font size="2">SessionState</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>sessionState</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl48',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.sitemap.aspx"><font size="2">SiteMap</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>siteMap</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl49',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.trace.aspx"><font size="2">Trace</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>trace</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl50',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.trust.aspx"><font size="2">Trust</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>trust</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf" name="inheritedMember">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl51',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.type.aspx"><font size="2">Type</font></a><font size="2">  </font>
+</td>
+<td>
+<font size="2">获取或设置此 <b>ConfigurationSectionGroup</b> 对象的类型。（从 </font><a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl52',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.aspx"><font size="2">ConfigurationSectionGroup</font></a><font size="2"> 继承。）</font>
+</td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl53',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.urlmappings.aspx"><font size="2">UrlMappings</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>urlMappings</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl54',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.webcontrols.aspx"><font size="2">WebControls</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>webControls</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl55',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.webparts.aspx"><font size="2">WebParts</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>webParts</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl56',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.webservices.aspx"><font size="2">WebServices</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>webServices</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl57',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.xhtmlconformance.aspx"><font size="2">XhtmlConformance</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>xhtmlConformance</b> 节。</font></td>
+</tr>
 </tbody>
-<br />
-</table>
-<br /></p>
+</table></div>
+<p></p>
+</div></p>
 
                     </div>
                 </section>
                 
-                <h1 class="content-subhead">04 Mar 2007</h1>
+                <h1 class="content-subhead">18 May 2006</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2007/03/04/newversionofajaxcontroltoolkit/" class="post-title">Ajax Control Toolkit 出新版了</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2006/05/18/systemwebsectiongroup/" class="post-title">在Asp.Net2.0中可以方便的访问配置文件web.config,如判断debug设置，验证类型等。</a>
 
                         <p class="post-meta">
                             
@@ -350,66 +546,379 @@
                                 
                                     <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
                                 
-                                    <a class="post-category post-category-Ajax" href='/tags/ajax'>Ajax</a>
-                                
-                                    <a class="post-category post-category-MS Ajax" href='/tags/ms-ajax'>MS Ajax</a>
-                                
                             
                         </p>
                     </header>
 
                     <div class="post-description">
-                        <p><p></p>
-<table id="ctl00_ctl00_ctl00_Content_ProjectBaseMain_ProjectMain_releaseDetailsTable" style="WIDTH: 100%" border="0">
+                        <p><p>Asp.Net2.0中我们可以方便的访问配置文件中，.NetFrameWork2.0新增加了 SystemWebSectionGroup 类。<br />允许用户以编程方式访问配置文件的 <b>system.web</b> 组。<br />比如判断web.config内是否为 debug=&ldquo;true&rdquo;,或者判断身份验证形式<br /><br />    SystemWebSectionGroup ws = new SystemWebSectionGroup();<br />    CompilationSection cp = ws.Compilation;<br />    用cp.Debug;就可以得到compilation节内关于&rdquo;debug&rdquo;的配置<br />     AuthenticationSection  as = ws.Authentication; <br />    用 as.Mode  可以获取 authentication节中关于&rdquo;mode&rdquo;的配置，值为AuthenticationMode 枚举之一<br />AuthenticationMode的取值如下：<font size="2"> </font></p>
+<div id="ctl00_LibFrame_ctl09"><table class="VSShowTableBorder" cellspacing="2" cellpadding="5" width="500"><tbody>
+<tr>
+<th><font size="2"> </font></th>
+<th align="left" width="25%"><font size="2">成员名称</font></th>
+<th align="left"><font size="2">说明</font></th>
+</tr>
+<tr valign="top">
+<td><font size="2"> </font></td>
+<td><b><font size="2">Forms</font></b></td>
+<td><font size="2">将基于 ASP.NET 窗体的身份验证指定为身份验证模式。 </font></td>
+</tr>
+<tr valign="top">
+<td><font size="2"> </font></td>
+<td><b><font size="2">None</font></b></td>
+<td><font size="2">不指定身份验证。 </font></td>
+</tr>
+<tr valign="top">
+<td><font size="2"> </font></td>
+<td><b><font size="2">Passport</font></b></td>
+<td><font size="2">将 Microsoft Passport 指定为身份验证模式。 </font></td>
+</tr>
+<tr valign="top">
+<td><font size="2"> </font></td>
+<td><b><font size="2">Windows</font></b></td>
+<td><font size="2">将 Windows 指定为身份验证模式。在使用 Internet 信息服务 (IIS) 身份验证方法（基本、简要、集成 Windows (NTLM/Kerberos) 或证书）时适用此模式。 </font></td>
+</tr>
+</tbody></table></div>
+<p><font size="2">     <br /><strong><font color="#0000ff">附：SystemWebSectionGroup 类的公共属性:</font></strong></font></p>
+<script type="text/Javascript">
+var ExpCollDivStr=ExpCollDivStr;
+ExpCollDivStr = ExpCollDivStr + &ldquo;ctl00_LibFrame_ctl066893b77,&ldquo;;
+var ExpCollImgStr = ExpCollImgStr;
+ ExpCollImgStr = ExpCollImgStr + &ldquo;ctl00_LibFrame_ctl06img,&ldquo;;
+</script><p> </p>
+<div class="section" id="ctl00_LibFrame_ctl066893b77" style="DISPLAY: block">
+<p></p>
+<div id="ctl00_LibFrame_ctl06"><table class="memberListTable" cellspacing="2" cellpadding="5" width="500">
+<colgroup><font size="2"><col width="10%">
+<col width="30%">
+<col width="60%"></font></colgroup>
 <tbody>
 <tr>
-<td valign="top"><span class="ReleaseDetailsHeader"><a href="http://www.codeplex.com/AtlasControlToolkit/Release/ProjectReleases.aspx"><br /><h1>Ajax Control Toolkit 出新版了<br /><a href="http://www.codeplex.com/AtlasControlToolkit/Release/ProjectReleases.aspx">http://www.codeplex.com/AtlasControlToolkit/Release/ProjectReleases.aspx</a></h1></a><br /><br />Release 10301 Production</span></td>
-<td valign="top" align="right"></td>
+<th style="BORDER-RIGHT-STYLE: none"><font size="2"> </font></th>
+<th style="BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none" align="left"><font size="2">名称 </font></th>
+<th style="BORDER-LEFT-STYLE: none" align="left"><font size="2">说明 </font></th>
 </tr>
-<tr><td valign="top" align="left" colspan="2">
-<span class="ReleaseDateLabel">三月-01-2007</span><span class="ReleaseFilesCountLabel">2 Files</span>
-</td></tr>
-<tr><td valign="top" align="left" colspan="2"></td></tr>
-<tr><td valign="top" align="left" colspan="2"></td></tr>
-<tr><td valign="top" align="left" colspan="2"><span class="ReleaseSubHeading">Description</span></td></tr>
-<tr><td valign="top" align="left" colspan="2"><span class="content">2007-03-01 release of the AJAX Control Toolkit includes two new controls (ListSearch and SlideShow), a number of fixes identified as important by the community, and three significant enhancements: localization support, automatic JavaScript comment stripping, and ASP.NET theme/skin support. It continues to target the new ASP.NET AJAX v1.0 release (<a href="http://ajax.asp.net/">http://ajax.asp.net/</a>).<br /><br />AjaxControlToolkit.zip is the full release package with complete source code to all controls, the test framework, VSI, and more.<br /><br />AjaxControlToolkit-NoSource.zip contains only the sample web site and VSI and is for people who don&rsquo;t need or want the source code for the controls.</span></td></tr>
-<tr>
-<td valign="top" align="left" colspan="2">
-<div>
-<br /><table class="ReleaseFilesGridView" id="ctl00_ctl00_ctl00_Content_ProjectBaseMain_ProjectMain_runTimeBinariesGridView" style="BORDER-COLLAPSE: collapse" cellspacing="0" rules="all" border="1">
-<br /><tbody>
-<br /><tr>
-<th scope="col">Runtime Binaries</th>                    </tr>
-<br /><tr>
-<br /><td>
-<a class="ReleaseFileDownloadLink" href="javascript:WebForm_DoPostBackWithOptions(new%20WebForm_PostBackOptions(%22ctl00%24ctl00%24ctl00%24Content%24ProjectBaseMain%24ProjectMain%24runTimeBinariesGridView%24ctl02%24ctl00%22,%20%22%22,%20false,%20%22%22,%20%22http://www.codeplex.com/AtlasControlToolkit/Project/FileDownload.aspx?DownloadId=7712%22,%20false,%20true))">AjaxControlToolkit-NoSource.zip</a><span> - 1542 Downloads (2.3 MB)</span>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl07',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.anonymousidentification.aspx"><font size="2">AnonymousIdentification</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>anonymousIdentification</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl08',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.authentication.aspx"><font size="2">Authentication</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>authentication</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl09',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.authorization.aspx"><font size="2">Authorization</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>authorization</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl10',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.browsercaps.aspx"><font size="2">BrowserCaps</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>browserCaps</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl11',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.clienttarget.aspx"><font size="2">ClientTarget</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>clientTarget</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl12',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.compilation.aspx"><font size="2">Compilation</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>compilation</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl13',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.customerrors.aspx"><font size="2">CustomErrors</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>customErrors</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl14',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.deployment.aspx"><font size="2">Deployment</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>deployment</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl15',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.devicefilters.aspx"><font size="2">DeviceFilters</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>deviceFilters</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl16',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.globalization.aspx"><font size="2">Globalization</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>globalization</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl17',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.healthmonitoring.aspx"><font size="2">HealthMonitoring</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>healthMonitoring</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl18',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.hostingenvironment.aspx"><font size="2">HostingEnvironment</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>hostingEnvironment</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl19',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.httpcookies.aspx"><font size="2">HttpCookies</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>httpCookies</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl20',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.httphandlers.aspx"><font size="2">HttpHandlers</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>httpHandlers</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl21',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.httpmodules.aspx"><font size="2">HttpModules</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>httpModules</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl22',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.httpruntime.aspx"><font size="2">HttpRuntime</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>httpRuntime</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl23',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.identity.aspx"><font size="2">Identity</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>identity</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf" name="inheritedMember">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl24',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.isdeclarationrequired.aspx"><font size="2">IsDeclarationRequired</font></a><font size="2">  </font>
+</td>
+<td>
+<font size="2">获取一个值，该值指示是否需要声明此 <b>ConfigurationSectionGroup</b> 对象。 （从 </font><a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl25',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.aspx"><font size="2">ConfigurationSectionGroup</font></a><font size="2"> 继承。）</font>
 </td>
 </tr>
-<tr><td>
-<a class="ReleaseFileDownloadLink" href="javascript:WebForm_DoPostBackWithOptions(new%20WebForm_PostBackOptions(%22ctl00%24ctl00%24ctl00%24Content%24ProjectBaseMain%24ProjectMain%24runTimeBinariesGridView%24ctl03%24ctl00%22,%20%22%22,%20false,%20%22%22,%20%22http://www.codeplex.com/AtlasControlToolkit/Project/FileDownload.aspx?DownloadId=7711%22,%20false,%20true))">AjaxControlToolkit.zip</a><span> - 4334 Downloads (3.3 MB)</span>
-</td></tr>
-</tbody>
-</table>
-<p>            </p>
-</div>
-<br />
+<tr valign="top" notsupportedon="netcf" name="inheritedMember">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl26',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.isdeclared.aspx"><font size="2">IsDeclared</font></a><font size="2">  </font>
 </td>
-<br />
+<td>
+<font size="2">获取一个值，该值指示是否已声明此 <b>ConfigurationSectionGroup</b> 对象。（从 </font><a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl27',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.aspx"><font size="2">ConfigurationSectionGroup</font></a><font size="2"> 继承。）</font>
+</td>
 </tr>
-<br />
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl28',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.machinekey.aspx"><font size="2">MachineKey</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>machineKey</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl29',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.membership.aspx"><font size="2">Membership</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>membership</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl30',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.mobilecontrols.aspx"><font size="2">MobileControls</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>mobileControls</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf" name="inheritedMember">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl31',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.name.aspx"><font size="2">Name</font></a><font size="2">  </font>
+</td>
+<td>
+<font size="2">获取此 <b>ConfigurationSectionGroup</b> 对象的名称属性。（从 </font><a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl32',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.aspx"><font size="2">ConfigurationSectionGroup</font></a><font size="2"> 继承。）</font>
+</td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl33',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.pages.aspx"><font size="2">Pages</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>pages</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl34',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.processmodel.aspx"><font size="2">ProcessModel</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>processModel</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl35',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.profile.aspx"><font size="2">Profile</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>profile</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl36',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.protocols.aspx"><font size="2">Protocols</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>protocols</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl37',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.rolemanager.aspx"><font size="2">RoleManager</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>roleManager</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf" name="inheritedMember">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl38',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.sectiongroupname.aspx"><font size="2">SectionGroupName</font></a><font size="2">  </font>
+</td>
+<td>
+<font size="2">获取与此 <b>ConfigurationSectionGroup</b> 关联的节组名称。（从 </font><a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl39',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.aspx"><font size="2">ConfigurationSectionGroup</font></a><font size="2"> 继承。）</font>
+</td>
+</tr>
+<tr valign="top" notsupportedon="netcf" name="inheritedMember">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl40',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.sectiongroups.aspx"><font size="2">SectionGroups</font></a><font size="2">  </font>
+</td>
+<td>
+<font size="2">获取一个包含所有 <b>ConfigurationSectionGroup</b> 对象的 <b>ConfigurationSectionGroup</b> 对象，这些对象是此 <b>ConfigurationSectionGroup</b> 对象的子对象。（从 </font><a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl41',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.aspx"><font size="2">ConfigurationSectionGroup</font></a><font size="2"> 继承。）</font>
+</td>
+</tr>
+<tr valign="top" notsupportedon="netcf" name="inheritedMember">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl42',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.sections.aspx"><font size="2">Sections</font></a><font size="2">  </font>
+</td>
+<td>
+<font size="2">获取一个 </font><a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl43',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectioncollection.aspx"><font size="2">ConfigurationSectionCollection</font></a><font size="2">，它包含此 <b>ConfigurationSectionGroup</b> 中的所有 </font><a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl44',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsection.aspx"><font size="2">ConfigurationSection</font></a><font size="2"> 对象。（从 </font><a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl45',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.aspx"><font size="2">ConfigurationSectionGroup</font></a><font size="2"> 继承。）</font>
+</td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl46',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.securitypolicy.aspx"><font size="2">SecurityPolicy</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>securityPolicy</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl47',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.sessionstate.aspx"><font size="2">SessionState</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>sessionState</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl48',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.sitemap.aspx"><font size="2">SiteMap</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>siteMap</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl49',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.trace.aspx"><font size="2">Trace</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>trace</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl50',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.trust.aspx"><font size="2">Trust</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>trust</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf" name="inheritedMember">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl51',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.type.aspx"><font size="2">Type</font></a><font size="2">  </font>
+</td>
+<td>
+<font size="2">获取或设置此 <b>ConfigurationSectionGroup</b> 对象的类型。（从 </font><a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl52',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.configuration.configurationsectiongroup.aspx"><font size="2">ConfigurationSectionGroup</font></a><font size="2"> 继承。）</font>
+</td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl53',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.urlmappings.aspx"><font size="2">UrlMappings</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>urlMappings</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl54',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.webcontrols.aspx"><font size="2">WebControls</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>webControls</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl55',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.webparts.aspx"><font size="2">WebParts</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>webParts</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl56',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.webservices.aspx"><font size="2">WebServices</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>webServices</b> 节。</font></td>
+</tr>
+<tr valign="top" notsupportedon="netcf">
+<td class="imageCell"><font size="2"><img alt="Public property" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png3"></font></td>
+<td>
+<a onclick="javascript:TrackThisClick('ctl00_LibFrame_ctl06','ctl00_LibFrame_ctl57',this);" href="http://msdn2.microsoft.com/zh-cn/library/system.web.configuration.systemwebsectiongroup.xhtmlconformance.aspx"><font size="2">XhtmlConformance</font></a><font size="2"> </font>
+</td>
+<td><font size="2">获取 <b>xhtmlConformance</b> 节。</font></td>
+</tr>
 </tbody>
-<br />
-</table>
-<br /></p>
+</table></div>
+<p></p>
+</div></p>
 
                     </div>
                 </section>
                 
-                <h1 class="content-subhead">01 Dec 2006</h1>
+                <h1 class="content-subhead">10 May 2006</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2006/12/01/customwebcontrolandwebuivalidationjs/" class="post-title">在写自定义控件时，如果控件某个属性允许被验证控件验证，需要注意微软在 WebUIValidation.js内的实现。</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2006/05/10/paintdotnet/" class="post-title">推荐一个.Net做的图形处理软件--Paint.NET </a>
 
                         <p class="post-meta">
                             
@@ -419,27 +928,29 @@
                                 
                                     <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
                                 
-                                    <a class="post-category post-category-自定义控件" href='/tags/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%A7%E4%BB%B6'>自定义控件</a>
+                                    <a class="post-category post-category-Paint.NET" href='/tags/paint.net'>Paint.NET</a>
                                 
                             
                         </p>
                     </header>
 
                     <div class="post-description">
-                        <p>微软在WebUIValidation.js(System.Web的资源文件内自己找工具看吧)<br />内有如下代码：<br /></p>
-<div style="BORDER-RIGHT: #cccccc 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #cccccc 1px solid; PADDING-LEFT: 4px; FONT-SIZE: 13px; PADDING-BOTTOM: 4px; BORDER-LEFT: #cccccc 1px solid; WIDTH: 77.29%; WORD-BREAK: break-all; PADDING-TOP: 4px; BORDER-BOTTOM: #cccccc 1px solid; HEIGHT: 310px; BACKGROUND-COLOR: #eeeeee">
-<span style="COLOR: #0000ff">function</span><span style="COLOR: #000000"> ValidatorGetValue(id) {<br />    </span><span style="COLOR: #0000ff">var</span><span style="COLOR: #000000"> control;<br />    control </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> document.getElementById(id);<br />    </span><span style="COLOR: #0000ff">if</span><span style="COLOR: #000000"> (</span><span style="COLOR: #0000ff">typeof</span><span style="COLOR: #000000">(control.value) </span><span style="COLOR: #000000">==</span><span style="COLOR: #000000"> </span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">string</span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">) {<br />        </span><span style="COLOR: #0000ff">return</span><span style="COLOR: #000000"> control.value;<br />    }<br />    </span><span style="COLOR: #0000ff">return</span><span style="COLOR: #000000"> ValidatorGetValueRecursive(control);<br />}<br /></span><span style="COLOR: #0000ff">function</span><span style="COLOR: #000000"> ValidatorGetValueRecursive(control)<br />{<br />    </span><span style="COLOR: #0000ff">if</span><span style="COLOR: #000000"> (</span><span style="COLOR: #0000ff">typeof</span><span style="COLOR: #000000">(control.value) </span><span style="COLOR: #000000">==</span><span style="COLOR: #000000"> </span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">string</span><span style="COLOR: #000000">"</span><span style="COLOR: #000000"> </span><span style="COLOR: #000000">&amp;&amp;</span><span style="COLOR: #000000"> (control.type </span><span style="COLOR: #000000">!=</span><span style="COLOR: #000000"> </span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">radio</span><span style="COLOR: #000000">"</span><span style="COLOR: #000000"> </span><span style="COLOR: #000000">||</span><span style="COLOR: #000000"> control.checked </span><span style="COLOR: #000000">==</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">true</span><span style="COLOR: #000000">)) {<br />        </span><span style="COLOR: #0000ff">return</span><span style="COLOR: #000000"> control.value;<br />    }<br />    </span><span style="COLOR: #0000ff">var</span><span style="COLOR: #000000"> i, val;<br />    </span><span style="COLOR: #0000ff">for</span><span style="COLOR: #000000"> (i </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #000000">0</span><span style="COLOR: #000000">; i</span><span style="COLOR: #000000">&lt;</span><span style="COLOR: #000000">control.childNodes.length; i</span><span style="COLOR: #000000">++</span><span style="COLOR: #000000">) {<br />        val </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> ValidatorGetValueRecursive(control.childNodes[i]);<br />        </span><span style="COLOR: #0000ff">if</span><span style="COLOR: #000000"> (val </span><span style="COLOR: #000000">!=</span><span style="COLOR: #000000"> </span><span style="COLOR: #000000">""</span><span style="COLOR: #000000">) </span><span style="COLOR: #0000ff">return</span><span style="COLOR: #000000"> val;<br />    }<br />    </span><span style="COLOR: #0000ff">return</span><span style="COLOR: #000000"> </span><span style="COLOR: #000000">""</span><span style="COLOR: #000000">;<br />}</span>
-</div>
-<p><br />当自定义控件为符合控件，比如两个或多个DropDownList组合而成<br />而有一个Value属性来返回这几个DropDownList的返回选项，并且设置了<span style="COLOR: #000000"><strong><font color="#0000ff">ValidationPropertyAttribute去验证某个属性，如：</font></strong><br /></span><strong style="COLOR: #0000ff">[ValidationPropertyAttribute( "Value" )]<br /><span style="COLOR: #000000">当使用验证控件验证的时候，由于上面脚本在控件没有客户端value的时候返回的为第一个value不为空的ChildNode的value<br />值，这样用来验证，可能不是我们所需要的。<br />比如我需要非空验证控件来验证我的自定义控件所有的DropDownList都必须被选择时候，如果第一个有了选择，则该脚本认为验证通过了，叶面可以PostBack然而，在服务器端Page.IsValidata属性是false的。<br />我用了一个非常ugly的方法，在控件外层放一个父容器（可以通过override TagKey 来指定）span<br />在每个DropDownList的客户端onchange的时候 判断 如果 任一个没有选择，那么置span的value = ‘’；<br />当全部选择的时候再将span.value = 实际的值 ，这样就不会出现客户端验证通过，然而服务器端验证没有通过才出来ErrorMessage的情况了。<br /><br />但是总觉得 这样非常的ugly,如果有其他朋友也遇到过这样的问题，欢迎讨论。</span></strong></p>              
+                        <p align="left"><a href="http://www.eecs.wsu.edu/paint.net/index.html" target="_blank"><img style="border: 0px;" src="/images/hbz_images/e526efd8-b249-490f-81ec-3b929541201f.png" border="0" alt=""></a> </p>
+<p></p>
+<h5>
+<a href="http://www.eecs.wsu.edu/paint.net/index.html" target="_blank">Home</a>   <a href="http://www.eecs.wsu.edu/paint.net/features.html" target="_blank">Features</a>     <a href="http://www.eecs.wsu.edu/paint.net/download.html" target="_blank">Download</a>   <a href="http://www.eecs.wsu.edu/paint.net/roadmap.html" target="_blank">Roadmap</a>   <a href="http://www.eecs.wsu.edu/paint.net/screenshots.html" target="_blank">Screenshots</a>   <a href="http://paintdotnet.12.forumer.com/index.php" target="_blank">Forum</a>  </h5>
+<br /><h5><span style="color: #0000ff; background-color: #ffffff;">AboutPaint.NET is image and photo manipulation software designed to be used on computers that run Windows 2000, XP, Vista, or Server 2003. It supports layers, unlimited undo, special effects, and a wide variety of useful and powerful tools.</span></h5>
+<br /><h5><span style="color: #0000ff; background-color: #ffffff;"><span style="color: #000000;">The programming language used to create Paint.NET is C#, with a small amount of C++ for setup and shell-integration related functionality</span></span></h5>
+<br /><p align="left"><br /><a href="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png6" target="_blank"><img style="margin-left: 0px; width: 493px; margin-right: 0px; height: 399px; border: 0px;" src="/images/hbz_images/25f59beb-2867-4f91-987d-364ecfd344e0.jpg" border="0" alt="" hspace="0" align="baseline"></a></p>             
 
                     </div>
                 </section>
                 
-                <h1 class="content-subhead">01 Dec 2006</h1>
+                <h1 class="content-subhead">10 May 2006</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2006/12/01/customwebcontrolandwebuivalidationjs/" class="post-title">在写自定义控件时，如果控件某个属性允许被验证控件验证，需要注意微软在 WebUIValidation.js内的实现。</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2006/05/10/paintdotnet/" class="post-title">推荐一个.Net做的图形处理软件--Paint.NET </a>
 
                         <p class="post-meta">
                             
@@ -449,58 +960,79 @@
                                 
                                     <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
                                 
-                                    <a class="post-category post-category-自定义控件" href='/tags/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%A7%E4%BB%B6'>自定义控件</a>
+                                    <a class="post-category post-category-Paint.NET" href='/tags/paint.net'>Paint.NET</a>
                                 
                             
                         </p>
                     </header>
 
                     <div class="post-description">
-                        <p>微软在WebUIValidation.js(System.Web的资源文件内自己找工具看吧)<br />内有如下代码：<br /></p>
-<div style="BORDER-RIGHT: #cccccc 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #cccccc 1px solid; PADDING-LEFT: 4px; FONT-SIZE: 13px; PADDING-BOTTOM: 4px; BORDER-LEFT: #cccccc 1px solid; WIDTH: 77.29%; WORD-BREAK: break-all; PADDING-TOP: 4px; BORDER-BOTTOM: #cccccc 1px solid; HEIGHT: 310px; BACKGROUND-COLOR: #eeeeee">
-<span style="COLOR: #0000ff">function</span><span style="COLOR: #000000"> ValidatorGetValue(id) {<br />    </span><span style="COLOR: #0000ff">var</span><span style="COLOR: #000000"> control;<br />    control </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> document.getElementById(id);<br />    </span><span style="COLOR: #0000ff">if</span><span style="COLOR: #000000"> (</span><span style="COLOR: #0000ff">typeof</span><span style="COLOR: #000000">(control.value) </span><span style="COLOR: #000000">==</span><span style="COLOR: #000000"> </span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">string</span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">) {<br />        </span><span style="COLOR: #0000ff">return</span><span style="COLOR: #000000"> control.value;<br />    }<br />    </span><span style="COLOR: #0000ff">return</span><span style="COLOR: #000000"> ValidatorGetValueRecursive(control);<br />}<br /></span><span style="COLOR: #0000ff">function</span><span style="COLOR: #000000"> ValidatorGetValueRecursive(control)<br />{<br />    </span><span style="COLOR: #0000ff">if</span><span style="COLOR: #000000"> (</span><span style="COLOR: #0000ff">typeof</span><span style="COLOR: #000000">(control.value) </span><span style="COLOR: #000000">==</span><span style="COLOR: #000000"> </span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">string</span><span style="COLOR: #000000">"</span><span style="COLOR: #000000"> </span><span style="COLOR: #000000">&amp;&amp;</span><span style="COLOR: #000000"> (control.type </span><span style="COLOR: #000000">!=</span><span style="COLOR: #000000"> </span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">radio</span><span style="COLOR: #000000">"</span><span style="COLOR: #000000"> </span><span style="COLOR: #000000">||</span><span style="COLOR: #000000"> control.checked </span><span style="COLOR: #000000">==</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">true</span><span style="COLOR: #000000">)) {<br />        </span><span style="COLOR: #0000ff">return</span><span style="COLOR: #000000"> control.value;<br />    }<br />    </span><span style="COLOR: #0000ff">var</span><span style="COLOR: #000000"> i, val;<br />    </span><span style="COLOR: #0000ff">for</span><span style="COLOR: #000000"> (i </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #000000">0</span><span style="COLOR: #000000">; i</span><span style="COLOR: #000000">&lt;</span><span style="COLOR: #000000">control.childNodes.length; i</span><span style="COLOR: #000000">++</span><span style="COLOR: #000000">) {<br />        val </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> ValidatorGetValueRecursive(control.childNodes[i]);<br />        </span><span style="COLOR: #0000ff">if</span><span style="COLOR: #000000"> (val </span><span style="COLOR: #000000">!=</span><span style="COLOR: #000000"> </span><span style="COLOR: #000000">""</span><span style="COLOR: #000000">) </span><span style="COLOR: #0000ff">return</span><span style="COLOR: #000000"> val;<br />    }<br />    </span><span style="COLOR: #0000ff">return</span><span style="COLOR: #000000"> </span><span style="COLOR: #000000">""</span><span style="COLOR: #000000">;<br />}</span>
-</div>
-<p><br />当自定义控件为符合控件，比如两个或多个DropDownList组合而成<br />而有一个Value属性来返回这几个DropDownList的返回选项，并且设置了<span style="COLOR: #000000"><strong><font color="#0000ff">ValidationPropertyAttribute去验证某个属性，如：</font></strong><br /></span><strong style="COLOR: #0000ff">[ValidationPropertyAttribute( "Value" )]<br /><span style="COLOR: #000000">当使用验证控件验证的时候，由于上面脚本在控件没有客户端value的时候返回的为第一个value不为空的ChildNode的value<br />值，这样用来验证，可能不是我们所需要的。<br />比如我需要非空验证控件来验证我的自定义控件所有的DropDownList都必须被选择时候，如果第一个有了选择，则该脚本认为验证通过了，叶面可以PostBack然而，在服务器端Page.IsValidata属性是false的。<br />我用了一个非常ugly的方法，在控件外层放一个父容器（可以通过override TagKey 来指定）span<br />在每个DropDownList的客户端onchange的时候 判断 如果 任一个没有选择，那么置span的value = ‘’；<br />当全部选择的时候再将span.value = 实际的值 ，这样就不会出现客户端验证通过，然而服务器端验证没有通过才出来ErrorMessage的情况了。<br /><br />但是总觉得 这样非常的ugly,如果有其他朋友也遇到过这样的问题，欢迎讨论。</span></strong></p>              
+                        <p align="left"><a href="http://www.eecs.wsu.edu/paint.net/index.html" target="_blank"><img style="border: 0px;" src="/images/hbz_images/e526efd8-b249-490f-81ec-3b929541201f.png" border="0" alt=""></a> </p>
+<p></p>
+<h5>
+<a href="http://www.eecs.wsu.edu/paint.net/index.html" target="_blank">Home</a>   <a href="http://www.eecs.wsu.edu/paint.net/features.html" target="_blank">Features</a>     <a href="http://www.eecs.wsu.edu/paint.net/download.html" target="_blank">Download</a>   <a href="http://www.eecs.wsu.edu/paint.net/roadmap.html" target="_blank">Roadmap</a>   <a href="http://www.eecs.wsu.edu/paint.net/screenshots.html" target="_blank">Screenshots</a>   <a href="http://paintdotnet.12.forumer.com/index.php" target="_blank">Forum</a>  </h5>
+<br /><h5><span style="color: #0000ff; background-color: #ffffff;">AboutPaint.NET is image and photo manipulation software designed to be used on computers that run Windows 2000, XP, Vista, or Server 2003. It supports layers, unlimited undo, special effects, and a wide variety of useful and powerful tools.</span></h5>
+<br /><h5><span style="color: #0000ff; background-color: #ffffff;"><span style="color: #000000;">The programming language used to create Paint.NET is C#, with a small amount of C++ for setup and shell-integration related functionality</span></span></h5>
+<br /><p align="left"><br /><a href="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png6" target="_blank"><img style="margin-left: 0px; width: 493px; margin-right: 0px; height: 399px; border: 0px;" src="/images/hbz_images/25f59beb-2867-4f91-987d-364ecfd344e0.jpg" border="0" alt="" hspace="0" align="baseline"></a></p>             
 
                     </div>
                 </section>
                 
-                <h1 class="content-subhead">11 Aug 2006</h1>
+                <h1 class="content-subhead">04 May 2006</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2006/08/11/visualstudiocodewidthsetting/" class="post-title">给Visual Studio 2005设置一个代码边界线，提醒自己，别写的太长哦。</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2006/05/04/int32tostringinvs2005/" class="post-title">Vs2005的倒退?</a>
 
                         <p class="post-meta">
                             
                             
                                 
                                     <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
-                                
-                                    <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
                                 
                                     <a class="post-category post-category-Visual Studio" href='/tags/visual-studio'>Visual Studio</a>
                                 
-                                    <a class="post-category post-category-.Net其他" href='/tags/.net%E5%85%B6%E4%BB%96'>.Net其他</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>String abc = 123.ToString;<br /><br />代码在Vs2003内编译将得到错误信息<br /><br /><font color="#0000ff">“<font size="2">在不带括号的情况下引用了方法.....</font>”</font><br /><br />在Vs2005（8.050727.42 /rtm 50727 4200）内编译则得到错误信息:<br /><br /><font color="#ff1493">“无法将方法组“ToString”转换为非委托类型“string”。您是要调用方法吗?”<br /></font><br />而上边代码等号右边的部分如果位于一个方法内做参数，那将得到一个错误信息：<br /><br /><font color="#ff1493">参数“1”: 无法从“方法组”转换为“string”<br /></font><br />语气上更加亲切了，比如多了个“您”字，可是语意上却更加看不懂了....</p>              
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">17 Apr 2006</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2006/04/17/textdisguisecaptchaimage/" class="post-title">原来验证码可以租的哦</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                
+                                    <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
+                                
+                                    <a class="post-category post-category-它山之石" href='/tags/%E5%AE%83%E5%B1%B1%E4%B9%8B%E7%9F%B3'>它山之石</a>
+                                
+                                    <a class="post-category post-category-Captcha" href='/tags/captcha'>Captcha</a>
                                 
                             
                         </p>
                     </header>
 
                     <div class="post-description">
-                        <p>Codeproject上有一个关于代码宽度的调查<br /><a href="http://www.codeproject.com/script/survey/detail.asp?survey=590&amp;df=100&amp;forumid=305784&amp;select=1615639#xx1615639xx">http://www.codeproject.com/script/survey/detail.asp?survey=590&amp;df=100&amp;forumid=305784&amp;select=1615639#xx1615639xx</a></p>
-<p>其中的评论中有人贴到下面这个地址<br /><a href="http://blogs.msdn.com/saraford/archive/2004/11/15/257953.aspx">http://blogs.msdn.com/saraford/archive/2004/11/15/257953.aspx</a><br />照着做 改了注册表<br />设定RGB(255,0,0) 5, 105 <br />嘿嘿 红线出来了。<br />图就不抓了 用原作者图</p>
-<p> </p>
-<p><img style="width: 317px; height: 241px;" src="/images/hbz_images/2e1c63c7-0ecb-4607-9c5e-64e24fa217cb.PNG" alt="Guidelines at columns 5 and 30"></p>                
+                        <p><a href="http://www.textdisguise.com/TextDisguise/default.aspx">http://www.textdisguise.com/TextDisguise/default.aspx</a><br />提供webservice生成防止机器人的CAPTCHA Image<br />看样子<a href="http://www.textdisguise.com/TextDisguise/ProductsComparison.aspx">挺贵的</a>，不过<a href="http://www.textdisguise.com/TextDisguise/Demo.aspx">Demo</a>看起来很不错。</p>               
 
                     </div>
                 </section>
                 
-                <h1 class="content-subhead">11 Aug 2006</h1>
+                <h1 class="content-subhead">13 Apr 2006</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2006/08/11/visualstudiocodewidthsetting/" class="post-title">给Visual Studio 2005设置一个代码边界线，提醒自己，别写的太长哦。</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2006/04/13/easylist/" class="post-title">一个非常Strong 的ListBox控件EasyList</a>
 
                         <p class="post-meta">
                             
@@ -510,19 +1042,65 @@
                                 
                                     <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
                                 
-                                    <a class="post-category post-category-Visual Studio" href='/tags/visual-studio'>Visual Studio</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><a href="http://www.microsoft.com/china/MSDN/library/enterprisedevelopment/softwaredev/NewStuff.mspx?mfr=true" target="_blank"><br />用于开发人员工具箱的资源</a>提到的<a href="http://easylistbox.com/home.aspx" target="_blank">EasyListBox</a>是一款功能非常<span style="color: #0000ff;">强大</span>的ListBox控件<br />功能嘛我不说了                                                                                                             <br />去<a href="http://easylistbox.com/demoColumns.aspx" target="_blank">http://easylistbox.com/demoColumns.aspx</a>体验一下那20几个demo就知道了</p>                
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">13 Apr 2006</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2006/04/13/easylist/" class="post-title">一个非常Strong 的ListBox控件EasyList</a>
+
+                        <p class="post-meta">
+                            
+                            
                                 
-                                    <a class="post-category post-category-.Net其他" href='/tags/.net%E5%85%B6%E4%BB%96'>.Net其他</a>
+                                    <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
+                                
+                                    <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
                                 
                             
                         </p>
                     </header>
 
                     <div class="post-description">
-                        <p>Codeproject上有一个关于代码宽度的调查<br /><a href="http://www.codeproject.com/script/survey/detail.asp?survey=590&amp;df=100&amp;forumid=305784&amp;select=1615639#xx1615639xx">http://www.codeproject.com/script/survey/detail.asp?survey=590&amp;df=100&amp;forumid=305784&amp;select=1615639#xx1615639xx</a></p>
-<p>其中的评论中有人贴到下面这个地址<br /><a href="http://blogs.msdn.com/saraford/archive/2004/11/15/257953.aspx">http://blogs.msdn.com/saraford/archive/2004/11/15/257953.aspx</a><br />照着做 改了注册表<br />设定RGB(255,0,0) 5, 105 <br />嘿嘿 红线出来了。<br />图就不抓了 用原作者图</p>
-<p> </p>
-<p><img style="width: 317px; height: 241px;" src="/images/hbz_images/2e1c63c7-0ecb-4607-9c5e-64e24fa217cb.PNG" alt="Guidelines at columns 5 and 30"></p>                
+                        <p><a href="http://www.microsoft.com/china/MSDN/library/enterprisedevelopment/softwaredev/NewStuff.mspx?mfr=true" target="_blank"><br />用于开发人员工具箱的资源</a>提到的<a href="http://easylistbox.com/home.aspx" target="_blank">EasyListBox</a>是一款功能非常<span style="color: #0000ff;">强大</span>的ListBox控件<br />功能嘛我不说了                                                                                                             <br />去<a href="http://easylistbox.com/demoColumns.aspx" target="_blank">http://easylistbox.com/demoColumns.aspx</a>体验一下那20几个demo就知道了</p>                
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">11 Apr 2006</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2006/04/11/cb-372413/" class="post-title">Yetanotherforum 编辑表情后不立即更新</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                
+                                    <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
+                                
+                                    <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
+                                
+                                    <a class="post-category post-category-Yetanotherforum" href='/tags/yetanotherforum'>Yetanotherforum</a>
+                                
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>文件  FormatMsg.cs</p>
+<br /><p>方法iAddSmiles内 </p>
+<br /><p>Code:<br />strTemp = strTemp.Replace(code.ToLower(),String.Format("&lt;img src=\"{0}\" alt=\"{1}\" /&gt;",basePage.Smiley(Convert.ToString(row["Icon"])),basePage.Server.HtmlEncode(row["Emoticon"].ToString())));<br />调用了两次可能导致被转化成html后有乱码出现</p>
+<br /><p>在方法GetSmilies内<br />Code:<br />System.Web.HttpContext.Current.Cache.Insert("Smilies",dt,null,DateTime.Now.AddMinutes(60),TimeSpan.Zero);<br />加入缓存项的Key和更新/删除时移除缓存的Key不一致 导致编辑表情后不立即更新<br />DB.cs<br />Code:<br />System.Web.HttpContext.Current.Cache.Remove("Smiles");<br /></p>             
 
                     </div>
                 </section>
@@ -536,7 +1114,7 @@
         <i class="fa fa-angle-double-left"></i>&nbsp;Newer
       </a>
       
-    <span class="post-list-pagination-item post-list-pagination-item-current">Page 7 of 19</span>
+    <span class="post-list-pagination-item post-list-pagination-item-current">Page 7 of 16</span>
     
       <a href="/tags/asp.net/page/8/" class="post-list-pagination-item pure-button post-list-pagination-item-next">
         Older&nbsp;<i class="fa fa-angle-double-right"></i>

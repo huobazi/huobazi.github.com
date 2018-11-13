@@ -59,54 +59,6 @@
             
             <div class="posts">
                 
-                <h1 class="content-subhead">28 Nov 2011</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="https://huobazi.aspxboy.com/blog/2011/11/28/how-to-uninstall-xcode/" class="post-title"> [How to] 如何卸载Xcode</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a><a class="post-category post-category-xcode" href='/tags/xcode'>xcode</a><a class="post-category post-category-iOS" href='/tags/ios'>iOS</a>
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p> </p>
-<pre> $ sudo /Developer/Library/uninstall-devtools --mode=all</pre>
-<p> </p>                
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">09 Nov 2011</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="https://huobazi.aspxboy.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/" class="post-title">AutoGenerateColumns=&#39;true&#39;的GridView如何支持htmlencode/htmldecode</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a><a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a><a class="post-category post-category-.Net其他" href='/tags/.net%E5%85%B6%E4%BB%96'>.Net其他</a><a class="post-category post-category-奇技淫巧" href='/tags/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7'>奇技淫巧</a><a class="post-category post-category-GridView" href='/tags/gridview'>GridView</a><a class="post-category post-category-代码片段" href='/tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5'>代码片段</a><a class="post-category post-category-HtmlEncode" href='/tags/htmlencode'>HtmlEncode</a><a class="post-category post-category-AutoGenerateColumns" href='/tags/autogeneratecolumns'>AutoGenerateColumns</a>
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p><p>我们知道BoundField.HtmlEncode 属性可以设置一个单元格是否能够htmlencode，我今天碰到的问题是：自动生成列的GridView，表头可能是包含html的比如&lt;font color=red&gt;邮件&lt;/font&gt;，默认被htmlencode了，而我不希望这样做，所以有了如下的代码:</p>
-<p></p>
-
-<p></p>
-<p> </p>
-<div class="source" style="font-family: '[object HTMLOptionElement]', Consolas, 'Lucida Console', 'Courier New'; color: #e6e1dc; background-color: #111111; ">
-<span style="color: #bc9458; font-style: italic; ">/// &lt;summary&gt;</span><br /><span style="color: #bc9458; font-style: italic; ">/// Handles the PreRender event of the gvSource control.</span><br /><span style="color: #bc9458; font-style: italic; ">/// &lt;/summary&gt;</span><br /><span style="color: #bc9458; font-style: italic; ">/// &lt;param name=&ldquo;sender&rdquo;&gt;The source of the event.&lt;/param&gt;</span><br /><span style="color: #bc9458; font-style: italic; ">/// &lt;param name=&ldquo;e&rdquo;&gt;The &lt;see cref=&ldquo;System.EventArgs&rdquo;/&gt; instance containing the event data.&lt;/param&gt;</span><br /><span style="color: #cc7833; ">protected</span> <span style="color: #cc7833; ">void</span> <span style="color: #ffc66d; ">gvSource_PreRender</span>( <span style="color: #da4939; ">object</span> <span style="color: #e6e1dc; ">sender</span> <span style="color: #e6e1dc; ">,</span> <span style="color: #e6e1dc; ">EventArgs</span> <span style="color: #e6e1dc; ">e</span> )<br /><span style="color: #e6e1dc; ">{</span><br />    <span style="color: #e6e1dc; ">GridView</span> <span style="color: #e6e1dc; ">gridView</span> <span style="color: #e6e1dc; ">=</span> <span style="color: #e6e1dc; ">sender</span> <span style="color: #cc7833; ">as</span> <span style="color: #e6e1dc; ">GridView</span>;<br />    <span style="color: #cc7833; ">if</span> ( <span style="color: #e6e1dc; ">gridView</span> <span style="color: #e6e1dc; ">!=</span> <span style="color: #cc7833; ">null</span> <span style="color: #e6e1dc; ">&amp;&amp;</span> <span style="color: #e6e1dc; ">gridView</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HeaderRow</span> <span style="color: #e6e1dc; ">!=</span> <span style="color: #cc7833; ">null</span> <span style="color: #e6e1dc; ">&amp;&amp;</span> <span style="color: #e6e1dc; ">gridView</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HeaderRow</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Cells</span> <span style="color: #e6e1dc; ">!=</span> <span style="color: #cc7833; ">null</span> )<br />    <span style="color: #e6e1dc; ">{</span><br />        <span style="color: #cc7833; ">for</span> ( <span style="color: #da4939; ">int</span> <span style="color: #e6e1dc; ">j</span> <span style="color: #e6e1dc; ">=</span> <span style="color: #a5c261; ">0</span> ; <span style="color: #e6e1dc; ">j</span> <span style="color: #e6e1dc; ">&lt;</span> <span style="color: #e6e1dc; ">gridView</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HeaderRow</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Cells</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Count</span> ; <span style="color: #e6e1dc; ">j</span><span style="color: #e6e1dc; ">++</span> )<br />        <span style="color: #e6e1dc; ">{</span><br />            <span style="color: #e6e1dc; ">gridView</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HeaderRow</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Cells</span><span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">j</span><span style="color: #e6e1dc; ">].</span><span style="color: #e6e1dc; ">Text</span> <span style="color: #e6e1dc; ">=</span> <span style="color: #e6e1dc; ">System</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Web</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HttpUtility</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HtmlDecode</span>( <span style="color: #e6e1dc; ">gridView</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HeaderRow</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Cells</span><span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">j</span><span style="color: #e6e1dc; ">].</span><span style="color: #e6e1dc; ">Text</span> );<br />        <span style="color: #e6e1dc; ">}</span><br />    <span style="color: #e6e1dc; ">}</span><br /><span style="color: #e6e1dc; ">}</span>
-</div></p>
-                    </div>
-                </section>
-                
                 <h1 class="content-subhead">31 Aug 2011</h1>
                 <section class="post">
                     <header class="post-header">
@@ -428,6 +380,95 @@
                     </div>
                 </section>
                 
+                <h1 class="content-subhead">30 Apr 2010</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2010/04/30/360buy-vs-newegg/" class="post-title">京东新蛋攻防</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                <a class="post-category post-category-闲言碎语" href='/tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD'>闲言碎语</a><a class="post-category post-category-推荐阅读" href='/tags/%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB'>推荐阅读</a><a class="post-category post-category-Newegg" href='/tags/newegg'>Newegg</a><a class="post-category post-category-京东" href='/tags/%E4%BA%AC%E4%B8%9C'>京东</a><a class="post-category post-category-新蛋" href='/tags/%E6%96%B0%E8%9B%8B'>新蛋</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>这是一片不断膨胀、愈演愈烈的虚拟战场。每一位统帅都着迷于它的独特魅力——任何势力的盛衰都取决于无数素未谋面的人的鼠标点击。每一位统帅也都必须铭记：实体世界里“强攻弱守”的军事规律已经在此失效。这里唯一可以遵循的生死法则是，无论势力强弱，一旦站到防守的位置上，那么溃败将接踵而来，且来得出乎意料地快</p>
+<p><a href="http://finance.ifeng.com/news/20100429/2128118.shtml">http://finance.ifeng.com/news/20100429/2128118.shtml</a></p>
+<p>京东新蛋攻防<br />来源：凤凰网    日期：10年04月30日 10:35:18</p>
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">25 Apr 2010</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2010/04/25/office-2010-download/" class="post-title">office 2010 正在下载中。</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                <a class="post-category post-category-闲言碎语" href='/tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD'>闲言碎语</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>Office 2010 正在下载中，午饭时就可以装了...</p>
+<p><img src="http://huobazi.aspxboy.com/images/hbz_images/office10download.png" alt="office 10 download" width="588" height="491"></p>              
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">13 Apr 2010</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2010/04/13/win7-memcache/" class="post-title">win7上安装memcache</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                <a class="post-category post-category-LAMP" href='/tags/lamp'>LAMP</a><a class="post-category post-category-它山之石" href='/tags/%E5%AE%83%E5%B1%B1%E4%B9%8B%E7%9F%B3'>它山之石</a><a class="post-category post-category-win7" href='/tags/win7'>win7</a><a class="post-category post-category-vista" href='/tags/vista'>vista</a><a class="post-category post-category-memcache" href='/tags/memcache'>memcache</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>像原来在xp下装一样</p>
+<p>memcached.exe -d install<br />memcached.exe -d start</p>
+<p>报错“ failed to install service or service already installed”</p>
+<p>解决方法：</p>
+<p>管理员身份安装，首先找出cmd.exe的原文件（在c:\windows\system32\cmd.exe)，</p>
+<p>右击以管理员进入，接下来的步骤就和xp安装方法一样了</p>               
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">07 Apr 2010</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2010/04/07/tiobe-java/" class="post-title">编程语言排行榜Java下跌引起的...</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                <a class="post-category post-category-闲言碎语" href='/tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD'>闲言碎语</a><a class="post-category post-category-java" href='/tags/java'>java</a><a class="post-category post-category-tiobe" href='/tags/tiobe'>tiobe</a><a class="post-category post-category-javaeye" href='/tags/javaeye'>javaeye</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>javaeye的新闻<a href="http://www.javaeye.com/news/15494">http://www.javaeye.com/news/15494</a></p>
+<p>cnblogs的新闻<a href="http://news.cnblogs.com/n/60768/">http://news.cnblogs.com/n/60768/</a></p>
+<p>发现cnblogs的评论有很多类似“xx人民发来贺电！java终于跌下神坛了！”，而javaeye的评论要显的理性的多。</p>             
+
+                    </div>
+                </section>
+                
             </div>
             
 <div class="pagination">
@@ -437,7 +478,7 @@
         <i class="fa fa-angle-double-left"></i>&nbsp;Newer
       </a>
       
-    <span class="post-list-pagination-item post-list-pagination-item-current">Page 2 of 22</span>
+    <span class="post-list-pagination-item post-list-pagination-item-current">Page 2 of 19</span>
     
       <a href="/page/3/" class="post-list-pagination-item pure-button post-list-pagination-item-next">
         Older&nbsp;<i class="fa fa-angle-double-right"></i>

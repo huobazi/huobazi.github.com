@@ -509,6 +509,174 @@ Userpassword里面的就是超级管理员的密码了。一般是telecomadmin�
                     </div>
                 </section>
                 
+                <h1 class="content-subhead">30 Jul 2009</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2009/07/30/how-to-determine-whether-an-type-is-nullable-and-get-the-underlying-type/" class="post-title">如何判断一个类型是nullable类型，并得知它的原始类型</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                
+                                    <a class="post-category post-category-ORM" href='/tags/orm'>ORM</a>
+                                
+                                    <a class="post-category post-category-.Net其他" href='/tags/.net%E5%85%B6%E4%BB%96'>.Net其他</a>
+                                
+                                    <a class="post-category post-category-代码片段" href='/tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5'>代码片段</a>
+                                
+                                    <a class="post-category post-category-Nullable" href='/tags/nullable'>Nullable</a>
+                                
+                                    <a class="post-category post-category-泛型" href='/tags/%E6%B3%9B%E5%9E%8B'>泛型</a>
+                                
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p>有些时候我们需要判断某个类型是否是Nullable类型，并且可能需要知道它的原始类型，<br />比如在做些ORM相关工作时，就需要这方面的应用，如下代码使用可以实现这个要求</p>
+<p></p>
+
+<p></p>
+<pre>class Program
+    {
+        static void Main( string[] args )
+        {
+            RL( );</p>
+
+<pre><code>        Type type =  typeof( DateTime? );
+        Type originalType;
+
+        if ( IsNullable( type , out originalType ) )
+        {
+            WL( originalType.ToString( ) );
+        }
+        else
+        {
+            WL( &quot;NOT Nullable&quot; );
+        }
+
+        type =  typeof( DateTime );
+
+        if ( IsNullable( type , out originalType ) )
+        {
+            WL( originalType.ToString( ) );
+        }
+        else
+        {
+            WL( &quot;NOT Nullable&quot; );
+        }
+
+        RL( );
+    }
+
+    private static bool IsNullable( Type p , out Type originalType )
+    {
+        bool result = false;
+
+        if ( p.IsGenericType &amp;amp;&amp;amp; p.GetGenericTypeDefinition( ) == typeof( Nullable&amp;lt;&amp;gt; ) )
+        {
+            result = true;
+            originalType = p.GetGenericArguments( )[0];
+        }
+        else
+        {
+            originalType = null;
+        }
+
+        return result;
+    }
+
+    #region Helper methods
+
+    private static void WL( object text , params object[] args )
+    {
+        Console.WriteLine( text.ToString( ) , args );
+    }
+
+    private static void RL( )
+    {
+        Console.ReadLine( );
+    }
+
+    private static void Break( )
+    {
+        System.Diagnostics.Debugger.Break( );
+    }
+
+    #endregion
+}
+</code></pre>
+
+<pre></pre><p></p></pre>
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">21 Jul 2009</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2009/07/21/how-to-send-an-email-with-attachments/" class="post-title">Asp.Net发邮件，如何发送附件</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                
+                                    <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
+                                
+                                    <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
+                                
+                                    <a class="post-category post-category-.Net其他" href='/tags/.net%E5%85%B6%E4%BB%96'>.Net其他</a>
+                                
+                                    <a class="post-category post-category-C#" href='/tags/c'>C#</a>
+                                
+                                    <a class="post-category post-category-代码片段" href='/tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5'>代码片段</a>
+                                
+                                    <a class="post-category post-category-邮件" href='/tags/%E9%82%AE%E4%BB%B6'>邮件</a>
+                                
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p>使用如下代码可以发送附件</p>
+<pre>MailMessage mail = new MailMessage();
+mail.To = &rdquo;me@mycompany.com&rdquo;;
+mail.From = &rdquo;you@yourcompany.com&rdquo;;
+mail.Subject = &rdquo;this is a test email.&ldquo;;
+mail.Body = &rdquo;this is my test email body.&ldquo;;
+MailAttachment attachment = new MailAttachment( Server.MapPath( &rdquo;mailTest.txt&rdquo; ) ); //create the attachment
+mail.Attachments.Add( attachment );
+SmtpMail.SmtpServer = &rdquo;localhost&rdquo;; 
+SmtpMail.Send( mail );</pre>
+<p>使用如下代码可以在用户上传附件后发生邮件:</p>
+<p></p>
+
+<p></p>
+<pre>if  (FileUpload1.HasFile)
+{
+    string  toAddress  =  &rdquo;you@yourprovider.com&rdquo;;
+    string  fromAddress  =  you@yourprovider.com  (2);
+    string  mailServer  =  &rdquo;smtp.yourprovider.com&rdquo;;</p>
+
+<p>    MailMessage  myMailMessage  =  new  MailMessage();</p>
+
+<p>    myMailMessage.To.Add(toAddress);
+    myMailMessage.From  =  new  MailAddress(fromAddress);
+    myMailMessage.Subject  =  &rdquo;Test  Message&rdquo;;</p>
+
+<p>    string  fileName  =  Path.GetFileName(FileUpload1.PostedFile.FileName);
+    Attachment  myAttachment  =  
+                                  new  Attachment(FileUpload1.FileContent,  fileName);
+    myMailMessage.Attachments.Add(myAttachment);</p>
+
+<p>    SmtpClient  mySmtpClient  =  new  SmtpClient(mailServer);</p>
+
+<p>    mySmtpClient.Send(myMailMessage);
+}</pre></p>
+                    </div>
+                </section>
+                
             </div>
             
 <div class="pagination">

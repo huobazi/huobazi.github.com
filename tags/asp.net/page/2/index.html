@@ -59,76 +59,6 @@
             
             <div class="posts">
                 
-                <h1 class="content-subhead">09 Dec 2009</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="https://huobazi.aspxboy.com/blog/2009/12/09/chang-sql-table-field-default/" class="post-title">使用SQL语句更改数据表的默认值</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                
-                                    <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
-                                
-                                    <a class="post-category post-category-代码片段" href='/tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5'>代码片段</a>
-                                
-                                    <a class="post-category post-category-SQL" href='/tags/sql'>SQL</a>
-                                
-                                    <a class="post-category post-category-Server" href='/tags/server'>Server</a>
-                                
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p><p>以前还真没这么干过，都是手工去掉约束，再添加的，今天一边google一边搞啊搞啊的，最终下面这个脚本可以用了</p>
-<p></p>
-
-<p></p>
-<div class="source" style='font-family: "Consolas","Lucida Console","Courier New"; color: #ffffff; background-color: #333333;'>
-<p><span style="color: #f0e68c;">alter</span> <span style="color: #f0e68c;">table</span> <span style="color: #ffffff;">dbo</span><span style="color: #ffffff;">.</span><span style="color: #ffffff;">SOTransaction</span><br />    <span style="color: #f0e68c;">alter</span> <span style="color: #f0e68c;">column</span> <span style="color: #ffffff;">UnitCostWithoutTax</span> <span style="color: #ffffff;">decimal</span>(<span style="color: #ffffff;">10</span><span style="color: #ffffff;">,</span> <span style="color: #ffffff;">2</span>)  <span style="color: #f0e68c;">not</span> <span style="color: #f0e68c;">null</span></p>
-<p><span style="color: #f0e68c;">go</span></p>
-<p><span style="color: #f0e68c;">declare</span> <span style="color: #ffffff;">@</span><span style="color: #ffffff;">name</span> <span style="color: #ffffff;">varchar</span>(<span style="color: #ffffff;">1000</span>)<br /><span style="color: #f0e68c;">declare</span> <span style="color: #ffffff;">@</span><span style="color: #ffffff;">tablename</span> <span style="color: #ffffff;">varchar</span>(<span style="color: #ffffff;">1000</span>)<br /><span style="color: #f0e68c;">declare</span> <span style="color: #ffffff;">@</span><span style="color: #ffffff;">fieldname</span> <span style="color: #ffffff;">varchar</span>(<span style="color: #ffffff;">1000</span>)</p>
-<p><span style="color: #f0e68c;">set</span> <span style="color: #ffffff;">@</span><span style="color: #ffffff;">tablename</span> <span style="color: #ffffff;">=</span> <span style="color: #ffffff;">&lsquo;SOTransaction&rsquo;</span>;<br /><span style="color: #f0e68c;">set</span> <span style="color: #ffffff;">@</span><span style="color: #ffffff;">fieldname</span> <span style="color: #ffffff;">=</span> <span style="color: #ffffff;">&lsquo;UnitCostWithoutTax&rsquo;</span>;</p>
-<p><span style="color: #f0e68c;">select</span> <span style="color: #ffffff;">@</span><span style="color: #ffffff;">name</span> <span style="color: #ffffff;">=</span> b<span style="color: #ffffff;">.</span><span style="color: #ffffff;">name</span> <span style="color: #f0e68c;">from</span> <span style="color: #ffffff;">syscolumns</span> <span style="color: #ffffff;">a</span> <span style="color: #f0e68c;">inner</span> <span style="color: #f0e68c;">join</span> <span style="color: #ffffff;">sysobjects</span> b<br />    <span style="color: #f0e68c;">on</span> b<span style="color: #ffffff;">.</span><span style="color: #ffffff;">id</span><span style="color: #ffffff;">=</span><span style="color: #ffffff;">a</span><span style="color: #ffffff;">.</span><span style="color: #ffffff;">cdefault</span><br /><span style="color: #f0e68c;">where</span><br />    <span style="color: #ffffff;">a</span><span style="color: #ffffff;">.</span><span style="color: #ffffff;">id</span><span style="color: #ffffff;">=</span> <span style="color: #ffffff;">object_id</span>(<span style="color: #ffffff;">@</span><span style="color: #ffffff;">tablename</span>)<br />    <span style="color: #f0e68c;">and</span> <span style="color: #ffffff;">a</span><span style="color: #ffffff;">.</span><span style="color: #ffffff;">name</span><span style="color: #ffffff;">=@</span><span style="color: #ffffff;">fieldname</span><br />    <span style="color: #f0e68c;">and</span> b<span style="color: #ffffff;">.</span><span style="color: #ffffff;">name</span> <span style="color: #f0e68c;">like</span> <span style="color: #ffffff;">&lsquo;DF%&rsquo;</span><br /><span style="color: #87ceeb;">&ndash;print @name</span></p>
-<p><span style="color: #f0e68c;">exec</span>(<span style="color: #ffffff;">&rsquo; alter table SOTransaction drop constraint &lsquo;</span> <span style="color: #ffffff;">+</span> <span style="color: #ffffff;">@</span><span style="color: #ffffff;">name</span>);<br /><span style="color: #f0e68c;">go</span><br /><span style="color: #f0e68c;">alter</span> <span style="color: #f0e68c;">table</span> <span style="color: #ffffff;">dbo</span><span style="color: #ffffff;">.</span><span style="color: #ffffff;">SOTransaction</span><br />    <span style="color: #f0e68c;">add</span> <span style="color: #f0e68c;">constraint</span> <span style="color: #ffffff;">DF_SOTransaction_UnitCostWithoutTax</span> <span style="color: #f0e68c;">default</span> (<span style="color: #ffffff;">0</span>) <span style="color: #f0e68c;">for</span> <span style="color: #ffffff;">UnitCostWithoutTax</span></p>
-</div></p>
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">27 Oct 2009</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="https://huobazi.aspxboy.com/blog/2009/10/27/kissy-editor/" class="post-title">在线编辑器的一个新选择。</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                
-                                    <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
-                                
-                                    <a class="post-category post-category-前端开发" href='/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91'>前端开发</a>
-                                
-                                    <a class="post-category post-category-推荐阅读" href='/tags/%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB'>推荐阅读</a>
-                                
-                                    <a class="post-category post-category-FckEditor" href='/tags/fckeditor'>FckEditor</a>
-                                
-                                    <a class="post-category post-category-kissy-editor" href='/tags/kissy-editor'>kissy-editor</a>
-                                
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>今天<a title="http://lifesinger.org/" href="http://lifesinger.org/" target="_blank">lifesinger</a>发布了<a title="kiss editor" href="http://lifesinger.org/blog/2009/10/kissy-editor/" target="_blank">淘宝编辑器</a>,</p>
-<p>可以在这里看到<a href="http://kissy.googlecode.com/svn/trunk/src/editor/demo/basic.html" target="_blank">演示</a></p>
-<p>介绍可以看这里，<a href="http://lifesinger.org/blog/2009/10/kissy-editor/">http://lifesinger.org/blog/2009/10/kissy-editor/</a></p>              
-
-                    </div>
-                </section>
-                
                 <h1 class="content-subhead">26 Jul 2009</h1>
                 <section class="post">
                     <header class="post-header">
@@ -690,6 +620,134 @@ SmtpMail.Send( mail );</pre>
                     </div>
                 </section>
                 
+                <h1 class="content-subhead">01 Dec 2008</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2008/12/01/asp-net-mvc-route-config/" class="post-title">把ASP.NET MVC的路由利用配置维护起来</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                
+                                    <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
+                                
+                                    <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
+                                
+                                    <a class="post-category post-category-MVC" href='/tags/mvc'>MVC</a>
+                                
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>配置大多就是文件配置或者数据库配置了</p>
+<br /><p>ref:</p>
+<br /><p><a href="http://mnour.blogspot.com/2008/11/mvc-routing-using-custom-configuration.html">http://mnour.blogspot.com/2008/11/mvc-routing-using-custom-configuration.html</a></p>
+<br /><p><a href="/QLeelulu/archive/2008/11/24/1340212.html">http://www.cnblogs.com/QLeelulu/archive/2008/11/24/1340212.html</a></p>
+<br /><p><a href="http://www.iansuttle.com/blog/post/ASPNET-MVC-Store-Routes-in-the-Database.aspx">http://www.iansuttle.com/blog/post/ASPNET-MVC-Store-Routes-in-the-Database.aspx</a></p>
+<br /><p>我觉得加上做webform时常用的PageAlias和BuildUrl会更好用些</p>               
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">07 Oct 2008</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2008/10/07/jquerycool/" class="post-title">jQuery从此更牛了</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                
+                                    <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
+                                
+                                    <a class="post-category post-category-前端开发" href='/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91'>前端开发</a>
+                                
+                                    <a class="post-category post-category-jQuery" href='/tags/jquery'>jQuery</a>
+                                
+                                    <a class="post-category post-category-Microsoft" href='/tags/microsoft'>Microsoft</a>
+                                
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>为什么更牛了?</p>
+<p> </p>
+<p>26日回家，昨天才返回，这么好的消息自己错过了，补记一下。</p>
+<p> </p>
+<p>see see</p>
+<p> </p>
+<p> </p>
+<p><a href="http://weblogs.asp.net/scottgu/">Scott Guthrie</a>的<a href="http://weblogs.asp.net/scottgu/archive/2008/09/28/jquery-and-microsoft.aspx">公告 </a>(jQuery将成为Visual Studio的一部分等更多好消息...)</p>
+<p> <br />jQuery头儿<a href="http://ejohn.org/">John Resig</a>的<a href="http://jquery.com/blog/2008/09/28/jquery-microsoft-nokia/">公告</a>（jQuery, Microsoft, and Nokia）</p>
+<p> <br /><a href="http://www.hanselman.com/blog/">Scott Hanselman</a>的jQuery的<a href="http://www.hanselman.com/blog/jQueryToShipWithASPNETMVCAndVisualStudio.aspx">演示</a></p>
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">09 Aug 2008</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2008/08/09/visualstudiothemegenerator/" class="post-title">【分享】如何创建自己的Visual Studio 2005/2008配色</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                
+                                    <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
+                                
+                                    <a class="post-category post-category-Visual Studio" href='/tags/visual-studio'>Visual Studio</a>
+                                
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>自己改过配色的朋友都知道在Vs内配置比较麻烦，导入过别人配好的现成配置的朋友，有没有研究过那个.vssettings文件是个什么东西呢？</p>
+<br /><p>用文本编辑器打开它就能看到那是个Xml文件，现在有了一个很好的在线工具能够方便的搞出自己喜欢的配色，然后再导入就OK了。</p>
+<br /><p><a href="http://frickinsweet.com/tools/Theme.mvc.aspx"><font size="4">http://frickinsweet.com/tools/Theme.mvc.aspx</font></a></p>
+<br /><p><a href="http://frickinsweet.com/tools/Theme.mvc.aspx" target="_blank" mce_href="http://frickinsweet.com/tools/Theme.mvc.aspx"><img class="" title="vs_them_generator" height="447" alt="vs_them_generator" src="/images/hbz_images/e01387bd-8f4f-4638-8131-226ce244e723.jpg" width="462" border="0" mce_src="/images/hbz_images/e01387bd-8f4f-4638-8131-226ce244e723.jpg"></a></p>                
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">19 Jul 2008</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2008/07/19/cb-1246773/" class="post-title">我学Linq to SQL做的demo</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                
+                                    <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
+                                
+                                    <a class="post-category post-category-.Net其他" href='/tags/.net%E5%85%B6%E4%BB%96'>.Net其他</a>
+                                
+                                    <a class="post-category post-category-LINQ" href='/tags/linq'>LINQ</a>
+                                
+                                    <a class="post-category post-category-LINQ2SQL" href='/tags/linq2sql'>LINQ2SQL</a>
+                                
+                                    <a class="post-category post-category-代码片段" href='/tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5'>代码片段</a>
+                                
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>最近才开始学LINQ to SQL,</p>
+<p>做了个demo，都是基本操作。</p>
+<p>有兴趣的朋友看看。</p>
+<p><a href="http://download.csdn.net/source/528628">http://download.csdn.net/source/528628</a></p>
+<p mce_keep="true"> </p>                
+
+                    </div>
+                </section>
+                
             </div>
             
 <div class="pagination">
@@ -699,7 +757,7 @@ SmtpMail.Send( mail );</pre>
         <i class="fa fa-angle-double-left"></i>&nbsp;Newer
       </a>
       
-    <span class="post-list-pagination-item post-list-pagination-item-current">Page 2 of 19</span>
+    <span class="post-list-pagination-item post-list-pagination-item-current">Page 2 of 16</span>
     
       <a href="/tags/asp.net/page/3/" class="post-list-pagination-item pure-button post-list-pagination-item-next">
         Older&nbsp;<i class="fa fa-angle-double-right"></i>

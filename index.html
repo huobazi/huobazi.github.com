@@ -615,12 +615,60 @@ Userpassword里面的就是超级管理员的密码了。一般是telecomadmin�
                     </div>
                 </section>
                 
+                <h1 class="content-subhead">28 Nov 2011</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2011/11/28/how-to-uninstall-xcode/" class="post-title"> [How to] 如何卸载Xcode</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a><a class="post-category post-category-xcode" href='/tags/xcode'>xcode</a><a class="post-category post-category-iOS" href='/tags/ios'>iOS</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p> </p>
+<pre> $ sudo /Developer/Library/uninstall-devtools --mode=all</pre>
+<p> </p>                
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">09 Nov 2011</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/" class="post-title">AutoGenerateColumns=&#39;true&#39;的GridView如何支持htmlencode/htmldecode</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a><a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a><a class="post-category post-category-.Net其他" href='/tags/.net%E5%85%B6%E4%BB%96'>.Net其他</a><a class="post-category post-category-奇技淫巧" href='/tags/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7'>奇技淫巧</a><a class="post-category post-category-GridView" href='/tags/gridview'>GridView</a><a class="post-category post-category-代码片段" href='/tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5'>代码片段</a><a class="post-category post-category-HtmlEncode" href='/tags/htmlencode'>HtmlEncode</a><a class="post-category post-category-AutoGenerateColumns" href='/tags/autogeneratecolumns'>AutoGenerateColumns</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p>我们知道BoundField.HtmlEncode 属性可以设置一个单元格是否能够htmlencode，我今天碰到的问题是：自动生成列的GridView，表头可能是包含html的比如&lt;font color=red&gt;邮件&lt;/font&gt;，默认被htmlencode了，而我不希望这样做，所以有了如下的代码:</p>
+<p></p>
+
+<p></p>
+<p> </p>
+<div class="source" style="font-family: '[object HTMLOptionElement]', Consolas, 'Lucida Console', 'Courier New'; color: #e6e1dc; background-color: #111111; ">
+<span style="color: #bc9458; font-style: italic; ">/// &lt;summary&gt;</span><br /><span style="color: #bc9458; font-style: italic; ">/// Handles the PreRender event of the gvSource control.</span><br /><span style="color: #bc9458; font-style: italic; ">/// &lt;/summary&gt;</span><br /><span style="color: #bc9458; font-style: italic; ">/// &lt;param name=&ldquo;sender&rdquo;&gt;The source of the event.&lt;/param&gt;</span><br /><span style="color: #bc9458; font-style: italic; ">/// &lt;param name=&ldquo;e&rdquo;&gt;The &lt;see cref=&ldquo;System.EventArgs&rdquo;/&gt; instance containing the event data.&lt;/param&gt;</span><br /><span style="color: #cc7833; ">protected</span> <span style="color: #cc7833; ">void</span> <span style="color: #ffc66d; ">gvSource_PreRender</span>( <span style="color: #da4939; ">object</span> <span style="color: #e6e1dc; ">sender</span> <span style="color: #e6e1dc; ">,</span> <span style="color: #e6e1dc; ">EventArgs</span> <span style="color: #e6e1dc; ">e</span> )<br /><span style="color: #e6e1dc; ">{</span><br />    <span style="color: #e6e1dc; ">GridView</span> <span style="color: #e6e1dc; ">gridView</span> <span style="color: #e6e1dc; ">=</span> <span style="color: #e6e1dc; ">sender</span> <span style="color: #cc7833; ">as</span> <span style="color: #e6e1dc; ">GridView</span>;<br />    <span style="color: #cc7833; ">if</span> ( <span style="color: #e6e1dc; ">gridView</span> <span style="color: #e6e1dc; ">!=</span> <span style="color: #cc7833; ">null</span> <span style="color: #e6e1dc; ">&amp;&amp;</span> <span style="color: #e6e1dc; ">gridView</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HeaderRow</span> <span style="color: #e6e1dc; ">!=</span> <span style="color: #cc7833; ">null</span> <span style="color: #e6e1dc; ">&amp;&amp;</span> <span style="color: #e6e1dc; ">gridView</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HeaderRow</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Cells</span> <span style="color: #e6e1dc; ">!=</span> <span style="color: #cc7833; ">null</span> )<br />    <span style="color: #e6e1dc; ">{</span><br />        <span style="color: #cc7833; ">for</span> ( <span style="color: #da4939; ">int</span> <span style="color: #e6e1dc; ">j</span> <span style="color: #e6e1dc; ">=</span> <span style="color: #a5c261; ">0</span> ; <span style="color: #e6e1dc; ">j</span> <span style="color: #e6e1dc; ">&lt;</span> <span style="color: #e6e1dc; ">gridView</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HeaderRow</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Cells</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Count</span> ; <span style="color: #e6e1dc; ">j</span><span style="color: #e6e1dc; ">++</span> )<br />        <span style="color: #e6e1dc; ">{</span><br />            <span style="color: #e6e1dc; ">gridView</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HeaderRow</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Cells</span><span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">j</span><span style="color: #e6e1dc; ">].</span><span style="color: #e6e1dc; ">Text</span> <span style="color: #e6e1dc; ">=</span> <span style="color: #e6e1dc; ">System</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Web</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HttpUtility</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HtmlDecode</span>( <span style="color: #e6e1dc; ">gridView</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HeaderRow</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Cells</span><span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">j</span><span style="color: #e6e1dc; ">].</span><span style="color: #e6e1dc; ">Text</span> );<br />        <span style="color: #e6e1dc; ">}</span><br />    <span style="color: #e6e1dc; ">}</span><br /><span style="color: #e6e1dc; ">}</span>
+</div></p>
+                    </div>
+                </section>
+                
             </div>
             
 <div class="pagination">
   <nav role="pagination" class="post-list-pagination">
       
-    <span class="post-list-pagination-item post-list-pagination-item-current">Page 1 of 22</span>
+    <span class="post-list-pagination-item post-list-pagination-item-current">Page 1 of 19</span>
     
       <a href="/page/2/" class="post-list-pagination-item pure-button post-list-pagination-item-next">
         Older&nbsp;<i class="fa fa-angle-double-right"></i>

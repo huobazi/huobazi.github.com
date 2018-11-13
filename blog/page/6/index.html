@@ -59,39 +59,11 @@
             
             <div class="posts">
                 
-                <h1 class="content-subhead">25 Aug 2009</h1>
+                <h1 class="content-subhead">18 Jul 2009</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2009/08/25/hwo-to-reset-palm-centro/" class="post-title">Palm Centro(690)的软启动和硬启动</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                
-                                    <a class="post-category post-category-闲言碎语" href='/tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD'>闲言碎语</a>
-                                
-                                    <a class="post-category post-category-palm" href='/tags/palm'>palm</a>
-                                
-                                    <a class="post-category post-category-centro" href='/tags/centro'>centro</a>
-                                
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p><p>给老婆买了部centro，结果不知道如何软起和硬起，泡了半天吹友吧，得知如下</p>
-<pre>软启 下电池
-硬启 下电池后按住红色挂机件上电池 到PALM开机图不动后松开 按向上键</pre></p>
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">21 Aug 2009</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="https://huobazi.aspxboy.com/blog/2009/08/21/python-object-interning/" class="post-title">python的对象驻留</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2009/07/18/php-guid/" class="post-title">如何判断一个网站是不是php做的？</a>
 
                         <p class="post-meta">
                             
@@ -99,410 +71,34 @@
                                 
                                     <a class="post-category post-category-LAMP" href='/tags/lamp'>LAMP</a>
                                 
-                                    <a class="post-category post-category-python" href='/tags/python'>python</a>
+                                    <a class="post-category post-category-它山之石" href='/tags/%E5%AE%83%E5%B1%B1%E4%B9%8B%E7%9F%B3'>它山之石</a>
                                 
-                                    <a class="post-category post-category-对象驻留" href='/tags/%E5%AF%B9%E8%B1%A1%E9%A9%BB%E7%95%99'>对象驻留</a>
+                                    <a class="post-category post-category-奇技淫巧" href='/tags/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7'>奇技淫巧</a>
                                 
-                                    <a class="post-category post-category-字符串驻留" href='/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%A9%BB%E7%95%99'>字符串驻留</a>
-                                
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>在C#中为了提高性能使用了<a title="字符串驻留" href="http://www.google.com.sg/search?hl=zh-CN&amp;source=hp&amp;q=string+interning&amp;aq=f&amp;oq=" target="_blank">字符串驻留技术</a>，而在Python中不光是字符串，连整数都有使用类似的驻留技术哦，看下面的测试：</p>
-<pre>C:\Documents and Settings\Marble Wu&gt;python
-Python 2.6.2 (r262:71605, Apr 14 2009, 22:40:02) [MSC v.1500 32 bit (Intel)] on
-win32
-Type "help", "copyright", "credits" or "license" for more information.
-&gt;&gt;&gt; a=1
-&gt;&gt;&gt; b=1
-&gt;&gt;&gt; id(1)
-10446048
-&gt;&gt;&gt; id(a)
-10446048
-&gt;&gt;&gt; import sys
-&gt;&gt;&gt; sys.getrefcount(a)
-245
-&gt;&gt;&gt; sys.getrefcount(b)
-245
-&gt;&gt;&gt;</pre>
-<p><span style="font-family: Courier New; background-color: #eaf7ff;">其实也很容易理解，因为在Python<a title="Python的对象" href="http://wiki.woodpecker.org.cn/moin/PythonEssentialRef3" target="_blank">一切皆对象</a></span></p>             
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">19 Aug 2009</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="https://huobazi.aspxboy.com/blog/2009/08/19/netbeans-utf8-settings/" class="post-title">调整netbeans6.5设置使之默认使用utf-8存储文件</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                
-                                    <a class="post-category post-category-LAMP" href='/tags/lamp'>LAMP</a>
-                                
-                                    <a class="post-category post-category-netbeans" href='/tags/netbeans'>netbeans</a>
-                                
-                                    <a class="post-category post-category-utf-8" href='/tags/utf-8'>utf-8</a>
+                                    <a class="post-category post-category-PHP" href='/tags/php'>PHP</a>
                                 
                             
                         </p>
                     </header>
 
                     <div class="post-description">
-                        <p><p>netbeans默认使用ANSI存储的，我们一般希望它采用utf-8来存储，按照如下方法可以实现这个要求</p>
-<p>1)  找到你的Netbeans安装目录下的etc文件夹,如D:\Program Files\NetBeans 6.5\etc<br />2)  用文本编辑器打开netbeans.conf<br />3)  找到netbeans_default_options这一句(注意#号开头的行的是注释)<br />4)  在最后面加上一个空格,再加入-J-Dfile.encoding=UTF-8</p>
-<p>如我现在的设置:</p>
-<p></p>
+                        <p>可以当作<strong>简易</strong>判断站点是否用PHP架设。</p>
+<p>PHP_LOGO_GUID<br /><a href="http://www.php.net/?=PHPE9568F34-D428-11d2-A769-00AA001ACF42">http://www.php.net/?=PHPE9568F34-D428-11d2-A769-00AA001ACF42</a></p>
+<p>PHP_EGG_LOGO_GUID<br /><a href="http://www.php.net/?=PHPE9568F36-D428-11d2-A769-00AA001ACF42">http://www.php.net/?=PHPE9568F36-D428-11d2-A769-00AA001ACF42</a></p>
+<p>ZEND_LOGO_GUID<br /><a href="http://www.php.net/?=PHPE9568F35-D428-11d2-A769-00AA001ACF42">http://www.php.net/?=PHPE9568F35-D428-11d2-A769-00AA001ACF42</a></p>
+<p>PHP_CREDITS_GUID<br /><a href="http://www.php.net/?=PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000">http://www.php.net/?=PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000</a></p>
+<p>喜欢看愚人节的那个Logo就是第二个链接罗<br /><a href="http://www.php.net/">http://www.php.net/</a> 这个网址只是范例，只要是任一PHP的站点即可。</p>
+<p>来源:<a href="http://www.google.cn/search?client=aff-os-worldbrowser&amp;forid=1&amp;ie=utf-8&amp;oe=UTF-8&amp;hl=zh-CN&amp;q=%E4%B8%80%E4%BA%9B%E5%86%85%E5%AE%9A%E7%9A%84PHP%E7%89%B9%E6%AE%8AGUID" target="_blank">http://www.google.cn/search?client=aff-os-worldbrowser&amp;forid=1&amp;ie=utf-8&amp;oe=UTF-8&amp;hl=zh-CN&amp;q=%E4%B8%80%E4%BA%9B%E5%86%85%E5%AE%9A%E7%9A%84PHP%E7%89%B9%E6%AE%8AGUID</a></p>
+<p> </p>                
 
-<p></p>
-<pre># ${HOME} will be replaced by JVM user.home system property
-netbeans_default_userdir=&ldquo;${HOME}/.netbeans/6.5&rdquo;</p>
-
-<p># Options used by NetBeans launcher by default, can be overridden by explicit
-# command line switches:
-netbeans_default_options=&ldquo;-J-client -J-Xverify:none -J-Xss2m -J-Xms32m -J-XX:PermSize=32m -J-XX:MaxPermSize=200m -J-Dapple.laf.useScreenMenuBar=true -J-Dsun.java2d.noddraw=true -J-Dfile.encoding=UTF-8&rdquo;
-# Note that a default -Xmx is selected for you automatically.
-# You can find this value in var/log/messages.log file in your userdir.
-# The automatically selected value can be overridden by specifying -J-Xmx here
-# or on the command line.</p>
-
-<p># If you specify the heap size (-Xmx) explicitely, you may also want to enable
-# Concurrent Mark &amp; Sweep garbage collector. In such case add the following
-# options to the netbeans_default_options:
-# -J-XX:+UseConcMarkSweepGC -J-XX:+CMSClassUnloadingEnabled -J-XX:+CMSPermGenSweepingEnabled
-# (see <a href="http://wiki.netbeans.org/wiki/view/FaqGCPauses">http://wiki.netbeans.org/wiki/view/FaqGCPauses</a>)</p>
-
-<p># Default location of JDK, can be overridden by using &ndash;jdkhome &lt;dir&gt;:
-netbeans_jdkhome=&ldquo;C:\Program Files\Java\jre6&rdquo;</p>
-
-<p># Additional module clusters, using ${path.separator} (&lsquo;;&lsquo; on Windows or &rsquo;:&lsquo; on Unix):
-#netbeans_extraclusters=&ldquo;/absolute/path/to/cluster1:/absolute/path/to/cluster2&rdquo;</p>
-
-<p># If you have some problems with detect of proxy settings, you may want to enable
-# detect the proxy settings provided by JDK5 or higher.
-# In such case add -J-Djava.net.useSystemProxies=true to the netbeans_default_options.</pre></p>
                     </div>
                 </section>
                 
-                <h1 class="content-subhead">11 Aug 2009</h1>
+                <h1 class="content-subhead">17 Jul 2009</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2009/08/11/how-to-install-setuptools-on-windows-and-python26/" class="post-title">如何在windows xp下安装python2.6的setuptools</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                
-                                    <a class="post-category post-category-LAMP" href='/tags/lamp'>LAMP</a>
-                                
-                                    <a class="post-category post-category-Windows" href='/tags/windows'>Windows</a>
-                                
-                                    <a class="post-category post-category-python" href='/tags/python'>python</a>
-                                
-                                    <a class="post-category post-category-setuptools" href='/tags/setuptools'>setuptools</a>
-                                
-                                    <a class="post-category post-category-ez_setup" href='/tags/ez_setup'>ez_setup</a>
-                                
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p><p>最近开始学python，要安装很多egg文件，但发现<a href="http://pypi.python.org/pypi/setuptools#downloads">http://pypi.python.org/pypi/setuptools#downloads</a>没有python2.6的MS Windows installer版本，google了一把，用如下方法解决：</p>
-<p></p>
-
-<p></p>
-<p>1. 下载 setuptools-0.6c9.tar.gz<br />2. 下载 setuptools-0.6c9-py2.6.egg （放在同一个目录）<br />3. 用7-zip或者其他解压工具打开 setuptools-0.6c9.tar.gz ，并且把里面的 ez_setup.py 文件解压到同一个目录里。<br />4. 打开cmd窗口，并进入你刚才下载和解压文件的目录里。（例如： d:\downloads\）<br />5. 输入 python ez_setup.py setuptools-0.6c9-py2.6.egg</p>
-<p>提示如下:</p>
-<pre>E:\temp&gt;python ez_setup.py setuptools-0.6c9-py2.6.egg
-Processing setuptools-0.6c9-py2.6.egg
-Copying setuptools-0.6c9-py2.6.egg to c:\python26\lib\site-packages
-Adding setuptools 0.6c9 to easy-install.pth file
-Installing easy_install-script.py script to C:\Python26\Scripts
-Installing easy_install.exe script to C:\Python26\Scripts
-Installing easy_install-2.6-script.py script to C:\Python26\Scripts
-Installing easy_install-2.6.exe script to C:\Python26\Scripts</p>
-
-<p>Installed c:\python26\lib\site-packages\setuptools-0.6c9-py2.6.egg
-Processing dependencies for setuptools==0.6c9
-Finished processing dependencies for setuptools==0.6c9
-Processing setuptools-0.6c9-py2.6.egg
-Removing c:\python26\lib\site-packages\setuptools-0.6c9-py2.6.egg
-Copying setuptools-0.6c9-py2.6.egg to c:\python26\lib\site-packages
-setuptools 0.6c9 is already the active version in easy-install.pth
-Installing easy_install-script.py script to C:\Python26\Scripts
-Installing easy_install.exe script to C:\Python26\Scripts
-Installing easy_install-2.6-script.py script to C:\Python26\Scripts
-Installing easy_install-2.6.exe script to C:\Python26\Scripts</p>
-
-<p>Installed c:\python26\lib\site-packages\setuptools-0.6c9-py2.6.egg
-Processing dependencies for setuptools==0.6c9
-Finished processing dependencies for setuptools==0.6c9</p>
-
-<p>E:\temp&gt;</pre></p>
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">06 Aug 2009</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="https://huobazi.aspxboy.com/blog/2009/08/06/mulit-window-service-one-exe/" class="post-title">不改程序, 创建同一个程序不同服务名的方法</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                
-                                    <a class="post-category post-category-.Net其他" href='/tags/.net%E5%85%B6%E4%BB%96'>.Net其他</a>
-                                
-                                    <a class="post-category post-category-C#" href='/tags/c'>C#</a>
-                                
-                                    <a class="post-category post-category-Windows" href='/tags/windows'>Windows</a>
-                                
-                                    <a class="post-category post-category-Service" href='/tags/service'>Service</a>
-                                
-                                    <a class="post-category post-category-批处理" href='/tags/%E6%89%B9%E5%A4%84%E7%90%86'>批处理</a>
-                                
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p><p>以往写windows service都需要个ProjectInstaller和serviceInstaller并配置serviceName，这样build出来的exe在install成windows service时我们会：</p>
-<pre>@echo 安装WindowService
-@Set Path=C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727;
-@Set svn_dir=%cd%
-installutil %svn_dir%\MyServiceDemo.exe
-pause
-@echo 成功！</pre>
-<p>但服务名被我们编译在程序里了，如果这个exe想被装很多次服务怎么办呢？<br />今天从同事Martin Jia那里学来一个好方法，可以不用ProjectInstaller、serviceInstaller这种东西，直接安装exe为windows service并在安装时指定服务名称</p>
-<p></p>
-
-<p></p>
-<p>安装服务：</p>
-<pre>sc create 服务名 binpath= &rdquo;路径&rdquo; displayname= &rdquo;显示名&rdquo;</pre>
-<p>卸载服务</p>
-<pre>sc delete 服务名</pre></p>
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">02 Aug 2009</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="https://huobazi.aspxboy.com/blog/2009/08/02/wordpress-from-windows-to-linux/" class="post-title">Wordpress从windows上迁移到linux上要注意路径设置</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                
-                                    <a class="post-category post-category-LAMP" href='/tags/lamp'>LAMP</a>
-                                
-                                    <a class="post-category post-category-Wordpress" href='/tags/wordpress'>Wordpress</a>
-                                
-                                    <a class="post-category post-category-LAMP" href='/tags/lamp'>LAMP</a>
-                                
-                                    <a class="post-category post-category-wp" href='/tags/wp'>wp</a>
-                                
-                                    <a class="post-category post-category-linux" href='/tags/linux'>linux</a>
-                                
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>今天在localhost上用xampp装了个<a title="Wordpress" href="http://www.wp.com" target="_blank">wordpress</a> 2.8.2,本地导入原来<a title="www.codeplex.com/blogengine" href="http://www.codeplex.com/blogengine" target="_blank">blogengine.net</a>的数据调整好，没有任何问题，就<a title="帝国备份王" href="http://www.phome.net/product/Ebak.html" target="_blank">用帝国备份王</a>打包数据在远程linunx上恢复，ftp上传本地站点内的文件到服务器对应目录，修改wp-config.php，兴冲冲的去访问首页，发现打不开，任何跟wp有关的页面都打不开，html可以打开和wp无关的页面比如探针是可以打开的，郁闷啊，检查了好久配置文件没有任何问题，思前想后想不通啊。本地和远程只是web服务器不同，本地是apache远程是nginx，不会是因为这个吧，其他几个站点都是这么弄的啊，是在想不到什么原因，</p>
-<p>就打开phpmyadmin随便翻，翻到wp-options表，发现里面有几个站点域名啊的字段，倒上去的数据是本地的，玉米对应不上，修改之，还是没好，仍然打不开，再翻最后发现upload_path这个字段的设置时E:\xxx\yyy\zzz\这样的尝试修改成linux内的/home/usr/local/vhost/xxx/yyy/zzz，再访问首页，OK啦，估计wp在页面打开时要校验这些选项，而他不认识E:\XX\YY\ZZ这样的路径，就报错了。</p>
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">02 Aug 2009</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="https://huobazi.aspxboy.com/blog/2009/08/02/bizcn-dns-hostname/" class="post-title">商务中国的DNS解析，主机名不许有下划线</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                
-                                    <a class="post-category post-category-闲言碎语" href='/tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD'>闲言碎语</a>
-                                
-                                    <a class="post-category post-category-DNS" href='/tags/dns'>DNS</a>
-                                
-                                    <a class="post-category post-category-域名" href='/tags/%E5%9F%9F%E5%90%8D'>域名</a>
-                                
-                                    <a class="post-category post-category-商务中国" href='/tags/%E5%95%86%E5%8A%A1%E4%B8%AD%E5%9B%BD'>商务中国</a>
-                                
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p><p>就在刚才，就在刚才哦，本博客突然突然的就不能访问了，玉米是上午中国注册的，使用的是商务中国的dns服务，使用同样dns服务器的域名都可以访问，就这个突然离奇的不能访问了，去商务中国提了个ticket,过了不一会儿收到邮件说是已经回复了这个问题，赶紧登陆一看</p>
-<p></p>
-
-<p></p>
-<p></p>
-<hr size="1">
-<table border="0" cellspacing="1" cellpadding="3" width="90%" align="center" bgcolor="#dbebf7"><tbody>
-<tr>
-<td width="20%" valign="top" bgcolor="#afd1eb">问题序号:  </td>
-<td width="39%" valign="top">298804</td>
-<td width="15%" valign="top" bgcolor="#afd1eb">处理状态:</td>
-<td width="26%" valign="top">问题已回复</td>
-</tr>
-<tr>
-<td width="20%" valign="top" bgcolor="#afd1eb">您的问题:</td>
-<td colspan="3" valign="top" bgcolor="#ffffff"><span style="color: #ff0000;">dns挂了</span></td>
-</tr>
-<tr>
-<td width="20%" valign="top" bgcolor="#afd1eb">相关域名:  </td>
-<td width="39%" valign="top">aspxboy.com</td>
-<td width="15%" valign="top" bgcolor="#afd1eb">相关IP:</td>
-<td width="26%" valign="top"> </td>
-</tr>
-<tr>
-<td width="20%" valign="top" bgcolor="#afd1eb">问题关键字:</td>
-<td colspan="3" valign="top" bgcolor="#ffffff"> </td>
-</tr>
-<tr>
-<td width="20%" valign="top" bgcolor="#afd1eb">问题时间:</td>
-<td colspan="3" valign="top" bgcolor="#ffffff">2009-08-02 15:42:26.0</td>
-</tr>
-<tr>
-<td width="20%" valign="top" bgcolor="#afd1eb">问题内容:</td>
-<td colspan="3" valign="top" bgcolor="#ffffff">其他玉米ok，就这个无法解析。</td>
-</tr>
-<tr>
-<td width="20%" valign="top" bgcolor="#afd1eb">答复时间:</td>
-<td colspan="3" valign="top" bgcolor="#ffffff">2009-08-02 16:06:47.0</td>
-</tr>
-<tr>
-<td width="20%" valign="top" bgcolor="#afd1eb">答复问题:</td>
-<td colspan="3" valign="top" bgcolor="#ffffff"><span style="color: #ff0000;">您好！经查看您其中一条解析记录错误导致，mail_boy 61.139.70.3 域名解析不能有下划线的,请删除该条解析记录可恢复，谢谢!</span></td>
-</tr>
-<tr><td colspan="4"> </td></tr>
-</tbody></table>
-<p></p>
-<hr size="1">
-<br />则登陆商务的<a title="http://www.bizcn.com/domainportal" href="http://www.bizcn.com/domainportal" target="_blank">domainportal</a>删除该条，嘿嘿，还真的好了，不过&hellip;.不过 以前可是好好的呀，猜测就在刚才商务中国的DNS系统可能升级了。</p>
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">30 Jul 2009</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="https://huobazi.aspxboy.com/blog/2009/07/30/how-to-determine-whether-an-type-is-nullable-and-get-the-underlying-type/" class="post-title">如何判断一个类型是nullable类型，并得知它的原始类型</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                
-                                    <a class="post-category post-category-ORM" href='/tags/orm'>ORM</a>
-                                
-                                    <a class="post-category post-category-.Net其他" href='/tags/.net%E5%85%B6%E4%BB%96'>.Net其他</a>
-                                
-                                    <a class="post-category post-category-代码片段" href='/tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5'>代码片段</a>
-                                
-                                    <a class="post-category post-category-Nullable" href='/tags/nullable'>Nullable</a>
-                                
-                                    <a class="post-category post-category-泛型" href='/tags/%E6%B3%9B%E5%9E%8B'>泛型</a>
-                                
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p><p>有些时候我们需要判断某个类型是否是Nullable类型，并且可能需要知道它的原始类型，<br />比如在做些ORM相关工作时，就需要这方面的应用，如下代码使用可以实现这个要求</p>
-<p></p>
-
-<p></p>
-<pre>class Program
-    {
-        static void Main( string[] args )
-        {
-            RL( );</p>
-
-<pre><code>        Type type =  typeof( DateTime? );
-        Type originalType;
-
-        if ( IsNullable( type , out originalType ) )
-        {
-            WL( originalType.ToString( ) );
-        }
-        else
-        {
-            WL( &quot;NOT Nullable&quot; );
-        }
-
-        type =  typeof( DateTime );
-
-        if ( IsNullable( type , out originalType ) )
-        {
-            WL( originalType.ToString( ) );
-        }
-        else
-        {
-            WL( &quot;NOT Nullable&quot; );
-        }
-
-        RL( );
-    }
-
-    private static bool IsNullable( Type p , out Type originalType )
-    {
-        bool result = false;
-
-        if ( p.IsGenericType &amp;amp;&amp;amp; p.GetGenericTypeDefinition( ) == typeof( Nullable&amp;lt;&amp;gt; ) )
-        {
-            result = true;
-            originalType = p.GetGenericArguments( )[0];
-        }
-        else
-        {
-            originalType = null;
-        }
-
-        return result;
-    }
-
-    #region Helper methods
-
-    private static void WL( object text , params object[] args )
-    {
-        Console.WriteLine( text.ToString( ) , args );
-    }
-
-    private static void RL( )
-    {
-        Console.ReadLine( );
-    }
-
-    private static void Break( )
-    {
-        System.Diagnostics.Debugger.Break( );
-    }
-
-    #endregion
-}
-</code></pre>
-
-<pre></pre><p></p></pre>
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">26 Jul 2009</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="https://huobazi.aspxboy.com/blog/2009/07/26/2009-mvp/" class="post-title">拆箱记</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2009/07/17/same-name-element-in-one-page/" class="post-title">知识死角,name相同的html element</a>
 
                         <p class="post-meta">
                             
@@ -510,39 +106,119 @@ pause
                                 
                                     <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
                                 
-                                    <a class="post-category post-category-Microsoft" href='/tags/microsoft'>Microsoft</a>
+                                    <a class="post-category post-category-前端开发" href='/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91'>前端开发</a>
                                 
-                                    <a class="post-category post-category-MVP" href='/tags/mvp'>MVP</a>
+                                    <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
+                                
+                                    <a class="post-category post-category-C#" href='/tags/c'>C#</a>
                                 
                             
                         </p>
                     </header>
 
                     <div class="post-description">
-                        <p>大洋彼岸寄来了一个纸箱</p>
-<p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/1.jpg" alt=""></p>
-<p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/2.jpg" alt=""></p>
-<p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/3.jpg" alt=""></p>
-<p>哇，里面装了一个老外宅男</p>
-<p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/4.jpg" alt=""></p>
-<p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/5.jpg" alt=""></p>
-<p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/6.jpg" alt=""></p>
-<p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/7.jpg" alt=""></p>
-<p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/8.jpg" alt=""></p>
-<p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/9.jpg" alt=""></p>
-<p>MVP奖杯</p>
-<p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/10.jpg" alt=""></p>
-<p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/11.jpg" alt=""></p>
-<p>MVP证书</p>
-<p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/12.jpg" alt=""></p>
+                        <p><p>今天在帮同事调程序时发现了这个死角<br />现象如下，没有任何输入的textarea提交到服务端后得到的值总是&rdquo;,&rdquo;<br />找了半天发现是因为页面上两个textarea的name相同，以前只知道页面上radio的name相同则是一个组，name相同的<br />的checkbox提交后是以逗号分隔值的，于是做了下面代码的试验，发现任何name相同的element提交到服务端都会得到逗号分隔的值，以前还不知道这个，汗</p>
+<p></p>
+
+<p></p>
+<code><span style="color: #000000">
+&lt;%@ Page Language=&ldquo;C#&ldquo; %&gt;<br /><br />&lt;script runat=&ldquo;server&rdquo; languag=&ldquo;c#&rdquo;&gt;
+<br />    string textboxValue = string.Empty;
+<br />    string radioValue = string.Empty;
+<br />    string checkboxValue = string.Empty;
+<br />    string selectValue = string.Empty;
+<br />    string textareaValue = string.Empty;
+<br />    void Page_Load(object obj , EventArgs args)
+<br />    {
+<br />        placeHolder.Visible = false;
+<br />        System.Web.HttpContext ctx = System.Web.HttpContext.Current;
+<br />        if(ctx.Request.HttpMethod == &rdquo;POST&rdquo;)
+<br />        {
+<br />            placeHolder.Visible = true;
+<br />            textboxValue = ctx.Request.Form[&ldquo;textbox&rdquo;];
+<br />            radioValue = ctx.Request.Form[&ldquo;radio&rdquo;];
+<br />            checkboxValue = ctx.Request.Form[&ldquo;checkbox&rdquo;];
+<br />            selectValue = ctx.Request.Form[&ldquo;select&rdquo;];
+<br />            textareaValue = ctx.Request.Form[&ldquo;textarea&rdquo;];
+<br />        }
+<br />    }
+<br />&lt;/script&gt;<br /><br />&lt;!DOCTYPE html PUBLIC &rdquo;-//W3C//DTD XHTML 1.0 Transitional//EN&rdquo; &rdquo;<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</a>
+<br />&lt;html xmlns=&ldquo;<a href="http://www.w3.org/1999/xhtml&quot; &gt;">http://www.w3.org/1999/xhtml&quot; &gt;</a>
+<br />&lt;head&gt;
+<br />&lt;style&gt;
+<br />body, h1, h2, h3, h4, h5, h6, hr, p, ul, ol, li,pre,fieldset, lengend, button, input, textarea,{
+<br />    margin: 0;
+<br />    padding: 0;
+<br />}
+<br />body,button, input, select, textarea {
+<br />    font: 13px/1 Tahoma, Helvetica, Arial, &rdquo;\5b8b\4f53&rdquo;, sans-serif;
+<br />}
+<br /><br />#page{
+<br />    padding:10px 30px 10px 30px;
+<br />}
+<br />#s{
+<br />color:red;
+<br />}
+<br />input,select,textarea{
+<br />    clear:both;
+<br />    float:left;
+<br />    margin:5px;
+<br />}
+<br /><br />pre {
+<br />    overflow: auto;
+<br />    border: 1px dotted #281;
+<br />    background-color: #eee;
+<br />    padding: 2px 20px 20px 10px;
+<br />}
+<br />fieldset{
+<br />    line-height:200%;
+<br />}
+<br /><br />&lt;/style&gt;
+<br />&lt;/head&gt;
+<br />&lt;body&gt;<br /><br />&lt;div id=&ldquo;page&rdquo;&gt;<br /><br />&lt;div id=&ldquo;placeHolder&rdquo; runat=&ldquo;server&rdquo;&gt;    
+<br />            &lt;string id=&ldquo;s&rdquo;&gt;Post Data:&lt;/string&gt;<br /><br />&lt;pre style=&ldquo;max-height:30px;&rdquo;&gt;
+<br />textboxvalue:&lt;%= textboxValue%&gt;
+<br />radioValue:&lt;%= radioValue%&gt;
+<br />checkboxValue:&lt;%= checkboxValue%&gt;
+<br />selectValue:&lt;%=selectValue%&gt;
+<br />textareaValue:&lt;%= textareaValue%&gt;&lt;/pre&gt;<br /><br />&lt;/div&gt;<br /><br />&lt;form id=&ldquo;aspnetForm&rdquo; method=&ldquo;post&rdquo;&gt;
+<br />                &lt;fieldset&gt;       
+<br />                  &lt;legend&gt;Test&lt;/legend&gt;              
+<br />                &lt;input type=&ldquo;text&rdquo; name=&ldquo;textbox&rdquo; value=&ldquo;a&rdquo;/&gt; 
+<br />                &lt;input type=&ldquo;text&rdquo; name=&ldquo;textbox&rdquo; value=&ldquo;a&rdquo;/&gt;
+<br />                &lt;input type=&ldquo;text&rdquo; name=&ldquo;textbox&rdquo; value=&ldquo;a&rdquo;/&gt;
+<br />                &lt;input type=&ldquo;radio&rdquo; name=&ldquo;radio&rdquo; value=&ldquo;a&rdquo; /&gt;
+<br />                &lt;input type=&ldquo;radio&rdquo; name=&ldquo;radio&rdquo; value=&ldquo;a&rdquo; /&gt;
+<br />                &lt;input type=&ldquo;radio&rdquo; name=&ldquo;radio&rdquo; value=&ldquo;a&rdquo; checked=&ldquo;checked&rdquo; /&gt;
+<br />                &lt;input type=&ldquo;checkbox&rdquo; name=&ldquo;checkbox&rdquo; value=&ldquo;a&rdquo; checked=&ldquo;checked&rdquo; /&gt;
+<br />                &lt;input type=&ldquo;checkbox&rdquo; name=&ldquo;checkbox&rdquo; value=&ldquo;a&rdquo; checked=&ldquo;checked&rdquo; /&gt;
+<br />                &lt;input type=&ldquo;checkbox&rdquo; name=&ldquo;checkbox&rdquo; value=&ldquo;a&rdquo; checked=&ldquo;checked&rdquo; /&gt;
+<br />                &lt;select name=&ldquo;select&rdquo;&gt;
+<br />                                   &lt;option value=&ldquo;a&rdquo;&gt;a&lt;/option&gt;
+<br />                &lt;/select&gt;
+<br />                &lt;select name=&ldquo;select&rdquo;&gt;
+<br />                                   &lt;option value=&ldquo;a&rdquo;&gt;a&lt;/option&gt;
+<br />                &lt;/select&gt;
+<br />                &lt;select name=&ldquo;select&rdquo;&gt;
+<br />                                   &lt;option value=&ldquo;a&rdquo;&gt;a&lt;/option&gt;
+<br />                &lt;/select&gt;
+<br />                &lt;textarea name=&ldquo;textarea&rdquo;&gt;a&lt;/textarea&gt;
+<br />                &lt;textarea name=&ldquo;textarea&rdquo;&gt;a&lt;/textarea&gt;
+<br />                &lt;textarea name=&ldquo;textarea&rdquo;&gt;a&lt;/textarea&gt;
+<br />                &lt;input type=&ldquo;submit&rdquo; value=&ldquo;Do PostBack&rdquo; /&gt;
+<br />            &lt;/fieldset&gt;
+<br />            &lt;/form&gt;
+<br />    &lt;/div&gt;<br /><br />&lt;/body&gt;
+<br />&lt;/html&gt;</span>
+</code></p>
                     </div>
                 </section>
                 
-                <h1 class="content-subhead">21 Jul 2009</h1>
+                <h1 class="content-subhead">15 Jul 2009</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2009/07/21/how-to-send-an-email-with-attachments/" class="post-title">Asp.Net发邮件，如何发送附件</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2009/07/15/make-a-deep-clone-of-the-object/" class="post-title">C#中如何深度克隆一个对象？</a>
 
                         <p class="post-meta">
                             
@@ -558,48 +234,332 @@ pause
                                 
                                     <a class="post-category post-category-代码片段" href='/tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5'>代码片段</a>
                                 
-                                    <a class="post-category post-category-邮件" href='/tags/%E9%82%AE%E4%BB%B6'>邮件</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p>如何深度克隆一个对象？</p>
+<p>普通版:</p>
+<pre>
+        public static object CloneObject( object obj )
+        {
+            using ( MemoryStream memStream = new MemoryStream( ) )
+            {
+                BinaryFormatter binaryFormatter = new BinaryFormatter( null ,
+                     new StreamingContext( StreamingContextStates.Clone ) );
+                binaryFormatter.Serialize( memStream , obj );
+                memStream.Seek( 0 , SeekOrigin.Begin );
+                return binaryFormatter.Deserialize( memStream );
+            }
+        }
+</pre>
+<p>泛型版：</p>
+<p></p>
+
+<p></p>
+<pre>public  static  T  Clone&lt;T&gt;(T  obj)
+{
+        T  ret  =  default(T);
+        if  (obj  !=  null)
+        {
+                XmlSerializer  cloner  =  new  XmlSerializer(typeof(T));
+                MemoryStream  stream  =  new  MemoryStream();
+                cloner.Serialize(stream,  obj);
+                stream.Seek(0,  SeekOrigin.Begin);
+                ret  =  (T)cloner.Deserialize(stream);
+        }
+        return  ret;
+}</pre></p>
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">09 Jul 2009</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2009/07/09/nginx-typecho-rewrite/" class="post-title">nginx下typecho的rewrite</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                
+                                    <a class="post-category post-category-LAMP" href='/tags/lamp'>LAMP</a>
+                                
+                                    <a class="post-category post-category-Typecho" href='/tags/typecho'>Typecho</a>
+                                
+                                    <a class="post-category post-category-LAMP" href='/tags/lamp'>LAMP</a>
+                                
+                                    <a class="post-category post-category-nginx" href='/tags/nginx'>nginx</a>
+                                
+                                    <a class="post-category post-category-Rewirte" href='/tags/rewirte'>Rewirte</a>
+                                
+                                    <a class="post-category post-category-代码片段" href='/tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5'>代码片段</a>
                                 
                             
                         </p>
                     </header>
 
                     <div class="post-description">
-                        <p><p>使用如下代码可以发送附件</p>
-<pre>MailMessage mail = new MailMessage();
-mail.To = &rdquo;me@mycompany.com&rdquo;;
-mail.From = &rdquo;you@yourcompany.com&rdquo;;
-mail.Subject = &rdquo;this is a test email.&ldquo;;
-mail.Body = &rdquo;this is my test email body.&ldquo;;
-MailAttachment attachment = new MailAttachment( Server.MapPath( &rdquo;mailTest.txt&rdquo; ) ); //create the attachment
-mail.Attachments.Add( attachment );
-SmtpMail.SmtpServer = &rdquo;localhost&rdquo;; 
-SmtpMail.Send( mail );</pre>
-<p>使用如下代码可以在用户上传附件后发生邮件:</p>
-<p></p>
+                        <p>导数据到typecho的时候是在localhost的windows xp系统上用的apache,部署时用的是nginx<br />先是发现无法登陆按照<a href="http://forum.typecho.org/viewtopic.php?f=4&amp;t=238&amp;p=852&amp;hilit=nginx#p852" target="_blank">这篇帖子</a>内的方法配置了vhost.conf，发现可以登陆了，接着又出现了<br />无法编辑post的问题，具体症状见<a href="http://forum.typecho.org/viewtopic.php?f=4&amp;t=270" target="_blank">这篇帖子</a>,甚是郁闷啊，google+baidu 找到一片描写wp的<br />rewrite的<a href="http://hi.baidu.com/3322/blog/item/95d254e7594a012bb93820bb.html" target="_blank">帖子</a>,因typecho与wp笔记像，抱着试试看的想法,在测试站点试验了一下，嘿嘿<br />能用，转寄在此，备忘</p>
+<pre>
+location / {
+        index index.html index.php;
+        if (-f $request_filename/index.html){
+            rewrite (.*) $1/index.html break;
+        }
+        if (-f $request_filename/index.php){
+            rewrite (.*) $1/index.php;
+        }
+        if (!-f $request_filename){
+            rewrite (.*) /index.php;
+        }
+    }
+</pre>
+<p>同时感谢<a class="titlink" title="Atrhis的空间 http://hi.baidu.com/3322" href="http://huobazi.aspxboy.com/3322">Atlantis</a>  :-)</p>
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">04 Jul 2009</h1>
+                <section class="post">
+                    <header class="post-header">
 
-<p></p>
-<pre>if  (FileUpload1.HasFile)
-{
-    string  toAddress  =  &rdquo;you@yourprovider.com&rdquo;;
-    string  fromAddress  =  you@yourprovider.com  (2);
-    string  mailServer  =  &rdquo;smtp.yourprovider.com&rdquo;;</p>
+                        <a href="https://huobazi.aspxboy.com/blog/2009/07/04/myblog-from-wordpress-to-typecho/" class="post-title">从Wordpress转到Typecho了</a>
 
-<p>    MailMessage  myMailMessage  =  new  MailMessage();</p>
+                        <p class="post-meta">
+                            
+                            
+                                
+                                    <a class="post-category post-category-LAMP" href='/tags/lamp'>LAMP</a>
+                                
+                                    <a class="post-category post-category-Typecho" href='/tags/typecho'>Typecho</a>
+                                
+                                    <a class="post-category post-category-LAMP" href='/tags/lamp'>LAMP</a>
+                                
+                            
+                        </p>
+                    </header>
 
-<p>    myMailMessage.To.Add(toAddress);
-    myMailMessage.From  =  new  MailAddress(fromAddress);
-    myMailMessage.Subject  =  &rdquo;Test  Message&rdquo;;</p>
+                    <div class="post-description">
+                        <p>WP比较占资源，今天把博客又转到Typecho了，忙乎了大半夜(现在接近临晨4点)，东拼西凑，南抄北挪，终于啊，皮肤基本上搞定了，发现Typecho的皮肤也蛮简单的，默认皮肤就七八个文件，照着改也蛮容易入门的。<br />郁闷的是现在还是在localhost上，自己点击，速度超好，刷刷刷的哦。还有就是Typecho这个版本（0.6）默认没有WYSIWYG的编辑器，只这篇post就是手写发出的，不过这样也好，以前在博客园用编辑器编辑的博客有时候因皮肤调整，会出现编辑器的html不符合皮肤，撑的页面不好看。<br />最搞的是我一直没找到如何处理分类排序的功能，还去官方论坛发了个贴（标准的新手贴），被告知按住拖动就OK了...<br />(*^__^*) 嘻嘻……</p>
+<p>在此感谢所有TV  感谢<a href="http://cnblogs.com" target="_self">博客园</a>  感谢<a href="http://www.typecho.org" target="_blank">Typecho</a>开发团队  感谢<a href="http://www.wp.com" target="_blank">Wordpress</a>  感谢<a href="http://www.getpaint.net/" target="_self">Paint.Net</a>  感谢<a href="http://www.photonvps.com/billing/aff.php?aff=011" target="_blank">PhotonVPS</a></p>
+<p>感谢...</p>                
 
-<p>    string  fileName  =  Path.GetFileName(FileUpload1.PostedFile.FileName);
-    Attachment  myAttachment  =  
-                                  new  Attachment(FileUpload1.FileContent,  fileName);
-    myMailMessage.Attachments.Add(myAttachment);</p>
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">21 Jun 2009</h1>
+                <section class="post">
+                    <header class="post-header">
 
-<p>    SmtpClient  mySmtpClient  =  new  SmtpClient(mailServer);</p>
+                        <a href="https://huobazi.aspxboy.com/blog/2009/06/21/my-blog-moved-to-wp/" class="post-title">博客园到Wordpress搬家成功！</a>
 
-<p>    mySmtpClient.Send(myMailMessage);
-}</pre></p>
+                        <p class="post-meta">
+                            
+                            
+                                
+                                    <a class="post-category post-category-LAMP" href='/tags/lamp'>LAMP</a>
+                                
+                                    <a class="post-category post-category-闲言碎语" href='/tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD'>闲言碎语</a>
+                                
+                                    <a class="post-category post-category-.Net其他" href='/tags/.net%E5%85%B6%E4%BB%96'>.Net其他</a>
+                                
+                                    <a class="post-category post-category-奇技淫巧" href='/tags/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7'>奇技淫巧</a>
+                                
+                                    <a class="post-category post-category-Wordpress" href='/tags/wordpress'>Wordpress</a>
+                                
+                                    <a class="post-category post-category-Blogging" href='/tags/blogging'>Blogging</a>
+                                
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>终于把在博客园的博客的数据导入到Wordpress内了，包括随笔/文章，图片,标签，评论等，是写了两个C# console程序做到的，程序我传到博客园了，如果有需要的朋友可以试试。但请注意，要自己在博客园后台备份RSS文件放到Reader的Data目录内，设置为编译选项为永远复制，运行后会生成一个Entry.xml并且把博客内的图片和分类、Tag、评论等抓下来，然后将此xml文件拷贝到Writer内，在代码内修改一下你的Wordress的数据库连接，然后跑一下Writer，就可以完成数据导入到Wordpress了，时间匆忙，代码写的很乱，有些地方是针对本人需求处理的，如果你想要直接运行此程序完成你的博客园博客到Wordpress的转换，<strong>那是不可能滴！</strong>你一定要有简单的C#调试基础哦。</p>
+<p><a href="http://files.cnblogs.com/huobazi/MyBlogTools.rar">http://files.cnblogs.com/huobazi/MyBlogTools.rar</a></p>              
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">22 Apr 2009</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2009/04/22/jiabin/" class="post-title">家滨面对面</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                
+                                    <a class="post-category post-category-闲言碎语" href='/tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD'>闲言碎语</a>
+                                
+                                    <a class="post-category post-category-Newegg" href='/tags/newegg'>Newegg</a>
+                                
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>2009.04.22新任CEO<a href="http://baike.baidu.com/view/172656.htm" target="_blank">杜家滨</a>先生莅临西安，我有幸获邀参加“嘉宾面对面”活动。</p>
+<p>前辈很随和，和我们聊了他的职业生涯，从微软中国到思科，到<a href="http://www.newegg.com" target="_blank">新蛋</a>就当前电子商务形式以及对于<a href="http://www.newegg.com.cn" target="_blank">中国新蛋网</a>的未来，很认真的听却了大家对目前中国区以及<a href="http://www.newegg.com.cn" target="_blank">中国新蛋网</a>的看法。并现场开通了一个邮箱留给大家，诚恳的希望大家有什么好点子，都能及时通过这个邮箱与他分享。</p>
+<p>直至聚会结束，气氛都非常融洽，前辈表现出一个职业经理人强大的亲和力！</p>               
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">19 Jan 2009</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2009/01/19/2008-me/" class="post-title">2008我的收获了3个本儿,一堆朋友</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                
+                                    <a class="post-category post-category-闲言碎语" href='/tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD'>闲言碎语</a>
+                                
+                                    <a class="post-category post-category-Newegg" href='/tags/newegg'>Newegg</a>
+                                
+                                    <a class="post-category post-category-Me" href='/tags/me'>Me</a>
+                                
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>2008 我收获了3个本儿 结婚证，Microsoft MVP证书，newegg中国区优秀员工证书</p>
+<p><img id="ViewPicture1_GalleryImage" style="width: 640px; height: 480px; border-width: 0px; border-color: black;" src="/images/hbz_images/2008_me.JPG" alt="2008我的收获"></p>
+
+<p>2008 我收获了Smith,Jackie,Tom,Robert,Steven Xu, Steven Liu,Ocean,Jmebo,Martin,Henson,Seaver &amp;&amp; Ivy,Allen,Wind,Winnie,Windy&amp;&amp;Tony,Lily,Gamal,Vivian,Jerry等一批优秀的同事,也收获了许多来自网络（博客园,csdn社区,落伍者等)上的很多朋友，我相信2009我的朋友们和我会收获更多更多。</p>
+<p>要回家了，10日内少上网了，在此</p>
+<p><span style="font-size: large;">祝我的朋友们新的一年里心想事成，事业牛牛！！！</span></p>
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">01 Dec 2008</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2008/12/01/asp-net-mvc-route-config/" class="post-title">把ASP.NET MVC的路由利用配置维护起来</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                
+                                    <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
+                                
+                                    <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
+                                
+                                    <a class="post-category post-category-MVC" href='/tags/mvc'>MVC</a>
+                                
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>配置大多就是文件配置或者数据库配置了</p>
+<br /><p>ref:</p>
+<br /><p><a href="http://mnour.blogspot.com/2008/11/mvc-routing-using-custom-configuration.html">http://mnour.blogspot.com/2008/11/mvc-routing-using-custom-configuration.html</a></p>
+<br /><p><a href="/QLeelulu/archive/2008/11/24/1340212.html">http://www.cnblogs.com/QLeelulu/archive/2008/11/24/1340212.html</a></p>
+<br /><p><a href="http://www.iansuttle.com/blog/post/ASPNET-MVC-Store-Routes-in-the-Database.aspx">http://www.iansuttle.com/blog/post/ASPNET-MVC-Store-Routes-in-the-Database.aspx</a></p>
+<br /><p>我觉得加上做webform时常用的PageAlias和BuildUrl会更好用些</p>               
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">01 Nov 2008</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2008/11/01/hf/" class="post-title">哈佛经典案例，赶集卖猪记 </a>
+
+                        <p class="post-meta">
+                            
+                            
+                                
+                                    <a class="post-category post-category-闲言碎语" href='/tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD'>闲言碎语</a>
+                                
+                                    <a class="post-category post-category-推荐阅读" href='/tags/%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB'>推荐阅读</a>
+                                
+                                    <a class="post-category post-category-它山之石" href='/tags/%E5%AE%83%E5%B1%B1%E4%B9%8B%E7%9F%B3'>它山之石</a>
+                                
+                                    <a class="post-category post-category-卖猪" href='/tags/%E5%8D%96%E7%8C%AA'>卖猪</a>
+                                
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>哈佛经典案例，赶集卖猪记（次贷危机加强篇）<br />　　<br />　　这是目前为止关于次贷危机最通俗易懂的版本了。<br />　　<br />　　1<br />　　<br />　　大家都知道这个案例：<br />　　<br />　　一男赶集卖猪，天黑遇雨，二十头猪未卖成，到一农家借宿。<br />　　<br />　　少妇说：家里只一人不便。<br />　</p>
+<p>　<br />　　男：求你了大妹子，给猪一头。<br />　　<br />　　女：好吧，但家只有一床。<br />　　<br />　　男：我也到床上睡，再给猪一头。<br />　　<br />　　女：同意。<br />　　<br />　　半夜男与女商量，我到你上面睡，女不肯。<br />　　<br />　　男：给猪两头。<br />　　<br />　　女允，要求上去不能动。<br />　　<br />　　少顷，男忍不住，央求动一下，女不肯。<br />　　<br />　　男：动一下给猪两头。女同意。<br />　　<br />　　男动了八次停下，女问为何不动？<br />　　<br />　　男说猪没了。<br />　　<br />　　女小声说：要不我给你猪……<br />　　<br />　　天亮后，男吹着口哨赶30头（含少妇家的10头）猪赶集去了……<br />　　<br />　　[ 哈佛导师评论 ]<br />　　<br />　　要发现用户潜在需求，前期必须引导，培养用户需求，因此产生的投入是符合发展规律的。<br />　　<br />　　2<br />　　<br />　　另一男得知此事，决意如法炮制，遂赶集卖猪，天黑遇雨，二十头猪未卖成，到一农家借宿<br />　　<br />　　少妇说：家里只一人不便。<br />　　<br />　　男：求你了大妹子，给猪一头<br />　　<br />　　女：好吧，但家只有一床。<br />　　<br />　　男：我也到床上睡，再给猪一头。<br />　　<br />　　女：同意。<br />　　<br />　　半夜男商女，我到你上面睡，女不肯。<br />　　<br />　　男：给猪两头。<br />　　<br />　　女允，要求上去不能动。<br />　　<br />　　少顷，男忍不住，央求动一下，女不肯。<br />　　<br />　　男：动一下给猪两头。女同意。<br />　　<br />　　男动了七次停下，女问为何不动？<br />　　<br />　　男说：完事了～～～女：......<br />　　<br />　　天亮后，男低著头赶2头猪赶集去了......<br />　　<br />　　[ 哈佛导师评论 ]<br />　　<br />　　要结合企业自身规模进行谨慎投资，谨防资金链断裂问题<br />　　<br />　　3<br />　　<br />　　又一男得知此事，决意如法炮制兼吸取教训，遂先用一头猪去换一粒伟哥，事必，天亮后，男吹着口哨赶38头（含少妇家的18头）猪赶集去了……<br />　　<br />　　[ 哈佛导师评论 ]<br />　　<br />　　企业如果获得金融资本的帮助，自身经营能力将得到倍增。<br />　　<br />　　4<br />　　<br />　　知道此法男多，伟哥供不应求，逐渐要2头，3头猪换一粒伟哥。<br />　　<br />　　[ 哈佛导师评论 ]<br />　　<br />　　这就是通货膨胀。<br />　　<br />　　5<br />　　<br />　　当伟哥价格涨到16头猪一颗的时候...<br />　　<br />　　[ 哈佛导师评论 ]<br />　　<br />　　该男已经进入边际成本，除了拥有对自身能力的自信和未来良好愿望以外，实际现猪流已经为零。<br />　　<br />　　6<br />　　<br />　　但换猪男越来越多，卖伟哥的决定，扩展生产能力，推出一种次级伟哥，如果你缺一头猪，只要你承诺可以到该女房中一夜，就可以先借，事成后补交猪款，这个方法大大促进了伟哥销售。<br />　　<br />　　[ 哈佛导师评论 ]<br />　　<br />　　这就是贷款，让企业可以根据未来的收益选择借支流动资金。<br />　　<br />　　7<br />　　<br />　　伟哥专卖店后来在即使你一头猪都没有，只要你承诺可以到该女房中一夜，就可以先借，事成后补交猪款。<br />　　<br />　　[ 哈佛导师评论 ]<br />　　<br />　　这就是金融创新，让现在的人花未来的钱，反正等你老了未来的钱你也花不动。<br />　　<br />　　8<br />　　<br />　　消息一出，换猪男越来越多，有人找伟哥专卖店，这个项目太好了，我们把它变成优质基金，对外销售债券，你们也就可以分享我的收益，如何？<br />　　<br />　　结果伟哥专卖店觉得甚好，于是该公司把换猪男分三类，一类是拿现猪换的，一类是一部分现猪贷的，一类是完全没有现猪借的，发行三种债券。大家踊跃而上。纷纷购买伟哥专卖店的债券，伟哥专卖店生意太好，就把债券销售外包给另外一家公司运作，该公司也一并大发其财，公司越做越大，甚至可以脱离实际伟哥销售情况来发行，给自己和伟哥专卖店带来巨大的现金收益。<br />　　<br />　　[ 哈佛导师评论 ]<br />　　<br />　　这就是专业的人做专业的事，从实体经营到资本运作，经济进入了更高的层次。<br />　　<br />　　9<br />　　<br />　　为了防止自己债券未来有损失，该公司决定给它买上保险，这样债券销售就更容易，因为一旦债券出现问题，还可以获得保险公司的赔付，哇，销售这下子太好了，保险公司也获得巨大平白无故的保险收入。<br />　　<br />　　[ 哈佛导师评论 ]<br />　　<br />　　这就是风险对冲，策略联盟，提高了企业的抗风险能力，也保护了消费者利益。<br />　　<br />　　10<br />　　<br />　　换猪男太多，排长队等待，该女无法承受，说老娘不干了，我搬家，一时间有无数拥有伟哥的欠猪男。<br />　　<br />　　[ 哈佛导师评论 ]<br />　　<br />　　这是个别现象，属于市场的正常波动，不会影响整个经济。<br />　　<br />　　11<br />　　<br />　　结果该女迟迟不肯搬回。一部分欠猪男没有收入，只好赖帐，结果大量债券到期无法换现猪吃，债券公司一看，一粒伟哥16头猪，这哪里还得起，宣布倒闭<br />　　<br />　　[ 哈佛导师评论 ]<br />　　<br />　　这是次贷危机，不会影响整个金融行业。<br />　　<br />　　12<br />　　<br />　　哪里晓得债券公司还把债券上了保险，保险公司一看，这哪里赔得起，于是也宣布要倒闭。<br />　　<br />　　[ 哈佛导师评论 ]<br />　　<br />　　这是金融危机，还不会影响整个实体经济。<br />　　<br />　　13<br />　　<br />　　后文：据说该女已搬到中国定居。</p>
+<p>from:http://topic.csdn.net/u/20081030/09/0A743CDE-0A1D-4824-975C-B6984D545C3E.html</p>
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">26 Oct 2008</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2008/10/26/crisis-and-ons/" class="post-title">次贷危机和一夜情</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                
+                                    <a class="post-category post-category-闲言碎语" href='/tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD'>闲言碎语</a>
+                                
+                                    <a class="post-category post-category-推荐阅读" href='/tags/%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB'>推荐阅读</a>
+                                
+                                    <a class="post-category post-category-它山之石" href='/tags/%E5%AE%83%E5%B1%B1%E4%B9%8B%E7%9F%B3'>它山之石</a>
+                                
+                                    <a class="post-category post-category-ONS" href='/tags/ons'>ONS</a>
+                                
+                                    <a class="post-category post-category-CRISIS" href='/tags/crisis'>CRISIS</a>
+                                
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>     有一天，一位其貌不扬的男士，带着一位十分艳丽的OL，来到Causeway Bay一家LV店。他为OL选了一价值6万5元的LV handbag。　　付款时，男士掏出支票本，十分潇洒地签了一张支票。店员有些为难，因为这对夫妇是第一次来店购物。<br />　　男士看穿了店员的心思，十分冷静地对店员说： "我感觉到，您担心这是一张是空头支票，对吗？今天是周六，银行关门。我建议您把支票和handbag都留下。等到星期一支票兑现之后，再请你们把 handbag 送到这位小姐的府上。您看这样行不行？"<br />　</p>
+<p>　店员放了下心来，欣然地接受了这个建议，并且大方的承诺，递送handbag的费用由该店承担，他本人将会亲自把这件事情给办妥。<br />　　星期一，店员拿着支票去银行入账，支票果真是张空头支票！愤怒的店员打电话给那位顾客，客户对他说： "这没有什么要紧啊！你和我都没有损失。上星期六的晚上我已经同那个女孩上床了！哦，多谢您的合作。" 这个故事揭示了次贷危机的本质。人们在对未来收益充满良好预期的时候，对于可能加大风险缺乏防范意识。美女认为周一六万多LV就到家了，自然也就放松了警惕，认为ONS的投资是值得的，对于投入产出的预期是建立在一个具有巨大不确定风险的情况下的。而对未来收益预期的包装则是这些投资机构最擅长的事情。中国的股民大多跟这个美女一样，所以亏钱基本上是活该，没有这些人，股市赚谁的钱呢。而媒体和分析家们，往往在其中扮演了LV店员的配合角色。from:http://www.im286.com/thread-2983005-1-10.html</p>
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">07 Oct 2008</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2008/10/07/jquerycool/" class="post-title">jQuery从此更牛了</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                
+                                    <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
+                                
+                                    <a class="post-category post-category-前端开发" href='/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91'>前端开发</a>
+                                
+                                    <a class="post-category post-category-jQuery" href='/tags/jquery'>jQuery</a>
+                                
+                                    <a class="post-category post-category-Microsoft" href='/tags/microsoft'>Microsoft</a>
+                                
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>为什么更牛了?</p>
+<p> </p>
+<p>26日回家，昨天才返回，这么好的消息自己错过了，补记一下。</p>
+<p> </p>
+<p>see see</p>
+<p> </p>
+<p> </p>
+<p><a href="http://weblogs.asp.net/scottgu/">Scott Guthrie</a>的<a href="http://weblogs.asp.net/scottgu/archive/2008/09/28/jquery-and-microsoft.aspx">公告 </a>(jQuery将成为Visual Studio的一部分等更多好消息...)</p>
+<p> <br />jQuery头儿<a href="http://ejohn.org/">John Resig</a>的<a href="http://jquery.com/blog/2008/09/28/jquery-microsoft-nokia/">公告</a>（jQuery, Microsoft, and Nokia）</p>
+<p> <br /><a href="http://www.hanselman.com/blog/">Scott Hanselman</a>的jQuery的<a href="http://www.hanselman.com/blog/jQueryToShipWithASPNETMVCAndVisualStudio.aspx">演示</a></p>
                     </div>
                 </section>
                 
@@ -612,7 +572,7 @@ SmtpMail.Send( mail );</pre>
         <i class="fa fa-angle-double-left"></i>&nbsp;Newer
       </a>
       
-    <span class="post-list-pagination-item post-list-pagination-item-current">Page 6 of 22</span>
+    <span class="post-list-pagination-item post-list-pagination-item-current">Page 6 of 19</span>
     
       <a href="/blog/page/7/" class="post-list-pagination-item pure-button post-list-pagination-item-next">
         Older&nbsp;<i class="fa fa-angle-double-right"></i>
