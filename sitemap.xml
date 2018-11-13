@@ -1663,12 +1663,6 @@
   
   <url>
     <loc>https://huobazi.aspxboy.com/tags/mysql/</loc>
-    <lastmod>2010-01-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://huobazi.aspxboy.com/categories/mysql/</loc>
     <lastmod>2012-09-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -1770,13 +1764,13 @@
   </url>
   
   <url>
-    <loc>https://huobazi.aspxboy.com/categories/postgres/</loc>
+    <loc>https://huobazi.aspxboy.com/tags/postgres/</loc>
     <lastmod>2012-09-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://huobazi.aspxboy.com/categories/postgresql/</loc>
+    <loc>https://huobazi.aspxboy.com/tags/postgresql/</loc>
     <lastmod>2012-09-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -1873,12 +1867,6 @@
   
   <url>
     <loc>https://huobazi.aspxboy.com/tags/ruby/</loc>
-    <lastmod>2012-08-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://huobazi.aspxboy.com/categories/ruby/</loc>
     <lastmod>2012-09-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

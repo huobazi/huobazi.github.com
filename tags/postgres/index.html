@@ -59,105 +59,93 @@
             
             <div class="posts">
                 
-                <h1 class="content-subhead">11 Jan 2010</h1>
+                <h1 class="content-subhead">12 Sep 2012</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/tags/%E9%85%8D%E8%89%B2/" class="post-title">配色</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2012/09/12/import-data-from-mysql-to-postgresql/" class="post-title">将MySQL 的数据导入 PostgreSQL</a>
 
                         <p class="post-meta">
                             
+                            
+                                
+                                    <a class="post-category post-category-Ruby" href='https://huobazi.aspxboy.com/tags/Ruby'>Ruby</a>
+                                
+                                    <a class="post-category post-category-MySQL" href='https://huobazi.aspxboy.com/tags/MySQL'>MySQL</a>
+                                
+                                    <a class="post-category post-category-PostgreSQL" href='https://huobazi.aspxboy.com/tags/PostgreSQL'>PostgreSQL</a>
+                                
+                                    <a class="post-category post-category-Postgres" href='https://huobazi.aspxboy.com/tags/Postgres'>Postgres</a>
+                                
                             
                         </p>
                     </header>
 
                     <div class="post-description">
-                        
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">09 Dec 2011</h1>
-                <section class="post">
-                    <header class="post-header">
+                        <p>开始学习使用PostgreSQL, 先尝试将MySQL数据导入到PostgreSQL</p>
 
-                        <a href="https://huobazi.aspxboy.com/tags/%E9%94%AE%E7%9B%98/" class="post-title">键盘</a>
+<h2 id="安装postgresql">安装PostgreSQL</h2>
 
-                        <p class="post-meta">
-                            
-                            
-                        </p>
-                    </header>
+<pre><code class="language-bash">sudo apt-get install postgresql postgresql-client postgresql-contrib  
+</code></pre>
 
-                    <div class="post-description">
-                        
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">03 Mar 2010</h1>
-                <section class="post">
-                    <header class="post-header">
+<p>基本按照<a href="http://kiki.ubuntu.org.cn/PostgreSQL">http://wiki.ubuntu.org.cn/PostgreSQL</a>进行设置就OK了</p>
 
-                        <a href="https://huobazi.aspxboy.com/tags/%E9%94%BB%E7%82%BC/" class="post-title">锻炼</a>
+<h2 id="安装开发工具">安装开发工具</h2>
 
-                        <p class="post-meta">
-                            
-                            
-                        </p>
-                    </header>
+<pre><code class="language-bash">sudo apt-get install libpq-dev pgadmin3
+</code></pre>
 
-                    <div class="post-description">
-                        
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">06 Mar 2012</h1>
-                <section class="post">
-                    <header class="post-header">
+<p>PgAdmin3 这是一个桌面 GUI 工具, 可以很方便的管理 PostgreSQL</p>
 
-                        <a href="https://huobazi.aspxboy.com/tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD/" class="post-title">闲言碎语</a>
+<h2 id="用到的rubygems">用到的RubyGems</h2>
 
-                        <p class="post-meta">
-                            
-                            
-                        </p>
-                    </header>
+<p>在 Gemfile 中增加：</p>
 
-                    <div class="post-description">
-                        
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">31 Aug 2009</h1>
-                <section class="post">
-                    <header class="post-header">
+<pre><code class="language-ruby">gem &quot;pg&quot; 
+gem &quot;mysql2&quot;
+</code></pre>
 
-                        <a href="https://huobazi.aspxboy.com/tags/%E9%AA%9A%E6%89%B0/" class="post-title">骚扰</a>
+<p>然后</p>
 
-                        <p class="post-meta">
-                            
-                            
-                        </p>
-                    </header>
+<pre><code class="language-bash">bundle install
+</code></pre>
 
-                    <div class="post-description">
-                        
+<h3 id="完整的-ruby-代码">完整的 Ruby 代码</h3>
+
+<pre><code># coding: utf-8
+require 'mysql2'
+require 'pg'
+
+mysql_client = Mysql2::Client.new(:host =&gt; &quot;localhost&quot;, :username =&gt;&quot;root&quot;, :password =&gt; &quot;pa$$word&quot;, :database =&gt; &quot;my_test&quot;, :encoding =&gt; &quot;utf8&quot;)
+
+postgres_client = PG::Connection.new(:host =&gt; &quot;localhost&quot;, :dbname =&gt; 'mydb', :user =&gt; &quot;postgres&quot;, :password =&gt; &quot;pa$$word&quot;)
+postgres_client.set_client_encoding('utf8')
+
+mysql_result = mysql_client.query('select `code`,`name`,`level` from `chinese_regions`')
+
+step = 0
+mysql_result.each do |row|
+
+  the_code = row['code']
+  the_name = row['name']
+  the_level = row['level'].to_i
+  insert_sql_test = &quot;insert into chinese_regions (\&quot;code\&quot;,\&quot;name\&quot;,\&quot;level\&quot;) values ('#{the_code}','#{the_name}','#{the_level}');&quot;
+  postgres_client.exec(insert_sql_test)
+
+  step += 1
+  puts '-' + step.to_s + '-' + the_code + '--' + the_name + '--' + the_level.to_s
+
+end
+
+</code></pre>
+
+<p>Run 啊 Run 啊的就 OK 了</p>
                     </div>
                 </section>
                 
             </div>
             
-<div class="pagination">
-  <nav role="pagination" class="post-list-pagination">
-      
-      <a href="/tags/page/21/" class="post-list-pagination-item pure-button post-list-pagination-item-prev">
-        <i class="fa fa-angle-double-left"></i>&nbsp;Newer
-      </a>
-      
-    <span class="post-list-pagination-item post-list-pagination-item-current">Page 22 of 22</span>
-    
-  </nav>
-</div>
-
 
             <div class="footer">
     <div class="pure-menu pure-menu-horizontal pure-menu-open">

@@ -59,6 +59,91 @@
             
             <div class="posts">
                 
+                <h1 class="content-subhead">12 Sep 2012</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2012/09/12/import-data-from-mysql-to-postgresql/" class="post-title">将MySQL 的数据导入 PostgreSQL</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                
+                                    <a class="post-category post-category-Ruby" href='https://huobazi.aspxboy.com/tags/Ruby'>Ruby</a>
+                                
+                                    <a class="post-category post-category-MySQL" href='https://huobazi.aspxboy.com/tags/MySQL'>MySQL</a>
+                                
+                                    <a class="post-category post-category-PostgreSQL" href='https://huobazi.aspxboy.com/tags/PostgreSQL'>PostgreSQL</a>
+                                
+                                    <a class="post-category post-category-Postgres" href='https://huobazi.aspxboy.com/tags/Postgres'>Postgres</a>
+                                
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>开始学习使用PostgreSQL, 先尝试将MySQL数据导入到PostgreSQL</p>
+
+<h2 id="安装postgresql">安装PostgreSQL</h2>
+
+<pre><code class="language-bash">sudo apt-get install postgresql postgresql-client postgresql-contrib  
+</code></pre>
+
+<p>基本按照<a href="http://kiki.ubuntu.org.cn/PostgreSQL">http://wiki.ubuntu.org.cn/PostgreSQL</a>进行设置就OK了</p>
+
+<h2 id="安装开发工具">安装开发工具</h2>
+
+<pre><code class="language-bash">sudo apt-get install libpq-dev pgadmin3
+</code></pre>
+
+<p>PgAdmin3 这是一个桌面 GUI 工具, 可以很方便的管理 PostgreSQL</p>
+
+<h2 id="用到的rubygems">用到的RubyGems</h2>
+
+<p>在 Gemfile 中增加：</p>
+
+<pre><code class="language-ruby">gem &quot;pg&quot; 
+gem &quot;mysql2&quot;
+</code></pre>
+
+<p>然后</p>
+
+<pre><code class="language-bash">bundle install
+</code></pre>
+
+<h3 id="完整的-ruby-代码">完整的 Ruby 代码</h3>
+
+<pre><code># coding: utf-8
+require 'mysql2'
+require 'pg'
+
+mysql_client = Mysql2::Client.new(:host =&gt; &quot;localhost&quot;, :username =&gt;&quot;root&quot;, :password =&gt; &quot;pa$$word&quot;, :database =&gt; &quot;my_test&quot;, :encoding =&gt; &quot;utf8&quot;)
+
+postgres_client = PG::Connection.new(:host =&gt; &quot;localhost&quot;, :dbname =&gt; 'mydb', :user =&gt; &quot;postgres&quot;, :password =&gt; &quot;pa$$word&quot;)
+postgres_client.set_client_encoding('utf8')
+
+mysql_result = mysql_client.query('select `code`,`name`,`level` from `chinese_regions`')
+
+step = 0
+mysql_result.each do |row|
+
+  the_code = row['code']
+  the_name = row['name']
+  the_level = row['level'].to_i
+  insert_sql_test = &quot;insert into chinese_regions (\&quot;code\&quot;,\&quot;name\&quot;,\&quot;level\&quot;) values ('#{the_code}','#{the_name}','#{the_level}');&quot;
+  postgres_client.exec(insert_sql_test)
+
+  step += 1
+  puts '-' + step.to_s + '-' + the_code + '--' + the_name + '--' + the_level.to_s
+
+end
+
+</code></pre>
+
+<p>Run 啊 Run 啊的就 OK 了</p>
+                    </div>
+                </section>
+                
                 <h1 class="content-subhead">15 Aug 2012</h1>
                 <section class="post">
                     <header class="post-header">
