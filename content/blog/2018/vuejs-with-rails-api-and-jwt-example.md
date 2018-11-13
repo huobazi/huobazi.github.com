@@ -2,7 +2,7 @@
 date = 2018-11-13
 title= "rails-api 做后端, vuejs 做前端, JWT 做验证, 前后端分离示例"
 Description = "rails-api 做后端, vuejs 做前端, JWT 做验证, 前后端分离示例"
-Tags = ['rails','rails-api','vuejs','jwt']
+Tags = ['rails','rails-api','vuejs','JWT']
 +++
 
 这是一个 rails-api 做后端, vuejs 做前端, JWT 做验证, 前后端分离示例.
