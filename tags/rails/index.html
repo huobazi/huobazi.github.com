@@ -59,6 +59,218 @@
             
             <div class="posts">
                 
+                <h1 class="content-subhead">13 Nov 2018</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2018/11/13/vuejs-with-rails-api-and-jwt-example/" class="post-title">rails-api 做后端, vuejs 做前端, JWT 做验证, 前后端分离示例</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                
+                                    <a class="post-category post-category-rails" href='https://huobazi.aspxboy.com/tags/rails'>rails</a>
+                                
+                                    <a class="post-category post-category-rails-api" href='https://huobazi.aspxboy.com/tags/rails-api'>rails-api</a>
+                                
+                                    <a class="post-category post-category-vuejs" href='https://huobazi.aspxboy.com/tags/vuejs'>vuejs</a>
+                                
+                                    <a class="post-category post-category-jwt" href='https://huobazi.aspxboy.com/tags/jwt'>jwt</a>
+                                
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>这是一个 rails-api 做后端, vuejs 做前端, JWT 做验证, 前后端分离示例.</p>
+
+<pre><code>git clone https://github.com/huobazi/vuejs-with-rails-api-and-jwt-example.git
+</code></pre>
+
+<pre><code>cd vuejs-with-rails-api-example/back-end
+
+bundle
+
+rails db:migrate
+
+rails s
+</code></pre>
+
+<pre><code>cd vuejs-with-rails-api-example/front-end
+
+npm install
+
+npm run serve
+</code></pre>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">15 Aug 2012</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2012/08/15/ajaxupload-with-rail-carrierwave-on-mongodb/" class="post-title">使用AjaxUpload和Carrierwave在Rails Mongoid中批量上传图片</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                
+                                    <a class="post-category post-category-Rails" href='https://huobazi.aspxboy.com/tags/Rails'>Rails</a>
+                                
+                                    <a class="post-category post-category-Mongoid" href='https://huobazi.aspxboy.com/tags/Mongoid'>Mongoid</a>
+                                
+                                    <a class="post-category post-category-Carrierwave" href='https://huobazi.aspxboy.com/tags/Carrierwave'>Carrierwave</a>
+                                
+                                    <a class="post-category post-category-Ajax" href='https://huobazi.aspxboy.com/tags/Ajax'>Ajax</a>
+                                
+                                    <a class="post-category post-category-Ruby" href='https://huobazi.aspxboy.com/tags/Ruby'>Ruby</a>
+                                
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><a href="https://github.com/valums/file-uploader">file-uploader</a>是一个用 Javascrit 编写的文件上传 Libary,在这里我使用<a href="https://github.com/jnicklas/carrierwave">CarrierWave</a>和 <a href="https://github.com/mongoid/mongoid">Mongoid</a> 来完成多文件的无刷新上传功能</p>
+
+<h2 id="rubygems">RubyGems</h2>
+
+<pre><code class="language-ruby">gem 'mongoid', '3.0.4'
+gem 'carrierwave', '0.6.2'
+gem 'carrierwave-mongoid', :github =&gt; 'jnicklas/carrierwave-mongoid', :branch =&gt; 'mongoid-3.0' 
+gem 'mini_magick', '3.4'
+gem 'rack-raw-upload', '1.1.0'
+</code></pre>
+
+<h2 id="model">Model</h2>
+
+<pre><code class="language-ruby">class Screenshot
+  include Mongoid::Document
+  include Mongoid::Timestamps::Created
+  include Rails.application.routes.url_helpers
+
+  attr_accessible :image 
+  field :image 
+
+  mount_uploader :image, ScreenshotUploader 
+
+end
+</code></pre>
+
+<h2 id="controller">Controller</h2>
+
+<pre><code class="language-ruby">class ScreenshotsController &lt; ApplicationController
+
+  def index
+    @screenshots = Screenshot.all.desc(:created_at)
+
+    respond_to do |format|
+      format.html # index.html.erb    
+      format.js{ render :layout =&gt; false}
+    end
+  end
+
+  def create
+    file = params[:qqfile].is_a?(ActionDispatch::Http::UploadedFile) ? params[:qqfile] : params[:file]
+    @screenshot = Screenshot.new
+    @screenshot.image = file
+    if @screenshot.save
+      render json: { success: true, src: @screenshot.to_json }
+    else
+      render json: @screenshot.errors.to_json
+    end
+  end
+
+  def destroy
+    @screenshot = Screenshot.find(params[:id])
+    @screenshot.destroy
+
+    respond_to do |format|
+      format.html { redirect_to screenshots_path }
+      format.js{ 
+        @screenshots = Screenshot.all.desc(:created_at)
+        render :layout =&gt; false
+      }
+    end
+
+  end
+
+end
+</code></pre>
+
+<h2 id="uploader">Uploader</h2>
+
+<pre><code class="language-ruby"># encoding: utf-8
+require &quot;digest/md5&quot;
+require 'carrierwave/processing/mini_magick'
+
+class ScreenshotUploader &lt; CarrierWave::Uploader::Base
+  include CarrierWave::MiniMagick
+
+  storage :file
+
+  # Override the directory where uploaded files will be stored.
+  def store_dir
+    &quot;uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}&quot;
+  end
+
+
+  process :convert =&gt; 'png'
+
+  # Create different versions of your uploaded files:
+  version :thumb do
+    process :resize_to_fill =&gt; [120, 120]
+  end
+
+  # Add a white list of extensions which are allowed to be uploaded.
+  def extension_white_list
+    %w(jpg jpeg gif png)
+  end
+
+  # Override the filename of the uploaded files:
+  # see http://huacnlee.com/blog/carrierwave-upload-store-file-name-config/
+  def filename
+    if super.present?
+      # current_path 是 Carrierwave 上传过程临时创建的一个文件，有时间标记，所以它将是唯一的
+      @name ||= Digest::MD5.hexdigest(File.dirname(current_path))
+      &quot;#{@name}.#{file.extension.downcase}&quot;
+    end
+  end
+end
+</code></pre>
+
+<h2 id="javascript">Javascript</h2>
+
+<pre><code class="language-javascript">  $(document).ready(function(){
+
+    var uploader = new qq.FileUploader({
+      debug: true,
+      allowedExtensions: ['jpg', 'jpeg', 'png', 'gif'],
+      sizeLimit: 1048576, // max size: 1MB
+      minSizeLimit: 0, // min size
+      multiple: true,
+      element: document.getElementById('file-uploader'),
+      action: '&lt;%= screenshots_path %&gt;',
+      onComplete: function(id, fileName, responseJSON){
+        $.getScript(&quot;&lt;%= screenshots_path %&gt;&quot;);
+      },
+      onSubmit: function(id, fileName) {
+        uploader.setParams({
+          xx: &quot;xx&quot;,
+          yy: 'yy',
+          zz: 'zz',       
+          authenticity_token: &quot;&lt;%= form_authenticity_token.to_s %&gt;&quot;
+        });
+      }
+    });
+
+});
+</code></pre>
+
+<p>你可以在 <a href="https://github.com/huobazi/ajax-upload-with-carrierwave-mongoid">https://github.com/huobazi/ajax-upload-with-carrierwave-mongoid</a>下载完整的示例代码</p>
+                    </div>
+                </section>
+                
                 <h1 class="content-subhead">24 Jul 2010</h1>
                 <section class="post">
                     <header class="post-header">
@@ -67,6 +279,24 @@
 
                         <p class="post-meta">
                             
+                            
+                                
+                                    <a class="post-category post-category-LAMP" href='https://huobazi.aspxboy.com/tags/LAMP'>LAMP</a>
+                                
+                                    <a class="post-category post-category-Rails" href='https://huobazi.aspxboy.com/tags/Rails'>Rails</a>
+                                
+                                    <a class="post-category post-category-nginx" href='https://huobazi.aspxboy.com/tags/nginx'>nginx</a>
+                                
+                                    <a class="post-category post-category-RoR" href='https://huobazi.aspxboy.com/tags/RoR'>RoR</a>
+                                
+                                    <a class="post-category post-category-Ruby" href='https://huobazi.aspxboy.com/tags/Ruby'>Ruby</a>
+                                
+                                    <a class="post-category post-category-memcache" href='https://huobazi.aspxboy.com/tags/memcache'>memcache</a>
+                                
+                                    <a class="post-category post-category-passenger" href='https://huobazi.aspxboy.com/tags/passenger'>passenger</a>
+                                
+                                    <a class="post-category post-category-RubyEE" href='https://huobazi.aspxboy.com/tags/RubyEE'>RubyEE</a>
+                                
                             
                         </p>
                     </header>
@@ -120,6 +350,22 @@
                         <p class="post-meta">
                             
                             
+                                
+                                    <a class="post-category post-category-LAMP" href='https://huobazi.aspxboy.com/tags/LAMP'>LAMP</a>
+                                
+                                    <a class="post-category post-category-Rails" href='https://huobazi.aspxboy.com/tags/Rails'>Rails</a>
+                                
+                                    <a class="post-category post-category-Ruby" href='https://huobazi.aspxboy.com/tags/Ruby'>Ruby</a>
+                                
+                                    <a class="post-category post-category-layout" href='https://huobazi.aspxboy.com/tags/layout'>layout</a>
+                                
+                                    <a class="post-category post-category-injecting" href='https://huobazi.aspxboy.com/tags/injecting'>injecting</a>
+                                
+                                    <a class="post-category post-category-dynamic" href='https://huobazi.aspxboy.com/tags/dynamic'>dynamic</a>
+                                
+                                    <a class="post-category post-category-ruby on rails" href='https://huobazi.aspxboy.com/tags/ruby%20on%20rails'>ruby on rails</a>
+                                
+                            
                         </p>
                     </header>
 
@@ -153,6 +399,16 @@
                         <p class="post-meta">
                             
                             
+                                
+                                    <a class="post-category post-category-LAMP" href='https://huobazi.aspxboy.com/tags/LAMP'>LAMP</a>
+                                
+                                    <a class="post-category post-category-Rails" href='https://huobazi.aspxboy.com/tags/Rails'>Rails</a>
+                                
+                                    <a class="post-category post-category-Mysql" href='https://huobazi.aspxboy.com/tags/Mysql'>Mysql</a>
+                                
+                                    <a class="post-category post-category-rails_reviewer" href='https://huobazi.aspxboy.com/tags/rails_reviewer'>rails_reviewer</a>
+                                
+                            
                         </p>
                     </header>
 
@@ -177,6 +433,16 @@
                         <p class="post-meta">
                             
                             
+                                
+                                    <a class="post-category post-category-LAMP" href='https://huobazi.aspxboy.com/tags/LAMP'>LAMP</a>
+                                
+                                    <a class="post-category post-category-闲言碎语" href='https://huobazi.aspxboy.com/tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD'>闲言碎语</a>
+                                
+                                    <a class="post-category post-category-Rails" href='https://huobazi.aspxboy.com/tags/Rails'>Rails</a>
+                                
+                                    <a class="post-category post-category-Mysql" href='https://huobazi.aspxboy.com/tags/Mysql'>Mysql</a>
+                                
+                            
                         </p>
                     </header>
 
@@ -198,6 +464,22 @@
 
                         <p class="post-meta">
                             
+                            
+                                
+                                    <a class="post-category post-category-LAMP" href='https://huobazi.aspxboy.com/tags/LAMP'>LAMP</a>
+                                
+                                    <a class="post-category post-category-Rails" href='https://huobazi.aspxboy.com/tags/Rails'>Rails</a>
+                                
+                                    <a class="post-category post-category-代码片段" href='https://huobazi.aspxboy.com/tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5'>代码片段</a>
+                                
+                                    <a class="post-category post-category-RoR" href='https://huobazi.aspxboy.com/tags/RoR'>RoR</a>
+                                
+                                    <a class="post-category post-category-ActiveRecord" href='https://huobazi.aspxboy.com/tags/ActiveRecord'>ActiveRecord</a>
+                                
+                                    <a class="post-category post-category-Ruby" href='https://huobazi.aspxboy.com/tags/Ruby'>Ruby</a>
+                                
+                                    <a class="post-category post-category-on" href='https://huobazi.aspxboy.com/tags/on'>on</a>
+                                
                             
                         </p>
                     </header>
@@ -228,6 +510,18 @@
                         <p class="post-meta">
                             
                             
+                                
+                                    <a class="post-category post-category-LAMP" href='https://huobazi.aspxboy.com/tags/LAMP'>LAMP</a>
+                                
+                                    <a class="post-category post-category-Rails" href='https://huobazi.aspxboy.com/tags/Rails'>Rails</a>
+                                
+                                    <a class="post-category post-category-奇技淫巧" href='https://huobazi.aspxboy.com/tags/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7'>奇技淫巧</a>
+                                
+                                    <a class="post-category post-category-Mysql" href='https://huobazi.aspxboy.com/tags/Mysql'>Mysql</a>
+                                
+                                    <a class="post-category post-category-RoR" href='https://huobazi.aspxboy.com/tags/RoR'>RoR</a>
+                                
+                            
                         </p>
                     </header>
 
@@ -252,6 +546,20 @@
 
                         <p class="post-meta">
                             
+                            
+                                
+                                    <a class="post-category post-category-ASP.NET" href='https://huobazi.aspxboy.com/tags/ASP.NET'>ASP.NET</a>
+                                
+                                    <a class="post-category post-category-Asp.net" href='https://huobazi.aspxboy.com/tags/Asp.net'>Asp.net</a>
+                                
+                                    <a class="post-category post-category-ORM" href='https://huobazi.aspxboy.com/tags/ORM'>ORM</a>
+                                
+                                    <a class="post-category post-category-Rails" href='https://huobazi.aspxboy.com/tags/Rails'>Rails</a>
+                                
+                                    <a class="post-category post-category-.Net其他" href='https://huobazi.aspxboy.com/tags/.Net%E5%85%B6%E4%BB%96'>.Net其他</a>
+                                
+                                    <a class="post-category post-category-DbEntry.Net" href='https://huobazi.aspxboy.com/tags/DbEntry.Net'>DbEntry.Net</a>
+                                
                             
                         </p>
                     </header>

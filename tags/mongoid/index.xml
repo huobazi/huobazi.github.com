@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mongoid on 武眉博</title>
-    <link>http://huobazi.aspxboy.com/tags/mongoid/</link>
+    <link>https://huobazi.aspxboy.com/tags/mongoid/</link>
     <description>Recent content in Mongoid on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 15 Aug 2012 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://huobazi.aspxboy.com/tags/mongoid/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://huobazi.aspxboy.com/tags/mongoid/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>使用AjaxUpload和Carrierwave在Rails Mongoid中批量上传图片</title>
-      <link>http://huobazi.aspxboy.com/blog/2012/08/15/ajaxupload-with-rail-carrierwave-on-mongodb/</link>
+      <link>https://huobazi.aspxboy.com/blog/2012/08/15/ajaxupload-with-rail-carrierwave-on-mongodb/</link>
       <pubDate>Wed, 15 Aug 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2012/08/15/ajaxupload-with-rail-carrierwave-on-mongodb/</guid>
-      <description>
+      <guid>https://huobazi.aspxboy.com/blog/2012/08/15/ajaxupload-with-rail-carrierwave-on-mongodb/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/valums/file-uploader&#34;&gt;file-uploader&lt;/a&gt;是一个用 Javascrit 编写的文件上传 Libary,在这里我使用&lt;a href=&#34;https://github.com/jnicklas/carrierwave&#34;&gt;CarrierWave&lt;/a&gt;和 &lt;a href=&#34;https://github.com/mongoid/mongoid&#34;&gt;Mongoid&lt;/a&gt; 来完成多文件的无刷新上传功能&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://github.com/valums/file-uploader&#34;&gt;file-uploader&lt;/a&gt;是一个用 Javascrit 编写的文件上传 Libary,在这里我使用&lt;a href=&#34;https://github.com/jnicklas/carrierwave&#34;&gt;CarrierWave&lt;/a&gt;和 &lt;a href=&#34;https://github.com/mongoid/mongoid&#34;&gt;Mongoid&lt;/a&gt; 来完成多文件的无刷新上传功能&lt;/p&gt;
-
-&lt;h2 id=&#34;rubygems:7371c11e255b336e41edb223ab46297b&#34;&gt;RubyGems&lt;/h2&gt;
+&lt;h2 id=&#34;rubygems&#34;&gt;RubyGems&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;gem &#39;mongoid&#39;, &#39;3.0.4&#39;
 gem &#39;carrierwave&#39;, &#39;0.6.2&#39;
@@ -28,7 +28,7 @@ gem &#39;mini_magick&#39;, &#39;3.4&#39;
 gem &#39;rack-raw-upload&#39;, &#39;1.1.0&#39;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;model:7371c11e255b336e41edb223ab46297b&#34;&gt;Model&lt;/h2&gt;
+&lt;h2 id=&#34;model&#34;&gt;Model&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;class Screenshot
   include Mongoid::Document
@@ -41,120 +41,7 @@ gem &#39;rack-raw-upload&#39;, &#39;1.1.0&#39;
   mount_uploader :image, ScreenshotUploader 
 
 end
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;controller:7371c11e255b336e41edb223ab46297b&#34;&gt;Controller&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;class ScreenshotsController &amp;lt; ApplicationController
-
-  def index
-    @screenshots = Screenshot.all.desc(:created_at)
-
-    respond_to do |format|
-      format.html # index.html.erb    
-      format.js{ render :layout =&amp;gt; false}
-    end
-  end
-
-  def create
-    file = params[:qqfile].is_a?(ActionDispatch::Http::UploadedFile) ? params[:qqfile] : params[:file]
-    @screenshot = Screenshot.new
-    @screenshot.image = file
-    if @screenshot.save
-      render json: { success: true, src: @screenshot.to_json }
-    else
-      render json: @screenshot.errors.to_json
-    end
-  end
-
-  def destroy
-    @screenshot = Screenshot.find(params[:id])
-    @screenshot.destroy
-
-    respond_to do |format|
-      format.html { redirect_to screenshots_path }
-      format.js{ 
-        @screenshots = Screenshot.all.desc(:created_at)
-        render :layout =&amp;gt; false
-      }
-    end
-
-  end
-
-end
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;uploader:7371c11e255b336e41edb223ab46297b&#34;&gt;Uploader&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;# encoding: utf-8
-require &amp;quot;digest/md5&amp;quot;
-require &#39;carrierwave/processing/mini_magick&#39;
-
-class ScreenshotUploader &amp;lt; CarrierWave::Uploader::Base
-  include CarrierWave::MiniMagick
-
-  storage :file
-
-  # Override the directory where uploaded files will be stored.
-  def store_dir
-    &amp;quot;uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}&amp;quot;
-  end
-
-
-  process :convert =&amp;gt; &#39;png&#39;
-
-  # Create different versions of your uploaded files:
-  version :thumb do
-    process :resize_to_fill =&amp;gt; [120, 120]
-  end
-
-  # Add a white list of extensions which are allowed to be uploaded.
-  def extension_white_list
-    %w(jpg jpeg gif png)
-  end
-
-  # Override the filename of the uploaded files:
-  # see http://huacnlee.com/blog/carrierwave-upload-store-file-name-config/
-  def filename
-    if super.present?
-      # current_path 是 Carrierwave 上传过程临时创建的一个文件，有时间标记，所以它将是唯一的
-      @name ||= Digest::MD5.hexdigest(File.dirname(current_path))
-      &amp;quot;#{@name}.#{file.extension.downcase}&amp;quot;
-    end
-  end
-end
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;javascript:7371c11e255b336e41edb223ab46297b&#34;&gt;Javascript&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;  $(document).ready(function(){
-
-    var uploader = new qq.FileUploader({
-      debug: true,
-      allowedExtensions: [&#39;jpg&#39;, &#39;jpeg&#39;, &#39;png&#39;, &#39;gif&#39;],
-      sizeLimit: 1048576, // max size: 1MB
-      minSizeLimit: 0, // min size
-      multiple: true,
-      element: document.getElementById(&#39;file-uploader&#39;),
-      action: &#39;&amp;lt;%= screenshots_path %&amp;gt;&#39;,
-      onComplete: function(id, fileName, responseJSON){
-        $.getScript(&amp;quot;&amp;lt;%= screenshots_path %&amp;gt;&amp;quot;);
-      },
-      onSubmit: function(id, fileName) {
-        uploader.setParams({
-          xx: &amp;quot;xx&amp;quot;,
-          yy: &#39;yy&#39;,
-          zz: &#39;zz&#39;,       
-          authenticity_token: &amp;quot;&amp;lt;%= form_authenticity_token.to_s %&amp;gt;&amp;quot;
-        });
-      }
-    });
-
-});
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;你可以在 &lt;a href=&#34;https://github.com/huobazi/ajax-upload-with-carrierwave-mongoid&#34;&gt;https://github.com/huobazi/ajax-upload-with-carrierwave-mongoid&lt;/a&gt;下载完整的示例代码&lt;/p&gt;
-</description>
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
   </channel>

@@ -68,7 +68,7 @@
     <item>
       <title>Ajax</title>
       <link>https://huobazi.aspxboy.com/tags/ajax/</link>
-      <pubDate>Thu, 03 Apr 2008 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 15 Aug 2012 00:00:00 +0000</pubDate>
       
       <guid>https://huobazi.aspxboy.com/tags/ajax/</guid>
       <description></description>
@@ -161,6 +161,15 @@
       <pubDate>Mon, 17 Apr 2006 00:00:00 +0000</pubDate>
       
       <guid>https://huobazi.aspxboy.com/tags/captcha/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Carrierwave</title>
+      <link>https://huobazi.aspxboy.com/tags/carrierwave/</link>
+      <pubDate>Wed, 15 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://huobazi.aspxboy.com/tags/carrierwave/</guid>
       <description></description>
     </item>
     
@@ -660,6 +669,15 @@
     </item>
     
     <item>
+      <title>Jwt</title>
+      <link>https://huobazi.aspxboy.com/tags/jwt/</link>
+      <pubDate>Tue, 13 Nov 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://huobazi.aspxboy.com/tags/jwt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Kissy</title>
       <link>https://huobazi.aspxboy.com/tags/kissy/</link>
       <pubDate>Fri, 06 Aug 2010 00:00:00 +0000</pubDate>
@@ -782,6 +800,15 @@
       <pubDate>Sun, 26 Jul 2009 00:00:00 +0000</pubDate>
       
       <guid>https://huobazi.aspxboy.com/tags/microsoft/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mongoid</title>
+      <link>https://huobazi.aspxboy.com/tags/mongoid/</link>
+      <pubDate>Wed, 15 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://huobazi.aspxboy.com/tags/mongoid/</guid>
       <description></description>
     </item>
     
@@ -1049,9 +1076,18 @@
     <item>
       <title>Rails</title>
       <link>https://huobazi.aspxboy.com/tags/rails/</link>
-      <pubDate>Sat, 24 Jul 2010 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 13 Nov 2018 00:00:00 +0800</pubDate>
       
       <guid>https://huobazi.aspxboy.com/tags/rails/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rails Api</title>
+      <link>https://huobazi.aspxboy.com/tags/rails-api/</link>
+      <pubDate>Tue, 13 Nov 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://huobazi.aspxboy.com/tags/rails-api/</guid>
       <description></description>
     </item>
     
@@ -1103,7 +1139,7 @@
     <item>
       <title>Ruby</title>
       <link>https://huobazi.aspxboy.com/tags/ruby/</link>
-      <pubDate>Tue, 06 Mar 2012 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 15 Aug 2012 00:00:00 +0000</pubDate>
       
       <guid>https://huobazi.aspxboy.com/tags/ruby/</guid>
       <description></description>
@@ -1340,6 +1376,15 @@
       <pubDate>Sat, 09 Aug 2008 00:00:00 +0000</pubDate>
       
       <guid>https://huobazi.aspxboy.com/tags/visual-studio/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vuejs</title>
+      <link>https://huobazi.aspxboy.com/tags/vuejs/</link>
+      <pubDate>Tue, 13 Nov 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://huobazi.aspxboy.com/tags/vuejs/</guid>
       <description></description>
     </item>
     

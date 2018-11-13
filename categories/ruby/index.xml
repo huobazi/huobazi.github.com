@@ -47,38 +47,5 @@ gem &amp;quot;mysql2&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
-    <item>
-      <title>使用AjaxUpload和Carrierwave在Rails Mongoid中批量上传图片</title>
-      <link>https://huobazi.aspxboy.com/blog/2012/08/15/ajaxupload-with-rail-carrierwave-on-mongodb/</link>
-      <pubDate>Wed, 15 Aug 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://huobazi.aspxboy.com/blog/2012/08/15/ajaxupload-with-rail-carrierwave-on-mongodb/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/valums/file-uploader&#34;&gt;file-uploader&lt;/a&gt;是一个用 Javascrit 编写的文件上传 Libary,在这里我使用&lt;a href=&#34;https://github.com/jnicklas/carrierwave&#34;&gt;CarrierWave&lt;/a&gt;和 &lt;a href=&#34;https://github.com/mongoid/mongoid&#34;&gt;Mongoid&lt;/a&gt; 来完成多文件的无刷新上传功能&lt;/p&gt;
-
-&lt;h2 id=&#34;rubygems&#34;&gt;RubyGems&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;gem &#39;mongoid&#39;, &#39;3.0.4&#39;
-gem &#39;carrierwave&#39;, &#39;0.6.2&#39;
-gem &#39;carrierwave-mongoid&#39;, :github =&amp;gt; &#39;jnicklas/carrierwave-mongoid&#39;, :branch =&amp;gt; &#39;mongoid-3.0&#39; 
-gem &#39;mini_magick&#39;, &#39;3.4&#39;
-gem &#39;rack-raw-upload&#39;, &#39;1.1.0&#39;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;model&#34;&gt;Model&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;class Screenshot
-  include Mongoid::Document
-  include Mongoid::Timestamps::Created
-  include Rails.application.routes.url_helpers
-
-  attr_accessible :image 
-  field :image 
-
-  mount_uploader :image, ScreenshotUploader 
-
-end
-&lt;/code&gt;&lt;/pre&gt;</description>
-    </item>
-    
   </channel>
 </rss>

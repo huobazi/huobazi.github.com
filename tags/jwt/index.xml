@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jwt on 武眉博</title>
+    <link>https://huobazi.aspxboy.com/tags/jwt/</link>
+    <description>Recent content in Jwt on 武眉博</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 13 Nov 2018 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://huobazi.aspxboy.com/tags/jwt/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>rails-api 做后端, vuejs 做前端, JWT 做验证, 前后端分离示例</title>
+      <link>https://huobazi.aspxboy.com/blog/2018/11/13/vuejs-with-rails-api-and-jwt-example/</link>
+      <pubDate>Tue, 13 Nov 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://huobazi.aspxboy.com/blog/2018/11/13/vuejs-with-rails-api-and-jwt-example/</guid>
+      <description>这是一个 rails-api 做后端, vuejs 做前端, JWT 做验证, 前后端分离示例.
+git clone https://github.com/huobazi/vuejs-with-rails-api-and-jwt-example.git  cd vuejs-with-rails-api-example/back-end bundle rails db:migrate rails s  cd vuejs-with-rails-api-example/front-end npm install npm run serve  </description>
+    </item>
+    
+  </channel>
+</rss>
