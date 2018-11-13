@@ -3,7 +3,7 @@ layout: post
 title: 将MySQL 的数据导入 PostgreSQL
 date: 2012-09-12
 comments: true
-categories: 
+tags: 
 - Ruby
 - MySQL
 - PostgreSQL
