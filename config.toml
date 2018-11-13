@@ -1,14 +1,16 @@
-baseurl = "http://huobazi.aspxboy.com"
+baseurl = "https://huobazi.aspxboy.com"
 languageCode = "zh-cn"
 title = "武眉博"
 theme = "purehugo"
 Paginate = 10
 disqusShortname = "huobaziblog"
+disablePathToLower = false
 [permalinks]
     blog= "/blog/:year/:month/:day/:filename/"
 [params]
-  twitter = "huobazi"
-  github = "huobazi"
+  twitterName = "huobazi"
+  githubName = "huobazi"
+  linkedinName = "huobazi"
   description = "Marble's blog"
   google_analytics = "UA-56321-3"
 [taxonomies]

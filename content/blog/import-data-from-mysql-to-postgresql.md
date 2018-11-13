@@ -7,6 +7,7 @@ categories:
 - Ruby
 - MySQL
 - PostgreSQL
+- Postgres
 ---
 
 开始学习使用PostgreSQL, 先尝试将MySQL数据导入到PostgreSQL
