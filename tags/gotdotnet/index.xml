@@ -2,87 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gotdotnet on 武眉博</title>
-    <link>http://huobazi.aspxboy.com/tags/gotdotnet/</link>
+    <link>https://huobazi.aspxboy.com/tags/gotdotnet/</link>
     <description>Recent content in Gotdotnet on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 21 Jun 2007 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://huobazi.aspxboy.com/tags/gotdotnet/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://huobazi.aspxboy.com/tags/gotdotnet/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>GotDotNet.Com要退休了</title>
-      <link>http://huobazi.aspxboy.com/blog/2007/06/21/gotdotnetwillberetired/</link>
+      <link>https://huobazi.aspxboy.com/blog/2007/06/21/gotdotnetwillberetired/</link>
       <pubDate>Thu, 21 Jun 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2007/06/21/gotdotnetwillberetired/</guid>
-      <description>&lt;p&gt;&lt;p&gt;&lt;br /&gt;&lt;a href=&#34;http://www.gotdotnet.com/&#34;&gt;http://www.gotdotnet.com/&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;table cellspacing=&#34;0&#34; cellpadding=&#34;0&#34; width=&#34;471&#34;&gt;
-&lt;tbody&gt;
-&lt;tr&gt;&lt;td style=&#34;COLOR: #0000ff&#34; colspan=&#34;3&#34;&gt;GotDotNet Phase-out Announcement&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td colspan=&#34;3&#34; height=&#34;3&#34;&gt;&lt;img height=&#34;3&#34; alt=&#34;&#34; src=&#34;http://huobazi.aspxboy.com/images/hbz_images/9432c27b-2893-4018-946c-4bf16f270ce1.gif6&#34; width=&#34;1&#34; border=&#34;0&#34;&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td width=&#34;10&#34;&gt;&lt;img height=&#34;1&#34; alt=&#34;&#34; src=&#34;http://huobazi.aspxboy.com/images/hbz_images/9432c27b-2893-4018-946c-4bf16f270ce1.gif6&#34; width=&#34;10&#34; border=&#34;0&#34;&gt;&lt;/td&gt;
-&lt;td valign=&#34;top&#34; width=&#34;100%&#34;&gt;Microsoft announces changes to the GotDotNet phase-out schedule. &lt;br /&gt;Overall phase-out will be completed in summer 2007.&lt;br /&gt;&lt;table&gt;
-&lt;br /&gt;&lt;tbody&gt;
-&lt;br /&gt;&lt;tr&gt;
-&lt;br /&gt;&lt;td&gt;  &lt;/td&gt;
-&lt;td&gt;
-&lt;br /&gt;Based on your feedback, we&amp;rsquo;ve made some adjustments to our schedule: &lt;br /&gt;&lt;br /&gt;&lt;ui&gt;&lt;li&gt;CodeGallery phase-out – Rescheduled to July 2007 (original phase-out date was April 24, 2007)&lt;br /&gt;This gives CodeGallery owners more time to migrate. We suggest &lt;a href=&#34;http://www.codeplex.com/&#34;&gt;CodePlex&lt;/a&gt; as an excellent alternative. Please contact &lt;a href=&#34;https://www.codeplex.com/ContactUs.aspx&#34;&gt;CodePlex support&lt;/a&gt; with any questions you may have.&lt;br /&gt;
-&lt;/li&gt;
-&lt;li&gt;User Samples phase-out – Schedule update in Fall &amp;lsquo;07 &lt;br /&gt;We will not phase-out User Samples until we can provide customers with greater alternative. We will update you with further schedule information in Fall, 2007.&lt;br /&gt;
-&lt;/li&gt;
-&lt;li&gt;Workspaces phase-out – Completed on June 19, 2007.&lt;br /&gt;We suggest &lt;a href=&#34;http://www.codeplex.com/&#34;&gt;CodePlex&lt;/a&gt; as an excellent alternative. Please contact the &lt;a href=&#34;https://www.codeplex.com/ContactUs.aspx&#34;&gt;CodePlex support staff&lt;/a&gt; with any questions you may have.&lt;br /&gt;
-&lt;/li&gt;&lt;/ui&gt;
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;            &lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;
-&lt;td&gt;  &lt;/td&gt;
-&lt;td&gt;We appreciate the input you’ve given us regarding the GotDotNet phase-out. We will keep you posted as we move forward. &lt;br /&gt;&lt;br /&gt;We are phasing out GotDotNet for the following reasons:&lt;br /&gt;&lt;br /&gt;&lt;ui&gt;&lt;li&gt;Microsoft wants to reinvest the resources currently used for GotDotNet in new and better community features for our customers&lt;br /&gt;&lt;br /&gt;
-&lt;/li&gt;
-&lt;li&gt;Traffic and usage of GotDotNet features has significantly decreased over the last six months&lt;br /&gt;
-&lt;/li&gt;
-&lt;li&gt;Microsoft wants to eliminate redundant functionality between GotDotNet and other community resources provided by Microsoft&lt;/li&gt;&lt;/ui&gt;
-&lt;/td&gt;
-&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;p&gt;            &lt;br /&gt;Other Microsoft sites&lt;br /&gt;&lt;a href=&#34;http://msdn2.microsoft.com/en-us/default.aspx&#34;&gt;MSDN&lt;/a&gt;&lt;br /&gt;Offers help for developers in writing applications using Microsoft products and technologies.&lt;br /&gt;&lt;a href=&#34;http://technet.microsoft.com/en-us/default.aspx&#34;&gt;TechNet&lt;/a&gt;&lt;br /&gt;Offers help for IT professionals using Microsoft products and technologies&lt;br /&gt;&lt;a href=&#34;http://www.asp.net/&#34;&gt;ASP.NET&lt;/a&gt;&lt;br /&gt;The ASP.NET 2.0 site is a portal site for the ASP.NET development community.&lt;br /&gt;&lt;a href=&#34;http://channel9.msdn.com/&#34;&gt;Channel 9&lt;/a&gt;&lt;br /&gt;Channel 9 is a Microsoft discussion forum used to promote conversations among Microsoft&amp;rsquo;s customers.&lt;br /&gt;&lt;a href=&#34;http://www.codeplex.com/&#34;&gt;CodePlex&lt;/a&gt;&lt;br /&gt;CodePlex is Microsoft&amp;rsquo;s open source project hosting web site.&lt;br /&gt;&lt;a href=&#34;http://msdn.microsoft.com/XML/XMLDownloads/default.aspx&#34;&gt;XML Downloads&lt;/a&gt;&lt;br /&gt;This page provides downloads for building XML applications using Microsoft technologies.&lt;br /&gt;&lt;br /&gt;Phase Out Schedule&lt;br /&gt;The GotDotNet phase out will be carried out in phases according the following timetable:&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;table cellspacing=&#34;0&#34; cellpadding=&#34;0&#34; width=&#34;70%&#34; border=&#34;0&#34;&gt;&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Target Date&lt;/td&gt;
-&lt;td&gt;Areas to be phased out&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;February 20&lt;/td&gt;
-&lt;td&gt;Partners, Resource Center, Microsoft Tools&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;March 20&lt;/td&gt;
-&lt;td&gt;Private workspaces, Team pages, Message Boards&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;June 19&lt;/td&gt;
-&lt;td&gt;Workspaces&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;By end of July 2007&lt;/td&gt;
-&lt;td&gt;CodeGallery (projected date)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Schedule update in Fall 2007&lt;/td&gt;
-&lt;td&gt;User Samples (date TBD)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;&lt;/table&gt;
-&lt;p&gt;            &lt;/p&gt;
-&lt;/td&gt;
-&lt;br /&gt;
-&lt;/tr&gt;
-&lt;br /&gt;
-&lt;/tbody&gt;
-&lt;br /&gt;
-&lt;/table&gt;&lt;/p&gt;
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2007/06/21/gotdotnetwillberetired/</guid>
+      <description>http://www.gotdotnet.com/
+ GotDotNet Phase-out Announcement    Microsoft announces changes to the GotDotNet phase-out schedule. Overall phase-out will be completed in summer 2007.
+      Based on your feedback, we&amp;rsquo;ve made some adjustments to our schedule: CodeGallery phase-out – Rescheduled to July 2007 (original phase-out date was April 24, 2007)
+This gives CodeGallery owners more time to migrate. We suggest CodePlex as an excellent alternative.</description>
     </item>
     
   </channel>

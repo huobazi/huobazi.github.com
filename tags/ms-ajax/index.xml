@@ -2,62 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ms Ajax on 武眉博</title>
-    <link>http://huobazi.aspxboy.com/tags/ms-ajax/</link>
+    <link>https://huobazi.aspxboy.com/tags/ms-ajax/</link>
     <description>Recent content in Ms Ajax on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 04 Mar 2007 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://huobazi.aspxboy.com/tags/ms-ajax/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://huobazi.aspxboy.com/tags/ms-ajax/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Ajax Control Toolkit 出新版了</title>
-      <link>http://huobazi.aspxboy.com/blog/2007/03/04/newversionofajaxcontroltoolkit/</link>
+      <link>https://huobazi.aspxboy.com/blog/2007/03/04/newversionofajaxcontroltoolkit/</link>
       <pubDate>Sun, 04 Mar 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2007/03/04/newversionofajaxcontroltoolkit/</guid>
-      <description>&lt;p&gt;&lt;p&gt;&lt;/p&gt;
-&lt;table id=&#34;ctl00_ctl00_ctl00_Content_ProjectBaseMain_ProjectMain_releaseDetailsTable&#34; style=&#34;WIDTH: 100%&#34; border=&#34;0&#34;&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td valign=&#34;top&#34;&gt;&lt;span class=&#34;ReleaseDetailsHeader&#34;&gt;&lt;a href=&#34;http://www.codeplex.com/AtlasControlToolkit/Release/ProjectReleases.aspx&#34;&gt;&lt;br /&gt;&lt;h1&gt;Ajax Control Toolkit 出新版了&lt;br /&gt;&lt;a href=&#34;http://www.codeplex.com/AtlasControlToolkit/Release/ProjectReleases.aspx&#34;&gt;http://www.codeplex.com/AtlasControlToolkit/Release/ProjectReleases.aspx&lt;/a&gt;&lt;/h1&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Release 10301 Production&lt;/span&gt;&lt;/td&gt;
-&lt;td valign=&#34;top&#34; align=&#34;right&#34;&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;&lt;td valign=&#34;top&#34; align=&#34;left&#34; colspan=&#34;2&#34;&gt;
-&lt;span class=&#34;ReleaseDateLabel&#34;&gt;三月-01-2007&lt;/span&gt;&lt;span class=&#34;ReleaseFilesCountLabel&#34;&gt;2 Files&lt;/span&gt;
-&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td valign=&#34;top&#34; align=&#34;left&#34; colspan=&#34;2&#34;&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td valign=&#34;top&#34; align=&#34;left&#34; colspan=&#34;2&#34;&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td valign=&#34;top&#34; align=&#34;left&#34; colspan=&#34;2&#34;&gt;&lt;span class=&#34;ReleaseSubHeading&#34;&gt;Description&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td valign=&#34;top&#34; align=&#34;left&#34; colspan=&#34;2&#34;&gt;&lt;span class=&#34;content&#34;&gt;2007-03-01 release of the AJAX Control Toolkit includes two new controls (ListSearch and SlideShow), a number of fixes identified as important by the community, and three significant enhancements: localization support, automatic JavaScript comment stripping, and ASP.NET theme/skin support. It continues to target the new ASP.NET AJAX v1.0 release (&lt;a href=&#34;http://ajax.asp.net/&#34;&gt;http://ajax.asp.net/&lt;/a&gt;).&lt;br /&gt;&lt;br /&gt;AjaxControlToolkit.zip is the full release package with complete source code to all controls, the test framework, VSI, and more.&lt;br /&gt;&lt;br /&gt;AjaxControlToolkit-NoSource.zip contains only the sample web site and VSI and is for people who don&amp;rsquo;t need or want the source code for the controls.&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td valign=&#34;top&#34; align=&#34;left&#34; colspan=&#34;2&#34;&gt;
-&lt;div&gt;
-&lt;br /&gt;&lt;table class=&#34;ReleaseFilesGridView&#34; id=&#34;ctl00_ctl00_ctl00_Content_ProjectBaseMain_ProjectMain_runTimeBinariesGridView&#34; style=&#34;BORDER-COLLAPSE: collapse&#34; cellspacing=&#34;0&#34; rules=&#34;all&#34; border=&#34;1&#34;&gt;
-&lt;br /&gt;&lt;tbody&gt;
-&lt;br /&gt;&lt;tr&gt;
-&lt;th scope=&#34;col&#34;&gt;Runtime Binaries&lt;/th&gt;                    &lt;/tr&gt;
-&lt;br /&gt;&lt;tr&gt;
-&lt;br /&gt;&lt;td&gt;
-&lt;a class=&#34;ReleaseFileDownloadLink&#34; href=&#34;javascript:WebForm_DoPostBackWithOptions(new%20WebForm_PostBackOptions(%22ctl00%24ctl00%24ctl00%24Content%24ProjectBaseMain%24ProjectMain%24runTimeBinariesGridView%24ctl02%24ctl00%22,%20%22%22,%20false,%20%22%22,%20%22http://www.codeplex.com/AtlasControlToolkit/Project/FileDownload.aspx?DownloadId=7712%22,%20false,%20true))&#34;&gt;AjaxControlToolkit-NoSource.zip&lt;/a&gt;&lt;span&gt; - 1542 Downloads (2.3 MB)&lt;/span&gt;
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;
-&lt;a class=&#34;ReleaseFileDownloadLink&#34; href=&#34;javascript:WebForm_DoPostBackWithOptions(new%20WebForm_PostBackOptions(%22ctl00%24ctl00%24ctl00%24Content%24ProjectBaseMain%24ProjectMain%24runTimeBinariesGridView%24ctl03%24ctl00%22,%20%22%22,%20false,%20%22%22,%20%22http://www.codeplex.com/AtlasControlToolkit/Project/FileDownload.aspx?DownloadId=7711%22,%20false,%20true))&#34;&gt;AjaxControlToolkit.zip&lt;/a&gt;&lt;span&gt; - 4334 Downloads (3.3 MB)&lt;/span&gt;
-&lt;/td&gt;&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;            &lt;/p&gt;
-&lt;/div&gt;
-&lt;br /&gt;
-&lt;/td&gt;
-&lt;br /&gt;
-&lt;/tr&gt;
-&lt;br /&gt;
-&lt;/tbody&gt;
-&lt;br /&gt;
-&lt;/table&gt;
-&lt;br /&gt;&lt;/p&gt;
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2007/03/04/newversionofajaxcontroltoolkit/</guid>
+      <description>Ajax Control Toolkit 出新版了
+http://www.codeplex.com/AtlasControlToolkit/Release/ProjectReleases.aspx
+Release 10301 Production   三月-01-20072 Files    Description 2007-03-01 release of the AJAX Control Toolkit includes two new controls (ListSearch and SlideShow), a number of fixes identified as important by the community, and three significant enhancements: localization support, automatic JavaScript comment stripping, and ASP.NET theme/skin support. It continues to target the new ASP.NET AJAX v1.0 release (http://ajax.asp.net/).
+AjaxControlToolkit.zip is the full release package with complete source code to all controls, the test framework, VSI, and more.</description>
     </item>
     
   </channel>

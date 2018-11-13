@@ -1,32 +1,12 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sql &middot; 武眉博</title>
 
-    <meta name="description" content="Marble&#39;s blog">
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
 
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="huobazi" />
-    <meta name="twitter:title" content="Sql &middot; 武眉博">
-    <meta name="twitter:description" content="Marble&#39;s blog">
+    <link rel="stylesheet" href='https://huobazi.aspxboy.com/css/all.min.css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="Sql &middot; 武眉博">
-    <meta property="og:description" content="Marble&#39;s blog">
-
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    
-    <link href='http://fonts.useso.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
-    
-    
-        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
-    
-
-    <link rel="stylesheet" href="/css/all.min.css">
-    <link href="http://apps.bdimg.com/libs/fontawesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="alternate" type="application/rss+xml" title="武眉博" href='https://huobazi.aspxboy.com/index.xml' />
 </head>
 <body>
 
@@ -35,7 +15,7 @@
     <div class="sidebar pure-u-1 pure-u-md-1-4">
     <div class="header">
         <hgroup>
-            <h1 class="brand-title"><a href="http://huobazi.aspxboy.com/">武眉博</a></h1>
+            <h1 class="brand-title"><a href="https://huobazi.aspxboy.com">武眉博</a></h1>
             <h2 class="brand-tagline"> Marble&#39;s blog </h2>
         </hgroup>
 
@@ -43,18 +23,36 @@
             <ul class="nav-list">
                 
                 <li class="nav-item">
-                    <a class="pure-button" href="http://twitter.com/huobazi"><i class="fa fa-twitter"></i> Twitter</a>
+                    <a class="pure-button" href="https://twitter.com/huobazi">
+                        <i class="fa fa-twitter"></i> Twitter
+                    </a>
                 </li>
                 
                 
                 <li class="nav-item">
-                    <a class="pure-button" href="http://github.com/huobazi "><i class="fa fa-github-alt"></i> github</a>
+                    <a class="pure-button" href="https://github.com/huobazi">
+                        <i class="fa fa-github-alt"></i> Github
+                    </a>
                 </li>
                 
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://www.linkedin.com/in/huobazi">
+                        <i class="fa fa-linkedin"></i> LinkedIn
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="pure-button" href='https://huobazi.aspxboy.com/index.xml'>
+                        <i class="fa fa-rss"></i> rss
+                    </a>
+                </li>
             </ul>
         </nav>
     </div>
 </div>
+
 
     <div class="content pure-u-1 pure-u-md-3-4">
         <div>
@@ -65,19 +63,18 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://huobazi.aspxboy.com/blog/2009/12/09/chang-sql-table-field-default/" class="post-title">使用SQL语句更改数据表的默认值</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2009/12/09/chang-sql-table-field-default/" class="post-title">使用SQL语句更改数据表的默认值</a>
 
                         <p class="post-meta">
                             
-                            
-                                
-                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a><a class="post-category post-category-SQL" href="http://huobazi.aspxboy.com//tags/sql">SQL</a><a class="post-category post-category-Server" href="http://huobazi.aspxboy.com//tags/server">Server</a>
                             
                         </p>
                     </header>
 
                     <div class="post-description">
                         <p><p>以前还真没这么干过，都是手工去掉约束，再添加的，今天一边google一边搞啊搞啊的，最终下面这个脚本可以用了</p>
+<p></p>
+
 <p></p>
 <div class="source" style='font-family: "Consolas","Lucida Console","Courier New"; color: #ffffff; background-color: #333333;'>
 <p><span style="color: #f0e68c;">alter</span> <span style="color: #f0e68c;">table</span> <span style="color: #ffffff;">dbo</span><span style="color: #ffffff;">.</span><span style="color: #ffffff;">SOTransaction</span><br />    <span style="color: #f0e68c;">alter</span> <span style="color: #f0e68c;">column</span> <span style="color: #ffffff;">UnitCostWithoutTax</span> <span style="color: #ffffff;">decimal</span>(<span style="color: #ffffff;">10</span><span style="color: #ffffff;">,</span> <span style="color: #ffffff;">2</span>)  <span style="color: #f0e68c;">not</span> <span style="color: #f0e68c;">null</span></p>
@@ -87,7 +84,6 @@
 <p><span style="color: #f0e68c;">select</span> <span style="color: #ffffff;">@</span><span style="color: #ffffff;">name</span> <span style="color: #ffffff;">=</span> b<span style="color: #ffffff;">.</span><span style="color: #ffffff;">name</span> <span style="color: #f0e68c;">from</span> <span style="color: #ffffff;">syscolumns</span> <span style="color: #ffffff;">a</span> <span style="color: #f0e68c;">inner</span> <span style="color: #f0e68c;">join</span> <span style="color: #ffffff;">sysobjects</span> b<br />    <span style="color: #f0e68c;">on</span> b<span style="color: #ffffff;">.</span><span style="color: #ffffff;">id</span><span style="color: #ffffff;">=</span><span style="color: #ffffff;">a</span><span style="color: #ffffff;">.</span><span style="color: #ffffff;">cdefault</span><br /><span style="color: #f0e68c;">where</span><br />    <span style="color: #ffffff;">a</span><span style="color: #ffffff;">.</span><span style="color: #ffffff;">id</span><span style="color: #ffffff;">=</span> <span style="color: #ffffff;">object_id</span>(<span style="color: #ffffff;">@</span><span style="color: #ffffff;">tablename</span>)<br />    <span style="color: #f0e68c;">and</span> <span style="color: #ffffff;">a</span><span style="color: #ffffff;">.</span><span style="color: #ffffff;">name</span><span style="color: #ffffff;">=@</span><span style="color: #ffffff;">fieldname</span><br />    <span style="color: #f0e68c;">and</span> b<span style="color: #ffffff;">.</span><span style="color: #ffffff;">name</span> <span style="color: #f0e68c;">like</span> <span style="color: #ffffff;">&lsquo;DF%&rsquo;</span><br /><span style="color: #87ceeb;">&ndash;print @name</span></p>
 <p><span style="color: #f0e68c;">exec</span>(<span style="color: #ffffff;">&rsquo; alter table SOTransaction drop constraint &lsquo;</span> <span style="color: #ffffff;">+</span> <span style="color: #ffffff;">@</span><span style="color: #ffffff;">name</span>);<br /><span style="color: #f0e68c;">go</span><br /><span style="color: #f0e68c;">alter</span> <span style="color: #f0e68c;">table</span> <span style="color: #ffffff;">dbo</span><span style="color: #ffffff;">.</span><span style="color: #ffffff;">SOTransaction</span><br />    <span style="color: #f0e68c;">add</span> <span style="color: #f0e68c;">constraint</span> <span style="color: #ffffff;">DF_SOTransaction_UnitCostWithoutTax</span> <span style="color: #f0e68c;">default</span> (<span style="color: #ffffff;">0</span>) <span style="color: #f0e68c;">for</span> <span style="color: #ffffff;">UnitCostWithoutTax</span></p>
 </div></p>
-
                     </div>
                 </section>
                 
@@ -95,13 +91,10 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://huobazi.aspxboy.com/blog/2006/03/24/cb-357546/" class="post-title">关于Data Access Blok (SqlHelper.cs)使用时出现</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2006/03/24/cb-357546/" class="post-title">关于Data Access Blok (SqlHelper.cs)使用时出现</a>
 
                         <p class="post-meta">
                             
-                            
-                                
-                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a><a class="post-category post-category-SQL" href="http://huobazi.aspxboy.com//tags/sql">SQL</a><a class="post-category post-category-Server" href="http://huobazi.aspxboy.com//tags/server">Server</a>
                             
                         </p>
                     </header>
@@ -132,11 +125,11 @@
             <div class="footer">
     <div class="pure-menu pure-menu-horizontal pure-menu-open">
         <ul>
-            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a> &nbsp;&nbsp; theme by <a target="_blank" href="https://github.com/dplesca/purehugo">purehugo</a></a></li>
+            <li>Powered by <a class="hugo" href="https://gohugo.io/" target="_blank">hugo</a></li>
         </ul>
     </div>
 </div>
-<script src="/js/all.min.js"></script>
+<script src='https://huobazi.aspxboy.com/js/all.min.js'></script>
 
         </div>
     </div>

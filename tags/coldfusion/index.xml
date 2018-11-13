@@ -2,68 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Coldfusion on 武眉博</title>
-    <link>http://huobazi.aspxboy.com/tags/coldfusion/</link>
+    <link>https://huobazi.aspxboy.com/tags/coldfusion/</link>
     <description>Recent content in Coldfusion on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 22 Sep 2004 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://huobazi.aspxboy.com/tags/coldfusion/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://huobazi.aspxboy.com/tags/coldfusion/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>可怜的ColdFusion 国内没认学吗？还是都不在csdn讨论？</title>
-      <link>http://huobazi.aspxboy.com/blog/2004/09/22/cb-45611/</link>
+      <link>https://huobazi.aspxboy.com/blog/2004/09/22/cb-45611/</link>
       <pubDate>Wed, 22 Sep 2004 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2004/09/22/cb-45611/</guid>
-      <description>&lt;table cellspacing=&#34;0&#34; cellpadding=&#34;0&#34; width=&#34;590&#34; border=&#34;0&#34;&gt;&lt;tbody&gt;
-&lt;tr&gt;&lt;td class=&#34;title3&#34; width=&#34;578&#34; colspan=&#34;4&#34;&gt;
-&lt;font color=&#34;#ff0000&#34;&gt;ColdFusion&lt;/font&gt;  2004-08专家榜&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&#34;middle&#34; width=&#34;40&#34;&gt;&lt;font color=&#34;#ff0000&#34;&gt;&lt;b&gt;名次&lt;/b&gt;&lt;/font&gt;&lt;/td&gt;
-&lt;td width=&#34;100&#34;&gt;&lt;font color=&#34;#ff0000&#34;&gt;&lt;b&gt;社区昵称&lt;/b&gt;&lt;/font&gt;&lt;/td&gt;
-&lt;td width=&#34;80&#34;&gt;&lt;font color=&#34;#ff0000&#34;&gt;&lt;b&gt;专家分&lt;/b&gt;&lt;/font&gt;&lt;/td&gt;
-&lt;td width=&#34;380&#34;&gt;&lt;font color=&#34;#ff0000&#34;&gt;&lt;b&gt;个人描述&lt;/b&gt;&lt;/font&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;&lt;td width=&#34;578&#34; bgcolor=&#34;#ff8d62&#34; colspan=&#34;4&#34; height=&#34;2&#34;&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td width=&#34;578&#34; bgcolor=&#34;#ffffff&#34; colspan=&#34;4&#34; height=&#34;5&#34;&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr bgcolor=&#34;#f2f2f2&#34;&gt;
-&lt;td align=&#34;middle&#34;&gt;1&lt;/td&gt;
-&lt;td&gt;suzhenning&lt;/td&gt;
-&lt;td&gt;66&lt;/td&gt;
-&lt;td class=&#34;WithBreaks&#34;&gt; &lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&#34;middle&#34;&gt;2&lt;/td&gt;
-&lt;td&gt;Qthinker&lt;/td&gt;
-&lt;td&gt;22&lt;/td&gt;
-&lt;td class=&#34;WithBreaks&#34;&gt;在失意的时候不要灰心,想一想,为了老婆,为了父母,为了将来的孩子,为了社会,要赶快爬起来&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr bgcolor=&#34;#f2f2f2&#34;&gt;
-&lt;td align=&#34;middle&#34;&gt;3&lt;/td&gt;
-&lt;td&gt;yibotiemen&lt;/td&gt;
-&lt;td&gt;5&lt;/td&gt;
-&lt;td class=&#34;WithBreaks&#34;&gt;我们一起来学习，我们一起来进步&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&#34;middle&#34;&gt;4&lt;/td&gt;
-&lt;td&gt;s1ihome&lt;/td&gt;
-&lt;td&gt;5&lt;/td&gt;
-&lt;td class=&#34;WithBreaks&#34;&gt;勤能补拙&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr bgcolor=&#34;#f2f2f2&#34;&gt;
-&lt;td align=&#34;middle&#34;&gt;5&lt;/td&gt;
-&lt;td&gt;BlueDestiny&lt;/td&gt;
-&lt;td&gt;5&lt;/td&gt;
-&lt;td class=&#34;WithBreaks&#34;&gt;天资之于才华，一如本能之于理智。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&#34;middle&#34;&gt;6&lt;/td&gt;
-&lt;td&gt;y7967&lt;/td&gt;
-&lt;td&gt;5&lt;/td&gt;
-&lt;td class=&#34;WithBreaks&#34;&gt;走猫的路,让狗说去吧~&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;&lt;/table&gt;
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2004/09/22/cb-45611/</guid>
+      <description> ColdFusion 2004-08专家榜  名次 社区昵称 专家分 个人描述    1 suzhenning 66    2 Qthinker 22 在失意的时候不要灰心,想一想,为了老婆,为了父母,为了将来的孩子,为了社会,要赶快爬起来  3 yibotiemen 5 我们一起来学习，我们一起来进步   4 s1ihome 5 勤能补拙  5 BlueDestiny 5 天资之于才华，一如本能之于理智。   6 y7967 5 走猫的路,让狗说去吧~   </description>
     </item>
     
   </channel>

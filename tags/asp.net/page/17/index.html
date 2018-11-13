@@ -1,32 +1,12 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asp.Net &middot; 武眉博</title>
 
-    <meta name="description" content="Marble&#39;s blog">
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
 
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="huobazi" />
-    <meta name="twitter:title" content="Asp.Net &middot; 武眉博">
-    <meta name="twitter:description" content="Marble&#39;s blog">
+    <link rel="stylesheet" href='https://huobazi.aspxboy.com/css/all.min.css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="Asp.Net &middot; 武眉博">
-    <meta property="og:description" content="Marble&#39;s blog">
-
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    
-    <link href='http://fonts.useso.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
-    
-    
-        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
-    
-
-    <link rel="stylesheet" href="/css/all.min.css">
-    <link href="http://apps.bdimg.com/libs/fontawesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="alternate" type="application/rss+xml" title="武眉博" href='https://huobazi.aspxboy.com/index.xml' />
 </head>
 <body>
 
@@ -35,7 +15,7 @@
     <div class="sidebar pure-u-1 pure-u-md-1-4">
     <div class="header">
         <hgroup>
-            <h1 class="brand-title"><a href="http://huobazi.aspxboy.com/">武眉博</a></h1>
+            <h1 class="brand-title"><a href="https://huobazi.aspxboy.com">武眉博</a></h1>
             <h2 class="brand-tagline"> Marble&#39;s blog </h2>
         </hgroup>
 
@@ -43,35 +23,346 @@
             <ul class="nav-list">
                 
                 <li class="nav-item">
-                    <a class="pure-button" href="http://twitter.com/huobazi"><i class="fa fa-twitter"></i> Twitter</a>
+                    <a class="pure-button" href="https://twitter.com/huobazi">
+                        <i class="fa fa-twitter"></i> Twitter
+                    </a>
                 </li>
                 
                 
                 <li class="nav-item">
-                    <a class="pure-button" href="http://github.com/huobazi "><i class="fa fa-github-alt"></i> github</a>
+                    <a class="pure-button" href="https://github.com/huobazi">
+                        <i class="fa fa-github-alt"></i> Github
+                    </a>
                 </li>
                 
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://www.linkedin.com/in/huobazi">
+                        <i class="fa fa-linkedin"></i> LinkedIn
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="pure-button" href='https://huobazi.aspxboy.com/index.xml'>
+                        <i class="fa fa-rss"></i> rss
+                    </a>
+                </li>
             </ul>
         </nav>
     </div>
 </div>
+
 
     <div class="content pure-u-1 pure-u-md-3-4">
         <div>
             
             <div class="posts">
                 
-                <h1 class="content-subhead">14 Mar 2004</h1>
+                <h1 class="content-subhead">06 Apr 2004</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://huobazi.aspxboy.com/blog/2004/03/14/cb-3113/" class="post-title">一个比较郁闷的问题</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2004/04/06/refreshorreloadparentwindowwithoutconfirm/" class="post-title">弹出窗口刷新它的父页面后。出现不重新发送信息，则无法刷新网页</a>
 
                         <p class="post-meta">
                             
                             
-                                
-                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a>
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>做的东西弹出一个窗口处理某些动作后刷新父窗口<br />用<br />window.opener.location.reload();<br />刷新<br />如果父窗口在此之前如果有过提交数据的动作，则会出现这么个讨厌的对话筐<br />“不重新发送信息，则无法刷新网页”<br />痛苦......<br />CSDN搜索未果(有几贴都是用Response.Redirect的方法，但我这里是刷父窗口)。<br />痛苦.<br />........<br />翻我的<a href="http://www.aspxboy.com/private/showthread.asp?threadid=148"><strike>小本本</strike></a> 后找到办法<br />用<br />window.opener.location.href=window.opener.location.href<br />去刷新（其实是重定位了一下）父窗口<br />可行。<br />总结： <font style="BACKGROUND-COLOR: #ee82ee">不能一棵树上掉死</font> :P</p>             
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">05 Apr 2004</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2004/04/05/datagriddeleteconfirm/" class="post-title">DataGrid点击删除按钮弹出确认对话框一个好办法</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><font color="#3366cc"><strong>原文地址<br /><a href="http://expert.csdn.net/Expert/topic/2852/2852126.xml?temp=.4770471">http://expert.csdn.net/Expert/topic/2852/2852126.xml?temp=.4770471</a> <br /></strong></font><font color="#3366cc"><strong>其中<br />wf5360308(峰)</strong></font>提供的方法<br />datagrid-》属性生成器-》列-》添加按钮列-》删除-》文本(T)-&gt;在文本框里加上：<br />&lt;div id="de" onclick="JavaScript:return confirm('确定删除吗？')"&gt;删除&lt;/div&gt;<br /><br />不错的办法哦～<br /></p>               
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">05 Apr 2004</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2004/04/05/datagriddeleteconfirm/" class="post-title">DataGrid点击删除按钮弹出确认对话框一个好办法</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><font color="#3366cc"><strong>原文地址<br /><a href="http://expert.csdn.net/Expert/topic/2852/2852126.xml?temp=.4770471">http://expert.csdn.net/Expert/topic/2852/2852126.xml?temp=.4770471</a> <br /></strong></font><font color="#3366cc"><strong>其中<br />wf5360308(峰)</strong></font>提供的方法<br />datagrid-》属性生成器-》列-》添加按钮列-》删除-》文本(T)-&gt;在文本框里加上：<br />&lt;div id="de" onclick="JavaScript:return confirm('确定删除吗？')"&gt;删除&lt;/div&gt;<br /><br />不错的办法哦～<br /></p>               
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">05 Apr 2004</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2004/04/05/datagridheadertextinitemdatabound/" class="post-title">如何在ItemDataBound内获得DataGrid的列名称HeaderText</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>如果 AutoGenerateColumns=&ldquo;false&rdquo; 使用绑定列，模板列
+则比较好办，直接使用 YourDataGrid.Columns[编号].HeaderText 获得
+可是,如果 AutoGenerateColumns=&ldquo;true&rdquo; ,就比较麻烦了,因为这时YourDataGrid.Columns.Count是0
+但是可以变通做到。</p>
+
+<pre><code>&lt;%@ Page Language=&quot;C#&quot; Debug=&quot;true&quot; %&gt;
+&lt;%@ Import Namespace=&quot;System.Data&quot; %&gt;
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;gb2312&quot; lang=&quot;gb2312&quot;&gt;
+&lt;head&gt;
+&lt;title&gt; ItemDataBoundGetColumnName &lt;/title&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=gb2312&quot; /&gt;
+&lt;meta name=&quot;title&quot; content=&quot;&quot; /&gt;
+&lt;meta name=&quot;author&quot; content=&quot;活靶子,Huobazi,www.AspxBoy.com&quot; /&gt;
+&lt;meta name=&quot;subject&quot; content=&quot;&quot; /&gt;
+&lt;meta name=&quot;language&quot; content=&quot;gb2312&quot; /&gt;
+&lt;meta name=&quot;keywords&quot; content=&quot;&quot; /&gt;
+&lt;meta name=&quot;Copyright&quot; content=&quot;www.AspxBoy.com&quot; /&gt;
+&lt;meta name=&quot;robots&quot; content=&quot;all&quot; /&gt;
+&lt;script language=&quot;c#&quot; runat=&quot;server&quot;&gt;
+void BindGrid()
+{
+        DataTable dt = new DataTable();
+        DataRow dr;
+        dt.Columns.Add(new DataColumn(&quot;IntegerValue&quot;, typeof(Int32)));
+        dt.Columns.Add(new DataColumn(&quot;StringValue&quot;, typeof(string)));
+        dt.Columns.Add(new DataColumn(&quot;DateTimeValue&quot;, typeof(DateTime)));
+        dt.Columns.Add(new DataColumn(&quot;BoolValue&quot;, typeof(bool)));
+        dt.Columns.Add(new DataColumn(&quot;CurrencyValue&quot;, typeof(double)));
+        for (int i = 0; i &lt; 36; i++) {
+            dr = dt.NewRow();
+            dr[0] = i;
+            dr[1] = &quot;项 &quot; + i.ToString();
+            dr[2] = DateTime.Now;
+            dr[3] = (i % 2 != 0) ? true : false;
+            dr[4] = 1.23 * (i+1);
+            dt.Rows.Add(dr);
+        }
+  dg.DataSource= dt;
+  dg.DataBind();
+}
+void Page_Load(object o, EventArgs e)
+{
+     dg.PagerStyle.Mode = PagerMode.NumericPages;
+     if(!IsPostBack)
+     {
+        BindGrid();
+     }
+}
+ 
+void btnClick(object o , EventArgs e)
+{
+     Response.Write(&quot;页面回发,但是不执行ItemDataBound&quot;);
+}
+ 
+void PageChange(object o , DataGridPageChangedEventArgs e)
+{
+     dg.CurrentPageIndex = e.NewPageIndex;
+     BindGrid();
+}
+void ItemDataBound(object o , DataGridItemEventArgs e)
+{
+     if(e.Item.ItemIndex &gt; -1 )//必须
+     {
+          DataRowView drv = (DataRowView)e.Item.DataItem;
+          for (int i=0; i&lt;drv.Row.Table.Columns.Count ; i++)
+          {  
+            Response.Write(drv.Row.Table.Columns[i].ColumnName + &quot;  &quot;);
+          }
+     }
+}
+&lt;/script&gt;
+ 
+&lt;/head&gt;
+&lt;body&gt;
+&lt;form runat=&quot;server&quot;&gt;
+  &lt;ASP:DataGrid id=&quot;dg&quot; runat=&quot;server&quot;       
+   HeaderStyle-BackColor=&quot;#aaaadd&quot;
+   AutoGenerateColumns=&quot;true&quot;
+   AllowPaging=&quot;true&quot;
+   PageSize=&quot;6&quot;
+    OnItemDataBound=&quot;ItemDataBound&quot;
+    OnPageIndexChanged=&quot;PageChange&quot;
+  &gt;
+  &lt;/asp:DataGrid&gt;
+  &lt;/br&gt;
+   &lt;asp:button id=&quot;btn&quot; runat=&quot;server&quot; onclick=&quot;btnClick&quot; Text=&quot;我是按钮,按我一下&quot;&gt;&lt;/asp:button&gt;
+   &lt;p&gt;在AutoGenerateColumns=&quot;false&quot;使用绑定列或者模板列的时候只需要使用 &lt;/P&gt;
+   &lt;p&gt;&lt;font color=&quot;blut&quot;&gt;YourDataGrid.Columns[编号].HeaderText&lt;/font&gt; 去获取
+  &lt;/P&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+ 
+</code></pre>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">05 Apr 2004</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2004/04/05/datagridheadertextinitemdatabound/" class="post-title">如何在ItemDataBound内获得DataGrid的列名称HeaderText</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>如果 AutoGenerateColumns=&ldquo;false&rdquo; 使用绑定列，模板列
+则比较好办，直接使用 YourDataGrid.Columns[编号].HeaderText 获得
+可是,如果 AutoGenerateColumns=&ldquo;true&rdquo; ,就比较麻烦了,因为这时YourDataGrid.Columns.Count是0
+但是可以变通做到。</p>
+
+<pre><code>&lt;%@ Page Language=&quot;C#&quot; Debug=&quot;true&quot; %&gt;
+&lt;%@ Import Namespace=&quot;System.Data&quot; %&gt;
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;gb2312&quot; lang=&quot;gb2312&quot;&gt;
+&lt;head&gt;
+&lt;title&gt; ItemDataBoundGetColumnName &lt;/title&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=gb2312&quot; /&gt;
+&lt;meta name=&quot;title&quot; content=&quot;&quot; /&gt;
+&lt;meta name=&quot;author&quot; content=&quot;活靶子,Huobazi,www.AspxBoy.com&quot; /&gt;
+&lt;meta name=&quot;subject&quot; content=&quot;&quot; /&gt;
+&lt;meta name=&quot;language&quot; content=&quot;gb2312&quot; /&gt;
+&lt;meta name=&quot;keywords&quot; content=&quot;&quot; /&gt;
+&lt;meta name=&quot;Copyright&quot; content=&quot;www.AspxBoy.com&quot; /&gt;
+&lt;meta name=&quot;robots&quot; content=&quot;all&quot; /&gt;
+&lt;script language=&quot;c#&quot; runat=&quot;server&quot;&gt;
+void BindGrid()
+{
+        DataTable dt = new DataTable();
+        DataRow dr;
+        dt.Columns.Add(new DataColumn(&quot;IntegerValue&quot;, typeof(Int32)));
+        dt.Columns.Add(new DataColumn(&quot;StringValue&quot;, typeof(string)));
+        dt.Columns.Add(new DataColumn(&quot;DateTimeValue&quot;, typeof(DateTime)));
+        dt.Columns.Add(new DataColumn(&quot;BoolValue&quot;, typeof(bool)));
+        dt.Columns.Add(new DataColumn(&quot;CurrencyValue&quot;, typeof(double)));
+        for (int i = 0; i &lt; 36; i++) {
+            dr = dt.NewRow();
+            dr[0] = i;
+            dr[1] = &quot;项 &quot; + i.ToString();
+            dr[2] = DateTime.Now;
+            dr[3] = (i % 2 != 0) ? true : false;
+            dr[4] = 1.23 * (i+1);
+            dt.Rows.Add(dr);
+        }
+  dg.DataSource= dt;
+  dg.DataBind();
+}
+void Page_Load(object o, EventArgs e)
+{
+     dg.PagerStyle.Mode = PagerMode.NumericPages;
+     if(!IsPostBack)
+     {
+        BindGrid();
+     }
+}
+ 
+void btnClick(object o , EventArgs e)
+{
+     Response.Write(&quot;页面回发,但是不执行ItemDataBound&quot;);
+}
+ 
+void PageChange(object o , DataGridPageChangedEventArgs e)
+{
+     dg.CurrentPageIndex = e.NewPageIndex;
+     BindGrid();
+}
+void ItemDataBound(object o , DataGridItemEventArgs e)
+{
+     if(e.Item.ItemIndex &gt; -1 )//必须
+     {
+          DataRowView drv = (DataRowView)e.Item.DataItem;
+          for (int i=0; i&lt;drv.Row.Table.Columns.Count ; i++)
+          {  
+            Response.Write(drv.Row.Table.Columns[i].ColumnName + &quot;  &quot;);
+          }
+     }
+}
+&lt;/script&gt;
+ 
+&lt;/head&gt;
+&lt;body&gt;
+&lt;form runat=&quot;server&quot;&gt;
+  &lt;ASP:DataGrid id=&quot;dg&quot; runat=&quot;server&quot;       
+   HeaderStyle-BackColor=&quot;#aaaadd&quot;
+   AutoGenerateColumns=&quot;true&quot;
+   AllowPaging=&quot;true&quot;
+   PageSize=&quot;6&quot;
+    OnItemDataBound=&quot;ItemDataBound&quot;
+    OnPageIndexChanged=&quot;PageChange&quot;
+  &gt;
+  &lt;/asp:DataGrid&gt;
+  &lt;/br&gt;
+   &lt;asp:button id=&quot;btn&quot; runat=&quot;server&quot; onclick=&quot;btnClick&quot; Text=&quot;我是按钮,按我一下&quot;&gt;&lt;/asp:button&gt;
+   &lt;p&gt;在AutoGenerateColumns=&quot;false&quot;使用绑定列或者模板列的时候只需要使用 &lt;/P&gt;
+   &lt;p&gt;&lt;font color=&quot;blut&quot;&gt;YourDataGrid.Columns[编号].HeaderText&lt;/font&gt; 去获取
+  &lt;/P&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+ 
+</code></pre>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">05 Apr 2004</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2004/04/05/cb-5210/" class="post-title">这次吵的更凶了！！</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>1 <a href="http://blog.joycode.com/5drush/posts/18249.aspx">http://blog.joycode.com/5drush/posts/18249.aspx</a><br />从而引出<br />2 <a href="http://blog.codelphi.com/virushuo/posts/3453.aspx">http://blog.codelphi.com/virushuo/posts/3453.aspx</a><br />再<br />3 <a href="http://blog.codelphi.com/netfire/posts/3469.aspx">http://blog.codelphi.com/netfire/posts/3469.aspx</a><br />我个人认为<br />MVPs是一群值得佩服的人，因为我身边就有<a href="http://www.webdiyer.com">一位</a> 。如果你知道了他的一些情况你将更佩服他！<br />不同意文中“国内的大半都是靠论坛灌水得到”，<br />我认为热心于帮助别人的人最值得敬佩的！！！</p>               
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">14 Mar 2004</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2004/03/14/cb-3113/" class="post-title">一个比较郁闷的问题</a>
+
+                        <p class="post-meta">
+                            
                             
                         </p>
                     </header>
@@ -86,13 +377,10 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://huobazi.aspxboy.com/blog/2004/03/14/cb-3113/" class="post-title">一个比较郁闷的问题</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2004/03/14/cb-3113/" class="post-title">一个比较郁闷的问题</a>
 
                         <p class="post-meta">
                             
-                            
-                                
-                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a>
                             
                         </p>
                     </header>
@@ -107,13 +395,10 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://huobazi.aspxboy.com/blog/2004/03/14/cb-3122/" class="post-title">落伍者三周岁了</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2004/03/14/cb-3122/" class="post-title">落伍者三周岁了</a>
 
                         <p class="post-meta">
                             
-                            
-                                
-                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-落伍者" href="http://huobazi.aspxboy.com//tags/%E8%90%BD%E4%BC%8D%E8%80%85">落伍者</a>
                             
                         </p>
                     </header>
@@ -128,13 +413,10 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://huobazi.aspxboy.com/blog/2004/03/04/cb-2135/" class="post-title">MessageBox Control in ASP.NET</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2004/03/04/cb-2135/" class="post-title">MessageBox Control in ASP.NET</a>
 
                         <p class="post-meta">
                             
-                            
-                                
-                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a>
                             
                         </p>
                     </header>
@@ -209,211 +491,6 @@
 </tr>
 <br />
 </tbody></table></p>
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">04 Mar 2004</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://huobazi.aspxboy.com/blog/2004/03/04/cb-2135/" class="post-title">MessageBox Control in ASP.NET</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                
-                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a>
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p><p>在ASP.NET里实现MessageBox<br /><a href="http://www.microsoft.com/india/msdn/articles/119.aspx"><br /><a href="http://www.microsoft.com/india/msdn/articles/119.aspx">http://www.microsoft.com/india/msdn/articles/119.aspx</a></a>?<br /><img style="border: 0px;" src="/images/hbz_images/977dece2-f702-4e70-8c7c-13638de26e08.gif" border="0" alt=""></p>
-<table style="BORDER-COLLAPSE: collapse" border="0" cellspacing="0" cellpadding="0" width="100%" bordercolor="#111111"><tbody>
-<tr><td class="midlle" align="left"><strong>ShowMessageAtStartup</strong></td></tr>
-<tr><td class="midlle" align="left"> </td></tr>
-<tr><td class="midlle" align="left">This control is used to show message at startup of the page. For example, if you want to inform the user with some information using message box after the post back. Then you can use this control. This control has following two properties,</td></tr>
-<tr><td class="midlle" align="left"> </td></tr>
-<tr>
-<td class="midlle">
-<table border="0" cellspacing="2" cellpadding="2" width="100%">
-<br /><tbody>
-<br /><tr>
-<br /><td class="midlle" width="15%" align="left" valign="top">
-<strong>MessageText</strong>:</td>
-<td class="midlle" width="85%" align="left">This property is used to set the Message which is showed in the message box.</td>
-</tr>
-<tr>
-<td class="midlle" align="left" valign="top">
-<strong>Enabled</strong>:</td>
-<td class="midlle" align="left">This property is used for enabling or disabling this control depending upon the<br />requirement.</td>
-</tr>
-</tbody>
-</table>
-<p></p>
-</td>
-<br />
-</tr>
-<br /><tr><td class="midlle" align="left"> </td></tr>
-<br /><tr><td class="midlle" align="left"><strong>MessageAtSubmit</strong></td></tr>
-<br /><tr><td class="midlle" align="left"> </td></tr>
-<br /><tr><td class="midlle" align="left">This control is used to show alert message or confirm message box when the page is submitted. For example, when the user is pressing a button to delete a record. During that time, if you want to ask the user for confirmation. Then you can use this control. This control has following properties,</td></tr>
-<br /><tr><td class="midlle" align="left"> </td></tr>
-<br /><tr>
-<td class="midlle">
-<table border="0" cellspacing="2" cellpadding="2" width="100%">
-<br /><tbody>
-<br /><tr>
-<br /><td class="midlle" width="30%" align="left" valign="top">
-<strong>MessageText</strong>:</td>
-<td class="midlle" width="70%" align="left">This property is used to set the Message which is showed in the message box.</td>
-</tr>
-<br /><tr>
-<td class="midlle" align="left" valign="top">
-<strong>Enabled</strong>:</td>
-<td class="midlle" align="left">This property is used for enabling or disabling this control depending upon the<br />requirement.</td>
-</tr>
-<br /><tr>
-<td class="midlle" align="left" valign="top">
-<strong>IsConfirmMessage</strong>:</td>
-<td class="midlle" align="left">This property is used to mention whether it is confirmation message box or alert message box.</td>
-</tr>
-<br /><tr>
-<td class="midlle" align="left" valign="top">
-<strong>ConfirmMessagePassClientScript</strong>:</td>
-<td class="midlle" align="left">This property is used to mention the client side script which has to executed if the confirmation message return true. i.e. when users presses ok button. This property will be used only when isConfirmmessage property is set to true</td>
-</tr>
-<br /><tr>
-<td class="midlle" align="left" valign="top">
-<strong>ConfirmMessageFailClientScript</strong>:</td>
-<td class="midlle" align="left">This property is used to mention the client side script which<br />has to executed if the confirmation message return false. i.e. when users presses<br />cancel button. This property will be used only when isConfirmmessage property<br />is set to true.</td>
-</tr>
-<br />
-</tbody>
-</table>
-<p></p>
-</td>
-<br />
-</tr>
-<br />
-</tbody></table></p>
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">23 Feb 2004</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://huobazi.aspxboy.com/blog/2004/02/23/cb-1521/" class="post-title">用Asp.Net抓取web页面</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                
-                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a>
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p><span style="color: #990000;">演示:<br /><a href="http://www.aspxboy.com/demo/286.aspx" target="_blank">http://www.aspxboy.com/demo/286.aspx</a></span></p>
-<p><span style="color: #990000;"><br />代码高亮显示(HightLight in <a href="http://www.aspxboy.com/scv/">Source Code Viewer</a>)</span></p>
-<p><span style="color: #990000;"><br /><a href="http://www.aspxboy.com/code/default.aspx/S7s2zPJbeI9PJA/OKHpAVwVaUEhf02EgEOgeB3Yd5Z7fLL3ZNgdv7XIqertUOYm9kbQ62LshbJBwvWPBBYa4EyVMhvMhyEDPH8chU5ornn8=.Aspx" target="_blank">http://www.aspxboy.com/code/default.aspx/S7s2zPJbeI9PJA/OK<br />HpAVwVaUEhf02EgEOgeB3Yd5Z7fLL3ZNgdv7XIqertUOYm9kbQ62<br />LshbJBwvWPBBYa4EyVMhvMhyEDPH8chU5ornn8=.Aspx</a></span><br /><span style="color: #990000;">&lt;html&gt;<br />&lt;head&gt;<br /> </span><br /><span style="color: #990000;">&lt;SCRIPT runat="server"&gt;<br />  void Page_Load(Object sender, EventArgs e) {</span><br /><span style="color: #990000;">    WebRequest req = WebRequest.Create("<a href="http://www.im286.com/index.php" target="_blank">http://www.im286.com/index.php</a>");<br /> string urliii="src="; //图片使用绝对连接<br /> urliii+="<a href="http://www.im286.com/" target="_blank">http://www.im286.com/</a>";<br />    try {<br />        WebResponse result = req.GetResponse();<br />        Stream ReceiveStream = result.GetResponseStream();</span><br /><span style="color: #990000;">        Byte[] read = new Byte[512];<br />        int bytes = ReceiveStream.Read(read, 0, 512);</span><br /><span style="color: #990000;">        lblHTML.Text = "";<br />        while (bytes &gt; 0)<br />        {</span><br /><span style="color: #990000;">          // 注意：<br />          // 下面假定响应使用 gb2312 作为编码方式。<br />          // 如果内容以 ANSI 代码页形式（例如，932）发送，则使用类似下面的语句：<br />          //Encoding encode = System.Text.Encoding.GetEncoding("shift-jis");<br />          Encoding encode = System.Text.Encoding.GetEncoding("gb2312");<br />          lblHTML.Text = lblHTML.Text + encode.GetString(read, 0, bytes);<br />   <br />          bytes = ReceiveStream.Read(read, 0, 512);<br />   <br />        }<br />    } catch(Exception) {<br />        lblHTML.Text = "检索页时出错";<br />    }<br /> lblHTML.Text = lblHTML.Text.Replace("src=",""+urliii+"");<br /> lblHTML.Text = lblHTML.Text.Replace("\"","");<br />  }<br />&lt;/SCRIPT&gt;<br />&lt;/head&gt;</span><br /><span style="color: #990000;">&lt;body&gt;</span><br /><span style="color: #990000;">  &lt;form method="post" action="Webrequest.aspx" runat="server"&gt;<br />   <br />    &lt;asp:Label runat=server ID="lblHTML" Rows="30" Cols="80" EnableViewState="false"  Wrap="True"&gt;&lt;/asp:Label&gt;<br />  &lt;/form&gt;</span><br /><span style="color: #990000;">&lt;/body&gt;<br />&lt;/html&gt;</span></p>
-<p>&lt;%@ Page language="C#" Trace="True" %&gt;<br />&lt;%@ Import Namespace="System.Net" %&gt;<br />&lt;%@ Import Namespace="System.IO" %&gt;</p>              
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">23 Feb 2004</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://huobazi.aspxboy.com/blog/2004/02/23/cb-1521/" class="post-title">用Asp.Net抓取web页面</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                
-                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a>
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p><span style="color: #990000;">演示:<br /><a href="http://www.aspxboy.com/demo/286.aspx" target="_blank">http://www.aspxboy.com/demo/286.aspx</a></span></p>
-<p><span style="color: #990000;"><br />代码高亮显示(HightLight in <a href="http://www.aspxboy.com/scv/">Source Code Viewer</a>)</span></p>
-<p><span style="color: #990000;"><br /><a href="http://www.aspxboy.com/code/default.aspx/S7s2zPJbeI9PJA/OKHpAVwVaUEhf02EgEOgeB3Yd5Z7fLL3ZNgdv7XIqertUOYm9kbQ62LshbJBwvWPBBYa4EyVMhvMhyEDPH8chU5ornn8=.Aspx" target="_blank">http://www.aspxboy.com/code/default.aspx/S7s2zPJbeI9PJA/OK<br />HpAVwVaUEhf02EgEOgeB3Yd5Z7fLL3ZNgdv7XIqertUOYm9kbQ62<br />LshbJBwvWPBBYa4EyVMhvMhyEDPH8chU5ornn8=.Aspx</a></span><br /><span style="color: #990000;">&lt;html&gt;<br />&lt;head&gt;<br /> </span><br /><span style="color: #990000;">&lt;SCRIPT runat="server"&gt;<br />  void Page_Load(Object sender, EventArgs e) {</span><br /><span style="color: #990000;">    WebRequest req = WebRequest.Create("<a href="http://www.im286.com/index.php" target="_blank">http://www.im286.com/index.php</a>");<br /> string urliii="src="; //图片使用绝对连接<br /> urliii+="<a href="http://www.im286.com/" target="_blank">http://www.im286.com/</a>";<br />    try {<br />        WebResponse result = req.GetResponse();<br />        Stream ReceiveStream = result.GetResponseStream();</span><br /><span style="color: #990000;">        Byte[] read = new Byte[512];<br />        int bytes = ReceiveStream.Read(read, 0, 512);</span><br /><span style="color: #990000;">        lblHTML.Text = "";<br />        while (bytes &gt; 0)<br />        {</span><br /><span style="color: #990000;">          // 注意：<br />          // 下面假定响应使用 gb2312 作为编码方式。<br />          // 如果内容以 ANSI 代码页形式（例如，932）发送，则使用类似下面的语句：<br />          //Encoding encode = System.Text.Encoding.GetEncoding("shift-jis");<br />          Encoding encode = System.Text.Encoding.GetEncoding("gb2312");<br />          lblHTML.Text = lblHTML.Text + encode.GetString(read, 0, bytes);<br />   <br />          bytes = ReceiveStream.Read(read, 0, 512);<br />   <br />        }<br />    } catch(Exception) {<br />        lblHTML.Text = "检索页时出错";<br />    }<br /> lblHTML.Text = lblHTML.Text.Replace("src=",""+urliii+"");<br /> lblHTML.Text = lblHTML.Text.Replace("\"","");<br />  }<br />&lt;/SCRIPT&gt;<br />&lt;/head&gt;</span><br /><span style="color: #990000;">&lt;body&gt;</span><br /><span style="color: #990000;">  &lt;form method="post" action="Webrequest.aspx" runat="server"&gt;<br />   <br />    &lt;asp:Label runat=server ID="lblHTML" Rows="30" Cols="80" EnableViewState="false"  Wrap="True"&gt;&lt;/asp:Label&gt;<br />  &lt;/form&gt;</span><br /><span style="color: #990000;">&lt;/body&gt;<br />&lt;/html&gt;</span></p>
-<p>&lt;%@ Page language="C#" Trace="True" %&gt;<br />&lt;%@ Import Namespace="System.Net" %&gt;<br />&lt;%@ Import Namespace="System.IO" %&gt;</p>              
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">12 Feb 2004</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://huobazi.aspxboy.com/blog/2004/02/12/cb-1192/" class="post-title">一个不错的代码编辑工具</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                
-                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a>
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>CrimSon Editer<br /><a href="http://www.crimsoneditor.com/" target="_blank"><br />http://www.crimsoneditor.com/</a><br />我用它因为它体积小 启动迅速 最大的优点是<span style="font-size: large; color: #ff3300;"><strong>免费</strong></span>哦<br />支持许多常用代码的语法高亮显示.<br />可以在这里下载到C#的代码高亮显示文件<br /><a target="_blank">http://www.crimsoneditor.com/board/CrazyWWWBoard.cgi?db=user0&amp;mode=read&amp;num=99&amp;page=1&amp;ftype=6&amp;fval=c%23&amp;backdepth=1</a></p>
-<p>还有其他好的编辑工具都列在这里了:<br /><a href="http://www.crimsoneditor.com/english/editors.html" target="_blank">http://www.crimsoneditor.com/english/editors.html</a></p>             
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">09 Feb 2004</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://huobazi.aspxboy.com/blog/2004/02/09/pagedsp/" class="post-title">分页存储过程</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                
-                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-LAMP" href="http://huobazi.aspxboy.com//tags/lamp">LAMP</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a><a class="post-category post-category-SQL Server" href="http://huobazi.aspxboy.com//tags/sql-server">SQL Server</a><a class="post-category post-category-分页" href="http://huobazi.aspxboy.com//tags/%E5%88%86%E9%A1%B5">分页</a>
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>搞了一中午终于可以用了 但不知道效率如何.郁闷的是我要用php去调用它</p>
-<p><span style="color: #008000;">  /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++<br />    CopyRight：   ******<br />    CreateData：   2004-02-09<br />    Language：   MS SQL SERVER 存储过程<br />    AuthorName：  Meibo Wu</span><br /><span style="color: #008000;">    实现功能：   分页显示当用户选择了图片大分类时(按手机)的数据<br />    参数说明：   @bigtype为大分类<br />    @gid为传入的图片类型           <br />        $PageSize为每页显示的记录数量<br />    @pageindex为当前页码                             <br />    LastUpdate:            <br />    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/<br />CREATE procedure sms_img_page_no_smalltype<br />(<br /> @bigtype nvarchar(20),<br /> @gid int,<br /> @pagesize int,<br /> @pageindex int<br />)<br />as<br />set nocount on<br /> declare @LikeBigType nvarchar(20)<br /> declare @PageLowerBound int<br /> declare @PageUpperBound int<br /> declare @indextable table(id int identity(1,1),nid int)<br />  set @PageLowerBound=(@pageindex-1)*@pagesize<br />  set @PageUpperBound= @PageLowerBound+@pagesize<br />  set @LikeBigType= @bigtype+'%'<br />  set rowcount @PageUpperBound<br /> insert into @indextable(nid)<br />  select  a.col_id<br />   from web_sms_data_img as a join web_sms_data_mobile as q<br />   on a.col_mobile_type=q.col_mobile_type<br />   where </span><a href="mailto:a.col_img_group=@gid"><span style="color: #008000;">a.col_img_group=@gid</span></a><span style="color: #008000;"><br />    and q.col_mobile_comment  like @LikeBigType<br />   order by a.col_id desc <br /> /*<br /> select  @LikeBigType<br /> select * from @indextable <br /> */<br /> select q.col_mobile_comment,<br />  a.col_id,<br />  a.col_img_hits,<br />  a.col_img_dir,<br />  a.col_img_name<br />  from web_sms_data_img as a join web_sms_data_mobile as q<br />   on a.col_mobile_type=q.col_mobile_type<br />    join @indextable  as p<br />    on a.col_id=p.nid<br />  where p.id&gt;@PageLowerBound and p.id&lt;</span><a href="mailto:=@PageUpperBound"><span style="color: #008000;">=@PageUpperBound</span></a><span style="color: #008000;"><br />   and </span><a href="mailto:a.col_img_group=@gid"><span style="color: #008000;">a.col_img_group=@gid</span></a><span style="color: #008000;"><br />   and q.col_mobile_comment like @LikeBigType<br /> <br /> order by p.id</span></p>
-<p><span style="color: #008000;">set nocount off<br />GO<br /></span></p>               
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">09 Feb 2004</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://huobazi.aspxboy.com/blog/2004/02/09/pagedsp/" class="post-title">分页存储过程</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                
-                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-LAMP" href="http://huobazi.aspxboy.com//tags/lamp">LAMP</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a><a class="post-category post-category-SQL Server" href="http://huobazi.aspxboy.com//tags/sql-server">SQL Server</a><a class="post-category post-category-分页" href="http://huobazi.aspxboy.com//tags/%E5%88%86%E9%A1%B5">分页</a>
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>搞了一中午终于可以用了 但不知道效率如何.郁闷的是我要用php去调用它</p>
-<p><span style="color: #008000;">  /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++<br />    CopyRight：   ******<br />    CreateData：   2004-02-09<br />    Language：   MS SQL SERVER 存储过程<br />    AuthorName：  Meibo Wu</span><br /><span style="color: #008000;">    实现功能：   分页显示当用户选择了图片大分类时(按手机)的数据<br />    参数说明：   @bigtype为大分类<br />    @gid为传入的图片类型           <br />        $PageSize为每页显示的记录数量<br />    @pageindex为当前页码                             <br />    LastUpdate:            <br />    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/<br />CREATE procedure sms_img_page_no_smalltype<br />(<br /> @bigtype nvarchar(20),<br /> @gid int,<br /> @pagesize int,<br /> @pageindex int<br />)<br />as<br />set nocount on<br /> declare @LikeBigType nvarchar(20)<br /> declare @PageLowerBound int<br /> declare @PageUpperBound int<br /> declare @indextable table(id int identity(1,1),nid int)<br />  set @PageLowerBound=(@pageindex-1)*@pagesize<br />  set @PageUpperBound= @PageLowerBound+@pagesize<br />  set @LikeBigType= @bigtype+'%'<br />  set rowcount @PageUpperBound<br /> insert into @indextable(nid)<br />  select  a.col_id<br />   from web_sms_data_img as a join web_sms_data_mobile as q<br />   on a.col_mobile_type=q.col_mobile_type<br />   where </span><a href="mailto:a.col_img_group=@gid"><span style="color: #008000;">a.col_img_group=@gid</span></a><span style="color: #008000;"><br />    and q.col_mobile_comment  like @LikeBigType<br />   order by a.col_id desc <br /> /*<br /> select  @LikeBigType<br /> select * from @indextable <br /> */<br /> select q.col_mobile_comment,<br />  a.col_id,<br />  a.col_img_hits,<br />  a.col_img_dir,<br />  a.col_img_name<br />  from web_sms_data_img as a join web_sms_data_mobile as q<br />   on a.col_mobile_type=q.col_mobile_type<br />    join @indextable  as p<br />    on a.col_id=p.nid<br />  where p.id&gt;@PageLowerBound and p.id&lt;</span><a href="mailto:=@PageUpperBound"><span style="color: #008000;">=@PageUpperBound</span></a><span style="color: #008000;"><br />   and </span><a href="mailto:a.col_img_group=@gid"><span style="color: #008000;">a.col_img_group=@gid</span></a><span style="color: #008000;"><br />   and q.col_mobile_comment like @LikeBigType<br /> <br /> order by p.id</span></p>
-<p><span style="color: #008000;">set nocount off<br />GO<br /></span></p>               
 
                     </div>
                 </section>
@@ -423,13 +500,13 @@
 <div class="pagination">
   <nav role="pagination" class="post-list-pagination">
       
-      <a href="/tags/asp/index.net/page/16/" class="post-list-pagination-item pure-button post-list-pagination-item-prev">
+      <a href="/tags/asp.net/page/16/" class="post-list-pagination-item pure-button post-list-pagination-item-prev">
         <i class="fa fa-angle-double-left"></i>&nbsp;Newer
       </a>
       
-    <span class="post-list-pagination-item post-list-pagination-item-current">Page 17 of 18</span>
+    <span class="post-list-pagination-item post-list-pagination-item-current">Page 17 of 19</span>
     
-      <a href="/tags/asp/index.net/page/18/" class="post-list-pagination-item pure-button post-list-pagination-item-next">
+      <a href="/tags/asp.net/page/18/" class="post-list-pagination-item pure-button post-list-pagination-item-next">
         Older&nbsp;<i class="fa fa-angle-double-right"></i>
       </a>
     
@@ -440,11 +517,11 @@
             <div class="footer">
     <div class="pure-menu pure-menu-horizontal pure-menu-open">
         <ul>
-            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a> &nbsp;&nbsp; theme by <a target="_blank" href="https://github.com/dplesca/purehugo">purehugo</a></a></li>
+            <li>Powered by <a class="hugo" href="https://gohugo.io/" target="_blank">hugo</a></li>
         </ul>
     </div>
 </div>
-<script src="/js/all.min.js"></script>
+<script src='https://huobazi.aspxboy.com/js/all.min.js'></script>
 
         </div>
     </div>

@@ -2,41 +2,51 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Edong on 武眉博</title>
-    <link>http://huobazi.aspxboy.com/tags/edong/</link>
+    <link>https://huobazi.aspxboy.com/tags/edong/</link>
     <description>Recent content in Edong on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 28 Jul 2007 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://huobazi.aspxboy.com/tags/edong/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://huobazi.aspxboy.com/tags/edong/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>中国EDONG网（中国排名第16的IDC）的技术力量和他的24小时客服。</title>
-      <link>http://huobazi.aspxboy.com/blog/2007/07/28/edong/</link>
+      <link>https://huobazi.aspxboy.com/blog/2007/07/28/edong/</link>
       <pubDate>Sat, 28 Jul 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2007/07/28/edong/</guid>
-      <description>&lt;p&gt;这篇post写好后发现&lt;a href=&#34;http://cnblogs.com/&#34; target=&#34;_blank&#34;&gt;在博客园&lt;/a&gt;不能保存，原因是内容包含违禁内容。&lt;br /&gt;&lt;br /&gt;只有写到其他地方，再挂个链接了。&lt;br /&gt;&lt;br /&gt;&lt;a style=&#34;COLOR: #008000&#34; href=&#34;http://spaces.huash.com/index.php/uid-133969-action-viewspace-itemid-240537&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;&lt;em style=&#34;FONT-SIZE: 14pt&#34;&gt;http://spaces.huash.com/index.php/uid-133969-action-viewspace-itemid-240537&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;另外说一下，用了用感觉&lt;a href=&#34;http://www.discuz.net/&#34; target=&#34;_blank&#34;&gt;Discuz&lt;/a&gt;/ &lt;a href=&#34;http://www.supesite.com/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;&lt;font color=&#34;#003366&#34;&gt;X-Space&lt;/font&gt;&lt;/strong&gt;&lt;/a&gt; 真是个不错的博客、圈子软件，希望&lt;a href=&#34;http://nt.discuz.net/space/?uid=12&#34; target=&#34;_blank&#34;&gt;雪人&lt;/a&gt;和他同事们的&lt;a href=&#34;http://nt.discuz.net/&#34; target=&#34;_self&#34;&gt;DisuczNT&lt;/a&gt;做的更好。&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;----------------------------------------------------------------------------------------------------------&lt;br /&gt;注：&lt;br /&gt;&lt;br /&gt;此post不接受任何其他IDC评论，不接受其对其他IDC的推荐。&lt;br /&gt;任何&lt;/strong&gt;&lt;a onclick=&#34;javascript:tagshow(event, &#39;%C6%C0%C2%DB&#39;);&#34; href=&#34;&#34; target=&#34;_self&#34; href_cetemp&gt;&lt;u&gt;&lt;font color=&#34;#009999&#34;&gt;&lt;strong&gt;评论&lt;/strong&gt;&lt;/font&gt;&lt;/u&gt;&lt;/a&gt;&lt;strong&gt;中出现任何IDC网站相关链接都将被删除。&lt;br /&gt;本人有权认定您的评论是否是枪手文章或广告内容。&lt;br /&gt;&lt;br /&gt;评论前请看右边的公告，谢谢合作！&lt;br /&gt;&lt;br /&gt;----------------------------------------------------------------------------------------------------------&lt;/strong&gt;&lt;/p&gt;              
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2007/07/28/edong/</guid>
+      <description>这篇post写好后发现在博客园不能保存，原因是内容包含违禁内容。
+只有写到其他地方，再挂个链接了。
+http://spaces.huash.com/index.php/uid-133969-action-viewspace-itemid-240537
+另外说一下，用了用感觉Discuz/ X-Space 真是个不错的博客、圈子软件，希望雪人和他同事们的DisuczNT做的更好。
+----------------------------------------------------------------------------------------------------------
+注：
+此post不接受任何其他IDC评论，不接受其对其他IDC的推荐。
+任何评论中出现任何IDC网站相关链接都将被删除。
+本人有权认定您的评论是否是枪手文章或广告内容。
+评论前请看右边的公告，谢谢合作！
+----------------------------------------------------------------------------------------------------------</description>
     </item>
     
     <item>
       <title>买了edong的空间没有db_securityadmin权限</title>
-      <link>http://huobazi.aspxboy.com/blog/2005/10/16/cb-256133/</link>
+      <link>https://huobazi.aspxboy.com/blog/2005/10/16/cb-256133/</link>
       <pubDate>Sun, 16 Oct 2005 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2005/10/16/cb-256133/</guid>
-      <description>&lt;p&gt;&lt;p&gt;买了edong的&lt;a href=&#34;http://www.edong.com/v8/webhosting/K1000.php&#34;&gt;http://www.edong.com/v8/webhosting/K1000.php&lt;/a&gt;这个k1000空间&lt;br /&gt;没有db_securityadmin权限装不了CommunityServer和DotNetNuke&lt;/p&gt;
-&lt;div class=&#34;CodeDiv&#34;&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;div style=&#34;padding-right: 5px; padding-left: 4px; font-size: 13px; padding-bottom: 4px; width: 98%; padding-top: 4px; background-color: #eeeeee; border: #cccccc 1px solid;&#34;&gt;
-&lt;span style=&#34;COLOR: #000000&#34;&gt;The account you use to run CS under must have the following minimum database roles to function corrected:&lt;p&gt;db_securityadmin&lt;br /&gt;db_ddladmin&lt;br /&gt;db_datareader&lt;br /&gt;db_datawriter&lt;/p&gt;
-&lt;p&gt;Use the following from Query Analyzer to ensure that your account has sufficent permissions. If you are in a host environment and can not change your database roles you will need to requrest these roles from your ISP&lt;/p&gt;
-&lt;p&gt;sp_addrolemember &amp;rsquo;db_securityadmin&amp;rsquo;, &amp;rsquo;&lt;/p&gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;COLOR: #800000&#34;&gt;your &lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt;login name&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #000000&#34;&gt;&amp;lsquo;&lt;br /&gt;sp_addrolemember &amp;rsquo;db_ddladmin&amp;rsquo;, &amp;rsquo;&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;COLOR: #800000&#34;&gt;your &lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt;login name&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #000000&#34;&gt;&amp;lsquo;&lt;br /&gt;sp_addrolemember &amp;rsquo;db_datareader&amp;rsquo;, &amp;rsquo;&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;COLOR: #800000&#34;&gt;your &lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt;login name&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #000000&#34;&gt;&amp;lsquo;&lt;br /&gt;sp_addrolemember &amp;rsquo;db_datawriter&amp;rsquo;, &amp;rsquo;&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;COLOR: #800000&#34;&gt;your &lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt;login name&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #000000&#34;&gt;&amp;lsquo;&lt;/span&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;br /&gt;郁闷。&lt;br /&gt;看来要自己租服务器了。&lt;br /&gt;另注：本随笔不接受枪手评论，谢谢！&lt;/p&gt;
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2005/10/16/cb-256133/</guid>
+      <description>买了edong的http://www.edong.com/v8/webhosting/K1000.php这个k1000空间
+没有db_securityadmin权限装不了CommunityServer和DotNetNuke
+
+The account you use to run CS under must have the following minimum database roles to function corrected:db_securityadmin
+db_ddladmin
+db_datareader
+db_datawriter
+Use the following from Query Analyzer to ensure that your account has sufficent permissions. If you are in a host environment and can not change your database roles you will need to requrest these roles from your ISP
+sp_addrolemember &amp;rsquo;db_securityadmin&amp;rsquo;, &amp;rsquo;
+&amp;lt;your login name&amp;gt;&amp;lsquo;
+sp_addrolemember &amp;rsquo;db_ddladmin&amp;rsquo;, &amp;rsquo;&amp;lt;your login name&amp;gt;&amp;lsquo;</description>
     </item>
     
   </channel>

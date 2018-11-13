@@ -1,0 +1,229 @@
+
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+
+    <link rel="stylesheet" href='https://huobazi.aspxboy.com/css/all.min.css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="alternate" type="application/rss+xml" title="武眉博" href='https://huobazi.aspxboy.com/index.xml' />
+</head>
+<body>
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <h1 class="brand-title"><a href="https://huobazi.aspxboy.com">武眉博</a></h1>
+            <h2 class="brand-tagline"> Marble&#39;s blog </h2>
+        </hgroup>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://twitter.com/huobazi">
+                        <i class="fa fa-twitter"></i> Twitter
+                    </a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://github.com/huobazi">
+                        <i class="fa fa-github-alt"></i> Github
+                    </a>
+                </li>
+                
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://www.linkedin.com/in/huobazi">
+                        <i class="fa fa-linkedin"></i> LinkedIn
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="pure-button" href='https://huobazi.aspxboy.com/index.xml'>
+                        <i class="fa fa-rss"></i> rss
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                <h1 class="content-subhead">05 Apr 2004</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2004/04/05/datagridheadertextinitemdatabound/" class="post-title">如何在ItemDataBound内获得DataGrid的列名称HeaderText</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+                    
+                    <div class="post-share">
+                        <div class="post-share-links">
+                            <h4 style="">Share</h4>
+                            
+                            
+                            
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="post-description">
+                        <p>如果 AutoGenerateColumns=&ldquo;false&rdquo; 使用绑定列，模板列
+则比较好办，直接使用 YourDataGrid.Columns[编号].HeaderText 获得
+可是,如果 AutoGenerateColumns=&ldquo;true&rdquo; ,就比较麻烦了,因为这时YourDataGrid.Columns.Count是0
+但是可以变通做到。</p>
+
+<pre><code>&lt;%@ Page Language=&quot;C#&quot; Debug=&quot;true&quot; %&gt;
+&lt;%@ Import Namespace=&quot;System.Data&quot; %&gt;
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;gb2312&quot; lang=&quot;gb2312&quot;&gt;
+&lt;head&gt;
+&lt;title&gt; ItemDataBoundGetColumnName &lt;/title&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=gb2312&quot; /&gt;
+&lt;meta name=&quot;title&quot; content=&quot;&quot; /&gt;
+&lt;meta name=&quot;author&quot; content=&quot;活靶子,Huobazi,www.AspxBoy.com&quot; /&gt;
+&lt;meta name=&quot;subject&quot; content=&quot;&quot; /&gt;
+&lt;meta name=&quot;language&quot; content=&quot;gb2312&quot; /&gt;
+&lt;meta name=&quot;keywords&quot; content=&quot;&quot; /&gt;
+&lt;meta name=&quot;Copyright&quot; content=&quot;www.AspxBoy.com&quot; /&gt;
+&lt;meta name=&quot;robots&quot; content=&quot;all&quot; /&gt;
+&lt;script language=&quot;c#&quot; runat=&quot;server&quot;&gt;
+void BindGrid()
+{
+        DataTable dt = new DataTable();
+        DataRow dr;
+        dt.Columns.Add(new DataColumn(&quot;IntegerValue&quot;, typeof(Int32)));
+        dt.Columns.Add(new DataColumn(&quot;StringValue&quot;, typeof(string)));
+        dt.Columns.Add(new DataColumn(&quot;DateTimeValue&quot;, typeof(DateTime)));
+        dt.Columns.Add(new DataColumn(&quot;BoolValue&quot;, typeof(bool)));
+        dt.Columns.Add(new DataColumn(&quot;CurrencyValue&quot;, typeof(double)));
+        for (int i = 0; i &lt; 36; i++) {
+            dr = dt.NewRow();
+            dr[0] = i;
+            dr[1] = &quot;项 &quot; + i.ToString();
+            dr[2] = DateTime.Now;
+            dr[3] = (i % 2 != 0) ? true : false;
+            dr[4] = 1.23 * (i+1);
+            dt.Rows.Add(dr);
+        }
+  dg.DataSource= dt;
+  dg.DataBind();
+}
+void Page_Load(object o, EventArgs e)
+{
+     dg.PagerStyle.Mode = PagerMode.NumericPages;
+     if(!IsPostBack)
+     {
+        BindGrid();
+     }
+}
+ 
+void btnClick(object o , EventArgs e)
+{
+     Response.Write(&quot;页面回发,但是不执行ItemDataBound&quot;);
+}
+ 
+void PageChange(object o , DataGridPageChangedEventArgs e)
+{
+     dg.CurrentPageIndex = e.NewPageIndex;
+     BindGrid();
+}
+void ItemDataBound(object o , DataGridItemEventArgs e)
+{
+     if(e.Item.ItemIndex &gt; -1 )//必须
+     {
+          DataRowView drv = (DataRowView)e.Item.DataItem;
+          for (int i=0; i&lt;drv.Row.Table.Columns.Count ; i++)
+          {  
+            Response.Write(drv.Row.Table.Columns[i].ColumnName + &quot;  &quot;);
+          }
+     }
+}
+&lt;/script&gt;
+ 
+&lt;/head&gt;
+&lt;body&gt;
+&lt;form runat=&quot;server&quot;&gt;
+  &lt;ASP:DataGrid id=&quot;dg&quot; runat=&quot;server&quot;       
+   HeaderStyle-BackColor=&quot;#aaaadd&quot;
+   AutoGenerateColumns=&quot;true&quot;
+   AllowPaging=&quot;true&quot;
+   PageSize=&quot;6&quot;
+    OnItemDataBound=&quot;ItemDataBound&quot;
+    OnPageIndexChanged=&quot;PageChange&quot;
+  &gt;
+  &lt;/asp:DataGrid&gt;
+  &lt;/br&gt;
+   &lt;asp:button id=&quot;btn&quot; runat=&quot;server&quot; onclick=&quot;btnClick&quot; Text=&quot;我是按钮,按我一下&quot;&gt;&lt;/asp:button&gt;
+   &lt;p&gt;在AutoGenerateColumns=&quot;false&quot;使用绑定列或者模板列的时候只需要使用 &lt;/P&gt;
+   &lt;p&gt;&lt;font color=&quot;blut&quot;&gt;YourDataGrid.Columns[编号].HeaderText&lt;/font&gt; 去获取
+  &lt;/P&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+ 
+</code></pre>
+
+                    </div>
+                    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "huobaziblog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                </section>
+            </div>
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="https://gohugo.io/" target="_blank">hugo</a></li>
+        </ul>
+    </div>
+</div>
+<script src='https://huobazi.aspxboy.com/js/all.min.js'></script>
+
+        </div>
+    </div>
+</div>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-56321-3', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

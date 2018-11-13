@@ -2,54 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>.Net其他 on 武眉博</title>
-    <link>http://huobazi.aspxboy.com/tags/index.net%E5%85%B6%E4%BB%96/</link>
+    <link>https://huobazi.aspxboy.com/tags/.net%E5%85%B6%E4%BB%96/</link>
     <description>Recent content in .Net其他 on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 09 Nov 2011 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://huobazi.aspxboy.com/tags/.net%E5%85%B6%E4%BB%96/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://huobazi.aspxboy.com/tags/.net%E5%85%B6%E4%BB%96/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>AutoGenerateColumns=&#39;true&#39;的GridView如何支持htmlencode/htmldecode</title>
-      <link>http://huobazi.aspxboy.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/</link>
+      <link>https://huobazi.aspxboy.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/</link>
       <pubDate>Wed, 09 Nov 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/</guid>
+      <guid>https://huobazi.aspxboy.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/</guid>
       <description>&lt;p&gt;&lt;p&gt;我们知道BoundField.HtmlEncode 属性可以设置一个单元格是否能够htmlencode，我今天碰到的问题是：自动生成列的GridView，表头可能是包含html的比如&amp;lt;font color=red&amp;gt;邮件&amp;lt;/font&amp;gt;，默认被htmlencode了，而我不希望这样做，所以有了如下的代码:&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt; &lt;/p&gt;
-&lt;div class=&#34;source&#34; style=&#34;font-family: &#39;[object HTMLOptionElement]&#39;, Consolas, &#39;Lucida Console&#39;, &#39;Courier New&#39;; color: #e6e1dc; background-color: #111111; &#34;&gt;
-&lt;span style=&#34;color: #bc9458; font-style: italic; &#34;&gt;/// &amp;lt;summary&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #bc9458; font-style: italic; &#34;&gt;/// Handles the PreRender event of the gvSource control.&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #bc9458; font-style: italic; &#34;&gt;/// &amp;lt;/summary&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #bc9458; font-style: italic; &#34;&gt;/// &amp;lt;param name=&amp;ldquo;sender&amp;rdquo;&amp;gt;The source of the event.&amp;lt;/param&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #bc9458; font-style: italic; &#34;&gt;/// &amp;lt;param name=&amp;ldquo;e&amp;rdquo;&amp;gt;The &amp;lt;see cref=&amp;ldquo;System.EventArgs&amp;rdquo;/&amp;gt; instance containing the event data.&amp;lt;/param&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #cc7833; &#34;&gt;protected&lt;/span&gt; &lt;span style=&#34;color: #cc7833; &#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color: #ffc66d; &#34;&gt;gvSource_PreRender&lt;/span&gt;( &lt;span style=&#34;color: #da4939; &#34;&gt;object&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;sender&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;EventArgs&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;e&lt;/span&gt; )&lt;br /&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #e6e1dc; &#34;&gt;GridView&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;gridView&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;sender&lt;/span&gt; &lt;span style=&#34;color: #cc7833; &#34;&gt;as&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;GridView&lt;/span&gt;;&lt;br /&gt;    &lt;span style=&#34;color: #cc7833; &#34;&gt;if&lt;/span&gt; ( &lt;span style=&#34;color: #e6e1dc; &#34;&gt;gridView&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color: #cc7833; &#34;&gt;null&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;gridView&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;HeaderRow&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color: #cc7833; &#34;&gt;null&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;gridView&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;HeaderRow&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Cells&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color: #cc7833; &#34;&gt;null&lt;/span&gt; )&lt;br /&gt;    &lt;span style=&#34;color: #e6e1dc; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;        &lt;span style=&#34;color: #cc7833; &#34;&gt;for&lt;/span&gt; ( &lt;span style=&#34;color: #da4939; &#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;j&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #a5c261; &#34;&gt;0&lt;/span&gt; ; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;j&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;gridView&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;HeaderRow&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Cells&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Count&lt;/span&gt; ; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;j&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;++&lt;/span&gt; )&lt;br /&gt;        &lt;span style=&#34;color: #e6e1dc; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;            &lt;span style=&#34;color: #e6e1dc; &#34;&gt;gridView&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;HeaderRow&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Cells&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;j&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;].&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Text&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;System&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Web&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;HttpUtility&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;HtmlDecode&lt;/span&gt;( &lt;span style=&#34;color: #e6e1dc; &#34;&gt;gridView&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;HeaderRow&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Cells&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;j&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;].&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Text&lt;/span&gt; );&lt;br /&gt;        &lt;span style=&#34;color: #e6e1dc; &#34;&gt;}&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #e6e1dc; &#34;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;}&lt;/span&gt;
-&lt;/div&gt;&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>在Console下输入密码，以星号代替。</title>
-      <link>http://huobazi.aspxboy.com/blog/2011/06/22/password-masking-in-csharp-console-application/</link>
+      <link>https://huobazi.aspxboy.com/blog/2011/06/22/password-masking-in-csharp-console-application/</link>
       <pubDate>Wed, 22 Jun 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2011/06/22/password-masking-in-csharp-console-application/</guid>
-      <description>&lt;p&gt;如何在Console下输入密码，像*unix系统下那样不显示，或者显示星号，如下代码经过测试：&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;div class=&#34;source&#34; style=&#34;font-family: &#39;[object HTMLOptionElement]&#39;, Consolas, &#39;Lucida Console&#39;, &#39;Courier New&#39;; color: #ffffff; background-color: #333333; &#34;&gt;
-&lt;p&gt;&lt;span style=&#34;color: #87ceeb; &#34;&gt;/// &amp;lt;summary&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #87ceeb; &#34;&gt;/// Gets the console secure password.&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #87ceeb; &#34;&gt;/// &amp;lt;/summary&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #87ceeb; &#34;&gt;/// &amp;lt;returns&amp;gt;&amp;lt;/returns&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #f0e68c; &#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color: #f0e68c; &#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;SecureString&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;GetConsoleSecurePassword&lt;/span&gt;( )&lt;br /&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #ffffff; &#34;&gt;SecureString&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;pwd&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #f0e68c; &#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;SecureString&lt;/span&gt;( );&lt;br /&gt;    &lt;span style=&#34;color: #f0e68c; &#34;&gt;while&lt;/span&gt; ( &lt;span style=&#34;color: #f0e68c; &#34;&gt;true&lt;/span&gt; )&lt;br /&gt;    &lt;span style=&#34;color: #ffffff; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;ConsoleKeyInfo&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;i&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;Console&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;ReadKey&lt;/span&gt;( &lt;span style=&#34;color: #f0e68c; &#34;&gt;true&lt;/span&gt; );&lt;br /&gt;        &lt;span style=&#34;color: #f0e68c; &#34;&gt;if&lt;/span&gt; ( &lt;span style=&#34;color: #ffffff; &#34;&gt;i&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Key&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;ConsoleKey&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Enter&lt;/span&gt; )&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;            &lt;span style=&#34;color: #f0e68c; &#34;&gt;break&lt;/span&gt;;&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;}&lt;/span&gt;&lt;br /&gt;        &lt;span style=&#34;color: #f0e68c; &#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;if&lt;/span&gt; ( &lt;span style=&#34;color: #ffffff; &#34;&gt;i&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Key&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;ConsoleKey&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Backspace&lt;/span&gt; )&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;            &lt;span style=&#34;color: #ffffff; &#34;&gt;pwd&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;RemoveAt&lt;/span&gt;( &lt;span style=&#34;color: #ffffff; &#34;&gt;pwd&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Length&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;1&lt;/span&gt; );&lt;br /&gt;            &lt;span style=&#34;color: #ffffff; &#34;&gt;Console&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Write&lt;/span&gt;( &lt;span style=&#34;color: #ffffff; &#34;&gt;&#34;\b \b&#34;&lt;/span&gt; );&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;}&lt;/span&gt;&lt;br /&gt;        &lt;span style=&#34;color: #f0e68c; &#34;&gt;else&lt;/span&gt;&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;            &lt;span style=&#34;color: #ffffff; &#34;&gt;pwd&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;AppendChar&lt;/span&gt;( &lt;span style=&#34;color: #ffffff; &#34;&gt;i&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;KeyChar&lt;/span&gt; );&lt;br /&gt;            &lt;span style=&#34;color: #ffffff; &#34;&gt;Console&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Write&lt;/span&gt;( &lt;span style=&#34;color: #ffffff; &#34;&gt;&#34;*&#34;&lt;/span&gt; );&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;}&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #ffffff; &#34;&gt;}&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #f0e68c; &#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;pwd&lt;/span&gt;;&lt;br /&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;}&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&#34;color: #87ceeb; &#34;&gt;/// &amp;lt;summary&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #87ceeb; &#34;&gt;/// Gets the console password.&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #87ceeb; &#34;&gt;/// &amp;lt;/summary&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #87ceeb; &#34;&gt;/// &amp;lt;returns&amp;gt;&amp;lt;/returns&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #f0e68c; &#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color: #f0e68c; &#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color: #bdb76b; &#34;&gt;string&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;GetConsolePassword&lt;/span&gt;( )&lt;br /&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #ffffff; &#34;&gt;StringBuilder&lt;/span&gt; sb &lt;span style=&#34;color: #ffffff; &#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #f0e68c; &#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;StringBuilder&lt;/span&gt;( );&lt;br /&gt;    &lt;span style=&#34;color: #f0e68c; &#34;&gt;while&lt;/span&gt; ( &lt;span style=&#34;color: #f0e68c; &#34;&gt;true&lt;/span&gt; )&lt;br /&gt;    &lt;span style=&#34;color: #ffffff; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;ConsoleKeyInfo&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;cki&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;Console&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;ReadKey&lt;/span&gt;( &lt;span style=&#34;color: #f0e68c; &#34;&gt;true&lt;/span&gt; );&lt;br /&gt;        &lt;span style=&#34;color: #f0e68c; &#34;&gt;if&lt;/span&gt; ( &lt;span style=&#34;color: #ffffff; &#34;&gt;cki&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Key&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;ConsoleKey&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Enter&lt;/span&gt; )&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;            &lt;span style=&#34;color: #ffffff; &#34;&gt;Console&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;WriteLine&lt;/span&gt;( );&lt;br /&gt;            &lt;span style=&#34;color: #f0e68c; &#34;&gt;break&lt;/span&gt;;&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;}&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;        &lt;span style=&#34;color: #f0e68c; &#34;&gt;if&lt;/span&gt; ( &lt;span style=&#34;color: #ffffff; &#34;&gt;cki&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Key&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;ConsoleKey&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Backspace&lt;/span&gt; )&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;            &lt;span style=&#34;color: #f0e68c; &#34;&gt;if&lt;/span&gt; ( sb&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Length&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #ffffff; &#34;&gt;0&lt;/span&gt; )&lt;br /&gt;            &lt;span style=&#34;color: #ffffff; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;                &lt;span style=&#34;color: #ffffff; &#34;&gt;Console&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Write&lt;/span&gt;( &lt;span style=&#34;color: #ffffff; &#34;&gt;&#34;\b\0\b&#34;&lt;/span&gt; );&lt;br /&gt;                sb&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Length&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;--;&lt;/span&gt;&lt;br /&gt;            &lt;span style=&#34;color: #ffffff; &#34;&gt;}&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;            &lt;span style=&#34;color: #f0e68c; &#34;&gt;continue&lt;/span&gt;;&lt;br /&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;}&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;        &lt;span style=&#34;color: #ffffff; &#34;&gt;Console&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Write&lt;/span&gt;( &lt;span style=&#34;color: #ffffff; &#34;&gt;&#39;*&#39;&lt;/span&gt; );&lt;br /&gt;        sb&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;Append&lt;/span&gt;( &lt;span style=&#34;color: #ffffff; &#34;&gt;cki&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;KeyChar&lt;/span&gt; );&lt;br /&gt;    &lt;span style=&#34;color: #ffffff; &#34;&gt;}&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;    &lt;span style=&#34;color: #f0e68c; &#34;&gt;return&lt;/span&gt; sb&lt;span style=&#34;color: #ffffff; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;ToString&lt;/span&gt;( );&lt;br /&gt;&lt;span style=&#34;color: #ffffff; &#34;&gt;}&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;gist：&lt;a href=&#34;https://gist.github.com/1039424&#34;&gt;https://gist.github.com/1039424&lt;/a&gt;&lt;/p&gt;               
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2011/06/22/password-masking-in-csharp-console-application/</guid>
+      <description>&lt;p&gt;如何在Console下输入密码，像*unix系统下那样不显示，或者显示星号，如下代码经过测试：&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>不改程序, 创建同一个程序不同服务名的方法</title>
-      <link>http://huobazi.aspxboy.com/blog/2009/08/06/mulit-window-service-one-exe/</link>
+      <link>https://huobazi.aspxboy.com/blog/2009/08/06/mulit-window-service-one-exe/</link>
       <pubDate>Thu, 06 Aug 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2009/08/06/mulit-window-service-one-exe/</guid>
+      <guid>https://huobazi.aspxboy.com/blog/2009/08/06/mulit-window-service-one-exe/</guid>
       <description>&lt;p&gt;&lt;p&gt;以往写windows service都需要个ProjectInstaller和serviceInstaller并配置serviceName，这样build出来的exe在install成windows service时我们会：&lt;/p&gt;
 &lt;pre&gt;@echo 安装WindowService
 @Set Path=C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727;
@@ -58,102 +44,25 @@ installutil %svn_dir%\MyServiceDemo.exe
 pause
 @echo 成功！&lt;/pre&gt;
 &lt;p&gt;但服务名被我们编译在程序里了，如果这个exe想被装很多次服务怎么办呢？&lt;br /&gt;今天从同事Martin Jia那里学来一个好方法，可以不用ProjectInstaller、serviceInstaller这种东西，直接安装exe为windows service并在安装时指定服务名称&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;安装服务：&lt;/p&gt;
-&lt;pre&gt;sc create 服务名 binpath= &amp;rdquo;路径&amp;rdquo; displayname= &amp;rdquo;显示名&amp;rdquo;&lt;/pre&gt;
-&lt;p&gt;卸载服务&lt;/p&gt;
-&lt;pre&gt;sc delete 服务名&lt;/pre&gt;&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>如何判断一个类型是nullable类型，并得知它的原始类型</title>
-      <link>http://huobazi.aspxboy.com/blog/2009/07/30/how-to-determine-whether-an-type-is-nullable-and-get-the-underlying-type/</link>
+      <link>https://huobazi.aspxboy.com/blog/2009/07/30/how-to-determine-whether-an-type-is-nullable-and-get-the-underlying-type/</link>
       <pubDate>Thu, 30 Jul 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2009/07/30/how-to-determine-whether-an-type-is-nullable-and-get-the-underlying-type/</guid>
+      <guid>https://huobazi.aspxboy.com/blog/2009/07/30/how-to-determine-whether-an-type-is-nullable-and-get-the-underlying-type/</guid>
       <description>&lt;p&gt;&lt;p&gt;有些时候我们需要判断某个类型是否是Nullable类型，并且可能需要知道它的原始类型，&lt;br /&gt;比如在做些ORM相关工作时，就需要这方面的应用，如下代码使用可以实现这个要求&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;pre&gt;class Program
-    {
-        static void Main( string[] args )
-        {
-            RL( );&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;        Type type =  typeof( DateTime? );
-        Type originalType;
-
-        if ( IsNullable( type , out originalType ) )
-        {
-            WL( originalType.ToString( ) );
-        }
-        else
-        {
-            WL( &amp;quot;NOT Nullable&amp;quot; );
-        }
-
-        type =  typeof( DateTime );
-
-        if ( IsNullable( type , out originalType ) )
-        {
-            WL( originalType.ToString( ) );
-        }
-        else
-        {
-            WL( &amp;quot;NOT Nullable&amp;quot; );
-        }
-
-        RL( );
-    }
-
-    private static bool IsNullable( Type p , out Type originalType )
-    {
-        bool result = false;
-
-        if ( p.IsGenericType &amp;amp;amp;&amp;amp;amp; p.GetGenericTypeDefinition( ) == typeof( Nullable&amp;amp;lt;&amp;amp;gt; ) )
-        {
-            result = true;
-            originalType = p.GetGenericArguments( )[0];
-        }
-        else
-        {
-            originalType = null;
-        }
-
-        return result;
-    }
-
-    #region Helper methods
-
-    private static void WL( object text , params object[] args )
-    {
-        Console.WriteLine( text.ToString( ) , args );
-    }
-
-    private static void RL( )
-    {
-        Console.ReadLine( );
-    }
-
-    private static void Break( )
-    {
-        System.Diagnostics.Debugger.Break( );
-    }
-
-    #endregion
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;&lt;/pre&gt;                
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Asp.Net发邮件，如何发送附件</title>
-      <link>http://huobazi.aspxboy.com/blog/2009/07/21/how-to-send-an-email-with-attachments/</link>
+      <link>https://huobazi.aspxboy.com/blog/2009/07/21/how-to-send-an-email-with-attachments/</link>
       <pubDate>Tue, 21 Jul 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2009/07/21/how-to-send-an-email-with-attachments/</guid>
+      <guid>https://huobazi.aspxboy.com/blog/2009/07/21/how-to-send-an-email-with-attachments/</guid>
       <description>&lt;p&gt;&lt;p&gt;使用如下代码可以发送附件&lt;/p&gt;
 &lt;pre&gt;MailMessage mail = new MailMessage();
 mail.To = &amp;rdquo;me@mycompany.com&amp;rdquo;;
@@ -165,37 +74,15 @@ mail.Attachments.Add( attachment );
 SmtpMail.SmtpServer = &amp;rdquo;localhost&amp;rdquo;; 
 SmtpMail.Send( mail );&lt;/pre&gt;
 &lt;p&gt;使用如下代码可以在用户上传附件后发生邮件:&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;pre&gt;if  (FileUpload1.HasFile)
-{
-    string  toAddress  =  &amp;rdquo;you@yourprovider.com&amp;rdquo;;
-    string  fromAddress  =  you@yourprovider.com  (2);
-    string  mailServer  =  &amp;rdquo;smtp.yourprovider.com&amp;rdquo;;&lt;/p&gt;
-
-&lt;p&gt;    MailMessage  myMailMessage  =  new  MailMessage();&lt;/p&gt;
-
-&lt;p&gt;    myMailMessage.To.Add(toAddress);
-    myMailMessage.From  =  new  MailAddress(fromAddress);
-    myMailMessage.Subject  =  &amp;rdquo;Test  Message&amp;rdquo;;&lt;/p&gt;
-
-&lt;p&gt;    string  fileName  =  Path.GetFileName(FileUpload1.PostedFile.FileName);
-    Attachment  myAttachment  =  
-                                  new  Attachment(FileUpload1.FileContent,  fileName);
-    myMailMessage.Attachments.Add(myAttachment);&lt;/p&gt;
-
-&lt;p&gt;    SmtpClient  mySmtpClient  =  new  SmtpClient(mailServer);&lt;/p&gt;
-
-&lt;p&gt;    mySmtpClient.Send(myMailMessage);
-}&lt;/pre&gt;&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>C#中如何深度克隆一个对象？</title>
-      <link>http://huobazi.aspxboy.com/blog/2009/07/15/make-a-deep-clone-of-the-object/</link>
+      <link>https://huobazi.aspxboy.com/blog/2009/07/15/make-a-deep-clone-of-the-object/</link>
       <pubDate>Wed, 15 Jul 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2009/07/15/make-a-deep-clone-of-the-object/</guid>
+      <guid>https://huobazi.aspxboy.com/blog/2009/07/15/make-a-deep-clone-of-the-object/</guid>
       <description>&lt;p&gt;&lt;p&gt;如何深度克隆一个对象？&lt;/p&gt;
 &lt;p&gt;普通版:&lt;/p&gt;
 &lt;pre&gt;
@@ -212,241 +99,395 @@ SmtpMail.Send( mail );&lt;/pre&gt;
         }
 &lt;/pre&gt;
 &lt;p&gt;泛型版：&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;pre&gt;public  static  T  Clone&amp;lt;T&amp;gt;(T  obj)
-{
-        T  ret  =  default(T);
-        if  (obj  !=  null)
-        {
-                XmlSerializer  cloner  =  new  XmlSerializer(typeof(T));
-                MemoryStream  stream  =  new  MemoryStream();
-                cloner.Serialize(stream,  obj);
-                stream.Seek(0,  SeekOrigin.Begin);
-                ret  =  (T)cloner.Deserialize(stream);
-        }
-        return  ret;
-}&lt;/pre&gt;&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>博客园到Wordpress搬家成功！</title>
-      <link>http://huobazi.aspxboy.com/blog/2009/06/21/my-blog-moved-to-wp/</link>
+      <link>https://huobazi.aspxboy.com/blog/2009/06/21/my-blog-moved-to-wp/</link>
       <pubDate>Sun, 21 Jun 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2009/06/21/my-blog-moved-to-wp/</guid>
-      <description>&lt;p&gt;终于把在博客园的博客的数据导入到Wordpress内了，包括随笔/文章，图片,标签，评论等，是写了两个C# console程序做到的，程序我传到博客园了，如果有需要的朋友可以试试。但请注意，要自己在博客园后台备份RSS文件放到Reader的Data目录内，设置为编译选项为永远复制，运行后会生成一个Entry.xml并且把博客内的图片和分类、Tag、评论等抓下来，然后将此xml文件拷贝到Writer内，在代码内修改一下你的Wordress的数据库连接，然后跑一下Writer，就可以完成数据导入到Wordpress了，时间匆忙，代码写的很乱，有些地方是针对本人需求处理的，如果你想要直接运行此程序完成你的博客园博客到Wordpress的转换，&lt;strong&gt;那是不可能滴！&lt;/strong&gt;你一定要有简单的C#调试基础哦。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://files.cnblogs.com/huobazi/MyBlogTools.rar&#34;&gt;http://files.cnblogs.com/huobazi/MyBlogTools.rar&lt;/a&gt;&lt;/p&gt;              
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2009/06/21/my-blog-moved-to-wp/</guid>
+      <description>终于把在博客园的博客的数据导入到Wordpress内了，包括随笔/文章，图片,标签，评论等，是写了两个C# console程序做到的，程序我传到博客园了，如果有需要的朋友可以试试。但请注意，要自己在博客园后台备份RSS文件放到Reader的Data目录内，设置为编译选项为永远复制，运行后会生成一个Entry.xml并且把博客内的图片和分类、Tag、评论等抓下来，然后将此xml文件拷贝到Writer内，在代码内修改一下你的Wordress的数据库连接，然后跑一下Writer，就可以完成数据导入到Wordpress了，时间匆忙，代码写的很乱，有些地方是针对本人需求处理的，如果你想要直接运行此程序完成你的博客园博客到Wordpress的转换，那是不可能滴！你一定要有简单的C#调试基础哦。
+http://files.cnblogs.com/huobazi/MyBlogTools.rar</description>
     </item>
     
     <item>
       <title>我学Linq to SQL做的demo</title>
-      <link>http://huobazi.aspxboy.com/blog/2008/07/19/cb-1246773/</link>
+      <link>https://huobazi.aspxboy.com/blog/2008/07/19/cb-1246773/</link>
       <pubDate>Sat, 19 Jul 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2008/07/19/cb-1246773/</guid>
-      <description>&lt;p&gt;最近才开始学LINQ to SQL,&lt;/p&gt;
-&lt;p&gt;做了个demo，都是基本操作。&lt;/p&gt;
-&lt;p&gt;有兴趣的朋友看看。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://download.csdn.net/source/528628&#34;&gt;http://download.csdn.net/source/528628&lt;/a&gt;&lt;/p&gt;
-&lt;p mce_keep=&#34;true&#34;&gt; &lt;/p&gt;                
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2008/07/19/cb-1246773/</guid>
+      <description>最近才开始学LINQ to SQL,
+做了个demo，都是基本操作。
+有兴趣的朋友看看。
+http://download.csdn.net/source/528628</description>
     </item>
     
     <item>
       <title>提供我现用的Vs配色（灰黑色调）下载，有兴趣的朋友玩玩。</title>
-      <link>http://huobazi.aspxboy.com/blog/2008/06/14/myvs2005colorschema/</link>
+      <link>https://huobazi.aspxboy.com/blog/2008/06/14/myvs2005colorschema/</link>
       <pubDate>Sat, 14 Jun 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2008/06/14/myvs2005colorschema/</guid>
+      <guid>https://huobazi.aspxboy.com/blog/2008/06/14/myvs2005colorschema/</guid>
       <description>&lt;p&gt;提供我现用的Vs配色（灰黑色调）下载，&lt;/p&gt;
 &lt;p&gt; &lt;/p&gt;
 &lt;p&gt;有兴趣的朋友玩玩。&lt;/p&gt;
 &lt;p&gt; &lt;/p&gt;
 &lt;p&gt;附件是Vs2005的，如果要在Vs2008下用，&lt;/p&gt;
 &lt;p&gt; &lt;/p&gt;
-&lt;p&gt;自己用文本编辑器打开修改version为9.0即可。效果见截图&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img style=&#34;width: 687px; height: 438px;&#34; src=&#34;http://huobazi.aspxboy.com/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png&#34; alt=&#34;&#34; width=&#34;748&#34; height=&#34;430&#34;&gt;&lt;br /&gt;&lt;img style=&#34;width: 814px; height: 446px;&#34; src=&#34;http://huobazi.aspxboy.com/images/hbz_images/0a603e93-b2ed-47bf-86c0-ebbf83a0f832.png&#34; alt=&#34;&#34; width=&#34;534&#34; height=&#34;366&#34;&gt;&lt;br /&gt;&lt;img style=&#34;width: 772px; height: 367px;&#34; src=&#34;http://huobazi.aspxboy.com/images/hbz_images/4b94bd6c-01e6-4ad4-b64e-fe905bb6b3eb.png&#34; alt=&#34;&#34; width=&#34;620&#34; height=&#34;345&#34; align=&#34;left&#34;&gt;&lt;/p&gt;
-&lt;p&gt; &lt;br /&gt;&lt;img style=&#34;clear: both; width: 675px; height: 495px;&#34; src=&#34;http://huobazi.aspxboy.com/images/hbz_images/afe82875-7a37-48f8-bc2c-e0b65cd1638d.png&#34; alt=&#34;&#34; width=&#34;546&#34; height=&#34;480&#34;&gt;&lt;/p&gt;
-&lt;p&gt; &lt;br /&gt;  &lt;a title=&#34;点这里下载&#34; href=&#34;http://www.cnblogs.com/Files/huobazi/Marble.M.Wu-Exported-2008-06-14.rar&#34; target=&#34;_blank&#34;&gt;点这里下载&lt;/a&gt;&lt;/p&gt;              
-</description>
+&lt;p&gt;自己用文本编辑器打开修改version为9.0即可。效果见截图&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>使用AzMan找不到Microsoft.Interop.Security.AzRoles的解决方法</title>
-      <link>http://huobazi.aspxboy.com/blog/2008/04/20/microsoftinteropsecurityazroles/</link>
+      <link>https://huobazi.aspxboy.com/blog/2008/04/20/microsoftinteropsecurityazroles/</link>
       <pubDate>Sun, 20 Apr 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2008/04/20/microsoftinteropsecurityazroles/</guid>
-      <description>&lt;p&gt;&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;&lt;font face=&#34;Verdana&#34;&gt;在c:/Windows/system32下找到azRoles.dll&lt;br /&gt;&lt;br /&gt;&lt;/font&gt;&lt;font face=&#34;Verdana&#34;&gt;如果没有Xp/2003请安装&lt;a id=&#34;ctl00_rs1_mainContentContainer_ctl04&#34; onclick=&#34;javascript:Track(&#39;ctl00_rs1_mainContentContainer_ctl00|ctl00_rs1_mainContentContainer_ctl04&#39;,this);&#34; href=&#34;http://www.microsoft.com/downloads/details.aspx?FamilyID=e487f885-f0c7-436a-a392-25793a25bad7&amp;amp;DisplayLang=en&#34;&gt;&lt;a href=&#34;http://www.microsoft.com/downloads/details.aspx?FamilyID=e487f885-f0c7-436a-a392-25793a25bad7&amp;amp;DisplayLang=en&#34;&gt;http://www.microsoft.com/downloads/details.aspx?FamilyID=e487f885-f0c7-436a-a392-25793a25bad7&amp;amp;DisplayLang=en&lt;/a&gt;&lt;/a&gt;.&lt;br /&gt;&lt;br /&gt;&lt;/font&gt;&lt;font face=&#34;Verdana&#34;&gt;Win2000请安装&lt;a id=&#34;ctl00_rs1_mainContentContainer_ctl05&#34; onclick=&#34;javascript:Track(&#39;ctl00_rs1_mainContentContainer_ctl00|ctl00_rs1_mainContentContainer_ctl05&#39;,this);&#34; href=&#34;http://www.microsoft.com/downloads/details.aspx?FamilyID=7edde11f-bcea-4773-a292-84525f23baf7&amp;amp;DisplayLang=en&#34;&gt;&lt;a href=&#34;http://www.microsoft.com/downloads/details.aspx?FamilyID=7edde11f-bcea-4773-a292-84525f23baf7&amp;amp;DisplayLang=en&#34;&gt;http://www.microsoft.com/downloads/details.aspx?FamilyID=7edde11f-bcea-4773-a292-84525f23baf7&amp;amp;DisplayLang=en&lt;/a&gt;&lt;/a&gt;.&lt;br /&gt;&lt;br /&gt;&lt;/font&gt;&lt;font face=&#34;Verdana&#34;&gt;Vs2003/Vs2005/Vs2008命令行，或者Cmd命令行进入.net安装目录&lt;br /&gt;&lt;br /&gt;&lt;/font&gt;&lt;font face=&#34;Verdana&#34;&gt;敲入：&lt;br /&gt;&lt;br /&gt;&lt;/font&gt;&lt;font face=&#34;Verdana&#34;&gt;&lt;font face=&#34;Verdana&#34;&gt;d:\Program Files\Microsoft Visual Studio 9.0\VC&amp;gt;tlbimp azroles.dll /out:Microsof&lt;br /&gt;&lt;br /&gt;t.Interop.Security.AzRoles.dll /namespace:Microsoft.Interop.Security.AzRoles&lt;br /&gt;&lt;br /&gt;&lt;/font&gt;&lt;/font&gt;&lt;/p&gt;
-&lt;br /&gt;&lt;p&gt;&lt;font face=&#34;Verdana&#34;&gt;&lt;font face=&#34;Verdana&#34;&gt;成功提示：&lt;br /&gt;&lt;br /&gt;&lt;/font&gt;&lt;/font&gt;&lt;font face=&#34;Verdana&#34;&gt;&lt;font face=&#34;Verdana&#34;&gt;&lt;/font&gt;&lt;/font&gt;&lt;/p&gt;
-&lt;br /&gt;&lt;p&gt;&lt;font face=&#34;Verdana&#34;&gt;Microsoft &amp;reg; .NET Framework Type Library to Assembly Converter 3.5.21022.8&lt;br /&gt;&lt;br /&gt;Copyright &amp;copy; Microsoft Corporation.  All rights reserved.&lt;/font&gt;&lt;/p&gt;
-&lt;br /&gt;&lt;p&gt;&lt;font face=&#34;Verdana&#34;&gt;Type library imported to d:\Program Files\Microsoft Visual Studio 9.0\VC\Microso&lt;br /&gt;&lt;br /&gt;ft.Interop.Security.AzRoles.dll&lt;br /&gt;&lt;br /&gt;&lt;/font&gt;&lt;/p&gt;
-&lt;br /&gt;&lt;p&gt;&lt;br /&gt;&lt;br /&gt;引用这个文件就OK了。&lt;/p&gt;
-&lt;br /&gt;&lt;/p&gt;
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2008/04/20/microsoftinteropsecurityazroles/</guid>
+      <description>在c:/Windows/system32下找到azRoles.dll
+如果没有Xp/2003请安装http://www.microsoft.com/downloads/details.aspx?FamilyID=e487f885-f0c7-436a-a392-25793a25bad7&amp;amp;DisplayLang=en.
+Win2000请安装http://www.microsoft.com/downloads/details.aspx?FamilyID=7edde11f-bcea-4773-a292-84525f23baf7&amp;amp;DisplayLang=en.
+Vs2003/Vs2005/Vs2008命令行，或者Cmd命令行进入.net安装目录
+敲入：
+d:\Program Files\Microsoft Visual Studio 9.0\VC&amp;gt;tlbimp azroles.dll /out:Microsof
+t.Interop.Security.AzRoles.dll /namespace:Microsoft.Interop.Security.AzRoles
+
+成功提示：
+
+Microsoft &amp;reg; .NET Framework Type Library to Assembly Converter 3.5.21022.8
+Copyright &amp;copy; Microsoft Corporation. All rights reserved.
+Type library imported to d:\Program Files\Microsoft Visual Studio 9.0\VC\Microso
+ft.Interop.Security.AzRoles.dll
+
+
+引用这个文件就OK了。</description>
     </item>
     
     <item>
       <title>使用dotNetZipLib轻松压缩目录/文件夹</title>
-      <link>http://huobazi.aspxboy.com/blog/2008/03/29/usingdotnetziplibcompressadirectory/</link>
+      <link>https://huobazi.aspxboy.com/blog/2008/03/29/usingdotnetziplibcompressadirectory/</link>
       <pubDate>Sat, 29 Mar 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2008/03/29/usingdotnetziplibcompressadirectory/</guid>
-      <description>&lt;p&gt;&lt;div&gt;&lt;span style=&#34;font-family: Verdana;&#34;&gt;.net1.1时代我们选SharpZipLib&lt;br /&gt;.net2.0时代我们选System.IO.Compression名称空间下的东东&lt;br /&gt;.net3.0时代我们选System.IO.Packaging名称空间下的东东。&lt;br /&gt;今天发现CodePlex上有个好东西，另压缩如此之Easy。。。&lt;/span&gt;&lt;/div&gt;
-&lt;p&gt; &lt;/p&gt;
-&lt;p&gt;&lt;span style=&#34;font-family: Verdana;&#34;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;div style=&#34;padding-right: 5px; padding-left: 4px; font-size: 13px; padding-bottom: 4px; width: 98%; word-break: break-all; padding-top: 4px; background-color: #eeeeee; border: #cccccc 1px solid;&#34;&gt;
-&lt;span style=&#34;color: #000000&#34;&gt;  ZipFile zip &lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color: #0000ff&#34;&gt;new&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt; ZipFile(directo&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;outputFileName);&lt;br /&gt;            zip.TrimVolumeFromFullyQualifiedPaths &lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color: #0000ff&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;;&lt;br /&gt;            zip.TempFileFolder &lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt; Path.GetTempPath();&lt;br /&gt;            zip.Comment&lt;br /&gt;                &lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color: #0000ff&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;.Format(&lt;/span&gt;&lt;span style=&#34;color: #800000&#34;&gt;&amp;ldquo;&lt;/span&gt;&lt;span style=&#34;color: #800000&#34;&gt;A zip archives。{0}  {1}&lt;/span&gt;&lt;span style=&#34;color: #800000&#34;&gt;&amp;ldquo;&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;,  Environment.NewLine, DateTime.Now.ToString());&lt;br /&gt;            zip.AddDirectory(directory, &lt;/span&gt;&lt;span style=&#34;color: #0000ff&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;.Format(&lt;/span&gt;&lt;span style=&#34;color: #800000&#34;&gt;&amp;ldquo;&lt;/span&gt;&lt;span style=&#34;color: #800000&#34;&gt;MyFolder-{0}&lt;/span&gt;&lt;span style=&#34;color: #800000&#34;&gt;&amp;ldquo;&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;, DateTime.Now.ToShortDateString()));&lt;br /&gt;            zip.Save();&lt;/span&gt;
-&lt;/div&gt;
-&lt;p&gt;那就是&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;h1 class=&#34;ProjectHeader NoMargin&#34;&gt;&lt;a id=&#34;ctl00_ctl00_WideContent_ProjectTitleControl1_ProjectTitleLink&#34; class=&#34;NoUnderline&#34; tabindex=&#34;0&#34; href=&#34;http://www.codeplex.com/DotNetZip&#34;&gt;&lt;span id=&#34;ctl00_ctl00_WideContent_ProjectTitleControl1_TitleLabel&#34;&gt;DotNet Zip Library&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt; &lt;/p&gt;
-&lt;p&gt; &lt;br /&gt;&lt;/p&gt;&lt;/p&gt;
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2008/03/29/usingdotnetziplibcompressadirectory/</guid>
+      <description>.net1.1时代我们选SharpZipLib
+.net2.0时代我们选System.IO.Compression名称空间下的东东
+.net3.0时代我们选System.IO.Packaging名称空间下的东东。
+今天发现CodePlex上有个好东西，另压缩如此之Easy。。。  
+ZipFile zip =newZipFile(directooutputFileName);
+zip.TrimVolumeFromFullyQualifiedPaths =true;
+zip.TempFileFolder =Path.GetTempPath();
+zip.Comment
+=string.Format(&amp;ldquo;A zip archives。{0} {1}&amp;ldquo;, Environment.NewLine, DateTime.Now.ToString());
+zip.AddDirectory(directory, string.Format(&amp;ldquo;MyFolder-{0}&amp;ldquo;, DateTime.Now.ToShortDateString()));
+zip.Save();  那就是
+
+DotNet Zip Library   </description>
     </item>
     
     <item>
       <title>Telligent 发布了 CMS 系统</title>
-      <link>http://huobazi.aspxboy.com/blog/2008/02/22/graffiticmsreleased/</link>
+      <link>https://huobazi.aspxboy.com/blog/2008/02/22/graffiticmsreleased/</link>
       <pubDate>Fri, 22 Feb 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2008/02/22/graffiticmsreleased/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://telligent.com/&#34;&gt;Telligent&lt;/a&gt;  &lt;a href=&#34;http://communityserver.org/&#34;&gt;Community Server&lt;/a&gt; 的出产厂商&lt;br /&gt;发布了 他们的新CMS产品 &lt;a href=&#34;http://graffiticms.com/&#34;&gt;GraffitiCMS&lt;/a&gt;&lt;br /&gt;关于价格：&lt;span style=&#34;font-family: Verdana;&#34;&gt;&lt;a href=&#34;http://get.graffiticms.com/&#34;&gt;http://get.graffiticms.com/&lt;/a&gt;&lt;/span&gt;&lt;br /&gt;Licensing：&lt;span style=&#34;font-family: Verdana;&#34;&gt;&lt;a href=&#34;http://graffiticms.com/learn-more/licensing/&#34;&gt;http://graffiticms.com/learn-more/licensing/&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a title=&#34;http://graffiticms.com/&#34; href=&#34;http://graffiticms.com/&#34; target=&#34;_blank&#34;&gt;&lt;img style=&#34;width: 621px; height: 120px;&#34; src=&#34;http://huobazi.aspxboy.com/images/hbz_images/18619a9b-2e9b-4630-823e-eacb988c485c.png&#34; alt=&#34;Get Graffiti Today!&#34;&gt;&lt;/a&gt;&lt;/p&gt;             
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2008/02/22/graffiticmsreleased/</guid>
+      <description>Telligent Community Server 的出产厂商
+发布了 他们的新CMS产品 GraffitiCMS
+关于价格：http://get.graffiticms.com/
+Licensing：http://graffiticms.com/learn-more/licensing/</description>
     </item>
     
     <item>
       <title>DbEntry.Net 又一个国产开源ORM数据访问及 WEB 框架</title>
-      <link>http://huobazi.aspxboy.com/blog/2008/01/31/dbentry/</link>
+      <link>https://huobazi.aspxboy.com/blog/2008/01/31/dbentry/</link>
       <pubDate>Thu, 31 Jan 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2008/01/31/dbentry/</guid>
-      <description>&lt;p&gt;&lt;p&gt;今天去逛&lt;a href=&#34;http://www.codeplex.com&#34; target=&#34;_blank&#34;&gt;CodePlex&lt;/a&gt;发现这个东西&lt;br /&gt;&lt;br /&gt;链接到&lt;a href=&#34;http://www.javaeye.com/&#34; target=&#34;_blank&#34;&gt;JavaEye&lt;/a&gt;的&lt;a href=&#34;http://llf.javaeye.com/&#34; target=&#34;_blank&#34;&gt;blog&lt;/a&gt;，作者：&lt;span id=&#34;AuthorLabel&#34;&gt;梁利锋&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;中文描述：&lt;font face=&#34;Verdana&#34;&gt;&lt;a href=&#34;http://llf.hanzify.org/llf/show.asp?id=555&#34;&gt;http://llf.hanzify.org/llf/show.asp?id=555&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;/font&gt;&lt;font face=&#34;Verdana&#34;&gt;&lt;strong&gt;Features:&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;FluentInterface query syntax &lt;/font&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;RoR ActiveRecord style syntax&lt;br /&gt;
-&lt;/li&gt;
-&lt;li&gt;Ambient transaction&lt;br /&gt;
-&lt;/li&gt;
-&lt;li&gt;Dynamic object&lt;br /&gt;
-&lt;/li&gt;
-&lt;li&gt;Partial update&lt;br /&gt;
-&lt;/li&gt;
-&lt;li&gt;1:1 1:Many Many:Many relations&lt;br /&gt;
-&lt;/li&gt;
-&lt;li&gt;Auto create table&lt;br /&gt;
-&lt;/li&gt;
-&lt;li&gt;Anti sql injection&lt;br /&gt;
-&lt;/li&gt;
-&lt;li&gt;Multiple data source&lt;br /&gt;
-&lt;/li&gt;
-&lt;li&gt;Object validation&lt;br /&gt;
-&lt;/li&gt;
-&lt;li&gt;Paged selector and collection&lt;br /&gt;
-&lt;/li&gt;
-&lt;li&gt;Nullable support&lt;br /&gt;
-&lt;/li&gt;
-&lt;li&gt;DbEntryDataSource&lt;br /&gt;
-&lt;/li&gt;
-&lt;li&gt;ASP.NET 2.0 Membership support&lt;br /&gt;
-&lt;/li&gt;
-&lt;li&gt;Built-in Cache Support&lt;br /&gt;
-&lt;/li&gt;
-&lt;li&gt;Ruby On Rails style MVC framework&lt;br /&gt;
-&lt;/li&gt;
-&lt;li&gt;High performance, almost same as using ADO.NET directly&lt;br /&gt;
-&lt;/li&gt;
-&lt;li&gt;Lightwight, the binary file only about 268KB&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Rails Style MVC&lt;/strong&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;ol&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;a href=&#34;http://www.codeplex.com/DbEntry/Wiki/View.aspx?title=Rails%20Getting%20Started&amp;amp;referringTitle=Home&#34;&gt;Getting Started&lt;/a&gt;&lt;br /&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;http://www.codeplex.com/DbEntry/Wiki/View.aspx?title=Scaffolding&amp;amp;referringTitle=Home&#34;&gt;Scaffolding&lt;/a&gt;&lt;br /&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;http://www.codeplex.com/DbEntry/Wiki/View.aspx?title=Controller&amp;amp;referringTitle=Home&#34;&gt;Controller&lt;/a&gt;&lt;br /&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;http://www.codeplex.com/DbEntry/Wiki/View.aspx?title=Viewer&amp;amp;referringTitle=Home&#34;&gt;Viewer&lt;/a&gt;&lt;br /&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;http://www.codeplex.com/DbEntry/Wiki/View.aspx?title=Rails%20Configuration&amp;amp;referringTitle=Home&#34;&gt;Configuration&lt;/a&gt;&lt;br /&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.codeplex.com/DbEntry/Wiki/View.aspx?title=Rails%20Style%20MVC%20Deployment&amp;amp;referringTitle=Home&#34;&gt;Deployment&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;/ol&gt;
-&lt;br /&gt;&lt;p&gt;另外还有一些不错的东西比如他的 &lt;strong&gt;Rails Style MVC&lt;/strong&gt; 和&lt;strong&gt;&lt;a href=&#34;http://www.codeplex.com/DbEntry/Wiki/View.aspx?title=Tools&amp;amp;referringTitle=Home&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;TemplateBuilder&lt;/strong&gt;  &lt;/a&gt;&lt;/strong&gt;还有 &lt;a href=&#34;http://www.codeplex.com/DbEntry/Wiki/View.aspx?title=HtmlBuilder&amp;amp;referringTitle=Home&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;HtmlBuilder&lt;/strong&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;看了看并没有&lt;a href=&#34;http://www.codeplex.com/nbear&#34; target=&#34;_blank&#34;&gt;Nbear&lt;/a&gt;那样类似Linq的查询支持.&lt;br /&gt;&lt;br /&gt;令人欣慰的是这个东西一直从.net1.1做到现在，而且就一个人开发，从&lt;a href=&#34;http://www.codeplex.com&#34; target=&#34;_blank&#34;&gt;codeplex&lt;/a&gt;上来看，最近还有代码签入.&lt;br /&gt;&lt;br /&gt;&lt;font face=&#34;Verdana&#34;&gt;&lt;a href=&#34;http://www.codeplex.com/DbEntry/SourceControl/ListDownloadableCommits.aspx&#34;&gt;http://www.codeplex.com/DbEntry/SourceControl/ListDownloadableCommits.aspx&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;/font&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;最后贴一下地址：&lt;font face=&#34;Verdana&#34;&gt;&lt;a href=&#34;http://www.codeplex.com/DbEntry&#34;&gt;http://www.codeplex.com/DbEntry&lt;/a&gt;&lt;/font&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;br /&gt;&lt;/p&gt;
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2008/01/31/dbentry/</guid>
+      <description>今天去逛CodePlex发现这个东西
+链接到JavaEye的blog，作者：梁利锋
+中文描述：http://llf.hanzify.org/llf/show.asp?id=555
+Features:
+FluentInterface query syntax 
+ RoR ActiveRecord style syntax
+ Ambient transaction
+ Dynamic object
+ Partial update
+ 1:1 1:Many Many:Many relations
+ Auto create table
+ Anti sql injection
+ Multiple data source
+ Object validation
+ Paged selector and collection
+ Nullable support
+ DbEntryDataSource
+ ASP.NET 2.0 Membership support
+ Built-in Cache Support
+ Ruby On Rails style MVC framework
+ High performance, almost same as using ADO.</description>
     </item>
     
     <item>
       <title>Google的投票站点在用Asp.net</title>
-      <link>http://huobazi.aspxboy.com/blog/2008/01/25/googleandaspdotnet/</link>
+      <link>https://huobazi.aspxboy.com/blog/2008/01/25/googleandaspdotnet/</link>
       <pubDate>Fri, 25 Jan 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2008/01/25/googleandaspdotnet/</guid>
-      <description>&lt;p&gt;&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;&lt;font face=&#34;Verdana&#34;&gt;&lt;a href=&#34;https://survey.google.com/wix/p0621608.aspx&#34;&gt;https://survey.google.com/wix/p0621608.aspx&lt;/a&gt;&lt;/font&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;br /&gt;&lt;p&gt;&lt;font face=&#34;Verdana&#34;&gt;&lt;a href=&#34;https://survey.google.com/aaaaaaaaaaaaaa.axd&#34;&gt;https://survey.google.com/aaaaaaaaaaaaaa.axd&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;/font&gt;&lt;/p&gt;
-&lt;br /&gt;&lt;p&gt;&lt;font face=&#34;Verdana&#34;&gt;&lt;font face=&#34;Verdana&#34;&gt;&lt;a href=&#34;https://survey.google.com/wix/xxxxxxxxxxxxxxxxxxxxx.ashx&#34;&gt;https://survey.google.com/wix/xxxxxxxxxxxxxxxxxxxxx.ashx&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;/font&gt;&lt;/font&gt;&lt;/p&gt;
-&lt;br /&gt;&lt;p&gt;&lt;font face=&#34;Verdana&#34;&gt;&lt;br /&gt;&lt;br /&gt;Server        &lt;font color=&#34;red&#34;&gt;Microsoft-IIS/6.0&lt;/font&gt;&lt;br /&gt;&lt;br /&gt;&lt;font color=&#34;red&#34;&gt;X-AspNet-Version&lt;/font&gt;        2.0.50727&lt;br /&gt;&lt;br /&gt;X-Powered-By        &lt;font color=&#34;red&#34;&gt;ASP.NET&lt;/font&gt;&lt;/font&gt;&lt;/p&gt;
-&lt;br /&gt;&lt;p&gt;&lt;font face=&#34;Verdana&#34;&gt; &lt;/font&gt;&lt;/p&gt;
-&lt;br /&gt;&lt;/p&gt;
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2008/01/25/googleandaspdotnet/</guid>
+      <description>https://survey.google.com/wix/p0621608.aspx
+https://survey.google.com/aaaaaaaaaaaaaa.axd
+
+https://survey.google.com/wix/xxxxxxxxxxxxxxxxxxxxx.ashx
+
+Server Microsoft-IIS/6.0
+X-AspNet-Version 2.0.50727
+X-Powered-By ASP.NET</description>
     </item>
     
     <item>
       <title>一系列SQL SERVER SQL 的分析文章</title>
-      <link>http://huobazi.aspxboy.com/blog/2007/09/07/cb-885304/</link>
+      <link>https://huobazi.aspxboy.com/blog/2007/09/07/cb-885304/</link>
       <pubDate>Fri, 07 Sep 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2007/09/07/cb-885304/</guid>
-      <description>&lt;p&gt;&lt;p&gt;&lt;br /&gt;&lt;br /&gt;位于：&lt;br /&gt;&lt;br /&gt;&lt;a href=&#34;http://blogs.sqlpassj.org/mitsugi/archive/2007/09.aspx&#34;&gt;http://blogs.sqlpassj.org/mitsugi/archive/2007/09.aspx&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;语言： 日文&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;div class=&#34;post&#34;&gt;
-&lt;div class=&#34;postTitle&#34;&gt;&lt;a id=&#34;ArchiveMonth.ascx_Days_Entries__ctl0_TitleUrl&#34; href=&#34;http://blogs.sqlpassj.org/mitsugi/archive/2007/09/05/23974.aspx&#34;&gt;[SQL Server 2005]AGGREGATES/インデックス付きビュー/DTA デモ&lt;/a&gt;&lt;/div&gt;
-&lt;div class=&#34;postText&#34;&gt;&lt;/div&gt;
-&lt;div class=&#34;postfoot&#34;&gt;posted @ &lt;a title=&#34;permalink&#34; href=&#34;http://blogs.sqlpassj.org/mitsugi/archive/2007/09/05/23974.aspx&#34;&gt;2007年9月5日 21:33&lt;/a&gt; | &lt;a title=&#34;comments, pingbacks, trackbacks&#34; href=&#34;http://blogs.sqlpassj.org/mitsugi/archive/2007/09/05/23974.aspx#FeedBack&#34;&gt;Feedback (0)&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;div class=&#34;post&#34;&gt;
-&lt;div class=&#34;postTitle&#34;&gt;&lt;a id=&#34;ArchiveMonth.ascx_Days_Entries__ctl1_TitleUrl&#34; href=&#34;http://blogs.sqlpassj.org/mitsugi/archive/2007/09/05/23973.aspx&#34;&gt;[SQL Server 2005]JOIN デモ&lt;/a&gt;&lt;/div&gt;
-&lt;div class=&#34;postText&#34;&gt;&lt;/div&gt;
-&lt;div class=&#34;postfoot&#34;&gt;posted @ &lt;a title=&#34;permalink&#34; href=&#34;http://blogs.sqlpassj.org/mitsugi/archive/2007/09/05/23973.aspx&#34;&gt;2007年9月5日 21:01&lt;/a&gt; | &lt;a title=&#34;comments, pingbacks, trackbacks&#34; href=&#34;http://blogs.sqlpassj.org/mitsugi/archive/2007/09/05/23973.aspx#FeedBack&#34;&gt;Feedback (0)&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;div class=&#34;post&#34;&gt;
-&lt;div class=&#34;postTitle&#34;&gt;&lt;a id=&#34;ArchiveMonth.ascx_Days_Entries__ctl2_TitleUrl&#34; href=&#34;http://blogs.sqlpassj.org/mitsugi/archive/2007/09/05/23972.aspx&#34;&gt;[SQL Server]OR デモ&lt;/a&gt;&lt;/div&gt;
-&lt;div class=&#34;postText&#34;&gt;&lt;/div&gt;
-&lt;div class=&#34;postfoot&#34;&gt;posted @ &lt;a title=&#34;permalink&#34; href=&#34;http://blogs.sqlpassj.org/mitsugi/archive/2007/09/05/23972.aspx&#34;&gt;2007年9月5日 20:15&lt;/a&gt; | &lt;a title=&#34;comments, pingbacks, trackbacks&#34; href=&#34;http://blogs.sqlpassj.org/mitsugi/archive/2007/09/05/23972.aspx#FeedBack&#34;&gt;Feedback (0)&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;div class=&#34;post&#34;&gt;
-&lt;div class=&#34;postTitle&#34;&gt;&lt;a id=&#34;ArchiveMonth.ascx_Days_Entries__ctl3_TitleUrl&#34; href=&#34;http://blogs.sqlpassj.org/mitsugi/archive/2007/09/02/23963.aspx&#34;&gt;[SQL Server]AND デモ&lt;/a&gt;&lt;/div&gt;
-&lt;div class=&#34;postText&#34;&gt;&lt;/div&gt;
-&lt;div class=&#34;postfoot&#34;&gt;posted @ &lt;a title=&#34;permalink&#34; href=&#34;http://blogs.sqlpassj.org/mitsugi/archive/2007/09/02/23963.aspx&#34;&gt;2007年9月2日 19:09&lt;/a&gt; | &lt;a title=&#34;comments, pingbacks, trackbacks&#34; href=&#34;http://blogs.sqlpassj.org/mitsugi/archive/2007/09/02/23963.aspx#FeedBack&#34;&gt;Feedback (0)&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;div class=&#34;post&#34;&gt;
-&lt;div class=&#34;postTitle&#34;&gt;&lt;a id=&#34;ArchiveMonth.ascx_Days_Entries__ctl4_TitleUrl&#34; href=&#34;http://blogs.sqlpassj.org/mitsugi/archive/2007/09/02/23962.aspx&#34;&gt;[SQL Server]検索性デモ&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;我也看不懂，列这里，期望原子里的日语达人看看能否翻译一下。&lt;/p&gt;
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2007/09/07/cb-885304/</guid>
+      <description>位于：
+http://blogs.sqlpassj.org/mitsugi/archive/2007/09.aspx
+语言： 日文
+[SQL Server 2005]AGGREGATES/インデックス付きビュー/DTA デモ  posted @ 2007年9月5日 21:33 | Feedback (0)  
+ [SQL Server 2005]JOIN デモ  posted @ 2007年9月5日 21:01 | Feedback (0)  
+ [SQL Server]OR デモ  posted @ 2007年9月5日 20:15 | Feedback (0)  
+ [SQL Server]AND デモ  posted @ 2007年9月2日 19:09 | Feedback (0)  
+ [SQL Server]検索性デモ 
+ 我也看不懂，列这里，期望原子里的日语达人看看能否翻译一下。</description>
+    </item>
+    
+    <item>
+      <title>.Net专业人力资源网上线试运行.</title>
+      <link>https://huobazi.aspxboy.com/blog/2007/07/07/dotnetjobscn/</link>
+      <pubDate>Sat, 07 Jul 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://huobazi.aspxboy.com/blog/2007/07/07/dotnetjobscn/</guid>
+      <description>自己也是搞.net开发的，经常看到有些朋友在csdn发求职/招聘贴
+国内而现有的大招聘网站又未见专门为我们这拨人有个专门分类。就花了点时间做了这样一个网站。
+今天开始试运行。
+希望为.Net开发人员和企业提供一个良好的求职招聘平台！
+.Net专业人力资源网
+
+欢迎大家提出意见和建议
+http://www.dotnetjobs.cn/FeedBack.aspx</description>
+    </item>
+    
+    <item>
+      <title>讨论一下类似BlogEngine为何要一次性加载所有Post到内存</title>
+      <link>https://huobazi.aspxboy.com/blog/2007/07/04/lazyinitializationorearlyinitializationinblogengine/</link>
+      <pubDate>Wed, 04 Jul 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://huobazi.aspxboy.com/blog/2007/07/04/lazyinitializationorearlyinitializationinblogengine/</guid>
+      <description>试验了一下给BlogEngine生成10000个post 程序第一次运行时等待的时间让我想自杀（白屏了近2分钟)
+看了一下代码，发现BlogEngine在第一次运行时候加载所有Post（从数据库)到List内,类似（Early initialization）
+当新添加post时，给数据库（xml/database)内加入该post同时给List内追加该post
+删除一个post时候从数据库（xml/database)内删除并从List内remove该post
+12privatestring_Content;
+3/**////&amp;lt;summary&amp;gt;4///Gets or sets the Content or the post.
+5///&amp;lt;/summary&amp;gt;
+6publicstringContent
+7{
+8get9{
+10if( _Content ==null)
+11{
+12_Content =LoadPostContent( this.Id );
+13}14return_Content;
+15}16set17{
+18if( _Content !=value )
+19MarkDirty( &#34;Content&#34;);
+20_Content =value;
+21}22}23privatestringLoadPostContent(Guid id)
+24{ 25stringcontent =null;
+2627stringkey =string.Format(&#34;Be:Content:{0}&#34;,id);
+2829//if there is no content cached30objectobj =HttpContext.Current.Cache.Get(key);
+31if(obj ==null)
+32{
+33//load the post&#39;s content from provider here34content =BlogService.LoadPostContent( id );
+3536HttpContext.Current.Cache.Insert(key, content, null, DateTime.Now.AddMinutes(2), TimeSpan.Zero);
+3738//if use xml store the data 39//更丑陋点的 new CacheDependency(_Folder + &#34;</description>
+    </item>
+    
+    <item>
+      <title>郁闷啊，竟然用256M内存跑着VS2005 SP1 好几个月</title>
+      <link>https://huobazi.aspxboy.com/blog/2007/05/27/vs2005sp1256andmram/</link>
+      <pubDate>Sun, 27 May 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://huobazi.aspxboy.com/blog/2007/05/27/vs2005sp1256andmram/</guid>
+      <description>还有什么比这更郁闷的啊
+几个月前 为了装 VS2005 SP1 加了160G硬盘，然后开新的装系统装VS2005 装SP1
+后来的这几个月发现机子慢如牛啊，今天早上，无意间看到了开机前的一幕256M ？？？？
+怎么会事？赶紧关机，单根内存试验 都OK，就是插一起不行，两个换位OK了 512了，进到系统内，感觉爽多了。
+可怜我竟然在256M内存下跑VS2005SP1好几个月啊</description>
+    </item>
+    
+    <item>
+      <title>给Visual Studio 2005设置一个代码边界线，提醒自己，别写的太长哦。</title>
+      <link>https://huobazi.aspxboy.com/blog/2006/08/11/visualstudiocodewidthsetting/</link>
+      <pubDate>Fri, 11 Aug 2006 00:00:00 +0000</pubDate>
+      
+      <guid>https://huobazi.aspxboy.com/blog/2006/08/11/visualstudiocodewidthsetting/</guid>
+      <description>Codeproject上有一个关于代码宽度的调查
+http://www.codeproject.com/script/survey/detail.asp?survey=590&amp;amp;df=100&amp;amp;forumid=305784&amp;amp;select=1615639#xx1615639xx
+其中的评论中有人贴到下面这个地址
+http://blogs.msdn.com/saraford/archive/2004/11/15/257953.aspx
+照着做 改了注册表
+设定RGB(255,0,0) 5, 105 嘿嘿 红线出来了。
+图就不抓了 用原作者图
+ </description>
+    </item>
+    
+    <item>
+      <title>比尔盖茨的又一个网站</title>
+      <link>https://huobazi.aspxboy.com/blog/2006/05/25/iiswebsite/</link>
+      <pubDate>Thu, 25 May 2006 00:00:00 +0000</pubDate>
+      
+      <guid>https://huobazi.aspxboy.com/blog/2006/05/25/iiswebsite/</guid>
+      <description>http://www.iis.net/default.aspx?tabid=1</description>
+    </item>
+    
+    <item>
+      <title>Communtiy Server论坛的帖子显示页面分页部分的Url Rewrite的构造方法</title>
+      <link>https://huobazi.aspxboy.com/blog/2005/10/07/cb-249806/</link>
+      <pubDate>Fri, 07 Oct 2005 00:00:00 +0000</pubDate>
+      
+      <guid>https://huobazi.aspxboy.com/blog/2005/10/07/cb-249806/</guid>
+      <description>你可能会发现在Communtiy Server的论坛帖子列表页面
+比如http://communityserver.org/forums/129/ShowForum.aspx
+看下面分页处的连接使用的地址是类似ShowForum.aspx?PageIndex=2这样的地址
+没有做到SearchFriendly,我们稍微改造一下代码就可以实现类似帖子显示页面内那样的地址
+先在siteUrl.config内增加
+ &amp;lt;url name=&#34;forum_Paged&#34;location = &#34;forums&#34;path = &#34;{0}/{1}/ShowForum.aspx&#34;pattern = &#34;(\d+)/(\d+)/ShowForum.aspx&#34;vanity=&#34;ShowForum.aspx?PageIndex=$1^ForumID=$2&#34;/&amp;gt;  然后siteUrl.cs内增加
+public virtual string FormPagedFormat (int forumID)
+{
+return urlData.FormatUrl(&#34;forum_Paged&#34;, &#34;{0}&#34;, forumID.ToString(), forumID.ToString());
+} 接着ThreadView.cs内paer数据绑定处增加
+pager.UrlPattern = SiteUrls.Instance().FormPagedFormat(csContext.ForumID);
+ 重新编译，OK，看看效果吧～～
+http://www.3pub.com/bbs/3/default.aspx</description>
+    </item>
+    
+    <item>
+      <title>今天头又晕了</title>
+      <link>https://huobazi.aspxboy.com/blog/2005/04/14/cb-137712/</link>
+      <pubDate>Thu, 14 Apr 2005 00:00:00 +0000</pubDate>
+      
+      <guid>https://huobazi.aspxboy.com/blog/2005/04/14/cb-137712/</guid>
+      <description>写了如下代码，还跟踪了半个多小时，没找出来问题 if(strCarId.StartsWith(&amp;ldquo;&amp;ldquo;))
+{
+strCarId.Replace(&amp;ldquo;&amp;ldquo;,&amp;ldquo;U&amp;ldquo;);
+}elseif(strCarId.StartsWith(&amp;ldquo;&amp;ldquo;))
+{
+strCarId.Replace(&amp;ldquo;&amp;ldquo;,&amp;ldquo;T&amp;ldquo;);
+}</description>
+    </item>
+    
+    <item>
+      <title>撞墙吧 Array.IndexOf(xxx)</title>
+      <link>https://huobazi.aspxboy.com/blog/2004/09/18/cb-44424/</link>
+      <pubDate>Sat, 18 Sep 2004 00:00:00 +0000</pubDate>
+      
+      <guid>https://huobazi.aspxboy.com/blog/2004/09/18/cb-44424/</guid>
+      <description>要在后台把CheckBoxList的某个ListItem 的selected给true了
+遍历该CheckBoxList,写下了下面注释内的代码，死活不能选中我的第个CheckBox
+
+ stringbigClassId =( ( DataRowView)e.Item.DataItem )[&amp;ldquo;模块编号&amp;ldquo;].ToString();
+stringbigClassName =( ( DataRowView)e.Item.DataItem )[&amp;ldquo;模块名称&amp;ldquo;].ToString();
+CheckBoxList chk_list_big =(CheckBoxList)e.Item.FindControl(&amp;ldquo;chk_list_big&amp;ldquo;) asCheckBoxList;
+if(chk_list_big !=null)
+{ chk_list_big.Items.Clear();
+ListItem item =newListItem();
+item.Text =bigClassName;
+item.Value =bigClassId;
+chk_list_big.Items.Add(item);
+chk_list_big.Attributes[&amp;ldquo;onclick&amp;ldquo;] =String.Format(&amp;ldquo;CheckAll(&amp;lsquo;{0}&amp;rsquo;)&amp;ldquo;,chk_list_big.ClientID);
+//将符合用户模块的ListItem选定 for(inti=0; i&amp;lt;this.taxiUser.Modules.Length; i++)
+{
+if( bigClassId ==this.taxiUser.Modules[i] )
+{
+chk_list_big.Items.FindByValue(this.taxiUser.Modules[i]).Selected =true;
+}} //真是见了鬼了！为什么用这样的方法不能选定该ListItem？？？
+//foreach(ListItem listItem in chk_list_big.Items)
+//{
+//if(Array.IndexOf(this.taxiUser.Modules,listItem.Value) &amp;gt; 0)
+//{
+//listItem.Selected = true;
+//}
+//}
+半天不能醒悟就想着换道道，写了”该死”那行上面的几行代码把数组放倒来，（站着不行我就躺着来），发现可行，然后就开始发楞，命名原理一摸一样的啊，真是“见鬼”，对者这几行代码发了会愣，就决定还要狠狠的，
+if (Array.IndexOf(xxxxx) &amp;gt; 0) 用力吧555555，撞的头都疼了.</description>
+    </item>
+    
+    <item>
+      <title>TechNet月度光盘资料&#43;贺卡&#43;msn贴纸&#43;TechNet体恤 被哄抢而光</title>
+      <link>https://huobazi.aspxboy.com/blog/2004/05/11/cb-8865/</link>
+      <pubDate>Tue, 11 May 2004 00:00:00 +0000</pubDate>
+      
+      <guid>https://huobazi.aspxboy.com/blog/2004/05/11/cb-8865/</guid>
+      <description>前阵子换了工作，没有及时的更新TechNet的资料4月份的光盘资料被寄到原来单位去了
+连同一张贺卡，msn贴纸，TechNet的体恤 昨天同事带给了我。
+好消息和MM共享之... ...
+随之贺卡和msn贴纸全部被没收（单人哄抢），XL号的体恤我竟然穿上象紧身装(PS:俺190多斤重的)，也被剥夺，MM曰：这体恤我晚上穿出去乘凉，宽宽松松的，刚好。
+55555......
+一堆东西只剩下张光盘是我的了。
+MM的话“微软是关心你们这些开发人员，不想让你们打光棍，这些卡啊贴纸啊的就是让你送女朋友的！”
+惊人之语啊～～
+当然MM也不忘抚慰一下我，把贴纸里那只美丽的MSN蝴蝶贴在我的手机上，剩下的MSN小人一个也不许我要了</description>
+    </item>
+    
+    <item>
+      <title>一个关于DataGrid的打印类,分享,感谢作者</title>
+      <link>https://huobazi.aspxboy.com/blog/2004/04/30/cb-8176/</link>
+      <pubDate>Fri, 30 Apr 2004 00:00:00 +0000</pubDate>
+      
+      <guid>https://huobazi.aspxboy.com/blog/2004/04/30/cb-8176/</guid>
+      <description>手中的活计需要打印,就到处找找。
+从google中扑获,挺不错的，大家共享～
+how can i print the data in DataGrid?http://forums.aspfree.com/archive/t-17107
+http://forums.aspfree.com/t17107/s.html
+using System; using System.Collections; using System.ComponentModel; using System.Drawing; using System.Drawing.Printing; using System.Data;
+using System.Windows.Forms;
+namespace Hooooo.Print { public class DataGridPrinter { private DataGrid dataGrid; private PrintDocument printDocument; private PageSetupDialog pageSetupDialog; private PrintPreviewDialog printPreviewDialog;
+public DataGridPrinter(DataGrid dataGrid) { this.dataGrid = dataGrid; printDocument = new PrintDocument(); printDocument.PrintPage += new PrintPageEventHandler(this.printDocument_PrintPage); }
+private void printDocument_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e) { int rowCount = 0; int colCount = 0; int x = 0; int y = 0; int rowGap = 20; int colGap = 5; int leftMargin = 50; Font font = new Font(&amp;ldquo;Arial&amp;rdquo;, 10); Font headingFont = new Font(&amp;ldquo;Arial&amp;rdquo;, 11, FontStyle.</description>
+    </item>
+    
+    <item>
+      <title>域名Whois信息查询(ASP.NET&#43;C#)</title>
+      <link>https://huobazi.aspxboy.com/blog/2004/02/04/whoisinaspdotnet/</link>
+      <pubDate>Wed, 04 Feb 2004 00:00:00 +0000</pubDate>
+      
+      <guid>https://huobazi.aspxboy.com/blog/2004/02/04/whoisinaspdotnet/</guid>
+      <description>去年写的了,是从点缀的博客学来的
+看演示请点这里:http://www.aspxboy.com/whois.aspx
+代码如下:
+&amp;lt;% @Page Language=&#34;C#&#34; %&amp;gt;
+&amp;lt;% @Import Namespace=&#34;System.Net.Sockets&#34; %&amp;gt;
+&amp;lt;% @Import Namespace=&#34;System.Text&#34; %&amp;gt;
+&amp;lt;% @Import Namespace=&#34;System.IO&#34; %&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+&amp;lt;title&amp;gt;.Com/.Net/.Org/.Cn 域名Whois信息查询&amp;lt;/title&amp;gt;
+&amp;lt;meta name=&#34;keywords&#34; content=&#34;.Com,.Net,.Org,.Cn 域名Whois信息查询&#34;&amp;gt;
+&amp;lt;meta name=&#34;generator&#34; content=&#34;.Com/.Net/.Org,.Cn 域名Whois信息查询&#34;&amp;gt;
+&amp;lt;meta name=&#34;description&#34; content=&#34;.Com/.Net/.Org,.Cn 域名Whois信息查询&#34;&amp;gt;
+&amp;lt;style&amp;gt;
+&amp;lt;!--
+body,input{
+font-family: Tahoma, Verdana; color: #004080; font-size: 12px }
+a:link,a:visited{
+text-decoration: none; color: #004080
+}
+--&amp;gt;
+&amp;lt;/style&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+&amp;lt;form id=&#34;fmQuery&#34; runat=&#34;server&#34;&amp;gt;
+&amp;amp;nbsp;要查询的域名域名:
+www.&amp;lt;asp:TextBox id=&#34;txtDomain&#34; width=&#34;100&#34; value=&#34;ASPXBOY.COM&#34; runat=&#34;server&#34; /&amp;gt;
+&amp;amp;nbsp; &amp;lt;asp:Button id=&#34;btnQuery&#34; OnClick=&#34;btn_click&#34;</description>
     </item>
     
   </channel>

@@ -2,29 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Graffiti on 武眉博</title>
-    <link>http://huobazi.aspxboy.com/tags/graffiti/</link>
+    <link>https://huobazi.aspxboy.com/tags/graffiti/</link>
     <description>Recent content in Graffiti on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 18 Dec 2009 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://huobazi.aspxboy.com/tags/graffiti/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://huobazi.aspxboy.com/tags/graffiti/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Graffiti CMS  开源了</title>
-      <link>http://huobazi.aspxboy.com/blog/2009/12/18/graffiti-cms-is-now-free-open-source/</link>
+      <link>https://huobazi.aspxboy.com/blog/2009/12/18/graffiti-cms-is-now-free-open-source/</link>
       <pubDate>Fri, 18 Dec 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2009/12/18/graffiti-cms-is-now-free-open-source/</guid>
-      <description>&lt;p&gt;&lt;table border=&#34;0&#34; cellspacing=&#34;0&#34; cellpadding=&#34;0&#34;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style=&#34;height: 90px;&#34; valign=&#34;middle&#34;&gt;&lt;div style=&#34;padding-left: 1.1em; padding-top: 1.1em; padding-bottom: 0.8em;&#34;&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;div class=&#34;ProjectTitleControl HalfMarginBottom&#34;&gt;
-&lt;a id=&#34;ctl00_ctl00_MasterContent_ProjectTitleControl1_ProjectTitleLink&#34; href=&#34;http://graffiticms.codeplex.com/&#34;&gt;&lt;img id=&#34;ctl00_ctl00_MasterContent_ProjectTitleControl1_ProjectLogo&#34; class=&#34;HalfPaddingRight&#34; style=&#34;border-width: 0px;&#34; src=&#34;http://download.codeplex.com/Project/Download/FileDownload.aspx?ProjectName=graffiticms&amp;amp;DownloadId=96612&amp;amp;Build=16135&#34; alt=&#34;&#34; align=&#34;absmiddle&#34;&gt;&lt;/a&gt; &lt;a id=&#34;ctl00_ctl00_MasterContent_ProjectTitleControl1_ProjectTitleLink1&#34; href=&#34;http://graffiticms.codeplex.com/&#34;&gt;&lt;h1 id=&#34;ctl00_ctl00_MasterContent_ProjectTitleControl1_ProjectHeader&#34; class=&#34;ProjectHeader NoMargin Inline&#34;&gt;&lt;span id=&#34;ctl00_ctl00_MasterContent_ProjectTitleControl1_TitleLabel&#34;&gt;Graffiti CMS&lt;/span&gt;&lt;/h1&gt;
-&lt;p&gt;&lt;/p&gt;&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;p&gt;see also:&lt;a href=&#34;http://weblogs.asp.net/kencox/archive/2009/12/17/graffiti-cms-is-now-free-open-source.aspx&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://weblogs.asp.net/kencox/archive/2009/12/17/graffiti-cms-is-now-free-open-source.aspx&#34;&gt;http://weblogs.asp.net/kencox/archive/2009/12/17/graffiti-cms-is-now-free-open-source.aspx&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;&lt;/p&gt;
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2009/12/18/graffiti-cms-is-now-free-open-source/</guid>
+      <description>Graffiti CMS 
+  
+ see also:http://weblogs.asp.net/kencox/archive/2009/12/17/graffiti-cms-is-now-free-open-source.aspx</description>
     </item>
     
   </channel>

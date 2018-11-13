@@ -1,32 +1,12 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Masking &middot; 武眉博</title>
 
-    <meta name="description" content="Marble&#39;s blog">
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
 
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="huobazi" />
-    <meta name="twitter:title" content="Masking &middot; 武眉博">
-    <meta name="twitter:description" content="Marble&#39;s blog">
+    <link rel="stylesheet" href='https://huobazi.aspxboy.com/css/all.min.css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="Masking &middot; 武眉博">
-    <meta property="og:description" content="Marble&#39;s blog">
-
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    
-    <link href='http://fonts.useso.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
-    
-    
-        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
-    
-
-    <link rel="stylesheet" href="/css/all.min.css">
-    <link href="http://apps.bdimg.com/libs/fontawesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="alternate" type="application/rss+xml" title="武眉博" href='https://huobazi.aspxboy.com/index.xml' />
 </head>
 <body>
 
@@ -35,7 +15,7 @@
     <div class="sidebar pure-u-1 pure-u-md-1-4">
     <div class="header">
         <hgroup>
-            <h1 class="brand-title"><a href="http://huobazi.aspxboy.com/">武眉博</a></h1>
+            <h1 class="brand-title"><a href="https://huobazi.aspxboy.com">武眉博</a></h1>
             <h2 class="brand-tagline"> Marble&#39;s blog </h2>
         </hgroup>
 
@@ -43,18 +23,36 @@
             <ul class="nav-list">
                 
                 <li class="nav-item">
-                    <a class="pure-button" href="http://twitter.com/huobazi"><i class="fa fa-twitter"></i> Twitter</a>
+                    <a class="pure-button" href="https://twitter.com/huobazi">
+                        <i class="fa fa-twitter"></i> Twitter
+                    </a>
                 </li>
                 
                 
                 <li class="nav-item">
-                    <a class="pure-button" href="http://github.com/huobazi "><i class="fa fa-github-alt"></i> github</a>
+                    <a class="pure-button" href="https://github.com/huobazi">
+                        <i class="fa fa-github-alt"></i> Github
+                    </a>
                 </li>
                 
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://www.linkedin.com/in/huobazi">
+                        <i class="fa fa-linkedin"></i> LinkedIn
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="pure-button" href='https://huobazi.aspxboy.com/index.xml'>
+                        <i class="fa fa-rss"></i> rss
+                    </a>
+                </li>
             </ul>
         </nav>
     </div>
 </div>
+
 
     <div class="content pure-u-1 pure-u-md-3-4">
         <div>
@@ -65,20 +63,16 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://huobazi.aspxboy.com/blog/2011/06/22/password-masking-in-csharp-console-application/" class="post-title">在Console下输入密码，以星号代替。</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2011/06/22/password-masking-in-csharp-console-application/" class="post-title">在Console下输入密码，以星号代替。</a>
 
                         <p class="post-meta">
                             
-                            
-                                
-                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-.Net其他" href="http://huobazi.aspxboy.com//tags/.net%E5%85%B6%E4%BB%96">.Net其他</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a><a class="post-category post-category-Console" href="http://huobazi.aspxboy.com//tags/console">Console</a><a class="post-category post-category-Password" href="http://huobazi.aspxboy.com//tags/password">Password</a><a class="post-category post-category-masking" href="http://huobazi.aspxboy.com//tags/masking">masking</a>
                             
                         </p>
                     </header>
 
                     <div class="post-description">
                         <p>如何在Console下输入密码，像*unix系统下那样不显示，或者显示星号，如下代码经过测试：</p>
-<p></p>
 <div class="source" style="font-family: '[object HTMLOptionElement]', Consolas, 'Lucida Console', 'Courier New'; color: #ffffff; background-color: #333333; ">
 <p><span style="color: #87ceeb; ">/// &lt;summary&gt;</span><br /><span style="color: #87ceeb; ">/// Gets the console secure password.</span><br /><span style="color: #87ceeb; ">/// &lt;/summary&gt;</span><br /><span style="color: #87ceeb; ">/// &lt;returns&gt;&lt;/returns&gt;</span><br /><span style="color: #f0e68c; ">private</span> <span style="color: #f0e68c; ">static</span> <span style="color: #ffffff; ">SecureString</span> <span style="color: #ffffff; ">GetConsoleSecurePassword</span>( )<br /><span style="color: #ffffff; ">{</span><br />    <span style="color: #ffffff; ">SecureString</span> <span style="color: #ffffff; ">pwd</span> <span style="color: #ffffff; ">=</span> <span style="color: #f0e68c; ">new</span> <span style="color: #ffffff; ">SecureString</span>( );<br />    <span style="color: #f0e68c; ">while</span> ( <span style="color: #f0e68c; ">true</span> )<br />    <span style="color: #ffffff; ">{</span><br />        <span style="color: #ffffff; ">ConsoleKeyInfo</span> <span style="color: #ffffff; ">i</span> <span style="color: #ffffff; ">=</span> <span style="color: #ffffff; ">Console</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">ReadKey</span>( <span style="color: #f0e68c; ">true</span> );<br />        <span style="color: #f0e68c; ">if</span> ( <span style="color: #ffffff; ">i</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Key</span> <span style="color: #ffffff; ">==</span> <span style="color: #ffffff; ">ConsoleKey</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Enter</span> )<br />        <span style="color: #ffffff; ">{</span><br />            <span style="color: #f0e68c; ">break</span>;<br />        <span style="color: #ffffff; ">}</span><br />        <span style="color: #f0e68c; ">else</span> <span style="color: #ffffff; ">if</span> ( <span style="color: #ffffff; ">i</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Key</span> <span style="color: #ffffff; ">==</span> <span style="color: #ffffff; ">ConsoleKey</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Backspace</span> )<br />        <span style="color: #ffffff; ">{</span><br />            <span style="color: #ffffff; ">pwd</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">RemoveAt</span>( <span style="color: #ffffff; ">pwd</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Length</span> <span style="color: #ffffff; ">-</span> <span style="color: #ffffff; ">1</span> );<br />            <span style="color: #ffffff; ">Console</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Write</span>( <span style="color: #ffffff; ">"\b \b"</span> );<br />        <span style="color: #ffffff; ">}</span><br />        <span style="color: #f0e68c; ">else</span><br />        <span style="color: #ffffff; ">{</span><br />            <span style="color: #ffffff; ">pwd</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">AppendChar</span>( <span style="color: #ffffff; ">i</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">KeyChar</span> );<br />            <span style="color: #ffffff; ">Console</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Write</span>( <span style="color: #ffffff; ">"*"</span> );<br />        <span style="color: #ffffff; ">}</span><br />    <span style="color: #ffffff; ">}</span><br />    <span style="color: #f0e68c; ">return</span> <span style="color: #ffffff; ">pwd</span>;<br /><span style="color: #ffffff; ">}</span></p>
 <p><span style="color: #87ceeb; ">/// &lt;summary&gt;</span><br /><span style="color: #87ceeb; ">/// Gets the console password.</span><br /><span style="color: #87ceeb; ">/// &lt;/summary&gt;</span><br /><span style="color: #87ceeb; ">/// &lt;returns&gt;&lt;/returns&gt;</span><br /><span style="color: #f0e68c; ">private</span> <span style="color: #f0e68c; ">static</span> <span style="color: #bdb76b; ">string</span> <span style="color: #ffffff; ">GetConsolePassword</span>( )<br /><span style="color: #ffffff; ">{</span><br />    <span style="color: #ffffff; ">StringBuilder</span> sb <span style="color: #ffffff; ">=</span> <span style="color: #f0e68c; ">new</span> <span style="color: #ffffff; ">StringBuilder</span>( );<br />    <span style="color: #f0e68c; ">while</span> ( <span style="color: #f0e68c; ">true</span> )<br />    <span style="color: #ffffff; ">{</span><br />        <span style="color: #ffffff; ">ConsoleKeyInfo</span> <span style="color: #ffffff; ">cki</span> <span style="color: #ffffff; ">=</span> <span style="color: #ffffff; ">Console</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">ReadKey</span>( <span style="color: #f0e68c; ">true</span> );<br />        <span style="color: #f0e68c; ">if</span> ( <span style="color: #ffffff; ">cki</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Key</span> <span style="color: #ffffff; ">==</span> <span style="color: #ffffff; ">ConsoleKey</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Enter</span> )<br />        <span style="color: #ffffff; ">{</span><br />            <span style="color: #ffffff; ">Console</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">WriteLine</span>( );<br />            <span style="color: #f0e68c; ">break</span>;<br />        <span style="color: #ffffff; ">}</span></p>
@@ -87,8 +81,7 @@
 <p>        <span style="color: #ffffff; ">Console</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Write</span>( <span style="color: #ffffff; ">'*'</span> );<br />        sb<span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Append</span>( <span style="color: #ffffff; ">cki</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">KeyChar</span> );<br />    <span style="color: #ffffff; ">}</span></p>
 <p>    <span style="color: #f0e68c; ">return</span> sb<span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">ToString</span>( );<br /><span style="color: #ffffff; ">}</span></p>
 </div>
-<p>gist：<a href="https://gist.github.com/1039424">https://gist.github.com/1039424</a></p>               
-
+<p>gist：<a href="https://gist.github.com/1039424">https://gist.github.com/1039424</a></p>
                     </div>
                 </section>
                 
@@ -98,11 +91,11 @@
             <div class="footer">
     <div class="pure-menu pure-menu-horizontal pure-menu-open">
         <ul>
-            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a> &nbsp;&nbsp; theme by <a target="_blank" href="https://github.com/dplesca/purehugo">purehugo</a></a></li>
+            <li>Powered by <a class="hugo" href="https://gohugo.io/" target="_blank">hugo</a></li>
         </ul>
     </div>
 </div>
-<script src="/js/all.min.js"></script>
+<script src='https://huobazi.aspxboy.com/js/all.min.js'></script>
 
         </div>
     </div>

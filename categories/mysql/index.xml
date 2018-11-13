@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mysql on 武眉博</title>
-    <link>http://huobazi.aspxboy.com/categories/mysql/</link>
+    <link>https://huobazi.aspxboy.com/categories/mysql/</link>
     <description>Recent content in Mysql on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 12 Sep 2012 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://huobazi.aspxboy.com/categories/mysql/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://huobazi.aspxboy.com/categories/mysql/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>将MySQL 的数据导入 PostgreSQL</title>
-      <link>http://huobazi.aspxboy.com/blog/2012/09/12/import-data-from-mysql-to-postgresql/</link>
+      <link>https://huobazi.aspxboy.com/blog/2012/09/12/import-data-from-mysql-to-postgresql/</link>
       <pubDate>Wed, 12 Sep 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2012/09/12/import-data-from-mysql-to-postgresql/</guid>
-      <description>
+      <guid>https://huobazi.aspxboy.com/blog/2012/09/12/import-data-from-mysql-to-postgresql/</guid>
+      <description>&lt;p&gt;开始学习使用PostgreSQL, 先尝试将MySQL数据导入到PostgreSQL&lt;/p&gt;
 
-&lt;p&gt;开始学习使用PostgreSQL, 先尝试将MySQL数据导入到PostgreSQL&lt;/p&gt;
-
-&lt;h2 id=&#34;安装postgresql:8e74d1f4d6a69d3ff86a984aac665b40&#34;&gt;安装PostgreSQL&lt;/h2&gt;
+&lt;h2 id=&#34;安装postgresql&#34;&gt;安装PostgreSQL&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install postgresql postgresql-client postgresql-contrib  
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;基本按照&lt;a href=&#34;http://kiki.ubuntu.org.cn/PostgreSQL&#34;&gt;http://wiki.ubuntu.org.cn/PostgreSQL&lt;/a&gt;进行设置就OK了&lt;/p&gt;
 
-&lt;h2 id=&#34;安装开发工具:8e74d1f4d6a69d3ff86a984aac665b40&#34;&gt;安装开发工具&lt;/h2&gt;
+&lt;h2 id=&#34;安装开发工具&#34;&gt;安装开发工具&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install libpq-dev pgadmin3
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;PgAdmin3 这是一个桌面 GUI 工具, 可以很方便的管理 PostgreSQL&lt;/p&gt;
 
-&lt;h2 id=&#34;用到的rubygems:8e74d1f4d6a69d3ff86a984aac665b40&#34;&gt;用到的RubyGems&lt;/h2&gt;
+&lt;h2 id=&#34;用到的rubygems&#34;&gt;用到的RubyGems&lt;/h2&gt;
 
 &lt;p&gt;在 Gemfile 中增加：&lt;/p&gt;
 
@@ -44,39 +44,7 @@ gem &amp;quot;mysql2&amp;quot;
 &lt;p&gt;然后&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;bundle install
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;完整的-ruby-代码:8e74d1f4d6a69d3ff86a984aac665b40&#34;&gt;完整的 Ruby 代码&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;# coding: utf-8
-require &#39;mysql2&#39;
-require &#39;pg&#39;
-
-mysql_client = Mysql2::Client.new(:host =&amp;gt; &amp;quot;localhost&amp;quot;, :username =&amp;gt;&amp;quot;root&amp;quot;, :password =&amp;gt; &amp;quot;pa$$word&amp;quot;, :database =&amp;gt; &amp;quot;my_test&amp;quot;, :encoding =&amp;gt; &amp;quot;utf8&amp;quot;)
-
-postgres_client = PG::Connection.new(:host =&amp;gt; &amp;quot;localhost&amp;quot;, :dbname =&amp;gt; &#39;mydb&#39;, :user =&amp;gt; &amp;quot;postgres&amp;quot;, :password =&amp;gt; &amp;quot;pa$$word&amp;quot;)
-postgres_client.set_client_encoding(&#39;utf8&#39;)
-
-mysql_result = mysql_client.query(&#39;select `code`,`name`,`level` from `chinese_regions`&#39;)
-
-step = 0
-mysql_result.each do |row|
-
-  the_code = row[&#39;code&#39;]
-  the_name = row[&#39;name&#39;]
-  the_level = row[&#39;level&#39;].to_i
-  insert_sql_test = &amp;quot;insert into chinese_regions (\&amp;quot;code\&amp;quot;,\&amp;quot;name\&amp;quot;,\&amp;quot;level\&amp;quot;) values (&#39;#{the_code}&#39;,&#39;#{the_name}&#39;,&#39;#{the_level}&#39;);&amp;quot;
-  postgres_client.exec(insert_sql_test)
-
-  step += 1
-  puts &#39;-&#39; + step.to_s + &#39;-&#39; + the_code + &#39;--&#39; + the_name + &#39;--&#39; + the_level.to_s
-
-end
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Run 啊 Run 啊的就 OK 了&lt;/p&gt;
-</description>
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
   </channel>

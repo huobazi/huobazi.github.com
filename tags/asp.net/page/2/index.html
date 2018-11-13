@@ -1,32 +1,12 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asp.Net &middot; 武眉博</title>
 
-    <meta name="description" content="Marble&#39;s blog">
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
 
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="huobazi" />
-    <meta name="twitter:title" content="Asp.Net &middot; 武眉博">
-    <meta name="twitter:description" content="Marble&#39;s blog">
+    <link rel="stylesheet" href='https://huobazi.aspxboy.com/css/all.min.css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="Asp.Net &middot; 武眉博">
-    <meta property="og:description" content="Marble&#39;s blog">
-
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    
-    <link href='http://fonts.useso.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
-    
-    
-        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
-    
-
-    <link rel="stylesheet" href="/css/all.min.css">
-    <link href="http://apps.bdimg.com/libs/fontawesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="alternate" type="application/rss+xml" title="武眉博" href='https://huobazi.aspxboy.com/index.xml' />
 </head>
 <body>
 
@@ -35,7 +15,7 @@
     <div class="sidebar pure-u-1 pure-u-md-1-4">
     <div class="header">
         <hgroup>
-            <h1 class="brand-title"><a href="http://huobazi.aspxboy.com/">武眉博</a></h1>
+            <h1 class="brand-title"><a href="https://huobazi.aspxboy.com">武眉博</a></h1>
             <h2 class="brand-tagline"> Marble&#39;s blog </h2>
         </hgroup>
 
@@ -43,18 +23,36 @@
             <ul class="nav-list">
                 
                 <li class="nav-item">
-                    <a class="pure-button" href="http://twitter.com/huobazi"><i class="fa fa-twitter"></i> Twitter</a>
+                    <a class="pure-button" href="https://twitter.com/huobazi">
+                        <i class="fa fa-twitter"></i> Twitter
+                    </a>
                 </li>
                 
                 
                 <li class="nav-item">
-                    <a class="pure-button" href="http://github.com/huobazi "><i class="fa fa-github-alt"></i> github</a>
+                    <a class="pure-button" href="https://github.com/huobazi">
+                        <i class="fa fa-github-alt"></i> Github
+                    </a>
                 </li>
                 
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://www.linkedin.com/in/huobazi">
+                        <i class="fa fa-linkedin"></i> LinkedIn
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="pure-button" href='https://huobazi.aspxboy.com/index.xml'>
+                        <i class="fa fa-rss"></i> rss
+                    </a>
+                </li>
             </ul>
         </nav>
     </div>
 </div>
+
 
     <div class="content pure-u-1 pure-u-md-3-4">
         <div>
@@ -65,19 +63,18 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://huobazi.aspxboy.com/blog/2009/12/09/chang-sql-table-field-default/" class="post-title">使用SQL语句更改数据表的默认值</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2009/12/09/chang-sql-table-field-default/" class="post-title">使用SQL语句更改数据表的默认值</a>
 
                         <p class="post-meta">
                             
-                            
-                                
-                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a><a class="post-category post-category-SQL" href="http://huobazi.aspxboy.com//tags/sql">SQL</a><a class="post-category post-category-Server" href="http://huobazi.aspxboy.com//tags/server">Server</a>
                             
                         </p>
                     </header>
 
                     <div class="post-description">
                         <p><p>以前还真没这么干过，都是手工去掉约束，再添加的，今天一边google一边搞啊搞啊的，最终下面这个脚本可以用了</p>
+<p></p>
+
 <p></p>
 <div class="source" style='font-family: "Consolas","Lucida Console","Courier New"; color: #ffffff; background-color: #333333;'>
 <p><span style="color: #f0e68c;">alter</span> <span style="color: #f0e68c;">table</span> <span style="color: #ffffff;">dbo</span><span style="color: #ffffff;">.</span><span style="color: #ffffff;">SOTransaction</span><br />    <span style="color: #f0e68c;">alter</span> <span style="color: #f0e68c;">column</span> <span style="color: #ffffff;">UnitCostWithoutTax</span> <span style="color: #ffffff;">decimal</span>(<span style="color: #ffffff;">10</span><span style="color: #ffffff;">,</span> <span style="color: #ffffff;">2</span>)  <span style="color: #f0e68c;">not</span> <span style="color: #f0e68c;">null</span></p>
@@ -87,7 +84,6 @@
 <p><span style="color: #f0e68c;">select</span> <span style="color: #ffffff;">@</span><span style="color: #ffffff;">name</span> <span style="color: #ffffff;">=</span> b<span style="color: #ffffff;">.</span><span style="color: #ffffff;">name</span> <span style="color: #f0e68c;">from</span> <span style="color: #ffffff;">syscolumns</span> <span style="color: #ffffff;">a</span> <span style="color: #f0e68c;">inner</span> <span style="color: #f0e68c;">join</span> <span style="color: #ffffff;">sysobjects</span> b<br />    <span style="color: #f0e68c;">on</span> b<span style="color: #ffffff;">.</span><span style="color: #ffffff;">id</span><span style="color: #ffffff;">=</span><span style="color: #ffffff;">a</span><span style="color: #ffffff;">.</span><span style="color: #ffffff;">cdefault</span><br /><span style="color: #f0e68c;">where</span><br />    <span style="color: #ffffff;">a</span><span style="color: #ffffff;">.</span><span style="color: #ffffff;">id</span><span style="color: #ffffff;">=</span> <span style="color: #ffffff;">object_id</span>(<span style="color: #ffffff;">@</span><span style="color: #ffffff;">tablename</span>)<br />    <span style="color: #f0e68c;">and</span> <span style="color: #ffffff;">a</span><span style="color: #ffffff;">.</span><span style="color: #ffffff;">name</span><span style="color: #ffffff;">=@</span><span style="color: #ffffff;">fieldname</span><br />    <span style="color: #f0e68c;">and</span> b<span style="color: #ffffff;">.</span><span style="color: #ffffff;">name</span> <span style="color: #f0e68c;">like</span> <span style="color: #ffffff;">&lsquo;DF%&rsquo;</span><br /><span style="color: #87ceeb;">&ndash;print @name</span></p>
 <p><span style="color: #f0e68c;">exec</span>(<span style="color: #ffffff;">&rsquo; alter table SOTransaction drop constraint &lsquo;</span> <span style="color: #ffffff;">+</span> <span style="color: #ffffff;">@</span><span style="color: #ffffff;">name</span>);<br /><span style="color: #f0e68c;">go</span><br /><span style="color: #f0e68c;">alter</span> <span style="color: #f0e68c;">table</span> <span style="color: #ffffff;">dbo</span><span style="color: #ffffff;">.</span><span style="color: #ffffff;">SOTransaction</span><br />    <span style="color: #f0e68c;">add</span> <span style="color: #f0e68c;">constraint</span> <span style="color: #ffffff;">DF_SOTransaction_UnitCostWithoutTax</span> <span style="color: #f0e68c;">default</span> (<span style="color: #ffffff;">0</span>) <span style="color: #f0e68c;">for</span> <span style="color: #ffffff;">UnitCostWithoutTax</span></p>
 </div></p>
-
                     </div>
                 </section>
                 
@@ -95,13 +91,10 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://huobazi.aspxboy.com/blog/2009/10/27/kissy-editor/" class="post-title">在线编辑器的一个新选择。</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2009/10/27/kissy-editor/" class="post-title">在线编辑器的一个新选择。</a>
 
                         <p class="post-meta">
                             
-                            
-                                
-                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-前端开发" href="http://huobazi.aspxboy.com//tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91">前端开发</a><a class="post-category post-category-推荐阅读" href="http://huobazi.aspxboy.com//tags/%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB">推荐阅读</a><a class="post-category post-category-FckEditor" href="http://huobazi.aspxboy.com//tags/fckeditor">FckEditor</a><a class="post-category post-category-kissy-editor" href="http://huobazi.aspxboy.com//tags/kissy-editor">kissy-editor</a>
                             
                         </p>
                     </header>
@@ -118,13 +111,10 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://huobazi.aspxboy.com/blog/2009/07/26/2009-mvp/" class="post-title">拆箱记</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2009/07/26/2009-mvp/" class="post-title">拆箱记</a>
 
                         <p class="post-meta">
                             
-                            
-                                
-                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Microsoft" href="http://huobazi.aspxboy.com//tags/microsoft">Microsoft</a><a class="post-category post-category-MVP" href="http://huobazi.aspxboy.com//tags/mvp">MVP</a>
                             
                         </p>
                     </header>
@@ -132,7 +122,6 @@
                     <div class="post-description">
                         <p>大洋彼岸寄来了一个纸箱</p>
 <p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/1.jpg" alt=""></p>
-<p></p>
 <p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/2.jpg" alt=""></p>
 <p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/3.jpg" alt=""></p>
 <p>哇，里面装了一个老外宅男</p>
@@ -146,8 +135,7 @@
 <p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/10.jpg" alt=""></p>
 <p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/11.jpg" alt=""></p>
 <p>MVP证书</p>
-<p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/12.jpg" alt=""></p>               
-
+<p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/12.jpg" alt=""></p>
                     </div>
                 </section>
                 
@@ -155,13 +143,10 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://huobazi.aspxboy.com/blog/2009/07/21/how-to-send-an-email-with-attachments/" class="post-title">Asp.Net发邮件，如何发送附件</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2009/07/21/how-to-send-an-email-with-attachments/" class="post-title">Asp.Net发邮件，如何发送附件</a>
 
                         <p class="post-meta">
                             
-                            
-                                
-                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a><a class="post-category post-category-.Net其他" href="http://huobazi.aspxboy.com//tags/.net%E5%85%B6%E4%BB%96">.Net其他</a><a class="post-category post-category-C#" href="http://huobazi.aspxboy.com//tags/c">C#</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a><a class="post-category post-category-邮件" href="http://huobazi.aspxboy.com//tags/%E9%82%AE%E4%BB%B6">邮件</a>
                             
                         </p>
                     </header>
@@ -178,6 +163,8 @@ mail.Attachments.Add( attachment );
 SmtpMail.SmtpServer = &rdquo;localhost&rdquo;; 
 SmtpMail.Send( mail );</pre>
 <p>使用如下代码可以在用户上传附件后发生邮件:</p>
+<p></p>
+
 <p></p>
 <pre>if  (FileUpload1.HasFile)
 {
@@ -200,7 +187,6 @@ SmtpMail.Send( mail );</pre>
 
 <p>    mySmtpClient.Send(myMailMessage);
 }</pre></p>
-
                     </div>
                 </section>
                 
@@ -208,13 +194,10 @@ SmtpMail.Send( mail );</pre>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://huobazi.aspxboy.com/blog/2009/07/21/how-to-send-an-email-with-attachments/" class="post-title">Asp.Net发邮件，如何发送附件</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2009/07/21/how-to-send-an-email-with-attachments/" class="post-title">Asp.Net发邮件，如何发送附件</a>
 
                         <p class="post-meta">
                             
-                            
-                                
-                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a><a class="post-category post-category-.Net其他" href="http://huobazi.aspxboy.com//tags/.net%E5%85%B6%E4%BB%96">.Net其他</a><a class="post-category post-category-C#" href="http://huobazi.aspxboy.com//tags/c">C#</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a><a class="post-category post-category-邮件" href="http://huobazi.aspxboy.com//tags/%E9%82%AE%E4%BB%B6">邮件</a>
                             
                         </p>
                     </header>
@@ -231,6 +214,8 @@ mail.Attachments.Add( attachment );
 SmtpMail.SmtpServer = &rdquo;localhost&rdquo;; 
 SmtpMail.Send( mail );</pre>
 <p>使用如下代码可以在用户上传附件后发生邮件:</p>
+<p></p>
+
 <p></p>
 <pre>if  (FileUpload1.HasFile)
 {
@@ -253,7 +238,226 @@ SmtpMail.Send( mail );</pre>
 
 <p>    mySmtpClient.Send(myMailMessage);
 }</pre></p>
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">17 Jul 2009</h1>
+                <section class="post">
+                    <header class="post-header">
 
+                        <a href="https://huobazi.aspxboy.com/blog/2009/07/17/same-name-element-in-one-page/" class="post-title">知识死角,name相同的html element</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p>今天在帮同事调程序时发现了这个死角<br />现象如下，没有任何输入的textarea提交到服务端后得到的值总是&rdquo;,&rdquo;<br />找了半天发现是因为页面上两个textarea的name相同，以前只知道页面上radio的name相同则是一个组，name相同的<br />的checkbox提交后是以逗号分隔值的，于是做了下面代码的试验，发现任何name相同的element提交到服务端都会得到逗号分隔的值，以前还不知道这个，汗</p>
+<p></p>
+
+<p></p>
+<code><span style="color: #000000">
+&lt;%@ Page Language=&ldquo;C#&ldquo; %&gt;<br /><br />&lt;script runat=&ldquo;server&rdquo; languag=&ldquo;c#&rdquo;&gt;
+<br />    string textboxValue = string.Empty;
+<br />    string radioValue = string.Empty;
+<br />    string checkboxValue = string.Empty;
+<br />    string selectValue = string.Empty;
+<br />    string textareaValue = string.Empty;
+<br />    void Page_Load(object obj , EventArgs args)
+<br />    {
+<br />        placeHolder.Visible = false;
+<br />        System.Web.HttpContext ctx = System.Web.HttpContext.Current;
+<br />        if(ctx.Request.HttpMethod == &rdquo;POST&rdquo;)
+<br />        {
+<br />            placeHolder.Visible = true;
+<br />            textboxValue = ctx.Request.Form[&ldquo;textbox&rdquo;];
+<br />            radioValue = ctx.Request.Form[&ldquo;radio&rdquo;];
+<br />            checkboxValue = ctx.Request.Form[&ldquo;checkbox&rdquo;];
+<br />            selectValue = ctx.Request.Form[&ldquo;select&rdquo;];
+<br />            textareaValue = ctx.Request.Form[&ldquo;textarea&rdquo;];
+<br />        }
+<br />    }
+<br />&lt;/script&gt;<br /><br />&lt;!DOCTYPE html PUBLIC &rdquo;-//W3C//DTD XHTML 1.0 Transitional//EN&rdquo; &rdquo;<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</a>
+<br />&lt;html xmlns=&ldquo;<a href="http://www.w3.org/1999/xhtml&quot; &gt;">http://www.w3.org/1999/xhtml&quot; &gt;</a>
+<br />&lt;head&gt;
+<br />&lt;style&gt;
+<br />body, h1, h2, h3, h4, h5, h6, hr, p, ul, ol, li,pre,fieldset, lengend, button, input, textarea,{
+<br />    margin: 0;
+<br />    padding: 0;
+<br />}
+<br />body,button, input, select, textarea {
+<br />    font: 13px/1 Tahoma, Helvetica, Arial, &rdquo;\5b8b\4f53&rdquo;, sans-serif;
+<br />}
+<br /><br />#page{
+<br />    padding:10px 30px 10px 30px;
+<br />}
+<br />#s{
+<br />color:red;
+<br />}
+<br />input,select,textarea{
+<br />    clear:both;
+<br />    float:left;
+<br />    margin:5px;
+<br />}
+<br /><br />pre {
+<br />    overflow: auto;
+<br />    border: 1px dotted #281;
+<br />    background-color: #eee;
+<br />    padding: 2px 20px 20px 10px;
+<br />}
+<br />fieldset{
+<br />    line-height:200%;
+<br />}
+<br /><br />&lt;/style&gt;
+<br />&lt;/head&gt;
+<br />&lt;body&gt;<br /><br />&lt;div id=&ldquo;page&rdquo;&gt;<br /><br />&lt;div id=&ldquo;placeHolder&rdquo; runat=&ldquo;server&rdquo;&gt;    
+<br />            &lt;string id=&ldquo;s&rdquo;&gt;Post Data:&lt;/string&gt;<br /><br />&lt;pre style=&ldquo;max-height:30px;&rdquo;&gt;
+<br />textboxvalue:&lt;%= textboxValue%&gt;
+<br />radioValue:&lt;%= radioValue%&gt;
+<br />checkboxValue:&lt;%= checkboxValue%&gt;
+<br />selectValue:&lt;%=selectValue%&gt;
+<br />textareaValue:&lt;%= textareaValue%&gt;&lt;/pre&gt;<br /><br />&lt;/div&gt;<br /><br />&lt;form id=&ldquo;aspnetForm&rdquo; method=&ldquo;post&rdquo;&gt;
+<br />                &lt;fieldset&gt;       
+<br />                  &lt;legend&gt;Test&lt;/legend&gt;              
+<br />                &lt;input type=&ldquo;text&rdquo; name=&ldquo;textbox&rdquo; value=&ldquo;a&rdquo;/&gt; 
+<br />                &lt;input type=&ldquo;text&rdquo; name=&ldquo;textbox&rdquo; value=&ldquo;a&rdquo;/&gt;
+<br />                &lt;input type=&ldquo;text&rdquo; name=&ldquo;textbox&rdquo; value=&ldquo;a&rdquo;/&gt;
+<br />                &lt;input type=&ldquo;radio&rdquo; name=&ldquo;radio&rdquo; value=&ldquo;a&rdquo; /&gt;
+<br />                &lt;input type=&ldquo;radio&rdquo; name=&ldquo;radio&rdquo; value=&ldquo;a&rdquo; /&gt;
+<br />                &lt;input type=&ldquo;radio&rdquo; name=&ldquo;radio&rdquo; value=&ldquo;a&rdquo; checked=&ldquo;checked&rdquo; /&gt;
+<br />                &lt;input type=&ldquo;checkbox&rdquo; name=&ldquo;checkbox&rdquo; value=&ldquo;a&rdquo; checked=&ldquo;checked&rdquo; /&gt;
+<br />                &lt;input type=&ldquo;checkbox&rdquo; name=&ldquo;checkbox&rdquo; value=&ldquo;a&rdquo; checked=&ldquo;checked&rdquo; /&gt;
+<br />                &lt;input type=&ldquo;checkbox&rdquo; name=&ldquo;checkbox&rdquo; value=&ldquo;a&rdquo; checked=&ldquo;checked&rdquo; /&gt;
+<br />                &lt;select name=&ldquo;select&rdquo;&gt;
+<br />                                   &lt;option value=&ldquo;a&rdquo;&gt;a&lt;/option&gt;
+<br />                &lt;/select&gt;
+<br />                &lt;select name=&ldquo;select&rdquo;&gt;
+<br />                                   &lt;option value=&ldquo;a&rdquo;&gt;a&lt;/option&gt;
+<br />                &lt;/select&gt;
+<br />                &lt;select name=&ldquo;select&rdquo;&gt;
+<br />                                   &lt;option value=&ldquo;a&rdquo;&gt;a&lt;/option&gt;
+<br />                &lt;/select&gt;
+<br />                &lt;textarea name=&ldquo;textarea&rdquo;&gt;a&lt;/textarea&gt;
+<br />                &lt;textarea name=&ldquo;textarea&rdquo;&gt;a&lt;/textarea&gt;
+<br />                &lt;textarea name=&ldquo;textarea&rdquo;&gt;a&lt;/textarea&gt;
+<br />                &lt;input type=&ldquo;submit&rdquo; value=&ldquo;Do PostBack&rdquo; /&gt;
+<br />            &lt;/fieldset&gt;
+<br />            &lt;/form&gt;
+<br />    &lt;/div&gt;<br /><br />&lt;/body&gt;
+<br />&lt;/html&gt;</span>
+</code></p>
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">17 Jul 2009</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2009/07/17/same-name-element-in-one-page/" class="post-title">知识死角,name相同的html element</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p>今天在帮同事调程序时发现了这个死角<br />现象如下，没有任何输入的textarea提交到服务端后得到的值总是&rdquo;,&rdquo;<br />找了半天发现是因为页面上两个textarea的name相同，以前只知道页面上radio的name相同则是一个组，name相同的<br />的checkbox提交后是以逗号分隔值的，于是做了下面代码的试验，发现任何name相同的element提交到服务端都会得到逗号分隔的值，以前还不知道这个，汗</p>
+<p></p>
+
+<p></p>
+<code><span style="color: #000000">
+&lt;%@ Page Language=&ldquo;C#&ldquo; %&gt;<br /><br />&lt;script runat=&ldquo;server&rdquo; languag=&ldquo;c#&rdquo;&gt;
+<br />    string textboxValue = string.Empty;
+<br />    string radioValue = string.Empty;
+<br />    string checkboxValue = string.Empty;
+<br />    string selectValue = string.Empty;
+<br />    string textareaValue = string.Empty;
+<br />    void Page_Load(object obj , EventArgs args)
+<br />    {
+<br />        placeHolder.Visible = false;
+<br />        System.Web.HttpContext ctx = System.Web.HttpContext.Current;
+<br />        if(ctx.Request.HttpMethod == &rdquo;POST&rdquo;)
+<br />        {
+<br />            placeHolder.Visible = true;
+<br />            textboxValue = ctx.Request.Form[&ldquo;textbox&rdquo;];
+<br />            radioValue = ctx.Request.Form[&ldquo;radio&rdquo;];
+<br />            checkboxValue = ctx.Request.Form[&ldquo;checkbox&rdquo;];
+<br />            selectValue = ctx.Request.Form[&ldquo;select&rdquo;];
+<br />            textareaValue = ctx.Request.Form[&ldquo;textarea&rdquo;];
+<br />        }
+<br />    }
+<br />&lt;/script&gt;<br /><br />&lt;!DOCTYPE html PUBLIC &rdquo;-//W3C//DTD XHTML 1.0 Transitional//EN&rdquo; &rdquo;<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</a>
+<br />&lt;html xmlns=&ldquo;<a href="http://www.w3.org/1999/xhtml&quot; &gt;">http://www.w3.org/1999/xhtml&quot; &gt;</a>
+<br />&lt;head&gt;
+<br />&lt;style&gt;
+<br />body, h1, h2, h3, h4, h5, h6, hr, p, ul, ol, li,pre,fieldset, lengend, button, input, textarea,{
+<br />    margin: 0;
+<br />    padding: 0;
+<br />}
+<br />body,button, input, select, textarea {
+<br />    font: 13px/1 Tahoma, Helvetica, Arial, &rdquo;\5b8b\4f53&rdquo;, sans-serif;
+<br />}
+<br /><br />#page{
+<br />    padding:10px 30px 10px 30px;
+<br />}
+<br />#s{
+<br />color:red;
+<br />}
+<br />input,select,textarea{
+<br />    clear:both;
+<br />    float:left;
+<br />    margin:5px;
+<br />}
+<br /><br />pre {
+<br />    overflow: auto;
+<br />    border: 1px dotted #281;
+<br />    background-color: #eee;
+<br />    padding: 2px 20px 20px 10px;
+<br />}
+<br />fieldset{
+<br />    line-height:200%;
+<br />}
+<br /><br />&lt;/style&gt;
+<br />&lt;/head&gt;
+<br />&lt;body&gt;<br /><br />&lt;div id=&ldquo;page&rdquo;&gt;<br /><br />&lt;div id=&ldquo;placeHolder&rdquo; runat=&ldquo;server&rdquo;&gt;    
+<br />            &lt;string id=&ldquo;s&rdquo;&gt;Post Data:&lt;/string&gt;<br /><br />&lt;pre style=&ldquo;max-height:30px;&rdquo;&gt;
+<br />textboxvalue:&lt;%= textboxValue%&gt;
+<br />radioValue:&lt;%= radioValue%&gt;
+<br />checkboxValue:&lt;%= checkboxValue%&gt;
+<br />selectValue:&lt;%=selectValue%&gt;
+<br />textareaValue:&lt;%= textareaValue%&gt;&lt;/pre&gt;<br /><br />&lt;/div&gt;<br /><br />&lt;form id=&ldquo;aspnetForm&rdquo; method=&ldquo;post&rdquo;&gt;
+<br />                &lt;fieldset&gt;       
+<br />                  &lt;legend&gt;Test&lt;/legend&gt;              
+<br />                &lt;input type=&ldquo;text&rdquo; name=&ldquo;textbox&rdquo; value=&ldquo;a&rdquo;/&gt; 
+<br />                &lt;input type=&ldquo;text&rdquo; name=&ldquo;textbox&rdquo; value=&ldquo;a&rdquo;/&gt;
+<br />                &lt;input type=&ldquo;text&rdquo; name=&ldquo;textbox&rdquo; value=&ldquo;a&rdquo;/&gt;
+<br />                &lt;input type=&ldquo;radio&rdquo; name=&ldquo;radio&rdquo; value=&ldquo;a&rdquo; /&gt;
+<br />                &lt;input type=&ldquo;radio&rdquo; name=&ldquo;radio&rdquo; value=&ldquo;a&rdquo; /&gt;
+<br />                &lt;input type=&ldquo;radio&rdquo; name=&ldquo;radio&rdquo; value=&ldquo;a&rdquo; checked=&ldquo;checked&rdquo; /&gt;
+<br />                &lt;input type=&ldquo;checkbox&rdquo; name=&ldquo;checkbox&rdquo; value=&ldquo;a&rdquo; checked=&ldquo;checked&rdquo; /&gt;
+<br />                &lt;input type=&ldquo;checkbox&rdquo; name=&ldquo;checkbox&rdquo; value=&ldquo;a&rdquo; checked=&ldquo;checked&rdquo; /&gt;
+<br />                &lt;input type=&ldquo;checkbox&rdquo; name=&ldquo;checkbox&rdquo; value=&ldquo;a&rdquo; checked=&ldquo;checked&rdquo; /&gt;
+<br />                &lt;select name=&ldquo;select&rdquo;&gt;
+<br />                                   &lt;option value=&ldquo;a&rdquo;&gt;a&lt;/option&gt;
+<br />                &lt;/select&gt;
+<br />                &lt;select name=&ldquo;select&rdquo;&gt;
+<br />                                   &lt;option value=&ldquo;a&rdquo;&gt;a&lt;/option&gt;
+<br />                &lt;/select&gt;
+<br />                &lt;select name=&ldquo;select&rdquo;&gt;
+<br />                                   &lt;option value=&ldquo;a&rdquo;&gt;a&lt;/option&gt;
+<br />                &lt;/select&gt;
+<br />                &lt;textarea name=&ldquo;textarea&rdquo;&gt;a&lt;/textarea&gt;
+<br />                &lt;textarea name=&ldquo;textarea&rdquo;&gt;a&lt;/textarea&gt;
+<br />                &lt;textarea name=&ldquo;textarea&rdquo;&gt;a&lt;/textarea&gt;
+<br />                &lt;input type=&ldquo;submit&rdquo; value=&ldquo;Do PostBack&rdquo; /&gt;
+<br />            &lt;/fieldset&gt;
+<br />            &lt;/form&gt;
+<br />    &lt;/div&gt;<br /><br />&lt;/body&gt;
+<br />&lt;/html&gt;</span>
+</code></p>
                     </div>
                 </section>
                 
@@ -261,13 +465,10 @@ SmtpMail.Send( mail );</pre>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://huobazi.aspxboy.com/blog/2009/07/15/make-a-deep-clone-of-the-object/" class="post-title">C#中如何深度克隆一个对象？</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2009/07/15/make-a-deep-clone-of-the-object/" class="post-title">C#中如何深度克隆一个对象？</a>
 
                         <p class="post-meta">
                             
-                            
-                                
-                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a><a class="post-category post-category-.Net其他" href="http://huobazi.aspxboy.com//tags/.net%E5%85%B6%E4%BB%96">.Net其他</a><a class="post-category post-category-C#" href="http://huobazi.aspxboy.com//tags/c">C#</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a>
                             
                         </p>
                     </header>
@@ -290,6 +491,8 @@ SmtpMail.Send( mail );</pre>
 </pre>
 <p>泛型版：</p>
 <p></p>
+
+<p></p>
 <pre>public  static  T  Clone&lt;T&gt;(T  obj)
 {
         T  ret  =  default(T);
@@ -303,7 +506,6 @@ SmtpMail.Send( mail );</pre>
         }
         return  ret;
 }</pre></p>
-
                     </div>
                 </section>
                 
@@ -311,13 +513,10 @@ SmtpMail.Send( mail );</pre>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://huobazi.aspxboy.com/blog/2009/07/15/make-a-deep-clone-of-the-object/" class="post-title">C#中如何深度克隆一个对象？</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2009/07/15/make-a-deep-clone-of-the-object/" class="post-title">C#中如何深度克隆一个对象？</a>
 
                         <p class="post-meta">
                             
-                            
-                                
-                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a><a class="post-category post-category-.Net其他" href="http://huobazi.aspxboy.com//tags/.net%E5%85%B6%E4%BB%96">.Net其他</a><a class="post-category post-category-C#" href="http://huobazi.aspxboy.com//tags/c">C#</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a>
                             
                         </p>
                     </header>
@@ -340,6 +539,8 @@ SmtpMail.Send( mail );</pre>
 </pre>
 <p>泛型版：</p>
 <p></p>
+
+<p></p>
 <pre>public  static  T  Clone&lt;T&gt;(T  obj)
 {
         T  ret  =  default(T);
@@ -353,7 +554,6 @@ SmtpMail.Send( mail );</pre>
         }
         return  ret;
 }</pre></p>
-
                     </div>
                 </section>
                 
@@ -361,13 +561,10 @@ SmtpMail.Send( mail );</pre>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://huobazi.aspxboy.com/blog/2008/12/01/asp-net-mvc-route-config/" class="post-title">把ASP.NET MVC的路由利用配置维护起来</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2008/12/01/asp-net-mvc-route-config/" class="post-title">把ASP.NET MVC的路由利用配置维护起来</a>
 
                         <p class="post-meta">
                             
-                            
-                                
-                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a><a class="post-category post-category-MVC" href="http://huobazi.aspxboy.com//tags/mvc">MVC</a>
                             
                         </p>
                     </header>
@@ -379,63 +576,6 @@ SmtpMail.Send( mail );</pre>
 <br /><p><a href="/QLeelulu/archive/2008/11/24/1340212.html">http://www.cnblogs.com/QLeelulu/archive/2008/11/24/1340212.html</a></p>
 <br /><p><a href="http://www.iansuttle.com/blog/post/ASPNET-MVC-Store-Routes-in-the-Database.aspx">http://www.iansuttle.com/blog/post/ASPNET-MVC-Store-Routes-in-the-Database.aspx</a></p>
 <br /><p>我觉得加上做webform时常用的PageAlias和BuildUrl会更好用些</p>               
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">01 Dec 2008</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://huobazi.aspxboy.com/blog/2008/12/01/asp-net-mvc-route-config/" class="post-title">把ASP.NET MVC的路由利用配置维护起来</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                
-                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a><a class="post-category post-category-MVC" href="http://huobazi.aspxboy.com//tags/mvc">MVC</a>
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>配置大多就是文件配置或者数据库配置了</p>
-<br /><p>ref:</p>
-<br /><p><a href="http://mnour.blogspot.com/2008/11/mvc-routing-using-custom-configuration.html">http://mnour.blogspot.com/2008/11/mvc-routing-using-custom-configuration.html</a></p>
-<br /><p><a href="/QLeelulu/archive/2008/11/24/1340212.html">http://www.cnblogs.com/QLeelulu/archive/2008/11/24/1340212.html</a></p>
-<br /><p><a href="http://www.iansuttle.com/blog/post/ASPNET-MVC-Store-Routes-in-the-Database.aspx">http://www.iansuttle.com/blog/post/ASPNET-MVC-Store-Routes-in-the-Database.aspx</a></p>
-<br /><p>我觉得加上做webform时常用的PageAlias和BuildUrl会更好用些</p>               
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">07 Oct 2008</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://huobazi.aspxboy.com/blog/2008/10/07/jquerycool/" class="post-title">jQuery从此更牛了</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                
-                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-前端开发" href="http://huobazi.aspxboy.com//tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91">前端开发</a><a class="post-category post-category-jQuery" href="http://huobazi.aspxboy.com//tags/jquery">jQuery</a><a class="post-category post-category-Microsoft" href="http://huobazi.aspxboy.com//tags/microsoft">Microsoft</a>
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>为什么更牛了?</p>
-<p> </p>
-<p>26日回家，昨天才返回，这么好的消息自己错过了，补记一下。</p>
-<p> </p>
-<p>see see</p>
-<p></p>
-<p> </p>
-<p> </p>
-<p><a href="http://weblogs.asp.net/scottgu/">Scott Guthrie</a>的<a href="http://weblogs.asp.net/scottgu/archive/2008/09/28/jquery-and-microsoft.aspx">公告 </a>(jQuery将成为Visual Studio的一部分等更多好消息...)</p>
-<p> <br />jQuery头儿<a href="http://ejohn.org/">John Resig</a>的<a href="http://jquery.com/blog/2008/09/28/jquery-microsoft-nokia/">公告</a>（jQuery, Microsoft, and Nokia）</p>
-<p> <br /><a href="http://www.hanselman.com/blog/">Scott Hanselman</a>的jQuery的<a href="http://www.hanselman.com/blog/jQueryToShipWithASPNETMVCAndVisualStudio.aspx">演示</a></p>              
 
                     </div>
                 </section>
@@ -445,13 +585,13 @@ SmtpMail.Send( mail );</pre>
 <div class="pagination">
   <nav role="pagination" class="post-list-pagination">
       
-      <a href="/tags/asp/index.net/" class="post-list-pagination-item pure-button post-list-pagination-item-prev">
+      <a href="/tags/asp.net/" class="post-list-pagination-item pure-button post-list-pagination-item-prev">
         <i class="fa fa-angle-double-left"></i>&nbsp;Newer
       </a>
       
-    <span class="post-list-pagination-item post-list-pagination-item-current">Page 2 of 18</span>
+    <span class="post-list-pagination-item post-list-pagination-item-current">Page 2 of 19</span>
     
-      <a href="/tags/asp/index.net/page/3/" class="post-list-pagination-item pure-button post-list-pagination-item-next">
+      <a href="/tags/asp.net/page/3/" class="post-list-pagination-item pure-button post-list-pagination-item-next">
         Older&nbsp;<i class="fa fa-angle-double-right"></i>
       </a>
     
@@ -462,11 +602,11 @@ SmtpMail.Send( mail );</pre>
             <div class="footer">
     <div class="pure-menu pure-menu-horizontal pure-menu-open">
         <ul>
-            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a> &nbsp;&nbsp; theme by <a target="_blank" href="https://github.com/dplesca/purehugo">purehugo</a></a></li>
+            <li>Powered by <a class="hugo" href="https://gohugo.io/" target="_blank">hugo</a></li>
         </ul>
     </div>
 </div>
-<script src="/js/all.min.js"></script>
+<script src='https://huobazi.aspxboy.com/js/all.min.js'></script>
 
         </div>
     </div>

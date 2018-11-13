@@ -1,32 +1,12 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asp.Net &middot; 武眉博</title>
 
-    <meta name="description" content="Marble&#39;s blog">
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
 
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="huobazi" />
-    <meta name="twitter:title" content="Asp.Net &middot; 武眉博">
-    <meta name="twitter:description" content="Marble&#39;s blog">
+    <link rel="stylesheet" href='https://huobazi.aspxboy.com/css/all.min.css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="Asp.Net &middot; 武眉博">
-    <meta property="og:description" content="Marble&#39;s blog">
-
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    
-    <link href='http://fonts.useso.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
-    
-    
-        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
-    
-
-    <link rel="stylesheet" href="/css/all.min.css">
-    <link href="http://apps.bdimg.com/libs/fontawesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="alternate" type="application/rss+xml" title="武眉博" href='https://huobazi.aspxboy.com/index.xml' />
 </head>
 <body>
 
@@ -35,7 +15,7 @@
     <div class="sidebar pure-u-1 pure-u-md-1-4">
     <div class="header">
         <hgroup>
-            <h1 class="brand-title"><a href="http://huobazi.aspxboy.com/">武眉博</a></h1>
+            <h1 class="brand-title"><a href="https://huobazi.aspxboy.com">武眉博</a></h1>
             <h2 class="brand-tagline"> Marble&#39;s blog </h2>
         </hgroup>
 
@@ -43,35 +23,160 @@
             <ul class="nav-list">
                 
                 <li class="nav-item">
-                    <a class="pure-button" href="http://twitter.com/huobazi"><i class="fa fa-twitter"></i> Twitter</a>
+                    <a class="pure-button" href="https://twitter.com/huobazi">
+                        <i class="fa fa-twitter"></i> Twitter
+                    </a>
                 </li>
                 
                 
                 <li class="nav-item">
-                    <a class="pure-button" href="http://github.com/huobazi "><i class="fa fa-github-alt"></i> github</a>
+                    <a class="pure-button" href="https://github.com/huobazi">
+                        <i class="fa fa-github-alt"></i> Github
+                    </a>
                 </li>
                 
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://www.linkedin.com/in/huobazi">
+                        <i class="fa fa-linkedin"></i> LinkedIn
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="pure-button" href='https://huobazi.aspxboy.com/index.xml'>
+                        <i class="fa fa-rss"></i> rss
+                    </a>
+                </li>
             </ul>
         </nav>
     </div>
 </div>
+
 
     <div class="content pure-u-1 pure-u-md-3-4">
         <div>
             
             <div class="posts">
                 
-                <h1 class="content-subhead">04 Oct 2005</h1>
+                <h1 class="content-subhead">10 Oct 2005</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://huobazi.aspxboy.com/blog/2005/10/04/cb-248673/" class="post-title">C Community Server 群发Email MassEmailingAdmin.aspx页面内插入表情和代码时，404错误</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2005/10/10/cb-251251/" class="post-title">哭使用Data Access 2 插入Ntext类型数据时SqlParameter不指定类型的问题 ， ，请为我解惑</a>
 
                         <p class="post-meta">
                             
                             
-                                
-                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a><a class="post-category post-category-Community Server" href="http://huobazi.aspxboy.com//tags/community-server">Community Server</a>
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>实在郁闷 <img height="19" src="/images/hbz_images/0a603e93-b2ed-47bf-86c0-ebbf83a0f832.png3" width="19" border="0">，请大家为我解惑。<br />同发csdn：<a href="http://community.csdn.net/Expert/topic/4315/4315539.xml?temp=.3931848">http://community.csdn.net/Expert/topic/4315/4315539.xml?temp=.3931848</a><br /><br />原来的代码 <br /></p>
+<p></p>
+<div class="codeDiv"> SqlHelper.ExecuteNonQuery(connectionString, CommandType.StoredProcedure, <br />  FullyQualifiedSprocName("P_InsertNtextData"), <br />  new SqlParameter("@Id", f.Id),<br />  new SqlParameter("@NtextData",f.Data));<br />
+</div>
+<p>如果 f.Data过长，就莫名其妙的异常， <br /></p>
+<p></p>
+<div class="codeDiv">
+<p>---------------------------</p>
+<br /><p>---------------------------<br />当前命令发生了严重错误。应放弃任何可能产生的结果。<br />---------------------------<br />确定   <br />---------------------------</p>
+<br /><p>---------------------------</p>
+<br /><p>---------------------------<br />常规网络错误。请检查您的网络文档。<br />---------------------------<br />确定   <br />---------------------------<br /></p>
+</div>
+<p>Google baidu 都翻了个底朝天，也没个能安慰我的信息。<br />试验了一下午，最后试出来写个测试字符串"aaaa"就能插入<br />尝试了如下代码 <br /></p>
+<p></p>
+<div class="codeDiv"> SqlParameter ntext = new SqlParameter("@NtextData",SqlDbType.NText);<br /> ntext.Value = f.Data;<br /> SqlHelper.ExecuteNonQuery(connectionString, CommandType.StoredProcedure, <br />  FullyQualifiedSprocName("P_InsertNtextData"), <br />  new SqlParameter("@Id", f.Id),<br />  ntext);<br />
+</div>
+<p></p>
+<p>成功，怎么也想不通这换汤不换药的方法为何能够成功，<br />翻msdn，<br />打自己一巴掌<img height="19" src="/images/hbz_images/0a603e93-b2ed-47bf-86c0-ebbf83a0f832.png4" width="19" border="0"><img height="20" src="/images/hbz_images/0a603e93-b2ed-47bf-86c0-ebbf83a0f832.png5" width="25" border="0"><br /></p>
+<p></p>
+<div class="codeDiv">获取或设置参数的 SqlDbType。 <br /><p></p>
+<br /><p>[Visual Basic]<br />Public Property SqlDbType As SqlDbType</p>
+<br /><p>[C#]<br />public SqlDbType SqlDbType {get; set;}</p>
+<br /><p><br />属性值<br />SqlDbType 值之一。默认值为 <font color="#0000ff">NVarChar</font>。 </p>
+</div>
+<p></p>
+<p>然而我又看到另外一个构造器的重载这样说明<br /></p>
+<p></p>
+<div class="codeDiv">[Visual Basic]<br />Public Sub New( _<br />   ByVal parameterName As String, _<br />   ByVal value As Object _<br />) <br /><p></p>
+<br /><p>[C#]<br />public SqlParameter(<br />   string parameterName,<br />   object value<br />);</p>
+<br /><p><br />参数<br />parameterName <br />要映射的参数的名称。 <br />value <br />一个 Object，它是 SqlParameter 的值。 <br />备注<br /><font color="#0000ff">当在 value 参数中指定 Object 时，SqlDbType 将从 Object 的 .NET Framework 类型推断出。</font></p>
+</div>
+<p></p>
+<p>这又如何解释？？</p>             
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">07 Oct 2005</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2005/10/07/cb-249806/" class="post-title">Communtiy Server论坛的帖子显示页面分页部分的Url Rewrite的构造方法</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>你可能会发现在Communtiy Server的论坛帖子列表页面</p>
+<p>比如<a href="http://communityserver.org/forums/129/ShowForum.aspx">http://communityserver.org/forums/129/ShowForum.aspx</a></p>
+<p>看下面分页处的连接使用的地址是类似ShowForum.aspx?PageIndex=2这样的地址<br />没有做到SearchFriendly,我们稍微改造一下代码就可以实现类似帖子显示页面内那样的地址<br />先在siteUrl.config内增加</p>
+<p> </p>
+<div style="padding-right: 5px; padding-left: 4px; font-size: 13px; padding-bottom: 4px; width: 98%; word-break: break-all; padding-top: 4px; background-color: #eeeeee; border: #cccccc 1px solid;">
+<span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">url </span><span style="COLOR: #ff0000">name</span><span style="COLOR: #0000ff">="forum_Paged"</span><span style="COLOR: #ff0000"> location </span><span style="COLOR: #0000ff">= "forums"</span><span style="COLOR: #ff0000"> path </span><span style="COLOR: #0000ff">= "{0}/{1}/ShowForum.aspx"</span><span style="COLOR: #ff0000"> pattern </span><span style="COLOR: #0000ff">= "(\d+)/(\d+)/ShowForum.aspx"</span><span style="COLOR: #ff0000"> vanity</span><span style="COLOR: #0000ff">="ShowForum.aspx?PageIndex=$1^ForumID=$2"</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span>
+</div>
+<p>然后siteUrl.cs内增加<br /> </p>
+<div class="codeDiv">public virtual string FormPagedFormat (int forumID)<br />{<br /> return urlData.FormatUrl("forum_Paged", "{0}", forumID.ToString(), forumID.ToString());<br />}</div>
+<p>接着ThreadView.cs内paer数据绑定处增加</p>
+<div class="codeDiv">pager.UrlPattern = SiteUrls.Instance().FormPagedFormat(csContext.ForumID);<br /> </div>
+<p>重新编译，OK，看看效果吧～～</p>
+<p><a href="http://www.3pub.com/bbs/3/default.aspx">http://www.3pub.com/bbs/3/default.aspx</a></p>              
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">07 Oct 2005</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2005/10/07/cb-249806/" class="post-title">Communtiy Server论坛的帖子显示页面分页部分的Url Rewrite的构造方法</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>你可能会发现在Communtiy Server的论坛帖子列表页面</p>
+<p>比如<a href="http://communityserver.org/forums/129/ShowForum.aspx">http://communityserver.org/forums/129/ShowForum.aspx</a></p>
+<p>看下面分页处的连接使用的地址是类似ShowForum.aspx?PageIndex=2这样的地址<br />没有做到SearchFriendly,我们稍微改造一下代码就可以实现类似帖子显示页面内那样的地址<br />先在siteUrl.config内增加</p>
+<p> </p>
+<div style="padding-right: 5px; padding-left: 4px; font-size: 13px; padding-bottom: 4px; width: 98%; word-break: break-all; padding-top: 4px; background-color: #eeeeee; border: #cccccc 1px solid;">
+<span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">url </span><span style="COLOR: #ff0000">name</span><span style="COLOR: #0000ff">="forum_Paged"</span><span style="COLOR: #ff0000"> location </span><span style="COLOR: #0000ff">= "forums"</span><span style="COLOR: #ff0000"> path </span><span style="COLOR: #0000ff">= "{0}/{1}/ShowForum.aspx"</span><span style="COLOR: #ff0000"> pattern </span><span style="COLOR: #0000ff">= "(\d+)/(\d+)/ShowForum.aspx"</span><span style="COLOR: #ff0000"> vanity</span><span style="COLOR: #0000ff">="ShowForum.aspx?PageIndex=$1^ForumID=$2"</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000"><br /></span>
+</div>
+<p>然后siteUrl.cs内增加<br /> </p>
+<div class="codeDiv">public virtual string FormPagedFormat (int forumID)<br />{<br /> return urlData.FormatUrl("forum_Paged", "{0}", forumID.ToString(), forumID.ToString());<br />}</div>
+<p>接着ThreadView.cs内paer数据绑定处增加</p>
+<div class="codeDiv">pager.UrlPattern = SiteUrls.Instance().FormPagedFormat(csContext.ForumID);<br /> </div>
+<p>重新编译，OK，看看效果吧～～</p>
+<p><a href="http://www.3pub.com/bbs/3/default.aspx">http://www.3pub.com/bbs/3/default.aspx</a></p>              
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">04 Oct 2005</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2005/10/04/cb-248673/" class="post-title">C Community Server 群发Email MassEmailingAdmin.aspx页面内插入表情和代码时，404错误</a>
+
+                        <p class="post-meta">
+                            
                             
                         </p>
                     </header>
@@ -99,13 +204,41 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://huobazi.aspxboy.com/blog/2005/10/04/cb-248674/" class="post-title">使ExpanderPanel的文本带上连接</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2005/10/04/cb-248673/" class="post-title">C Community Server 群发Email MassEmailingAdmin.aspx页面内插入表情和代码时，404错误</a>
 
                         <p class="post-meta">
                             
                             
-                                
-                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a>
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>Email群发的时候：MassEmailingAdmin.aspx页面内插入表情和代码时，404错误 <br /></p>
+<p>发现是Js文件内路径的问题<br />FTB-FreeTextBox.js内<br /></p>
+<div class="codeDiv">
+<br /> this.iPopup.document.location.href = "../emoticons.aspx"; <br /><p></p>
+<br /><p>改成</p>
+<br /><p> this.iPopup.document.location.href = "/emoticons.aspx";<br /><br /></p>
+</div>
+<div class="codeDiv">
+<br />FTB-Pro.js内 <br /><p></p>
+<br /><p> var codeWin = window.open("../insertcode.aspx","codeWin","width=530,height=420,status=0,toolbars=0");</p>
+<br /><p>改成</p>
+<br /><p> var codeWin = window.open("/insertcode.aspx","codeWin","width=530,height=420,status=0,toolbars=0");<br /></p>
+</div>
+<p></p>             
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">04 Oct 2005</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2005/10/04/cb-248674/" class="post-title">使ExpanderPanel的文本带上连接</a>
+
+                        <p class="post-meta">
+                            
                             
                         </p>
                     </header>
@@ -122,13 +255,10 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://huobazi.aspxboy.com/blog/2005/10/02/cb-248084/" class="post-title">Community Server的新功能－－快速回复</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2005/10/02/cb-248084/" class="post-title">Community Server的新功能－－快速回复</a>
 
                         <p class="post-meta">
                             
-                            
-                                
-                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a><a class="post-category post-category-Community Server" href="http://huobazi.aspxboy.com//tags/community-server">Community Server</a>
                             
                         </p>
                     </header>
@@ -143,13 +273,10 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://huobazi.aspxboy.com/blog/2005/10/02/cb-248084/" class="post-title">Community Server的新功能－－快速回复</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2005/10/02/cb-248084/" class="post-title">Community Server的新功能－－快速回复</a>
 
                         <p class="post-meta">
                             
-                            
-                                
-                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a><a class="post-category post-category-Community Server" href="http://huobazi.aspxboy.com//tags/community-server">Community Server</a>
                             
                         </p>
                     </header>
@@ -164,13 +291,10 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://huobazi.aspxboy.com/blog/2005/09/24/cb-243385/" class="post-title">使用Url Rewrite 如果原始Url就带QueryString时候的一个问题</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2005/09/24/cb-243385/" class="post-title">使用Url Rewrite 如果原始Url就带QueryString时候的一个问题</a>
 
                         <p class="post-meta">
                             
-                            
-                                
-                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a>
                             
                         </p>
                     </header>
@@ -206,13 +330,10 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://huobazi.aspxboy.com/blog/2005/09/24/cb-243385/" class="post-title">使用Url Rewrite 如果原始Url就带QueryString时候的一个问题</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2005/09/24/cb-243385/" class="post-title">使用Url Rewrite 如果原始Url就带QueryString时候的一个问题</a>
 
                         <p class="post-meta">
                             
-                            
-                                
-                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a>
                             
                         </p>
                     </header>
@@ -244,147 +365,18 @@
                     </div>
                 </section>
                 
-                <h1 class="content-subhead">21 Sep 2005</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://huobazi.aspxboy.com/blog/2005/09/21/cb-241048/" class="post-title">文本块内的文本的空格、制表符和换行处理</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                
-                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a>
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p><p>最近在做我的<a href="http://www.aspxboy.com/">AspxBoy.Com</a>时遇到一个郁闷的问题<br /></p>
-<div><font style="BACKGROUND-COLOR: #ffffff" color="#808080">在使用ftb２.0做编辑器的时候</font></div>
-<div>
-<p><font style="BACKGROUND-COLOR: #ffffff" color="#808080">在内容筐内粘贴进</font></p>
-<pre>&hellip;.</pre>
-<p></p>
-</div>
-<div><font style="BACKGROUND-COLOR: #ffffff" color="#808080">的代码</font></div>
-<div>
-<p><font style="BACKGROUND-COLOR: #ffffff" color="#808080">当提交后显示页面(如<a href="http://www.aspxboy.com/433/archive.aspx">http://www.aspxboy.com/433/archive.aspx</a>)内</font></p>
-<pre>内的制表符都变没了<br />求助与csdn:<br /><br /></pre>
-</div>
-<p><a title="http://community.csdn.net/Expert/topic/4282/4282303.xml?temp=.5363428" href="http://community.csdn.net/Expert/topic/4282/4282303.xml?temp=.5363428"><a href="http://community.csdn.net/Expert/topic/4282/4282303.xml?temp=.5363428">http://community.csdn.net/Expert/topic/4282/4282303.xml?temp=.5363428</a></a><br /><br />经网友指点采用新的ftb版本,发现提交到数据库内<font color="#000000">制表符没有被替换,<br />但是显示的时候还是全部被替换了<br />找啊找啊,一夜没睡,终于在</font><font color="#000000">苏昱的样式表中文手册内找到了答案<br />原来在写</font></p>
-<pre>样式的时候<br />写上了<br />white-space:normal;<br />却没有用 去替换制表符,<br />我改用如下样式则显示正确了<br /><strong><font color="#ff0000">white-space:pre;</font></strong><br /><br />而正确的使用方法是<br /><div class="cssColumnTitle"><font style="BACKGROUND-COLOR: #d3d3d3">语法：</font></div>
-<div><font style="BACKGROUND-COLOR: #d3d3d3"><b>white-space : </b><span class="cssDefault"><b>normal</b></span> | <b>pre</b> | <b>nowrap</b> </font></div>
-<div class="cssColumnTitle"><font style="BACKGROUND-COLOR: #d3d3d3">取值：</font></div>
-</pre>
-<table><tbody>
-<tr>
-<td nowrap><b><font style="BACKGROUND-COLOR: #d3d3d3">normal </font></b></td>
-<td nowrap><b><font style="BACKGROUND-COLOR: #d3d3d3">:</font></b></td>
-<td><font style="BACKGROUND-COLOR: #d3d3d3"><b>默认值</b>。默认处理方式。文本自动处理换行。假如抵达容器边界内容会转到下一行</font></td>
-</tr>
-<tr>
-<td nowrap><b><font style="BACKGROUND-COLOR: #d3d3d3">pre </font></b></td>
-<td nowrap><b><font style="BACKGROUND-COLOR: #d3d3d3">:</font></b></td>
-<td><font style="BACKGROUND-COLOR: #d3d3d3">换行和其他空白字符都将受到保护。这个值需要IE6+或者<b> !DOCTYPE </b>声明为<b> <br /><br />standards-compliant mode <br /></b>支持。如果<b> !DOCTYPE </b>声明没有指定<br />为<b> standards-compliant mode </b>，此属性可以使用，但是不会发生作用。结果等同于<b> normal </b>。参阅<b> pre </b>对象</font></td>
-</tr>
-<tr>
-<td nowrap><b><font style="BACKGROUND-COLOR: #d3d3d3">nowrap </font></b></td>
-<td nowrap><b><font style="BACKGROUND-COLOR: #d3d3d3">:</font></b></td>
-<td><font style="BACKGROUND-COLOR: #d3d3d3">强制在同一行内显示所有文本，直到文本结束或者遭遇<b> br </b>对象。参阅<b> noWrap </b>属性</font></td>
-</tr>
-</tbody></table>
-<div class="cssColumnTitle"><font style="BACKGROUND-COLOR: #d3d3d3">说明：</font></div>
-<div><font style="BACKGROUND-COLOR: #d3d3d3">设置或检索对象内空格字符的处理方式。<br />空格字符，像换行，空格，TAB，在HTML文档中默认的是被忽略的。<font color="#0000ff">当此属性设置为<b> normal <br /></b>或者<b> nowrap </b>时，你可以使用不换行空格的命名实体<b>   </b>来添加空格，用<b> br </b>元素来添加换行。<br /></font>此属性对你使用文档对象模型(DOM)操作的内容的影响与其对IE显示内容的影响一样。<br />此属性作用于块对象。<br />此属性对于<b> currentStyle </b>对象而言是只读的。对于其他对象而言是可读写的。<br />对应的脚本特性为<b> whiteSpace </b>。</font></div></p>
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">12 May 2005</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://huobazi.aspxboy.com/blog/2005/05/12/cb-154060/" class="post-title">从VB的语法理解 抽象方法</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                
-                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a>
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p> </p>
-<br /><p>C#中 abstract void MethodName(....<br /> <br />VB中 MustOverride Sub MethodName(....</p>
-<br /><p>“<font style="BACKGROUND-COLOR: #d3d3d3" color="#ff1493"><strong><font color="#ff0000">Must</font></strong><font color="#0000ff">Override</font></font>”多容易理解啊<img height="19" src="/images/hbz_images/0a603e93-b2ed-47bf-86c0-ebbf83a0f832.png7" width="19" border="0"><br /></p>             
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">12 May 2005</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://huobazi.aspxboy.com/blog/2005/05/12/cb-154060/" class="post-title">从VB的语法理解 抽象方法</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                
-                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a>
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p> </p>
-<br /><p>C#中 abstract void MethodName(....<br /> <br />VB中 MustOverride Sub MethodName(....</p>
-<br /><p>“<font style="BACKGROUND-COLOR: #d3d3d3" color="#ff1493"><strong><font color="#ff0000">Must</font></strong><font color="#0000ff">Override</font></font>”多容易理解啊<img height="19" src="/images/hbz_images/0a603e93-b2ed-47bf-86c0-ebbf83a0f832.png7" width="19" border="0"><br /></p>             
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">14 Apr 2005</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://huobazi.aspxboy.com/blog/2005/04/14/cb-137712/" class="post-title">今天头又晕了</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                
-                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-.Net其他" href="http://huobazi.aspxboy.com//tags/.net%E5%85%B6%E4%BB%96">.Net其他</a>
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p><p>写了如下代码，还跟踪了半个多小时，没找出来问题<img style="border: 0px;" src="/images/hbz_images/036aa5c2-64f8-4fe7-8ccc-983e17d8c364.gif" border="0" alt=""></p>
-<div style="padding-right: 5.4pt; padding-left: 5.4pt; background: #e6e6e6; padding-bottom: 4px; width: 98%; word-break: break-all; padding-top: 4px; border: windowtext 0.5pt solid;">
-<div>
-<span style="COLOR: #0000ff">if</span><span style="COLOR: #000000">(strCarId.StartsWith(</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000"><strong></span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">))<br />                                    </span><span id="Codehighlighter1_39_89_Closed_Text" style="BORDER-RIGHT: #808080 1px solid; BORDER-TOP: #808080 1px solid; DISPLAY: none; BORDER-LEFT: #808080 1px solid; BORDER-BOTTOM: #808080 1px solid; BACKGROUND-COLOR: #ffffff"> </span><span id="Codehighlighter1_39_89_Open_Text"><span style="COLOR: #000000">{<br />                                         strCarId.Replace(</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000"></strong></span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">,</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">U</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">);<br />                                    }</span></span><span style="COLOR: #000000"><br />                                    </span><span style="COLOR: #0000ff">else</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">if</span><span style="COLOR: #000000">(strCarId.StartsWith(</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000"><em></span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">))<br />                                    </span><span id="Codehighlighter1_143_192_Open_Text"><span style="COLOR: #000000">{<br />                                         strCarId.Replace(</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000"></em></span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">,</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">T</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">);<br />                                    }</span></span>
-</div>
-<p></p>
-</div></p>
-
-                    </div>
-                </section>
-                
             </div>
             
 <div class="pagination">
   <nav role="pagination" class="post-list-pagination">
       
-      <a href="/tags/asp/index.net/page/10/" class="post-list-pagination-item pure-button post-list-pagination-item-prev">
+      <a href="/tags/asp.net/page/10/" class="post-list-pagination-item pure-button post-list-pagination-item-prev">
         <i class="fa fa-angle-double-left"></i>&nbsp;Newer
       </a>
       
-    <span class="post-list-pagination-item post-list-pagination-item-current">Page 11 of 18</span>
+    <span class="post-list-pagination-item post-list-pagination-item-current">Page 11 of 19</span>
     
-      <a href="/tags/asp/index.net/page/12/" class="post-list-pagination-item pure-button post-list-pagination-item-next">
+      <a href="/tags/asp.net/page/12/" class="post-list-pagination-item pure-button post-list-pagination-item-next">
         Older&nbsp;<i class="fa fa-angle-double-right"></i>
       </a>
     
@@ -395,11 +387,11 @@
             <div class="footer">
     <div class="pure-menu pure-menu-horizontal pure-menu-open">
         <ul>
-            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a> &nbsp;&nbsp; theme by <a target="_blank" href="https://github.com/dplesca/purehugo">purehugo</a></a></li>
+            <li>Powered by <a class="hugo" href="https://gohugo.io/" target="_blank">hugo</a></li>
         </ul>
     </div>
 </div>
-<script src="/js/all.min.js"></script>
+<script src='https://huobazi.aspxboy.com/js/all.min.js'></script>
 
         </div>
     </div>

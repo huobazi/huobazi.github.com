@@ -2,30 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ie8 on 武眉博</title>
-    <link>http://huobazi.aspxboy.com/tags/ie8/</link>
+    <link>https://huobazi.aspxboy.com/tags/ie8/</link>
     <description>Recent content in Ie8 on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 06 Mar 2008 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://huobazi.aspxboy.com/tags/ie8/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://huobazi.aspxboy.com/tags/ie8/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>IE8 BETA1 来了....</title>
-      <link>http://huobazi.aspxboy.com/blog/2008/03/06/ie8beta1iscoming/</link>
+      <link>https://huobazi.aspxboy.com/blog/2008/03/06/ie8beta1iscoming/</link>
       <pubDate>Thu, 06 Mar 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2008/03/06/ie8beta1iscoming/</guid>
-      <description>&lt;p&gt;&lt;p&gt;&lt;strong&gt;太疯狂了，迅雷30秒就下完了14.43M啊&lt;/strong&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;div id=&#34;page_content&#34;&gt;
-&lt;h1&gt;Install Internet Explorer 8&lt;/h1&gt;
-&lt;br /&gt;&lt;p&gt;Internet Explorer 8 can be installed on Microsoft Windows Vista&lt;sup&gt;®&lt;/sup&gt; Service Pack 1 (SP1), Windows Vista, Windows XP&lt;sup&gt;®&lt;/sup&gt; Service Pack 2 (SP2), Windows Server&lt;sup&gt;®&lt;/sup&gt; 2008 and Windows Server&lt;sup&gt;&lt;/sup&gt;2003 Service Pack 2 (SP2). Downloads are available from the following locations:&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;a class=&#34;Subsection&#34; href=&#34;http://go.microsoft.com/fwlink/?LinkId=110325&#34; type=&#34;application/x-msdownload&#34;&gt;Internet Explorer 8 Beta 1 for Windows Vista and Windows Server 2008&lt;/a&gt; &lt;/p&gt;
-&lt;br /&gt;&lt;p&gt;&lt;a class=&#34;Subsection&#34; href=&#34;http://go.microsoft.com/fwlink/?LinkId=110328&#34; type=&#34;application/x-msdownload&#34;&gt;Internet Explorer 8 Beta 1 for Windows Vista x64 Edition and Windows Server 2008 x64 Edition&lt;/a&gt;&lt;/p&gt;
-&lt;br /&gt;&lt;p&gt;&lt;a class=&#34;Subsection&#34; href=&#34;http://go.microsoft.com/fwlink/?LinkId=110324&#34; type=&#34;application/x-msdownload&#34;&gt;Internet Explorer 8 Beta 1 for Window XP SP2&lt;/a&gt;&lt;/p&gt;
-&lt;br /&gt;&lt;p&gt;&lt;a class=&#34;Subsection&#34; href=&#34;http://go.microsoft.com/fwlink/?LinkId=110326&#34; type=&#34;application/x-msdownload&#34;&gt;Internet Explorer 8 Beta 1 for Windows Server 2003 SP2&lt;/a&gt;&lt;/p&gt;
-&lt;br /&gt;&lt;p&gt;&lt;a class=&#34;Subsection&#34; href=&#34;http://go.microsoft.com/fwlink/?LinkId=110327&#34; type=&#34;application/x-msdownload&#34;&gt;Internet Explorer 8 Beta 1 for Windows Server 2003 SP2 x64 Edition and Windows XP SP2 Pro x64 Edition&lt;/a&gt;&lt;/p&gt;
-&lt;br /&gt;&lt;p&gt; &lt;/p&gt;
-&lt;/div&gt;&lt;/p&gt;
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2008/03/06/ie8beta1iscoming/</guid>
+      <description>太疯狂了，迅雷30秒就下完了14.43M啊
+Install Internet Explorer 8 Internet Explorer 8 can be installed on Microsoft Windows Vista® Service Pack 1 (SP1), Windows Vista, Windows XP® Service Pack 2 (SP2), Windows Server® 2008 and Windows Server2003 Service Pack 2 (SP2). Downloads are available from the following locations:
+Internet Explorer 8 Beta 1 for Windows Vista and Windows Server 2008 Internet Explorer 8 Beta 1 for Windows Vista x64 Edition and Windows Server 2008 x64 Edition</description>
     </item>
     
   </channel>

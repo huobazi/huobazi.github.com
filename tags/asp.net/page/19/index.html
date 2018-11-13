@@ -1,0 +1,179 @@
+
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+
+    <link rel="stylesheet" href='https://huobazi.aspxboy.com/css/all.min.css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="alternate" type="application/rss+xml" title="武眉博" href='https://huobazi.aspxboy.com/index.xml' />
+</head>
+<body>
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <h1 class="brand-title"><a href="https://huobazi.aspxboy.com">武眉博</a></h1>
+            <h2 class="brand-tagline"> Marble&#39;s blog </h2>
+        </hgroup>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://twitter.com/huobazi">
+                        <i class="fa fa-twitter"></i> Twitter
+                    </a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://github.com/huobazi">
+                        <i class="fa fa-github-alt"></i> Github
+                    </a>
+                </li>
+                
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://www.linkedin.com/in/huobazi">
+                        <i class="fa fa-linkedin"></i> LinkedIn
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="pure-button" href='https://huobazi.aspxboy.com/index.xml'>
+                        <i class="fa fa-rss"></i> rss
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                
+                <h1 class="content-subhead">04 Feb 2004</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2004/02/04/whoisinaspdotnet/" class="post-title">域名Whois信息查询(ASP.NET&#43;C#)</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>去年写的了,是从<a href="http://http://blog.joycode.com/aspdian/posts/4466.aspx">点缀</a>的博客学来的<br />看演示请点这里:<a href="http://www.aspxboy.com/whois.aspx">http://www.aspxboy.com/whois.aspx</a><br />代码如下:<br /><span style="color: #a52a2a;">&lt;% @Page Language="C#" %&gt;<br />&lt;% @Import Namespace="System.Net.Sockets" %&gt;<br />&lt;% @Import Namespace="System.Text" %&gt;<br />&lt;% @Import Namespace="System.IO" %&gt;<br />&lt;html&gt;<br />&lt;head&gt;<br />&lt;title&gt;.Com/.Net/.Org/.Cn 域名Whois信息查询&lt;/title&gt;<br />&lt;meta name="keywords" content=".Com,.Net,.Org,.Cn 域名Whois信息查询"&gt;<br />&lt;meta name="generator" content=".Com/.Net/.Org,.Cn 域名Whois信息查询"&gt;<br />&lt;meta name="description" content=".Com/.Net/.Org,.Cn 域名Whois信息查询"&gt;<br />&lt;style&gt;<br />&lt;!--<br />body,input{<br />        font-family: Tahoma, Verdana; color: #004080; font-size: 12px        <br />        }<br />a:link,a:visited{<br />        text-decoration: none; color: #004080<br />        }<br />--&gt;<br />&lt;/style&gt;<br />&lt;/head&gt;<br />&lt;body&gt;<br />&lt;form id="fmQuery" runat="server"&gt;<br />&amp;nbsp;要查询的域名域名:<br />www.&lt;asp:TextBox id="txtDomain" width="100" value="ASPXBOY.COM" runat="server" /&gt;<br />&amp;nbsp; &lt;asp:Button id="btnQuery" OnClick="btn_click"<br />text="查询!" runat="server" /&gt;（只能查询.Com/.Net/.Org/.Cn 域名Whois的信息）&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a href ="WhoisCode.htm" title="View the source code here!"&gt;源代码在这里&lt;/a&gt;<br />&lt;BR&gt;&lt;HR width="550" height="1" align="left"&gt;&lt;BR&gt;<br />&lt;asp:label id="lblResult" runat="server" /&gt;<br />&lt;/form&gt;<br />&lt;/body&gt;<br />&lt;/html&gt;<br />&lt;script language="C#" runat="server"&gt;<br />void btn_click(Object sender, EventArgs e)<br />{<br />String strServer;<br />String strDomain = txtDomain.Text;<br />String strServerCom = "whois.networksolutions.com";<br />String strServerCN = "whois.cnnic.net.cn";<br />String strResponse;<br />string[] arrDomain = strDomain.Split('.');<br />if (arrDomain[1].ToUpper()=="CN")<br />{<br />       <br />        strServer=strServerCN;<br />}<br />else<br />{<br />        strServer=strServerCom;<br />}</span></p>
+<p>bool blSuccess = IsWhosisSuccess(strDomain, strServer, out strResponse);<br />if (blSuccess)<br />{<br />lblResult.Text = strResponse;<br />}<br />else<br />{<br />lblResult.Text = "查找失败....";<br />}<br />}<br />bool IsWhosisSuccess(String strDomain, String strServer,<br />                   out String strResponse)<br />{<br />  strResponse = "none";<br />  bool blSuccess = false;<br />  TcpClient tcpc = new TcpClient();<br />  try<br />  {<br />    tcpc.Connect(strServer, 43);<br />  }<br />  catch(SocketException ex)<br />  {<br />    strResponse = "连接不到该 Whois server,请稍后再试。";<br />    return false;<br />  }</p>
+<p>  strDomain += "\r\n";<br />  Byte[] arrDomain = Encoding.UTF8.GetBytes(strDomain.ToCharArray());<br />  try<br />  {<br />        Stream s = tcpc.GetStream();<br />        s.Write(arrDomain, 0, strDomain.Length);<br />       <br />        StreamReader sr = new StreamReader(tcpc.GetStream(), Encoding.UTF8);<br />        StringBuilder strBuilder = new StringBuilder();<br />        string strLine = null;</p>
+<p>        while (null != (strLine = sr.ReadLine()))<br />        {<br />                strBuilder.Append(strLine+"&lt;br&gt;");<br />        }<br />        tcpc.Close();<br />               <br />        blSuccess = true;<br />        string my="Go to Huobazi's WebSite：&lt;a href=\"http://www.aspxboy.com\" title=\".Net男孩社区\"&gt;www.AspxBoy.Com&lt;/a&gt;&lt;br&gt;";<br />        strResponse = strBuilder.ToString()+my;  }<br />  catch(Exception e)<br />  {<br />        strResponse = e.ToString();<br />  }<br />  <br />  return blSuccess;<br />}<br />  &lt;/script&gt;</p>               
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">03 Feb 2004</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2004/02/03/cb-734/" class="post-title">又开始吵架了</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><a href="http://expert.csdn.net/Expert/topic/2697/2697501.xml?temp=.2264826"><br />http://expert.csdn.net/Expert/topic/2697/2697501.xml?temp=.2264826</a></p>
+<p>不过没有<a href="http://expert.csdn.net/Expert/topic/2285/2285944.xml?temp=.9354517">这个帖子</a>吵的凶哦</p>                
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">03 Feb 2004</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2004/02/03/cb-734/" class="post-title">又开始吵架了</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><a href="http://expert.csdn.net/Expert/topic/2697/2697501.xml?temp=.2264826"><br />http://expert.csdn.net/Expert/topic/2697/2697501.xml?temp=.2264826</a></p>
+<p>不过没有<a href="http://expert.csdn.net/Expert/topic/2285/2285944.xml?temp=.9354517">这个帖子</a>吵的凶哦</p>                
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">29 Jan 2004</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2004/01/29/cb-506/" class="post-title">MSN Toolbar 谁用了</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><a id="viewpost.ascx_TitleUrl" href="http://toolbar.msn.com/">MSN Toolbar Beta</a></p>               
+
+                    </div>
+                </section>
+                
+            </div>
+            
+<div class="pagination">
+  <nav role="pagination" class="post-list-pagination">
+      
+      <a href="/tags/asp.net/page/18/" class="post-list-pagination-item pure-button post-list-pagination-item-prev">
+        <i class="fa fa-angle-double-left"></i>&nbsp;Newer
+      </a>
+      
+    <span class="post-list-pagination-item post-list-pagination-item-current">Page 19 of 19</span>
+    
+  </nav>
+</div>
+
+
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="https://gohugo.io/" target="_blank">hugo</a></li>
+        </ul>
+    </div>
+</div>
+<script src='https://huobazi.aspxboy.com/js/all.min.js'></script>
+
+        </div>
+    </div>
+</div>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-56321-3', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

@@ -2,185 +2,172 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>奇技淫巧 on 武眉博</title>
-    <link>http://huobazi.aspxboy.com/tags/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/</link>
+    <link>https://huobazi.aspxboy.com/tags/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/</link>
     <description>Recent content in 奇技淫巧 on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 04 Feb 2012 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://huobazi.aspxboy.com/tags/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://huobazi.aspxboy.com/tags/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Ubuntu下设置 Sublime Text 2 显示中文 &amp;&amp; 输入中文</title>
-      <link>http://huobazi.aspxboy.com/blog/2012/02/04/ubuntu-sublime-text-chinese/</link>
+      <link>https://huobazi.aspxboy.com/blog/2012/02/04/ubuntu-sublime-text-chinese/</link>
       <pubDate>Sat, 04 Feb 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2012/02/04/ubuntu-sublime-text-chinese/</guid>
+      <guid>https://huobazi.aspxboy.com/blog/2012/02/04/ubuntu-sublime-text-chinese/</guid>
       <description>&lt;p&gt;Sublime text 2在mac os 下用的很舒服，今天尝试在ubuntu下使用一下，发现汉字显示不了，&lt;/p&gt;
 &lt;p&gt;后来找到方法：&lt;/p&gt;
-&lt;p&gt;菜单栏 -&amp;gt; Preferences -&amp;gt; File Settings - User，在配置文件中增加：&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;// Settings in here override those in &#34;Default/Base File.sublime-settings&#34;, and&lt;br /&gt;// are overridden in turn by file type specific settings. Place your settings&lt;br /&gt;// here, to ensure they&#39;re preserved when upgrading.&lt;br /&gt;{&lt;br /&gt;    &#34;font_face&#34;: &#34;WenQuanYi Micro Hei Mono&#34;&lt;br /&gt;}&lt;br /&gt;就OK了，其中文泉驿是著名的开源字体 &lt;a title=&#34;http://wenq.org/&#34; href=&#34;http://wenq.org/&#34; target=&#34;_blank&#34;&gt;http://wenq.org/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;然后我们来解决中文输入的问题&lt;/p&gt;
-&lt;p&gt;sudo apt-get install scim&lt;/p&gt;
-&lt;p&gt;sudo apt-get install scim-pinyin&lt;/p&gt;
-&lt;p&gt;在“系统－首选项－scim设置里“&lt;/p&gt;
-&lt;p&gt;scim设置－&amp;gt;全局设置－&amp;gt;将预编辑字符串嵌入到客户端中  勾去掉&lt;br /&gt;scim设置-&amp;gt;gtk-&amp;gt;嵌入式候选词标 勾去掉&lt;/p&gt;
-&lt;p&gt;下来 在“系统－语言支持”里面选上“scim-bridge”就可以了,记得这些修改完要注销重新登录进来哦。&lt;/p&gt;
-&lt;p&gt;或者 ,打开终端,输入 pkill scim,然后输入 scim -d，如果不起作用，那还是建议你注销一下&lt;/p&gt;                
-</description>
+&lt;p&gt;菜单栏 -&amp;gt; Preferences -&amp;gt; File Settings - User，在配置文件中增加：&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>AutoGenerateColumns=&#39;true&#39;的GridView如何支持htmlencode/htmldecode</title>
-      <link>http://huobazi.aspxboy.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/</link>
+      <link>https://huobazi.aspxboy.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/</link>
       <pubDate>Wed, 09 Nov 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/</guid>
+      <guid>https://huobazi.aspxboy.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/</guid>
       <description>&lt;p&gt;&lt;p&gt;我们知道BoundField.HtmlEncode 属性可以设置一个单元格是否能够htmlencode，我今天碰到的问题是：自动生成列的GridView，表头可能是包含html的比如&amp;lt;font color=red&amp;gt;邮件&amp;lt;/font&amp;gt;，默认被htmlencode了，而我不希望这样做，所以有了如下的代码:&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt; &lt;/p&gt;
-&lt;div class=&#34;source&#34; style=&#34;font-family: &#39;[object HTMLOptionElement]&#39;, Consolas, &#39;Lucida Console&#39;, &#39;Courier New&#39;; color: #e6e1dc; background-color: #111111; &#34;&gt;
-&lt;span style=&#34;color: #bc9458; font-style: italic; &#34;&gt;/// &amp;lt;summary&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #bc9458; font-style: italic; &#34;&gt;/// Handles the PreRender event of the gvSource control.&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #bc9458; font-style: italic; &#34;&gt;/// &amp;lt;/summary&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #bc9458; font-style: italic; &#34;&gt;/// &amp;lt;param name=&amp;ldquo;sender&amp;rdquo;&amp;gt;The source of the event.&amp;lt;/param&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #bc9458; font-style: italic; &#34;&gt;/// &amp;lt;param name=&amp;ldquo;e&amp;rdquo;&amp;gt;The &amp;lt;see cref=&amp;ldquo;System.EventArgs&amp;rdquo;/&amp;gt; instance containing the event data.&amp;lt;/param&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #cc7833; &#34;&gt;protected&lt;/span&gt; &lt;span style=&#34;color: #cc7833; &#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color: #ffc66d; &#34;&gt;gvSource_PreRender&lt;/span&gt;( &lt;span style=&#34;color: #da4939; &#34;&gt;object&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;sender&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;EventArgs&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;e&lt;/span&gt; )&lt;br /&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #e6e1dc; &#34;&gt;GridView&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;gridView&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;sender&lt;/span&gt; &lt;span style=&#34;color: #cc7833; &#34;&gt;as&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;GridView&lt;/span&gt;;&lt;br /&gt;    &lt;span style=&#34;color: #cc7833; &#34;&gt;if&lt;/span&gt; ( &lt;span style=&#34;color: #e6e1dc; &#34;&gt;gridView&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color: #cc7833; &#34;&gt;null&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;gridView&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;HeaderRow&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color: #cc7833; &#34;&gt;null&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;gridView&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;HeaderRow&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Cells&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color: #cc7833; &#34;&gt;null&lt;/span&gt; )&lt;br /&gt;    &lt;span style=&#34;color: #e6e1dc; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;        &lt;span style=&#34;color: #cc7833; &#34;&gt;for&lt;/span&gt; ( &lt;span style=&#34;color: #da4939; &#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;j&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #a5c261; &#34;&gt;0&lt;/span&gt; ; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;j&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;gridView&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;HeaderRow&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Cells&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Count&lt;/span&gt; ; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;j&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;++&lt;/span&gt; )&lt;br /&gt;        &lt;span style=&#34;color: #e6e1dc; &#34;&gt;{&lt;/span&gt;&lt;br /&gt;            &lt;span style=&#34;color: #e6e1dc; &#34;&gt;gridView&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;HeaderRow&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Cells&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;j&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;].&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Text&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc; &#34;&gt;System&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Web&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;HttpUtility&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;HtmlDecode&lt;/span&gt;( &lt;span style=&#34;color: #e6e1dc; &#34;&gt;gridView&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;HeaderRow&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Cells&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;j&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;].&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;Text&lt;/span&gt; );&lt;br /&gt;        &lt;span style=&#34;color: #e6e1dc; &#34;&gt;}&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #e6e1dc; &#34;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #e6e1dc; &#34;&gt;}&lt;/span&gt;
-&lt;/div&gt;&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>使用window.location跳转，在IE中UrlReffer不被记录</title>
-      <link>http://huobazi.aspxboy.com/blog/2010/01/21/window-location-href-ie-request-reffer/</link>
+      <link>https://huobazi.aspxboy.com/blog/2010/01/21/window-location-href-ie-request-reffer/</link>
       <pubDate>Thu, 21 Jan 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2010/01/21/window-location-href-ie-request-reffer/</guid>
+      <guid>https://huobazi.aspxboy.com/blog/2010/01/21/window-location-href-ie-request-reffer/</guid>
       <description>&lt;p&gt;使用window.location跳转，在FF中，没问题，下一页面可以取得UrlReffer，但在IE中UrlReffer不被记录&lt;/p&gt;
 &lt;p&gt;真变态，&lt;/p&gt;
-&lt;p&gt;让我头痛了半天，弄了个丑陋的办法做了如下实现：&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;div class=&#34;source&#34; style=&#34;COLOR: #f6f3e8; FONT-FAMILY: &#39;[object]&#39;,&#39;Consolas&#39;,&#39;Lucida Console&#39;,&#39;Courier New&#39;; BACKGROUND-COLOR: #242424&#34;&gt;
-&lt;span style=&#34;COLOR: #8ac6f2&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;safeRedirectToCart&lt;/span&gt;(&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;url&lt;/span&gt;) &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;{&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;COLOR: #8ac6f2&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;isIE&lt;/span&gt; &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;jQuery&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;browser&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;msie&lt;/span&gt;;&lt;br /&gt;    &lt;span style=&#34;COLOR: #8ac6f2&#34;&gt;if&lt;/span&gt; (&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;!&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;isIE&lt;/span&gt;) &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;{&lt;/span&gt;&lt;br /&gt;        &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;window&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;location&lt;/span&gt; &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;url&lt;/span&gt;;&lt;br /&gt;        &lt;span style=&#34;COLOR: #8ac6f2&#34;&gt;return&lt;/span&gt;;&lt;br /&gt;    &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;}&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;$&lt;/span&gt;(&lt;span style=&#34;COLOR: #95e454; FONT-STYLE: italic&#34;&gt;&#34;.btnCart&#34;&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;).&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;get&lt;/span&gt;(&lt;span style=&#34;COLOR: #e5786d&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;).&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;click&lt;/span&gt;();&lt;br /&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;}&lt;/span&gt;
-&lt;/div&gt;
-&lt;p&gt;说明：在页面上render一个连接(可以用样式表控制不显示），判断如果是IE浏览器然则调用其click，嘿嘿，就这个。&lt;/p&gt;              
-</description>
+&lt;p&gt;让我头痛了半天，弄了个丑陋的办法做了如下实现：&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>漂亮的VIM配色方案</title>
-      <link>http://huobazi.aspxboy.com/blog/2010/01/11/vim-color-scheme/</link>
+      <link>https://huobazi.aspxboy.com/blog/2010/01/11/vim-color-scheme/</link>
       <pubDate>Mon, 11 Jan 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2010/01/11/vim-color-scheme/</guid>
-      <description>&lt;p&gt;&lt;p&gt;这里&lt;br /&gt;&lt;a href=&#34;http://code.google.com/p/vimcolorschemetest/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://code.google.com/p/vimcolorschemetest/&#34;&gt;http://code.google.com/p/vimcolorschemetest/&lt;/a&gt;&lt;/a&gt;&lt;br /&gt;有一堆一堆的配色方案&lt;/p&gt;
-&lt;h1&gt;&lt;a name=&#34;Browse_By_File_Type&#34;&gt;Browse By File Type&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;&lt;a name=&#34;Browse_By_File_Type&#34;&gt;Featuring 428 schemes: &lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a rel=&#34;nofollow&#34; href=&#34;http://vimcolorschemetest.googlecode.com/svn/html/index-c.html&#34;&gt;C&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a rel=&#34;nofollow&#34; href=&#34;http://vimcolorschemetest.googlecode.com/svn/html/index-html.html&#34;&gt;HTML&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a rel=&#34;nofollow&#34; href=&#34;http://vimcolorschemetest.googlecode.com/svn/html/index-java.html&#34;&gt;Java&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a rel=&#34;nofollow&#34; href=&#34;http://vimcolorschemetest.googlecode.com/svn/html/index-pl.html&#34;&gt;Perl&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a rel=&#34;nofollow&#34; href=&#34;http://vimcolorschemetest.googlecode.com/svn/html/index-tex.html&#34;&gt;LaTeX&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2010/01/11/vim-color-scheme/</guid>
+      <description>这里
+http://code.google.com/p/vimcolorschemetest/
+有一堆一堆的配色方案
+Browse By File Type Featuring 428 schemes: 
+ C HTML Java Perl LaTeX</description>
     </item>
     
     <item>
       <title>把你的netbeans变成英文版</title>
-      <link>http://huobazi.aspxboy.com/blog/2010/01/07/349/</link>
+      <link>https://huobazi.aspxboy.com/blog/2010/01/07/349/</link>
       <pubDate>Thu, 07 Jan 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2010/01/07/349/</guid>
-      <description>&lt;p&gt;呵呵其实很简单，装完后再你使用的快捷方式内增加&lt;/p&gt;
-&lt;p&gt;--locale en:us就可以了，比如我的快捷方式里的设置为：&lt;/p&gt;
-&lt;p&gt;&#34;D:\Program Files\NetBeans 6.8\bin\netbeans.exe&#34; --locale en:us&lt;/p&gt;
-&lt;p&gt;ok 英文了.&lt;/p&gt;
-&lt;p&gt;按照这个方法你可以为自己定制很多套语言版本的netbeans，但只要一份安装。&lt;/p&gt;              
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2010/01/07/349/</guid>
+      <description>呵呵其实很简单，装完后再你使用的快捷方式内增加
+--locale en:us就可以了，比如我的快捷方式里的设置为：
+&#34;D:\Program Files\NetBeans 6.8\bin\netbeans.exe&#34; --locale en:us
+ok 英文了.
+按照这个方法你可以为自己定制很多套语言版本的netbeans，但只要一份安装。</description>
     </item>
     
     <item>
       <title>Mysql adapter on Rails 2.3.3</title>
-      <link>http://huobazi.aspxboy.com/blog/2009/08/29/mysql-adapter-on-rails-2-3-3/</link>
+      <link>https://huobazi.aspxboy.com/blog/2009/08/29/mysql-adapter-on-rails-2-3-3/</link>
       <pubDate>Sat, 29 Aug 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2009/08/29/mysql-adapter-on-rails-2-3-3/</guid>
-      <description>&lt;p&gt;安装好Ruby on Rails 2.3.3后，运行简单的页面提示如下错误“&lt;span style=&#34;color: #ff0000;&#34;&gt;&lt;strong&gt;The bundled mysql.rb driver has been removed from Rails 2.2. Please install the mysql gem and try again: gem install mysql”&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt; gem 了n次也不成，搞了一早上，才google到一个比较山寨的方法解决&lt;/p&gt;
-&lt;pre&gt;1.  download older MySQL client library, for example one from InstantRails: http://instantrails.rubyforge.org/svn/trunk/InstantRails-win/InstantRails/mysql/bin/libmySQL.dll
-
-2.  copy the downloaded file to C:\Ruby\bin (or wherever you installed Ruby) 
-
-3. restart MySQL server&lt;/pre&gt;
-&lt;p&gt;另参考：&lt;a href=&#34;http://www.ruby-forum.com/topic/160358&#34;&gt;http://www.ruby-forum.com/topic/160358&lt;/a&gt;和&lt;a href=&#34;http://rdc.taobao.com/blog/qa/?p=523&#34;&gt;http://rdc.taobao.com/blog/qa/?p=523&lt;/a&gt;&lt;/p&gt;              
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2009/08/29/mysql-adapter-on-rails-2-3-3/</guid>
+      <description>安装好Ruby on Rails 2.3.3后，运行简单的页面提示如下错误“The bundled mysql.rb driver has been removed from Rails 2.2. Please install the mysql gem and try again: gem install mysql”
+ gem 了n次也不成，搞了一早上，才google到一个比较山寨的方法解决
+1. download older MySQL client library, for example one from InstantRails: http://instantrails.rubyforge.org/svn/trunk/InstantRails-win/InstantRails/mysql/bin/libmySQL.dll 2. copy the downloaded file to C:\Ruby\bin (or wherever you installed Ruby) 3. restart MySQL server 另参考：http://www.ruby-forum.com/topic/160358和http://rdc.taobao.com/blog/qa/?p=523</description>
     </item>
     
     <item>
       <title>如何判断一个网站是不是php做的？</title>
-      <link>http://huobazi.aspxboy.com/blog/2009/07/18/php-guid/</link>
+      <link>https://huobazi.aspxboy.com/blog/2009/07/18/php-guid/</link>
       <pubDate>Sat, 18 Jul 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2009/07/18/php-guid/</guid>
-      <description>&lt;p&gt;可以当作&lt;strong&gt;简易&lt;/strong&gt;判断站点是否用PHP架设。&lt;/p&gt;
-&lt;p&gt;PHP_LOGO_GUID&lt;br /&gt;&lt;a href=&#34;http://www.php.net/?=PHPE9568F34-D428-11d2-A769-00AA001ACF42&#34;&gt;http://www.php.net/?=PHPE9568F34-D428-11d2-A769-00AA001ACF42&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;PHP_EGG_LOGO_GUID&lt;br /&gt;&lt;a href=&#34;http://www.php.net/?=PHPE9568F36-D428-11d2-A769-00AA001ACF42&#34;&gt;http://www.php.net/?=PHPE9568F36-D428-11d2-A769-00AA001ACF42&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;ZEND_LOGO_GUID&lt;br /&gt;&lt;a href=&#34;http://www.php.net/?=PHPE9568F35-D428-11d2-A769-00AA001ACF42&#34;&gt;http://www.php.net/?=PHPE9568F35-D428-11d2-A769-00AA001ACF42&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;PHP_CREDITS_GUID&lt;br /&gt;&lt;a href=&#34;http://www.php.net/?=PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000&#34;&gt;http://www.php.net/?=PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;喜欢看愚人节的那个Logo就是第二个链接罗&lt;br /&gt;&lt;a href=&#34;http://www.php.net/&#34;&gt;http://www.php.net/&lt;/a&gt; 这个网址只是范例，只要是任一PHP的站点即可。&lt;/p&gt;
-&lt;p&gt;来源:&lt;a href=&#34;http://www.google.cn/search?client=aff-os-worldbrowser&amp;amp;forid=1&amp;amp;ie=utf-8&amp;amp;oe=UTF-8&amp;amp;hl=zh-CN&amp;amp;q=%E4%B8%80%E4%BA%9B%E5%86%85%E5%AE%9A%E7%9A%84PHP%E7%89%B9%E6%AE%8AGUID&#34; target=&#34;_blank&#34;&gt;http://www.google.cn/search?client=aff-os-worldbrowser&amp;amp;forid=1&amp;amp;ie=utf-8&amp;amp;oe=UTF-8&amp;amp;hl=zh-CN&amp;amp;q=%E4%B8%80%E4%BA%9B%E5%86%85%E5%AE%9A%E7%9A%84PHP%E7%89%B9%E6%AE%8AGUID&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt; &lt;/p&gt;                
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2009/07/18/php-guid/</guid>
+      <description>可以当作简易判断站点是否用PHP架设。
+PHP_LOGO_GUID
+http://www.php.net/?=PHPE9568F34-D428-11d2-A769-00AA001ACF42
+PHP_EGG_LOGO_GUID
+http://www.php.net/?=PHPE9568F36-D428-11d2-A769-00AA001ACF42
+ZEND_LOGO_GUID
+http://www.php.net/?=PHPE9568F35-D428-11d2-A769-00AA001ACF42
+PHP_CREDITS_GUID
+http://www.php.net/?=PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000
+喜欢看愚人节的那个Logo就是第二个链接罗
+http://www.php.net/ 这个网址只是范例，只要是任一PHP的站点即可。
+来源:http://www.google.cn/search?client=aff-os-worldbrowser&amp;amp;forid=1&amp;amp;ie=utf-8&amp;amp;oe=UTF-8&amp;amp;hl=zh-CN&amp;amp;q=%E4%B8%80%E4%BA%9B%E5%86%85%E5%AE%9A%E7%9A%84PHP%E7%89%B9%E6%AE%8AGUID
+ </description>
     </item>
     
     <item>
       <title>博客园到Wordpress搬家成功！</title>
-      <link>http://huobazi.aspxboy.com/blog/2009/06/21/my-blog-moved-to-wp/</link>
+      <link>https://huobazi.aspxboy.com/blog/2009/06/21/my-blog-moved-to-wp/</link>
       <pubDate>Sun, 21 Jun 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2009/06/21/my-blog-moved-to-wp/</guid>
-      <description>&lt;p&gt;终于把在博客园的博客的数据导入到Wordpress内了，包括随笔/文章，图片,标签，评论等，是写了两个C# console程序做到的，程序我传到博客园了，如果有需要的朋友可以试试。但请注意，要自己在博客园后台备份RSS文件放到Reader的Data目录内，设置为编译选项为永远复制，运行后会生成一个Entry.xml并且把博客内的图片和分类、Tag、评论等抓下来，然后将此xml文件拷贝到Writer内，在代码内修改一下你的Wordress的数据库连接，然后跑一下Writer，就可以完成数据导入到Wordpress了，时间匆忙，代码写的很乱，有些地方是针对本人需求处理的，如果你想要直接运行此程序完成你的博客园博客到Wordpress的转换，&lt;strong&gt;那是不可能滴！&lt;/strong&gt;你一定要有简单的C#调试基础哦。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://files.cnblogs.com/huobazi/MyBlogTools.rar&#34;&gt;http://files.cnblogs.com/huobazi/MyBlogTools.rar&lt;/a&gt;&lt;/p&gt;              
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2009/06/21/my-blog-moved-to-wp/</guid>
+      <description>终于把在博客园的博客的数据导入到Wordpress内了，包括随笔/文章，图片,标签，评论等，是写了两个C# console程序做到的，程序我传到博客园了，如果有需要的朋友可以试试。但请注意，要自己在博客园后台备份RSS文件放到Reader的Data目录内，设置为编译选项为永远复制，运行后会生成一个Entry.xml并且把博客内的图片和分类、Tag、评论等抓下来，然后将此xml文件拷贝到Writer内，在代码内修改一下你的Wordress的数据库连接，然后跑一下Writer，就可以完成数据导入到Wordpress了，时间匆忙，代码写的很乱，有些地方是针对本人需求处理的，如果你想要直接运行此程序完成你的博客园博客到Wordpress的转换，那是不可能滴！你一定要有简单的C#调试基础哦。
+http://files.cnblogs.com/huobazi/MyBlogTools.rar</description>
     </item>
     
     <item>
       <title>小技巧，如何把上传文件的浏览按钮换成其他样式 或者图片</title>
-      <link>http://huobazi.aspxboy.com/blog/2004/09/14/cb-43051/</link>
+      <link>https://huobazi.aspxboy.com/blog/2004/09/14/cb-43051/</link>
       <pubDate>Tue, 14 Sep 2004 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2004/09/14/cb-43051/</guid>
-      <description>&lt;p&gt;&lt;p&gt;&lt;span style=&#34;font-size: large; color: #0000ff; background-color: #808080;&#34;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&#34;font-size: large; color: #0000ff; background-color: #808080;&#34;&gt;&lt;strong&gt;本随笔缩写内容有误，对不起，谢谢！&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&#34;font-size: large; color: #0000ff; background-color: #808080;&#34;&gt;&lt;br /&gt;&lt;/span&gt;csdn上有朋友问道&lt;a href=&#34;http://community.csdn.net/Expert/topic/3371/3371728.xml?temp=.5144159&#34;&gt;这个问题&lt;br /&gt;&lt;/a&gt;上google跑了跑，从&lt;a href=&#34;http://www.junlu.com/msg/104998.html&#34;&gt;这里&lt;/a&gt;和csdn的&lt;a href=&#34;http://community.csdn.net/Message_Board/Send.asp?sendto=980337&#34; target=&#34;_blank&#34;&gt;&lt;span style=&#34;color: #3366cc;&#34;&gt;&lt;strong&gt;980337(面包喳喳) &lt;/strong&gt;&lt;/span&gt;&lt;/a&gt;朋友的回复得到提示，做了做测试。&lt;br /&gt;以下代码可以把“浏览”按钮换成图片&lt;br /&gt;当然 也可以不用&amp;lt;img&amp;gt;而改input或者button加上样式表（css）或者htc也应该可以吧。&lt;/p&gt;
-&lt;div style=&#34;padding-right: 5.4pt; padding-left: 5.4pt; background: #e6e6e6; padding-bottom: 4px; width: 98%; padding-top: 4px; border: windowtext 0.5pt solid;&#34;&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;div&gt;
-&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;lt;!&lt;/span&gt;&lt;span style=&#34;COLOR: #ff00ff&#34;&gt;DOCTYPE html PUBLIC &amp;rdquo;-//W3C//DTD XHTML 1.0 Transitional//EN&amp;rdquo; &amp;rdquo;&lt;a href=&#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&amp;quot;&#34;&gt;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&amp;quot;&lt;/a&gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #000000&#34;&gt;&lt;br /&gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;COLOR: #800000&#34;&gt;html &lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt;xmlns&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;=&amp;ldquo;&lt;a href=&#34;http://www.w3.org/1999/xhtml&amp;quot;&#34;&gt;http://www.w3.org/1999/xhtml&amp;quot;&lt;/a&gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt; xml:lang&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;=&amp;ldquo;gb2312&amp;rdquo;&lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt; lang&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;=&amp;ldquo;gb2312&amp;rdquo;&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #000000&#34;&gt;&lt;br /&gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;COLOR: #800000&#34;&gt;head&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #000000&#34;&gt;&lt;br /&gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;COLOR: #800000&#34;&gt;title&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #000000&#34;&gt; 上传的时候&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;COLOR: #800000&#34;&gt;input &lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt;type&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;=&amp;ldquo;file&amp;rdquo;&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #000000&#34;&gt;中用图片代替浏览按钮 &lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span style=&#34;COLOR: #800000&#34;&gt;title&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #000000&#34;&gt;&lt;br /&gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;COLOR: #800000&#34;&gt;meta &lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt;http-equiv&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;=&amp;ldquo;Content-Type&amp;rdquo;&lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt; content&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;=&amp;ldquo;text/html; charset=gb2312&amp;rdquo;&lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt; &lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;/&amp;gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #000000&#34;&gt;&lt;br /&gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;COLOR: #800000&#34;&gt;meta &lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;=&amp;ldquo;title&amp;rdquo;&lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt; content&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;=&amp;ldquo;&amp;rdquo;&lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt; &lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;/&amp;gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #000000&#34;&gt;&lt;br /&gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;COLOR: #800000&#34;&gt;meta &lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;=&amp;ldquo;author&amp;rdquo;&lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt; content&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;=&amp;ldquo;活靶子，huobazi&amp;rdquo;&lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt; &lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;/&amp;gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #000000&#34;&gt;&lt;br /&gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;COLOR: #800000&#34;&gt;meta &lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;=&amp;ldquo;subject&amp;rdquo;&lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt; content&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;=&amp;ldquo;&amp;rdquo;&lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt; &lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;/&amp;gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #000000&#34;&gt;&lt;br /&gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;COLOR: #800000&#34;&gt;meta &lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;=&amp;ldquo;language&amp;rdquo;&lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt; content&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;=&amp;ldquo;gb2312&amp;rdquo;&lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt; &lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;/&amp;gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #000000&#34;&gt;&lt;br /&gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;COLOR: #800000&#34;&gt;meta &lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;=&amp;ldquo;keywords&amp;rdquo;&lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt; content&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;=&amp;ldquo;&amp;rdquo;&lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt; &lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;/&amp;gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #000000&#34;&gt;&lt;br /&gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;COLOR: #800000&#34;&gt;meta &lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;=&amp;ldquo;Copyright&amp;rdquo;&lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt; content&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;=&amp;ldquo;&amp;rdquo;&lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt; &lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;/&amp;gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #000000&#34;&gt;&lt;br /&gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;COLOR: #800000&#34;&gt;meta &lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;=&amp;ldquo;robots&amp;rdquo;&lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt; content&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;=&amp;ldquo;all&amp;rdquo;&lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt; &lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;/&amp;gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #000000&#34;&gt;&lt;br /&gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;COLOR: #800000&#34;&gt;script &lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt;language&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;=&amp;ldquo;javascript&amp;rdquo;&lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt; type&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;=&amp;ldquo;text/javascript&amp;rdquo;&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span id=&#34;Codehighlighter1_646_787_Open_Text&#34;&gt;&lt;span style=&#34;COLOR: #000000; BACKGROUND-COLOR: #f5f5f5&#34;&gt;&lt;br /&gt;    &lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff; BACKGROUND-COLOR: #f5f5f5&#34;&gt;function&lt;/span&gt;&lt;span style=&#34;COLOR: #000000; BACKGROUND-COLOR: #f5f5f5&#34;&gt; fn_browse()&lt;br /&gt;    &lt;/span&gt;&lt;span id=&#34;Codehighlighter1_670_786_Open_Text&#34;&gt;&lt;span style=&#34;COLOR: #000000; BACKGROUND-COLOR: #f5f5f5&#34;&gt;{&lt;br /&gt;        document.test_form.browse.click();&lt;br /&gt;        document.test_form.file.value &lt;/span&gt;&lt;span style=&#34;COLOR: #000000; BACKGROUND-COLOR: #f5f5f5&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;COLOR: #000000; BACKGROUND-COLOR: #f5f5f5&#34;&gt; document.all.test_form.browse.value;        &lt;br /&gt;        &lt;br /&gt;    }&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #000000; BACKGROUND-COLOR: #f5f5f5&#34;&gt;&lt;br /&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span style=&#34;COLOR: #800000&#34;&gt;script&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #000000&#34;&gt;&lt;br /&gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span style=&#34;COLOR: #800000&#34;&gt;head&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #000000&#34;&gt;&lt;br /&gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;COLOR: #800000&#34;&gt;body&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #000000&#34;&gt;&lt;p&gt;&lt;/p&gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;COLOR: #800000&#34;&gt;form &lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;=&amp;ldquo;test_form&amp;rdquo;&lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt; method&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;=&amp;ldquo;post&amp;rdquo;&lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt; ENCTYPE&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;=&amp;ldquo;multipart/form-data&amp;rdquo;&lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt; onsubmit&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;=&amp;ldquo;alert(document.test_form.browse.value);&amp;rdquo;&lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt; &lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;/&amp;gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #000000&#34;&gt;&lt;br /&gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;COLOR: #800000&#34;&gt;input &lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt;type&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;=&amp;ldquo;file&amp;rdquo;&lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt; name&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;=&amp;ldquo;browse&amp;rdquo;&lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt; style&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;=&amp;ldquo;display:none;&amp;rdquo;&lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt; &lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;/&amp;gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #000000&#34;&gt;&lt;br /&gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;COLOR: #800000&#34;&gt;input &lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt;type&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;=&amp;ldquo;text&amp;rdquo;&lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt; name&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;=&amp;ldquo;file&amp;rdquo;&lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt; &lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;/&amp;gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #000000&#34;&gt;&lt;br /&gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;COLOR: #800000&#34;&gt;a &lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt;href&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;=&amp;ldquo;javascript:fn_browse();&amp;rdquo;&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #000000&#34;&gt;&lt;br /&gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;COLOR: #800000&#34;&gt;img  &lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;=&amp;ldquo;btn&amp;rdquo;&lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt; src&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;=&amp;ldquo;browse.gif&amp;rdquo;&lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt; border&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;=&amp;ldquo;0&amp;rdquo;&lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt; &lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;/&amp;gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #000000&#34;&gt;  &lt;br /&gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;COLOR: #800000&#34;&gt;br &lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;/&amp;gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #000000&#34;&gt;&lt;br /&gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;COLOR: #800000&#34;&gt;br &lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;/&amp;gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #000000&#34;&gt;&lt;br /&gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;COLOR: #800000&#34;&gt;input &lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt;type&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;=&amp;ldquo;submit&amp;rdquo;&lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt; name&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;=&amp;ldquo;提交表单&amp;rdquo;&lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt; &lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;/&amp;gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #000000&#34;&gt;&lt;br /&gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span style=&#34;COLOR: #800000&#34;&gt;form&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #000000&#34;&gt;&lt;p&gt;&lt;/p&gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span style=&#34;COLOR: #800000&#34;&gt;body&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #000000&#34;&gt;&lt;br /&gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span style=&#34;COLOR: #800000&#34;&gt;html&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/p&gt;
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2004/09/14/cb-43051/</guid>
+      <description>本随笔缩写内容有误，对不起，谢谢！
+csdn上有朋友问道这个问题
+上google跑了跑，从这里和csdn的980337(面包喳喳) 朋友的回复得到提示，做了做测试。
+以下代码可以把“浏览”按钮换成图片
+当然 也可以不用&amp;lt;img&amp;gt;而改input或者button加上样式表（css）或者htc也应该可以吧。
+
+ &amp;lt;!DOCTYPE html PUBLIC &amp;rdquo;-//W3C//DTD XHTML 1.0 Transitional//EN&amp;rdquo; &amp;rdquo;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&amp;quot;&amp;gt;&amp;lt;html xmlns=&amp;ldquo;http://www.w3.org/1999/xhtml&amp;quot;xml:lang=&amp;ldquo;gb2312&amp;rdquo;lang=&amp;ldquo;gb2312&amp;rdquo;&amp;gt;&amp;lt;head&amp;gt;&amp;lt;title&amp;gt;上传的时候&amp;lt;input type=&amp;ldquo;file&amp;rdquo;&amp;gt;中用图片代替浏览按钮 &amp;lt;/title&amp;gt;&amp;lt;meta http-equiv=&amp;ldquo;Content-Type&amp;rdquo;content=&amp;ldquo;text/html; charset=gb2312&amp;rdquo;/&amp;gt;&amp;lt;meta name=&amp;ldquo;title&amp;rdquo;content=&amp;ldquo;&amp;rdquo;/&amp;gt;&amp;lt;meta name=&amp;ldquo;author&amp;rdquo;content=&amp;ldquo;活靶子，huobazi&amp;rdquo;/&amp;gt;&amp;lt;meta name=&amp;ldquo;subject&amp;rdquo;content=&amp;ldquo;&amp;rdquo;/&amp;gt;&amp;lt;meta name=&amp;ldquo;language&amp;rdquo;content=&amp;ldquo;gb2312&amp;rdquo;/&amp;gt;&amp;lt;meta name=&amp;ldquo;keywords&amp;rdquo;content=&amp;ldquo;&amp;rdquo;/&amp;gt;&amp;lt;meta name=&amp;ldquo;Copyright&amp;rdquo;content=&amp;ldquo;&amp;rdquo;/&amp;gt;&amp;lt;meta name=&amp;ldquo;robots&amp;rdquo;content=&amp;ldquo;all&amp;rdquo;/&amp;gt;&amp;lt;script language=&amp;ldquo;javascript&amp;rdquo;type=&amp;ldquo;text/javascript&amp;rdquo;&amp;gt;functionfn_browse()
+{
+document.test_form.browse.click();
+document.test_form.file.value =document.all.test_form.browse.value; }&amp;lt;/script&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body&amp;gt;
+&amp;lt;form name=&amp;ldquo;test_form&amp;rdquo;method=&amp;ldquo;post&amp;rdquo;ENCTYPE=&amp;ldquo;multipart/form-data&amp;rdquo;onsubmit=&amp;ldquo;alert(document.test_form.browse.value);&amp;rdquo;/&amp;gt;&amp;lt;input type=&amp;ldquo;file&amp;rdquo;name=&amp;ldquo;browse&amp;rdquo;style=&amp;ldquo;display:none;&amp;rdquo;/&amp;gt;&amp;lt;input type=&amp;ldquo;text&amp;rdquo;name=&amp;ldquo;file&amp;rdquo;/&amp;gt;&amp;lt;a href=&amp;ldquo;javascript:fn_browse();&amp;rdquo;&amp;gt;&amp;lt;img name=&amp;ldquo;btn&amp;rdquo;src=&amp;ldquo;browse.gif&amp;rdquo;border=&amp;ldquo;0&amp;rdquo;/&amp;gt;&amp;lt;br /&amp;gt;&amp;lt;br /&amp;gt;&amp;lt;input type=&amp;ldquo;submit&amp;rdquo;name=&amp;ldquo;提交表单&amp;rdquo;/&amp;gt;&amp;lt;/form&amp;gt;
+&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;</description>
     </item>
     
     <item>
       <title>小雕虫,不被Google工具条拦截的弹出窗口</title>
-      <link>http://huobazi.aspxboy.com/blog/2004/07/10/cb-7697-1/</link>
+      <link>https://huobazi.aspxboy.com/blog/2004/07/10/cb-7697-1/</link>
       <pubDate>Sat, 10 Jul 2004 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2004/07/10/cb-7697-1/</guid>
-      <description>&lt;p&gt;如果做项目必须用到弹出窗口可以考虑以下&lt;/p&gt;
-&lt;p&gt;不保证任何时候能用&lt;br /&gt;更不保证在那个myie新版本下能用&lt;br /&gt;如果myie等浏览器屏蔽掉了地址内的某些字比如我演示中有“pop“字样,那也出不来&lt;/p&gt;
-&lt;p&gt;demo+code:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://www.aspxboy.com/popWindow/&#34; target=&#34;_blank&#34;&gt;&lt;span style=&#34;color: #003366;&#34;&gt;http://www.aspxboy.com/popWindow/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&#34;font-size: x-large;&#34;&gt;&lt;strong&gt;测试&lt;/strong&gt;通过日期： &lt;span style=&#34;color: #002c99;&#34;&gt;&lt;a href=&#34;http://huobazi.cnblogs.com/archive/2004/07/10/22926.html&#34;&gt;&lt;strong&gt;2004/07/10/&lt;/strong&gt;&lt;/a&gt;  ！！！&lt;br /&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;                
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2004/07/10/cb-7697-1/</guid>
+      <description>如果做项目必须用到弹出窗口可以考虑以下
+不保证任何时候能用
+更不保证在那个myie新版本下能用
+如果myie等浏览器屏蔽掉了地址内的某些字比如我演示中有“pop“字样,那也出不来
+demo+code:
+http://www.aspxboy.com/popWindow/
+测试通过日期： 2004/07/10/ ！！！</description>
     </item>
     
     <item>
       <title>弹出窗口刷新它的父页面后。出现不重新发送信息，则无法刷新网页</title>
-      <link>http://huobazi.aspxboy.com/blog/2004/04/06/refreshorreloadparentwindowwithoutconfirm/</link>
+      <link>https://huobazi.aspxboy.com/blog/2004/04/06/refreshorreloadparentwindowwithoutconfirm/</link>
       <pubDate>Tue, 06 Apr 2004 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2004/04/06/refreshorreloadparentwindowwithoutconfirm/</guid>
-      <description>&lt;p&gt;做的东西弹出一个窗口处理某些动作后刷新父窗口&lt;br /&gt;用&lt;br /&gt;window.opener.location.reload();&lt;br /&gt;刷新&lt;br /&gt;如果父窗口在此之前如果有过提交数据的动作，则会出现这么个讨厌的对话筐&lt;br /&gt;“不重新发送信息，则无法刷新网页”&lt;br /&gt;痛苦......&lt;br /&gt;CSDN搜索未果(有几贴都是用Response.Redirect的方法，但我这里是刷父窗口)。&lt;br /&gt;痛苦.&lt;br /&gt;........&lt;br /&gt;翻我的&lt;a href=&#34;http://www.aspxboy.com/private/showthread.asp?threadid=148&#34;&gt;&lt;strike&gt;小本本&lt;/strike&gt;&lt;/a&gt; 后找到办法&lt;br /&gt;用&lt;br /&gt;window.opener.location.href=window.opener.location.href&lt;br /&gt;去刷新（其实是重定位了一下）父窗口&lt;br /&gt;可行。&lt;br /&gt;总结： &lt;font style=&#34;BACKGROUND-COLOR: #ee82ee&#34;&gt;不能一棵树上掉死&lt;/font&gt; :P&lt;/p&gt;             
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2004/04/06/refreshorreloadparentwindowwithoutconfirm/</guid>
+      <description>做的东西弹出一个窗口处理某些动作后刷新父窗口
+用
+window.opener.location.reload();
+刷新
+如果父窗口在此之前如果有过提交数据的动作，则会出现这么个讨厌的对话筐
+“不重新发送信息，则无法刷新网页”
+痛苦......
+CSDN搜索未果(有几贴都是用Response.Redirect的方法，但我这里是刷父窗口)。
+痛苦.
+........
+翻我的小本本 后找到办法
+用
+window.opener.location.href=window.opener.location.href
+去刷新（其实是重定位了一下）父窗口
+可行。
+总结： 不能一棵树上掉死 :P</description>
     </item>
     
   </channel>

@@ -2,68 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mvc on 武眉博</title>
-    <link>http://huobazi.aspxboy.com/tags/mvc/</link>
+    <link>https://huobazi.aspxboy.com/tags/mvc/</link>
     <description>Recent content in Mvc on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 01 Dec 2008 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://huobazi.aspxboy.com/tags/mvc/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://huobazi.aspxboy.com/tags/mvc/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>把ASP.NET MVC的路由利用配置维护起来</title>
-      <link>http://huobazi.aspxboy.com/blog/2008/12/01/asp-net-mvc-route-config/</link>
+      <link>https://huobazi.aspxboy.com/blog/2008/12/01/asp-net-mvc-route-config/</link>
       <pubDate>Mon, 01 Dec 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2008/12/01/asp-net-mvc-route-config/</guid>
-      <description>&lt;p&gt;配置大多就是文件配置或者数据库配置了&lt;/p&gt;
-&lt;br /&gt;&lt;p&gt;ref:&lt;/p&gt;
-&lt;br /&gt;&lt;p&gt;&lt;a href=&#34;http://mnour.blogspot.com/2008/11/mvc-routing-using-custom-configuration.html&#34;&gt;http://mnour.blogspot.com/2008/11/mvc-routing-using-custom-configuration.html&lt;/a&gt;&lt;/p&gt;
-&lt;br /&gt;&lt;p&gt;&lt;a href=&#34;http://huobazi.aspxboy.com/QLeelulu/archive/2008/11/24/1340212.html&#34;&gt;http://www.cnblogs.com/QLeelulu/archive/2008/11/24/1340212.html&lt;/a&gt;&lt;/p&gt;
-&lt;br /&gt;&lt;p&gt;&lt;a href=&#34;http://www.iansuttle.com/blog/post/ASPNET-MVC-Store-Routes-in-the-Database.aspx&#34;&gt;http://www.iansuttle.com/blog/post/ASPNET-MVC-Store-Routes-in-the-Database.aspx&lt;/a&gt;&lt;/p&gt;
-&lt;br /&gt;&lt;p&gt;我觉得加上做webform时常用的PageAlias和BuildUrl会更好用些&lt;/p&gt;               
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2008/12/01/asp-net-mvc-route-config/</guid>
+      <description>配置大多就是文件配置或者数据库配置了
+ref:
+http://mnour.blogspot.com/2008/11/mvc-routing-using-custom-configuration.html
+http://www.cnblogs.com/QLeelulu/archive/2008/11/24/1340212.html
+http://www.iansuttle.com/blog/post/ASPNET-MVC-Store-Routes-in-the-Database.aspx
+我觉得加上做webform时常用的PageAlias和BuildUrl会更好用些</description>
     </item>
     
     <item>
       <title>Latest preview of the ASP.Net MVC available on CodePlex</title>
-      <link>http://huobazi.aspxboy.com/blog/2008/07/17/mvcpreview4/</link>
+      <link>https://huobazi.aspxboy.com/blog/2008/07/17/mvcpreview4/</link>
       <pubDate>Thu, 17 Jul 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2008/07/17/mvcpreview4/</guid>
-      <description>&lt;div class=&#34;DescriptionAndFileUpload&#34; id=&#34;DescriptionAndFileUploadDiv&#34;&gt;&lt;div id=&#34;ctl00_ctl00_Content_TabContentPanel_Content_FileUpdatePanel&#34;&gt;
-&lt;br /&gt;&lt;div class=&#34;FileUpload ClearLeft&#34;&gt;
-&lt;br /&gt;&lt;h3 class=&#34;Header&#34;&gt;ASP.NET MVC Preview 4 available!!!&lt;/h3&gt;
-&lt;br /&gt;&lt;h3 class=&#34;Header&#34;&gt;
-&lt;br /&gt;&lt;img class=&#34;FileTypeImage&#34; id=&#34;ctl00_ctl00_Content_TabContentPanel_Content_ReleaseFiles_FileList_ctl00_FileImage&#34; style=&#34;BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px&#34; alt=&#34;Runtime Binary&#34; src=&#34;http://huobazi.aspxboy.com/images/hbz_images/c235e789-7a8e-44fc-aa05-76f3ffaeceec.gif&#34; align=&#34;middle&#34; mce_src=&#34;/images/hbz_images/c235e789-7a8e-44fc-aa05-76f3ffaeceec.gif&#34;&gt;&lt;font size=&#34;2&#34;&gt; &lt;/font&gt;&lt;font size=&#34;2&#34;&gt;&lt;a href=&#34;http://www.codeplex.com/aspnet/Release/ProjectReleases.aspx?ReleaseId=15389&#34; target=&#34;_blank&#34; mce_href=&#34;http://www.codeplex.com/aspnet/Release/ProjectReleases.aspx?ReleaseId=15389&#34;&gt;ASP.NET MVC CodePlex Preview 4&lt;/a&gt;&lt;/font&gt; &lt;/h3&gt;
-&lt;br /&gt;&lt;div id=&#34;ctl00_ctl00_Content_TabContentPanel_Content_ReleaseFiles_DescriptionUpdatePanel&#34;&gt;
-&lt;br /&gt;&lt;div class=&#34;FileListItemDiv&#34; id=&#34;ctl00_ctl00_Content_TabContentPanel_Content_ReleaseFiles_FileList_ctl00_FileListItemDiv&#34;&gt;
-&lt;br /&gt;&lt;div&gt;&lt;span class=&#34;SubText&#34; id=&#34;FileListItemInfo&#34;&gt;runtime binary, 1075K, uploaded &lt;span class=&#34;smartDate dateOnly&#34; localtimeticks=&#34;1216241550&#34;&gt;Today&lt;/span&gt; - 772 downloads &lt;/span&gt;&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;FileListItemDiv&#34; id=&#34;ctl00_ctl00_Content_TabContentPanel_Content_ReleaseFiles_FileList_ctl01_FileListItemDiv&#34;&gt;
-&lt;img class=&#34;FileTypeImage&#34; id=&#34;ctl00_ctl00_Content_TabContentPanel_Content_ReleaseFiles_FileList_ctl01_FileImage&#34; style=&#34;BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px&#34; alt=&#34;Documentation&#34; src=&#34;http://huobazi.aspxboy.com/images/hbz_images/9432c27b-2893-4018-946c-4bf16f270ce1.gif&#34; align=&#34;middle&#34; mce_src=&#34;/images/hbz_images/9432c27b-2893-4018-946c-4bf16f270ce1.gif&#34;&gt;&lt;a class=&#34;FileNameLink&#34; id=&#34;ctl00_ctl00_Content_TabContentPanel_Content_ReleaseFiles_FileList_ctl01_FileNameLink&#34; onclick=&#34;return downloadFile(this);&#34; tabindex=&#34;9&#34; href=&#34;http://www.codeplex.com/aspnet/Release/ProjectReleases.aspx?ReleaseId=15389&#34; target=&#34;_blank&#34; filetype=&#34;Documentation&#34; fileid=&#34;39145&#34; mce_href=&#34;http://www.codeplex.com/aspnet/Release/ProjectReleases.aspx?ReleaseId=15389&#34;&gt;ASP.NET Codeplex Preview 4 Readme&lt;/a&gt; &lt;br /&gt;&lt;div&gt;&lt;span class=&#34;SubText&#34; id=&#34;FileListItemInfo&#34;&gt;documentation, 71K, uploaded &lt;span class=&#34;smartDate dateOnly&#34; localtimeticks=&#34;1216232710&#34;&gt;Today&lt;/span&gt; - 359 downloads &lt;/span&gt;&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;FileListItemDiv&#34; id=&#34;ctl00_ctl00_Content_TabContentPanel_Content_ReleaseFiles_FileList_ctl02_FileListItemDiv&#34;&gt;
-&lt;img class=&#34;FileTypeImage&#34; id=&#34;ctl00_ctl00_Content_TabContentPanel_Content_ReleaseFiles_FileList_ctl02_FileImage&#34; style=&#34;BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px&#34; alt=&#34;Documentation&#34; src=&#34;http://huobazi.aspxboy.com/images/hbz_images/9432c27b-2893-4018-946c-4bf16f270ce1.gif&#34; align=&#34;middle&#34; mce_src=&#34;/images/hbz_images/9432c27b-2893-4018-946c-4bf16f270ce1.gif&#34;&gt;&lt;a class=&#34;FileNameLink&#34; id=&#34;ctl00_ctl00_Content_TabContentPanel_Content_ReleaseFiles_FileList_ctl02_FileNameLink&#34; onclick=&#34;return downloadFile(this);&#34; tabindex=&#34;9&#34; href=&#34;http://www.codeplex.com/aspnet/Release/ProjectReleases.aspx?ReleaseId=15389&#34; target=&#34;_blank&#34; filetype=&#34;Documentation&#34; fileid=&#34;39146&#34; mce_href=&#34;http://www.codeplex.com/aspnet/Release/ProjectReleases.aspx?ReleaseId=15389&#34;&gt;ASP.NET Codeplex Preview 4 Readme (PDF)&lt;/a&gt; &lt;br /&gt;&lt;div&gt;&lt;span class=&#34;SubText&#34; id=&#34;FileListItemInfo&#34;&gt;documentation, 469K, uploaded &lt;span class=&#34;smartDate dateOnly&#34; localtimeticks=&#34;1216232710&#34;&gt;Today&lt;/span&gt; - 360 downloads &lt;/span&gt;&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;FileListItemDiv&#34; id=&#34;ctl00_ctl00_Content_TabContentPanel_Content_ReleaseFiles_FileList_ctl03_FileListItemDiv&#34;&gt;
-&lt;img class=&#34;FileTypeImage&#34; id=&#34;ctl00_ctl00_Content_TabContentPanel_Content_ReleaseFiles_FileList_ctl03_FileImage&#34; style=&#34;BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px&#34; alt=&#34;Documentation&#34; src=&#34;http://huobazi.aspxboy.com/images/hbz_images/9432c27b-2893-4018-946c-4bf16f270ce1.gif&#34; align=&#34;middle&#34; mce_src=&#34;/images/hbz_images/9432c27b-2893-4018-946c-4bf16f270ce1.gif&#34;&gt;&lt;a href=&#34;http://www.codeplex.com/aspnet/Release/ProjectReleases.aspx?ReleaseId=15389&#34; target=&#34;_blank&#34; mce_href=&#34;http://www.codeplex.com/aspnet/Release/ProjectReleases.aspx?ReleaseId=15389&#34;&gt;Changes between Preview 3 and Codeplex Preview 4&lt;/a&gt; &lt;br /&gt;&lt;div&gt;&lt;span class=&#34;SubText&#34; id=&#34;FileListItemInfo&#34;&gt;documentation, 52K, uploaded &lt;span class=&#34;smartDate dateOnly&#34; localtimeticks=&#34;1216232624&#34;&gt;Today&lt;/span&gt; - 208 downloads &lt;/span&gt;&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;FileListItemDiv&#34; id=&#34;ctl00_ctl00_Content_TabContentPanel_Content_ReleaseFiles_FileList_ctl04_FileListItemDiv&#34;&gt;
-&lt;img class=&#34;FileTypeImage&#34; id=&#34;ctl00_ctl00_Content_TabContentPanel_Content_ReleaseFiles_FileList_ctl04_FileImage&#34; style=&#34;BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px&#34; alt=&#34;Documentation&#34; src=&#34;http://huobazi.aspxboy.com/images/hbz_images/9432c27b-2893-4018-946c-4bf16f270ce1.gif&#34; align=&#34;middle&#34; mce_src=&#34;/images/hbz_images/9432c27b-2893-4018-946c-4bf16f270ce1.gif&#34;&gt;&lt;a href=&#34;http://www.codeplex.com/aspnet/Release/ProjectReleases.aspx?ReleaseId=15389&#34; target=&#34;_blank&#34; mce_href=&#34;http://www.codeplex.com/aspnet/Release/ProjectReleases.aspx?ReleaseId=15389&#34;&gt;Changes between Preview 3 and Codeplex Preview 4 (PDF)&lt;/a&gt; &lt;br /&gt;&lt;div&gt;&lt;span class=&#34;SubText&#34; id=&#34;FileListItemInfo&#34;&gt;documentation, 174K, uploaded &lt;span class=&#34;smartDate dateOnly&#34; localtimeticks=&#34;1216241622&#34;&gt;Today&lt;/span&gt; - 226 downloads &lt;/span&gt;&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;FileListItemDiv&#34; id=&#34;ctl00_ctl00_Content_TabContentPanel_Content_ReleaseFiles_FileList_ctl05_FileListItemDiv&#34;&gt;
-&lt;img class=&#34;FileTypeImage&#34; id=&#34;ctl00_ctl00_Content_TabContentPanel_Content_ReleaseFiles_FileList_ctl05_FileImage&#34; style=&#34;BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px&#34; alt=&#34;Source Code&#34; src=&#34;http://huobazi.aspxboy.com/images/hbz_images/88393038-77b7-4610-9ddb-a13b23b160f1.gif&#34; align=&#34;middle&#34; mce_src=&#34;/images/hbz_images/88393038-77b7-4610-9ddb-a13b23b160f1.gif&#34;&gt;&lt;a href=&#34;http://www.codeplex.com/aspnet/Release/ProjectReleases.aspx?ReleaseId=15389&#34; target=&#34;_blank&#34; mce_href=&#34;http://www.codeplex.com/aspnet/Release/ProjectReleases.aspx?ReleaseId=15389&#34;&gt;ASP.NET CodePlex Preview 4 Source Code&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;                
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2008/07/17/mvcpreview4/</guid>
+      <description>ASP.NET MVC Preview 4 available!!! ASP.NET MVC CodePlex Preview 4  runtime binary, 1075K, uploaded Today - 772 downloads  
+ ASP.NET Codeplex Preview 4 Readme documentation, 71K, uploaded Today - 359 downloads  
+ ASP.NET Codeplex Preview 4 Readme (PDF) documentation, 469K, uploaded Today - 360 downloads  
+ Changes between Preview 3 and Codeplex Preview 4 documentation, 52K, uploaded Today - 208 downloads</description>
     </item>
     
   </channel>

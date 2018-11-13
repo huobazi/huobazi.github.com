@@ -2,21 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Picasa on 武眉博</title>
-    <link>http://huobazi.aspxboy.com/tags/picasa/</link>
+    <link>https://huobazi.aspxboy.com/tags/picasa/</link>
     <description>Recent content in Picasa on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 21 Mar 2007 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://huobazi.aspxboy.com/tags/picasa/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://huobazi.aspxboy.com/tags/picasa/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Google的Picasa网络相册很弓虽！！！</title>
-      <link>http://huobazi.aspxboy.com/blog/2007/03/21/googlepicasa/</link>
+      <link>https://huobazi.aspxboy.com/blog/2007/03/21/googlepicasa/</link>
       <pubDate>Wed, 21 Mar 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2007/03/21/googlepicasa/</guid>
-      <description>&lt;p&gt;今天试验了一下 功能比较强 &lt;br /&gt;特别是 当机器上未装Picasa时用 Activex 来上传、排序 幻灯片播放等。&lt;br /&gt;一个字 弓虽！&lt;br /&gt;演示：&lt;br /&gt;&lt;a href=&#34;http://picasaweb.google.com/huobazi&#34;&gt;&lt;strong&gt;http://picasaweb.google.com/huobazi&lt;/strong&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;幻灯片：&lt;br /&gt;&lt;a href=&#34;http://picasaweb.google.com/huobazi/NCFAnE/photo#s5044173787206243378&#34;&gt;http://picasaweb.google.com/huobazi/NCFAnE/photo#s5044173787206243378&lt;/a&gt;&lt;/p&gt;               
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2007/03/21/googlepicasa/</guid>
+      <description>今天试验了一下 功能比较强 特别是 当机器上未装Picasa时用 Activex 来上传、排序 幻灯片播放等。
+一个字 弓虽！
+演示：
+http://picasaweb.google.com/huobazi
+幻灯片：
+http://picasaweb.google.com/huobazi/NCFAnE/photo#s5044173787206243378</description>
     </item>
     
   </channel>

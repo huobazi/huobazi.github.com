@@ -1,32 +1,12 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Php &middot; 武眉博</title>
 
-    <meta name="description" content="Marble&#39;s blog">
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
 
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="huobazi" />
-    <meta name="twitter:title" content="Php &middot; 武眉博">
-    <meta name="twitter:description" content="Marble&#39;s blog">
+    <link rel="stylesheet" href='https://huobazi.aspxboy.com/css/all.min.css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="Php &middot; 武眉博">
-    <meta property="og:description" content="Marble&#39;s blog">
-
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    
-    <link href='http://fonts.useso.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
-    
-    
-        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
-    
-
-    <link rel="stylesheet" href="/css/all.min.css">
-    <link href="http://apps.bdimg.com/libs/fontawesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="alternate" type="application/rss+xml" title="武眉博" href='https://huobazi.aspxboy.com/index.xml' />
 </head>
 <body>
 
@@ -35,7 +15,7 @@
     <div class="sidebar pure-u-1 pure-u-md-1-4">
     <div class="header">
         <hgroup>
-            <h1 class="brand-title"><a href="http://huobazi.aspxboy.com/">武眉博</a></h1>
+            <h1 class="brand-title"><a href="https://huobazi.aspxboy.com">武眉博</a></h1>
             <h2 class="brand-tagline"> Marble&#39;s blog </h2>
         </hgroup>
 
@@ -43,18 +23,36 @@
             <ul class="nav-list">
                 
                 <li class="nav-item">
-                    <a class="pure-button" href="http://twitter.com/huobazi"><i class="fa fa-twitter"></i> Twitter</a>
+                    <a class="pure-button" href="https://twitter.com/huobazi">
+                        <i class="fa fa-twitter"></i> Twitter
+                    </a>
                 </li>
                 
                 
                 <li class="nav-item">
-                    <a class="pure-button" href="http://github.com/huobazi "><i class="fa fa-github-alt"></i> github</a>
+                    <a class="pure-button" href="https://github.com/huobazi">
+                        <i class="fa fa-github-alt"></i> Github
+                    </a>
                 </li>
                 
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://www.linkedin.com/in/huobazi">
+                        <i class="fa fa-linkedin"></i> LinkedIn
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="pure-button" href='https://huobazi.aspxboy.com/index.xml'>
+                        <i class="fa fa-rss"></i> rss
+                    </a>
+                </li>
             </ul>
         </nav>
     </div>
 </div>
+
 
     <div class="content pure-u-1 pure-u-md-3-4">
         <div>
@@ -65,23 +63,18 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://huobazi.aspxboy.com/blog/2011/01/01/ubuntu-nginx-php-fastcgi/" class="post-title">在ubuntu上配置 nginx和php&#43;fastcgi</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2011/01/01/ubuntu-nginx-php-fastcgi/" class="post-title">在ubuntu上配置 nginx和php&#43;fastcgi</a>
 
                         <p class="post-meta">
                             
-                            
-                                
-                                <a class="post-category post-category-LAMP" href="http://huobazi.aspxboy.com//tags/lamp">LAMP</a><a class="post-category post-category-PHP" href="http://huobazi.aspxboy.com//tags/php">PHP</a><a class="post-category post-category-LAMP" href="http://huobazi.aspxboy.com//tags/lamp">LAMP</a><a class="post-category post-category-nginx" href="http://huobazi.aspxboy.com//tags/nginx">nginx</a><a class="post-category post-category-Ubuntu" href="http://huobazi.aspxboy.com//tags/ubuntu">Ubuntu</a><a class="post-category post-category-fastcgi" href="http://huobazi.aspxboy.com//tags/fastcgi">fastcgi</a>
                             
                         </p>
                     </header>
 
                     <div class="post-description">
                         <p>(1)安装php5<br />apt-get install php5 php-pear php5-cli php5-common php5-xcache php5-cgi php5-mysql php5-curl  php5-gd  php5-imagick  php5-xmlrpc  php5-dev php5-memcache<br />(2)安装nginx<br />apt-get install nginx<br />(3)安装spawn-fcgi<br /> apt-get install spawn-fcgi<br />(4)设置，也是最头疼滴地方哦</p>
-<p></p>
 <p>在/etc/nginx/fastcgi_params 文件最后，加入一行，可以用sudo gedit /etc/nginx/fastcgi_params打开文件<br /><strong>fastcgi_param SCRIPT_FILENAME     $document_root$fastcgi_script_name;</strong><br />设置php.ini的 cgi.fix_pathinfo=1;doc_root=<br />拷贝/etc/nginx/sites-availab修改本机hosts文件，指定一个域名<br />修改server_name<br />在server_name同级增加root 设置为网站根目录<br />location里 加上 index.php<br />php的fast-cgi配置</p>
-<p><span style="color: #fff; background-color:#000;">    location ~ \.php$ {<br />        fastcgi_pass   127.0.0.1:9000;<br />        fastcgi_index  index.php;<br />        include fastcgi_params;     <br />    }</span><br />$ sudo killall -HUP php5-cgi<br />$ sudo /usr/bin/spawn-fcgi -a 127.0.0.1 -p 9000 -C 5 -u www-data -g www-data -f /usr/bin/php5-cgi -P /var/run/fastcgi-php.pid<br />$ /etc/init.d# sudo /etc/init.d/nginx restart <br />在网站内放个phpinfo测试一下，ok了。</p>                
-
+<p><span style="color: #fff; background-color:#000;">    location ~ \.php$ {<br />        fastcgi_pass   127.0.0.1:9000;<br />        fastcgi_index  index.php;<br />        include fastcgi_params;     <br />    }</span><br />$ sudo killall -HUP php5-cgi<br />$ sudo /usr/bin/spawn-fcgi -a 127.0.0.1 -p 9000 -C 5 -u www-data -g www-data -f /usr/bin/php5-cgi -P /var/run/fastcgi-php.pid<br />$ /etc/init.d# sudo /etc/init.d/nginx restart <br />在网站内放个phpinfo测试一下，ok了。</p>
                     </div>
                 </section>
                 
@@ -89,13 +82,10 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://huobazi.aspxboy.com/blog/2009/07/18/php-guid/" class="post-title">如何判断一个网站是不是php做的？</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2009/07/18/php-guid/" class="post-title">如何判断一个网站是不是php做的？</a>
 
                         <p class="post-meta">
                             
-                            
-                                
-                                <a class="post-category post-category-LAMP" href="http://huobazi.aspxboy.com//tags/lamp">LAMP</a><a class="post-category post-category-它山之石" href="http://huobazi.aspxboy.com//tags/%E5%AE%83%E5%B1%B1%E4%B9%8B%E7%9F%B3">它山之石</a><a class="post-category post-category-奇技淫巧" href="http://huobazi.aspxboy.com//tags/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7">奇技淫巧</a><a class="post-category post-category-PHP" href="http://huobazi.aspxboy.com//tags/php">PHP</a>
                             
                         </p>
                     </header>
@@ -117,13 +107,10 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://huobazi.aspxboy.com/blog/2004/06/01/cb-12759/" class="post-title">一个很全的教程站</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2004/06/01/cb-12759/" class="post-title">一个很全的教程站</a>
 
                         <p class="post-meta">
                             
-                            
-                                
-                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-前端开发" href="http://huobazi.aspxboy.com//tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91">前端开发</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a><a class="post-category post-category-推荐阅读" href="http://huobazi.aspxboy.com//tags/%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB">推荐阅读</a><a class="post-category post-category-它山之石" href="http://huobazi.aspxboy.com//tags/%E5%AE%83%E5%B1%B1%E4%B9%8B%E7%9F%B3">它山之石</a><a class="post-category post-category-Javascript" href="http://huobazi.aspxboy.com//tags/javascript">Javascript</a><a class="post-category post-category-HTML" href="http://huobazi.aspxboy.com//tags/html">HTML</a><a class="post-category post-category-CSS" href="http://huobazi.aspxboy.com//tags/css">CSS</a><a class="post-category post-category-PHP" href="http://huobazi.aspxboy.com//tags/php">PHP</a>
                             
                         </p>
                     </header>
@@ -147,11 +134,11 @@
             <div class="footer">
     <div class="pure-menu pure-menu-horizontal pure-menu-open">
         <ul>
-            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a> &nbsp;&nbsp; theme by <a target="_blank" href="https://github.com/dplesca/purehugo">purehugo</a></a></li>
+            <li>Powered by <a class="hugo" href="https://gohugo.io/" target="_blank">hugo</a></li>
         </ul>
     </div>
 </div>
-<script src="/js/all.min.js"></script>
+<script src='https://huobazi.aspxboy.com/js/all.min.js'></script>
 
         </div>
     </div>

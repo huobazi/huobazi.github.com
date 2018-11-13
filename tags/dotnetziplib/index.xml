@@ -2,31 +2,34 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dotnetziplib on 武眉博</title>
-    <link>http://huobazi.aspxboy.com/tags/dotnetziplib/</link>
+    <link>https://huobazi.aspxboy.com/tags/dotnetziplib/</link>
     <description>Recent content in Dotnetziplib on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 29 Mar 2008 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://huobazi.aspxboy.com/tags/dotnetziplib/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://huobazi.aspxboy.com/tags/dotnetziplib/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>使用dotNetZipLib轻松压缩目录/文件夹</title>
-      <link>http://huobazi.aspxboy.com/blog/2008/03/29/usingdotnetziplibcompressadirectory/</link>
+      <link>https://huobazi.aspxboy.com/blog/2008/03/29/usingdotnetziplibcompressadirectory/</link>
       <pubDate>Sat, 29 Mar 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2008/03/29/usingdotnetziplibcompressadirectory/</guid>
-      <description>&lt;p&gt;&lt;div&gt;&lt;span style=&#34;font-family: Verdana;&#34;&gt;.net1.1时代我们选SharpZipLib&lt;br /&gt;.net2.0时代我们选System.IO.Compression名称空间下的东东&lt;br /&gt;.net3.0时代我们选System.IO.Packaging名称空间下的东东。&lt;br /&gt;今天发现CodePlex上有个好东西，另压缩如此之Easy。。。&lt;/span&gt;&lt;/div&gt;
-&lt;p&gt; &lt;/p&gt;
-&lt;p&gt;&lt;span style=&#34;font-family: Verdana;&#34;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;div style=&#34;padding-right: 5px; padding-left: 4px; font-size: 13px; padding-bottom: 4px; width: 98%; word-break: break-all; padding-top: 4px; background-color: #eeeeee; border: #cccccc 1px solid;&#34;&gt;
-&lt;span style=&#34;color: #000000&#34;&gt;  ZipFile zip &lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color: #0000ff&#34;&gt;new&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt; ZipFile(directo&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;outputFileName);&lt;br /&gt;            zip.TrimVolumeFromFullyQualifiedPaths &lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color: #0000ff&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;;&lt;br /&gt;            zip.TempFileFolder &lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt; Path.GetTempPath();&lt;br /&gt;            zip.Comment&lt;br /&gt;                &lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color: #0000ff&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;.Format(&lt;/span&gt;&lt;span style=&#34;color: #800000&#34;&gt;&amp;ldquo;&lt;/span&gt;&lt;span style=&#34;color: #800000&#34;&gt;A zip archives。{0}  {1}&lt;/span&gt;&lt;span style=&#34;color: #800000&#34;&gt;&amp;ldquo;&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;,  Environment.NewLine, DateTime.Now.ToString());&lt;br /&gt;            zip.AddDirectory(directory, &lt;/span&gt;&lt;span style=&#34;color: #0000ff&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;.Format(&lt;/span&gt;&lt;span style=&#34;color: #800000&#34;&gt;&amp;ldquo;&lt;/span&gt;&lt;span style=&#34;color: #800000&#34;&gt;MyFolder-{0}&lt;/span&gt;&lt;span style=&#34;color: #800000&#34;&gt;&amp;ldquo;&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;, DateTime.Now.ToShortDateString()));&lt;br /&gt;            zip.Save();&lt;/span&gt;
-&lt;/div&gt;
-&lt;p&gt;那就是&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;h1 class=&#34;ProjectHeader NoMargin&#34;&gt;&lt;a id=&#34;ctl00_ctl00_WideContent_ProjectTitleControl1_ProjectTitleLink&#34; class=&#34;NoUnderline&#34; tabindex=&#34;0&#34; href=&#34;http://www.codeplex.com/DotNetZip&#34;&gt;&lt;span id=&#34;ctl00_ctl00_WideContent_ProjectTitleControl1_TitleLabel&#34;&gt;DotNet Zip Library&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt; &lt;/p&gt;
-&lt;p&gt; &lt;br /&gt;&lt;/p&gt;&lt;/p&gt;
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2008/03/29/usingdotnetziplibcompressadirectory/</guid>
+      <description>.net1.1时代我们选SharpZipLib
+.net2.0时代我们选System.IO.Compression名称空间下的东东
+.net3.0时代我们选System.IO.Packaging名称空间下的东东。
+今天发现CodePlex上有个好东西，另压缩如此之Easy。。。  
+ZipFile zip =newZipFile(directooutputFileName);
+zip.TrimVolumeFromFullyQualifiedPaths =true;
+zip.TempFileFolder =Path.GetTempPath();
+zip.Comment
+=string.Format(&amp;ldquo;A zip archives。{0} {1}&amp;ldquo;, Environment.NewLine, DateTime.Now.ToString());
+zip.AddDirectory(directory, string.Format(&amp;ldquo;MyFolder-{0}&amp;ldquo;, DateTime.Now.ToShortDateString()));
+zip.Save();  那就是
+
+DotNet Zip Library   </description>
     </item>
     
   </channel>

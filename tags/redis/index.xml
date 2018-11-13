@@ -2,106 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Redis on 武眉博</title>
-    <link>http://huobazi.aspxboy.com/tags/redis/</link>
+    <link>https://huobazi.aspxboy.com/tags/redis/</link>
     <description>Recent content in Redis on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 06 Aug 2011 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://huobazi.aspxboy.com/tags/redis/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://huobazi.aspxboy.com/tags/redis/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>在 Ubuntu 下安装 Redis 并使用 init 脚本启动  &amp;&amp; 添加 删除ubuntu自启动服务</title>
-      <link>http://huobazi.aspxboy.com/blog/2011/08/06/ubuntu-redis-init-service-autorun/</link>
+      <link>https://huobazi.aspxboy.com/blog/2011/08/06/ubuntu-redis-init-service-autorun/</link>
       <pubDate>Sat, 06 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2011/08/06/ubuntu-redis-init-service-autorun/</guid>
-      <description>&lt;pre style=&#34;margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; font: normal normal normal 12px/normal Monaco, &#39;Courier New&#39;, &#39;DejaVu Sans Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, monospace;  font-family: &#39;Bitstream Vera Sans Mono&#39;, &#39;Courier New&#39;, monospace; &#34;&gt;&lt;span style=&#34;font-family: helvetica, arial, freesans, clean, sans-serif; line-height: 14px; white-space: normal;&#34;&gt;
-
-&lt;div id=&#34;LC1&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;1. 下载安装：&lt;/div&gt;
-
-&lt;div id=&#34;LC2&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;&lt;/div&gt;
-
-&lt;div id=&#34;LC3&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;cd /tmp&lt;/div&gt;
-
-&lt;div id=&#34;LC4&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;wget http://redis.googlecode.com/files/redis-*.*.*.tar.gz&lt;/div&gt;
-
-&lt;div id=&#34;LC5&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;tar -zxf redis-*.*.*.tar.gz&lt;/div&gt;
-
-&lt;div id=&#34;LC6&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;cd redis-*.*.*&lt;/div&gt;
-
-&lt;div id=&#34;LC7&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;make&lt;/div&gt;
-
-&lt;div id=&#34;LC8&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;sudo make install&lt;/div&gt;
-
-&lt;div id=&#34;LC8&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;&lt;/div&gt;
-
-&lt;div id=&#34;LC9&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;2. 配置init脚本：&lt;/div&gt;
-
-&lt;div id=&#34;LC10&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;&lt;/div&gt;
-
-&lt;div id=&#34;LC11&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;wget https://github.com/ijonas/dotfiles/raw/master/etc/init.d/redis-server&lt;/div&gt;
-
-&lt;div id=&#34;LC12&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;wget https://github.com/ijonas/dotfiles/raw/master/etc/redis.conf&lt;/div&gt;
-
-&lt;div id=&#34;LC13&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;sudo mv redis-server /etc/init.d/redis-server&lt;/div&gt;
-
-&lt;div id=&#34;LC14&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;sudo chmod +x /etc/init.d/redis-server&lt;/div&gt;
-
-&lt;div id=&#34;LC15&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;sudo mv redis.conf /etc/redis.conf&lt;/div&gt;
-
-&lt;div id=&#34;LC15&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;&lt;/div&gt;
-
-&lt;div id=&#34;LC16&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;3. 初始化用户和日志路径&lt;/div&gt;
-
-&lt;div id=&#34;LC17&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;&lt;/div&gt;
-
-&lt;div id=&#34;LC18&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;sudo useradd redis&lt;/div&gt;
-
-&lt;div id=&#34;LC19&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;sudo mkdir -p /var/lib/redis&lt;/div&gt;
-
-&lt;div id=&#34;LC20&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;sudo mkdir -p /var/log/redis&lt;/div&gt;
-
-&lt;div id=&#34;LC21&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;sudo chown redis.redis /var/lib/redis&lt;/div&gt;
-
-&lt;div id=&#34;LC22&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;sudo chown redis.redis /var/log/redis&lt;/div&gt;
-
-&lt;div id=&#34;LC22&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;&lt;/div&gt;
-
-&lt;div id=&#34;LC23&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;4. 启动Redis：&lt;/div&gt;
-
-&lt;div id=&#34;LC24&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;&lt;/div&gt;
-
-&lt;div id=&#34;LC25&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;sudo /etc/init.d/redis-server start&lt;/div&gt;
-
-&lt;div id=&#34;LC25&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;&lt;/div&gt;
-
-&lt;/span&gt;&lt;/pre&gt;
-&lt;pre style=&#34;margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; font: normal normal normal 12px/normal Monaco, &#39;Courier New&#39;, &#39;DejaVu Sans Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, monospace;  font-family: &#39;Bitstream Vera Sans Mono&#39;, &#39;Courier New&#39;, monospace; &#34;&gt;
-&lt;span style=&#34;font-family: helvetica, arial, freesans, clean, sans-serif; line-height: 14px; white-space: normal;&#34;&gt;
-
-&lt;div id=&#34;LC1&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;添加一个服务&lt;/div&gt;
-
-&lt;div id=&#34;LC2&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;#sudo update-rc.d 服务名 defaults 99&lt;/div&gt;
-
-&lt;div id=&#34;LC4&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;删除一个服务&lt;/div&gt;
-
-&lt;div id=&#34;LC5&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;#sudo update-rc.d 服务名 remove&lt;/div&gt;
-
-&lt;div id=&#34;LC7&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;临时重启一个服务&lt;/div&gt;
-
-&lt;div id=&#34;LC8&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;#/etc/init.d/服务名 restart&lt;/div&gt;
-
-&lt;div id=&#34;LC10&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;临时关闭一个服务&lt;/div&gt;
-
-&lt;div id=&#34;LC11&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;#/etc/init.d/服务名 stop&lt;/div&gt;
-
-&lt;div id=&#34;LC13&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;临时启动一个服务&lt;/div&gt;
-
-&lt;div id=&#34;LC14&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;#/etc/init.d/服务名 start&lt;/div&gt;
-
-&lt;/span&gt;
-&lt;/pre&gt;              
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2011/08/06/ubuntu-redis-init-service-autorun/</guid>
+      <description>1. 下载安装：  cd /tmp wget http://redis.googlecode.com/files/redis-*.*.*.tar.gz tar -zxf redis-*.*.*.tar.gz cd redis-*.*.* make sudo make install  2. 配置init脚本：  wget https://github.com/ijonas/dotfiles/raw/master/etc/init.d/redis-server wget https://github.com/ijonas/dotfiles/raw/master/etc/redis.conf sudo mv redis-server /etc/init.d/redis-server sudo chmod +x /etc/init.d/redis-server sudo mv redis.conf /etc/redis.conf  3. 初始化用户和日志路径  sudo useradd redis sudo mkdir -p /var/lib/redis sudo mkdir -p /var/log/redis sudo chown redis.redis /var/lib/redis sudo chown redis.redis /var/log/redis  4. 启动Redis：  sudo /etc/init.d/redis-server start   添加一个服务 #sudo update-rc.</description>
     </item>
     
   </channel>

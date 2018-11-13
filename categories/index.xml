@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on 武眉博</title>
+    <link>https://huobazi.aspxboy.com/categories/</link>
+    <description>Recent content in Categories on 武眉博</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 15 Aug 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://huobazi.aspxboy.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ajax</title>
+      <link>https://huobazi.aspxboy.com/categories/ajax/</link>
+      <pubDate>Wed, 15 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://huobazi.aspxboy.com/categories/ajax/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Carrierwave</title>
+      <link>https://huobazi.aspxboy.com/categories/carrierwave/</link>
+      <pubDate>Wed, 15 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://huobazi.aspxboy.com/categories/carrierwave/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jwt</title>
+      <link>https://huobazi.aspxboy.com/categories/jwt/</link>
+      <pubDate>Tue, 13 Nov 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://huobazi.aspxboy.com/categories/jwt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mongoid</title>
+      <link>https://huobazi.aspxboy.com/categories/mongoid/</link>
+      <pubDate>Wed, 15 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://huobazi.aspxboy.com/categories/mongoid/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mysql</title>
+      <link>https://huobazi.aspxboy.com/categories/mysql/</link>
+      <pubDate>Wed, 12 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://huobazi.aspxboy.com/categories/mysql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Postgres</title>
+      <link>https://huobazi.aspxboy.com/categories/postgres/</link>
+      <pubDate>Wed, 12 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://huobazi.aspxboy.com/categories/postgres/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Postgresql</title>
+      <link>https://huobazi.aspxboy.com/categories/postgresql/</link>
+      <pubDate>Wed, 12 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://huobazi.aspxboy.com/categories/postgresql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rails</title>
+      <link>https://huobazi.aspxboy.com/categories/rails/</link>
+      <pubDate>Tue, 13 Nov 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://huobazi.aspxboy.com/categories/rails/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rails Api</title>
+      <link>https://huobazi.aspxboy.com/categories/rails-api/</link>
+      <pubDate>Tue, 13 Nov 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://huobazi.aspxboy.com/categories/rails-api/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ruby</title>
+      <link>https://huobazi.aspxboy.com/categories/ruby/</link>
+      <pubDate>Wed, 12 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://huobazi.aspxboy.com/categories/ruby/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vuejs</title>
+      <link>https://huobazi.aspxboy.com/categories/vuejs/</link>
+      <pubDate>Tue, 13 Nov 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://huobazi.aspxboy.com/categories/vuejs/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

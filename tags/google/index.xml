@@ -2,61 +2,65 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Google on 武眉博</title>
-    <link>http://huobazi.aspxboy.com/tags/google/</link>
+    <link>https://huobazi.aspxboy.com/tags/google/</link>
     <description>Recent content in Google on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 25 Jan 2008 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://huobazi.aspxboy.com/tags/google/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://huobazi.aspxboy.com/tags/google/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Google的投票站点在用Asp.net</title>
-      <link>http://huobazi.aspxboy.com/blog/2008/01/25/googleandaspdotnet/</link>
+      <link>https://huobazi.aspxboy.com/blog/2008/01/25/googleandaspdotnet/</link>
       <pubDate>Fri, 25 Jan 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2008/01/25/googleandaspdotnet/</guid>
-      <description>&lt;p&gt;&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;&lt;font face=&#34;Verdana&#34;&gt;&lt;a href=&#34;https://survey.google.com/wix/p0621608.aspx&#34;&gt;https://survey.google.com/wix/p0621608.aspx&lt;/a&gt;&lt;/font&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;br /&gt;&lt;p&gt;&lt;font face=&#34;Verdana&#34;&gt;&lt;a href=&#34;https://survey.google.com/aaaaaaaaaaaaaa.axd&#34;&gt;https://survey.google.com/aaaaaaaaaaaaaa.axd&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;/font&gt;&lt;/p&gt;
-&lt;br /&gt;&lt;p&gt;&lt;font face=&#34;Verdana&#34;&gt;&lt;font face=&#34;Verdana&#34;&gt;&lt;a href=&#34;https://survey.google.com/wix/xxxxxxxxxxxxxxxxxxxxx.ashx&#34;&gt;https://survey.google.com/wix/xxxxxxxxxxxxxxxxxxxxx.ashx&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;/font&gt;&lt;/font&gt;&lt;/p&gt;
-&lt;br /&gt;&lt;p&gt;&lt;font face=&#34;Verdana&#34;&gt;&lt;br /&gt;&lt;br /&gt;Server        &lt;font color=&#34;red&#34;&gt;Microsoft-IIS/6.0&lt;/font&gt;&lt;br /&gt;&lt;br /&gt;&lt;font color=&#34;red&#34;&gt;X-AspNet-Version&lt;/font&gt;        2.0.50727&lt;br /&gt;&lt;br /&gt;X-Powered-By        &lt;font color=&#34;red&#34;&gt;ASP.NET&lt;/font&gt;&lt;/font&gt;&lt;/p&gt;
-&lt;br /&gt;&lt;p&gt;&lt;font face=&#34;Verdana&#34;&gt; &lt;/font&gt;&lt;/p&gt;
-&lt;br /&gt;&lt;/p&gt;
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2008/01/25/googleandaspdotnet/</guid>
+      <description>https://survey.google.com/wix/p0621608.aspx
+https://survey.google.com/aaaaaaaaaaaaaa.axd
+
+https://survey.google.com/wix/xxxxxxxxxxxxxxxxxxxxx.ashx
+
+Server Microsoft-IIS/6.0
+X-AspNet-Version 2.0.50727
+X-Powered-By ASP.NET</description>
     </item>
     
     <item>
       <title>Google发布谷歌拼音输入</title>
-      <link>http://huobazi.aspxboy.com/blog/2007/04/04/googlepinyininput/</link>
+      <link>https://huobazi.aspxboy.com/blog/2007/04/04/googlepinyininput/</link>
       <pubDate>Wed, 04 Apr 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2007/04/04/googlepinyininput/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://tools.google.com/pinyin/&#34;&gt;http://tools.google.com/pinyin/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt; &lt;/p&gt;
-&lt;p&gt;终有个好用的 可以在日文系统下用的拼音输入法了。&lt;br /&gt;更酷的是网络同步功能：&lt;/p&gt;
-&lt;p&gt;如果您选择使用网络同步功能，谷歌输入法将个人字典和打字习惯储存在谷歌服务器上，不管您在哪台电脑，您只需登录谷歌帐号就可以恢复您完整的中文输入环境。谷歌拼音输入法是您真正的个性化的输入法。&lt;/p&gt;                
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2007/04/04/googlepinyininput/</guid>
+      <description>http://tools.google.com/pinyin/
+ 终有个好用的 可以在日文系统下用的拼音输入法了。
+更酷的是网络同步功能：
+如果您选择使用网络同步功能，谷歌输入法将个人字典和打字习惯储存在谷歌服务器上，不管您在哪台电脑，您只需登录谷歌帐号就可以恢复您完整的中文输入环境。谷歌拼音输入法是您真正的个性化的输入法。</description>
     </item>
     
     <item>
       <title>Google的Picasa网络相册很弓虽！！！</title>
-      <link>http://huobazi.aspxboy.com/blog/2007/03/21/googlepicasa/</link>
+      <link>https://huobazi.aspxboy.com/blog/2007/03/21/googlepicasa/</link>
       <pubDate>Wed, 21 Mar 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2007/03/21/googlepicasa/</guid>
-      <description>&lt;p&gt;今天试验了一下 功能比较强 &lt;br /&gt;特别是 当机器上未装Picasa时用 Activex 来上传、排序 幻灯片播放等。&lt;br /&gt;一个字 弓虽！&lt;br /&gt;演示：&lt;br /&gt;&lt;a href=&#34;http://picasaweb.google.com/huobazi&#34;&gt;&lt;strong&gt;http://picasaweb.google.com/huobazi&lt;/strong&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;幻灯片：&lt;br /&gt;&lt;a href=&#34;http://picasaweb.google.com/huobazi/NCFAnE/photo#s5044173787206243378&#34;&gt;http://picasaweb.google.com/huobazi/NCFAnE/photo#s5044173787206243378&lt;/a&gt;&lt;/p&gt;               
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2007/03/21/googlepicasa/</guid>
+      <description>今天试验了一下 功能比较强 特别是 当机器上未装Picasa时用 Activex 来上传、排序 幻灯片播放等。
+一个字 弓虽！
+演示：
+http://picasaweb.google.com/huobazi
+幻灯片：
+http://picasaweb.google.com/huobazi/NCFAnE/photo#s5044173787206243378</description>
     </item>
     
     <item>
       <title>Google的网站统计、分析系统</title>
-      <link>http://huobazi.aspxboy.com/blog/2005/11/16/cb-277830/</link>
+      <link>https://huobazi.aspxboy.com/blog/2005/11/16/cb-277830/</link>
       <pubDate>Wed, 16 Nov 2005 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2005/11/16/cb-277830/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://www.google.com/analytics/&#34;&gt;http://www.google.com/analytics/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img style=&#34;width: 287px; height: 264px;&#34; src=&#34;http://huobazi.aspxboy.com/images/hbz_images/836d6e32-fcfe-4aca-896b-16f7763c97cf.jpg&#34; alt=&#34;&#34;&gt;&lt;br /&gt;功能全，比较酷！&lt;/p&gt;                
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2005/11/16/cb-277830/</guid>
+      <description>http://www.google.com/analytics/
+功能全，比较酷！</description>
     </item>
     
   </channel>

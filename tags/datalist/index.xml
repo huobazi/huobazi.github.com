@@ -2,23 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Datalist on 武眉博</title>
-    <link>http://huobazi.aspxboy.com/tags/datalist/</link>
+    <link>https://huobazi.aspxboy.com/tags/datalist/</link>
     <description>Recent content in Datalist on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 11 Dec 2009 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://huobazi.aspxboy.com/tags/datalist/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://huobazi.aspxboy.com/tags/datalist/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Repeater,DataList等嵌套如何绑定父repeater字段?</title>
-      <link>http://huobazi.aspxboy.com/blog/2009/12/11/nested-repeater-parent/</link>
+      <link>https://huobazi.aspxboy.com/blog/2009/12/11/nested-repeater-parent/</link>
       <pubDate>Fri, 11 Dec 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2009/12/11/nested-repeater-parent/</guid>
-      <description>&lt;p&gt;&lt;p&gt;嘿嘿，其实Container有个Parent属性,把它转换为RepeaterItem再取其DataItem&lt;/p&gt;
-&lt;p&gt;DataBinder.Eval(((System.W&lt;/p&gt;
-&lt;div style=&#34;font-size: 9pt; color: #000000; direction: ltr;&#34;&gt;eb.UI.WebControls.Repeat erItem)Container.Parent.Parent.Parent).DataItem&lt;/div&gt;&lt;/p&gt;
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2009/12/11/nested-repeater-parent/</guid>
+      <description>嘿嘿，其实Container有个Parent属性,把它转换为RepeaterItem再取其DataItem
+DataBinder.Eval(((System.W
+eb.UI.WebControls.Repeat erItem)Container.Parent.Parent.Parent).DataItem</description>
+    </item>
+    
+    <item>
+      <title>两个DropDownList在Repeater、DataList、DataGrid内的连动和冒泡事件(BubbleEvent) </title>
+      <link>https://huobazi.aspxboy.com/blog/2006/04/08/twodropdownlistindatagridandbubbleevent/</link>
+      <pubDate>Sat, 08 Apr 2006 00:00:00 +0000</pubDate>
+      
+      <guid>https://huobazi.aspxboy.com/blog/2006/04/08/twodropdownlistindatagridandbubbleevent/</guid>
+      <description>两个DropDownList在Repeater、DataList、DataGrid内的连动和冒泡事件(BubbleEvent)
+问题: http://community.csdn.net/Expert/topic/4670/4670056.xml?temp=3.944033E-02
+刚看第一眼觉得在第一个DDL的SelectedIndexChanged事件内绑定第二个DDL就ok了，页面上写或者ItemDataBound内写事件挂接代码都可以。打开VS写测试却发现有点障碍哦，
+在SelectedIndexChanged内要知道去绑定哪个行哪个列的DDL要费些周折。
+只有从DDL一级一级的向上找Parent最后找到DataGridItem，再利用其ItemIndex定位到行然后FindControl到要绑定的DDL，最终可以实现，好像比较累哦。
+随又想到DataGrid的ItemCommand事件，但发现WebControl内只有ButtonImageButtonLinkButton有CommandName属性和 CommandArgument属性，并可以将事件上浮（冒泡）.DropDownList先天不足！真是郁闷~~~~~ 能不能自己改造呢？动手试试就知道了。
+&amp;lt;%@ Page Language=&#34;C#&#34; Debug=&#34;true&#34; %&amp;gt; &amp;lt;%@ Import Namespace=&#34;System.Data&#34; %&amp;gt; &amp;lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Transitional//EN&#34; &#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&#34;&amp;gt; &amp;lt;html xmlns=&#34;http://www.w3.org/1999/xhtml&#34; xml:lang=&#34;gb2312&#34; lang=&#34;gb2312&#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;title&amp;gt; ItemDataBoundGetColumnName &amp;lt;/title&amp;gt; &amp;lt;meta http-equiv=&#34;Content-Type&#34; content=&#34;text/html; charset=gb2312&#34; /&amp;gt; &amp;lt;meta name=&#34;title&#34; content=&#34;&#34; /&amp;gt; &amp;lt;meta name=&#34;author&#34; content=&#34;活靶子,Huobazi,www.AspxBoy.com&#34; /&amp;gt; &amp;lt;meta name=&#34;subject&#34; content=&#34;&#34; /&amp;gt; &amp;lt;meta name=&#34;language&#34; content=&#34;gb2312&#34; /&amp;gt; &amp;lt;meta name=&#34;keywords&#34; content=&#34;&#34; /&amp;gt; &amp;lt;meta name=&#34;Copyright&#34; content=&#34;www.AspxBoy.com&#34; /&amp;gt; &amp;lt;meta name=&#34;robots&#34; content=&#34;all&#34; /&amp;gt;
+&amp;lt;script language=&#34;c#&#34; runat=&#34;server&#34;&amp;gt; void BindGrid() { DataTable dt = new DataTable(); DataRow dr; dt.</description>
     </item>
     
   </channel>

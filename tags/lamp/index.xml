@@ -2,214 +2,86 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lamp on 武眉博</title>
-    <link>http://huobazi.aspxboy.com/tags/lamp/</link>
+    <link>https://huobazi.aspxboy.com/tags/lamp/</link>
     <description>Recent content in Lamp on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 06 Aug 2011 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://huobazi.aspxboy.com/tags/lamp/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://huobazi.aspxboy.com/tags/lamp/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>在 Ubuntu 下安装 Redis 并使用 init 脚本启动  &amp;&amp; 添加 删除ubuntu自启动服务</title>
-      <link>http://huobazi.aspxboy.com/blog/2011/08/06/ubuntu-redis-init-service-autorun/</link>
+      <link>https://huobazi.aspxboy.com/blog/2011/08/06/ubuntu-redis-init-service-autorun/</link>
       <pubDate>Sat, 06 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2011/08/06/ubuntu-redis-init-service-autorun/</guid>
-      <description>&lt;pre style=&#34;margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; font: normal normal normal 12px/normal Monaco, &#39;Courier New&#39;, &#39;DejaVu Sans Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, monospace;  font-family: &#39;Bitstream Vera Sans Mono&#39;, &#39;Courier New&#39;, monospace; &#34;&gt;&lt;span style=&#34;font-family: helvetica, arial, freesans, clean, sans-serif; line-height: 14px; white-space: normal;&#34;&gt;
-
-&lt;div id=&#34;LC1&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;1. 下载安装：&lt;/div&gt;
-
-&lt;div id=&#34;LC2&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;&lt;/div&gt;
-
-&lt;div id=&#34;LC3&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;cd /tmp&lt;/div&gt;
-
-&lt;div id=&#34;LC4&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;wget http://redis.googlecode.com/files/redis-*.*.*.tar.gz&lt;/div&gt;
-
-&lt;div id=&#34;LC5&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;tar -zxf redis-*.*.*.tar.gz&lt;/div&gt;
-
-&lt;div id=&#34;LC6&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;cd redis-*.*.*&lt;/div&gt;
-
-&lt;div id=&#34;LC7&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;make&lt;/div&gt;
-
-&lt;div id=&#34;LC8&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;sudo make install&lt;/div&gt;
-
-&lt;div id=&#34;LC8&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;&lt;/div&gt;
-
-&lt;div id=&#34;LC9&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;2. 配置init脚本：&lt;/div&gt;
-
-&lt;div id=&#34;LC10&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;&lt;/div&gt;
-
-&lt;div id=&#34;LC11&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;wget https://github.com/ijonas/dotfiles/raw/master/etc/init.d/redis-server&lt;/div&gt;
-
-&lt;div id=&#34;LC12&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;wget https://github.com/ijonas/dotfiles/raw/master/etc/redis.conf&lt;/div&gt;
-
-&lt;div id=&#34;LC13&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;sudo mv redis-server /etc/init.d/redis-server&lt;/div&gt;
-
-&lt;div id=&#34;LC14&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;sudo chmod +x /etc/init.d/redis-server&lt;/div&gt;
-
-&lt;div id=&#34;LC15&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;sudo mv redis.conf /etc/redis.conf&lt;/div&gt;
-
-&lt;div id=&#34;LC15&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;&lt;/div&gt;
-
-&lt;div id=&#34;LC16&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;3. 初始化用户和日志路径&lt;/div&gt;
-
-&lt;div id=&#34;LC17&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;&lt;/div&gt;
-
-&lt;div id=&#34;LC18&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;sudo useradd redis&lt;/div&gt;
-
-&lt;div id=&#34;LC19&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;sudo mkdir -p /var/lib/redis&lt;/div&gt;
-
-&lt;div id=&#34;LC20&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;sudo mkdir -p /var/log/redis&lt;/div&gt;
-
-&lt;div id=&#34;LC21&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;sudo chown redis.redis /var/lib/redis&lt;/div&gt;
-
-&lt;div id=&#34;LC22&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;sudo chown redis.redis /var/log/redis&lt;/div&gt;
-
-&lt;div id=&#34;LC22&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;&lt;/div&gt;
-
-&lt;div id=&#34;LC23&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;4. 启动Redis：&lt;/div&gt;
-
-&lt;div id=&#34;LC24&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;&lt;/div&gt;
-
-&lt;div id=&#34;LC25&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;sudo /etc/init.d/redis-server start&lt;/div&gt;
-
-&lt;div id=&#34;LC25&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;&lt;/div&gt;
-
-&lt;/span&gt;&lt;/pre&gt;
-&lt;pre style=&#34;margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; font: normal normal normal 12px/normal Monaco, &#39;Courier New&#39;, &#39;DejaVu Sans Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, monospace;  font-family: &#39;Bitstream Vera Sans Mono&#39;, &#39;Courier New&#39;, monospace; &#34;&gt;
-&lt;span style=&#34;font-family: helvetica, arial, freesans, clean, sans-serif; line-height: 14px; white-space: normal;&#34;&gt;
-
-&lt;div id=&#34;LC1&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;添加一个服务&lt;/div&gt;
-
-&lt;div id=&#34;LC2&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;#sudo update-rc.d 服务名 defaults 99&lt;/div&gt;
-
-&lt;div id=&#34;LC4&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;删除一个服务&lt;/div&gt;
-
-&lt;div id=&#34;LC5&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;#sudo update-rc.d 服务名 remove&lt;/div&gt;
-
-&lt;div id=&#34;LC7&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;临时重启一个服务&lt;/div&gt;
-
-&lt;div id=&#34;LC8&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;#/etc/init.d/服务名 restart&lt;/div&gt;
-
-&lt;div id=&#34;LC10&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;临时关闭一个服务&lt;/div&gt;
-
-&lt;div id=&#34;LC11&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;#/etc/init.d/服务名 stop&lt;/div&gt;
-
-&lt;div id=&#34;LC13&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;临时启动一个服务&lt;/div&gt;
-
-&lt;div id=&#34;LC14&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;#/etc/init.d/服务名 start&lt;/div&gt;
-
-&lt;/span&gt;
-&lt;/pre&gt;              
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2011/08/06/ubuntu-redis-init-service-autorun/</guid>
+      <description>1. 下载安装：  cd /tmp wget http://redis.googlecode.com/files/redis-*.*.*.tar.gz tar -zxf redis-*.*.*.tar.gz cd redis-*.*.* make sudo make install  2. 配置init脚本：  wget https://github.com/ijonas/dotfiles/raw/master/etc/init.d/redis-server wget https://github.com/ijonas/dotfiles/raw/master/etc/redis.conf sudo mv redis-server /etc/init.d/redis-server sudo chmod +x /etc/init.d/redis-server sudo mv redis.conf /etc/redis.conf  3. 初始化用户和日志路径  sudo useradd redis sudo mkdir -p /var/lib/redis sudo mkdir -p /var/log/redis sudo chown redis.redis /var/lib/redis sudo chown redis.redis /var/log/redis  4. 启动Redis：  sudo /etc/init.d/redis-server start   添加一个服务 #sudo update-rc.</description>
     </item>
     
     <item>
       <title>在ubuntu上配置 nginx和php&#43;fastcgi</title>
-      <link>http://huobazi.aspxboy.com/blog/2011/01/01/ubuntu-nginx-php-fastcgi/</link>
+      <link>https://huobazi.aspxboy.com/blog/2011/01/01/ubuntu-nginx-php-fastcgi/</link>
       <pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2011/01/01/ubuntu-nginx-php-fastcgi/</guid>
-      <description>&lt;p&gt;(1)安装php5&lt;br /&gt;apt-get install php5 php-pear php5-cli php5-common php5-xcache php5-cgi php5-mysql php5-curl  php5-gd  php5-imagick  php5-xmlrpc  php5-dev php5-memcache&lt;br /&gt;(2)安装nginx&lt;br /&gt;apt-get install nginx&lt;br /&gt;(3)安装spawn-fcgi&lt;br /&gt; apt-get install spawn-fcgi&lt;br /&gt;(4)设置，也是最头疼滴地方哦&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;在/etc/nginx/fastcgi_params 文件最后，加入一行，可以用sudo gedit /etc/nginx/fastcgi_params打开文件&lt;br /&gt;&lt;strong&gt;fastcgi_param SCRIPT_FILENAME     $document_root$fastcgi_script_name;&lt;/strong&gt;&lt;br /&gt;设置php.ini的 cgi.fix_pathinfo=1;doc_root=&lt;br /&gt;拷贝/etc/nginx/sites-availab修改本机hosts文件，指定一个域名&lt;br /&gt;修改server_name&lt;br /&gt;在server_name同级增加root 设置为网站根目录&lt;br /&gt;location里 加上 index.php&lt;br /&gt;php的fast-cgi配置&lt;/p&gt;
-&lt;p&gt;&lt;span style=&#34;color: #fff; background-color:#000;&#34;&gt;    location ~ \.php$ {&lt;br /&gt;        fastcgi_pass   127.0.0.1:9000;&lt;br /&gt;        fastcgi_index  index.php;&lt;br /&gt;        include fastcgi_params;     &lt;br /&gt;    }&lt;/span&gt;&lt;br /&gt;$ sudo killall -HUP php5-cgi&lt;br /&gt;$ sudo /usr/bin/spawn-fcgi -a 127.0.0.1 -p 9000 -C 5 -u www-data -g www-data -f /usr/bin/php5-cgi -P /var/run/fastcgi-php.pid&lt;br /&gt;$ /etc/init.d# sudo /etc/init.d/nginx restart &lt;br /&gt;在网站内放个phpinfo测试一下，ok了。&lt;/p&gt;                
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2011/01/01/ubuntu-nginx-php-fastcgi/</guid>
+      <description>&lt;p&gt;(1)安装php5&lt;br /&gt;apt-get install php5 php-pear php5-cli php5-common php5-xcache php5-cgi php5-mysql php5-curl  php5-gd  php5-imagick  php5-xmlrpc  php5-dev php5-memcache&lt;br /&gt;(2)安装nginx&lt;br /&gt;apt-get install nginx&lt;br /&gt;(3)安装spawn-fcgi&lt;br /&gt; apt-get install spawn-fcgi&lt;br /&gt;(4)设置，也是最头疼滴地方哦&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>在ubuntu上配置 nginx和php&#43;fastcgi</title>
-      <link>http://huobazi.aspxboy.com/blog/2011/01/01/ubuntu-nginx-php-fastcgi/</link>
+      <link>https://huobazi.aspxboy.com/blog/2011/01/01/ubuntu-nginx-php-fastcgi/</link>
       <pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2011/01/01/ubuntu-nginx-php-fastcgi/</guid>
-      <description>&lt;p&gt;(1)安装php5&lt;br /&gt;apt-get install php5 php-pear php5-cli php5-common php5-xcache php5-cgi php5-mysql php5-curl  php5-gd  php5-imagick  php5-xmlrpc  php5-dev php5-memcache&lt;br /&gt;(2)安装nginx&lt;br /&gt;apt-get install nginx&lt;br /&gt;(3)安装spawn-fcgi&lt;br /&gt; apt-get install spawn-fcgi&lt;br /&gt;(4)设置，也是最头疼滴地方哦&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;在/etc/nginx/fastcgi_params 文件最后，加入一行，可以用sudo gedit /etc/nginx/fastcgi_params打开文件&lt;br /&gt;&lt;strong&gt;fastcgi_param SCRIPT_FILENAME     $document_root$fastcgi_script_name;&lt;/strong&gt;&lt;br /&gt;设置php.ini的 cgi.fix_pathinfo=1;doc_root=&lt;br /&gt;拷贝/etc/nginx/sites-availab修改本机hosts文件，指定一个域名&lt;br /&gt;修改server_name&lt;br /&gt;在server_name同级增加root 设置为网站根目录&lt;br /&gt;location里 加上 index.php&lt;br /&gt;php的fast-cgi配置&lt;/p&gt;
-&lt;p&gt;&lt;span style=&#34;color: #fff; background-color:#000;&#34;&gt;    location ~ \.php$ {&lt;br /&gt;        fastcgi_pass   127.0.0.1:9000;&lt;br /&gt;        fastcgi_index  index.php;&lt;br /&gt;        include fastcgi_params;     &lt;br /&gt;    }&lt;/span&gt;&lt;br /&gt;$ sudo killall -HUP php5-cgi&lt;br /&gt;$ sudo /usr/bin/spawn-fcgi -a 127.0.0.1 -p 9000 -C 5 -u www-data -g www-data -f /usr/bin/php5-cgi -P /var/run/fastcgi-php.pid&lt;br /&gt;$ /etc/init.d# sudo /etc/init.d/nginx restart &lt;br /&gt;在网站内放个phpinfo测试一下，ok了。&lt;/p&gt;                
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2011/01/01/ubuntu-nginx-php-fastcgi/</guid>
+      <description>&lt;p&gt;(1)安装php5&lt;br /&gt;apt-get install php5 php-pear php5-cli php5-common php5-xcache php5-cgi php5-mysql php5-curl  php5-gd  php5-imagick  php5-xmlrpc  php5-dev php5-memcache&lt;br /&gt;(2)安装nginx&lt;br /&gt;apt-get install nginx&lt;br /&gt;(3)安装spawn-fcgi&lt;br /&gt; apt-get install spawn-fcgi&lt;br /&gt;(4)设置，也是最头疼滴地方哦&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>VirtualBox内的Linux和宿主Windows的文件共享</title>
-      <link>http://huobazi.aspxboy.com/blog/2010/12/25/virtualbox-linux-windows-share/</link>
+      <link>https://huobazi.aspxboy.com/blog/2010/12/25/virtualbox-linux-windows-share/</link>
       <pubDate>Sat, 25 Dec 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2010/12/25/virtualbox-linux-windows-share/</guid>
-      <description>&lt;p&gt;VirtualBox内的Linux和宿主Windows的文件共享&lt;br /&gt;（1）安装增强功能&lt;br /&gt;（2）分配数据空间，制定一个名称，假设为“temp”&lt;br /&gt;（3）挂载， mount -t vboxsf temp /mnt&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;OK了&lt;br /&gt;另外，反之共享Linux路径，然后在windows内映射网络驱动器即可。&lt;/p&gt;
-&lt;p&gt;BTW:使用http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html内的PSCP.exe也可以&lt;br /&gt;但我没有去试验。&lt;strong&gt;&lt;/strong&gt;&lt;/p&gt;                
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2010/12/25/virtualbox-linux-windows-share/</guid>
+      <description>&lt;p&gt;VirtualBox内的Linux和宿主Windows的文件共享&lt;br /&gt;（1）安装增强功能&lt;br /&gt;（2）分配数据空间，制定一个名称，假设为“temp”&lt;br /&gt;（3）挂载， mount -t vboxsf temp /mnt&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>在centos上装rubyee,passenger和memcached ,搭建rails环境</title>
-      <link>http://huobazi.aspxboy.com/blog/2010/07/24/ruby-on-rails-nginx-passenger-memcached-on-centos/</link>
+      <link>https://huobazi.aspxboy.com/blog/2010/07/24/ruby-on-rails-nginx-passenger-memcached-on-centos/</link>
       <pubDate>Sat, 24 Jul 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2010/07/24/ruby-on-rails-nginx-passenger-memcached-on-centos/</guid>
+      <guid>https://huobazi.aspxboy.com/blog/2010/07/24/ruby-on-rails-nginx-passenger-memcached-on-centos/</guid>
       <description>&lt;p&gt;流水笔记一则.&lt;/p&gt;
 &lt;p&gt;我之前已在服务器配置了nginx，php，mysql等，现在先安装ruby企业版&lt;/p&gt;
 &lt;div class=&#34;source&#34; style=&#39;font-family: &#34;[object HTMLOptionElement]&#34;,&#34;Consolas&#34;,&#34;Lucida Console&#34;,&#34;Courier New&#34;; color: #c0c0c0; background-color: #000000;&#39;&gt;
 &lt;span style=&#34;color: #c0c0c0;&#34;&gt;cd&lt;/span&gt;&lt;span style=&#34;color: #00bbbb;&#34;&gt; /tmp&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #00bbbb;&#34;&gt;wget http:/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;rubyforge&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;org&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;frs&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;download&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;php&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;71096&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;ruby&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;enterprise&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;8&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;7&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;2010&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;02&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;tar&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;gz&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;tar&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;xzvf&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;ruby&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;enterprise&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;8&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;7&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;2010&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;02&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;tar&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;gz&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;ruby&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;enterprise&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;8&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;7&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;2010&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;02&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/installer&lt;/span&gt;
 &lt;/div&gt;
-&lt;p&gt;然后按照提示做&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;设置一下环境变量 &lt;br /&gt;export PATH=/rubyee/bin:$PATH&lt;br /&gt;接着&lt;br /&gt;ruby -v&lt;br /&gt;gem -v&lt;br /&gt;看到版本号，说明rubyee 安装ok&lt;/p&gt;
-&lt;p&gt;下来&lt;br /&gt;gem install passenger&lt;br /&gt;passenger-install-nginx-module&lt;/p&gt;
-&lt;p&gt;按照提示在nginx配置文件里增加：&lt;/p&gt;
-&lt;div class=&#34;source&#34; style=&#39;font-family: &#34;[object HTMLOptionElement]&#34;,&#34;Consolas&#34;,&#34;Lucida Console&#34;,&#34;Courier New&#34;; color: #c0c0c0; background-color: #000000;&#39;&gt;
-&lt;p&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;http&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;{&lt;/span&gt;&lt;br /&gt;     &lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;br /&gt;     &lt;span style=&#34;color: #c0c0c0;&#34;&gt;passenger_root&lt;/span&gt;&lt;span style=&#34;color: #00bbbb;&#34;&gt; /rubyee/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;lib&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;ruby&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;gems&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;8&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;gems&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;passenger&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;14&lt;/span&gt;;&lt;br /&gt;     &lt;span style=&#34;color: #c0c0c0;&#34;&gt;passenger_ruby&lt;/span&gt;&lt;span style=&#34;color: #00bbbb;&#34;&gt; /rubyee/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;bin&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;ruby&lt;/span&gt;;&lt;br /&gt;     &lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;}&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;  &lt;span style=&#34;color: #c0c0c0;&#34;&gt;server&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;{&lt;/span&gt;&lt;br /&gt;     &lt;span style=&#34;color: #c0c0c0;&#34;&gt;listen&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;80&lt;/span&gt;;&lt;br /&gt;     &lt;span style=&#34;color: #c0c0c0;&#34;&gt;server_name&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;www&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;yourhost&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;com&lt;/span&gt;;&lt;br /&gt;     &lt;span style=&#34;color: #c0c0c0;&#34;&gt;root&lt;/span&gt;&lt;span style=&#34;color: #00bbbb;&#34;&gt; /somewhere/&lt;/span&gt;&lt;span style=&#34;color: #00ffff; font-weight: bold;&#34;&gt;public&lt;/span&gt;;   &lt;span style=&#34;color: #696969;&#34;&gt;# &amp;lt;--- be sure to point to &#39;public&#39;!&lt;/span&gt;&lt;br /&gt;     &lt;span style=&#34;color: #c0c0c0;&#34;&gt;passenger_enabled&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;on&lt;/span&gt;;&lt;br /&gt;  &lt;span style=&#34;color: #c0c0c0;&#34;&gt;}&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;rails 欧了~&lt;/p&gt;
-&lt;p&gt;下来开始装 memcached,&lt;/p&gt;
-&lt;p&gt;memcached 的使用需要libeven的支持&lt;/p&gt;
-&lt;div class=&#34;source&#34; style=&#39;font-family: &#34;[object HTMLOptionElement]&#34;,&#34;Consolas&#34;,&#34;Lucida Console&#34;,&#34;Courier New&#34;; color: #c0c0c0; background-color: #000000;&#39;&gt;
-&lt;p&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;cd&lt;/span&gt;&lt;span style=&#34;color: #00bbbb;&#34;&gt; /tmp&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #00bbbb;&#34;&gt;wget http:/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;www&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;monkey&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;org&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/~&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;provos&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;libevent&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;4&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;14&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;a&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;stable&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;tar&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;gz&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;tar&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;zxvf&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;libevent&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;4&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;14&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;a&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;stable&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;tar&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;gz&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;libevent&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;4&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;14&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;stable&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/configure&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;prefix&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #00bbbb;&#34;&gt;/usr&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #00bbbb;&#34;&gt;make &amp;amp;&amp;amp; make install&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&#34;color: #00bbbb;&#34;&gt;cd /&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;tmp&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;wget&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;http&lt;/span&gt;&lt;span style=&#34;color: #00bbbb;&#34;&gt;:/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;memcached&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;org&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;latest&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;tar&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;zxvf&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;memcached&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;4&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;5&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;tar&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;gz&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;memcached&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;4&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;5&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/configure&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;prefix&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #00bbbb;&#34;&gt;/usr/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;local&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;make&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;make&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;install&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt; 现在可以用&lt;br /&gt;service memcached start  &lt;/p&gt;
-&lt;p&gt;和&lt;br /&gt;  service memcached stop  &lt;/p&gt;
-&lt;p&gt;这两个很骚的命令来管理memcached服务了,欧了~&lt;/p&gt;
-&lt;p&gt;安装mysql gem&lt;br /&gt;gem install --no-rdoc --no-ri mysql -- --with-mysql-dir=/usr/local/mysql --with-mysql-config=/usr/local/mysql/bin/mysql_config&lt;/p&gt;
-&lt;p&gt;安装 ImageMagick&lt;/p&gt;
-&lt;div class=&#34;source&#34; style=&#39;font-family: &#34;[object HTMLOptionElement]&#34;,&#34;Consolas&#34;,&#34;Lucida Console&#34;,&#34;Courier New&#34;; color: #c0c0c0; background-color: #000000;&#39;&gt;
-&lt;p&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;wget&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;ftp&lt;/span&gt;&lt;span style=&#34;color: #00bbbb;&#34;&gt;:/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;ftp&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;imagemagick&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;org&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;pub&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #00ffff;&#34;&gt;ImageMagick&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #00ffff;&#34;&gt;ImageMagick&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;tar&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;gz&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;tar&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;xvfz&lt;/span&gt; &lt;span style=&#34;color: #00ffff;&#34;&gt;ImageMagick&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;tar&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;gz&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color: #00ffff;&#34;&gt;ImageMagick&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;*&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/configure&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;disable&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;with&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;modules&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;with&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;gs&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;font&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;dir&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #00bbbb;&#34;&gt;/usr/s&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;hare&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;fonts&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;type1&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;gsfonts&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;make&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;sudo&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;make&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;install&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;rm&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #00ffff;&#34;&gt;Rf&lt;/span&gt; &lt;span style=&#34;color: #00ffff;&#34;&gt;ImageMagick&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;*&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;wget&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;http&lt;/span&gt;&lt;span style=&#34;color: #00bbbb;&#34;&gt;:/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;rubyforge&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;org&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;frs&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;download&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;php&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;70067&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #00ffff;&#34;&gt;RMagick&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;13&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;tar&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;bz2&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;tar&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;jxf&lt;/span&gt; &lt;span style=&#34;color: #00ffff;&#34;&gt;RMagick&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;13&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;tar&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;bz2&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color: #00ffff;&#34;&gt;RMagick&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;*&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/configure&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;disable&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;with&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;modules&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;without&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;perl&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;without&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;magick&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;plus&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;plus&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;with&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;jpeg&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;yes&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;with&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;png&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;yes&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;with&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;tiff&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;yes&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;with&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;quantum&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;depth&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;8&lt;/span&gt;  &lt;span style=&#34;color: #c0c0c0;&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;with&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;gs&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;font&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;dir&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #00bbbb;&#34;&gt;/usr/s&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;hare&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;fonts&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;type1&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;gsfonts&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;ruby&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;setup&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;rb&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;ruby&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;setup&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;rb&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;install&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;.&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;rm&lt;/span&gt; &lt;span style=&#34;color: #c0c0c0;&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #00ffff;&#34;&gt;Rf&lt;/span&gt; &lt;span style=&#34;color: #00ffff;&#34;&gt;RMagick&lt;/span&gt;&lt;span style=&#34;color: #c0c0c0;&#34;&gt;*&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;最后 上传 rails 程序&lt;br /&gt;接着 rake gems:install&lt;/p&gt;
-&lt;p&gt;centos安装rmagick出现以下错误：&lt;br /&gt;libMagickCore.so.2: cannot open shared object file: No such file or directory – /usr/lib/ruby/gems/1.8/gems/rmagick-2.8.0/lib/RMagick2.so&lt;br /&gt;解决办法：&lt;/p&gt;
-&lt;p&gt;ldconfig /usr/local/lib&lt;/p&gt;
-&lt;p&gt;错误[memcache-client] Could not load SystemTimer gem, falling back to Ruby&#39;s slower/unsafe timeout library: no such file to load -- system_timer&lt;br /&gt;rake aborted!&lt;/p&gt;
-&lt;p&gt;sudo gem install system_timer&lt;/p&gt;
-&lt;p&gt;Magick::ImageMagickError (unable to read font `/usr/local/lib/ImageMagick-6.6.3/config//usr/share/fonts/type1/gsfonts/n019003l.pfb&#39; @ error/annotate.c/RenderFreetype/1056: `(null)&#39;):&lt;br /&gt;错误&lt;/p&gt;
-&lt;p&gt;wget http://sourceforge.net/projects/gs-fonts/files/gs-fonts/8.11%20%28base%2035%2C%20GPL%29/ghostscript-fonts-std-8.11.tar.gz/download&lt;br /&gt; tar -zxvf ghostscript-fonts-std-8.11.tar.gz&lt;br /&gt;解压后拷贝到需要的目录&lt;/p&gt;               
-</description>
+&lt;p&gt;然后按照提示做&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>win7上安装memcache</title>
-      <link>http://huobazi.aspxboy.com/blog/2010/04/13/win7-memcache/</link>
+      <link>https://huobazi.aspxboy.com/blog/2010/04/13/win7-memcache/</link>
       <pubDate>Tue, 13 Apr 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2010/04/13/win7-memcache/</guid>
-      <description>&lt;p&gt;像原来在xp下装一样&lt;/p&gt;
-&lt;p&gt;memcached.exe -d install&lt;br /&gt;memcached.exe -d start&lt;/p&gt;
-&lt;p&gt;报错“ failed to install service or service already installed”&lt;/p&gt;
-&lt;p&gt;解决方法：&lt;/p&gt;
-&lt;p&gt;管理员身份安装，首先找出cmd.exe的原文件（在c:\windows\system32\cmd.exe)，&lt;/p&gt;
-&lt;p&gt;右击以管理员进入，接下来的步骤就和xp安装方法一样了&lt;/p&gt;               
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2010/04/13/win7-memcache/</guid>
+      <description>像原来在xp下装一样
+memcached.exe -d install
+memcached.exe -d start
+报错“ failed to install service or service already installed”
+解决方法：
+管理员身份安装，首先找出cmd.exe的原文件（在c:\windows\system32\cmd.exe)，
+右击以管理员进入，接下来的步骤就和xp安装方法一样了</description>
     </item>
     
     <item>
       <title>在rails中不同的view不同皮肤下的js，css，注入js和css到head区域</title>
-      <link>http://huobazi.aspxboy.com/blog/2010/03/30/hwo-to-injecting-themes-css-javascript-to-header-in-rails/</link>
+      <link>https://huobazi.aspxboy.com/blog/2010/03/30/hwo-to-injecting-themes-css-javascript-to-header-in-rails/</link>
       <pubDate>Tue, 30 Mar 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2010/03/30/hwo-to-injecting-themes-css-javascript-to-header-in-rails/</guid>
+      <guid>https://huobazi.aspxboy.com/blog/2010/03/30/hwo-to-injecting-themes-css-javascript-to-header-in-rails/</guid>
       <description>&lt;p&gt;利用layout可以很好实现这个需求.&lt;/p&gt;
 &lt;p&gt;在ApplicationHelper内加入如下代码：&lt;/p&gt;
 &lt;div class=&#34;source&#34; style=&#39;font-family: &#34;[object HTMLOptionElement]&#34;,&#34;Consolas&#34;,&#34;Lucida Console&#34;,&#34;Courier New&#34;; color: #e6e1dc; background-color: #111111;&#39;&gt;
@@ -219,205 +91,217 @@
 &lt;p&gt;   &lt;span style=&#34;color: #cc7833;&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #ffc66d;&#34;&gt;include_css_tag&lt;/span&gt;(&lt;span style=&#34;color: #e6e1dc;&#34;&gt;path&lt;/span&gt;)&lt;br /&gt;    &lt;span style=&#34;color: #cc7833;&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;not&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;path&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;starts_with?&lt;/span&gt;(&lt;span style=&#34;color: #a5c261;&#34;&gt;&#34;http:&#34;&lt;/span&gt;)&lt;br /&gt;      &lt;span style=&#34;color: #e6e1dc;&#34;&gt;path&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #a5c261;&#34;&gt;&#34;/themes/&lt;/span&gt;&lt;span style=&#34;color: #a5c261;&#34;&gt;#{&lt;/span&gt;&lt;span style=&#34;color: #6d9cbe;&#34;&gt;@setting&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #a5c261;&#34;&gt;:theme&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color: #a5c261;&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color: #a5c261;&#34;&gt;/stylesheets/&#34;&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;path&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #cc7833;&#34;&gt;end&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;color: #e6e1dc;&#34;&gt;stylesheet_link_tag&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;path&lt;/span&gt;&lt;br /&gt;  &lt;span style=&#34;color: #cc7833;&#34;&gt;end&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;(如果你要直接在view或者layout内引入css则可以&amp;lt;%= include_css_tag &#34;global.css&#34; %&amp;gt;，这样生成的路径是带有皮肤目录的）&lt;/p&gt;
-&lt;p&gt;接下来，修改你的layout的head，加入如下代码：&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;&amp;lt;%= yield :header_js %&amp;gt;&lt;br /&gt;&amp;lt;%= yield :header_css %&amp;gt;&lt;/p&gt;
-&lt;p&gt;然后在需要引入js的View内&lt;/p&gt;
-&lt;p&gt;&amp;lt;% require_js &#34;jquery/jquery.tools.min.js&#34; %&amp;gt;&lt;br /&gt;&amp;lt;% require_js &#34;jquery/jquery.colorbox.min.js&#34; %&amp;gt;&lt;/p&gt;
-&lt;p&gt;最后run一下，你会看到会在html的head内生成如下html&lt;/p&gt;
-&lt;p&gt;&amp;lt;script src=&#34;http://huobazi.aspxboy.com/themes/2010v1/javascripts/jquery/jquery.tools.min.js?1269949149&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;&lt;br /&gt;&amp;lt;script src=&#34;http://huobazi.aspxboy.com/themes/2010v1/javascripts/jquery/jquery.colorbox.min.js?1269949147&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;&lt;/p&gt;
-&lt;p&gt; &lt;/p&gt;
-&lt;p&gt; &lt;/p&gt;                
-</description>
+&lt;p&gt;接下来，修改你的layout的head，加入如下代码：&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>优化Rails数据库查询性能 -- rails_reviewer插件</title>
-      <link>http://huobazi.aspxboy.com/blog/2010/01/21/rails-review-on-rails/</link>
+      <link>https://huobazi.aspxboy.com/blog/2010/01/21/rails-review-on-rails/</link>
       <pubDate>Thu, 21 Jan 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2010/01/21/rails-review-on-rails/</guid>
-      <description>&lt;p&gt;发现一个很棒的插件&lt;a href=&#34;http://github.com/dsboulder/query_reviewer&#34; target=&#34;_blank&#34;&gt; rails_reviewer&lt;/a&gt;插件&lt;/p&gt;
-&lt;p&gt;安装:&lt;/p&gt;
-&lt;div class=&#34;source&#34; style=&#39;font-family: &#34;[object HTMLOptionElement]&#34;,&#34;Consolas&#34;,&#34;Lucida Console&#34;,&#34;Courier New&#34;; color: #e6e1dc; background-color: #111111;&#39;&gt;
-&lt;span style=&#34;color: #e6e1dc;&#34;&gt;$&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;script&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;plugin&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;install&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;git&lt;/span&gt;&lt;span style=&#34;color: #a5c261;&#34;&gt;:/&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;github&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;com&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;dsboulder&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;query_reviewer&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;git&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;color: #e6e1dc;&#34;&gt;$&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;rake&lt;/span&gt; &lt;span style=&#34;color: #e6e1dc;&#34;&gt;query_reviewer&lt;/span&gt;&lt;span style=&#34;color: #a5c261;&#34;&gt;:setup&lt;/span&gt;
-&lt;/div&gt;
-&lt;p&gt;完毕后重启server,页面左上角浮动一个SQL CRITICAL浮动窗口，里面记录页面加载时执行的所有SQL以及优化建议等。&lt;/p&gt;
-&lt;p&gt;强烈推荐 !!!&lt;/p&gt;             
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2010/01/21/rails-review-on-rails/</guid>
+      <description>发现一个很棒的插件rails_reviewer插件
+安装:
+$ script/plugin install git://github.com/dsboulder/query_reviewer.git
+$ rake query_reviewer:setup  完毕后重启server,页面左上角浮动一个SQL CRITICAL浮动窗口，里面记录页面加载时执行的所有SQL以及优化建议等。
+强烈推荐 !!!</description>
     </item>
     
     <item>
       <title>rails里Mysql::Error: query: not connected</title>
-      <link>http://huobazi.aspxboy.com/blog/2010/01/15/rails-mysqlerror-query-not-connected/</link>
+      <link>https://huobazi.aspxboy.com/blog/2010/01/15/rails-mysqlerror-query-not-connected/</link>
       <pubDate>Fri, 15 Jan 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2010/01/15/rails-mysqlerror-query-not-connected/</guid>
+      <guid>https://huobazi.aspxboy.com/blog/2010/01/15/rails-mysqlerror-query-not-connected/</guid>
       <description>&lt;p&gt;从ubuntu换回了win7后又慢慢开始折腾以前在本本上跑的一些LAMP网站， php和 mysql还是用以前的xampp里的，仍然可以用。&lt;/p&gt;
-&lt;p&gt;重装了 ruby 1.8.6, rails 2.3.5 等...发现运行rails网站，弹出messagebox提示找不到libmysql.dll尝试把mysql/bin里的dll来regsvr32，不可，直接拷贝到system32目录下错误没了，但打开网站仍然报错，终端显示“Mysql::Error: query: not connected....&#34;&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;google来了结果&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://topic.csdn.net/u/20090823/12/2775f2e7-a73a-45b3-a047-5ed9330871cd.html&#34; target=&#34;_blank&#34;&gt;http://topic.csdn.net/u/20090823/12/2775f2e7-a73a-45b3-a047-5ed9330871cd.html&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://xiaolife.com/wordpress/rails-2-3-dbmigrate-issue-with-mysql-5-1-3/&#34; target=&#34;_blank&#34;&gt;http://xiaolife.com/wordpress/rails-2-3-dbmigrate-issue-with-mysql-5-1-3/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;猛然间想起来这些个问题上次玩的时候也出现过，真晕，还是写下来，希望SY一遍胜过脑子记忆千遍吧&lt;/p&gt;               
-</description>
+&lt;p&gt;重装了 ruby 1.8.6, rails 2.3.5 等...发现运行rails网站，弹出messagebox提示找不到libmysql.dll尝试把mysql/bin里的dll来regsvr32，不可，直接拷贝到system32目录下错误没了，但打开网站仍然报错，终端显示“Mysql::Error: query: not connected....&#34;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>rails中的ActiveRecord真性感！</title>
-      <link>http://huobazi.aspxboy.com/blog/2009/09/24/sexy-activerecord/</link>
+      <link>https://huobazi.aspxboy.com/blog/2009/09/24/sexy-activerecord/</link>
       <pubDate>Thu, 24 Sep 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2009/09/24/sexy-activerecord/</guid>
+      <guid>https://huobazi.aspxboy.com/blog/2009/09/24/sexy-activerecord/</guid>
       <description>&lt;p&gt;Rails使用的ActiveRecord真性感啊，see see吧&lt;/p&gt;
 &lt;div class=&#34;source&#34; style=&#34;COLOR: #dcdccc; FONT-FAMILY: &#39;[object]&#39;,&#39;Consolas&#39;,&#39;Lucida Console&#39;,&#39;Courier New&#39;; BACKGROUND-COLOR: #3f3f3f&#34;&gt;
 &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;User&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;FONT-WEIGHT: bold; COLOR: #dca3a3&#34;&gt;ActiveRecord&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;FONT-WEIGHT: bold; COLOR: #dca3a3&#34;&gt;Base&lt;/span&gt;  &lt;br /&gt;  &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;has_many&lt;/span&gt; &lt;span style=&#34;COLOR: #cc9393&#34;&gt;:articles&lt;/span&gt;  &lt;br /&gt;&lt;span style=&#34;COLOR: #e3ceab&#34;&gt;end&lt;/span&gt;  &lt;br /&gt; &lt;br /&gt;&lt;span style=&#34;COLOR: #e3ceab&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;Article&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;FONT-WEIGHT: bold; COLOR: #dca3a3&#34;&gt;ActiveRecord&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;FONT-WEIGHT: bold; COLOR: #dca3a3&#34;&gt;Base&lt;/span&gt;&lt;br /&gt;  &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;belongs_to&lt;/span&gt; &lt;span style=&#34;COLOR: #cc9393&#34;&gt;:user&lt;/span&gt;  &lt;br /&gt;&lt;span style=&#34;COLOR: #e3ceab&#34;&gt;end&lt;/span&gt;
 &lt;/div&gt;
-&lt;p&gt;然后执行&lt;br /&gt;&amp;gt;&amp;gt; &lt;strong&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;Article.find(1)&lt;/span&gt; &lt;/strong&gt;会得到延迟加载user对象的sql语句。如下：&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;div class=&#34;source&#34; style=&#34;COLOR: #dcdccc; FONT-FAMILY: &#39;[object]&#39;,&#39;Consolas&#39;,&#39;Lucida Console&#39;,&#39;Courier New&#39;; BACKGROUND-COLOR: #3f3f3f&#34;&gt;
-&lt;span style=&#34;COLOR: #e3ceab&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;WHERE&lt;/span&gt; (&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;id&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;COLOR: #8cd0d3&#34;&gt;1&lt;/span&gt;) &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;LIMIT&lt;/span&gt; &lt;span style=&#34;COLOR: #8cd0d3&#34;&gt;1&lt;/span&gt;
-&lt;/div&gt;
-&lt;p&gt;当需要访问user对象时，比如用article.user.name会再生成一个sql语句请求数据库。&lt;br /&gt;如果执行&lt;br /&gt;&amp;gt;&amp;gt; &lt;strong&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;Article.find(1,:include =&amp;gt; :user)&lt;/span&gt;&lt;/strong&gt; 会得到一次性加载了user的查询&lt;/p&gt;
-&lt;div class=&#34;source&#34; style=&#34;COLOR: #dcdccc; FONT-FAMILY: &#39;[object]&#39;,&#39;Consolas&#39;,&#39;Lucida Console&#39;,&#39;Courier New&#39;; BACKGROUND-COLOR: #3f3f3f&#34;&gt;
-&lt;span style=&#34;COLOR: #e3ceab&#34;&gt;SELECT&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;extended_html&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r6&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;excerpt&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r7&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;keywords&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r8&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;allow_pings&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r10&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;allow_comments&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r9&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;users&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t1_r0&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;published&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r11&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;users&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;login&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t1_r1&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;text_filter&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r12&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r0&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;users&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;password&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t1_r2&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;user_id&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r13&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;title&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r1&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;users&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t1_r3&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;created_at&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r14&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;author&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r2&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;users&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;email&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t1_r4&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;updated_at&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r15&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;body&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r3&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;permalink&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r16&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;body_html&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r4&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;guid&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r17&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;extended&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;t0_r5&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #e3ceab&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;LEFT&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;OUTER&lt;/span&gt; &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;JOIN&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;users&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #e3ceab&#34;&gt;ON&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;users&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;id&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;user_id&lt;/span&gt;&lt;br /&gt;&lt;span style=&#34;COLOR: #e3ceab&#34;&gt;WHERE&lt;/span&gt; (&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;articles&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;id&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;COLOR: #8cd0d3&#34;&gt;1&lt;/span&gt;)&lt;/div&gt;
-&lt;p&gt;是不是很优美，很性感涅？&lt;/p&gt;
-&lt;p&gt; &lt;/p&gt;                
-</description>
+&lt;p&gt;然后执行&lt;br /&gt;&amp;gt;&amp;gt; &lt;strong&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;Article.find(1)&lt;/span&gt; &lt;/strong&gt;会得到延迟加载user对象的sql语句。如下：&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Mysql adapter on Rails 2.3.3</title>
-      <link>http://huobazi.aspxboy.com/blog/2009/08/29/mysql-adapter-on-rails-2-3-3/</link>
+      <link>https://huobazi.aspxboy.com/blog/2009/08/29/mysql-adapter-on-rails-2-3-3/</link>
       <pubDate>Sat, 29 Aug 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2009/08/29/mysql-adapter-on-rails-2-3-3/</guid>
-      <description>&lt;p&gt;安装好Ruby on Rails 2.3.3后，运行简单的页面提示如下错误“&lt;span style=&#34;color: #ff0000;&#34;&gt;&lt;strong&gt;The bundled mysql.rb driver has been removed from Rails 2.2. Please install the mysql gem and try again: gem install mysql”&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt; gem 了n次也不成，搞了一早上，才google到一个比较山寨的方法解决&lt;/p&gt;
-&lt;pre&gt;1.  download older MySQL client library, for example one from InstantRails: http://instantrails.rubyforge.org/svn/trunk/InstantRails-win/InstantRails/mysql/bin/libmySQL.dll
-
-2.  copy the downloaded file to C:\Ruby\bin (or wherever you installed Ruby) 
-
-3. restart MySQL server&lt;/pre&gt;
-&lt;p&gt;另参考：&lt;a href=&#34;http://www.ruby-forum.com/topic/160358&#34;&gt;http://www.ruby-forum.com/topic/160358&lt;/a&gt;和&lt;a href=&#34;http://rdc.taobao.com/blog/qa/?p=523&#34;&gt;http://rdc.taobao.com/blog/qa/?p=523&lt;/a&gt;&lt;/p&gt;              
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2009/08/29/mysql-adapter-on-rails-2-3-3/</guid>
+      <description>安装好Ruby on Rails 2.3.3后，运行简单的页面提示如下错误“The bundled mysql.rb driver has been removed from Rails 2.2. Please install the mysql gem and try again: gem install mysql”
+ gem 了n次也不成，搞了一早上，才google到一个比较山寨的方法解决
+1. download older MySQL client library, for example one from InstantRails: http://instantrails.rubyforge.org/svn/trunk/InstantRails-win/InstantRails/mysql/bin/libmySQL.dll 2. copy the downloaded file to C:\Ruby\bin (or wherever you installed Ruby) 3. restart MySQL server 另参考：http://www.ruby-forum.com/topic/160358和http://rdc.taobao.com/blog/qa/?p=523</description>
     </item>
     
     <item>
       <title>python的对象驻留</title>
-      <link>http://huobazi.aspxboy.com/blog/2009/08/21/python-object-interning/</link>
+      <link>https://huobazi.aspxboy.com/blog/2009/08/21/python-object-interning/</link>
       <pubDate>Fri, 21 Aug 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2009/08/21/python-object-interning/</guid>
-      <description>&lt;p&gt;在C#中为了提高性能使用了&lt;a title=&#34;字符串驻留&#34; href=&#34;http://www.google.com.sg/search?hl=zh-CN&amp;amp;source=hp&amp;amp;q=string+interning&amp;amp;aq=f&amp;amp;oq=&#34; target=&#34;_blank&#34;&gt;字符串驻留技术&lt;/a&gt;，而在Python中不光是字符串，连整数都有使用类似的驻留技术哦，看下面的测试：&lt;/p&gt;
-&lt;pre&gt;C:\Documents and Settings\Marble Wu&amp;gt;python
-Python 2.6.2 (r262:71605, Apr 14 2009, 22:40:02) [MSC v.1500 32 bit (Intel)] on
-win32
-Type &#34;help&#34;, &#34;copyright&#34;, &#34;credits&#34; or &#34;license&#34; for more information.
-&amp;gt;&amp;gt;&amp;gt; a=1
-&amp;gt;&amp;gt;&amp;gt; b=1
-&amp;gt;&amp;gt;&amp;gt; id(1)
-10446048
-&amp;gt;&amp;gt;&amp;gt; id(a)
-10446048
-&amp;gt;&amp;gt;&amp;gt; import sys
-&amp;gt;&amp;gt;&amp;gt; sys.getrefcount(a)
-245
-&amp;gt;&amp;gt;&amp;gt; sys.getrefcount(b)
-245
-&amp;gt;&amp;gt;&amp;gt;&lt;/pre&gt;
-&lt;p&gt;&lt;span style=&#34;font-family: Courier New; background-color: #eaf7ff;&#34;&gt;其实也很容易理解，因为在Python&lt;a title=&#34;Python的对象&#34; href=&#34;http://wiki.woodpecker.org.cn/moin/PythonEssentialRef3&#34; target=&#34;_blank&#34;&gt;一切皆对象&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;             
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2009/08/21/python-object-interning/</guid>
+      <description>在C#中为了提高性能使用了字符串驻留技术，而在Python中不光是字符串，连整数都有使用类似的驻留技术哦，看下面的测试：
+C:\Documents and Settings\Marble Wu&amp;gt;python Python 2.6.2 (r262:71605, Apr 14 2009, 22:40:02) [MSC v.1500 32 bit (Intel)] on win32 Type &#34;help&#34;, &#34;copyright&#34;, &#34;credits&#34; or &#34;license&#34; for more information. &amp;gt;&amp;gt;&amp;gt; a=1 &amp;gt;&amp;gt;&amp;gt; b=1 &amp;gt;&amp;gt;&amp;gt; id(1) 10446048 &amp;gt;&amp;gt;&amp;gt; id(a) 10446048 &amp;gt;&amp;gt;&amp;gt; import sys &amp;gt;&amp;gt;&amp;gt; sys.getrefcount(a) 245 &amp;gt;&amp;gt;&amp;gt; sys.getrefcount(b) 245 &amp;gt;&amp;gt;&amp;gt; 其实也很容易理解，因为在Python一切皆对象</description>
     </item>
     
     <item>
       <title>调整netbeans6.5设置使之默认使用utf-8存储文件</title>
-      <link>http://huobazi.aspxboy.com/blog/2009/08/19/netbeans-utf8-settings/</link>
+      <link>https://huobazi.aspxboy.com/blog/2009/08/19/netbeans-utf8-settings/</link>
       <pubDate>Wed, 19 Aug 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2009/08/19/netbeans-utf8-settings/</guid>
+      <guid>https://huobazi.aspxboy.com/blog/2009/08/19/netbeans-utf8-settings/</guid>
       <description>&lt;p&gt;&lt;p&gt;netbeans默认使用ANSI存储的，我们一般希望它采用utf-8来存储，按照如下方法可以实现这个要求&lt;/p&gt;
 &lt;p&gt;1)  找到你的Netbeans安装目录下的etc文件夹,如D:\Program Files\NetBeans 6.5\etc&lt;br /&gt;2)  用文本编辑器打开netbeans.conf&lt;br /&gt;3)  找到netbeans_default_options这一句(注意#号开头的行的是注释)&lt;br /&gt;4)  在最后面加上一个空格,再加入-J-Dfile.encoding=UTF-8&lt;/p&gt;
 &lt;p&gt;如我现在的设置:&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;pre&gt;# ${HOME} will be replaced by JVM user.home system property
-netbeans_default_userdir=&amp;ldquo;${HOME}/.netbeans/6.5&amp;rdquo;&lt;/p&gt;
-
-&lt;p&gt;# Options used by NetBeans launcher by default, can be overridden by explicit
-# command line switches:
-netbeans_default_options=&amp;ldquo;-J-client -J-Xverify:none -J-Xss2m -J-Xms32m -J-XX:PermSize=32m -J-XX:MaxPermSize=200m -J-Dapple.laf.useScreenMenuBar=true -J-Dsun.java2d.noddraw=true -J-Dfile.encoding=UTF-8&amp;rdquo;
-# Note that a default -Xmx is selected for you automatically.
-# You can find this value in var/log/messages.log file in your userdir.
-# The automatically selected value can be overridden by specifying -J-Xmx here
-# or on the command line.&lt;/p&gt;
-
-&lt;p&gt;# If you specify the heap size (-Xmx) explicitely, you may also want to enable
-# Concurrent Mark &amp;amp; Sweep garbage collector. In such case add the following
-# options to the netbeans_default_options:
-# -J-XX:+UseConcMarkSweepGC -J-XX:+CMSClassUnloadingEnabled -J-XX:+CMSPermGenSweepingEnabled
-# (see &lt;a href=&#34;http://wiki.netbeans.org/wiki/view/FaqGCPauses&#34;&gt;http://wiki.netbeans.org/wiki/view/FaqGCPauses&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;# Default location of JDK, can be overridden by using &amp;ndash;jdkhome &amp;lt;dir&amp;gt;:
-netbeans_jdkhome=&amp;ldquo;C:\Program Files\Java\jre6&amp;rdquo;&lt;/p&gt;
-
-&lt;p&gt;# Additional module clusters, using ${path.separator} (&amp;lsquo;;&amp;lsquo; on Windows or &amp;rsquo;:&amp;lsquo; on Unix):
-#netbeans_extraclusters=&amp;ldquo;/absolute/path/to/cluster1:/absolute/path/to/cluster2&amp;rdquo;&lt;/p&gt;
-
-&lt;p&gt;# If you have some problems with detect of proxy settings, you may want to enable
-# detect the proxy settings provided by JDK5 or higher.
-# In such case add -J-Djava.net.useSystemProxies=true to the netbeans_default_options.&lt;/pre&gt;&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>如何在windows xp下安装python2.6的setuptools</title>
-      <link>http://huobazi.aspxboy.com/blog/2009/08/11/how-to-install-setuptools-on-windows-and-python26/</link>
+      <link>https://huobazi.aspxboy.com/blog/2009/08/11/how-to-install-setuptools-on-windows-and-python26/</link>
       <pubDate>Tue, 11 Aug 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2009/08/11/how-to-install-setuptools-on-windows-and-python26/</guid>
+      <guid>https://huobazi.aspxboy.com/blog/2009/08/11/how-to-install-setuptools-on-windows-and-python26/</guid>
       <description>&lt;p&gt;&lt;p&gt;最近开始学python，要安装很多egg文件，但发现&lt;a href=&#34;http://pypi.python.org/pypi/setuptools#downloads&#34;&gt;http://pypi.python.org/pypi/setuptools#downloads&lt;/a&gt;没有python2.6的MS Windows installer版本，google了一把，用如下方法解决：&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;1. 下载 setuptools-0.6c9.tar.gz&lt;br /&gt;2. 下载 setuptools-0.6c9-py2.6.egg （放在同一个目录）&lt;br /&gt;3. 用7-zip或者其他解压工具打开 setuptools-0.6c9.tar.gz ，并且把里面的 ez_setup.py 文件解压到同一个目录里。&lt;br /&gt;4. 打开cmd窗口，并进入你刚才下载和解压文件的目录里。（例如： d:\downloads\）&lt;br /&gt;5. 输入 python ez_setup.py setuptools-0.6c9-py2.6.egg&lt;/p&gt;
-&lt;p&gt;提示如下:&lt;/p&gt;
-&lt;pre&gt;E:\temp&amp;gt;python ez_setup.py setuptools-0.6c9-py2.6.egg
-Processing setuptools-0.6c9-py2.6.egg
-Copying setuptools-0.6c9-py2.6.egg to c:\python26\lib\site-packages
-Adding setuptools 0.6c9 to easy-install.pth file
-Installing easy_install-script.py script to C:\Python26\Scripts
-Installing easy_install.exe script to C:\Python26\Scripts
-Installing easy_install-2.6-script.py script to C:\Python26\Scripts
-Installing easy_install-2.6.exe script to C:\Python26\Scripts&lt;/p&gt;
-
-&lt;p&gt;Installed c:\python26\lib\site-packages\setuptools-0.6c9-py2.6.egg
-Processing dependencies for setuptools==0.6c9
-Finished processing dependencies for setuptools==0.6c9
-Processing setuptools-0.6c9-py2.6.egg
-Removing c:\python26\lib\site-packages\setuptools-0.6c9-py2.6.egg
-Copying setuptools-0.6c9-py2.6.egg to c:\python26\lib\site-packages
-setuptools 0.6c9 is already the active version in easy-install.pth
-Installing easy_install-script.py script to C:\Python26\Scripts
-Installing easy_install.exe script to C:\Python26\Scripts
-Installing easy_install-2.6-script.py script to C:\Python26\Scripts
-Installing easy_install-2.6.exe script to C:\Python26\Scripts&lt;/p&gt;
-
-&lt;p&gt;Installed c:\python26\lib\site-packages\setuptools-0.6c9-py2.6.egg
-Processing dependencies for setuptools==0.6c9
-Finished processing dependencies for setuptools==0.6c9&lt;/p&gt;
-
-&lt;p&gt;E:\temp&amp;gt;&lt;/pre&gt;&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Wordpress从windows上迁移到linux上要注意路径设置</title>
-      <link>http://huobazi.aspxboy.com/blog/2009/08/02/wordpress-from-windows-to-linux/</link>
+      <link>https://huobazi.aspxboy.com/blog/2009/08/02/wordpress-from-windows-to-linux/</link>
       <pubDate>Sun, 02 Aug 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2009/08/02/wordpress-from-windows-to-linux/</guid>
-      <description>&lt;p&gt;今天在localhost上用xampp装了个&lt;a title=&#34;Wordpress&#34; href=&#34;http://www.wp.com&#34; target=&#34;_blank&#34;&gt;wordpress&lt;/a&gt; 2.8.2,本地导入原来&lt;a title=&#34;www.codeplex.com/blogengine&#34; href=&#34;http://www.codeplex.com/blogengine&#34; target=&#34;_blank&#34;&gt;blogengine.net&lt;/a&gt;的数据调整好，没有任何问题，就&lt;a title=&#34;帝国备份王&#34; href=&#34;http://www.phome.net/product/Ebak.html&#34; target=&#34;_blank&#34;&gt;用帝国备份王&lt;/a&gt;打包数据在远程linunx上恢复，ftp上传本地站点内的文件到服务器对应目录，修改wp-config.php，兴冲冲的去访问首页，发现打不开，任何跟wp有关的页面都打不开，html可以打开和wp无关的页面比如探针是可以打开的，郁闷啊，检查了好久配置文件没有任何问题，思前想后想不通啊。本地和远程只是web服务器不同，本地是apache远程是nginx，不会是因为这个吧，其他几个站点都是这么弄的啊，是在想不到什么原因，&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;就打开phpmyadmin随便翻，翻到wp-options表，发现里面有几个站点域名啊的字段，倒上去的数据是本地的，玉米对应不上，修改之，还是没好，仍然打不开，再翻最后发现upload_path这个字段的设置时E:\xxx\yyy\zzz\这样的尝试修改成linux内的/home/usr/local/vhost/xxx/yyy/zzz，再访问首页，OK啦，估计wp在页面打开时要校验这些选项，而他不认识E:\XX\YY\ZZ这样的路径，就报错了。&lt;/p&gt;             
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2009/08/02/wordpress-from-windows-to-linux/</guid>
+      <description>&lt;p&gt;今天在localhost上用xampp装了个&lt;a title=&#34;Wordpress&#34; href=&#34;http://www.wp.com&#34; target=&#34;_blank&#34;&gt;wordpress&lt;/a&gt; 2.8.2,本地导入原来&lt;a title=&#34;www.codeplex.com/blogengine&#34; href=&#34;http://www.codeplex.com/blogengine&#34; target=&#34;_blank&#34;&gt;blogengine.net&lt;/a&gt;的数据调整好，没有任何问题，就&lt;a title=&#34;帝国备份王&#34; href=&#34;http://www.phome.net/product/Ebak.html&#34; target=&#34;_blank&#34;&gt;用帝国备份王&lt;/a&gt;打包数据在远程linunx上恢复，ftp上传本地站点内的文件到服务器对应目录，修改wp-config.php，兴冲冲的去访问首页，发现打不开，任何跟wp有关的页面都打不开，html可以打开和wp无关的页面比如探针是可以打开的，郁闷啊，检查了好久配置文件没有任何问题，思前想后想不通啊。本地和远程只是web服务器不同，本地是apache远程是nginx，不会是因为这个吧，其他几个站点都是这么弄的啊，是在想不到什么原因，&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Wordpress从windows上迁移到linux上要注意路径设置</title>
+      <link>https://huobazi.aspxboy.com/blog/2009/08/02/wordpress-from-windows-to-linux/</link>
+      <pubDate>Sun, 02 Aug 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://huobazi.aspxboy.com/blog/2009/08/02/wordpress-from-windows-to-linux/</guid>
+      <description>&lt;p&gt;今天在localhost上用xampp装了个&lt;a title=&#34;Wordpress&#34; href=&#34;http://www.wp.com&#34; target=&#34;_blank&#34;&gt;wordpress&lt;/a&gt; 2.8.2,本地导入原来&lt;a title=&#34;www.codeplex.com/blogengine&#34; href=&#34;http://www.codeplex.com/blogengine&#34; target=&#34;_blank&#34;&gt;blogengine.net&lt;/a&gt;的数据调整好，没有任何问题，就&lt;a title=&#34;帝国备份王&#34; href=&#34;http://www.phome.net/product/Ebak.html&#34; target=&#34;_blank&#34;&gt;用帝国备份王&lt;/a&gt;打包数据在远程linunx上恢复，ftp上传本地站点内的文件到服务器对应目录，修改wp-config.php，兴冲冲的去访问首页，发现打不开，任何跟wp有关的页面都打不开，html可以打开和wp无关的页面比如探针是可以打开的，郁闷啊，检查了好久配置文件没有任何问题，思前想后想不通啊。本地和远程只是web服务器不同，本地是apache远程是nginx，不会是因为这个吧，其他几个站点都是这么弄的啊，是在想不到什么原因，&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>如何判断一个网站是不是php做的？</title>
+      <link>https://huobazi.aspxboy.com/blog/2009/07/18/php-guid/</link>
+      <pubDate>Sat, 18 Jul 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://huobazi.aspxboy.com/blog/2009/07/18/php-guid/</guid>
+      <description>可以当作简易判断站点是否用PHP架设。
+PHP_LOGO_GUID
+http://www.php.net/?=PHPE9568F34-D428-11d2-A769-00AA001ACF42
+PHP_EGG_LOGO_GUID
+http://www.php.net/?=PHPE9568F36-D428-11d2-A769-00AA001ACF42
+ZEND_LOGO_GUID
+http://www.php.net/?=PHPE9568F35-D428-11d2-A769-00AA001ACF42
+PHP_CREDITS_GUID
+http://www.php.net/?=PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000
+喜欢看愚人节的那个Logo就是第二个链接罗
+http://www.php.net/ 这个网址只是范例，只要是任一PHP的站点即可。
+来源:http://www.google.cn/search?client=aff-os-worldbrowser&amp;amp;forid=1&amp;amp;ie=utf-8&amp;amp;oe=UTF-8&amp;amp;hl=zh-CN&amp;amp;q=%E4%B8%80%E4%BA%9B%E5%86%85%E5%AE%9A%E7%9A%84PHP%E7%89%B9%E6%AE%8AGUID
+ </description>
+    </item>
+    
+    <item>
+      <title>nginx下typecho的rewrite</title>
+      <link>https://huobazi.aspxboy.com/blog/2009/07/09/nginx-typecho-rewrite/</link>
+      <pubDate>Thu, 09 Jul 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://huobazi.aspxboy.com/blog/2009/07/09/nginx-typecho-rewrite/</guid>
+      <description>&lt;p&gt;导数据到typecho的时候是在localhost的windows xp系统上用的apache,部署时用的是nginx&lt;br /&gt;先是发现无法登陆按照&lt;a href=&#34;http://forum.typecho.org/viewtopic.php?f=4&amp;amp;t=238&amp;amp;p=852&amp;amp;hilit=nginx#p852&#34; target=&#34;_blank&#34;&gt;这篇帖子&lt;/a&gt;内的方法配置了vhost.conf，发现可以登陆了，接着又出现了&lt;br /&gt;无法编辑post的问题，具体症状见&lt;a href=&#34;http://forum.typecho.org/viewtopic.php?f=4&amp;amp;t=270&#34; target=&#34;_blank&#34;&gt;这篇帖子&lt;/a&gt;,甚是郁闷啊，google+baidu 找到一片描写wp的&lt;br /&gt;rewrite的&lt;a href=&#34;http://hi.baidu.com/3322/blog/item/95d254e7594a012bb93820bb.html&#34; target=&#34;_blank&#34;&gt;帖子&lt;/a&gt;,因typecho与wp笔记像，抱着试试看的想法,在测试站点试验了一下，嘿嘿&lt;br /&gt;能用，转寄在此，备忘&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>nginx下typecho的rewrite</title>
+      <link>https://huobazi.aspxboy.com/blog/2009/07/09/nginx-typecho-rewrite/</link>
+      <pubDate>Thu, 09 Jul 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://huobazi.aspxboy.com/blog/2009/07/09/nginx-typecho-rewrite/</guid>
+      <description>&lt;p&gt;导数据到typecho的时候是在localhost的windows xp系统上用的apache,部署时用的是nginx&lt;br /&gt;先是发现无法登陆按照&lt;a href=&#34;http://forum.typecho.org/viewtopic.php?f=4&amp;amp;t=238&amp;amp;p=852&amp;amp;hilit=nginx#p852&#34; target=&#34;_blank&#34;&gt;这篇帖子&lt;/a&gt;内的方法配置了vhost.conf，发现可以登陆了，接着又出现了&lt;br /&gt;无法编辑post的问题，具体症状见&lt;a href=&#34;http://forum.typecho.org/viewtopic.php?f=4&amp;amp;t=270&#34; target=&#34;_blank&#34;&gt;这篇帖子&lt;/a&gt;,甚是郁闷啊，google+baidu 找到一片描写wp的&lt;br /&gt;rewrite的&lt;a href=&#34;http://hi.baidu.com/3322/blog/item/95d254e7594a012bb93820bb.html&#34; target=&#34;_blank&#34;&gt;帖子&lt;/a&gt;,因typecho与wp笔记像，抱着试试看的想法,在测试站点试验了一下，嘿嘿&lt;br /&gt;能用，转寄在此，备忘&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>从Wordpress转到Typecho了</title>
+      <link>https://huobazi.aspxboy.com/blog/2009/07/04/myblog-from-wordpress-to-typecho/</link>
+      <pubDate>Sat, 04 Jul 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://huobazi.aspxboy.com/blog/2009/07/04/myblog-from-wordpress-to-typecho/</guid>
+      <description>WP比较占资源，今天把博客又转到Typecho了，忙乎了大半夜(现在接近临晨4点)，东拼西凑，南抄北挪，终于啊，皮肤基本上搞定了，发现Typecho的皮肤也蛮简单的，默认皮肤就七八个文件，照着改也蛮容易入门的。
+郁闷的是现在还是在localhost上，自己点击，速度超好，刷刷刷的哦。还有就是Typecho这个版本（0.6）默认没有WYSIWYG的编辑器，只这篇post就是手写发出的，不过这样也好，以前在博客园用编辑器编辑的博客有时候因皮肤调整，会出现编辑器的html不符合皮肤，撑的页面不好看。
+最搞的是我一直没找到如何处理分类排序的功能，还去官方论坛发了个贴（标准的新手贴），被告知按住拖动就OK了...
+(*^__^*) 嘻嘻……
+在此感谢所有TV 感谢博客园 感谢Typecho开发团队 感谢Wordpress 感谢Paint.Net 感谢PhotonVPS
+感谢...</description>
+    </item>
+    
+    <item>
+      <title>从Wordpress转到Typecho了</title>
+      <link>https://huobazi.aspxboy.com/blog/2009/07/04/myblog-from-wordpress-to-typecho/</link>
+      <pubDate>Sat, 04 Jul 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://huobazi.aspxboy.com/blog/2009/07/04/myblog-from-wordpress-to-typecho/</guid>
+      <description>WP比较占资源，今天把博客又转到Typecho了，忙乎了大半夜(现在接近临晨4点)，东拼西凑，南抄北挪，终于啊，皮肤基本上搞定了，发现Typecho的皮肤也蛮简单的，默认皮肤就七八个文件，照着改也蛮容易入门的。
+郁闷的是现在还是在localhost上，自己点击，速度超好，刷刷刷的哦。还有就是Typecho这个版本（0.6）默认没有WYSIWYG的编辑器，只这篇post就是手写发出的，不过这样也好，以前在博客园用编辑器编辑的博客有时候因皮肤调整，会出现编辑器的html不符合皮肤，撑的页面不好看。
+最搞的是我一直没找到如何处理分类排序的功能，还去官方论坛发了个贴（标准的新手贴），被告知按住拖动就OK了...
+(*^__^*) 嘻嘻……
+在此感谢所有TV 感谢博客园 感谢Typecho开发团队 感谢Wordpress 感谢Paint.Net 感谢PhotonVPS
+感谢...</description>
+    </item>
+    
+    <item>
+      <title>博客园到Wordpress搬家成功！</title>
+      <link>https://huobazi.aspxboy.com/blog/2009/06/21/my-blog-moved-to-wp/</link>
+      <pubDate>Sun, 21 Jun 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://huobazi.aspxboy.com/blog/2009/06/21/my-blog-moved-to-wp/</guid>
+      <description>终于把在博客园的博客的数据导入到Wordpress内了，包括随笔/文章，图片,标签，评论等，是写了两个C# console程序做到的，程序我传到博客园了，如果有需要的朋友可以试试。但请注意，要自己在博客园后台备份RSS文件放到Reader的Data目录内，设置为编译选项为永远复制，运行后会生成一个Entry.xml并且把博客内的图片和分类、Tag、评论等抓下来，然后将此xml文件拷贝到Writer内，在代码内修改一下你的Wordress的数据库连接，然后跑一下Writer，就可以完成数据导入到Wordpress了，时间匆忙，代码写的很乱，有些地方是针对本人需求处理的，如果你想要直接运行此程序完成你的博客园博客到Wordpress的转换，那是不可能滴！你一定要有简单的C#调试基础哦。
+http://files.cnblogs.com/huobazi/MyBlogTools.rar</description>
+    </item>
+    
+    <item>
+      <title>分页存储过程</title>
+      <link>https://huobazi.aspxboy.com/blog/2004/02/09/pagedsp/</link>
+      <pubDate>Mon, 09 Feb 2004 00:00:00 +0000</pubDate>
+      
+      <guid>https://huobazi.aspxboy.com/blog/2004/02/09/pagedsp/</guid>
+      <description>搞了一中午终于可以用了 但不知道效率如何.郁闷的是我要用php去调用它
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+CopyRight： ******
+CreateData： 2004-02-09
+Language： MS SQL SERVER 存储过程
+AuthorName： Meibo Wu
+实现功能： 分页显示当用户选择了图片大分类时(按手机)的数据
+参数说明： @bigtype为大分类
+@gid为传入的图片类型 $PageSize为每页显示的记录数量
+@pageindex为当前页码 LastUpdate: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+CREATE procedure sms_img_page_no_smalltype
+(
+@bigtype nvarchar(20),
+@gid int,
+@pagesize int,
+@pageindex int
+)
+as
+set nocount on
+declare @LikeBigType nvarchar(20)
+declare @PageLowerBound int
+declare @PageUpperBound int
+declare @indextable table(id int identity(1,1),nid int)
+set @PageLowerBound=(@pageindex-1)*@pagesize
+set @PageUpperBound= @PageLowerBound+@pagesize
+set @LikeBigType= @bigtype+&#39;%&#39;
+set rowcount @PageUpperBound
+insert into @indextable(nid)</description>
     </item>
     
   </channel>

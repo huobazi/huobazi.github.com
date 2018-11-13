@@ -1,32 +1,12 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>武眉博 &middot; 武眉博</title>
 
-    <meta name="description" content="Marble&#39;s blog">
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
 
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="huobazi" />
-    <meta name="twitter:title" content="武眉博 &middot; 武眉博">
-    <meta name="twitter:description" content="Marble&#39;s blog">
+    <link rel="stylesheet" href='https://huobazi.aspxboy.com/css/all.min.css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="武眉博 &middot; 武眉博">
-    <meta property="og:description" content="Marble&#39;s blog">
-
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    
-    <link href='http://fonts.useso.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
-    
-    
-        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
-    
-
-    <link rel="stylesheet" href="/css/all.min.css">
-    <link href="http://apps.bdimg.com/libs/fontawesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="alternate" type="application/rss+xml" title="武眉博" href='https://huobazi.aspxboy.com/index.xml' />
 </head>
 <body>
 
@@ -35,7 +15,7 @@
     <div class="sidebar pure-u-1 pure-u-md-1-4">
     <div class="header">
         <hgroup>
-            <h1 class="brand-title"><a href="http://huobazi.aspxboy.com/">武眉博</a></h1>
+            <h1 class="brand-title"><a href="https://huobazi.aspxboy.com">武眉博</a></h1>
             <h2 class="brand-tagline"> Marble&#39;s blog </h2>
         </hgroup>
 
@@ -43,35 +23,72 @@
             <ul class="nav-list">
                 
                 <li class="nav-item">
-                    <a class="pure-button" href="http://twitter.com/huobazi"><i class="fa fa-twitter"></i> Twitter</a>
+                    <a class="pure-button" href="https://twitter.com/huobazi">
+                        <i class="fa fa-twitter"></i> Twitter
+                    </a>
                 </li>
                 
                 
                 <li class="nav-item">
-                    <a class="pure-button" href="http://github.com/huobazi "><i class="fa fa-github-alt"></i> github</a>
+                    <a class="pure-button" href="https://github.com/huobazi">
+                        <i class="fa fa-github-alt"></i> Github
+                    </a>
                 </li>
                 
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://www.linkedin.com/in/huobazi">
+                        <i class="fa fa-linkedin"></i> LinkedIn
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="pure-button" href='https://huobazi.aspxboy.com/index.xml'>
+                        <i class="fa fa-rss"></i> rss
+                    </a>
+                </li>
             </ul>
         </nav>
     </div>
 </div>
+
 
     <div class="content pure-u-1 pure-u-md-3-4">
         <div>
             
             <div class="posts">
                 
-                <h1 class="content-subhead">14 Jan 2010</h1>
+                <h1 class="content-subhead">15 Jan 2010</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://huobazi.aspxboy.com/blog/2010/01/14/typecho-0-7-updated/" class="post-title">把typecho升级到0.7了</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2010/01/15/rails-mysqlerror-query-not-connected/" class="post-title">rails里Mysql::Error: query: not connected</a>
 
                         <p class="post-meta">
                             
                             
-                                
-                                <a class="post-category post-category-闲言碎语" href="http://huobazi.aspxboy.com//tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD">闲言碎语</a>
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>从ubuntu换回了win7后又慢慢开始折腾以前在本本上跑的一些LAMP网站， php和 mysql还是用以前的xampp里的，仍然可以用。</p>
+<p>重装了 ruby 1.8.6, rails 2.3.5 等...发现运行rails网站，弹出messagebox提示找不到libmysql.dll尝试把mysql/bin里的dll来regsvr32，不可，直接拷贝到system32目录下错误没了，但打开网站仍然报错，终端显示“Mysql::Error: query: not connected...."</p>
+<p>google来了结果</p>
+<p><a href="http://topic.csdn.net/u/20090823/12/2775f2e7-a73a-45b3-a047-5ed9330871cd.html" target="_blank">http://topic.csdn.net/u/20090823/12/2775f2e7-a73a-45b3-a047-5ed9330871cd.html</a></p>
+<p><a href="http://xiaolife.com/wordpress/rails-2-3-dbmigrate-issue-with-mysql-5-1-3/" target="_blank">http://xiaolife.com/wordpress/rails-2-3-dbmigrate-issue-with-mysql-5-1-3/</a></p>
+<p>猛然间想起来这些个问题上次玩的时候也出现过，真晕，还是写下来，希望SY一遍胜过脑子记忆千遍吧</p>
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">14 Jan 2010</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2010/01/14/typecho-0-7-updated/" class="post-title">把typecho升级到0.7了</a>
+
+                        <p class="post-meta">
+                            
                             
                         </p>
                     </header>
@@ -86,13 +103,10 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://huobazi.aspxboy.com/blog/2010/01/11/vim-color-scheme/" class="post-title">漂亮的VIM配色方案</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2010/01/11/vim-color-scheme/" class="post-title">漂亮的VIM配色方案</a>
 
                         <p class="post-meta">
                             
-                            
-                                
-                                <a class="post-category post-category-闲言碎语" href="http://huobazi.aspxboy.com//tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD">闲言碎语</a><a class="post-category post-category-它山之石" href="http://huobazi.aspxboy.com//tags/%E5%AE%83%E5%B1%B1%E4%B9%8B%E7%9F%B3">它山之石</a><a class="post-category post-category-奇技淫巧" href="http://huobazi.aspxboy.com//tags/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7">奇技淫巧</a><a class="post-category post-category-VIM" href="http://huobazi.aspxboy.com//tags/vim">VIM</a><a class="post-category post-category-配色" href="http://huobazi.aspxboy.com//tags/%E9%85%8D%E8%89%B2">配色</a>
                             
                         </p>
                     </header>
@@ -116,13 +130,10 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://huobazi.aspxboy.com/blog/2010/01/07/349/" class="post-title">把你的netbeans变成英文版</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2010/01/07/349/" class="post-title">把你的netbeans变成英文版</a>
 
                         <p class="post-meta">
                             
-                            
-                                
-                                <a class="post-category post-category-它山之石" href="http://huobazi.aspxboy.com//tags/%E5%AE%83%E5%B1%B1%E4%B9%8B%E7%9F%B3">它山之石</a><a class="post-category post-category-奇技淫巧" href="http://huobazi.aspxboy.com//tags/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7">奇技淫巧</a><a class="post-category post-category-netbeans" href="http://huobazi.aspxboy.com//tags/netbeans">netbeans</a>
                             
                         </p>
                     </header>
@@ -141,13 +152,10 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://huobazi.aspxboy.com/blog/2009/12/18/graffiti-cms-is-now-free-open-source/" class="post-title">Graffiti CMS  开源了</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2009/12/18/graffiti-cms-is-now-free-open-source/" class="post-title">Graffiti CMS  开源了</a>
 
                         <p class="post-meta">
                             
-                            
-                                
-                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a><a class="post-category post-category-CMS" href="http://huobazi.aspxboy.com//tags/cms">CMS</a><a class="post-category post-category-它山之石" href="http://huobazi.aspxboy.com//tags/%E5%AE%83%E5%B1%B1%E4%B9%8B%E7%9F%B3">它山之石</a><a class="post-category post-category-Graffiti" href="http://huobazi.aspxboy.com//tags/graffiti">Graffiti</a>
                             
                         </p>
                     </header>
@@ -170,13 +178,10 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://huobazi.aspxboy.com/blog/2009/12/11/nested-repeater-parent/" class="post-title">Repeater,DataList等嵌套如何绑定父repeater字段?</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2009/12/11/nested-repeater-parent/" class="post-title">Repeater,DataList等嵌套如何绑定父repeater字段?</a>
 
                         <p class="post-meta">
                             
-                            
-                                
-                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-DataList" href="http://huobazi.aspxboy.com//tags/datalist">DataList</a><a class="post-category post-category-Repeater" href="http://huobazi.aspxboy.com//tags/repeater">Repeater</a>
                             
                         </p>
                     </header>
@@ -193,19 +198,18 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://huobazi.aspxboy.com/blog/2009/12/09/chang-sql-table-field-default/" class="post-title">使用SQL语句更改数据表的默认值</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2009/12/09/chang-sql-table-field-default/" class="post-title">使用SQL语句更改数据表的默认值</a>
 
                         <p class="post-meta">
                             
-                            
-                                
-                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a><a class="post-category post-category-SQL" href="http://huobazi.aspxboy.com//tags/sql">SQL</a><a class="post-category post-category-Server" href="http://huobazi.aspxboy.com//tags/server">Server</a>
                             
                         </p>
                     </header>
 
                     <div class="post-description">
                         <p><p>以前还真没这么干过，都是手工去掉约束，再添加的，今天一边google一边搞啊搞啊的，最终下面这个脚本可以用了</p>
+<p></p>
+
 <p></p>
 <div class="source" style='font-family: "Consolas","Lucida Console","Courier New"; color: #ffffff; background-color: #333333;'>
 <p><span style="color: #f0e68c;">alter</span> <span style="color: #f0e68c;">table</span> <span style="color: #ffffff;">dbo</span><span style="color: #ffffff;">.</span><span style="color: #ffffff;">SOTransaction</span><br />    <span style="color: #f0e68c;">alter</span> <span style="color: #f0e68c;">column</span> <span style="color: #ffffff;">UnitCostWithoutTax</span> <span style="color: #ffffff;">decimal</span>(<span style="color: #ffffff;">10</span><span style="color: #ffffff;">,</span> <span style="color: #ffffff;">2</span>)  <span style="color: #f0e68c;">not</span> <span style="color: #f0e68c;">null</span></p>
@@ -215,7 +219,6 @@
 <p><span style="color: #f0e68c;">select</span> <span style="color: #ffffff;">@</span><span style="color: #ffffff;">name</span> <span style="color: #ffffff;">=</span> b<span style="color: #ffffff;">.</span><span style="color: #ffffff;">name</span> <span style="color: #f0e68c;">from</span> <span style="color: #ffffff;">syscolumns</span> <span style="color: #ffffff;">a</span> <span style="color: #f0e68c;">inner</span> <span style="color: #f0e68c;">join</span> <span style="color: #ffffff;">sysobjects</span> b<br />    <span style="color: #f0e68c;">on</span> b<span style="color: #ffffff;">.</span><span style="color: #ffffff;">id</span><span style="color: #ffffff;">=</span><span style="color: #ffffff;">a</span><span style="color: #ffffff;">.</span><span style="color: #ffffff;">cdefault</span><br /><span style="color: #f0e68c;">where</span><br />    <span style="color: #ffffff;">a</span><span style="color: #ffffff;">.</span><span style="color: #ffffff;">id</span><span style="color: #ffffff;">=</span> <span style="color: #ffffff;">object_id</span>(<span style="color: #ffffff;">@</span><span style="color: #ffffff;">tablename</span>)<br />    <span style="color: #f0e68c;">and</span> <span style="color: #ffffff;">a</span><span style="color: #ffffff;">.</span><span style="color: #ffffff;">name</span><span style="color: #ffffff;">=@</span><span style="color: #ffffff;">fieldname</span><br />    <span style="color: #f0e68c;">and</span> b<span style="color: #ffffff;">.</span><span style="color: #ffffff;">name</span> <span style="color: #f0e68c;">like</span> <span style="color: #ffffff;">&lsquo;DF%&rsquo;</span><br /><span style="color: #87ceeb;">&ndash;print @name</span></p>
 <p><span style="color: #f0e68c;">exec</span>(<span style="color: #ffffff;">&rsquo; alter table SOTransaction drop constraint &lsquo;</span> <span style="color: #ffffff;">+</span> <span style="color: #ffffff;">@</span><span style="color: #ffffff;">name</span>);<br /><span style="color: #f0e68c;">go</span><br /><span style="color: #f0e68c;">alter</span> <span style="color: #f0e68c;">table</span> <span style="color: #ffffff;">dbo</span><span style="color: #ffffff;">.</span><span style="color: #ffffff;">SOTransaction</span><br />    <span style="color: #f0e68c;">add</span> <span style="color: #f0e68c;">constraint</span> <span style="color: #ffffff;">DF_SOTransaction_UnitCostWithoutTax</span> <span style="color: #f0e68c;">default</span> (<span style="color: #ffffff;">0</span>) <span style="color: #f0e68c;">for</span> <span style="color: #ffffff;">UnitCostWithoutTax</span></p>
 </div></p>
-
                     </div>
                 </section>
                 
@@ -223,22 +226,17 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://huobazi.aspxboy.com/blog/2009/12/02/win7-ubuntu/" class="post-title">我的win7和ubuntu之旅</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2009/12/02/win7-ubuntu/" class="post-title">我的win7和ubuntu之旅</a>
 
                         <p class="post-meta">
                             
-                            
-                                
-                                <a class="post-category post-category-闲言碎语" href="http://huobazi.aspxboy.com//tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD">闲言碎语</a>
                             
                         </p>
                     </header>
 
                     <div class="post-description">
                         <p>先装了win7 后装了ubuntu9.10，开始煎熬了数日...</p>
-<p></p>
-<p><a title="煎熬" href="http://forum.ubuntu.org.cn/viewtopic.php?f=139&amp;t=242214" target="_self"> 记实录： http://forum.ubuntu.org.cn/viewtopic.php?f=139&amp;t=242214</a></p>                
-
+<p><a title="煎熬" href="http://forum.ubuntu.org.cn/viewtopic.php?f=139&amp;t=242214" target="_self"> 记实录： http://forum.ubuntu.org.cn/viewtopic.php?f=139&amp;t=242214</a></p>
                     </div>
                 </section>
                 
@@ -246,22 +244,17 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://huobazi.aspxboy.com/blog/2009/11/28/webqq-css-sprite/" class="post-title">腾讯webQQ的 CSS Sprite</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2009/11/28/webqq-css-sprite/" class="post-title">腾讯webQQ的 CSS Sprite</a>
 
                         <p class="post-meta">
                             
-                            
-                                
-                                <a class="post-category post-category-前端开发" href="http://huobazi.aspxboy.com//tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91">前端开发</a><a class="post-category post-category-CSS" href="http://huobazi.aspxboy.com//tags/css">CSS</a><a class="post-category post-category-webQQ" href="http://huobazi.aspxboy.com//tags/webqq">webQQ</a><a class="post-category post-category-Sprite" href="http://huobazi.aspxboy.com//tags/sprite">Sprite</a>
                             
                         </p>
                     </header>
 
                     <div class="post-description">
                         <p>web qq速度很快，很多图标处理的也很漂亮，偷偷看了一下sprite的图片，所有图标都在这个图里了20多k，性能压倒一切啊。</p>
-<p></p>
-<p><img src="http://web.qq.com/images/icon.gif" alt="webQQ CSS Sprite" width="560" height="1000"></p>               
-
+<p><img src="http://web.qq.com/images/icon.gif" alt="webQQ CSS Sprite" width="560" height="1000"></p>
                     </div>
                 </section>
                 
@@ -269,13 +262,10 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://huobazi.aspxboy.com/blog/2009/10/27/kissy-editor/" class="post-title">在线编辑器的一个新选择。</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2009/10/27/kissy-editor/" class="post-title">在线编辑器的一个新选择。</a>
 
                         <p class="post-meta">
                             
-                            
-                                
-                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-前端开发" href="http://huobazi.aspxboy.com//tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91">前端开发</a><a class="post-category post-category-推荐阅读" href="http://huobazi.aspxboy.com//tags/%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB">推荐阅读</a><a class="post-category post-category-FckEditor" href="http://huobazi.aspxboy.com//tags/fckeditor">FckEditor</a><a class="post-category post-category-kissy-editor" href="http://huobazi.aspxboy.com//tags/kissy-editor">kissy-editor</a>
                             
                         </p>
                     </header>
@@ -284,32 +274,6 @@
                         <p>今天<a title="http://lifesinger.org/" href="http://lifesinger.org/" target="_blank">lifesinger</a>发布了<a title="kiss editor" href="http://lifesinger.org/blog/2009/10/kissy-editor/" target="_blank">淘宝编辑器</a>,</p>
 <p>可以在这里看到<a href="http://kissy.googlecode.com/svn/trunk/src/editor/demo/basic.html" target="_blank">演示</a></p>
 <p>介绍可以看这里，<a href="http://lifesinger.org/blog/2009/10/kissy-editor/">http://lifesinger.org/blog/2009/10/kissy-editor/</a></p>              
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">20 Oct 2009</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://huobazi.aspxboy.com/blog/2009/10/20/342/" class="post-title">Wordpress真的不错</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                
-                                <a class="post-category post-category-闲言碎语" href="http://huobazi.aspxboy.com//tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD">闲言碎语</a><a class="post-category post-category-Wordpress" href="http://huobazi.aspxboy.com//tags/wordpress">Wordpress</a>
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>另外一个博客，用的wp，自动升级使用了一下，很不错，速度很快<br />Upgrade WordPress<br />Downloading update from <a href="http://wordpress.org/wordpress-2.8.4.zip">http://wordpress.org/wordpress-2.8.4.zip</a>.</p>
-<p>Unpacking the update.</p>
-<p>Verifying the unpacked files</p>
-<p>Installing the latest version</p>
-<p>Upgrading database</p>
-<p>WordPress upgraded successfully</p>              
 
                     </div>
                 </section>
@@ -336,11 +300,11 @@
             <div class="footer">
     <div class="pure-menu pure-menu-horizontal pure-menu-open">
         <ul>
-            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a> &nbsp;&nbsp; theme by <a target="_blank" href="https://github.com/dplesca/purehugo">purehugo</a></a></li>
+            <li>Powered by <a class="hugo" href="https://gohugo.io/" target="_blank">hugo</a></li>
         </ul>
     </div>
 </div>
-<script src="/js/all.min.js"></script>
+<script src='https://huobazi.aspxboy.com/js/all.min.js'></script>
 
         </div>
     </div>

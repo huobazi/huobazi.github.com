@@ -2,58 +2,87 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Php on 武眉博</title>
-    <link>http://huobazi.aspxboy.com/tags/php/</link>
+    <link>https://huobazi.aspxboy.com/tags/php/</link>
     <description>Recent content in Php on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 01 Jan 2011 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://huobazi.aspxboy.com/tags/php/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://huobazi.aspxboy.com/tags/php/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>在ubuntu上配置 nginx和php&#43;fastcgi</title>
-      <link>http://huobazi.aspxboy.com/blog/2011/01/01/ubuntu-nginx-php-fastcgi/</link>
+      <link>https://huobazi.aspxboy.com/blog/2011/01/01/ubuntu-nginx-php-fastcgi/</link>
       <pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2011/01/01/ubuntu-nginx-php-fastcgi/</guid>
-      <description>&lt;p&gt;(1)安装php5&lt;br /&gt;apt-get install php5 php-pear php5-cli php5-common php5-xcache php5-cgi php5-mysql php5-curl  php5-gd  php5-imagick  php5-xmlrpc  php5-dev php5-memcache&lt;br /&gt;(2)安装nginx&lt;br /&gt;apt-get install nginx&lt;br /&gt;(3)安装spawn-fcgi&lt;br /&gt; apt-get install spawn-fcgi&lt;br /&gt;(4)设置，也是最头疼滴地方哦&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;在/etc/nginx/fastcgi_params 文件最后，加入一行，可以用sudo gedit /etc/nginx/fastcgi_params打开文件&lt;br /&gt;&lt;strong&gt;fastcgi_param SCRIPT_FILENAME     $document_root$fastcgi_script_name;&lt;/strong&gt;&lt;br /&gt;设置php.ini的 cgi.fix_pathinfo=1;doc_root=&lt;br /&gt;拷贝/etc/nginx/sites-availab修改本机hosts文件，指定一个域名&lt;br /&gt;修改server_name&lt;br /&gt;在server_name同级增加root 设置为网站根目录&lt;br /&gt;location里 加上 index.php&lt;br /&gt;php的fast-cgi配置&lt;/p&gt;
-&lt;p&gt;&lt;span style=&#34;color: #fff; background-color:#000;&#34;&gt;    location ~ \.php$ {&lt;br /&gt;        fastcgi_pass   127.0.0.1:9000;&lt;br /&gt;        fastcgi_index  index.php;&lt;br /&gt;        include fastcgi_params;     &lt;br /&gt;    }&lt;/span&gt;&lt;br /&gt;$ sudo killall -HUP php5-cgi&lt;br /&gt;$ sudo /usr/bin/spawn-fcgi -a 127.0.0.1 -p 9000 -C 5 -u www-data -g www-data -f /usr/bin/php5-cgi -P /var/run/fastcgi-php.pid&lt;br /&gt;$ /etc/init.d# sudo /etc/init.d/nginx restart &lt;br /&gt;在网站内放个phpinfo测试一下，ok了。&lt;/p&gt;                
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2011/01/01/ubuntu-nginx-php-fastcgi/</guid>
+      <description>&lt;p&gt;(1)安装php5&lt;br /&gt;apt-get install php5 php-pear php5-cli php5-common php5-xcache php5-cgi php5-mysql php5-curl  php5-gd  php5-imagick  php5-xmlrpc  php5-dev php5-memcache&lt;br /&gt;(2)安装nginx&lt;br /&gt;apt-get install nginx&lt;br /&gt;(3)安装spawn-fcgi&lt;br /&gt; apt-get install spawn-fcgi&lt;br /&gt;(4)设置，也是最头疼滴地方哦&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>如何判断一个网站是不是php做的？</title>
-      <link>http://huobazi.aspxboy.com/blog/2009/07/18/php-guid/</link>
+      <link>https://huobazi.aspxboy.com/blog/2009/07/18/php-guid/</link>
       <pubDate>Sat, 18 Jul 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2009/07/18/php-guid/</guid>
-      <description>&lt;p&gt;可以当作&lt;strong&gt;简易&lt;/strong&gt;判断站点是否用PHP架设。&lt;/p&gt;
-&lt;p&gt;PHP_LOGO_GUID&lt;br /&gt;&lt;a href=&#34;http://www.php.net/?=PHPE9568F34-D428-11d2-A769-00AA001ACF42&#34;&gt;http://www.php.net/?=PHPE9568F34-D428-11d2-A769-00AA001ACF42&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;PHP_EGG_LOGO_GUID&lt;br /&gt;&lt;a href=&#34;http://www.php.net/?=PHPE9568F36-D428-11d2-A769-00AA001ACF42&#34;&gt;http://www.php.net/?=PHPE9568F36-D428-11d2-A769-00AA001ACF42&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;ZEND_LOGO_GUID&lt;br /&gt;&lt;a href=&#34;http://www.php.net/?=PHPE9568F35-D428-11d2-A769-00AA001ACF42&#34;&gt;http://www.php.net/?=PHPE9568F35-D428-11d2-A769-00AA001ACF42&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;PHP_CREDITS_GUID&lt;br /&gt;&lt;a href=&#34;http://www.php.net/?=PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000&#34;&gt;http://www.php.net/?=PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;喜欢看愚人节的那个Logo就是第二个链接罗&lt;br /&gt;&lt;a href=&#34;http://www.php.net/&#34;&gt;http://www.php.net/&lt;/a&gt; 这个网址只是范例，只要是任一PHP的站点即可。&lt;/p&gt;
-&lt;p&gt;来源:&lt;a href=&#34;http://www.google.cn/search?client=aff-os-worldbrowser&amp;amp;forid=1&amp;amp;ie=utf-8&amp;amp;oe=UTF-8&amp;amp;hl=zh-CN&amp;amp;q=%E4%B8%80%E4%BA%9B%E5%86%85%E5%AE%9A%E7%9A%84PHP%E7%89%B9%E6%AE%8AGUID&#34; target=&#34;_blank&#34;&gt;http://www.google.cn/search?client=aff-os-worldbrowser&amp;amp;forid=1&amp;amp;ie=utf-8&amp;amp;oe=UTF-8&amp;amp;hl=zh-CN&amp;amp;q=%E4%B8%80%E4%BA%9B%E5%86%85%E5%AE%9A%E7%9A%84PHP%E7%89%B9%E6%AE%8AGUID&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt; &lt;/p&gt;                
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2009/07/18/php-guid/</guid>
+      <description>可以当作简易判断站点是否用PHP架设。
+PHP_LOGO_GUID
+http://www.php.net/?=PHPE9568F34-D428-11d2-A769-00AA001ACF42
+PHP_EGG_LOGO_GUID
+http://www.php.net/?=PHPE9568F36-D428-11d2-A769-00AA001ACF42
+ZEND_LOGO_GUID
+http://www.php.net/?=PHPE9568F35-D428-11d2-A769-00AA001ACF42
+PHP_CREDITS_GUID
+http://www.php.net/?=PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000
+喜欢看愚人节的那个Logo就是第二个链接罗
+http://www.php.net/ 这个网址只是范例，只要是任一PHP的站点即可。
+来源:http://www.google.cn/search?client=aff-os-worldbrowser&amp;amp;forid=1&amp;amp;ie=utf-8&amp;amp;oe=UTF-8&amp;amp;hl=zh-CN&amp;amp;q=%E4%B8%80%E4%BA%9B%E5%86%85%E5%AE%9A%E7%9A%84PHP%E7%89%B9%E6%AE%8AGUID
+ </description>
     </item>
     
     <item>
       <title>一个很全的教程站</title>
-      <link>http://huobazi.aspxboy.com/blog/2004/06/01/cb-12759/</link>
+      <link>https://huobazi.aspxboy.com/blog/2004/06/01/cb-12759/</link>
       <pubDate>Tue, 01 Jun 2004 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2004/06/01/cb-12759/</guid>
-      <description>&lt;p&gt;很少见教程大全，不知道我是不是很落伍，今天才逛到这里&lt;br /&gt;&lt;a href=&#34;http://www.w3schools.com/&#34; target=&#34;_blank&#34;&gt;&lt;br /&gt;&lt;img style=&#34;border: 0px;&#34; src=&#34;http://huobazi.aspxboy.com/images/hbz_images/66c040d5-df17-43e3-ae0a-3afee8c63b96.jpg&#34; border=&#34;0&#34; alt=&#34;&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;HTML Tutorials&lt;/strong&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/html/default.asp&#34; target=&#34;_top&#34;&gt;Learn HTML&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/xhtml/default.asp&#34; target=&#34;_top&#34;&gt;Learn XHTML&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/css/default.asp&#34; target=&#34;_top&#34;&gt;Learn CSS&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/tcpip/default.asp&#34; target=&#34;_top&#34;&gt;Learn TCP/IP&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;XML Tutorials&lt;/strong&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/xml/default.asp&#34; target=&#34;_top&#34;&gt;Learn XML&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/xsl/xsl_languages.asp&#34; target=&#34;_top&#34;&gt;Learn XSL&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/xsl/default.asp&#34; target=&#34;_top&#34;&gt;Learn XSLT&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/xslfo/default.asp&#34; target=&#34;_top&#34;&gt;Learn XSL-FO&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/xpath/default.asp&#34; target=&#34;_top&#34;&gt;Learn XPath&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/xquery/default.asp&#34; target=&#34;_top&#34;&gt;Learn XQuery&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/dtd/default.asp&#34; target=&#34;_top&#34;&gt;Learn DTD&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/schema/default.asp&#34; target=&#34;_top&#34;&gt;Learn Schema&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/dom/default.asp&#34; target=&#34;_top&#34;&gt;Learn DOM&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/xforms/default.asp&#34; target=&#34;_top&#34;&gt;Learn XForms&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/soap/default.asp&#34; target=&#34;_top&#34;&gt;Learn SOAP&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/wsdl/default.asp&#34; target=&#34;_top&#34;&gt;Learn WSDL&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/rdf/default.asp&#34; target=&#34;_top&#34;&gt;Learn RDF&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/wap/default.asp&#34; target=&#34;_top&#34;&gt;Learn WAP&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Browser Scripting&lt;/strong&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/js/default.asp&#34; target=&#34;_top&#34;&gt;Learn JavaScript&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/dhtml/default.asp&#34; target=&#34;_top&#34;&gt;Learn DHTML&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/vbscript/default.asp&#34; target=&#34;_top&#34;&gt;Learn VBScript&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/wmlscript/default.asp&#34; target=&#34;_top&#34;&gt;Learn WMLScript&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Server Scripting&lt;/strong&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/sql/default.asp&#34; target=&#34;_top&#34;&gt;Learn SQL&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/asp/default.asp&#34; target=&#34;_top&#34;&gt;Learn ASP&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/ado/default.asp&#34; target=&#34;_top&#34;&gt;Learn ADO&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/php/default.asp&#34; target=&#34;_top&#34;&gt;Learn PHP&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;.NET (dotnet)&lt;/strong&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/ngws/default.asp&#34; target=&#34;_top&#34;&gt;.NET Microsoft&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/aspnet/default.asp&#34; target=&#34;_top&#34;&gt;.NET ASP&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/dotnetmobile/default.asp&#34; target=&#34;_top&#34;&gt;.NET Mobile&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Multimedia&lt;/strong&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/media/default.asp&#34; target=&#34;_top&#34;&gt;Learn Media&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/smil/default.asp&#34; target=&#34;_top&#34;&gt;Learn SMIL&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/svg/default.asp&#34; target=&#34;_top&#34;&gt;Learn SVG&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/flash/default.asp&#34; target=&#34;_top&#34;&gt;Learn Flash&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Web Building&lt;/strong&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/site/default.asp&#34; target=&#34;_top&#34;&gt;Web Building&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/w3c/default.asp&#34; target=&#34;_top&#34;&gt;Web W3C&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/browsers/default.asp&#34; target=&#34;_top&#34;&gt;Web Browsers&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/quality/default.asp&#34; target=&#34;_top&#34;&gt;Web Quality&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/graphics/default.asp&#34; target=&#34;_top&#34;&gt;Web Graphics&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/careers/default.asp&#34; target=&#34;_top&#34;&gt;Web Careers&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/hosting/default.asp&#34; target=&#34;_top&#34;&gt;Web Hosting&lt;/a&gt;&lt;br /&gt;&lt;a class=&#34;left&#34; href=&#34;http://www.w3schools.com/cert/default.asp&#34; target=&#34;_top&#34;&gt;Web Certification&lt;/a&gt;&lt;/p&gt;               
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2004/06/01/cb-12759/</guid>
+      <description>很少见教程大全，不知道我是不是很落伍，今天才逛到这里
+
+HTML Tutorials
+Learn HTML
+Learn XHTML
+Learn CSS
+Learn TCP/IP
+XML Tutorials
+Learn XML
+Learn XSL
+Learn XSLT
+Learn XSL-FO
+Learn XPath
+Learn XQuery
+Learn DTD
+Learn Schema
+Learn DOM
+Learn XForms
+Learn SOAP
+Learn WSDL
+Learn RDF
+Learn WAP
+Browser Scripting
+Learn JavaScript
+Learn DHTML
+Learn VBScript
+Learn WMLScript
+Server Scripting
+Learn SQL
+Learn ASP
+Learn ADO
+Learn PHP
+.NET (dotnet)
+.NET Microsoft
+.NET ASP
+.NET Mobile</description>
     </item>
     
   </channel>

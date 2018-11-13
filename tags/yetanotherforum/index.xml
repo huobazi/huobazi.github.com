@@ -2,24 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Yetanotherforum on 武眉博</title>
-    <link>http://huobazi.aspxboy.com/tags/yetanotherforum/</link>
+    <link>https://huobazi.aspxboy.com/tags/yetanotherforum/</link>
     <description>Recent content in Yetanotherforum on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 11 Apr 2006 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://huobazi.aspxboy.com/tags/yetanotherforum/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://huobazi.aspxboy.com/tags/yetanotherforum/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Yetanotherforum 编辑表情后不立即更新</title>
-      <link>http://huobazi.aspxboy.com/blog/2006/04/11/cb-372413/</link>
+      <link>https://huobazi.aspxboy.com/blog/2006/04/11/cb-372413/</link>
       <pubDate>Tue, 11 Apr 2006 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2006/04/11/cb-372413/</guid>
-      <description>&lt;p&gt;文件  FormatMsg.cs&lt;/p&gt;
-&lt;br /&gt;&lt;p&gt;方法iAddSmiles内 &lt;/p&gt;
-&lt;br /&gt;&lt;p&gt;Code:&lt;br /&gt;strTemp = strTemp.Replace(code.ToLower(),String.Format(&#34;&amp;lt;img src=\&#34;{0}\&#34; alt=\&#34;{1}\&#34; /&amp;gt;&#34;,basePage.Smiley(Convert.ToString(row[&#34;Icon&#34;])),basePage.Server.HtmlEncode(row[&#34;Emoticon&#34;].ToString())));&lt;br /&gt;调用了两次可能导致被转化成html后有乱码出现&lt;/p&gt;
-&lt;br /&gt;&lt;p&gt;在方法GetSmilies内&lt;br /&gt;Code:&lt;br /&gt;System.Web.HttpContext.Current.Cache.Insert(&#34;Smilies&#34;,dt,null,DateTime.Now.AddMinutes(60),TimeSpan.Zero);&lt;br /&gt;加入缓存项的Key和更新/删除时移除缓存的Key不一致 导致编辑表情后不立即更新&lt;br /&gt;DB.cs&lt;br /&gt;Code:&lt;br /&gt;System.Web.HttpContext.Current.Cache.Remove(&#34;Smiles&#34;);&lt;br /&gt;&lt;/p&gt;             
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2006/04/11/cb-372413/</guid>
+      <description>文件 FormatMsg.cs
+方法iAddSmiles内 Code:
+strTemp = strTemp.Replace(code.ToLower(),String.Format(&#34;&amp;lt;img src=\&#34;{0}\&#34; alt=\&#34;{1}\&#34; /&amp;gt;&#34;,basePage.Smiley(Convert.ToString(row[&#34;Icon&#34;])),basePage.Server.HtmlEncode(row[&#34;Emoticon&#34;].ToString())));
+调用了两次可能导致被转化成html后有乱码出现
+在方法GetSmilies内
+Code:
+System.Web.HttpContext.Current.Cache.Insert(&#34;Smilies&#34;,dt,null,DateTime.Now.AddMinutes(60),TimeSpan.Zero);
+加入缓存项的Key和更新/删除时移除缓存的Key不一致 导致编辑表情后不立即更新
+DB.cs
+Code:
+System.Web.HttpContext.Current.Cache.Remove(&#34;Smiles&#34;);</description>
     </item>
     
   </channel>

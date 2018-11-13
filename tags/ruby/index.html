@@ -1,32 +1,12 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruby &middot; 武眉博</title>
 
-    <meta name="description" content="Marble&#39;s blog">
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
 
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="huobazi" />
-    <meta name="twitter:title" content="Ruby &middot; 武眉博">
-    <meta name="twitter:description" content="Marble&#39;s blog">
+    <link rel="stylesheet" href='https://huobazi.aspxboy.com/css/all.min.css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="Ruby &middot; 武眉博">
-    <meta property="og:description" content="Marble&#39;s blog">
-
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    
-    <link href='http://fonts.useso.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
-    
-    
-        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
-    
-
-    <link rel="stylesheet" href="/css/all.min.css">
-    <link href="http://apps.bdimg.com/libs/fontawesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="alternate" type="application/rss+xml" title="武眉博" href='https://huobazi.aspxboy.com/index.xml' />
 </head>
 <body>
 
@@ -35,7 +15,7 @@
     <div class="sidebar pure-u-1 pure-u-md-1-4">
     <div class="header">
         <hgroup>
-            <h1 class="brand-title"><a href="http://huobazi.aspxboy.com/">武眉博</a></h1>
+            <h1 class="brand-title"><a href="https://huobazi.aspxboy.com">武眉博</a></h1>
             <h2 class="brand-tagline"> Marble&#39;s blog </h2>
         </hgroup>
 
@@ -43,194 +23,50 @@
             <ul class="nav-list">
                 
                 <li class="nav-item">
-                    <a class="pure-button" href="http://twitter.com/huobazi"><i class="fa fa-twitter"></i> Twitter</a>
+                    <a class="pure-button" href="https://twitter.com/huobazi">
+                        <i class="fa fa-twitter"></i> Twitter
+                    </a>
                 </li>
                 
                 
                 <li class="nav-item">
-                    <a class="pure-button" href="http://github.com/huobazi "><i class="fa fa-github-alt"></i> github</a>
+                    <a class="pure-button" href="https://github.com/huobazi">
+                        <i class="fa fa-github-alt"></i> Github
+                    </a>
                 </li>
                 
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://www.linkedin.com/in/huobazi">
+                        <i class="fa fa-linkedin"></i> LinkedIn
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="pure-button" href='https://huobazi.aspxboy.com/index.xml'>
+                        <i class="fa fa-rss"></i> rss
+                    </a>
+                </li>
             </ul>
         </nav>
     </div>
 </div>
+
 
     <div class="content pure-u-1 pure-u-md-3-4">
         <div>
             
             <div class="posts">
                 
-                <h1 class="content-subhead">15 Aug 2012</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://huobazi.aspxboy.com/blog/2012/08/15/ajaxupload-with-rail-carrierwave-on-mongodb/" class="post-title">使用AjaxUpload和Carrierwave在Rails Mongoid中批量上传图片</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                
-                                <a class="post-category post-category-Ruby on Rails" href="http://huobazi.aspxboy.com//tags/ruby-on-rails">Ruby on Rails</a><a class="post-category post-category-Rails" href="http://huobazi.aspxboy.com//tags/rails">Rails</a><a class="post-category post-category-Mongoid" href="http://huobazi.aspxboy.com//tags/mongoid">Mongoid</a><a class="post-category post-category-Carrierwave" href="http://huobazi.aspxboy.com//tags/carrierwave">Carrierwave</a><a class="post-category post-category-Ajax" href="http://huobazi.aspxboy.com//tags/ajax">Ajax</a><a class="post-category post-category-Ruby" href="http://huobazi.aspxboy.com//tags/ruby">Ruby</a>
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        
-
-<p><a href="https://github.com/valums/file-uploader">file-uploader</a>是一个用 Javascrit 编写的文件上传 Libary,在这里我使用<a href="https://github.com/jnicklas/carrierwave">CarrierWave</a>和 <a href="https://github.com/mongoid/mongoid">Mongoid</a> 来完成多文件的无刷新上传功能</p>
-
-<h2 id="rubygems:7371c11e255b336e41edb223ab46297b">RubyGems</h2>
-
-<pre><code class="language-ruby">gem 'mongoid', '3.0.4'
-gem 'carrierwave', '0.6.2'
-gem 'carrierwave-mongoid', :github =&gt; 'jnicklas/carrierwave-mongoid', :branch =&gt; 'mongoid-3.0' 
-gem 'mini_magick', '3.4'
-gem 'rack-raw-upload', '1.1.0'
-</code></pre>
-
-<h2 id="model:7371c11e255b336e41edb223ab46297b">Model</h2>
-
-<pre><code class="language-ruby">class Screenshot
-  include Mongoid::Document
-  include Mongoid::Timestamps::Created
-  include Rails.application.routes.url_helpers
-
-  attr_accessible :image 
-  field :image 
-
-  mount_uploader :image, ScreenshotUploader 
-
-end
-</code></pre>
-
-<h2 id="controller:7371c11e255b336e41edb223ab46297b">Controller</h2>
-
-<pre><code class="language-ruby">class ScreenshotsController &lt; ApplicationController
-
-  def index
-    @screenshots = Screenshot.all.desc(:created_at)
-
-    respond_to do |format|
-      format.html # index.html.erb    
-      format.js{ render :layout =&gt; false}
-    end
-  end
-
-  def create
-    file = params[:qqfile].is_a?(ActionDispatch::Http::UploadedFile) ? params[:qqfile] : params[:file]
-    @screenshot = Screenshot.new
-    @screenshot.image = file
-    if @screenshot.save
-      render json: { success: true, src: @screenshot.to_json }
-    else
-      render json: @screenshot.errors.to_json
-    end
-  end
-
-  def destroy
-    @screenshot = Screenshot.find(params[:id])
-    @screenshot.destroy
-
-    respond_to do |format|
-      format.html { redirect_to screenshots_path }
-      format.js{ 
-        @screenshots = Screenshot.all.desc(:created_at)
-        render :layout =&gt; false
-      }
-    end
-
-  end
-
-end
-</code></pre>
-
-<h2 id="uploader:7371c11e255b336e41edb223ab46297b">Uploader</h2>
-
-<pre><code class="language-ruby"># encoding: utf-8
-require &quot;digest/md5&quot;
-require 'carrierwave/processing/mini_magick'
-
-class ScreenshotUploader &lt; CarrierWave::Uploader::Base
-  include CarrierWave::MiniMagick
-
-  storage :file
-
-  # Override the directory where uploaded files will be stored.
-  def store_dir
-    &quot;uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}&quot;
-  end
-
-
-  process :convert =&gt; 'png'
-
-  # Create different versions of your uploaded files:
-  version :thumb do
-    process :resize_to_fill =&gt; [120, 120]
-  end
-
-  # Add a white list of extensions which are allowed to be uploaded.
-  def extension_white_list
-    %w(jpg jpeg gif png)
-  end
-
-  # Override the filename of the uploaded files:
-  # see http://huacnlee.com/blog/carrierwave-upload-store-file-name-config/
-  def filename
-    if super.present?
-      # current_path 是 Carrierwave 上传过程临时创建的一个文件，有时间标记，所以它将是唯一的
-      @name ||= Digest::MD5.hexdigest(File.dirname(current_path))
-      &quot;#{@name}.#{file.extension.downcase}&quot;
-    end
-  end
-end
-</code></pre>
-
-<h2 id="javascript:7371c11e255b336e41edb223ab46297b">Javascript</h2>
-
-<pre><code class="language-javascript">  $(document).ready(function(){
-
-    var uploader = new qq.FileUploader({
-      debug: true,
-      allowedExtensions: ['jpg', 'jpeg', 'png', 'gif'],
-      sizeLimit: 1048576, // max size: 1MB
-      minSizeLimit: 0, // min size
-      multiple: true,
-      element: document.getElementById('file-uploader'),
-      action: '&lt;%= screenshots_path %&gt;',
-      onComplete: function(id, fileName, responseJSON){
-        $.getScript(&quot;&lt;%= screenshots_path %&gt;&quot;);
-      },
-      onSubmit: function(id, fileName) {
-        uploader.setParams({
-          xx: &quot;xx&quot;,
-          yy: 'yy',
-          zz: 'zz',       
-          authenticity_token: &quot;&lt;%= form_authenticity_token.to_s %&gt;&quot;
-        });
-      }
-    });
-
-});
-</code></pre>
-
-<p>你可以在 <a href="https://github.com/huobazi/ajax-upload-with-carrierwave-mongoid">https://github.com/huobazi/ajax-upload-with-carrierwave-mongoid</a>下载完整的示例代码</p>
-
-                    </div>
-                </section>
-                
                 <h1 class="content-subhead">06 Mar 2012</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://huobazi.aspxboy.com/blog/2012/03/06/convert-typecho-to-octopress/" class="post-title">从typecho转换到Octopress了</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2012/03/06/convert-typecho-to-octopress/" class="post-title">从typecho转换到Octopress了</a>
 
                         <p class="post-meta">
                             
-                            
-                                
-                                <a class="post-category post-category-Octopress" href="http://huobazi.aspxboy.com//tags/octopress">Octopress</a><a class="post-category post-category-Typecho" href="http://huobazi.aspxboy.com//tags/typecho">Typecho</a><a class="post-category post-category-数据转换" href="http://huobazi.aspxboy.com//tags/%E6%95%B0%E6%8D%AE%E8%BD%AC%E6%8D%A2">数据转换</a><a class="post-category post-category-Wordpress" href="http://huobazi.aspxboy.com//tags/wordpress">Wordpress</a><a class="post-category post-category-Ruby" href="http://huobazi.aspxboy.com//tags/ruby">Ruby</a><a class="post-category post-category-折腾" href="http://huobazi.aspxboy.com//tags/%E6%8A%98%E8%85%BE">折腾</a><a class="post-category post-category-闲言碎语" href="http://huobazi.aspxboy.com//tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD">闲言碎语</a>
                             
                         </p>
                     </header>
@@ -255,13 +91,10 @@ end
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://huobazi.aspxboy.com/blog/2010/07/24/ruby-on-rails-nginx-passenger-memcached-on-centos/" class="post-title">在centos上装rubyee,passenger和memcached ,搭建rails环境</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2010/07/24/ruby-on-rails-nginx-passenger-memcached-on-centos/" class="post-title">在centos上装rubyee,passenger和memcached ,搭建rails环境</a>
 
                         <p class="post-meta">
                             
-                            
-                                
-                                <a class="post-category post-category-LAMP" href="http://huobazi.aspxboy.com//tags/lamp">LAMP</a><a class="post-category post-category-Rails" href="http://huobazi.aspxboy.com//tags/rails">Rails</a><a class="post-category post-category-nginx" href="http://huobazi.aspxboy.com//tags/nginx">nginx</a><a class="post-category post-category-RoR" href="http://huobazi.aspxboy.com//tags/ror">RoR</a><a class="post-category post-category-Ruby" href="http://huobazi.aspxboy.com//tags/ruby">Ruby</a><a class="post-category post-category-memcache" href="http://huobazi.aspxboy.com//tags/memcache">memcache</a><a class="post-category post-category-passenger" href="http://huobazi.aspxboy.com//tags/passenger">passenger</a><a class="post-category post-category-RubyEE" href="http://huobazi.aspxboy.com//tags/rubyee">RubyEE</a>
                             
                         </p>
                     </header>
@@ -273,7 +106,6 @@ end
 <span style="color: #c0c0c0;">cd</span><span style="color: #00bbbb;"> /tmp</span><br /><span style="color: #00bbbb;">wget http:/</span><span style="color: #c0c0c0;">/</span><span style="color: #c0c0c0;">rubyforge</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">org</span><span style="color: #c0c0c0;">/</span><span style="color: #c0c0c0;">frs</span><span style="color: #c0c0c0;">/</span><span style="color: #c0c0c0;">download</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">php</span><span style="color: #c0c0c0;">/</span><span style="color: #c0c0c0;">71096</span><span style="color: #c0c0c0;">/</span><span style="color: #c0c0c0;">ruby</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">enterprise</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">1</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">8</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">7</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">2010</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">02</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">tar</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">gz</span><br /><span style="color: #c0c0c0;">tar</span> <span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">xzvf</span> <span style="color: #c0c0c0;">ruby</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">enterprise</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">1</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">8</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">7</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">2010</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">02</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">tar</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">gz</span><br /><span style="color: #c0c0c0;">cd</span> <span style="color: #c0c0c0;">ruby</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">enterprise</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">1</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">8</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">7</span><span style="color: #c0c0c0;">-</span><span style="color: #c0c0c0;">2010</span><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">02</span><br /><span style="color: #c0c0c0;">.</span><span style="color: #c0c0c0;">/installer</span>
 </div>
 <p>然后按照提示做</p>
-<p></p>
 <p>设置一下环境变量 <br />export PATH=/rubyee/bin:$PATH<br />接着<br />ruby -v<br />gem -v<br />看到版本号，说明rubyee 安装ok</p>
 <p>下来<br />gem install passenger<br />passenger-install-nginx-module</p>
 <p>按照提示在nginx配置文件里增加：</p>
@@ -303,8 +135,7 @@ end
 <p>错误[memcache-client] Could not load SystemTimer gem, falling back to Ruby's slower/unsafe timeout library: no such file to load -- system_timer<br />rake aborted!</p>
 <p>sudo gem install system_timer</p>
 <p>Magick::ImageMagickError (unable to read font `/usr/local/lib/ImageMagick-6.6.3/config//usr/share/fonts/type1/gsfonts/n019003l.pfb' @ error/annotate.c/RenderFreetype/1056: `(null)'):<br />错误</p>
-<p>wget http://sourceforge.net/projects/gs-fonts/files/gs-fonts/8.11%20%28base%2035%2C%20GPL%29/ghostscript-fonts-std-8.11.tar.gz/download<br /> tar -zxvf ghostscript-fonts-std-8.11.tar.gz<br />解压后拷贝到需要的目录</p>               
-
+<p>wget http://sourceforge.net/projects/gs-fonts/files/gs-fonts/8.11%20%28base%2035%2C%20GPL%29/ghostscript-fonts-std-8.11.tar.gz/download<br /> tar -zxvf ghostscript-fonts-std-8.11.tar.gz<br />解压后拷贝到需要的目录</p>
                     </div>
                 </section>
                 
@@ -312,13 +143,10 @@ end
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://huobazi.aspxboy.com/blog/2010/03/30/hwo-to-injecting-themes-css-javascript-to-header-in-rails/" class="post-title">在rails中不同的view不同皮肤下的js，css，注入js和css到head区域</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2010/03/30/hwo-to-injecting-themes-css-javascript-to-header-in-rails/" class="post-title">在rails中不同的view不同皮肤下的js，css，注入js和css到head区域</a>
 
                         <p class="post-meta">
                             
-                            
-                                
-                                <a class="post-category post-category-LAMP" href="http://huobazi.aspxboy.com//tags/lamp">LAMP</a><a class="post-category post-category-Rails" href="http://huobazi.aspxboy.com//tags/rails">Rails</a><a class="post-category post-category-Ruby" href="http://huobazi.aspxboy.com//tags/ruby">Ruby</a><a class="post-category post-category-layout" href="http://huobazi.aspxboy.com//tags/layout">layout</a><a class="post-category post-category-injecting" href="http://huobazi.aspxboy.com//tags/injecting">injecting</a><a class="post-category post-category-dynamic" href="http://huobazi.aspxboy.com//tags/dynamic">dynamic</a><a class="post-category post-category-ruby on rails" href="http://huobazi.aspxboy.com//tags/ruby-on-rails">ruby on rails</a>
                             
                         </p>
                     </header>
@@ -334,15 +162,13 @@ end
 </div>
 <p>(如果你要直接在view或者layout内引入css则可以&lt;%= include_css_tag "global.css" %&gt;，这样生成的路径是带有皮肤目录的）</p>
 <p>接下来，修改你的layout的head，加入如下代码：</p>
-<p></p>
 <p>&lt;%= yield :header_js %&gt;<br />&lt;%= yield :header_css %&gt;</p>
 <p>然后在需要引入js的View内</p>
 <p>&lt;% require_js "jquery/jquery.tools.min.js" %&gt;<br />&lt;% require_js "jquery/jquery.colorbox.min.js" %&gt;</p>
 <p>最后run一下，你会看到会在html的head内生成如下html</p>
 <p>&lt;script src="/themes/2010v1/javascripts/jquery/jquery.tools.min.js?1269949149" type="text/javascript"&gt;&lt;/script&gt;<br />&lt;script src="/themes/2010v1/javascripts/jquery/jquery.colorbox.min.js?1269949147" type="text/javascript"&gt;&lt;/script&gt;</p>
 <p> </p>
-<p> </p>                
-
+<p> </p>
                     </div>
                 </section>
                 
@@ -350,13 +176,10 @@ end
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://huobazi.aspxboy.com/blog/2009/09/24/sexy-activerecord/" class="post-title">rails中的ActiveRecord真性感！</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2009/09/24/sexy-activerecord/" class="post-title">rails中的ActiveRecord真性感！</a>
 
                         <p class="post-meta">
                             
-                            
-                                
-                                <a class="post-category post-category-LAMP" href="http://huobazi.aspxboy.com//tags/lamp">LAMP</a><a class="post-category post-category-Rails" href="http://huobazi.aspxboy.com//tags/rails">Rails</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a><a class="post-category post-category-RoR" href="http://huobazi.aspxboy.com//tags/ror">RoR</a><a class="post-category post-category-ActiveRecord" href="http://huobazi.aspxboy.com//tags/activerecord">ActiveRecord</a><a class="post-category post-category-Ruby" href="http://huobazi.aspxboy.com//tags/ruby">Ruby</a><a class="post-category post-category-on" href="http://huobazi.aspxboy.com//tags/on">on</a>
                             
                         </p>
                     </header>
@@ -367,7 +190,6 @@ end
 <span style="COLOR: #e3ceab">class</span> <span style="COLOR: #dcdccc">User</span> <span style="COLOR: #dcdccc">&lt;</span> <span style="FONT-WEIGHT: bold; COLOR: #dca3a3">ActiveRecord</span><span style="COLOR: #dcdccc">::</span><span style="FONT-WEIGHT: bold; COLOR: #dca3a3">Base</span>  <br />  <span style="COLOR: #dcdccc">has_many</span> <span style="COLOR: #cc9393">:articles</span>  <br /><span style="COLOR: #e3ceab">end</span>  <br /> <br /><span style="COLOR: #e3ceab">class</span> <span style="COLOR: #dcdccc">Article</span> <span style="COLOR: #dcdccc">&lt;</span> <span style="FONT-WEIGHT: bold; COLOR: #dca3a3">ActiveRecord</span><span style="COLOR: #dcdccc">::</span><span style="FONT-WEIGHT: bold; COLOR: #dca3a3">Base</span><br />  <span style="COLOR: #dcdccc">belongs_to</span> <span style="COLOR: #cc9393">:user</span>  <br /><span style="COLOR: #e3ceab">end</span>
 </div>
 <p>然后执行<br />&gt;&gt; <strong><span style="color: #0000ff;">Article.find(1)</span> </strong>会得到延迟加载user对象的sql语句。如下：</p>
-<p></p>
 <div class="source" style="COLOR: #dcdccc; FONT-FAMILY: '[object]','Consolas','Lucida Console','Courier New'; BACKGROUND-COLOR: #3f3f3f">
 <span style="COLOR: #e3ceab">SELECT</span> <span style="COLOR: #dcdccc">*</span> <span style="COLOR: #e3ceab">FROM</span> <span style="COLOR: #dcdccc">articles</span> <span style="COLOR: #e3ceab">WHERE</span> (<span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">id</span> <span style="COLOR: #dcdccc">=</span><span style="COLOR: #8cd0d3">1</span>) <span style="COLOR: #e3ceab">LIMIT</span> <span style="COLOR: #8cd0d3">1</span>
 </div>
@@ -375,8 +197,7 @@ end
 <div class="source" style="COLOR: #dcdccc; FONT-FAMILY: '[object]','Consolas','Lucida Console','Courier New'; BACKGROUND-COLOR: #3f3f3f">
 <span style="COLOR: #e3ceab">SELECT</span><br /><span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">extended_html</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r6</span> <span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">excerpt</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r7</span><br /><span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">keywords</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r8</span> <span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">allow_pings</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r10</span><br /><span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">allow_comments</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r9</span> <span style="COLOR: #dcdccc">users</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">id</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t1_r0</span><br /><span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">published</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r11</span> <span style="COLOR: #dcdccc">users</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">login</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t1_r1</span><br /><span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">text_filter</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r12</span> <span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">id</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r0</span><br /><span style="COLOR: #dcdccc">users</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">password</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t1_r2</span> <span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">user_id</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r13</span><br /><span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">title</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r1</span> <span style="COLOR: #dcdccc">users</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">name</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t1_r3</span><br /><span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">created_at</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r14</span> <span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">author</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r2</span><br /><span style="COLOR: #dcdccc">users</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">email</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t1_r4</span> <span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">updated_at</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r15</span><br /><span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">body</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r3</span> <span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">permalink</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r16</span><br /><span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">body_html</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r4</span> <span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">guid</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r17</span><br /><span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">`</span><span style="COLOR: #dcdccc">extended</span><span style="COLOR: #dcdccc">`</span> <span style="COLOR: #e3ceab">AS</span> <span style="COLOR: #dcdccc">t0_r5</span><br /><span style="COLOR: #e3ceab">FROM</span> <span style="COLOR: #dcdccc">articles</span> <span style="COLOR: #e3ceab">LEFT</span> <span style="COLOR: #e3ceab">OUTER</span> <span style="COLOR: #e3ceab">JOIN</span> <span style="COLOR: #dcdccc">users</span><br /><span style="COLOR: #e3ceab">ON</span> <span style="COLOR: #dcdccc">users</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">id</span> <span style="COLOR: #dcdccc">=</span> <span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">user_id</span><br /><span style="COLOR: #e3ceab">WHERE</span> (<span style="COLOR: #dcdccc">articles</span><span style="COLOR: #dcdccc">.</span><span style="COLOR: #dcdccc">id</span> <span style="COLOR: #dcdccc">=</span> <span style="COLOR: #8cd0d3">1</span>)</div>
 <p>是不是很优美，很性感涅？</p>
-<p> </p>                
-
+<p> </p>
                     </div>
                 </section>
                 
@@ -386,11 +207,11 @@ end
             <div class="footer">
     <div class="pure-menu pure-menu-horizontal pure-menu-open">
         <ul>
-            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a> &nbsp;&nbsp; theme by <a target="_blank" href="https://github.com/dplesca/purehugo">purehugo</a></a></li>
+            <li>Powered by <a class="hugo" href="https://gohugo.io/" target="_blank">hugo</a></li>
         </ul>
     </div>
 </div>
-<script src="/js/all.min.js"></script>
+<script src='https://huobazi.aspxboy.com/js/all.min.js'></script>
 
         </div>
     </div>

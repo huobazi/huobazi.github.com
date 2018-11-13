@@ -1,0 +1,464 @@
+
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+
+    <link rel="stylesheet" href='https://huobazi.aspxboy.com/css/all.min.css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="alternate" type="application/rss+xml" title="武眉博" href='https://huobazi.aspxboy.com/index.xml' />
+</head>
+<body>
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <h1 class="brand-title"><a href="https://huobazi.aspxboy.com">武眉博</a></h1>
+            <h2 class="brand-tagline"> Marble&#39;s blog </h2>
+        </hgroup>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://twitter.com/huobazi">
+                        <i class="fa fa-twitter"></i> Twitter
+                    </a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://github.com/huobazi">
+                        <i class="fa fa-github-alt"></i> Github
+                    </a>
+                </li>
+                
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://www.linkedin.com/in/huobazi">
+                        <i class="fa fa-linkedin"></i> LinkedIn
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="pure-button" href='https://huobazi.aspxboy.com/index.xml'>
+                        <i class="fa fa-rss"></i> rss
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                
+                <h1 class="content-subhead">09 Nov 2011</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/" class="post-title">AutoGenerateColumns=&#39;true&#39;的GridView如何支持htmlencode/htmldecode</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p>我们知道BoundField.HtmlEncode 属性可以设置一个单元格是否能够htmlencode，我今天碰到的问题是：自动生成列的GridView，表头可能是包含html的比如&lt;font color=red&gt;邮件&lt;/font&gt;，默认被htmlencode了，而我不希望这样做，所以有了如下的代码:</p>
+<p></p>
+
+<p></p>
+<p> </p>
+<div class="source" style="font-family: '[object HTMLOptionElement]', Consolas, 'Lucida Console', 'Courier New'; color: #e6e1dc; background-color: #111111; ">
+<span style="color: #bc9458; font-style: italic; ">/// &lt;summary&gt;</span><br /><span style="color: #bc9458; font-style: italic; ">/// Handles the PreRender event of the gvSource control.</span><br /><span style="color: #bc9458; font-style: italic; ">/// &lt;/summary&gt;</span><br /><span style="color: #bc9458; font-style: italic; ">/// &lt;param name=&ldquo;sender&rdquo;&gt;The source of the event.&lt;/param&gt;</span><br /><span style="color: #bc9458; font-style: italic; ">/// &lt;param name=&ldquo;e&rdquo;&gt;The &lt;see cref=&ldquo;System.EventArgs&rdquo;/&gt; instance containing the event data.&lt;/param&gt;</span><br /><span style="color: #cc7833; ">protected</span> <span style="color: #cc7833; ">void</span> <span style="color: #ffc66d; ">gvSource_PreRender</span>( <span style="color: #da4939; ">object</span> <span style="color: #e6e1dc; ">sender</span> <span style="color: #e6e1dc; ">,</span> <span style="color: #e6e1dc; ">EventArgs</span> <span style="color: #e6e1dc; ">e</span> )<br /><span style="color: #e6e1dc; ">{</span><br />    <span style="color: #e6e1dc; ">GridView</span> <span style="color: #e6e1dc; ">gridView</span> <span style="color: #e6e1dc; ">=</span> <span style="color: #e6e1dc; ">sender</span> <span style="color: #cc7833; ">as</span> <span style="color: #e6e1dc; ">GridView</span>;<br />    <span style="color: #cc7833; ">if</span> ( <span style="color: #e6e1dc; ">gridView</span> <span style="color: #e6e1dc; ">!=</span> <span style="color: #cc7833; ">null</span> <span style="color: #e6e1dc; ">&amp;&amp;</span> <span style="color: #e6e1dc; ">gridView</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HeaderRow</span> <span style="color: #e6e1dc; ">!=</span> <span style="color: #cc7833; ">null</span> <span style="color: #e6e1dc; ">&amp;&amp;</span> <span style="color: #e6e1dc; ">gridView</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HeaderRow</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Cells</span> <span style="color: #e6e1dc; ">!=</span> <span style="color: #cc7833; ">null</span> )<br />    <span style="color: #e6e1dc; ">{</span><br />        <span style="color: #cc7833; ">for</span> ( <span style="color: #da4939; ">int</span> <span style="color: #e6e1dc; ">j</span> <span style="color: #e6e1dc; ">=</span> <span style="color: #a5c261; ">0</span> ; <span style="color: #e6e1dc; ">j</span> <span style="color: #e6e1dc; ">&lt;</span> <span style="color: #e6e1dc; ">gridView</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HeaderRow</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Cells</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Count</span> ; <span style="color: #e6e1dc; ">j</span><span style="color: #e6e1dc; ">++</span> )<br />        <span style="color: #e6e1dc; ">{</span><br />            <span style="color: #e6e1dc; ">gridView</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HeaderRow</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Cells</span><span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">j</span><span style="color: #e6e1dc; ">].</span><span style="color: #e6e1dc; ">Text</span> <span style="color: #e6e1dc; ">=</span> <span style="color: #e6e1dc; ">System</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Web</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HttpUtility</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HtmlDecode</span>( <span style="color: #e6e1dc; ">gridView</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">HeaderRow</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">Cells</span><span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">j</span><span style="color: #e6e1dc; ">].</span><span style="color: #e6e1dc; ">Text</span> );<br />        <span style="color: #e6e1dc; ">}</span><br />    <span style="color: #e6e1dc; ">}</span><br /><span style="color: #e6e1dc; ">}</span>
+</div></p>
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">22 Jun 2011</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2011/06/22/password-masking-in-csharp-console-application/" class="post-title">在Console下输入密码，以星号代替。</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>如何在Console下输入密码，像*unix系统下那样不显示，或者显示星号，如下代码经过测试：</p>
+<div class="source" style="font-family: '[object HTMLOptionElement]', Consolas, 'Lucida Console', 'Courier New'; color: #ffffff; background-color: #333333; ">
+<p><span style="color: #87ceeb; ">/// &lt;summary&gt;</span><br /><span style="color: #87ceeb; ">/// Gets the console secure password.</span><br /><span style="color: #87ceeb; ">/// &lt;/summary&gt;</span><br /><span style="color: #87ceeb; ">/// &lt;returns&gt;&lt;/returns&gt;</span><br /><span style="color: #f0e68c; ">private</span> <span style="color: #f0e68c; ">static</span> <span style="color: #ffffff; ">SecureString</span> <span style="color: #ffffff; ">GetConsoleSecurePassword</span>( )<br /><span style="color: #ffffff; ">{</span><br />    <span style="color: #ffffff; ">SecureString</span> <span style="color: #ffffff; ">pwd</span> <span style="color: #ffffff; ">=</span> <span style="color: #f0e68c; ">new</span> <span style="color: #ffffff; ">SecureString</span>( );<br />    <span style="color: #f0e68c; ">while</span> ( <span style="color: #f0e68c; ">true</span> )<br />    <span style="color: #ffffff; ">{</span><br />        <span style="color: #ffffff; ">ConsoleKeyInfo</span> <span style="color: #ffffff; ">i</span> <span style="color: #ffffff; ">=</span> <span style="color: #ffffff; ">Console</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">ReadKey</span>( <span style="color: #f0e68c; ">true</span> );<br />        <span style="color: #f0e68c; ">if</span> ( <span style="color: #ffffff; ">i</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Key</span> <span style="color: #ffffff; ">==</span> <span style="color: #ffffff; ">ConsoleKey</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Enter</span> )<br />        <span style="color: #ffffff; ">{</span><br />            <span style="color: #f0e68c; ">break</span>;<br />        <span style="color: #ffffff; ">}</span><br />        <span style="color: #f0e68c; ">else</span> <span style="color: #ffffff; ">if</span> ( <span style="color: #ffffff; ">i</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Key</span> <span style="color: #ffffff; ">==</span> <span style="color: #ffffff; ">ConsoleKey</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Backspace</span> )<br />        <span style="color: #ffffff; ">{</span><br />            <span style="color: #ffffff; ">pwd</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">RemoveAt</span>( <span style="color: #ffffff; ">pwd</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Length</span> <span style="color: #ffffff; ">-</span> <span style="color: #ffffff; ">1</span> );<br />            <span style="color: #ffffff; ">Console</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Write</span>( <span style="color: #ffffff; ">"\b \b"</span> );<br />        <span style="color: #ffffff; ">}</span><br />        <span style="color: #f0e68c; ">else</span><br />        <span style="color: #ffffff; ">{</span><br />            <span style="color: #ffffff; ">pwd</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">AppendChar</span>( <span style="color: #ffffff; ">i</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">KeyChar</span> );<br />            <span style="color: #ffffff; ">Console</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Write</span>( <span style="color: #ffffff; ">"*"</span> );<br />        <span style="color: #ffffff; ">}</span><br />    <span style="color: #ffffff; ">}</span><br />    <span style="color: #f0e68c; ">return</span> <span style="color: #ffffff; ">pwd</span>;<br /><span style="color: #ffffff; ">}</span></p>
+<p><span style="color: #87ceeb; ">/// &lt;summary&gt;</span><br /><span style="color: #87ceeb; ">/// Gets the console password.</span><br /><span style="color: #87ceeb; ">/// &lt;/summary&gt;</span><br /><span style="color: #87ceeb; ">/// &lt;returns&gt;&lt;/returns&gt;</span><br /><span style="color: #f0e68c; ">private</span> <span style="color: #f0e68c; ">static</span> <span style="color: #bdb76b; ">string</span> <span style="color: #ffffff; ">GetConsolePassword</span>( )<br /><span style="color: #ffffff; ">{</span><br />    <span style="color: #ffffff; ">StringBuilder</span> sb <span style="color: #ffffff; ">=</span> <span style="color: #f0e68c; ">new</span> <span style="color: #ffffff; ">StringBuilder</span>( );<br />    <span style="color: #f0e68c; ">while</span> ( <span style="color: #f0e68c; ">true</span> )<br />    <span style="color: #ffffff; ">{</span><br />        <span style="color: #ffffff; ">ConsoleKeyInfo</span> <span style="color: #ffffff; ">cki</span> <span style="color: #ffffff; ">=</span> <span style="color: #ffffff; ">Console</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">ReadKey</span>( <span style="color: #f0e68c; ">true</span> );<br />        <span style="color: #f0e68c; ">if</span> ( <span style="color: #ffffff; ">cki</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Key</span> <span style="color: #ffffff; ">==</span> <span style="color: #ffffff; ">ConsoleKey</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Enter</span> )<br />        <span style="color: #ffffff; ">{</span><br />            <span style="color: #ffffff; ">Console</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">WriteLine</span>( );<br />            <span style="color: #f0e68c; ">break</span>;<br />        <span style="color: #ffffff; ">}</span></p>
+<p>        <span style="color: #f0e68c; ">if</span> ( <span style="color: #ffffff; ">cki</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Key</span> <span style="color: #ffffff; ">==</span> <span style="color: #ffffff; ">ConsoleKey</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Backspace</span> )<br />        <span style="color: #ffffff; ">{</span><br />            <span style="color: #f0e68c; ">if</span> ( sb<span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Length</span> <span style="color: #ffffff; ">&gt;</span> <span style="color: #ffffff; ">0</span> )<br />            <span style="color: #ffffff; ">{</span><br />                <span style="color: #ffffff; ">Console</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Write</span>( <span style="color: #ffffff; ">"\b\0\b"</span> );<br />                sb<span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Length</span><span style="color: #ffffff; ">--;</span><br />            <span style="color: #ffffff; ">}</span></p>
+<p>            <span style="color: #f0e68c; ">continue</span>;<br />        <span style="color: #ffffff; ">}</span></p>
+<p>        <span style="color: #ffffff; ">Console</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Write</span>( <span style="color: #ffffff; ">'*'</span> );<br />        sb<span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">Append</span>( <span style="color: #ffffff; ">cki</span><span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">KeyChar</span> );<br />    <span style="color: #ffffff; ">}</span></p>
+<p>    <span style="color: #f0e68c; ">return</span> sb<span style="color: #ffffff; ">.</span><span style="color: #ffffff; ">ToString</span>( );<br /><span style="color: #ffffff; ">}</span></p>
+</div>
+<p>gist：<a href="https://gist.github.com/1039424">https://gist.github.com/1039424</a></p>
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">06 Aug 2009</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2009/08/06/mulit-window-service-one-exe/" class="post-title">不改程序, 创建同一个程序不同服务名的方法</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p>以往写windows service都需要个ProjectInstaller和serviceInstaller并配置serviceName，这样build出来的exe在install成windows service时我们会：</p>
+<pre>@echo 安装WindowService
+@Set Path=C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727;
+@Set svn_dir=%cd%
+installutil %svn_dir%\MyServiceDemo.exe
+pause
+@echo 成功！</pre>
+<p>但服务名被我们编译在程序里了，如果这个exe想被装很多次服务怎么办呢？<br />今天从同事Martin Jia那里学来一个好方法，可以不用ProjectInstaller、serviceInstaller这种东西，直接安装exe为windows service并在安装时指定服务名称</p>
+<p></p>
+
+<p></p>
+<p>安装服务：</p>
+<pre>sc create 服务名 binpath= &rdquo;路径&rdquo; displayname= &rdquo;显示名&rdquo;</pre>
+<p>卸载服务</p>
+<pre>sc delete 服务名</pre></p>
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">30 Jul 2009</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2009/07/30/how-to-determine-whether-an-type-is-nullable-and-get-the-underlying-type/" class="post-title">如何判断一个类型是nullable类型，并得知它的原始类型</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p>有些时候我们需要判断某个类型是否是Nullable类型，并且可能需要知道它的原始类型，<br />比如在做些ORM相关工作时，就需要这方面的应用，如下代码使用可以实现这个要求</p>
+<p></p>
+
+<p></p>
+<pre>class Program
+    {
+        static void Main( string[] args )
+        {
+            RL( );</p>
+
+<pre><code>        Type type =  typeof( DateTime? );
+        Type originalType;
+
+        if ( IsNullable( type , out originalType ) )
+        {
+            WL( originalType.ToString( ) );
+        }
+        else
+        {
+            WL( &quot;NOT Nullable&quot; );
+        }
+
+        type =  typeof( DateTime );
+
+        if ( IsNullable( type , out originalType ) )
+        {
+            WL( originalType.ToString( ) );
+        }
+        else
+        {
+            WL( &quot;NOT Nullable&quot; );
+        }
+
+        RL( );
+    }
+
+    private static bool IsNullable( Type p , out Type originalType )
+    {
+        bool result = false;
+
+        if ( p.IsGenericType &amp;amp;&amp;amp; p.GetGenericTypeDefinition( ) == typeof( Nullable&amp;lt;&amp;gt; ) )
+        {
+            result = true;
+            originalType = p.GetGenericArguments( )[0];
+        }
+        else
+        {
+            originalType = null;
+        }
+
+        return result;
+    }
+
+    #region Helper methods
+
+    private static void WL( object text , params object[] args )
+    {
+        Console.WriteLine( text.ToString( ) , args );
+    }
+
+    private static void RL( )
+    {
+        Console.ReadLine( );
+    }
+
+    private static void Break( )
+    {
+        System.Diagnostics.Debugger.Break( );
+    }
+
+    #endregion
+}
+</code></pre>
+
+<pre></pre><p></p></pre>
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">21 Jul 2009</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2009/07/21/how-to-send-an-email-with-attachments/" class="post-title">Asp.Net发邮件，如何发送附件</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p>使用如下代码可以发送附件</p>
+<pre>MailMessage mail = new MailMessage();
+mail.To = &rdquo;me@mycompany.com&rdquo;;
+mail.From = &rdquo;you@yourcompany.com&rdquo;;
+mail.Subject = &rdquo;this is a test email.&ldquo;;
+mail.Body = &rdquo;this is my test email body.&ldquo;;
+MailAttachment attachment = new MailAttachment( Server.MapPath( &rdquo;mailTest.txt&rdquo; ) ); //create the attachment
+mail.Attachments.Add( attachment );
+SmtpMail.SmtpServer = &rdquo;localhost&rdquo;; 
+SmtpMail.Send( mail );</pre>
+<p>使用如下代码可以在用户上传附件后发生邮件:</p>
+<p></p>
+
+<p></p>
+<pre>if  (FileUpload1.HasFile)
+{
+    string  toAddress  =  &rdquo;you@yourprovider.com&rdquo;;
+    string  fromAddress  =  you@yourprovider.com  (2);
+    string  mailServer  =  &rdquo;smtp.yourprovider.com&rdquo;;</p>
+
+<p>    MailMessage  myMailMessage  =  new  MailMessage();</p>
+
+<p>    myMailMessage.To.Add(toAddress);
+    myMailMessage.From  =  new  MailAddress(fromAddress);
+    myMailMessage.Subject  =  &rdquo;Test  Message&rdquo;;</p>
+
+<p>    string  fileName  =  Path.GetFileName(FileUpload1.PostedFile.FileName);
+    Attachment  myAttachment  =  
+                                  new  Attachment(FileUpload1.FileContent,  fileName);
+    myMailMessage.Attachments.Add(myAttachment);</p>
+
+<p>    SmtpClient  mySmtpClient  =  new  SmtpClient(mailServer);</p>
+
+<p>    mySmtpClient.Send(myMailMessage);
+}</pre></p>
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">15 Jul 2009</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2009/07/15/make-a-deep-clone-of-the-object/" class="post-title">C#中如何深度克隆一个对象？</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p>如何深度克隆一个对象？</p>
+<p>普通版:</p>
+<pre>
+        public static object CloneObject( object obj )
+        {
+            using ( MemoryStream memStream = new MemoryStream( ) )
+            {
+                BinaryFormatter binaryFormatter = new BinaryFormatter( null ,
+                     new StreamingContext( StreamingContextStates.Clone ) );
+                binaryFormatter.Serialize( memStream , obj );
+                memStream.Seek( 0 , SeekOrigin.Begin );
+                return binaryFormatter.Deserialize( memStream );
+            }
+        }
+</pre>
+<p>泛型版：</p>
+<p></p>
+
+<p></p>
+<pre>public  static  T  Clone&lt;T&gt;(T  obj)
+{
+        T  ret  =  default(T);
+        if  (obj  !=  null)
+        {
+                XmlSerializer  cloner  =  new  XmlSerializer(typeof(T));
+                MemoryStream  stream  =  new  MemoryStream();
+                cloner.Serialize(stream,  obj);
+                stream.Seek(0,  SeekOrigin.Begin);
+                ret  =  (T)cloner.Deserialize(stream);
+        }
+        return  ret;
+}</pre></p>
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">21 Jun 2009</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2009/06/21/my-blog-moved-to-wp/" class="post-title">博客园到Wordpress搬家成功！</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>终于把在博客园的博客的数据导入到Wordpress内了，包括随笔/文章，图片,标签，评论等，是写了两个C# console程序做到的，程序我传到博客园了，如果有需要的朋友可以试试。但请注意，要自己在博客园后台备份RSS文件放到Reader的Data目录内，设置为编译选项为永远复制，运行后会生成一个Entry.xml并且把博客内的图片和分类、Tag、评论等抓下来，然后将此xml文件拷贝到Writer内，在代码内修改一下你的Wordress的数据库连接，然后跑一下Writer，就可以完成数据导入到Wordpress了，时间匆忙，代码写的很乱，有些地方是针对本人需求处理的，如果你想要直接运行此程序完成你的博客园博客到Wordpress的转换，<strong>那是不可能滴！</strong>你一定要有简单的C#调试基础哦。</p>
+<p><a href="http://files.cnblogs.com/huobazi/MyBlogTools.rar">http://files.cnblogs.com/huobazi/MyBlogTools.rar</a></p>              
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">19 Jul 2008</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2008/07/19/cb-1246773/" class="post-title">我学Linq to SQL做的demo</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>最近才开始学LINQ to SQL,</p>
+<p>做了个demo，都是基本操作。</p>
+<p>有兴趣的朋友看看。</p>
+<p><a href="http://download.csdn.net/source/528628">http://download.csdn.net/source/528628</a></p>
+<p mce_keep="true"> </p>                
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">14 Jun 2008</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2008/06/14/myvs2005colorschema/" class="post-title">提供我现用的Vs配色（灰黑色调）下载，有兴趣的朋友玩玩。</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>提供我现用的Vs配色（灰黑色调）下载，</p>
+<p> </p>
+<p>有兴趣的朋友玩玩。</p>
+<p> </p>
+<p>附件是Vs2005的，如果要在Vs2008下用，</p>
+<p> </p>
+<p>自己用文本编辑器打开修改version为9.0即可。效果见截图</p>
+<p><img style="width: 687px; height: 438px;" src="/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png" alt="" width="748" height="430"><br /><img style="width: 814px; height: 446px;" src="/images/hbz_images/0a603e93-b2ed-47bf-86c0-ebbf83a0f832.png" alt="" width="534" height="366"><br /><img style="width: 772px; height: 367px;" src="/images/hbz_images/4b94bd6c-01e6-4ad4-b64e-fe905bb6b3eb.png" alt="" width="620" height="345" align="left"></p>
+<p> <br /><img style="clear: both; width: 675px; height: 495px;" src="/images/hbz_images/afe82875-7a37-48f8-bc2c-e0b65cd1638d.png" alt="" width="546" height="480"></p>
+<p> <br />  <a title="点这里下载" href="http://www.cnblogs.com/Files/huobazi/Marble.M.Wu-Exported-2008-06-14.rar" target="_blank">点这里下载</a></p>
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">20 Apr 2008</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2008/04/20/microsoftinteropsecurityazroles/" class="post-title">使用AzMan找不到Microsoft.Interop.Security.AzRoles的解决方法</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p></p>
+<p><font face="Verdana">在c:/Windows/system32下找到azRoles.dll<br /><br /></font><font face="Verdana">如果没有Xp/2003请安装<a id="ctl00_rs1_mainContentContainer_ctl04" onclick="javascript:Track('ctl00_rs1_mainContentContainer_ctl00|ctl00_rs1_mainContentContainer_ctl04',this);" href="http://www.microsoft.com/downloads/details.aspx?FamilyID=e487f885-f0c7-436a-a392-25793a25bad7&amp;DisplayLang=en"><a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=e487f885-f0c7-436a-a392-25793a25bad7&amp;DisplayLang=en">http://www.microsoft.com/downloads/details.aspx?FamilyID=e487f885-f0c7-436a-a392-25793a25bad7&amp;DisplayLang=en</a></a>.<br /><br /></font><font face="Verdana">Win2000请安装<a id="ctl00_rs1_mainContentContainer_ctl05" onclick="javascript:Track('ctl00_rs1_mainContentContainer_ctl00|ctl00_rs1_mainContentContainer_ctl05',this);" href="http://www.microsoft.com/downloads/details.aspx?FamilyID=7edde11f-bcea-4773-a292-84525f23baf7&amp;DisplayLang=en"><a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=7edde11f-bcea-4773-a292-84525f23baf7&amp;DisplayLang=en">http://www.microsoft.com/downloads/details.aspx?FamilyID=7edde11f-bcea-4773-a292-84525f23baf7&amp;DisplayLang=en</a></a>.<br /><br /></font><font face="Verdana">Vs2003/Vs2005/Vs2008命令行，或者Cmd命令行进入.net安装目录<br /><br /></font><font face="Verdana">敲入：<br /><br /></font><font face="Verdana"><font face="Verdana">d:\Program Files\Microsoft Visual Studio 9.0\VC&gt;tlbimp azroles.dll /out:Microsof<br /><br />t.Interop.Security.AzRoles.dll /namespace:Microsoft.Interop.Security.AzRoles<br /><br /></font></font></p>
+<br /><p><font face="Verdana"><font face="Verdana">成功提示：<br /><br /></font></font><font face="Verdana"><font face="Verdana"></font></font></p>
+<br /><p><font face="Verdana">Microsoft &reg; .NET Framework Type Library to Assembly Converter 3.5.21022.8<br /><br />Copyright &copy; Microsoft Corporation.  All rights reserved.</font></p>
+<br /><p><font face="Verdana">Type library imported to d:\Program Files\Microsoft Visual Studio 9.0\VC\Microso<br /><br />ft.Interop.Security.AzRoles.dll<br /><br /></font></p>
+<br /><p><br /><br />引用这个文件就OK了。</p>
+<br /></p>
+
+                    </div>
+                </section>
+                
+            </div>
+            
+<div class="pagination">
+  <nav role="pagination" class="post-list-pagination">
+      
+    <span class="post-list-pagination-item post-list-pagination-item-current">Page 1 of 3</span>
+    
+      <a href="/tags/.net%E5%85%B6%E4%BB%96/page/2/" class="post-list-pagination-item pure-button post-list-pagination-item-next">
+        Older&nbsp;<i class="fa fa-angle-double-right"></i>
+      </a>
+    
+  </nav>
+</div>
+
+
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="https://gohugo.io/" target="_blank">hugo</a></li>
+        </ul>
+    </div>
+</div>
+<script src='https://huobazi.aspxboy.com/js/all.min.js'></script>
+
+        </div>
+    </div>
+</div>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-56321-3', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

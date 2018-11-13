@@ -1,0 +1,380 @@
+
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+
+    <link rel="stylesheet" href='https://huobazi.aspxboy.com/css/all.min.css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="alternate" type="application/rss+xml" title="武眉博" href='https://huobazi.aspxboy.com/index.xml' />
+</head>
+<body>
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <h1 class="brand-title"><a href="https://huobazi.aspxboy.com">武眉博</a></h1>
+            <h2 class="brand-tagline"> Marble&#39;s blog </h2>
+        </hgroup>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://twitter.com/huobazi">
+                        <i class="fa fa-twitter"></i> Twitter
+                    </a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://github.com/huobazi">
+                        <i class="fa fa-github-alt"></i> Github
+                    </a>
+                </li>
+                
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://www.linkedin.com/in/huobazi">
+                        <i class="fa fa-linkedin"></i> LinkedIn
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="pure-button" href='https://huobazi.aspxboy.com/index.xml'>
+                        <i class="fa fa-rss"></i> rss
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                
+                <h1 class="content-subhead">06 Aug 2009</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2009/08/06/mulit-window-service-one-exe/" class="post-title">不改程序, 创建同一个程序不同服务名的方法</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p>以往写windows service都需要个ProjectInstaller和serviceInstaller并配置serviceName，这样build出来的exe在install成windows service时我们会：</p>
+<pre>@echo 安装WindowService
+@Set Path=C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727;
+@Set svn_dir=%cd%
+installutil %svn_dir%\MyServiceDemo.exe
+pause
+@echo 成功！</pre>
+<p>但服务名被我们编译在程序里了，如果这个exe想被装很多次服务怎么办呢？<br />今天从同事Martin Jia那里学来一个好方法，可以不用ProjectInstaller、serviceInstaller这种东西，直接安装exe为windows service并在安装时指定服务名称</p>
+<p></p>
+
+<p></p>
+<p>安装服务：</p>
+<pre>sc create 服务名 binpath= &rdquo;路径&rdquo; displayname= &rdquo;显示名&rdquo;</pre>
+<p>卸载服务</p>
+<pre>sc delete 服务名</pre></p>
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">21 Jul 2009</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2009/07/21/how-to-send-an-email-with-attachments/" class="post-title">Asp.Net发邮件，如何发送附件</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p>使用如下代码可以发送附件</p>
+<pre>MailMessage mail = new MailMessage();
+mail.To = &rdquo;me@mycompany.com&rdquo;;
+mail.From = &rdquo;you@yourcompany.com&rdquo;;
+mail.Subject = &rdquo;this is a test email.&ldquo;;
+mail.Body = &rdquo;this is my test email body.&ldquo;;
+MailAttachment attachment = new MailAttachment( Server.MapPath( &rdquo;mailTest.txt&rdquo; ) ); //create the attachment
+mail.Attachments.Add( attachment );
+SmtpMail.SmtpServer = &rdquo;localhost&rdquo;; 
+SmtpMail.Send( mail );</pre>
+<p>使用如下代码可以在用户上传附件后发生邮件:</p>
+<p></p>
+
+<p></p>
+<pre>if  (FileUpload1.HasFile)
+{
+    string  toAddress  =  &rdquo;you@yourprovider.com&rdquo;;
+    string  fromAddress  =  you@yourprovider.com  (2);
+    string  mailServer  =  &rdquo;smtp.yourprovider.com&rdquo;;</p>
+
+<p>    MailMessage  myMailMessage  =  new  MailMessage();</p>
+
+<p>    myMailMessage.To.Add(toAddress);
+    myMailMessage.From  =  new  MailAddress(fromAddress);
+    myMailMessage.Subject  =  &rdquo;Test  Message&rdquo;;</p>
+
+<p>    string  fileName  =  Path.GetFileName(FileUpload1.PostedFile.FileName);
+    Attachment  myAttachment  =  
+                                  new  Attachment(FileUpload1.FileContent,  fileName);
+    myMailMessage.Attachments.Add(myAttachment);</p>
+
+<p>    SmtpClient  mySmtpClient  =  new  SmtpClient(mailServer);</p>
+
+<p>    mySmtpClient.Send(myMailMessage);
+}</pre></p>
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">17 Jul 2009</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2009/07/17/same-name-element-in-one-page/" class="post-title">知识死角,name相同的html element</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p>今天在帮同事调程序时发现了这个死角<br />现象如下，没有任何输入的textarea提交到服务端后得到的值总是&rdquo;,&rdquo;<br />找了半天发现是因为页面上两个textarea的name相同，以前只知道页面上radio的name相同则是一个组，name相同的<br />的checkbox提交后是以逗号分隔值的，于是做了下面代码的试验，发现任何name相同的element提交到服务端都会得到逗号分隔的值，以前还不知道这个，汗</p>
+<p></p>
+
+<p></p>
+<code><span style="color: #000000">
+&lt;%@ Page Language=&ldquo;C#&ldquo; %&gt;<br /><br />&lt;script runat=&ldquo;server&rdquo; languag=&ldquo;c#&rdquo;&gt;
+<br />    string textboxValue = string.Empty;
+<br />    string radioValue = string.Empty;
+<br />    string checkboxValue = string.Empty;
+<br />    string selectValue = string.Empty;
+<br />    string textareaValue = string.Empty;
+<br />    void Page_Load(object obj , EventArgs args)
+<br />    {
+<br />        placeHolder.Visible = false;
+<br />        System.Web.HttpContext ctx = System.Web.HttpContext.Current;
+<br />        if(ctx.Request.HttpMethod == &rdquo;POST&rdquo;)
+<br />        {
+<br />            placeHolder.Visible = true;
+<br />            textboxValue = ctx.Request.Form[&ldquo;textbox&rdquo;];
+<br />            radioValue = ctx.Request.Form[&ldquo;radio&rdquo;];
+<br />            checkboxValue = ctx.Request.Form[&ldquo;checkbox&rdquo;];
+<br />            selectValue = ctx.Request.Form[&ldquo;select&rdquo;];
+<br />            textareaValue = ctx.Request.Form[&ldquo;textarea&rdquo;];
+<br />        }
+<br />    }
+<br />&lt;/script&gt;<br /><br />&lt;!DOCTYPE html PUBLIC &rdquo;-//W3C//DTD XHTML 1.0 Transitional//EN&rdquo; &rdquo;<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</a>
+<br />&lt;html xmlns=&ldquo;<a href="http://www.w3.org/1999/xhtml&quot; &gt;">http://www.w3.org/1999/xhtml&quot; &gt;</a>
+<br />&lt;head&gt;
+<br />&lt;style&gt;
+<br />body, h1, h2, h3, h4, h5, h6, hr, p, ul, ol, li,pre,fieldset, lengend, button, input, textarea,{
+<br />    margin: 0;
+<br />    padding: 0;
+<br />}
+<br />body,button, input, select, textarea {
+<br />    font: 13px/1 Tahoma, Helvetica, Arial, &rdquo;\5b8b\4f53&rdquo;, sans-serif;
+<br />}
+<br /><br />#page{
+<br />    padding:10px 30px 10px 30px;
+<br />}
+<br />#s{
+<br />color:red;
+<br />}
+<br />input,select,textarea{
+<br />    clear:both;
+<br />    float:left;
+<br />    margin:5px;
+<br />}
+<br /><br />pre {
+<br />    overflow: auto;
+<br />    border: 1px dotted #281;
+<br />    background-color: #eee;
+<br />    padding: 2px 20px 20px 10px;
+<br />}
+<br />fieldset{
+<br />    line-height:200%;
+<br />}
+<br /><br />&lt;/style&gt;
+<br />&lt;/head&gt;
+<br />&lt;body&gt;<br /><br />&lt;div id=&ldquo;page&rdquo;&gt;<br /><br />&lt;div id=&ldquo;placeHolder&rdquo; runat=&ldquo;server&rdquo;&gt;    
+<br />            &lt;string id=&ldquo;s&rdquo;&gt;Post Data:&lt;/string&gt;<br /><br />&lt;pre style=&ldquo;max-height:30px;&rdquo;&gt;
+<br />textboxvalue:&lt;%= textboxValue%&gt;
+<br />radioValue:&lt;%= radioValue%&gt;
+<br />checkboxValue:&lt;%= checkboxValue%&gt;
+<br />selectValue:&lt;%=selectValue%&gt;
+<br />textareaValue:&lt;%= textareaValue%&gt;&lt;/pre&gt;<br /><br />&lt;/div&gt;<br /><br />&lt;form id=&ldquo;aspnetForm&rdquo; method=&ldquo;post&rdquo;&gt;
+<br />                &lt;fieldset&gt;       
+<br />                  &lt;legend&gt;Test&lt;/legend&gt;              
+<br />                &lt;input type=&ldquo;text&rdquo; name=&ldquo;textbox&rdquo; value=&ldquo;a&rdquo;/&gt; 
+<br />                &lt;input type=&ldquo;text&rdquo; name=&ldquo;textbox&rdquo; value=&ldquo;a&rdquo;/&gt;
+<br />                &lt;input type=&ldquo;text&rdquo; name=&ldquo;textbox&rdquo; value=&ldquo;a&rdquo;/&gt;
+<br />                &lt;input type=&ldquo;radio&rdquo; name=&ldquo;radio&rdquo; value=&ldquo;a&rdquo; /&gt;
+<br />                &lt;input type=&ldquo;radio&rdquo; name=&ldquo;radio&rdquo; value=&ldquo;a&rdquo; /&gt;
+<br />                &lt;input type=&ldquo;radio&rdquo; name=&ldquo;radio&rdquo; value=&ldquo;a&rdquo; checked=&ldquo;checked&rdquo; /&gt;
+<br />                &lt;input type=&ldquo;checkbox&rdquo; name=&ldquo;checkbox&rdquo; value=&ldquo;a&rdquo; checked=&ldquo;checked&rdquo; /&gt;
+<br />                &lt;input type=&ldquo;checkbox&rdquo; name=&ldquo;checkbox&rdquo; value=&ldquo;a&rdquo; checked=&ldquo;checked&rdquo; /&gt;
+<br />                &lt;input type=&ldquo;checkbox&rdquo; name=&ldquo;checkbox&rdquo; value=&ldquo;a&rdquo; checked=&ldquo;checked&rdquo; /&gt;
+<br />                &lt;select name=&ldquo;select&rdquo;&gt;
+<br />                                   &lt;option value=&ldquo;a&rdquo;&gt;a&lt;/option&gt;
+<br />                &lt;/select&gt;
+<br />                &lt;select name=&ldquo;select&rdquo;&gt;
+<br />                                   &lt;option value=&ldquo;a&rdquo;&gt;a&lt;/option&gt;
+<br />                &lt;/select&gt;
+<br />                &lt;select name=&ldquo;select&rdquo;&gt;
+<br />                                   &lt;option value=&ldquo;a&rdquo;&gt;a&lt;/option&gt;
+<br />                &lt;/select&gt;
+<br />                &lt;textarea name=&ldquo;textarea&rdquo;&gt;a&lt;/textarea&gt;
+<br />                &lt;textarea name=&ldquo;textarea&rdquo;&gt;a&lt;/textarea&gt;
+<br />                &lt;textarea name=&ldquo;textarea&rdquo;&gt;a&lt;/textarea&gt;
+<br />                &lt;input type=&ldquo;submit&rdquo; value=&ldquo;Do PostBack&rdquo; /&gt;
+<br />            &lt;/fieldset&gt;
+<br />            &lt;/form&gt;
+<br />    &lt;/div&gt;<br /><br />&lt;/body&gt;
+<br />&lt;/html&gt;</span>
+</code></p>
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">15 Jul 2009</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2009/07/15/make-a-deep-clone-of-the-object/" class="post-title">C#中如何深度克隆一个对象？</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p>如何深度克隆一个对象？</p>
+<p>普通版:</p>
+<pre>
+        public static object CloneObject( object obj )
+        {
+            using ( MemoryStream memStream = new MemoryStream( ) )
+            {
+                BinaryFormatter binaryFormatter = new BinaryFormatter( null ,
+                     new StreamingContext( StreamingContextStates.Clone ) );
+                binaryFormatter.Serialize( memStream , obj );
+                memStream.Seek( 0 , SeekOrigin.Begin );
+                return binaryFormatter.Deserialize( memStream );
+            }
+        }
+</pre>
+<p>泛型版：</p>
+<p></p>
+
+<p></p>
+<pre>public  static  T  Clone&lt;T&gt;(T  obj)
+{
+        T  ret  =  default(T);
+        if  (obj  !=  null)
+        {
+                XmlSerializer  cloner  =  new  XmlSerializer(typeof(T));
+                MemoryStream  stream  =  new  MemoryStream();
+                cloner.Serialize(stream,  obj);
+                stream.Seek(0,  SeekOrigin.Begin);
+                ret  =  (T)cloner.Deserialize(stream);
+        }
+        return  ret;
+}</pre></p>
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">18 Sep 2004</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2004/09/18/cb-44424/" class="post-title">撞墙吧 Array.IndexOf(xxx)</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p>要在后台把CheckBoxList的某个ListItem 的selected给true了<br />遍历该CheckBoxList,写下了下面注释内的代码，死活不能选中我的第个CheckBox</p>
+<div style="padding-right: 5.4pt; padding-left: 5.4pt; background: #e6e6e6; padding-bottom: 4px; width: 98%; padding-top: 4px; border: windowtext 0.5pt solid;">
+<p></p>
+<div>
+<span style="COLOR: #000000">            </span><span style="COLOR: #0000ff">string</span><span style="COLOR: #000000"> bigClassId </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> ( ( DataRowView)e.Item.DataItem )[</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">模块编号</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">].ToString();<br />            </span><span style="COLOR: #0000ff">string</span><span style="COLOR: #000000"> bigClassName </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000">  ( ( DataRowView)e.Item.DataItem )[</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">模块名称</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">].ToString();<br />            CheckBoxList chk_list_big </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> (CheckBoxList)e.Item.FindControl(</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">chk_list_big</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">) </span><span style="COLOR: #0000ff">as</span><span style="COLOR: #000000"> CheckBoxList;<br />            </span><span style="COLOR: #0000ff">if</span><span style="COLOR: #000000">(chk_list_big </span><span style="COLOR: #000000">!=</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">null</span><span style="COLOR: #000000">)<br />            </span><span id="Codehighlighter1_285_1018_Open_Text"><span style="COLOR: #000000">{                    <br />                chk_list_big.Items.Clear();<br />                ListItem item </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">new</span><span style="COLOR: #000000"> ListItem();<br />                item.Text </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> bigClassName;<br />                item.Value </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> bigClassId;<br />                chk_list_big.Items.Add(item);<br />                chk_list_big.Attributes[</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">onclick</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">] </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> String.Format(</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">CheckAll(&lsquo;{0}&rsquo;)</span><span style="COLOR: #000000">&ldquo;</span><span style="COLOR: #000000">,chk_list_big.ClientID);<br />                </span><span style="COLOR: #008000">//</span><span style="COLOR: #008000">将符合用户模块的ListItem选定    </span><span style="COLOR: #008000"><br /></span><span style="COLOR: #000000">    <br />                </span><span style="COLOR: #0000ff">for</span><span style="COLOR: #000000">(</span><span style="COLOR: #0000ff">int</span><span style="COLOR: #000000"> i</span><span style="COLOR: #000000">=</span><span style="COLOR: #000000">0</span><span style="COLOR: #000000">; i</span><span style="COLOR: #000000">&lt;</span><span style="COLOR: #0000ff">this</span><span style="COLOR: #000000">.taxiUser.Modules.Length; i</span><span style="COLOR: #000000">++</span><span style="COLOR: #000000">)<br />                </span><span id="Codehighlighter1_636_786_Open_Text"><span style="COLOR: #000000">{<br />                    </span><span style="COLOR: #0000ff">if</span><span style="COLOR: #000000">( bigClassId </span><span style="COLOR: #000000">==</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">this</span><span style="COLOR: #000000">.taxiUser.Modules[i] )<br />                    </span><span id="Codehighlighter1_693_780_Open_Text"><span style="COLOR: #000000">{<br />                        chk_list_big.Items.FindByValue(</span><span style="COLOR: #0000ff">this</span><span style="COLOR: #000000">.taxiUser.Modules[i]).Selected </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">true</span><span style="COLOR: #000000">;<br />                    }</span></span><span style="COLOR: #000000"><br />                }</span></span><span style="COLOR: #000000"><p>                </p></span><span style="COLOR: #008000">//</span><span style="COLOR: #008000">真是见了鬼了！为什么用这样的方法不能选定该ListItem？？？<p></p></span><span style="COLOR: #008000">//</span><span style="COLOR: #008000">                foreach(ListItem listItem in chk_list_big.Items)<br /></span><span style="COLOR: #008000">//</span><span style="COLOR: #008000">                {<br /></span><span style="COLOR: #008000">//</span><span style="COLOR: #008000">                    if(Array.IndexOf(this.taxiUser.Modules,listItem.Value) &gt; 0)<br /></span><span style="COLOR: #008000">//</span><span style="COLOR: #008000">                    {<br /></span><span style="COLOR: #008000">//</span><span style="COLOR: #008000">                        listItem.Selected = true;<br /></span><span style="COLOR: #008000">//</span><span style="COLOR: #008000">                    }<br /></span><span style="COLOR: #008000">//</span><span style="COLOR: #008000">                }</span></span><br />半天不能醒悟就想着换道道，写了”该死”那行上面的几行代码把数组放倒来，（站着不行我就躺着来），发现可行，然后就开始发楞，命名原理一摸一样的啊，真是“见鬼”，对者这几行代码发了会愣，就决定<img src="/images/hbz_images/282365e9-a145-466f-a9c1-d7a23735c340.gif" alt="">还要狠狠的<img src="/images/hbz_images/282365e9-a145-466f-a9c1-d7a23735c340.gif" alt="">，<br />if (Array.IndexOf(xxxxx) &gt; 0) 用力<img src="/images/hbz_images/282365e9-a145-466f-a9c1-d7a23735c340.gif" alt=""><img src="/images/hbz_images/282365e9-a145-466f-a9c1-d7a23735c340.gif" alt="">吧<img src="/images/hbz_images/282365e9-a145-466f-a9c1-d7a23735c340.gif" alt=""><br />555555，撞的头都疼了.<img src="/images/hbz_images/282365e9-a145-466f-a9c1-d7a23735c340.gif" alt=""><img src="/images/hbz_images/282365e9-a145-466f-a9c1-d7a23735c340.gif" alt=""><img src="/images/hbz_images/282365e9-a145-466f-a9c1-d7a23735c340.gif" alt=""><img src="/images/hbz_images/282365e9-a145-466f-a9c1-d7a23735c340.gif" alt=""><img src="/images/hbz_images/282365e9-a145-466f-a9c1-d7a23735c340.gif" alt=""><img src="/images/hbz_images/282365e9-a145-466f-a9c1-d7a23735c340.gif" alt="">
+</div>
+<p></p>
+</div></p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">21 Aug 2004</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2004/08/21/cb-35432/" class="post-title">疑惑 关于 多条件判断语句 的写法</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>写法1<br />if ( 条件1 &amp;&amp; 条件2)<br />{<br />      //代码<br />}<br />写法2<br />if ( 条件1 )<br />{<br />       if( 条件2 )<br />      {<br />            //代码<br />      }<br />}<br />我一直认为写法1要比写法2条理清晰,容易阅读.<br />不知其他人如何认为呢?<br />今天在微软的KB中阅读 <a href="http://support.microsoft.com/default.aspx?scid=311495">使用 Visual Basic .NET 在采用基于表单身份验证的 ASP.NET 应用程序中实现基于角色的安全性</a> 的时候<br />发现这样的写法<br /></p>
+<div style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 5.4pt; BACKGROUND: #e6e6e6; PADDING-BOTTOM: 4px; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 98%; PADDING-TOP: 4px; BORDER-BOTTOM: windowtext 0.5pt solid">
+<div>
+<img src="/images/hbz_images/e01387bd-8f4f-4638-8131-226ce244e723.jpg35" align="top"><span style="COLOR: #0000ff">public</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">void</span><span style="COLOR: #000000"> Application_AuthenticateRequest( Object src , EventArgs e )<br /><img id="Codehighlighter1_72_491_Open_Image" onclick="this.style.display='none'; Codehighlighter1_72_491_Open_Text.style.display='none'; Codehighlighter1_72_491_Closed_Image.style.display='inline'; Codehighlighter1_72_491_Closed_Text.style.display='inline';" src="/images/hbz_images/e01387bd-8f4f-4638-8131-226ce244e723.jpg36" align="top"><img id="Codehighlighter1_72_491_Closed_Image" style="DISPLAY: none" onclick="this.style.display='none'; Codehighlighter1_72_491_Closed_Text.style.display='none'; Codehighlighter1_72_491_Open_Image.style.display='inline'; Codehighlighter1_72_491_Open_Text.style.display='inline';" src="/images/hbz_images/e01387bd-8f4f-4638-8131-226ce244e723.jpg37" align="top"></span><span id="Codehighlighter1_72_491_Closed_Text" style="BORDER-RIGHT: #808080 1px solid; BORDER-TOP: #808080 1px solid; DISPLAY: none; BORDER-LEFT: #808080 1px solid; BORDER-BOTTOM: #808080 1px solid; BACKGROUND-COLOR: #ffffff"><img src="/images/hbz_images/e01387bd-8f4f-4638-8131-226ce244e723.jpg38"></span><span id="Codehighlighter1_72_491_Open_Text"><span style="COLOR: #000000">{<br /><img src="/images/hbz_images/e01387bd-8f4f-4638-8131-226ce244e723.jpg39" align="top"></span><span style="COLOR: #0000ff">if</span><span style="COLOR: #000000"> (</span><span style="COLOR: #000000">!</span><span style="COLOR: #000000">(HttpContext.Current.User </span><span style="COLOR: #000000">==</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">null</span><span style="COLOR: #000000">))<br /><img id="Codehighlighter1_118_489_Open_Image" onclick="this.style.display='none'; Codehighlighter1_118_489_Open_Text.style.display='none'; Codehighlighter1_118_489_Closed_Image.style.display='inline'; Codehighlighter1_118_489_Closed_Text.style.display='inline';" src="/images/hbz_images/e01387bd-8f4f-4638-8131-226ce244e723.jpg40" align="top"><img id="Codehighlighter1_118_489_Closed_Image" style="DISPLAY: none" onclick="this.style.display='none'; Codehighlighter1_118_489_Closed_Text.style.display='none'; Codehighlighter1_118_489_Open_Image.style.display='inline'; Codehighlighter1_118_489_Open_Text.style.display='inline';" src="/images/hbz_images/e01387bd-8f4f-4638-8131-226ce244e723.jpg41" align="top">   </span><span id="Codehighlighter1_118_489_Closed_Text" style="BORDER-RIGHT: #808080 1px solid; BORDER-TOP: #808080 1px solid; DISPLAY: none; BORDER-LEFT: #808080 1px solid; BORDER-BOTTOM: #808080 1px solid; BACKGROUND-COLOR: #ffffff"><img src="/images/hbz_images/e01387bd-8f4f-4638-8131-226ce244e723.jpg38"></span><span id="Codehighlighter1_118_489_Open_Text"><span style="COLOR: #000000">{<br /><img src="/images/hbz_images/e01387bd-8f4f-4638-8131-226ce244e723.jpg39" align="top"></span><span style="COLOR: #0000ff">if</span><span style="COLOR: #000000"> (HttpContext.Current.User.Identity.AuthenticationType </span><span style="COLOR: #000000">==</span><span style="COLOR: #000000"> </span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">Forms</span><span style="COLOR: #000000">"</span><span style="COLOR: #000000"> )<br /><img id="Codehighlighter1_196_484_Open_Image" onclick="this.style.display='none'; Codehighlighter1_196_484_Open_Text.style.display='none'; Codehighlighter1_196_484_Closed_Image.style.display='inline'; Codehighlighter1_196_484_Closed_Text.style.display='inline';" src="/images/hbz_images/e01387bd-8f4f-4638-8131-226ce244e723.jpg40" align="top"><img id="Codehighlighter1_196_484_Closed_Image" style="DISPLAY: none" onclick="this.style.display='none'; Codehighlighter1_196_484_Closed_Text.style.display='none'; Codehighlighter1_196_484_Open_Image.style.display='inline'; Codehighlighter1_196_484_Open_Text.style.display='inline';" src="/images/hbz_images/e01387bd-8f4f-4638-8131-226ce244e723.jpg41" align="top">      </span><span id="Codehighlighter1_196_484_Closed_Text" style="BORDER-RIGHT: #808080 1px solid; BORDER-TOP: #808080 1px solid; DISPLAY: none; BORDER-LEFT: #808080 1px solid; BORDER-BOTTOM: #808080 1px solid; BACKGROUND-COLOR: #ffffff"><img src="/images/hbz_images/e01387bd-8f4f-4638-8131-226ce244e723.jpg38"></span><span id="Codehighlighter1_196_484_Open_Text"><span style="COLOR: #000000">{<br /><img src="/images/hbz_images/e01387bd-8f4f-4638-8131-226ce244e723.jpg39" align="top">System.Web.Security.FormsIdentity id;<br /><img src="/images/hbz_images/e01387bd-8f4f-4638-8131-226ce244e723.jpg39" align="top">id </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> (System.Web.Security.FormsIdentity)HttpContext.Current.User.Identity;<br /><img src="/images/hbz_images/e01387bd-8f4f-4638-8131-226ce244e723.jpg39" align="top">String[] myRoles </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">new</span><span style="COLOR: #000000"> String[</span><span style="COLOR: #000000">2</span><span style="COLOR: #000000">];<br /><img src="/images/hbz_images/e01387bd-8f4f-4638-8131-226ce244e723.jpg39" align="top">myRoles[</span><span style="COLOR: #000000">0</span><span style="COLOR: #000000">] </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">Manager</span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">;<br /><img src="/images/hbz_images/e01387bd-8f4f-4638-8131-226ce244e723.jpg39" align="top">myRoles[</span><span style="COLOR: #000000">1</span><span style="COLOR: #000000">] </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">Admin</span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">;<br /><img src="/images/hbz_images/e01387bd-8f4f-4638-8131-226ce244e723.jpg39" align="top">HttpContext.Current.User </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">new</span><span style="COLOR: #000000"> System.Security.Principal.GenericPrincipal(id,myRoles);<br /><img src="/images/hbz_images/e01387bd-8f4f-4638-8131-226ce244e723.jpg42" align="top">      }</span></span><span style="COLOR: #000000"><br /><img src="/images/hbz_images/e01387bd-8f4f-4638-8131-226ce244e723.jpg42" align="top">   }</span></span><span style="COLOR: #000000"><br /><img src="/images/hbz_images/e01387bd-8f4f-4638-8131-226ce244e723.jpg43" align="top">}</span></span>
+</div>
+<p></p>
+</div>
+<br /><p><br />而且这则KB的<a href="http://support.microsoft.com/default.aspx?scid=kb;ZH-CN;306238">VB版本</a>也是这样的写的.<br />这样写有优越性?<br /></p>             
+
+                    </div>
+                </section>
+                
+            </div>
+            
+
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="https://gohugo.io/" target="_blank">hugo</a></li>
+        </ul>
+    </div>
+</div>
+<script src='https://huobazi.aspxboy.com/js/all.min.js'></script>
+
+        </div>
+    </div>
+</div>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-56321-3', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

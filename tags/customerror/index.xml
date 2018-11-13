@@ -2,28 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Customerror on 武眉博</title>
-    <link>http://huobazi.aspxboy.com/tags/customerror/</link>
+    <link>https://huobazi.aspxboy.com/tags/customerror/</link>
     <description>Recent content in Customerror on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 23 Apr 2008 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://huobazi.aspxboy.com/tags/customerror/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://huobazi.aspxboy.com/tags/customerror/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>CustomError可以设置绝对路径</title>
-      <link>http://huobazi.aspxboy.com/blog/2008/04/23/customerrordirecturlcanuseabsolutepath/</link>
+      <link>https://huobazi.aspxboy.com/blog/2008/04/23/customerrordirecturlcanuseabsolutepath/</link>
       <pubDate>Wed, 23 Apr 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2008/04/23/customerrordirecturlcanuseabsolutepath/</guid>
-      <description>&lt;p&gt;偶然发现web.config内自定义错误信息页面&lt;br /&gt;&lt;span style=&#34;font-family: Verdana;&#34;&gt;  &amp;lt;customErrors mode=&#34;RemoteOnly&#34;     defaultRedirect=&#34;503.aspx&#34;&amp;gt;&lt;br /&gt;   &amp;lt;error statusCode=&#34;404&#34; redirect=&#34;404.aspx&#34;/&amp;gt;&lt;br /&gt;  &amp;lt;/customErrors&amp;gt;&lt;/span&gt;&lt;br /&gt;可以设置成&lt;br /&gt;&lt;span style=&#34;font-family: Verdana;&#34;&gt;  &amp;lt;customErrors mode=&#34;RemoteOnly&#34;     defaultRedirect=&#34;503.aspx&#34;&amp;gt;&lt;br /&gt;   &amp;lt;error statusCode=&#34;404&#34; redirect=&#34;http://www.aspxboy.com/404.aspx&#34;/&amp;gt;&lt;br /&gt;  &amp;lt;/customErrors&amp;gt;&lt;br /&gt;这样的绝对路径.&lt;br /&gt;看了一下 &lt;strong&gt;&lt;a class=&#34;bold&#34; href=&#34;http://www.aisto.com/roeder/dotnet/Default.aspx?Target=code://System.Web:2.0.0.0:b03f5f7f11d50a3a/System.Web.Configuration.CustomErrorsSection&#34;&gt;CustomErrorsSection&lt;/a&gt;&lt;/strong&gt; 中的代码&lt;/span&gt;&lt;/p&gt;
-&lt;div style=&#34;padding-right: 5px; padding-left: 4px; font-size: 13px; padding-bottom: 4px; width: 98%; word-break: break-all; padding-top: 4px; background-color: #eeeeee; border: #cccccc 1px solid;&#34;&gt;
-&lt;img src=&#34;http://huobazi.aspxboy.com/images/hbz_images/3c51df43-cc19-4caf-903a-a72b3430bd02.gif&#34; alt=&#34;&#34; align=&#34;top&#34;&gt;&lt;span style=&#34;color: #0000ff&#34;&gt;internal&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color: #0000ff&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt; GetRedirectString(&lt;/span&gt;&lt;span style=&#34;color: #0000ff&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt; code)&lt;br /&gt;&lt;/span&gt;&lt;span id=&#34;Codehighlighter1_44_468_Closed_Text&#34; style=&#34;border-right: #808080 1px solid; border-top: #808080 1px solid; display: none; border-left: #808080 1px solid; border-bottom: #808080 1px solid; background-color: #ffffff&#34;&gt; &lt;/span&gt;&lt;span id=&#34;Codehighlighter1_44_468_Open_Text&#34;&gt;&lt;span style=&#34;color: #000000&#34;&gt;{&lt;br /&gt;    &lt;/span&gt;&lt;span style=&#34;color: #0000ff&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt; absoluteRedirect &lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color: #0000ff&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;;&lt;br /&gt;    &lt;/span&gt;&lt;span style=&#34;color: #0000ff&#34;&gt;if&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt; (&lt;/span&gt;&lt;span style=&#34;color: #0000ff&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;.Errors &lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;!=&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color: #0000ff&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;)&lt;br /&gt;    &lt;/span&gt;&lt;span id=&#34;Codehighlighter1_115_338_Open_Text&#34;&gt;&lt;span style=&#34;color: #000000&#34;&gt;{&lt;br /&gt;        CustomError error &lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color: #0000ff&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;.Errors[code.ToString(CultureInfo.InvariantCulture)];&lt;br /&gt;        &lt;/span&gt;&lt;span style=&#34;color: #0000ff&#34;&gt;if&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt; (error &lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;!=&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color: #0000ff&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;)&lt;br /&gt;        &lt;/span&gt;&lt;span id=&#34;Codehighlighter1_238_332_Open_Text&#34;&gt;&lt;span style=&#34;color: #000000&#34;&gt;{&lt;br /&gt;            absoluteRedirect &lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt; GetAbsoluteRedirect(error.Redirect, &lt;/span&gt;&lt;span style=&#34;color: #0000ff&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;.basepath);&lt;br /&gt;        }&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;&lt;br /&gt;    }&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;&lt;br /&gt;    &lt;/span&gt;&lt;span style=&#34;color: #0000ff&#34;&gt;if&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt; (absoluteRedirect &lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;==&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color: #0000ff&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;)&lt;br /&gt;    &lt;/span&gt;&lt;span id=&#34;Codehighlighter1_377_437_Open_Text&#34;&gt;&lt;span style=&#34;color: #000000&#34;&gt;{&lt;br /&gt;        absoluteRedirect &lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color: #0000ff&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;.DefaultAbsolutePath;&lt;br /&gt;    }&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;&lt;br /&gt;    &lt;/span&gt;&lt;span style=&#34;color: #0000ff&#34;&gt;return&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt; absoluteRedirect;&lt;br /&gt;}&lt;/span&gt;&lt;/span&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;span style=&#34;font-family: Verdana;&#34;&gt;&lt;font face=&#34;Verdana&#34;&gt; &lt;/font&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt; &lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;发现事实如此.&lt;br /&gt;期间有个小笑话,我试验的时候顺手输入了个http://x x.com/404.aspx (两个xx中没空格)这样到一个页面跳入了一个xx站点,吓我一大跳.&lt;img src=&#34;http://huobazi.aspxboy.com/images/hbz_images/9229f3b6-ff18-4bd7-8a90-a0ba9eb3ebb8.gif&#34; alt=&#34;&#34;&gt; ,工位附近有MM,不知道有否影响本人正值地形象哦&lt;img src=&#34;http://huobazi.aspxboy.com/images/hbz_images/9229f3b6-ff18-4bd7-8a90-a0ba9eb3ebb8.gif&#34; alt=&#34;&#34;&gt;&lt;/p&gt;              
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2008/04/23/customerrordirecturlcanuseabsolutepath/</guid>
+      <description>偶然发现web.config内自定义错误信息页面
+&amp;lt;customErrors mode=&#34;RemoteOnly&#34; defaultRedirect=&#34;503.aspx&#34;&amp;gt;
+&amp;lt;error statusCode=&#34;404&#34; redirect=&#34;404.aspx&#34;/&amp;gt;
+&amp;lt;/customErrors&amp;gt;
+可以设置成
+&amp;lt;customErrors mode=&#34;RemoteOnly&#34; defaultRedirect=&#34;503.aspx&#34;&amp;gt;
+&amp;lt;error statusCode=&#34;404&#34; redirect=&#34;http://www.aspxboy.com/404.aspx&#34;/&amp;gt;
+&amp;lt;/customErrors&amp;gt;
+这样的绝对路径.
+看了一下 CustomErrorsSection 中的代码
+internalstringGetRedirectString(intcode)
+{
+stringabsoluteRedirect =null;
+if(this.Errors !=null)
+{
+CustomError error =this.Errors[code.ToString(CultureInfo.InvariantCulture)];
+if(error !=null)
+{
+absoluteRedirect =GetAbsoluteRedirect(error.Redirect, this.basepath);
+}}if(absoluteRedirect ==null)
+{
+absoluteRedirect =this.DefaultAbsolutePath;
+}returnabsoluteRedirect;
+}  
+ 
+发现事实如此.
+期间有个小笑话,我试验的时候顺手输入了个http://x x.com/404.aspx (两个xx中没空格)这样到一个页面跳入了一个xx站点,吓我一大跳.</description>
     </item>
     
   </channel>

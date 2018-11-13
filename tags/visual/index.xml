@@ -2,31 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Visual on 武眉博</title>
-    <link>http://huobazi.aspxboy.com/tags/visual/</link>
+    <link>https://huobazi.aspxboy.com/tags/visual/</link>
     <description>Recent content in Visual on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 14 Jun 2008 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://huobazi.aspxboy.com/tags/visual/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://huobazi.aspxboy.com/tags/visual/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>提供我现用的Vs配色（灰黑色调）下载，有兴趣的朋友玩玩。</title>
-      <link>http://huobazi.aspxboy.com/blog/2008/06/14/myvs2005colorschema/</link>
+      <link>https://huobazi.aspxboy.com/blog/2008/06/14/myvs2005colorschema/</link>
       <pubDate>Sat, 14 Jun 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2008/06/14/myvs2005colorschema/</guid>
+      <guid>https://huobazi.aspxboy.com/blog/2008/06/14/myvs2005colorschema/</guid>
       <description>&lt;p&gt;提供我现用的Vs配色（灰黑色调）下载，&lt;/p&gt;
 &lt;p&gt; &lt;/p&gt;
 &lt;p&gt;有兴趣的朋友玩玩。&lt;/p&gt;
 &lt;p&gt; &lt;/p&gt;
 &lt;p&gt;附件是Vs2005的，如果要在Vs2008下用，&lt;/p&gt;
 &lt;p&gt; &lt;/p&gt;
-&lt;p&gt;自己用文本编辑器打开修改version为9.0即可。效果见截图&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img style=&#34;width: 687px; height: 438px;&#34; src=&#34;http://huobazi.aspxboy.com/images/hbz_images/1712a73c-779d-4021-aaac-e307c6c085bd.png&#34; alt=&#34;&#34; width=&#34;748&#34; height=&#34;430&#34;&gt;&lt;br /&gt;&lt;img style=&#34;width: 814px; height: 446px;&#34; src=&#34;http://huobazi.aspxboy.com/images/hbz_images/0a603e93-b2ed-47bf-86c0-ebbf83a0f832.png&#34; alt=&#34;&#34; width=&#34;534&#34; height=&#34;366&#34;&gt;&lt;br /&gt;&lt;img style=&#34;width: 772px; height: 367px;&#34; src=&#34;http://huobazi.aspxboy.com/images/hbz_images/4b94bd6c-01e6-4ad4-b64e-fe905bb6b3eb.png&#34; alt=&#34;&#34; width=&#34;620&#34; height=&#34;345&#34; align=&#34;left&#34;&gt;&lt;/p&gt;
-&lt;p&gt; &lt;br /&gt;&lt;img style=&#34;clear: both; width: 675px; height: 495px;&#34; src=&#34;http://huobazi.aspxboy.com/images/hbz_images/afe82875-7a37-48f8-bc2c-e0b65cd1638d.png&#34; alt=&#34;&#34; width=&#34;546&#34; height=&#34;480&#34;&gt;&lt;/p&gt;
-&lt;p&gt; &lt;br /&gt;  &lt;a title=&#34;点这里下载&#34; href=&#34;http://www.cnblogs.com/Files/huobazi/Marble.M.Wu-Exported-2008-06-14.rar&#34; target=&#34;_blank&#34;&gt;点这里下载&lt;/a&gt;&lt;/p&gt;              
-</description>
+&lt;p&gt;自己用文本编辑器打开修改version为9.0即可。效果见截图&lt;/p&gt;</description>
     </item>
     
   </channel>

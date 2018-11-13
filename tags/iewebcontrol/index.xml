@@ -2,21 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Iewebcontrol on 武眉博</title>
-    <link>http://huobazi.aspxboy.com/tags/iewebcontrol/</link>
+    <link>https://huobazi.aspxboy.com/tags/iewebcontrol/</link>
     <description>Recent content in Iewebcontrol on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 14 Jul 2004 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://huobazi.aspxboy.com/tags/iewebcontrol/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://huobazi.aspxboy.com/tags/iewebcontrol/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>能在微软的网站找到IeWebcontrols的安装文件吗</title>
-      <link>http://huobazi.aspxboy.com/blog/2004/07/14/cb-24084/</link>
+      <link>https://huobazi.aspxboy.com/blog/2004/07/14/cb-24084/</link>
       <pubDate>Wed, 14 Jul 2004 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2004/07/14/cb-24084/</guid>
-      <description>&lt;p&gt;你们能在微软的网站找到IeWebcontrols的安装文件吗?&lt;br /&gt;这个地址不行了&lt;br /&gt; &lt;a href=&#34;http://msdn.microsoft.com/downloads/samples/internet/ASP_DOT_NET_ServerControls/WebControls/default.asp&#34;&gt;http://msdn.microsoft.com/downloads/samples/internet/ASP_DOT_NET_ServerControls/WebControls/default.asp&lt;/a&gt;&lt;br /&gt;我指的是IeWebControls.&lt;font color=&#34;#ff3333&#34;&gt;msi&lt;/font&gt;这个安装文件 装完后就会自动注册程序集了&lt;br /&gt;而&lt;a href=&#34;http://www.microsoft.com/china/MSDN/library/archives/library/DNAspp/html/aspnet-usingtreeviewieWebcontrol.asp#aspnet-usingtreeviewiewebcontrol_topic2&#34;&gt;不是&lt;/a&gt;这里说的&lt;a href=&#34;http://asp.net/IEWebControls/Download.aspx&#34;&gt;地址&lt;/a&gt;里的包含源代码还需要自己build的文件,.&lt;br /&gt;后来还是发动同事们在所有电脑里search终于找到了一份.&lt;br /&gt;为什么ms不提供msi的安装文件了呢,竟然在google也找不到了.&lt;/p&gt;                
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2004/07/14/cb-24084/</guid>
+      <description>你们能在微软的网站找到IeWebcontrols的安装文件吗?
+这个地址不行了
+http://msdn.microsoft.com/downloads/samples/internet/ASP_DOT_NET_ServerControls/WebControls/default.asp
+我指的是IeWebControls.msi这个安装文件 装完后就会自动注册程序集了
+而不是这里说的地址里的包含源代码还需要自己build的文件,.
+后来还是发动同事们在所有电脑里search终于找到了一份.
+为什么ms不提供msi的安装文件了呢,竟然在google也找不到了.</description>
     </item>
     
   </channel>

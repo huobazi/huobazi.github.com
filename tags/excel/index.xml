@@ -2,27 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Excel on 武眉博</title>
-    <link>http://huobazi.aspxboy.com/tags/excel/</link>
+    <link>https://huobazi.aspxboy.com/tags/excel/</link>
     <description>Recent content in Excel on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 27 Apr 2004 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://huobazi.aspxboy.com/tags/excel/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://huobazi.aspxboy.com/tags/excel/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>打开一个Excel模板文件填充数据另存为一个文件</title>
-      <link>http://huobazi.aspxboy.com/blog/2004/04/27/filldatatoexceltemplate/</link>
+      <link>https://huobazi.aspxboy.com/blog/2004/04/27/filldatatoexceltemplate/</link>
       <pubDate>Tue, 27 Apr 2004 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2004/04/27/filldatatoexceltemplate/</guid>
-      <description>&lt;p&gt;最近做的东西要求打开一个Excel文件模板后填充数据&lt;br /&gt;开始用OleDb连接该Excel文件更新老是出错误 “需要一个可更新的.....“&lt;br /&gt;&lt;a href=&#34;http://expert.csdn.net/Expert/topic/2992/2992809.xml?temp=.4825403&#34;&gt;http://expert.csdn.net/Expert/topic/2992/2992809.xml?temp=.4825403&lt;/a&gt;&lt;br /&gt;如果是access这个错误多半是权限引起的 可是我做的是winform 权限是admin啊&lt;br /&gt;未果&lt;br /&gt;后来用ODBC测试了几个字段 都成功了&lt;br /&gt;开始写程序 后发现就有那么2个单元格不听话 提示参数错误&lt;br /&gt;郁闷&lt;br /&gt;&lt;a href=&#34;http://expert.csdn.net/Expert/topic/3000/3000113.xml?temp=.3331262&#34;&gt;http://expert.csdn.net/Expert/topic/3000/3000113.xml?temp=.3331262&lt;/a&gt;&lt;br /&gt;仍未果&lt;br /&gt;没办法翻google&lt;br /&gt;获得&lt;br /&gt;&lt;a href=&#34;http://www.c-sharpcorner.com/winforms/ExcelReadMG.asp&#34;&gt;http://www.c-sharpcorner.com/winforms/ExcelReadMG.asp&lt;/a&gt;&lt;br /&gt;用com组件，可行哦，今早上csdn就有网友pm我问是如何搞定的&lt;br /&gt;那就写到这里，&lt;br /&gt;以下是部分代码，使用前要先按上文中的说明添加Com引用&lt;br /&gt;...........&lt;br /&gt;&lt;span style=&#34;background-color: #d3d3d3;&#34;&gt;string strFileName = &lt;/span&gt;&lt;a href=&#34;mailto:Environment.CurrentDirectory+@%22%5Ctemplate%5Ctemplate.tpl&#34;&gt;&lt;span style=&#34;background-color: #d3d3d3;&#34;&gt;Environment.CurrentDirectory+@&#34;\template\template.tpl&lt;/span&gt;&lt;/a&gt;&lt;span style=&#34;background-color: #d3d3d3;&#34;&gt;&#34;;&lt;br /&gt;    string strSaveFileName = &lt;/span&gt;&lt;a href=&#34;mailto:Environment.CurrentDirectory+@%22%5Cexcel%5C%22+System.DateTime.Now.ToString().Replace(%22:%22,%22%22).Replace(%22-%22,%22%22).Replace&#34;&gt;&lt;span style=&#34;background-color: #d3d3d3;&#34;&gt;Environment.CurrentDirectory+@&#34;\excel\&#34;+System.DateTime.Now.ToString().Replace(&#34;:&#34;,&#34;&#34;).Replace(&#34;-&#34;,&#34;&#34;).Replace&lt;/span&gt;&lt;/a&gt;&lt;span style=&#34;background-color: #d3d3d3;&#34;&gt;(&#34; &#34;,&#34;&#34;)+@&#34;.xls&#34;;&lt;br /&gt;    Excel.Application ThisApplication = new Excel.ApplicationClass();&lt;br /&gt;    Excel.Workbook ThisWorkBook;&lt;br /&gt;    object missing = System.Reflection.Missing.Value;&lt;br /&gt;    try&lt;br /&gt;    { &lt;br /&gt;     //加载Excel模板文件&lt;br /&gt;     ThisWorkBook = ThisApplication.Workbooks.Open(strFileName,missing,missing,missing,missing,missing,missing,missing,missing,missing,missing,missing,missing);&lt;br /&gt;     Excel.Worksheet ThisSheet = (Excel.Worksheet)ThisWorkBook.Sheets[1];&lt;br /&gt;     ThisSheet.Cells[7,1] = dtEnd.ToShortDateString();&lt;br /&gt;     progressBar.Value = 30;&lt;br /&gt;     ThisApplication.Visible = false;&lt;br /&gt;     DataRow dr = dt.Rows[0];&lt;br /&gt;     for( int i=0; i     {&lt;br /&gt;      ThisSheet.Cells[7,i+2] = dr[i].ToString();&lt;br /&gt;      progressBar.Value +=1;&lt;br /&gt;     }&lt;br /&gt;     //更新数据后另存为新文件&lt;br /&gt;     ThisSheet.SaveAs(strSaveFileName,missing,missing,missing,missing,missing,missing,missing,missing);&lt;br /&gt;    }&lt;br /&gt;    catch{}&lt;br /&gt;    finally&lt;br /&gt;    {&lt;br /&gt;     ThisApplication.Quit();&lt;br /&gt;     ThisWorkBook = null;&lt;br /&gt;     ThisApplication = null;&lt;br /&gt;     //dt = null;&lt;br /&gt;    }&lt;br /&gt;    try&lt;br /&gt;    { //打开刚才生成的Excel文件&lt;br /&gt;     Excel.Workbook NewWorkBook;&lt;br /&gt;     NewWorkBook = NewApplication.Workbooks.Open(strSaveFileName,missing,missing,missing,missing,missing,missing,missing,missing,missing,missing,missing,missing);&lt;br /&gt;     Excel.Worksheet NewSheet = (Excel.Worksheet)NewWorkBook.Sheets[1];&lt;br /&gt;     NewApplication.Visible = true;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;//也可以使用System.Diagnostics.Process.Start(strSaveFileName);来打开新文件&lt;/p&gt;
-&lt;p&gt;    }&lt;/p&gt;
-&lt;p&gt;打开Excel后进程内会多出一个excel进程&lt;br /&gt;需要手工清理&lt;br /&gt;参考这片文章&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://www.eggheadcafe.com/articles/20021012.asp&#34;&gt;http://www.eggheadcafe.com/articles/20021012.asp&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://www.aspxboy.com/476/archive.aspx&#34;&gt;http://www.aspxboy.com/476/archive.aspx&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;             
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2004/04/27/filldatatoexceltemplate/</guid>
+      <description>最近做的东西要求打开一个Excel文件模板后填充数据
+开始用OleDb连接该Excel文件更新老是出错误 “需要一个可更新的.....“
+http://expert.csdn.net/Expert/topic/2992/2992809.xml?temp=.4825403
+如果是access这个错误多半是权限引起的 可是我做的是winform 权限是admin啊
+未果
+后来用ODBC测试了几个字段 都成功了
+开始写程序 后发现就有那么2个单元格不听话 提示参数错误
+郁闷
+http://expert.csdn.net/Expert/topic/3000/3000113.xml?temp=.3331262
+仍未果
+没办法翻google
+获得
+http://www.c-sharpcorner.com/winforms/ExcelReadMG.asp
+用com组件，可行哦，今早上csdn就有网友pm我问是如何搞定的
+那就写到这里，
+以下是部分代码，使用前要先按上文中的说明添加Com引用
+...........
+string strFileName = Environment.CurrentDirectory+@&#34;\template\template.tpl&#34;;
+string strSaveFileName = Environment.CurrentDirectory+@&#34;\excel\&#34;+System.DateTime.Now.ToString().Replace(&#34;:&#34;,&#34;&#34;).Replace(&#34;-&#34;,&#34;&#34;).Replace(&#34; &#34;,&#34;&#34;)+@&#34;.xls&#34;;
+Excel.Application ThisApplication = new Excel.ApplicationClass();
+Excel.Workbook ThisWorkBook;
+object missing = System.Reflection.Missing.Value;
+try
+{ //加载Excel模板文件
+ThisWorkBook = ThisApplication.Workbooks.Open(strFileName,missing,missing,missing,missing,missing,missing,missing,missing,missing,missing,missing,missing);
+Excel.Worksheet ThisSheet = (Excel.Worksheet)ThisWorkBook.Sheets[1];
+ThisSheet.Cells[7,1] = dtEnd.ToShortDateString();
+progressBar.Value = 30;
+ThisApplication.Visible = false;
+DataRow dr = dt.Rows[0];
+for( int i=0; i {</description>
     </item>
     
   </channel>

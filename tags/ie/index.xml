@@ -2,28 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ie on 武眉博</title>
-    <link>http://huobazi.aspxboy.com/tags/ie/</link>
+    <link>https://huobazi.aspxboy.com/tags/ie/</link>
     <description>Recent content in Ie on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 21 Jan 2010 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://huobazi.aspxboy.com/tags/ie/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://huobazi.aspxboy.com/tags/ie/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>使用window.location跳转，在IE中UrlReffer不被记录</title>
-      <link>http://huobazi.aspxboy.com/blog/2010/01/21/window-location-href-ie-request-reffer/</link>
+      <link>https://huobazi.aspxboy.com/blog/2010/01/21/window-location-href-ie-request-reffer/</link>
       <pubDate>Thu, 21 Jan 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2010/01/21/window-location-href-ie-request-reffer/</guid>
+      <guid>https://huobazi.aspxboy.com/blog/2010/01/21/window-location-href-ie-request-reffer/</guid>
       <description>&lt;p&gt;使用window.location跳转，在FF中，没问题，下一页面可以取得UrlReffer，但在IE中UrlReffer不被记录&lt;/p&gt;
 &lt;p&gt;真变态，&lt;/p&gt;
-&lt;p&gt;让我头痛了半天，弄了个丑陋的办法做了如下实现：&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;div class=&#34;source&#34; style=&#34;COLOR: #f6f3e8; FONT-FAMILY: &#39;[object]&#39;,&#39;Consolas&#39;,&#39;Lucida Console&#39;,&#39;Courier New&#39;; BACKGROUND-COLOR: #242424&#34;&gt;
-&lt;span style=&#34;COLOR: #8ac6f2&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;safeRedirectToCart&lt;/span&gt;(&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;url&lt;/span&gt;) &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;{&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;COLOR: #8ac6f2&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;isIE&lt;/span&gt; &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;jQuery&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;browser&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;msie&lt;/span&gt;;&lt;br /&gt;    &lt;span style=&#34;COLOR: #8ac6f2&#34;&gt;if&lt;/span&gt; (&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;!&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;isIE&lt;/span&gt;) &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;{&lt;/span&gt;&lt;br /&gt;        &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;window&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;location&lt;/span&gt; &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;url&lt;/span&gt;;&lt;br /&gt;        &lt;span style=&#34;COLOR: #8ac6f2&#34;&gt;return&lt;/span&gt;;&lt;br /&gt;    &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;}&lt;/span&gt;&lt;br /&gt;    &lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;$&lt;/span&gt;(&lt;span style=&#34;COLOR: #95e454; FONT-STYLE: italic&#34;&gt;&#34;.btnCart&#34;&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;).&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;get&lt;/span&gt;(&lt;span style=&#34;COLOR: #e5786d&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;).&lt;/span&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;click&lt;/span&gt;();&lt;br /&gt;&lt;span style=&#34;COLOR: #f6f3e8&#34;&gt;}&lt;/span&gt;
-&lt;/div&gt;
-&lt;p&gt;说明：在页面上render一个连接(可以用样式表控制不显示），判断如果是IE浏览器然则调用其click，嘿嘿，就这个。&lt;/p&gt;              
-</description>
+&lt;p&gt;让我头痛了半天，弄了个丑陋的办法做了如下实现：&lt;/p&gt;</description>
     </item>
     
   </channel>

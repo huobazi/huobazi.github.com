@@ -2,75 +2,73 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Community Server on 武眉博</title>
-    <link>http://huobazi.aspxboy.com/tags/community-server/</link>
+    <link>https://huobazi.aspxboy.com/tags/community-server/</link>
     <description>Recent content in Community Server on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 22 Feb 2008 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://huobazi.aspxboy.com/tags/community-server/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://huobazi.aspxboy.com/tags/community-server/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Telligent 发布了 CMS 系统</title>
-      <link>http://huobazi.aspxboy.com/blog/2008/02/22/graffiticmsreleased/</link>
+      <link>https://huobazi.aspxboy.com/blog/2008/02/22/graffiticmsreleased/</link>
       <pubDate>Fri, 22 Feb 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2008/02/22/graffiticmsreleased/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://telligent.com/&#34;&gt;Telligent&lt;/a&gt;  &lt;a href=&#34;http://communityserver.org/&#34;&gt;Community Server&lt;/a&gt; 的出产厂商&lt;br /&gt;发布了 他们的新CMS产品 &lt;a href=&#34;http://graffiticms.com/&#34;&gt;GraffitiCMS&lt;/a&gt;&lt;br /&gt;关于价格：&lt;span style=&#34;font-family: Verdana;&#34;&gt;&lt;a href=&#34;http://get.graffiticms.com/&#34;&gt;http://get.graffiticms.com/&lt;/a&gt;&lt;/span&gt;&lt;br /&gt;Licensing：&lt;span style=&#34;font-family: Verdana;&#34;&gt;&lt;a href=&#34;http://graffiticms.com/learn-more/licensing/&#34;&gt;http://graffiticms.com/learn-more/licensing/&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a title=&#34;http://graffiticms.com/&#34; href=&#34;http://graffiticms.com/&#34; target=&#34;_blank&#34;&gt;&lt;img style=&#34;width: 621px; height: 120px;&#34; src=&#34;http://huobazi.aspxboy.com/images/hbz_images/18619a9b-2e9b-4630-823e-eacb988c485c.png&#34; alt=&#34;Get Graffiti Today!&#34;&gt;&lt;/a&gt;&lt;/p&gt;             
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2008/02/22/graffiticmsreleased/</guid>
+      <description>Telligent Community Server 的出产厂商
+发布了 他们的新CMS产品 GraffitiCMS
+关于价格：http://get.graffiticms.com/
+Licensing：http://graffiticms.com/learn-more/licensing/</description>
     </item>
     
     <item>
       <title>买了edong的空间没有db_securityadmin权限</title>
-      <link>http://huobazi.aspxboy.com/blog/2005/10/16/cb-256133/</link>
+      <link>https://huobazi.aspxboy.com/blog/2005/10/16/cb-256133/</link>
       <pubDate>Sun, 16 Oct 2005 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2005/10/16/cb-256133/</guid>
-      <description>&lt;p&gt;&lt;p&gt;买了edong的&lt;a href=&#34;http://www.edong.com/v8/webhosting/K1000.php&#34;&gt;http://www.edong.com/v8/webhosting/K1000.php&lt;/a&gt;这个k1000空间&lt;br /&gt;没有db_securityadmin权限装不了CommunityServer和DotNetNuke&lt;/p&gt;
-&lt;div class=&#34;CodeDiv&#34;&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;div style=&#34;padding-right: 5px; padding-left: 4px; font-size: 13px; padding-bottom: 4px; width: 98%; padding-top: 4px; background-color: #eeeeee; border: #cccccc 1px solid;&#34;&gt;
-&lt;span style=&#34;COLOR: #000000&#34;&gt;The account you use to run CS under must have the following minimum database roles to function corrected:&lt;p&gt;db_securityadmin&lt;br /&gt;db_ddladmin&lt;br /&gt;db_datareader&lt;br /&gt;db_datawriter&lt;/p&gt;
-&lt;p&gt;Use the following from Query Analyzer to ensure that your account has sufficent permissions. If you are in a host environment and can not change your database roles you will need to requrest these roles from your ISP&lt;/p&gt;
-&lt;p&gt;sp_addrolemember &amp;rsquo;db_securityadmin&amp;rsquo;, &amp;rsquo;&lt;/p&gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;COLOR: #800000&#34;&gt;your &lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt;login name&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #000000&#34;&gt;&amp;lsquo;&lt;br /&gt;sp_addrolemember &amp;rsquo;db_ddladmin&amp;rsquo;, &amp;rsquo;&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;COLOR: #800000&#34;&gt;your &lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt;login name&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #000000&#34;&gt;&amp;lsquo;&lt;br /&gt;sp_addrolemember &amp;rsquo;db_datareader&amp;rsquo;, &amp;rsquo;&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;COLOR: #800000&#34;&gt;your &lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt;login name&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #000000&#34;&gt;&amp;lsquo;&lt;br /&gt;sp_addrolemember &amp;rsquo;db_datawriter&amp;rsquo;, &amp;rsquo;&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;COLOR: #800000&#34;&gt;your &lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt;login name&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #000000&#34;&gt;&amp;lsquo;&lt;/span&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;br /&gt;郁闷。&lt;br /&gt;看来要自己租服务器了。&lt;br /&gt;另注：本随笔不接受枪手评论，谢谢！&lt;/p&gt;
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2005/10/16/cb-256133/</guid>
+      <description>买了edong的http://www.edong.com/v8/webhosting/K1000.php这个k1000空间
+没有db_securityadmin权限装不了CommunityServer和DotNetNuke
+
+The account you use to run CS under must have the following minimum database roles to function corrected:db_securityadmin
+db_ddladmin
+db_datareader
+db_datawriter
+Use the following from Query Analyzer to ensure that your account has sufficent permissions. If you are in a host environment and can not change your database roles you will need to requrest these roles from your ISP
+sp_addrolemember &amp;rsquo;db_securityadmin&amp;rsquo;, &amp;rsquo;
+&amp;lt;your login name&amp;gt;&amp;lsquo;
+sp_addrolemember &amp;rsquo;db_ddladmin&amp;rsquo;, &amp;rsquo;&amp;lt;your login name&amp;gt;&amp;lsquo;</description>
     </item>
     
     <item>
       <title>C Community Server 群发Email MassEmailingAdmin.aspx页面内插入表情和代码时，404错误</title>
-      <link>http://huobazi.aspxboy.com/blog/2005/10/04/cb-248673/</link>
+      <link>https://huobazi.aspxboy.com/blog/2005/10/04/cb-248673/</link>
       <pubDate>Tue, 04 Oct 2005 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2005/10/04/cb-248673/</guid>
-      <description>&lt;p&gt;Email群发的时候：MassEmailingAdmin.aspx页面内插入表情和代码时，404错误 &lt;br /&gt;&lt;/p&gt;
-&lt;p&gt;发现是Js文件内路径的问题&lt;br /&gt;FTB-FreeTextBox.js内&lt;br /&gt;&lt;/p&gt;
-&lt;div class=&#34;codeDiv&#34;&gt;
-&lt;br /&gt; this.iPopup.document.location.href = &#34;../emoticons.aspx&#34;; &lt;br /&gt;&lt;p&gt;&lt;/p&gt;
-&lt;br /&gt;&lt;p&gt;改成&lt;/p&gt;
-&lt;br /&gt;&lt;p&gt; this.iPopup.document.location.href = &#34;/emoticons.aspx&#34;;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;codeDiv&#34;&gt;
-&lt;br /&gt;FTB-Pro.js内 &lt;br /&gt;&lt;p&gt;&lt;/p&gt;
-&lt;br /&gt;&lt;p&gt; var codeWin = window.open(&#34;../insertcode.aspx&#34;,&#34;codeWin&#34;,&#34;width=530,height=420,status=0,toolbars=0&#34;);&lt;/p&gt;
-&lt;br /&gt;&lt;p&gt;改成&lt;/p&gt;
-&lt;br /&gt;&lt;p&gt; var codeWin = window.open(&#34;/insertcode.aspx&#34;,&#34;codeWin&#34;,&#34;width=530,height=420,status=0,toolbars=0&#34;);&lt;br /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;             
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2005/10/04/cb-248673/</guid>
+      <description>Email群发的时候：MassEmailingAdmin.aspx页面内插入表情和代码时，404错误 发现是Js文件内路径的问题
+FTB-FreeTextBox.js内
+this.iPopup.document.location.href = &#34;../emoticons.aspx&#34;; 
+改成
+ this.iPopup.document.location.href = &#34;/emoticons.aspx&#34;;
+ FTB-Pro.js内 
+ var codeWin = window.open(&#34;../insertcode.aspx&#34;,&#34;codeWin&#34;,&#34;width=530,height=420,status=0,toolbars=0&#34;);
+改成
+ var codeWin = window.open(&#34;/insertcode.aspx&#34;,&#34;codeWin&#34;,&#34;width=530,height=420,status=0,toolbars=0&#34;);</description>
     </item>
     
     <item>
       <title>Community Server的新功能－－快速回复</title>
-      <link>http://huobazi.aspxboy.com/blog/2005/10/02/cb-248084/</link>
+      <link>https://huobazi.aspxboy.com/blog/2005/10/02/cb-248084/</link>
       <pubDate>Sun, 02 Oct 2005 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2005/10/02/cb-248084/</guid>
-      <description>&lt;p&gt;进入&lt;br /&gt;&lt;a href=&#34;http://communityserver.org/forums/498047/ShowPost.aspx&#34;&gt;http://communityserver.org/forums/498047/ShowPost.aspx&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;双击鼠标,看效果&lt;br /&gt;&lt;br /&gt;但是Firefox/1.0下无效...&lt;/p&gt;               
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2005/10/02/cb-248084/</guid>
+      <description>进入
+http://communityserver.org/forums/498047/ShowPost.aspx
+双击鼠标,看效果
+但是Firefox/1.0下无效...</description>
     </item>
     
   </channel>

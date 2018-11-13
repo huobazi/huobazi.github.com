@@ -2,22 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>珍爱身体 on 武眉博</title>
-    <link>http://huobazi.aspxboy.com/tags/%E7%8F%8D%E7%88%B1%E8%BA%AB%E4%BD%93/</link>
+    <link>https://huobazi.aspxboy.com/tags/%E7%8F%8D%E7%88%B1%E8%BA%AB%E4%BD%93/</link>
     <description>Recent content in 珍爱身体 on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 03 Mar 2010 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://huobazi.aspxboy.com/tags/%E7%8F%8D%E7%88%B1%E8%BA%AB%E4%BD%93/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://huobazi.aspxboy.com/tags/%E7%8F%8D%E7%88%B1%E8%BA%AB%E4%BD%93/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>请珍爱自己的身体</title>
-      <link>http://huobazi.aspxboy.com/blog/2010/03/03/356/</link>
+      <link>https://huobazi.aspxboy.com/blog/2010/03/03/356/</link>
       <pubDate>Wed, 03 Mar 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2010/03/03/356/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;&lt;span style=&#34;color: #008000;font-size:48px;&#34;&gt;see see:&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a title=&#34;程序员们，请珍爱自己的身体&#34; href=&#34;http://www.cnblogs.com/yiway/archive/2010/02/23/1672173.html&#34; target=&#34;_blank&#34;&gt;&lt;span style=&#34;color: #008000;&#34;&gt;&lt;strong&gt;http://www.cnblogs.com/yiway/archive/2010/02/23/1672173.html&lt;/strong&gt;&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;              
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2010/03/03/356/</guid>
+      <description>see see:
+http://www.cnblogs.com/yiway/archive/2010/02/23/1672173.html</description>
     </item>
     
   </channel>

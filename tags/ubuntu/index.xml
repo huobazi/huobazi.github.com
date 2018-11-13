@@ -2,153 +2,51 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ubuntu on 武眉博</title>
-    <link>http://huobazi.aspxboy.com/tags/ubuntu/</link>
+    <link>https://huobazi.aspxboy.com/tags/ubuntu/</link>
     <description>Recent content in Ubuntu on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 04 Feb 2012 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://huobazi.aspxboy.com/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://huobazi.aspxboy.com/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Ubuntu下设置 Sublime Text 2 显示中文 &amp;&amp; 输入中文</title>
-      <link>http://huobazi.aspxboy.com/blog/2012/02/04/ubuntu-sublime-text-chinese/</link>
+      <link>https://huobazi.aspxboy.com/blog/2012/02/04/ubuntu-sublime-text-chinese/</link>
       <pubDate>Sat, 04 Feb 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2012/02/04/ubuntu-sublime-text-chinese/</guid>
+      <guid>https://huobazi.aspxboy.com/blog/2012/02/04/ubuntu-sublime-text-chinese/</guid>
       <description>&lt;p&gt;Sublime text 2在mac os 下用的很舒服，今天尝试在ubuntu下使用一下，发现汉字显示不了，&lt;/p&gt;
 &lt;p&gt;后来找到方法：&lt;/p&gt;
-&lt;p&gt;菜单栏 -&amp;gt; Preferences -&amp;gt; File Settings - User，在配置文件中增加：&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;// Settings in here override those in &#34;Default/Base File.sublime-settings&#34;, and&lt;br /&gt;// are overridden in turn by file type specific settings. Place your settings&lt;br /&gt;// here, to ensure they&#39;re preserved when upgrading.&lt;br /&gt;{&lt;br /&gt;    &#34;font_face&#34;: &#34;WenQuanYi Micro Hei Mono&#34;&lt;br /&gt;}&lt;br /&gt;就OK了，其中文泉驿是著名的开源字体 &lt;a title=&#34;http://wenq.org/&#34; href=&#34;http://wenq.org/&#34; target=&#34;_blank&#34;&gt;http://wenq.org/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;然后我们来解决中文输入的问题&lt;/p&gt;
-&lt;p&gt;sudo apt-get install scim&lt;/p&gt;
-&lt;p&gt;sudo apt-get install scim-pinyin&lt;/p&gt;
-&lt;p&gt;在“系统－首选项－scim设置里“&lt;/p&gt;
-&lt;p&gt;scim设置－&amp;gt;全局设置－&amp;gt;将预编辑字符串嵌入到客户端中  勾去掉&lt;br /&gt;scim设置-&amp;gt;gtk-&amp;gt;嵌入式候选词标 勾去掉&lt;/p&gt;
-&lt;p&gt;下来 在“系统－语言支持”里面选上“scim-bridge”就可以了,记得这些修改完要注销重新登录进来哦。&lt;/p&gt;
-&lt;p&gt;或者 ,打开终端,输入 pkill scim,然后输入 scim -d，如果不起作用，那还是建议你注销一下&lt;/p&gt;                
-</description>
+&lt;p&gt;菜单栏 -&amp;gt; Preferences -&amp;gt; File Settings - User，在配置文件中增加：&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>在 Ubuntu 下安装 Redis 并使用 init 脚本启动  &amp;&amp; 添加 删除ubuntu自启动服务</title>
-      <link>http://huobazi.aspxboy.com/blog/2011/08/06/ubuntu-redis-init-service-autorun/</link>
+      <link>https://huobazi.aspxboy.com/blog/2011/08/06/ubuntu-redis-init-service-autorun/</link>
       <pubDate>Sat, 06 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2011/08/06/ubuntu-redis-init-service-autorun/</guid>
-      <description>&lt;pre style=&#34;margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; font: normal normal normal 12px/normal Monaco, &#39;Courier New&#39;, &#39;DejaVu Sans Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, monospace;  font-family: &#39;Bitstream Vera Sans Mono&#39;, &#39;Courier New&#39;, monospace; &#34;&gt;&lt;span style=&#34;font-family: helvetica, arial, freesans, clean, sans-serif; line-height: 14px; white-space: normal;&#34;&gt;
-
-&lt;div id=&#34;LC1&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;1. 下载安装：&lt;/div&gt;
-
-&lt;div id=&#34;LC2&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;&lt;/div&gt;
-
-&lt;div id=&#34;LC3&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;cd /tmp&lt;/div&gt;
-
-&lt;div id=&#34;LC4&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;wget http://redis.googlecode.com/files/redis-*.*.*.tar.gz&lt;/div&gt;
-
-&lt;div id=&#34;LC5&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;tar -zxf redis-*.*.*.tar.gz&lt;/div&gt;
-
-&lt;div id=&#34;LC6&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;cd redis-*.*.*&lt;/div&gt;
-
-&lt;div id=&#34;LC7&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;make&lt;/div&gt;
-
-&lt;div id=&#34;LC8&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;sudo make install&lt;/div&gt;
-
-&lt;div id=&#34;LC8&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;&lt;/div&gt;
-
-&lt;div id=&#34;LC9&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;2. 配置init脚本：&lt;/div&gt;
-
-&lt;div id=&#34;LC10&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;&lt;/div&gt;
-
-&lt;div id=&#34;LC11&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;wget https://github.com/ijonas/dotfiles/raw/master/etc/init.d/redis-server&lt;/div&gt;
-
-&lt;div id=&#34;LC12&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;wget https://github.com/ijonas/dotfiles/raw/master/etc/redis.conf&lt;/div&gt;
-
-&lt;div id=&#34;LC13&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;sudo mv redis-server /etc/init.d/redis-server&lt;/div&gt;
-
-&lt;div id=&#34;LC14&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;sudo chmod +x /etc/init.d/redis-server&lt;/div&gt;
-
-&lt;div id=&#34;LC15&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;sudo mv redis.conf /etc/redis.conf&lt;/div&gt;
-
-&lt;div id=&#34;LC15&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;&lt;/div&gt;
-
-&lt;div id=&#34;LC16&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;3. 初始化用户和日志路径&lt;/div&gt;
-
-&lt;div id=&#34;LC17&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;&lt;/div&gt;
-
-&lt;div id=&#34;LC18&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;sudo useradd redis&lt;/div&gt;
-
-&lt;div id=&#34;LC19&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;sudo mkdir -p /var/lib/redis&lt;/div&gt;
-
-&lt;div id=&#34;LC20&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;sudo mkdir -p /var/log/redis&lt;/div&gt;
-
-&lt;div id=&#34;LC21&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;sudo chown redis.redis /var/lib/redis&lt;/div&gt;
-
-&lt;div id=&#34;LC22&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;sudo chown redis.redis /var/log/redis&lt;/div&gt;
-
-&lt;div id=&#34;LC22&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;&lt;/div&gt;
-
-&lt;div id=&#34;LC23&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;4. 启动Redis：&lt;/div&gt;
-
-&lt;div id=&#34;LC24&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;&lt;/div&gt;
-
-&lt;div id=&#34;LC25&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;sudo /etc/init.d/redis-server start&lt;/div&gt;
-
-&lt;div id=&#34;LC25&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;&lt;/div&gt;
-
-&lt;/span&gt;&lt;/pre&gt;
-&lt;pre style=&#34;margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; font: normal normal normal 12px/normal Monaco, &#39;Courier New&#39;, &#39;DejaVu Sans Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, monospace;  font-family: &#39;Bitstream Vera Sans Mono&#39;, &#39;Courier New&#39;, monospace; &#34;&gt;
-&lt;span style=&#34;font-family: helvetica, arial, freesans, clean, sans-serif; line-height: 14px; white-space: normal;&#34;&gt;
-
-&lt;div id=&#34;LC1&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;添加一个服务&lt;/div&gt;
-
-&lt;div id=&#34;LC2&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;#sudo update-rc.d 服务名 defaults 99&lt;/div&gt;
-
-&lt;div id=&#34;LC4&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;删除一个服务&lt;/div&gt;
-
-&lt;div id=&#34;LC5&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;#sudo update-rc.d 服务名 remove&lt;/div&gt;
-
-&lt;div id=&#34;LC7&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;临时重启一个服务&lt;/div&gt;
-
-&lt;div id=&#34;LC8&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;#/etc/init.d/服务名 restart&lt;/div&gt;
-
-&lt;div id=&#34;LC10&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;临时关闭一个服务&lt;/div&gt;
-
-&lt;div id=&#34;LC11&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;#/etc/init.d/服务名 stop&lt;/div&gt;
-
-&lt;div id=&#34;LC13&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;临时启动一个服务&lt;/div&gt;
-
-&lt;div id=&#34;LC14&#34; style=&#34;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 1em;  margin: 0px;&#34;&gt;#/etc/init.d/服务名 start&lt;/div&gt;
-
-&lt;/span&gt;
-&lt;/pre&gt;              
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2011/08/06/ubuntu-redis-init-service-autorun/</guid>
+      <description>1. 下载安装：  cd /tmp wget http://redis.googlecode.com/files/redis-*.*.*.tar.gz tar -zxf redis-*.*.*.tar.gz cd redis-*.*.* make sudo make install  2. 配置init脚本：  wget https://github.com/ijonas/dotfiles/raw/master/etc/init.d/redis-server wget https://github.com/ijonas/dotfiles/raw/master/etc/redis.conf sudo mv redis-server /etc/init.d/redis-server sudo chmod +x /etc/init.d/redis-server sudo mv redis.conf /etc/redis.conf  3. 初始化用户和日志路径  sudo useradd redis sudo mkdir -p /var/lib/redis sudo mkdir -p /var/log/redis sudo chown redis.redis /var/lib/redis sudo chown redis.redis /var/log/redis  4. 启动Redis：  sudo /etc/init.d/redis-server start   添加一个服务 #sudo update-rc.</description>
     </item>
     
     <item>
       <title>在ubuntu上配置 nginx和php&#43;fastcgi</title>
-      <link>http://huobazi.aspxboy.com/blog/2011/01/01/ubuntu-nginx-php-fastcgi/</link>
+      <link>https://huobazi.aspxboy.com/blog/2011/01/01/ubuntu-nginx-php-fastcgi/</link>
       <pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2011/01/01/ubuntu-nginx-php-fastcgi/</guid>
-      <description>&lt;p&gt;(1)安装php5&lt;br /&gt;apt-get install php5 php-pear php5-cli php5-common php5-xcache php5-cgi php5-mysql php5-curl  php5-gd  php5-imagick  php5-xmlrpc  php5-dev php5-memcache&lt;br /&gt;(2)安装nginx&lt;br /&gt;apt-get install nginx&lt;br /&gt;(3)安装spawn-fcgi&lt;br /&gt; apt-get install spawn-fcgi&lt;br /&gt;(4)设置，也是最头疼滴地方哦&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;在/etc/nginx/fastcgi_params 文件最后，加入一行，可以用sudo gedit /etc/nginx/fastcgi_params打开文件&lt;br /&gt;&lt;strong&gt;fastcgi_param SCRIPT_FILENAME     $document_root$fastcgi_script_name;&lt;/strong&gt;&lt;br /&gt;设置php.ini的 cgi.fix_pathinfo=1;doc_root=&lt;br /&gt;拷贝/etc/nginx/sites-availab修改本机hosts文件，指定一个域名&lt;br /&gt;修改server_name&lt;br /&gt;在server_name同级增加root 设置为网站根目录&lt;br /&gt;location里 加上 index.php&lt;br /&gt;php的fast-cgi配置&lt;/p&gt;
-&lt;p&gt;&lt;span style=&#34;color: #fff; background-color:#000;&#34;&gt;    location ~ \.php$ {&lt;br /&gt;        fastcgi_pass   127.0.0.1:9000;&lt;br /&gt;        fastcgi_index  index.php;&lt;br /&gt;        include fastcgi_params;     &lt;br /&gt;    }&lt;/span&gt;&lt;br /&gt;$ sudo killall -HUP php5-cgi&lt;br /&gt;$ sudo /usr/bin/spawn-fcgi -a 127.0.0.1 -p 9000 -C 5 -u www-data -g www-data -f /usr/bin/php5-cgi -P /var/run/fastcgi-php.pid&lt;br /&gt;$ /etc/init.d# sudo /etc/init.d/nginx restart &lt;br /&gt;在网站内放个phpinfo测试一下，ok了。&lt;/p&gt;                
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2011/01/01/ubuntu-nginx-php-fastcgi/</guid>
+      <description>&lt;p&gt;(1)安装php5&lt;br /&gt;apt-get install php5 php-pear php5-cli php5-common php5-xcache php5-cgi php5-mysql php5-curl  php5-gd  php5-imagick  php5-xmlrpc  php5-dev php5-memcache&lt;br /&gt;(2)安装nginx&lt;br /&gt;apt-get install nginx&lt;br /&gt;(3)安装spawn-fcgi&lt;br /&gt; apt-get install spawn-fcgi&lt;br /&gt;(4)设置，也是最头疼滴地方哦&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>VirtualBox内的Linux和宿主Windows的文件共享</title>
-      <link>http://huobazi.aspxboy.com/blog/2010/12/25/virtualbox-linux-windows-share/</link>
+      <link>https://huobazi.aspxboy.com/blog/2010/12/25/virtualbox-linux-windows-share/</link>
       <pubDate>Sat, 25 Dec 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2010/12/25/virtualbox-linux-windows-share/</guid>
-      <description>&lt;p&gt;VirtualBox内的Linux和宿主Windows的文件共享&lt;br /&gt;（1）安装增强功能&lt;br /&gt;（2）分配数据空间，制定一个名称，假设为“temp”&lt;br /&gt;（3）挂载， mount -t vboxsf temp /mnt&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;OK了&lt;br /&gt;另外，反之共享Linux路径，然后在windows内映射网络驱动器即可。&lt;/p&gt;
-&lt;p&gt;BTW:使用http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html内的PSCP.exe也可以&lt;br /&gt;但我没有去试验。&lt;strong&gt;&lt;/strong&gt;&lt;/p&gt;                
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2010/12/25/virtualbox-linux-windows-share/</guid>
+      <description>&lt;p&gt;VirtualBox内的Linux和宿主Windows的文件共享&lt;br /&gt;（1）安装增强功能&lt;br /&gt;（2）分配数据空间，制定一个名称，假设为“temp”&lt;br /&gt;（3）挂载， mount -t vboxsf temp /mnt&lt;/p&gt;</description>
     </item>
     
   </channel>

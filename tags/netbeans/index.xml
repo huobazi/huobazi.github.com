@@ -2,64 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Netbeans on 武眉博</title>
-    <link>http://huobazi.aspxboy.com/tags/netbeans/</link>
+    <link>https://huobazi.aspxboy.com/tags/netbeans/</link>
     <description>Recent content in Netbeans on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 07 Jan 2010 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://huobazi.aspxboy.com/tags/netbeans/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://huobazi.aspxboy.com/tags/netbeans/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>把你的netbeans变成英文版</title>
-      <link>http://huobazi.aspxboy.com/blog/2010/01/07/349/</link>
+      <link>https://huobazi.aspxboy.com/blog/2010/01/07/349/</link>
       <pubDate>Thu, 07 Jan 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2010/01/07/349/</guid>
-      <description>&lt;p&gt;呵呵其实很简单，装完后再你使用的快捷方式内增加&lt;/p&gt;
-&lt;p&gt;--locale en:us就可以了，比如我的快捷方式里的设置为：&lt;/p&gt;
-&lt;p&gt;&#34;D:\Program Files\NetBeans 6.8\bin\netbeans.exe&#34; --locale en:us&lt;/p&gt;
-&lt;p&gt;ok 英文了.&lt;/p&gt;
-&lt;p&gt;按照这个方法你可以为自己定制很多套语言版本的netbeans，但只要一份安装。&lt;/p&gt;              
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2010/01/07/349/</guid>
+      <description>呵呵其实很简单，装完后再你使用的快捷方式内增加
+--locale en:us就可以了，比如我的快捷方式里的设置为：
+&#34;D:\Program Files\NetBeans 6.8\bin\netbeans.exe&#34; --locale en:us
+ok 英文了.
+按照这个方法你可以为自己定制很多套语言版本的netbeans，但只要一份安装。</description>
     </item>
     
     <item>
       <title>调整netbeans6.5设置使之默认使用utf-8存储文件</title>
-      <link>http://huobazi.aspxboy.com/blog/2009/08/19/netbeans-utf8-settings/</link>
+      <link>https://huobazi.aspxboy.com/blog/2009/08/19/netbeans-utf8-settings/</link>
       <pubDate>Wed, 19 Aug 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2009/08/19/netbeans-utf8-settings/</guid>
+      <guid>https://huobazi.aspxboy.com/blog/2009/08/19/netbeans-utf8-settings/</guid>
       <description>&lt;p&gt;&lt;p&gt;netbeans默认使用ANSI存储的，我们一般希望它采用utf-8来存储，按照如下方法可以实现这个要求&lt;/p&gt;
 &lt;p&gt;1)  找到你的Netbeans安装目录下的etc文件夹,如D:\Program Files\NetBeans 6.5\etc&lt;br /&gt;2)  用文本编辑器打开netbeans.conf&lt;br /&gt;3)  找到netbeans_default_options这一句(注意#号开头的行的是注释)&lt;br /&gt;4)  在最后面加上一个空格,再加入-J-Dfile.encoding=UTF-8&lt;/p&gt;
 &lt;p&gt;如我现在的设置:&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;pre&gt;# ${HOME} will be replaced by JVM user.home system property
-netbeans_default_userdir=&amp;ldquo;${HOME}/.netbeans/6.5&amp;rdquo;&lt;/p&gt;
-
-&lt;p&gt;# Options used by NetBeans launcher by default, can be overridden by explicit
-# command line switches:
-netbeans_default_options=&amp;ldquo;-J-client -J-Xverify:none -J-Xss2m -J-Xms32m -J-XX:PermSize=32m -J-XX:MaxPermSize=200m -J-Dapple.laf.useScreenMenuBar=true -J-Dsun.java2d.noddraw=true -J-Dfile.encoding=UTF-8&amp;rdquo;
-# Note that a default -Xmx is selected for you automatically.
-# You can find this value in var/log/messages.log file in your userdir.
-# The automatically selected value can be overridden by specifying -J-Xmx here
-# or on the command line.&lt;/p&gt;
-
-&lt;p&gt;# If you specify the heap size (-Xmx) explicitely, you may also want to enable
-# Concurrent Mark &amp;amp; Sweep garbage collector. In such case add the following
-# options to the netbeans_default_options:
-# -J-XX:+UseConcMarkSweepGC -J-XX:+CMSClassUnloadingEnabled -J-XX:+CMSPermGenSweepingEnabled
-# (see &lt;a href=&#34;http://wiki.netbeans.org/wiki/view/FaqGCPauses&#34;&gt;http://wiki.netbeans.org/wiki/view/FaqGCPauses&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;# Default location of JDK, can be overridden by using &amp;ndash;jdkhome &amp;lt;dir&amp;gt;:
-netbeans_jdkhome=&amp;ldquo;C:\Program Files\Java\jre6&amp;rdquo;&lt;/p&gt;
-
-&lt;p&gt;# Additional module clusters, using ${path.separator} (&amp;lsquo;;&amp;lsquo; on Windows or &amp;rsquo;:&amp;lsquo; on Unix):
-#netbeans_extraclusters=&amp;ldquo;/absolute/path/to/cluster1:/absolute/path/to/cluster2&amp;rdquo;&lt;/p&gt;
-
-&lt;p&gt;# If you have some problems with detect of proxy settings, you may want to enable
-# detect the proxy settings provided by JDK5 or higher.
-# In such case add -J-Djava.net.useSystemProxies=true to the netbeans_default_options.&lt;/pre&gt;&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

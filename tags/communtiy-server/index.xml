@@ -2,33 +2,34 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Communtiy Server on 武眉博</title>
-    <link>http://huobazi.aspxboy.com/tags/communtiy-server/</link>
+    <link>https://huobazi.aspxboy.com/tags/communtiy-server/</link>
     <description>Recent content in Communtiy Server on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 07 Oct 2005 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://huobazi.aspxboy.com/tags/communtiy-server/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://huobazi.aspxboy.com/tags/communtiy-server/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Communtiy Server论坛的帖子显示页面分页部分的Url Rewrite的构造方法</title>
-      <link>http://huobazi.aspxboy.com/blog/2005/10/07/cb-249806/</link>
+      <link>https://huobazi.aspxboy.com/blog/2005/10/07/cb-249806/</link>
       <pubDate>Fri, 07 Oct 2005 00:00:00 +0000</pubDate>
       
-      <guid>http://huobazi.aspxboy.com/blog/2005/10/07/cb-249806/</guid>
-      <description>&lt;p&gt;你可能会发现在Communtiy Server的论坛帖子列表页面&lt;/p&gt;
-&lt;p&gt;比如&lt;a href=&#34;http://communityserver.org/forums/129/ShowForum.aspx&#34;&gt;http://communityserver.org/forums/129/ShowForum.aspx&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;看下面分页处的连接使用的地址是类似ShowForum.aspx?PageIndex=2这样的地址&lt;br /&gt;没有做到SearchFriendly,我们稍微改造一下代码就可以实现类似帖子显示页面内那样的地址&lt;br /&gt;先在siteUrl.config内增加&lt;/p&gt;
-&lt;p&gt; &lt;/p&gt;
-&lt;div style=&#34;padding-right: 5px; padding-left: 4px; font-size: 13px; padding-bottom: 4px; width: 98%; word-break: break-all; padding-top: 4px; background-color: #eeeeee; border: #cccccc 1px solid;&#34;&gt;
-&lt;span style=&#34;COLOR: #0000ff&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;COLOR: #800000&#34;&gt;url &lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;=&#34;forum_Paged&#34;&lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt; location &lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;= &#34;forums&#34;&lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt; path &lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;= &#34;{0}/{1}/ShowForum.aspx&#34;&lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt; pattern &lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;= &#34;(\d+)/(\d+)/ShowForum.aspx&#34;&lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt; vanity&lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;=&#34;ShowForum.aspx?PageIndex=$1^ForumID=$2&#34;&lt;/span&gt;&lt;span style=&#34;COLOR: #ff0000&#34;&gt; &lt;/span&gt;&lt;span style=&#34;COLOR: #0000ff&#34;&gt;/&amp;gt;&lt;/span&gt;&lt;span style=&#34;COLOR: #000000&#34;&gt;&lt;br /&gt;&lt;/span&gt;
-&lt;/div&gt;
-&lt;p&gt;然后siteUrl.cs内增加&lt;br /&gt; &lt;/p&gt;
-&lt;div class=&#34;codeDiv&#34;&gt;public virtual string FormPagedFormat (int forumID)&lt;br /&gt;{&lt;br /&gt; return urlData.FormatUrl(&#34;forum_Paged&#34;, &#34;{0}&#34;, forumID.ToString(), forumID.ToString());&lt;br /&gt;}&lt;/div&gt;
-&lt;p&gt;接着ThreadView.cs内paer数据绑定处增加&lt;/p&gt;
-&lt;div class=&#34;codeDiv&#34;&gt;pager.UrlPattern = SiteUrls.Instance().FormPagedFormat(csContext.ForumID);&lt;br /&gt; &lt;/div&gt;
-&lt;p&gt;重新编译，OK，看看效果吧～～&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://www.3pub.com/bbs/3/default.aspx&#34;&gt;http://www.3pub.com/bbs/3/default.aspx&lt;/a&gt;&lt;/p&gt;              
-</description>
+      <guid>https://huobazi.aspxboy.com/blog/2005/10/07/cb-249806/</guid>
+      <description>你可能会发现在Communtiy Server的论坛帖子列表页面
+比如http://communityserver.org/forums/129/ShowForum.aspx
+看下面分页处的连接使用的地址是类似ShowForum.aspx?PageIndex=2这样的地址
+没有做到SearchFriendly,我们稍微改造一下代码就可以实现类似帖子显示页面内那样的地址
+先在siteUrl.config内增加
+ &amp;lt;url name=&#34;forum_Paged&#34;location = &#34;forums&#34;path = &#34;{0}/{1}/ShowForum.aspx&#34;pattern = &#34;(\d+)/(\d+)/ShowForum.aspx&#34;vanity=&#34;ShowForum.aspx?PageIndex=$1^ForumID=$2&#34;/&amp;gt;  然后siteUrl.cs内增加
+public virtual string FormPagedFormat (int forumID)
+{
+return urlData.FormatUrl(&#34;forum_Paged&#34;, &#34;{0}&#34;, forumID.ToString(), forumID.ToString());
+} 接着ThreadView.cs内paer数据绑定处增加
+pager.UrlPattern = SiteUrls.Instance().FormPagedFormat(csContext.ForumID);
+ 重新编译，OK，看看效果吧～～
+http://www.3pub.com/bbs/3/default.aspx</description>
     </item>
     
   </channel>

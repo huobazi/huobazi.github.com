@@ -1,32 +1,12 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>代码片段 &middot; 武眉博</title>
 
-    <meta name="description" content="Marble&#39;s blog">
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
 
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="huobazi" />
-    <meta name="twitter:title" content="代码片段 &middot; 武眉博">
-    <meta name="twitter:description" content="Marble&#39;s blog">
+    <link rel="stylesheet" href='https://huobazi.aspxboy.com/css/all.min.css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="代码片段 &middot; 武眉博">
-    <meta property="og:description" content="Marble&#39;s blog">
-
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    
-    <link href='http://fonts.useso.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
-    
-    
-        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
-    
-
-    <link rel="stylesheet" href="/css/all.min.css">
-    <link href="http://apps.bdimg.com/libs/fontawesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="alternate" type="application/rss+xml" title="武眉博" href='https://huobazi.aspxboy.com/index.xml' />
 </head>
 <body>
 
@@ -35,7 +15,7 @@
     <div class="sidebar pure-u-1 pure-u-md-1-4">
     <div class="header">
         <hgroup>
-            <h1 class="brand-title"><a href="http://huobazi.aspxboy.com/">武眉博</a></h1>
+            <h1 class="brand-title"><a href="https://huobazi.aspxboy.com">武眉博</a></h1>
             <h2 class="brand-tagline"> Marble&#39;s blog </h2>
         </hgroup>
 
@@ -43,35 +23,74 @@
             <ul class="nav-list">
                 
                 <li class="nav-item">
-                    <a class="pure-button" href="http://twitter.com/huobazi"><i class="fa fa-twitter"></i> Twitter</a>
+                    <a class="pure-button" href="https://twitter.com/huobazi">
+                        <i class="fa fa-twitter"></i> Twitter
+                    </a>
                 </li>
                 
                 
                 <li class="nav-item">
-                    <a class="pure-button" href="http://github.com/huobazi "><i class="fa fa-github-alt"></i> github</a>
+                    <a class="pure-button" href="https://github.com/huobazi">
+                        <i class="fa fa-github-alt"></i> Github
+                    </a>
                 </li>
                 
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://www.linkedin.com/in/huobazi">
+                        <i class="fa fa-linkedin"></i> LinkedIn
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="pure-button" href='https://huobazi.aspxboy.com/index.xml'>
+                        <i class="fa fa-rss"></i> rss
+                    </a>
+                </li>
             </ul>
         </nav>
     </div>
 </div>
+
 
     <div class="content pure-u-1 pure-u-md-3-4">
         <div>
             
             <div class="posts">
                 
-                <h1 class="content-subhead">05 Apr 2004</h1>
+                <h1 class="content-subhead">27 Apr 2004</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://huobazi.aspxboy.com/blog/2004/04/05/datagriddeleteconfirm/" class="post-title">DataGrid点击删除按钮弹出确认对话框一个好办法</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2004/04/27/filldatatoexceltemplate/" class="post-title">打开一个Excel模板文件填充数据另存为一个文件</a>
 
                         <p class="post-meta">
                             
                             
-                                
-                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a>
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>最近做的东西要求打开一个Excel文件模板后填充数据<br />开始用OleDb连接该Excel文件更新老是出错误 “需要一个可更新的.....“<br /><a href="http://expert.csdn.net/Expert/topic/2992/2992809.xml?temp=.4825403">http://expert.csdn.net/Expert/topic/2992/2992809.xml?temp=.4825403</a><br />如果是access这个错误多半是权限引起的 可是我做的是winform 权限是admin啊<br />未果<br />后来用ODBC测试了几个字段 都成功了<br />开始写程序 后发现就有那么2个单元格不听话 提示参数错误<br />郁闷<br /><a href="http://expert.csdn.net/Expert/topic/3000/3000113.xml?temp=.3331262">http://expert.csdn.net/Expert/topic/3000/3000113.xml?temp=.3331262</a><br />仍未果<br />没办法翻google<br />获得<br /><a href="http://www.c-sharpcorner.com/winforms/ExcelReadMG.asp">http://www.c-sharpcorner.com/winforms/ExcelReadMG.asp</a><br />用com组件，可行哦，今早上csdn就有网友pm我问是如何搞定的<br />那就写到这里，<br />以下是部分代码，使用前要先按上文中的说明添加Com引用<br />...........<br /><span style="background-color: #d3d3d3;">string strFileName = </span><a href="mailto:Environment.CurrentDirectory+@%22%5Ctemplate%5Ctemplate.tpl"><span style="background-color: #d3d3d3;">Environment.CurrentDirectory+@"\template\template.tpl</span></a><span style="background-color: #d3d3d3;">";<br />    string strSaveFileName = </span><a href="mailto:Environment.CurrentDirectory+@%22%5Cexcel%5C%22+System.DateTime.Now.ToString().Replace(%22:%22,%22%22).Replace(%22-%22,%22%22).Replace"><span style="background-color: #d3d3d3;">Environment.CurrentDirectory+@"\excel\"+System.DateTime.Now.ToString().Replace(":","").Replace("-","").Replace</span></a><span style="background-color: #d3d3d3;">(" ","")+@".xls";<br />    Excel.Application ThisApplication = new Excel.ApplicationClass();<br />    Excel.Workbook ThisWorkBook;<br />    object missing = System.Reflection.Missing.Value;<br />    try<br />    { <br />     //加载Excel模板文件<br />     ThisWorkBook = ThisApplication.Workbooks.Open(strFileName,missing,missing,missing,missing,missing,missing,missing,missing,missing,missing,missing,missing);<br />     Excel.Worksheet ThisSheet = (Excel.Worksheet)ThisWorkBook.Sheets[1];<br />     ThisSheet.Cells[7,1] = dtEnd.ToShortDateString();<br />     progressBar.Value = 30;<br />     ThisApplication.Visible = false;<br />     DataRow dr = dt.Rows[0];<br />     for( int i=0; i     {<br />      ThisSheet.Cells[7,i+2] = dr[i].ToString();<br />      progressBar.Value +=1;<br />     }<br />     //更新数据后另存为新文件<br />     ThisSheet.SaveAs(strSaveFileName,missing,missing,missing,missing,missing,missing,missing,missing);<br />    }<br />    catch{}<br />    finally<br />    {<br />     ThisApplication.Quit();<br />     ThisWorkBook = null;<br />     ThisApplication = null;<br />     //dt = null;<br />    }<br />    try<br />    { //打开刚才生成的Excel文件<br />     Excel.Workbook NewWorkBook;<br />     NewWorkBook = NewApplication.Workbooks.Open(strSaveFileName,missing,missing,missing,missing,missing,missing,missing,missing,missing,missing,missing,missing);<br />     Excel.Worksheet NewSheet = (Excel.Worksheet)NewWorkBook.Sheets[1];<br />     NewApplication.Visible = true;</span></p>
+<p>//也可以使用System.Diagnostics.Process.Start(strSaveFileName);来打开新文件</p>
+<p>    }</p>
+<p>打开Excel后进程内会多出一个excel进程<br />需要手工清理<br />参考这片文章</p>
+<p><a href="http://www.eggheadcafe.com/articles/20021012.asp">http://www.eggheadcafe.com/articles/20021012.asp</a></p>
+<p><a href="http://www.aspxboy.com/476/archive.aspx">http://www.aspxboy.com/476/archive.aspx</a></p>
+<p></p>             
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">05 Apr 2004</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2004/04/05/datagriddeleteconfirm/" class="post-title">DataGrid点击删除按钮弹出确认对话框一个好办法</a>
+
+                        <p class="post-meta">
+                            
                             
                         </p>
                     </header>
@@ -82,17 +101,126 @@
                     </div>
                 </section>
                 
-                <h1 class="content-subhead">23 Feb 2004</h1>
+                <h1 class="content-subhead">05 Apr 2004</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://huobazi.aspxboy.com/blog/2004/02/23/cb-1521/" class="post-title">用Asp.Net抓取web页面</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2004/04/05/datagridheadertextinitemdatabound/" class="post-title">如何在ItemDataBound内获得DataGrid的列名称HeaderText</a>
 
                         <p class="post-meta">
                             
                             
-                                
-                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a>
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>如果 AutoGenerateColumns=&ldquo;false&rdquo; 使用绑定列，模板列
+则比较好办，直接使用 YourDataGrid.Columns[编号].HeaderText 获得
+可是,如果 AutoGenerateColumns=&ldquo;true&rdquo; ,就比较麻烦了,因为这时YourDataGrid.Columns.Count是0
+但是可以变通做到。</p>
+
+<pre><code>&lt;%@ Page Language=&quot;C#&quot; Debug=&quot;true&quot; %&gt;
+&lt;%@ Import Namespace=&quot;System.Data&quot; %&gt;
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;gb2312&quot; lang=&quot;gb2312&quot;&gt;
+&lt;head&gt;
+&lt;title&gt; ItemDataBoundGetColumnName &lt;/title&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=gb2312&quot; /&gt;
+&lt;meta name=&quot;title&quot; content=&quot;&quot; /&gt;
+&lt;meta name=&quot;author&quot; content=&quot;活靶子,Huobazi,www.AspxBoy.com&quot; /&gt;
+&lt;meta name=&quot;subject&quot; content=&quot;&quot; /&gt;
+&lt;meta name=&quot;language&quot; content=&quot;gb2312&quot; /&gt;
+&lt;meta name=&quot;keywords&quot; content=&quot;&quot; /&gt;
+&lt;meta name=&quot;Copyright&quot; content=&quot;www.AspxBoy.com&quot; /&gt;
+&lt;meta name=&quot;robots&quot; content=&quot;all&quot; /&gt;
+&lt;script language=&quot;c#&quot; runat=&quot;server&quot;&gt;
+void BindGrid()
+{
+        DataTable dt = new DataTable();
+        DataRow dr;
+        dt.Columns.Add(new DataColumn(&quot;IntegerValue&quot;, typeof(Int32)));
+        dt.Columns.Add(new DataColumn(&quot;StringValue&quot;, typeof(string)));
+        dt.Columns.Add(new DataColumn(&quot;DateTimeValue&quot;, typeof(DateTime)));
+        dt.Columns.Add(new DataColumn(&quot;BoolValue&quot;, typeof(bool)));
+        dt.Columns.Add(new DataColumn(&quot;CurrencyValue&quot;, typeof(double)));
+        for (int i = 0; i &lt; 36; i++) {
+            dr = dt.NewRow();
+            dr[0] = i;
+            dr[1] = &quot;项 &quot; + i.ToString();
+            dr[2] = DateTime.Now;
+            dr[3] = (i % 2 != 0) ? true : false;
+            dr[4] = 1.23 * (i+1);
+            dt.Rows.Add(dr);
+        }
+  dg.DataSource= dt;
+  dg.DataBind();
+}
+void Page_Load(object o, EventArgs e)
+{
+     dg.PagerStyle.Mode = PagerMode.NumericPages;
+     if(!IsPostBack)
+     {
+        BindGrid();
+     }
+}
+ 
+void btnClick(object o , EventArgs e)
+{
+     Response.Write(&quot;页面回发,但是不执行ItemDataBound&quot;);
+}
+ 
+void PageChange(object o , DataGridPageChangedEventArgs e)
+{
+     dg.CurrentPageIndex = e.NewPageIndex;
+     BindGrid();
+}
+void ItemDataBound(object o , DataGridItemEventArgs e)
+{
+     if(e.Item.ItemIndex &gt; -1 )//必须
+     {
+          DataRowView drv = (DataRowView)e.Item.DataItem;
+          for (int i=0; i&lt;drv.Row.Table.Columns.Count ; i++)
+          {  
+            Response.Write(drv.Row.Table.Columns[i].ColumnName + &quot;  &quot;);
+          }
+     }
+}
+&lt;/script&gt;
+ 
+&lt;/head&gt;
+&lt;body&gt;
+&lt;form runat=&quot;server&quot;&gt;
+  &lt;ASP:DataGrid id=&quot;dg&quot; runat=&quot;server&quot;       
+   HeaderStyle-BackColor=&quot;#aaaadd&quot;
+   AutoGenerateColumns=&quot;true&quot;
+   AllowPaging=&quot;true&quot;
+   PageSize=&quot;6&quot;
+    OnItemDataBound=&quot;ItemDataBound&quot;
+    OnPageIndexChanged=&quot;PageChange&quot;
+  &gt;
+  &lt;/asp:DataGrid&gt;
+  &lt;/br&gt;
+   &lt;asp:button id=&quot;btn&quot; runat=&quot;server&quot; onclick=&quot;btnClick&quot; Text=&quot;我是按钮,按我一下&quot;&gt;&lt;/asp:button&gt;
+   &lt;p&gt;在AutoGenerateColumns=&quot;false&quot;使用绑定列或者模板列的时候只需要使用 &lt;/P&gt;
+   &lt;p&gt;&lt;font color=&quot;blut&quot;&gt;YourDataGrid.Columns[编号].HeaderText&lt;/font&gt; 去获取
+  &lt;/P&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+ 
+</code></pre>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">23 Feb 2004</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2004/02/23/cb-1521/" class="post-title">用Asp.Net抓取web页面</a>
+
+                        <p class="post-meta">
+                            
                             
                         </p>
                     </header>
@@ -110,13 +238,10 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://huobazi.aspxboy.com/blog/2004/02/04/whoisinaspdotnet/" class="post-title">域名Whois信息查询(ASP.NET&#43;C#)</a>
+                        <a href="https://huobazi.aspxboy.com/blog/2004/02/04/whoisinaspdotnet/" class="post-title">域名Whois信息查询(ASP.NET&#43;C#)</a>
 
                         <p class="post-meta">
                             
-                            
-                                
-                                <a class="post-category post-category-ASP.NET" href="http://huobazi.aspxboy.com//tags/asp.net">ASP.NET</a><a class="post-category post-category-Asp.net" href="http://huobazi.aspxboy.com//tags/asp.net">Asp.net</a><a class="post-category post-category-.Net其他" href="http://huobazi.aspxboy.com//tags/.net%E5%85%B6%E4%BB%96">.Net其他</a><a class="post-category post-category-代码片段" href="http://huobazi.aspxboy.com//tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">代码片段</a>
                             
                         </p>
                     </header>
@@ -135,7 +260,7 @@
 <div class="pagination">
   <nav role="pagination" class="post-list-pagination">
       
-      <a href="/tags/e4bba3e7a081e78987e6aeb5/page/2/" class="post-list-pagination-item pure-button post-list-pagination-item-prev">
+      <a href="/tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5/page/2/" class="post-list-pagination-item pure-button post-list-pagination-item-prev">
         <i class="fa fa-angle-double-left"></i>&nbsp;Newer
       </a>
       
@@ -148,11 +273,11 @@
             <div class="footer">
     <div class="pure-menu pure-menu-horizontal pure-menu-open">
         <ul>
-            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a> &nbsp;&nbsp; theme by <a target="_blank" href="https://github.com/dplesca/purehugo">purehugo</a></a></li>
+            <li>Powered by <a class="hugo" href="https://gohugo.io/" target="_blank">hugo</a></li>
         </ul>
     </div>
 </div>
-<script src="/js/all.min.js"></script>
+<script src='https://huobazi.aspxboy.com/js/all.min.js'></script>
 
         </div>
     </div>
