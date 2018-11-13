@@ -2,7 +2,7 @@ baseurl = "https://huobazi.aspxboy.com"
 languageCode = "zh-cn"
 title = "武眉博"
 theme = "purehugo"
-Paginate = 10
+Paginate = 12
 disqusShortname = "huobaziblog"
 disablePathToLower = false
 [permalinks]
