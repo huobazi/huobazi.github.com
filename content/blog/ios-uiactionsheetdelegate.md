@@ -7,6 +7,7 @@ tags:
 - 代码片段
 - iOS
 - iPhone
+- OC
 ---
 
 <p>有时候需要用户确认一些操作，比如退出，删除数据等等，用UIActionSheetDelegate实现比较友好，实现也很简单，controller实现UIActionSheetDelegate协议就可以了，示例如下:</p>
