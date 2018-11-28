@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on 武眉博</title>
+    <link>https://huobazi.aspxboy.com/tags/git/</link>
+    <description>Recent content in Git on 武眉博</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 28 Nov 2018 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://huobazi.aspxboy.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Git cherry-pick from another repository</title>
+      <link>https://huobazi.aspxboy.com/blog/2018/11/28/how-to-git-cherry-pick-from-another-repository/</link>
+      <pubDate>Wed, 28 Nov 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://huobazi.aspxboy.com/blog/2018/11/28/how-to-git-cherry-pick-from-another-repository/</guid>
+      <description>Git 从其他代码库合并 commit 到当前代码库.
+# Cloning your fork $ git clone git clone git@github.com:your/repo.git # Adding another repo that we want to cherry-pick $ git remote add another git://github.com/another/repo.git # Fetch their branches $ git fetch another # List their commits $ git log another/master # Cherry-pick the commit you need $ git cherry-pick 123abc # Pushing to your master $ git push origin master  </description>
+    </item>
+    
+  </channel>
+</rss>

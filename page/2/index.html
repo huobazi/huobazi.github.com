@@ -59,6 +59,33 @@
             
             <div class="posts">
                 
+                <h1 class="content-subhead">09 Dec 2011</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2011/12/09/ios-hide-keyboard-when-touch/" class="post-title">How to,在iOS中点击文本框以外区域，隐藏键盘</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                <a class="post-category post-category-闲言碎语" href='/tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD'>闲言碎语</a><a class="post-category post-category-代码片段" href='/tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5'>代码片段</a><a class="post-category post-category-iOS" href='/tags/ios'>iOS</a><a class="post-category post-category-iPhone" href='/tags/iphone'>iPhone</a><a class="post-category post-category-键盘" href='/tags/%E9%94%AE%E7%9B%98'>键盘</a><a class="post-category post-category-OC" href='/tags/oc'>OC</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>当点击文本框以外部分时，隐藏键盘，实现很简单，加个Category就可以了，代码如下：</p>
+<div class="source" style="font-family: '[object HTMLOptionElement]', Consolas, 'Lucida Console', 'Courier New'; color: #e6e1dc; background-color: #111111; ">
+<p><span style="color: #cc7833; font-style: italic; ">#import &lt;UIKit/UIKit.h&gt;</span><br /><span style="color: #cc7833; ">@interface</span> <span style="color: #e6e1dc; ">UITextField</span> <span style="color: #e6e1dc; ">(HideKeyBoard)</span><br /><span style="color: #e6e1dc; ">-</span>(<span style="color: #da4939; ">void</span>)<span style="color: #e6e1dc; ">hideKeyBoard:</span>(<span style="color: #e6e1dc; ">UIView</span> <span style="color: #e6e1dc; ">*</span>)<span style="color: #e6e1dc; ">view</span>;<br /><span style="color: #cc7833; ">@end</span></p>
+<p><span style="color: #cc7833; font-style: italic; ">#import "UITextField+HideKeyBoard.h"</span></p>
+<p><span style="color: #cc7833; ">@implementation</span> <span style="color: #e6e1dc; ">UITextField</span> <span style="color: #e6e1dc; ">(HideKeyBoard)</span><br /><span style="color: #e6e1dc; ">-</span> (<span style="color: #da4939; ">void</span>) <span style="color: #e6e1dc; ">hideKeyBoard:</span>(<span style="color: #e6e1dc; ">UIView</span><span style="color: #e6e1dc; ">*</span>)<span style="color: #e6e1dc; ">view</span><span style="color: #e6e1dc; ">{</span><br />    <span style="color: #e6e1dc; ">UITapGestureRecognizer</span> <span style="color: #e6e1dc; ">*</span><span style="color: #e6e1dc; ">tap</span> <span style="color: #e6e1dc; ">=</span> <span style="color: #e6e1dc; ">[[</span><span style="color: #e6e1dc; ">UITapGestureRecognizer</span> <span style="color: #e6e1dc; ">alloc</span><span style="color: #e6e1dc; ">]</span><br />                                   <span style="color: #e6e1dc; ">initWithTarget:</span><span style="color: #e6e1dc; ">self</span><br />                                   <span style="color: #e6e1dc; ">action:</span><span style="color: #cc7833; ">@selector</span>(<span style="color: #e6e1dc; ">doHideKeyBoard</span><span style="color: #e6e1dc; ">)];</span><br />   <br />    <span style="color: #e6e1dc; ">tap</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">numberOfTapsRequired</span> <span style="color: #e6e1dc; ">=</span> <span style="color: #a5c261; ">1</span>;<br />    <span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">view</span>  <span style="color: #e6e1dc; ">addGestureRecognizer:</span> <span style="color: #e6e1dc; ">tap</span><span style="color: #e6e1dc; ">];</span><br />    <span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">tap</span> <span style="color: #e6e1dc; ">setCancelsTouchesInView:</span><span style="color: #e6e1dc; ">NO</span><span style="color: #e6e1dc; ">];</span><br />    <span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">tap</span> <span style="color: #e6e1dc; ">release</span><span style="color: #e6e1dc; ">];</span><br /><span style="color: #e6e1dc; ">}</span></p>
+<p><span style="color: #e6e1dc; ">-</span> (<span style="color: #da4939; ">void</span>)<span style="color: #e6e1dc; ">doHideKeyBoard</span><span style="color: #e6e1dc; ">{</span><br />    <span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">self</span> <span style="color: #e6e1dc; ">resignFirstResponder</span><span style="color: #e6e1dc; ">];</span><br /><span style="color: #e6e1dc; ">}</span><br /><span style="color: #cc7833; ">@end</span></p>
+<p><span style="color: #e6e1dc; ">-</span> (<span style="color: #da4939; ">void</span>)<span style="color: #e6e1dc; ">viewDidLoad</span><br /><span style="color: #e6e1dc; ">{</span><br />    <span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">super</span> <span style="color: #e6e1dc; ">viewDidLoad</span><span style="color: #e6e1dc; ">];</span><br />    <span style="color: #bc9458; font-style: italic; ">// Do any additional setup after loading the view from its nib.</span><br />    <span style="color: #e6e1dc; ">[</span><span style="color: #e6e1dc; ">self</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">txtInput</span> <span style="color: #e6e1dc; ">hideKeyBoard:</span><span style="color: #e6e1dc; ">self</span><span style="color: #e6e1dc; ">.</span><span style="color: #e6e1dc; ">view</span><span style="color: #e6e1dc; ">];</span><br /><span style="color: #e6e1dc; ">}</span></p>
+</div>
+<p>see also: <a href="https://gist.github.com/1450404">https://gist.github.com/1450404</a></p>
+                    </div>
+                </section>
+                
                 <h1 class="content-subhead">28 Nov 2011</h1>
                 <section class="post">
                     <header class="post-header">
@@ -383,48 +410,6 @@
 <p>sudo gem install system_timer</p>
 <p>Magick::ImageMagickError (unable to read font `/usr/local/lib/ImageMagick-6.6.3/config//usr/share/fonts/type1/gsfonts/n019003l.pfb' @ error/annotate.c/RenderFreetype/1056: `(null)'):<br />错误</p>
 <p>wget http://sourceforge.net/projects/gs-fonts/files/gs-fonts/8.11%20%28base%2035%2C%20GPL%29/ghostscript-fonts-std-8.11.tar.gz/download<br /> tar -zxvf ghostscript-fonts-std-8.11.tar.gz<br />解压后拷贝到需要的目录</p>
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">02 Jun 2010</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="https://huobazi.aspxboy.com/blog/2010/06/02/google-js-framework-cdn/" class="post-title">Google 给几个Javascript Framework提供的CDN地址</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                <a class="post-category post-category-jQuery" href='/tags/jquery'>jQuery</a><a class="post-category post-category-Javascript" href='/tags/javascript'>Javascript</a><a class="post-category post-category-代码片段" href='/tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5'>代码片段</a><a class="post-category post-category-cdn" href='/tags/cdn'>cdn</a><a class="post-category post-category-googke" href='/tags/googke'>googke</a>
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p><p>Google 给几个Javascript Framework提供的CDN地址:</p>
-<p></p>
-
-<p></p>
-<h2>jquery</h2>
-<pre>&lt;script src=&ldquo;<a href="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js&quot;&gt;&lt;/script&gt;">http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js&quot;&gt;&lt;/script&gt;</a></pre>
-<h2>jquery UI</h2>
-<pre>&lt;script src=&ldquo;<a href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js&quot;&gt;&lt;/script&gt;">http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js&quot;&gt;&lt;/script&gt;</a></pre>
-<h2>Chrome Frame</h2>
-<pre>&lt;script src=&ldquo;<a href="http://ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js&quot;&gt;&lt;/script&gt;">http://ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js&quot;&gt;&lt;/script&gt;</a></pre>
-<h2>swfobject</h2>
-<pre>&lt;script src=&ldquo;<a href="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js&quot;&gt;&lt;/script&gt;">http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js&quot;&gt;&lt;/script&gt;</a></pre>
-<h2>mootools</h2>
-<pre>&lt;script src=&ldquo;<a href="http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools-yui-compressed.js&quot;&gt;&lt;/script&gt;">http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools-yui-compressed.js&quot;&gt;&lt;/script&gt;</a></pre>
-<h2>Yahoo! UI</h2>
-<pre>&lt;script src=&ldquo;<a href="http://ajax.googleapis.com/ajax/libs/yui/2.8.1/build/yuiloader/yuiloader-min.js&quot;&gt;&lt;/script&gt;">http://ajax.googleapis.com/ajax/libs/yui/2.8.1/build/yuiloader/yuiloader-min.js&quot;&gt;&lt;/script&gt;</a></pre>
-<h2>Prototype</h2>
-<pre>&lt;script src=&ldquo;<a href="http://ajax.googleapis.com/ajax/libs/prototype/1.6.1.0/prototype.js&quot;&gt;&lt;/script&gt;">http://ajax.googleapis.com/ajax/libs/prototype/1.6.1.0/prototype.js&quot;&gt;&lt;/script&gt;</a></pre>
-<h2>Ext.JS</h2>
-<pre>&lt;script src=&ldquo;<a href="http://ajax.googleapis.com/ajax/libs/ext-core/3.1.0/ext-core.js&quot;&gt;&lt;/script&gt;">http://ajax.googleapis.com/ajax/libs/ext-core/3.1.0/ext-core.js&quot;&gt;&lt;/script&gt;</a></pre>
-<h2>Dojo</h2>
-<pre>&lt;script src=&ldquo;<a href="http://ajax.googleapis.com/ajax/libs/dojo/1.4.3/dojo/dojo.xd.js&quot;&gt;&lt;/script&gt;">http://ajax.googleapis.com/ajax/libs/dojo/1.4.3/dojo/dojo.xd.js&quot;&gt;&lt;/script&gt;</a></pre>
-<h2>Scriptaculous</h2>
-<pre>&lt;script src=&ldquo;<a href="http://ajax.googleapis.com/ajax/libs/scriptaculous/1.8.3/scriptaculous.js&quot;&gt;&lt;/script&gt;">http://ajax.googleapis.com/ajax/libs/scriptaculous/1.8.3/scriptaculous.js&quot;&gt;&lt;/script&gt;</a></pre></p>
                     </div>
                 </section>
                 

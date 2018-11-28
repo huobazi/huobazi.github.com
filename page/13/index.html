@@ -59,6 +59,34 @@
             
             <div class="posts">
                 
+                <h1 class="content-subhead">29 Jun 2006</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2006/06/29/smartnavigationwasobsoletedtherecommendedalternativeispagemaintainscrollpositiononpostback/" class="post-title">还记得 Page.SmartNavigation 属性么，此属性已被否决。</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a><a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><span style="color: #ff0000;"><strong><span style="color: #000000;">还记得在.Net 1.x 中我们为了保持在页面回发后 保持滚动条位置的做法么？<br />Page.SmartNavigation 可以做到，但会带来这样那样的问题。<br />我们也曾经用这样那样的方法实现这个效果，如：</span></strong></span></p>
+<p><a href="http://huobazi.cnblogs.com/archive/2004/09/20/ScrollPage.aspx"><span style="color: #0000ff;">http://huobazi.cnblogs.com/archive/2004/09/20/ScrollPage.aspx</span></a><br /><a href="http://www.cnblogs.com/birdshome/archive/2004/12/13/76521.html"><span style="color: #0000ff;">http://www.cnblogs.com/birdshome/archive/2004/12/13/76521.html</span></a></p>
+<p><span style="color: #000000;">在.Net 2.0 中，该类型被描述为：<br /></span> <br /><span style="color: #000000;">[<span style="color: #0000ff;">ObsoleteAttribute</span>("The recommended alternative is Page.SetFocus and Page.MaintainScrollPositionOnPostBack. http://go.microsoft.com/fwlink/?linkid=14202")]<br /><span class="keyword">public</span> bool <span class="identifier">SmartNavigation</span> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</span></p>
+<p><br /><span style="color: #ff0000;"><strong>注意：此属性现在已过时。</strong></span></p>
+<p> </p>
+<p>获取或设置指示是否启用智能导航的值。</p>
+<p>同时在备注内有提到：</p>
+<p><strong>SmartNavigation</strong> 属性已被<strong>否决</strong>。请改用 <a href="ms-help://MS.VSCC.v80/MS.MSDN.v80/MS.NETDEVFX.v20.chs/cpref13/html/O_T_System_Web_UI_Page_SetFocus.htm"><span style="color: #002c99;">SetFocus</span></a> 方法和 <a href="ms-help://MS.VSCC.v80/MS.MSDN.v80/MS.NETDEVFX.v20.chs/cpref13/html/P_System_Web_UI_Page_MaintainScrollPositionOnPostBack.htm">MaintainScrollPositionOnPostback </a>属性。</p>
+<p>园子里<a href="http://birdshome.cnblogs.com/">birdshome</a> 也早有post了 <a id="viewpost1_TitleUrl" href="http://birdshome.cnblogs.com/archive/2005/06/20/177404.html"><strong><span style="color: #223355;">SmartNavigation在Fx2.0中下岗了</span></strong></a></p>              
+
+                    </div>
+                </section>
+                
                 <h1 class="content-subhead">25 May 2006</h1>
                 <section class="post">
                     <header class="post-header">
@@ -704,40 +732,6 @@ var ExpCollImgStr = ExpCollImgStr;
 <br />&lt;/html&gt;</span>
 </code><p><a href="http://www.aspxboy.com/Files/71/66/284.Aspx" target="_blank">http://www.aspxboy.com/Files/71/66/284.Aspx</a></p>
 <p> </p>                
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">24 Mar 2006</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="https://huobazi.aspxboy.com/blog/2006/03/24/cb-357546/" class="post-title">关于Data Access Blok (SqlHelper.cs)使用时出现</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a><a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a><a class="post-category post-category-代码片段" href='/tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5'>代码片段</a><a class="post-category post-category-SQL" href='/tags/sql'>SQL</a><a class="post-category post-category-Server" href='/tags/server'>Server</a>
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>关于Data Access Blok (SqlHelper.cs)使用时出现"对象必须实现 IConvertible/Object must implement IConvertible."异常</p>
-<p>在使用低版本 Data Access Blok  时，出现如下异常<br />“/”应用程序中的服务器错误。<br />--------------------------------------------------------------------------------</p>
-<p> </p>
-<p><span style="color: #0000ff;">对象必须实现 IConvertible。<br />说明: 执行当前 Web 请求期间，出现未处理的异常。请检查堆栈跟踪信息，以了解有关该错误以及代码中导致错误的出处的详细信息。 </span></p>
-<p> </p>
-<p><span style="color: #0000ff;">异常详细信息: System.InvalidCastException: 对象必须实现 IConvertible。</span></p>
-<p> </p>
-<p><span style="color: #0000ff;">源错误: </span></p>
-<p> <br /><span style="color: #0000ff;">行 360：   <br />行 361：   //finally, execute the command.<br />行 362：   int retval = cmd.ExecuteNonQuery();<br />行 363：   <br />行 364：   // detach the SqlParameters from the command object, so they can be used again.</span></p>
-<p> </p>
-<p>参考<a href="http://weblogs.asp.net/ssmith/archive/2003/08/19/24524.aspx#92222" target="_blank">http://weblogs.asp.net/ssmith/archive/2003/08/19/24524.aspx#92222</a><br />做修改<br />the simple fix is to change line 93 to read:<br />commandParameters[i].Value = ((SqlParameter)parameterValues[i]).Value;</p>
-<p> </p>
-<p>instead of:<br />commandParameters[i].Value = parameterValues[i];</p>
-<p> </p>
-<p>正常工作。</p>                
 
                     </div>
                 </section>

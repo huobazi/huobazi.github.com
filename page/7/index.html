@@ -59,6 +59,59 @@
             
             <div class="posts">
                 
+                <h1 class="content-subhead">21 Jul 2009</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2009/07/21/how-to-send-an-email-with-attachments/" class="post-title">Asp.Net发邮件，如何发送附件</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a><a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a><a class="post-category post-category-.Net其他" href='/tags/.net%E5%85%B6%E4%BB%96'>.Net其他</a><a class="post-category post-category-C#" href='/tags/c'>C#</a><a class="post-category post-category-代码片段" href='/tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5'>代码片段</a><a class="post-category post-category-邮件" href='/tags/%E9%82%AE%E4%BB%B6'>邮件</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p>使用如下代码可以发送附件</p>
+<pre>MailMessage mail = new MailMessage();
+mail.To = &rdquo;me@mycompany.com&rdquo;;
+mail.From = &rdquo;you@yourcompany.com&rdquo;;
+mail.Subject = &rdquo;this is a test email.&ldquo;;
+mail.Body = &rdquo;this is my test email body.&ldquo;;
+MailAttachment attachment = new MailAttachment( Server.MapPath( &rdquo;mailTest.txt&rdquo; ) ); //create the attachment
+mail.Attachments.Add( attachment );
+SmtpMail.SmtpServer = &rdquo;localhost&rdquo;; 
+SmtpMail.Send( mail );</pre>
+<p>使用如下代码可以在用户上传附件后发生邮件:</p>
+<p></p>
+
+<p></p>
+<pre>if  (FileUpload1.HasFile)
+{
+    string  toAddress  =  &rdquo;you@yourprovider.com&rdquo;;
+    string  fromAddress  =  you@yourprovider.com  (2);
+    string  mailServer  =  &rdquo;smtp.yourprovider.com&rdquo;;</p>
+
+<p>    MailMessage  myMailMessage  =  new  MailMessage();</p>
+
+<p>    myMailMessage.To.Add(toAddress);
+    myMailMessage.From  =  new  MailAddress(fromAddress);
+    myMailMessage.Subject  =  &rdquo;Test  Message&rdquo;;</p>
+
+<p>    string  fileName  =  Path.GetFileName(FileUpload1.PostedFile.FileName);
+    Attachment  myAttachment  =  
+                                  new  Attachment(FileUpload1.FileContent,  fileName);
+    myMailMessage.Attachments.Add(myAttachment);</p>
+
+<p>    SmtpClient  mySmtpClient  =  new  SmtpClient(mailServer);</p>
+
+<p>    mySmtpClient.Send(myMailMessage);
+}</pre></p>
+                    </div>
+                </section>
+                
                 <h1 class="content-subhead">18 Jul 2009</h1>
                 <section class="post">
                     <header class="post-header">
@@ -393,27 +446,6 @@ location / {
 <br /><p><a href="http://www.iansuttle.com/blog/post/ASPNET-MVC-Store-Routes-in-the-Database.aspx">http://www.iansuttle.com/blog/post/ASPNET-MVC-Store-Routes-in-the-Database.aspx</a></p>
 <br /><p>我觉得加上做webform时常用的PageAlias和BuildUrl会更好用些</p>               
 
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">01 Nov 2008</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="https://huobazi.aspxboy.com/blog/2008/11/01/hf/" class="post-title">哈佛经典案例，赶集卖猪记 </a>
-
-                        <p class="post-meta">
-                            
-                            
-                                <a class="post-category post-category-闲言碎语" href='/tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD'>闲言碎语</a><a class="post-category post-category-推荐阅读" href='/tags/%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB'>推荐阅读</a><a class="post-category post-category-它山之石" href='/tags/%E5%AE%83%E5%B1%B1%E4%B9%8B%E7%9F%B3'>它山之石</a><a class="post-category post-category-卖猪" href='/tags/%E5%8D%96%E7%8C%AA'>卖猪</a>
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>哈佛经典案例，赶集卖猪记（次贷危机加强篇）<br />　　<br />　　这是目前为止关于次贷危机最通俗易懂的版本了。<br />　　<br />　　1<br />　　<br />　　大家都知道这个案例：<br />　　<br />　　一男赶集卖猪，天黑遇雨，二十头猪未卖成，到一农家借宿。<br />　　<br />　　少妇说：家里只一人不便。<br />　</p>
-<p>　<br />　　男：求你了大妹子，给猪一头。<br />　　<br />　　女：好吧，但家只有一床。<br />　　<br />　　男：我也到床上睡，再给猪一头。<br />　　<br />　　女：同意。<br />　　<br />　　半夜男与女商量，我到你上面睡，女不肯。<br />　　<br />　　男：给猪两头。<br />　　<br />　　女允，要求上去不能动。<br />　　<br />　　少顷，男忍不住，央求动一下，女不肯。<br />　　<br />　　男：动一下给猪两头。女同意。<br />　　<br />　　男动了八次停下，女问为何不动？<br />　　<br />　　男说猪没了。<br />　　<br />　　女小声说：要不我给你猪……<br />　　<br />　　天亮后，男吹着口哨赶30头（含少妇家的10头）猪赶集去了……<br />　　<br />　　[ 哈佛导师评论 ]<br />　　<br />　　要发现用户潜在需求，前期必须引导，培养用户需求，因此产生的投入是符合发展规律的。<br />　　<br />　　2<br />　　<br />　　另一男得知此事，决意如法炮制，遂赶集卖猪，天黑遇雨，二十头猪未卖成，到一农家借宿<br />　　<br />　　少妇说：家里只一人不便。<br />　　<br />　　男：求你了大妹子，给猪一头<br />　　<br />　　女：好吧，但家只有一床。<br />　　<br />　　男：我也到床上睡，再给猪一头。<br />　　<br />　　女：同意。<br />　　<br />　　半夜男商女，我到你上面睡，女不肯。<br />　　<br />　　男：给猪两头。<br />　　<br />　　女允，要求上去不能动。<br />　　<br />　　少顷，男忍不住，央求动一下，女不肯。<br />　　<br />　　男：动一下给猪两头。女同意。<br />　　<br />　　男动了七次停下，女问为何不动？<br />　　<br />　　男说：完事了～～～女：......<br />　　<br />　　天亮后，男低著头赶2头猪赶集去了......<br />　　<br />　　[ 哈佛导师评论 ]<br />　　<br />　　要结合企业自身规模进行谨慎投资，谨防资金链断裂问题<br />　　<br />　　3<br />　　<br />　　又一男得知此事，决意如法炮制兼吸取教训，遂先用一头猪去换一粒伟哥，事必，天亮后，男吹着口哨赶38头（含少妇家的18头）猪赶集去了……<br />　　<br />　　[ 哈佛导师评论 ]<br />　　<br />　　企业如果获得金融资本的帮助，自身经营能力将得到倍增。<br />　　<br />　　4<br />　　<br />　　知道此法男多，伟哥供不应求，逐渐要2头，3头猪换一粒伟哥。<br />　　<br />　　[ 哈佛导师评论 ]<br />　　<br />　　这就是通货膨胀。<br />　　<br />　　5<br />　　<br />　　当伟哥价格涨到16头猪一颗的时候...<br />　　<br />　　[ 哈佛导师评论 ]<br />　　<br />　　该男已经进入边际成本，除了拥有对自身能力的自信和未来良好愿望以外，实际现猪流已经为零。<br />　　<br />　　6<br />　　<br />　　但换猪男越来越多，卖伟哥的决定，扩展生产能力，推出一种次级伟哥，如果你缺一头猪，只要你承诺可以到该女房中一夜，就可以先借，事成后补交猪款，这个方法大大促进了伟哥销售。<br />　　<br />　　[ 哈佛导师评论 ]<br />　　<br />　　这就是贷款，让企业可以根据未来的收益选择借支流动资金。<br />　　<br />　　7<br />　　<br />　　伟哥专卖店后来在即使你一头猪都没有，只要你承诺可以到该女房中一夜，就可以先借，事成后补交猪款。<br />　　<br />　　[ 哈佛导师评论 ]<br />　　<br />　　这就是金融创新，让现在的人花未来的钱，反正等你老了未来的钱你也花不动。<br />　　<br />　　8<br />　　<br />　　消息一出，换猪男越来越多，有人找伟哥专卖店，这个项目太好了，我们把它变成优质基金，对外销售债券，你们也就可以分享我的收益，如何？<br />　　<br />　　结果伟哥专卖店觉得甚好，于是该公司把换猪男分三类，一类是拿现猪换的，一类是一部分现猪贷的，一类是完全没有现猪借的，发行三种债券。大家踊跃而上。纷纷购买伟哥专卖店的债券，伟哥专卖店生意太好，就把债券销售外包给另外一家公司运作，该公司也一并大发其财，公司越做越大，甚至可以脱离实际伟哥销售情况来发行，给自己和伟哥专卖店带来巨大的现金收益。<br />　　<br />　　[ 哈佛导师评论 ]<br />　　<br />　　这就是专业的人做专业的事，从实体经营到资本运作，经济进入了更高的层次。<br />　　<br />　　9<br />　　<br />　　为了防止自己债券未来有损失，该公司决定给它买上保险，这样债券销售就更容易，因为一旦债券出现问题，还可以获得保险公司的赔付，哇，销售这下子太好了，保险公司也获得巨大平白无故的保险收入。<br />　　<br />　　[ 哈佛导师评论 ]<br />　　<br />　　这就是风险对冲，策略联盟，提高了企业的抗风险能力，也保护了消费者利益。<br />　　<br />　　10<br />　　<br />　　换猪男太多，排长队等待，该女无法承受，说老娘不干了，我搬家，一时间有无数拥有伟哥的欠猪男。<br />　　<br />　　[ 哈佛导师评论 ]<br />　　<br />　　这是个别现象，属于市场的正常波动，不会影响整个经济。<br />　　<br />　　11<br />　　<br />　　结果该女迟迟不肯搬回。一部分欠猪男没有收入，只好赖帐，结果大量债券到期无法换现猪吃，债券公司一看，一粒伟哥16头猪，这哪里还得起，宣布倒闭<br />　　<br />　　[ 哈佛导师评论 ]<br />　　<br />　　这是次贷危机，不会影响整个金融行业。<br />　　<br />　　12<br />　　<br />　　哪里晓得债券公司还把债券上了保险，保险公司一看，这哪里赔得起，于是也宣布要倒闭。<br />　　<br />　　[ 哈佛导师评论 ]<br />　　<br />　　这是金融危机，还不会影响整个实体经济。<br />　　<br />　　13<br />　　<br />　　后文：据说该女已搬到中国定居。</p>
-<p>from:http://topic.csdn.net/u/20081030/09/0A743CDE-0A1D-4824-975C-B6984D545C3E.html</p>
                     </div>
                 </section>
                 
