@@ -6,30 +6,10 @@
     <description>Recent content on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 28 Nov 2018 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 26 Nov 2012 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://huobazi.aspxboy.com/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Git cherry-pick from another repository</title>
-      <link>https://huobazi.aspxboy.com/blog/2018/11/28/how-to-git-cherry-pick-from-another-repository/</link>
-      <pubDate>Wed, 28 Nov 2018 00:00:00 +0800</pubDate>
-      
-      <guid>https://huobazi.aspxboy.com/blog/2018/11/28/how-to-git-cherry-pick-from-another-repository/</guid>
-      <description>Git 从其他代码库合并 commit 到当前代码库.
-# Cloning your fork $ git clone git clone git@github.com:your/repo.git # Adding another repo that we want to cherry-pick $ git remote add another git://github.com/another/repo.git # Fetch their branches $ git fetch another # List their commits $ git log another/master # Cherry-pick the commit you need $ git cherry-pick 123abc # Pushing to your master $ git push origin master  </description>
-    </item>
-    
-    <item>
-      <title>rails-api 做后端, vuejs 做前端, JWT 做验证, 前后端分离示例</title>
-      <link>https://huobazi.aspxboy.com/blog/2018/11/13/vuejs-with-rails-api-and-jwt-example/</link>
-      <pubDate>Tue, 13 Nov 2018 00:00:00 +0800</pubDate>
-      
-      <guid>https://huobazi.aspxboy.com/blog/2018/11/13/vuejs-with-rails-api-and-jwt-example/</guid>
-      <description>这是一个 rails-api 做后端, vuejs 做前端, JWT 做验证, 前后端分离示例.
-git clone https://github.com/huobazi/vuejs-with-rails-api-and-jwt-example.git  cd vuejs-with-rails-api-example/back-end bundle rails db:migrate rails s  cd vuejs-with-rails-api-example/front-end npm install npm run serve  </description>
-    </item>
     
     <item>
       <title>OSX 上默认 VIM 不支持 &#43; 寄存器</title>

@@ -59,55 +59,6 @@
             
             <div class="posts">
                 
-                <h1 class="content-subhead">29 Aug 2009</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="https://huobazi.aspxboy.com/blog/2009/08/29/mysql-adapter-on-rails-2-3-3/" class="post-title">Mysql adapter on Rails 2.3.3</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                <a class="post-category post-category-LAMP" href='/tags/lamp'>LAMP</a><a class="post-category post-category-Rails" href='/tags/rails'>Rails</a><a class="post-category post-category-奇技淫巧" href='/tags/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7'>奇技淫巧</a><a class="post-category post-category-Mysql" href='/tags/mysql'>Mysql</a><a class="post-category post-category-RoR" href='/tags/ror'>RoR</a>
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>安装好Ruby on Rails 2.3.3后，运行简单的页面提示如下错误“<span style="color: #ff0000;"><strong>The bundled mysql.rb driver has been removed from Rails 2.2. Please install the mysql gem and try again: gem install mysql”</strong></span></p>
-<p> gem 了n次也不成，搞了一早上，才google到一个比较山寨的方法解决</p>
-<pre>1.  download older MySQL client library, for example one from InstantRails: http://instantrails.rubyforge.org/svn/trunk/InstantRails-win/InstantRails/mysql/bin/libmySQL.dll
-
-2.  copy the downloaded file to C:\Ruby\bin (or wherever you installed Ruby) 
-
-3. restart MySQL server</pre>
-<p>另参考：<a href="http://www.ruby-forum.com/topic/160358">http://www.ruby-forum.com/topic/160358</a>和<a href="http://rdc.taobao.com/blog/qa/?p=523">http://rdc.taobao.com/blog/qa/?p=523</a></p>              
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">25 Aug 2009</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="https://huobazi.aspxboy.com/blog/2009/08/25/hwo-to-reset-palm-centro/" class="post-title">Palm Centro(690)的软启动和硬启动</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                <a class="post-category post-category-闲言碎语" href='/tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD'>闲言碎语</a><a class="post-category post-category-palm" href='/tags/palm'>palm</a><a class="post-category post-category-centro" href='/tags/centro'>centro</a>
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p><p>给老婆买了部centro，结果不知道如何软起和硬起，泡了半天吹友吧，得知如下</p>
-<pre>软启 下电池
-硬启 下电池后按住红色挂机件上电池 到PALM开机图不动后松开 按向上键</pre></p>
-
-                    </div>
-                </section>
-                
                 <h1 class="content-subhead">21 Aug 2009</h1>
                 <section class="post">
                     <header class="post-header">
@@ -488,6 +439,86 @@ pause
 <p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/11.jpg" alt=""></p>
 <p>MVP证书</p>
 <p><img src="http://huobazi.aspxboy.com/images/hbz_images/mvp/12.jpg" alt=""></p>
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">21 Jul 2009</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2009/07/21/how-to-send-an-email-with-attachments/" class="post-title">Asp.Net发邮件，如何发送附件</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a><a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a><a class="post-category post-category-.Net其他" href='/tags/.net%E5%85%B6%E4%BB%96'>.Net其他</a><a class="post-category post-category-C#" href='/tags/c'>C#</a><a class="post-category post-category-代码片段" href='/tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5'>代码片段</a><a class="post-category post-category-邮件" href='/tags/%E9%82%AE%E4%BB%B6'>邮件</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><p>使用如下代码可以发送附件</p>
+<pre>MailMessage mail = new MailMessage();
+mail.To = &rdquo;me@mycompany.com&rdquo;;
+mail.From = &rdquo;you@yourcompany.com&rdquo;;
+mail.Subject = &rdquo;this is a test email.&ldquo;;
+mail.Body = &rdquo;this is my test email body.&ldquo;;
+MailAttachment attachment = new MailAttachment( Server.MapPath( &rdquo;mailTest.txt&rdquo; ) ); //create the attachment
+mail.Attachments.Add( attachment );
+SmtpMail.SmtpServer = &rdquo;localhost&rdquo;; 
+SmtpMail.Send( mail );</pre>
+<p>使用如下代码可以在用户上传附件后发生邮件:</p>
+<p></p>
+
+<p></p>
+<pre>if  (FileUpload1.HasFile)
+{
+    string  toAddress  =  &rdquo;you@yourprovider.com&rdquo;;
+    string  fromAddress  =  you@yourprovider.com  (2);
+    string  mailServer  =  &rdquo;smtp.yourprovider.com&rdquo;;</p>
+
+<p>    MailMessage  myMailMessage  =  new  MailMessage();</p>
+
+<p>    myMailMessage.To.Add(toAddress);
+    myMailMessage.From  =  new  MailAddress(fromAddress);
+    myMailMessage.Subject  =  &rdquo;Test  Message&rdquo;;</p>
+
+<p>    string  fileName  =  Path.GetFileName(FileUpload1.PostedFile.FileName);
+    Attachment  myAttachment  =  
+                                  new  Attachment(FileUpload1.FileContent,  fileName);
+    myMailMessage.Attachments.Add(myAttachment);</p>
+
+<p>    SmtpClient  mySmtpClient  =  new  SmtpClient(mailServer);</p>
+
+<p>    mySmtpClient.Send(myMailMessage);
+}</pre></p>
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">18 Jul 2009</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2009/07/18/php-guid/" class="post-title">如何判断一个网站是不是php做的？</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                <a class="post-category post-category-LAMP" href='/tags/lamp'>LAMP</a><a class="post-category post-category-它山之石" href='/tags/%E5%AE%83%E5%B1%B1%E4%B9%8B%E7%9F%B3'>它山之石</a><a class="post-category post-category-奇技淫巧" href='/tags/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7'>奇技淫巧</a><a class="post-category post-category-PHP" href='/tags/php'>PHP</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>可以当作<strong>简易</strong>判断站点是否用PHP架设。</p>
+<p>PHP_LOGO_GUID<br /><a href="http://www.php.net/?=PHPE9568F34-D428-11d2-A769-00AA001ACF42">http://www.php.net/?=PHPE9568F34-D428-11d2-A769-00AA001ACF42</a></p>
+<p>PHP_EGG_LOGO_GUID<br /><a href="http://www.php.net/?=PHPE9568F36-D428-11d2-A769-00AA001ACF42">http://www.php.net/?=PHPE9568F36-D428-11d2-A769-00AA001ACF42</a></p>
+<p>ZEND_LOGO_GUID<br /><a href="http://www.php.net/?=PHPE9568F35-D428-11d2-A769-00AA001ACF42">http://www.php.net/?=PHPE9568F35-D428-11d2-A769-00AA001ACF42</a></p>
+<p>PHP_CREDITS_GUID<br /><a href="http://www.php.net/?=PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000">http://www.php.net/?=PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000</a></p>
+<p>喜欢看愚人节的那个Logo就是第二个链接罗<br /><a href="http://www.php.net/">http://www.php.net/</a> 这个网址只是范例，只要是任一PHP的站点即可。</p>
+<p>来源:<a href="http://www.google.cn/search?client=aff-os-worldbrowser&amp;forid=1&amp;ie=utf-8&amp;oe=UTF-8&amp;hl=zh-CN&amp;q=%E4%B8%80%E4%BA%9B%E5%86%85%E5%AE%9A%E7%9A%84PHP%E7%89%B9%E6%AE%8AGUID" target="_blank">http://www.google.cn/search?client=aff-os-worldbrowser&amp;forid=1&amp;ie=utf-8&amp;oe=UTF-8&amp;hl=zh-CN&amp;q=%E4%B8%80%E4%BA%9B%E5%86%85%E5%AE%9A%E7%9A%84PHP%E7%89%B9%E6%AE%8AGUID</a></p>
+<p> </p>                
+
                     </div>
                 </section>
                 

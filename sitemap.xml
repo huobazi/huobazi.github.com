@@ -3,16 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://huobazi.aspxboy.com/blog/2018/11/28/how-to-git-cherry-pick-from-another-repository/</loc>
-    <lastmod>2018-11-28T00:00:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://huobazi.aspxboy.com/blog/2018/11/13/vuejs-with-rails-api-and-jwt-example/</loc>
-    <lastmod>2018-11-13T00:00:00+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://huobazi.aspxboy.com/blog/2012/11/26/osx-shang-mo-ren-vim-bu-zhi-chi-plus-ji-cun-qi/</loc>
     <lastmod>2012-11-26T00:00:00+00:00</lastmod>
   </url>
@@ -1177,7 +1167,7 @@
   
   <url>
     <loc>https://huobazi.aspxboy.com/blog/</loc>
-    <lastmod>2018-11-28T00:00:00+08:00</lastmod>
+    <lastmod>2012-11-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1379,12 +1369,6 @@
   </url>
   
   <url>
-    <loc>https://huobazi.aspxboy.com/tags/git/</loc>
-    <lastmod>2018-11-28T00:00:00+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://huobazi.aspxboy.com/tags/gmail/</loc>
     <lastmod>2008-02-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -1549,12 +1533,6 @@
   <url>
     <loc>https://huobazi.aspxboy.com/tags/jquery/</loc>
     <lastmod>2010-06-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://huobazi.aspxboy.com/tags/jwt/</loc>
-    <lastmod>2018-11-13T00:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1842,13 +1820,7 @@
   
   <url>
     <loc>https://huobazi.aspxboy.com/tags/rails/</loc>
-    <lastmod>2018-11-13T00:00:00+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://huobazi.aspxboy.com/tags/rails-api/</loc>
-    <lastmod>2018-11-13T00:00:00+08:00</lastmod>
+    <lastmod>2012-08-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -2047,12 +2019,6 @@
   <url>
     <loc>https://huobazi.aspxboy.com/tags/visual-studio/</loc>
     <lastmod>2008-08-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://huobazi.aspxboy.com/tags/vuejs/</loc>
-    <lastmod>2018-11-13T00:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -2268,7 +2234,7 @@
   
   <url>
     <loc>https://huobazi.aspxboy.com/</loc>
-    <lastmod>2018-11-28T00:00:00+08:00</lastmod>
+    <lastmod>2012-11-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

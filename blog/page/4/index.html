@@ -59,79 +59,6 @@
             
             <div class="posts">
                 
-                <h1 class="content-subhead">21 Jan 2010</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="https://huobazi.aspxboy.com/blog/2010/01/21/window-location-href-ie-request-reffer/" class="post-title">使用window.location跳转，在IE中UrlReffer不被记录</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                
-                                    <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
-                                
-                                    <a class="post-category post-category-前端开发" href='/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91'>前端开发</a>
-                                
-                                    <a class="post-category post-category-Asp.net" href='/tags/asp.net'>Asp.net</a>
-                                
-                                    <a class="post-category post-category-Javascript" href='/tags/javascript'>Javascript</a>
-                                
-                                    <a class="post-category post-category-奇技淫巧" href='/tags/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7'>奇技淫巧</a>
-                                
-                                    <a class="post-category post-category-代码片段" href='/tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5'>代码片段</a>
-                                
-                                    <a class="post-category post-category-IE" href='/tags/ie'>IE</a>
-                                
-                                    <a class="post-category post-category-UrlReffer" href='/tags/urlreffer'>UrlReffer</a>
-                                
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>使用window.location跳转，在FF中，没问题，下一页面可以取得UrlReffer，但在IE中UrlReffer不被记录</p>
-<p>真变态，</p>
-<p>让我头痛了半天，弄了个丑陋的办法做了如下实现：</p>
-<div class="source" style="COLOR: #f6f3e8; FONT-FAMILY: '[object]','Consolas','Lucida Console','Courier New'; BACKGROUND-COLOR: #242424">
-<span style="COLOR: #8ac6f2">function</span> <span style="COLOR: #f6f3e8">safeRedirectToCart</span>(<span style="COLOR: #f6f3e8">url</span>) <span style="COLOR: #f6f3e8">{</span><br />    <span style="COLOR: #8ac6f2">var</span> <span style="COLOR: #f6f3e8">isIE</span> <span style="COLOR: #f6f3e8">=</span> <span style="COLOR: #f6f3e8">jQuery</span><span style="COLOR: #f6f3e8">.</span><span style="COLOR: #f6f3e8">browser</span><span style="COLOR: #f6f3e8">.</span><span style="COLOR: #f6f3e8">msie</span>;<br />    <span style="COLOR: #8ac6f2">if</span> (<span style="COLOR: #f6f3e8">!</span><span style="COLOR: #f6f3e8">isIE</span>) <span style="COLOR: #f6f3e8">{</span><br />        <span style="COLOR: #f6f3e8">window</span><span style="COLOR: #f6f3e8">.</span><span style="COLOR: #f6f3e8">location</span> <span style="COLOR: #f6f3e8">=</span> <span style="COLOR: #f6f3e8">url</span>;<br />        <span style="COLOR: #8ac6f2">return</span>;<br />    <span style="COLOR: #f6f3e8">}</span><br />    <span style="COLOR: #f6f3e8">$</span>(<span style="COLOR: #95e454; FONT-STYLE: italic">".btnCart"</span><span style="COLOR: #f6f3e8">).</span><span style="COLOR: #f6f3e8">get</span>(<span style="COLOR: #e5786d">0</span><span style="COLOR: #f6f3e8">).</span><span style="COLOR: #f6f3e8">click</span>();<br /><span style="COLOR: #f6f3e8">}</span>
-</div>
-<p>说明：在页面上render一个连接(可以用样式表控制不显示），判断如果是IE浏览器然则调用其click，嘿嘿，就这个。</p>
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">15 Jan 2010</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="https://huobazi.aspxboy.com/blog/2010/01/15/rails-mysqlerror-query-not-connected/" class="post-title">rails里Mysql::Error: query: not connected</a>
-
-                        <p class="post-meta">
-                            
-                            
-                                
-                                    <a class="post-category post-category-LAMP" href='/tags/lamp'>LAMP</a>
-                                
-                                    <a class="post-category post-category-闲言碎语" href='/tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD'>闲言碎语</a>
-                                
-                                    <a class="post-category post-category-Rails" href='/tags/rails'>Rails</a>
-                                
-                                    <a class="post-category post-category-Mysql" href='/tags/mysql'>Mysql</a>
-                                
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>从ubuntu换回了win7后又慢慢开始折腾以前在本本上跑的一些LAMP网站， php和 mysql还是用以前的xampp里的，仍然可以用。</p>
-<p>重装了 ruby 1.8.6, rails 2.3.5 等...发现运行rails网站，弹出messagebox提示找不到libmysql.dll尝试把mysql/bin里的dll来regsvr32，不可，直接拷贝到system32目录下错误没了，但打开网站仍然报错，终端显示“Mysql::Error: query: not connected...."</p>
-<p>google来了结果</p>
-<p><a href="http://topic.csdn.net/u/20090823/12/2775f2e7-a73a-45b3-a047-5ed9330871cd.html" target="_blank">http://topic.csdn.net/u/20090823/12/2775f2e7-a73a-45b3-a047-5ed9330871cd.html</a></p>
-<p><a href="http://xiaolife.com/wordpress/rails-2-3-dbmigrate-issue-with-mysql-5-1-3/" target="_blank">http://xiaolife.com/wordpress/rails-2-3-dbmigrate-issue-with-mysql-5-1-3/</a></p>
-<p>猛然间想起来这些个问题上次玩的时候也出现过，真晕，还是写下来，希望SY一遍胜过脑子记忆千遍吧</p>
-                    </div>
-                </section>
-                
                 <h1 class="content-subhead">14 Jan 2010</h1>
                 <section class="post">
                     <header class="post-header">
@@ -374,6 +301,67 @@
                     <div class="post-description">
                         <p>web qq速度很快，很多图标处理的也很漂亮，偷偷看了一下sprite的图片，所有图标都在这个图里了20多k，性能压倒一切啊。</p>
 <p><img src="http://web.qq.com/images/icon.gif" alt="webQQ CSS Sprite" width="560" height="1000"></p>
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">27 Oct 2009</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2009/10/27/kissy-editor/" class="post-title">在线编辑器的一个新选择。</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                
+                                    <a class="post-category post-category-ASP.NET" href='/tags/asp.net'>ASP.NET</a>
+                                
+                                    <a class="post-category post-category-前端开发" href='/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91'>前端开发</a>
+                                
+                                    <a class="post-category post-category-推荐阅读" href='/tags/%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB'>推荐阅读</a>
+                                
+                                    <a class="post-category post-category-FckEditor" href='/tags/fckeditor'>FckEditor</a>
+                                
+                                    <a class="post-category post-category-kissy-editor" href='/tags/kissy-editor'>kissy-editor</a>
+                                
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>今天<a title="http://lifesinger.org/" href="http://lifesinger.org/" target="_blank">lifesinger</a>发布了<a title="kiss editor" href="http://lifesinger.org/blog/2009/10/kissy-editor/" target="_blank">淘宝编辑器</a>,</p>
+<p>可以在这里看到<a href="http://kissy.googlecode.com/svn/trunk/src/editor/demo/basic.html" target="_blank">演示</a></p>
+<p>介绍可以看这里，<a href="http://lifesinger.org/blog/2009/10/kissy-editor/">http://lifesinger.org/blog/2009/10/kissy-editor/</a></p>              
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">20 Oct 2009</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://huobazi.aspxboy.com/blog/2009/10/20/342/" class="post-title">Wordpress真的不错</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                
+                                    <a class="post-category post-category-闲言碎语" href='/tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD'>闲言碎语</a>
+                                
+                                    <a class="post-category post-category-Wordpress" href='/tags/wordpress'>Wordpress</a>
+                                
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>另外一个博客，用的wp，自动升级使用了一下，很不错，速度很快<br />Upgrade WordPress<br />Downloading update from <a href="http://wordpress.org/wordpress-2.8.4.zip">http://wordpress.org/wordpress-2.8.4.zip</a>.</p>
+<p>Unpacking the update.</p>
+<p>Verifying the unpacked files</p>
+<p>Installing the latest version</p>
+<p>Upgrading database</p>
+<p>WordPress upgraded successfully</p>              
+
                     </div>
                 </section>
                 
