@@ -1,10 +1,12 @@
 #!/bin/bash
 
+# If a command fails then the deploy stops
+set -e
+
 echo -e "\033[0;32mBuilding...\033[0m"
 
 # Build the project.
 hugo
-
 
 echo -e "\033[0;32mDeploying source updates to GitHub...\033[0m"
 
@@ -12,7 +14,7 @@ echo -e "\033[0;32mDeploying source updates to GitHub...\033[0m"
 git add -A
 
 # Commit changes.
-msg="Site source updated at `date`"
+msg="huobazi.github.com source updated at `date`"
 if [ $# -eq 1 ]
   then msg="$1"
 fi
@@ -29,7 +31,7 @@ cd themes/purehugo/
 git add -A
 
 # Commit changes.
-msg="Site source updated at `date`"
+msg="huobazi.github.com themes/purehugo source updated at `date`"
 if [ $# -eq 1 ]
   then msg="$1"
 fi
@@ -48,7 +50,7 @@ cd public
 git add -A
 
 # Commit changes.
-msg="Site updated at `date`"
+msg="huobazi.github.com site rebuilding at `date`"
 if [ $# -eq 1 ]
   then msg="$1"
 fi
