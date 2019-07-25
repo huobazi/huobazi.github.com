@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# If a command fails then the deploy stops
-set -e
-
 echo -e "\033[0;32mBuilding...\033[0m"
 
 # Build the project.
