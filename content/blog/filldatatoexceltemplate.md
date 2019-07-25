@@ -16,5 +16,5 @@ tags:
 <p>    }</p>
 <p>打开Excel后进程内会多出一个excel进程<br />需要手工清理<br />参考这片文章</p>
 <p><a href="http://www.eggheadcafe.com/articles/20021012.asp">http://www.eggheadcafe.com/articles/20021012.asp</a></p>
-<p><a href="http://www.aspxboy.com/476/archive.aspx">http://www.aspxboy.com/476/archive.aspx</a></p>
+<p><a href="http://www.github.com/476/archive.aspx">http://www.github.com/476/archive.aspx</a></p>
 <p></p>				

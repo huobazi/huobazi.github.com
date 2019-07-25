@@ -28,4 +28,4 @@ location / {
         }
     }
 </pre>
-<p>同时感谢<a class="titlink" title="Atrhis的空间 http://hi.baidu.com/3322" href="http://huobazi.aspxboy.com/3322">Atlantis</a>  :-)</p>				
+<p>同时感谢<a class="titlink" title="Atrhis的空间 http://hi.baidu.com/3322" href="http://huobazi.github.com/3322">Atlantis</a>  :-)</p>				

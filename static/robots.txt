@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: http://huobazi.aspxboy.com/sitemap.xml
+Sitemap: http://huobazi.github.com/sitemap.xml

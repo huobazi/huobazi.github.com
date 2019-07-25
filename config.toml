@@ -1,4 +1,4 @@
-baseurl = "https://huobazi.aspxboy.com"
+baseurl = "https://huobazi.github.com"
 languageCode = "zh-cn"
 title = "武眉博"
 theme = "purehugo"

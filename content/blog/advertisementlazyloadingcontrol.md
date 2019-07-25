@@ -19,7 +19,7 @@ tags:
 ```
 	//------------------------------------------------------------------------------
 	//
-	// Copyright (c) www.AspxBoy.com All rights reserved.
+	// Copyright (c) www.github.com All rights reserved.
 	//
 	//------------------------------------------------------------------------------
 	namespace HBZ.Ads.Controls

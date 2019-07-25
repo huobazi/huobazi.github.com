@@ -8,4 +8,4 @@ tags:
 ---
 
 <p>Office 2010 正在下载中，午饭时就可以装了...</p>
-<p><img src="http://huobazi.aspxboy.com/images/hbz_images/office10download.png" alt="office 10 download" width="588" height="491"></p>				
+<p><img src="http://huobazi.github.com/images/hbz_images/office10download.png" alt="office 10 download" width="588" height="491"></p>				

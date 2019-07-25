@@ -20,7 +20,7 @@ tags:
 <p><span style="font-family: Courier New;">作者：武眉博&lt;活靶子.NET&gt;</span></p>
 <p>同时首发于：</p>
 <p>    <a href="http://www.im286.com/" target="_blank"><span style="color: #0066aa; font-family: Courier New;">落伍者</span></a><span style="font-family: Courier New;">   &amp;&amp; </span><a href="http://www.cnblogs.com/" target="_blank"><span style="color: #0066aa; font-family: Courier New;">博客园</span></a><span style="font-family: Courier New;">  </span></p>
-<p>    <a href="http://www.devedu.com/" target="_blank"><span style="color: #0066aa; font-family: Courier New;">开发者学院</span></a><span style="font-family: Courier New;">   &amp;&amp; </span><a href="http://www.aspxboy.com/" target="_blank"><span style="color: #0066aa; font-family: Courier New;">.Net男孩社区</span></a></p>
+<p>    <a href="http://www.devedu.com/" target="_blank"><span style="color: #0066aa; font-family: Courier New;">开发者学院</span></a><span style="font-family: Courier New;">   &amp;&amp; </span><a href="http://www.github.com/" target="_blank"><span style="color: #0066aa; font-family: Courier New;">.Net男孩社区</span></a></p>
 <p>知识点：<strong>UrlRewrite</strong>、 <strong>IHttpModule</strong>、 <strong>IHttpHander </strong>的编写</p>
 <p>效果：</p>
 <p><a href="http://www.devedu.com/Doc/DotNet/AspNet/default.2.aspx">http://www.devedu.com/Doc/DotNet/AspNet/default.2.aspx</a></p>

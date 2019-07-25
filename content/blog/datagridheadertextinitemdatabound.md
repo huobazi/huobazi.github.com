@@ -23,11 +23,11 @@ tags:
 <title> ItemDataBoundGetColumnName </title>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
 <meta name="title" content="" />
-<meta name="author" content="活靶子,Huobazi,www.AspxBoy.com" />
+<meta name="author" content="活靶子,Huobazi,www.github.com" />
 <meta name="subject" content="" />
 <meta name="language" content="gb2312" />
 <meta name="keywords" content="" />
-<meta name="Copyright" content="www.AspxBoy.com" />
+<meta name="Copyright" content="www.github.com" />
 <meta name="robots" content="all" />
 <script language="c#" runat="server">
 void BindGrid()

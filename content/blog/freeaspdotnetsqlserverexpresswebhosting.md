@@ -31,5 +31,5 @@ tags:
 <font color="#ff0000">2 GB monthly data transfer. </font><br />
 </li>
 <li>
-<font color="#ff0000">Your own </font><font color="#ff0000">domain name</font><font color="#ff0000">.</font><font color="#000000"> </font> <br /><p>详细描述参考下面的页面：<br /><a href="http://www.aspxboy.com/private/5271/default.aspx" target="_blank"><font face="Tahoma" color="#0000ff" size="4">http://www.aspxboy.com/private/5271/default.aspx</font></a></p>
+<font color="#ff0000">Your own </font><font color="#ff0000">domain name</font><font color="#ff0000">.</font><font color="#000000"> </font> <br /><p>详细描述参考下面的页面：<br /><a href="http://www.github.com/private/5271/default.aspx" target="_blank"><font face="Tahoma" color="#0000ff" size="4">http://www.github.com/private/5271/default.aspx</font></a></p>
 </li>				
