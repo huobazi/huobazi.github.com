@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # If a command fails then the deploy stops
-set -e
+# set -e
 
 echo -e "\033[0;32mBuilding...\033[0m"
 
@@ -23,7 +23,7 @@ git commit -m "$msg"
 # Push source and build repos.
 git push origin hugo
 
-echo -e "\033[0;32mDeploying themes  to GitHub...\033[0m"
+echo -e "\033[0;32mDeploying themes updates to GitHub...\033[0m"
 
 cd themes/purehugo/
 
@@ -42,7 +42,7 @@ git push origin master
 
 cd ../../
 
-echo -e "\033[0;32mDeploying site to GitHub...\033[0m"
+echo -e "\033[0;32mDeploying site updates to GitHub...\033[0m"
 
 # Go To Public folder
 cd public
