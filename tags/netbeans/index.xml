@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Netbeans on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/netbeans/</link>
+    <link>https://huobazi.github.com/tags/netbeans/</link>
     <description>Recent content in Netbeans on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 07 Jan 2010 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/netbeans/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/netbeans/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>把你的netbeans变成英文版</title>
-      <link>https://huobazi.aspxboy.com/blog/2010/01/07/349/</link>
+      <link>https://huobazi.github.com/blog/2010/01/07/349/</link>
       <pubDate>Thu, 07 Jan 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2010/01/07/349/</guid>
+      <guid>https://huobazi.github.com/blog/2010/01/07/349/</guid>
       <description>呵呵其实很简单，装完后再你使用的快捷方式内增加
 --locale en:us就可以了，比如我的快捷方式里的设置为：
 &#34;D:\Program Files\NetBeans 6.8\bin\netbeans.exe&#34; --locale en:us
@@ -26,10 +26,10 @@ ok 英文了.
     
     <item>
       <title>调整netbeans6.5设置使之默认使用utf-8存储文件</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/08/19/netbeans-utf8-settings/</link>
+      <link>https://huobazi.github.com/blog/2009/08/19/netbeans-utf8-settings/</link>
       <pubDate>Wed, 19 Aug 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/08/19/netbeans-utf8-settings/</guid>
+      <guid>https://huobazi.github.com/blog/2009/08/19/netbeans-utf8-settings/</guid>
       <description>&lt;p&gt;&lt;p&gt;netbeans默认使用ANSI存储的，我们一般希望它采用utf-8来存储，按照如下方法可以实现这个要求&lt;/p&gt;
 &lt;p&gt;1)  找到你的Netbeans安装目录下的etc文件夹,如D:\Program Files\NetBeans 6.5\etc&lt;br /&gt;2)  用文本编辑器打开netbeans.conf&lt;br /&gt;3)  找到netbeans_default_options这一句(注意#号开头的行的是注释)&lt;br /&gt;4)  在最后面加上一个空格,再加入-J-Dfile.encoding=UTF-8&lt;/p&gt;
 &lt;p&gt;如我现在的设置:&lt;/p&gt;

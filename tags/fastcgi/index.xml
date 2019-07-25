@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Fastcgi on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/fastcgi/</link>
+    <link>https://huobazi.github.com/tags/fastcgi/</link>
     <description>Recent content in Fastcgi on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 01 Jan 2011 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/fastcgi/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/fastcgi/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>在ubuntu上配置 nginx和php&#43;fastcgi</title>
-      <link>https://huobazi.aspxboy.com/blog/2011/01/01/ubuntu-nginx-php-fastcgi/</link>
+      <link>https://huobazi.github.com/blog/2011/01/01/ubuntu-nginx-php-fastcgi/</link>
       <pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2011/01/01/ubuntu-nginx-php-fastcgi/</guid>
+      <guid>https://huobazi.github.com/blog/2011/01/01/ubuntu-nginx-php-fastcgi/</guid>
       <description>&lt;p&gt;(1)安装php5&lt;br /&gt;apt-get install php5 php-pear php5-cli php5-common php5-xcache php5-cgi php5-mysql php5-curl  php5-gd  php5-imagick  php5-xmlrpc  php5-dev php5-memcache&lt;br /&gt;(2)安装nginx&lt;br /&gt;apt-get install nginx&lt;br /&gt;(3)安装spawn-fcgi&lt;br /&gt; apt-get install spawn-fcgi&lt;br /&gt;(4)设置，也是最头疼滴地方哦&lt;/p&gt;</description>
     </item>
     

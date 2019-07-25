@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>代码片段 on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5/</link>
+    <link>https://huobazi.github.com/tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5/</link>
     <description>Recent content in 代码片段 on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 25 Feb 2012 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>华为HG232破解一例</title>
-      <link>https://huobazi.aspxboy.com/blog/2012/02/25/hg232/</link>
+      <link>https://huobazi.github.com/blog/2012/02/25/hg232/</link>
       <pubDate>Sat, 25 Feb 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2012/02/25/hg232/</guid>
+      <guid>https://huobazi.github.com/blog/2012/02/25/hg232/</guid>
       <description>0. 默认超级账户 如果电信没有改过你的猫账户，可以尝试使用下面的信息登陆，如果不可以在进入后面的步骤1和2破解 帐号： telecomadmin 密码：nE7jA%5m (注意大小写)
 1. 下载配置文件 猫上插入U盘，下面两种方法都可以，您挑一种吧。
 1.1 手工操作&amp;mdash;-乐趣 用猫后面印刷的普通用户useradmin登陆，这个用户登陆进去什么高级全选都木有，但是表着急，我这么干的，浏览器用firefox，如果木有就去下载，然后装上firebug，去看隐藏的html元素吧，把样式表的disply:none;都禁止掉，什么 备份配置文件、启动从U盘加载配置、回复出厂值、日志等等都出来了吧，插入U盘，点击备份按钮，文件就下载下来了。
@@ -33,20 +33,20 @@ itv 不选择 无线的话 要选VLAN透传，选无线是VLAN修改
     
     <item>
       <title>iOS通过UIActionSheetDelegate来实现警告的方法</title>
-      <link>https://huobazi.aspxboy.com/blog/2012/02/13/ios-uiactionsheetdelegate/</link>
+      <link>https://huobazi.github.com/blog/2012/02/13/ios-uiactionsheetdelegate/</link>
       <pubDate>Mon, 13 Feb 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2012/02/13/ios-uiactionsheetdelegate/</guid>
+      <guid>https://huobazi.github.com/blog/2012/02/13/ios-uiactionsheetdelegate/</guid>
       <description>&lt;p&gt;&lt;p&gt;有时候需要用户确认一些操作，比如退出，删除数据等等，用UIActionSheetDelegate实现比较友好，实现也很简单，controller实现UIActionSheetDelegate协议就可以了，示例如下:&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Ubuntu下设置 Sublime Text 2 显示中文 &amp;&amp; 输入中文</title>
-      <link>https://huobazi.aspxboy.com/blog/2012/02/04/ubuntu-sublime-text-chinese/</link>
+      <link>https://huobazi.github.com/blog/2012/02/04/ubuntu-sublime-text-chinese/</link>
       <pubDate>Sat, 04 Feb 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2012/02/04/ubuntu-sublime-text-chinese/</guid>
+      <guid>https://huobazi.github.com/blog/2012/02/04/ubuntu-sublime-text-chinese/</guid>
       <description>&lt;p&gt;Sublime text 2在mac os 下用的很舒服，今天尝试在ubuntu下使用一下，发现汉字显示不了，&lt;/p&gt;
 &lt;p&gt;后来找到方法：&lt;/p&gt;
 &lt;p&gt;菜单栏 -&amp;gt; Preferences -&amp;gt; File Settings - User，在配置文件中增加：&lt;/p&gt;</description>
@@ -54,48 +54,48 @@ itv 不选择 无线的话 要选VLAN透传，选无线是VLAN修改
     
     <item>
       <title>How to,在iOS中点击文本框以外区域，隐藏键盘</title>
-      <link>https://huobazi.aspxboy.com/blog/2011/12/09/ios-hide-keyboard-when-touch/</link>
+      <link>https://huobazi.github.com/blog/2011/12/09/ios-hide-keyboard-when-touch/</link>
       <pubDate>Fri, 09 Dec 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2011/12/09/ios-hide-keyboard-when-touch/</guid>
+      <guid>https://huobazi.github.com/blog/2011/12/09/ios-hide-keyboard-when-touch/</guid>
       <description>&lt;p&gt;当点击文本框以外部分时，隐藏键盘，实现很简单，加个Category就可以了，代码如下：&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>AutoGenerateColumns=&#39;true&#39;的GridView如何支持htmlencode/htmldecode</title>
-      <link>https://huobazi.aspxboy.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/</link>
+      <link>https://huobazi.github.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/</link>
       <pubDate>Wed, 09 Nov 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/</guid>
+      <guid>https://huobazi.github.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/</guid>
       <description>&lt;p&gt;&lt;p&gt;我们知道BoundField.HtmlEncode 属性可以设置一个单元格是否能够htmlencode，我今天碰到的问题是：自动生成列的GridView，表头可能是包含html的比如&amp;lt;font color=red&amp;gt;邮件&amp;lt;/font&amp;gt;，默认被htmlencode了，而我不希望这样做，所以有了如下的代码:&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>在Console下输入密码，以星号代替。</title>
-      <link>https://huobazi.aspxboy.com/blog/2011/06/22/password-masking-in-csharp-console-application/</link>
+      <link>https://huobazi.github.com/blog/2011/06/22/password-masking-in-csharp-console-application/</link>
       <pubDate>Wed, 22 Jun 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2011/06/22/password-masking-in-csharp-console-application/</guid>
+      <guid>https://huobazi.github.com/blog/2011/06/22/password-masking-in-csharp-console-application/</guid>
       <description>&lt;p&gt;如何在Console下输入密码，像*unix系统下那样不显示，或者显示星号，如下代码经过测试：&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Google 给几个Javascript Framework提供的CDN地址</title>
-      <link>https://huobazi.aspxboy.com/blog/2010/06/02/google-js-framework-cdn/</link>
+      <link>https://huobazi.github.com/blog/2010/06/02/google-js-framework-cdn/</link>
       <pubDate>Wed, 02 Jun 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2010/06/02/google-js-framework-cdn/</guid>
+      <guid>https://huobazi.github.com/blog/2010/06/02/google-js-framework-cdn/</guid>
       <description>&lt;p&gt;&lt;p&gt;Google 给几个Javascript Framework提供的CDN地址:&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>使用window.location跳转，在IE中UrlReffer不被记录</title>
-      <link>https://huobazi.aspxboy.com/blog/2010/01/21/window-location-href-ie-request-reffer/</link>
+      <link>https://huobazi.github.com/blog/2010/01/21/window-location-href-ie-request-reffer/</link>
       <pubDate>Thu, 21 Jan 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2010/01/21/window-location-href-ie-request-reffer/</guid>
+      <guid>https://huobazi.github.com/blog/2010/01/21/window-location-href-ie-request-reffer/</guid>
       <description>&lt;p&gt;使用window.location跳转，在FF中，没问题，下一页面可以取得UrlReffer，但在IE中UrlReffer不被记录&lt;/p&gt;
 &lt;p&gt;真变态，&lt;/p&gt;
 &lt;p&gt;让我头痛了半天，弄了个丑陋的办法做了如下实现：&lt;/p&gt;</description>
@@ -103,20 +103,20 @@ itv 不选择 无线的话 要选VLAN透传，选无线是VLAN修改
     
     <item>
       <title>使用SQL语句更改数据表的默认值</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/12/09/chang-sql-table-field-default/</link>
+      <link>https://huobazi.github.com/blog/2009/12/09/chang-sql-table-field-default/</link>
       <pubDate>Wed, 09 Dec 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/12/09/chang-sql-table-field-default/</guid>
+      <guid>https://huobazi.github.com/blog/2009/12/09/chang-sql-table-field-default/</guid>
       <description>&lt;p&gt;&lt;p&gt;以前还真没这么干过，都是手工去掉约束，再添加的，今天一边google一边搞啊搞啊的，最终下面这个脚本可以用了&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>rails中的ActiveRecord真性感！</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/09/24/sexy-activerecord/</link>
+      <link>https://huobazi.github.com/blog/2009/09/24/sexy-activerecord/</link>
       <pubDate>Thu, 24 Sep 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/09/24/sexy-activerecord/</guid>
+      <guid>https://huobazi.github.com/blog/2009/09/24/sexy-activerecord/</guid>
       <description>&lt;p&gt;Rails使用的ActiveRecord真性感啊，see see吧&lt;/p&gt;
 &lt;div class=&#34;source&#34; style=&#34;COLOR: #dcdccc; FONT-FAMILY: &#39;[object]&#39;,&#39;Consolas&#39;,&#39;Lucida Console&#39;,&#39;Courier New&#39;; BACKGROUND-COLOR: #3f3f3f&#34;&gt;
 &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;User&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;FONT-WEIGHT: bold; COLOR: #dca3a3&#34;&gt;ActiveRecord&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;FONT-WEIGHT: bold; COLOR: #dca3a3&#34;&gt;Base&lt;/span&gt;  &lt;br /&gt;  &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;has_many&lt;/span&gt; &lt;span style=&#34;COLOR: #cc9393&#34;&gt;:articles&lt;/span&gt;  &lt;br /&gt;&lt;span style=&#34;COLOR: #e3ceab&#34;&gt;end&lt;/span&gt;  &lt;br /&gt; &lt;br /&gt;&lt;span style=&#34;COLOR: #e3ceab&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;Article&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;FONT-WEIGHT: bold; COLOR: #dca3a3&#34;&gt;ActiveRecord&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;FONT-WEIGHT: bold; COLOR: #dca3a3&#34;&gt;Base&lt;/span&gt;&lt;br /&gt;  &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;belongs_to&lt;/span&gt; &lt;span style=&#34;COLOR: #cc9393&#34;&gt;:user&lt;/span&gt;  &lt;br /&gt;&lt;span style=&#34;COLOR: #e3ceab&#34;&gt;end&lt;/span&gt;
@@ -126,20 +126,20 @@ itv 不选择 无线的话 要选VLAN透传，选无线是VLAN修改
     
     <item>
       <title>如何判断一个类型是nullable类型，并得知它的原始类型</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/07/30/how-to-determine-whether-an-type-is-nullable-and-get-the-underlying-type/</link>
+      <link>https://huobazi.github.com/blog/2009/07/30/how-to-determine-whether-an-type-is-nullable-and-get-the-underlying-type/</link>
       <pubDate>Thu, 30 Jul 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/07/30/how-to-determine-whether-an-type-is-nullable-and-get-the-underlying-type/</guid>
+      <guid>https://huobazi.github.com/blog/2009/07/30/how-to-determine-whether-an-type-is-nullable-and-get-the-underlying-type/</guid>
       <description>&lt;p&gt;&lt;p&gt;有些时候我们需要判断某个类型是否是Nullable类型，并且可能需要知道它的原始类型，&lt;br /&gt;比如在做些ORM相关工作时，就需要这方面的应用，如下代码使用可以实现这个要求&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Asp.Net发邮件，如何发送附件</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/07/21/how-to-send-an-email-with-attachments/</link>
+      <link>https://huobazi.github.com/blog/2009/07/21/how-to-send-an-email-with-attachments/</link>
       <pubDate>Tue, 21 Jul 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/07/21/how-to-send-an-email-with-attachments/</guid>
+      <guid>https://huobazi.github.com/blog/2009/07/21/how-to-send-an-email-with-attachments/</guid>
       <description>&lt;p&gt;&lt;p&gt;使用如下代码可以发送附件&lt;/p&gt;
 &lt;pre&gt;MailMessage mail = new MailMessage();
 mail.To = &amp;rdquo;me@mycompany.com&amp;rdquo;;
@@ -156,10 +156,10 @@ SmtpMail.Send( mail );&lt;/pre&gt;
     
     <item>
       <title>C#中如何深度克隆一个对象？</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/07/15/make-a-deep-clone-of-the-object/</link>
+      <link>https://huobazi.github.com/blog/2009/07/15/make-a-deep-clone-of-the-object/</link>
       <pubDate>Wed, 15 Jul 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/07/15/make-a-deep-clone-of-the-object/</guid>
+      <guid>https://huobazi.github.com/blog/2009/07/15/make-a-deep-clone-of-the-object/</guid>
       <description>&lt;p&gt;&lt;p&gt;如何深度克隆一个对象？&lt;/p&gt;
 &lt;p&gt;普通版:&lt;/p&gt;
 &lt;pre&gt;
@@ -181,19 +181,19 @@ SmtpMail.Send( mail );&lt;/pre&gt;
     
     <item>
       <title>nginx下typecho的rewrite</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/07/09/nginx-typecho-rewrite/</link>
+      <link>https://huobazi.github.com/blog/2009/07/09/nginx-typecho-rewrite/</link>
       <pubDate>Thu, 09 Jul 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/07/09/nginx-typecho-rewrite/</guid>
+      <guid>https://huobazi.github.com/blog/2009/07/09/nginx-typecho-rewrite/</guid>
       <description>&lt;p&gt;导数据到typecho的时候是在localhost的windows xp系统上用的apache,部署时用的是nginx&lt;br /&gt;先是发现无法登陆按照&lt;a href=&#34;http://forum.typecho.org/viewtopic.php?f=4&amp;amp;t=238&amp;amp;p=852&amp;amp;hilit=nginx#p852&#34; target=&#34;_blank&#34;&gt;这篇帖子&lt;/a&gt;内的方法配置了vhost.conf，发现可以登陆了，接着又出现了&lt;br /&gt;无法编辑post的问题，具体症状见&lt;a href=&#34;http://forum.typecho.org/viewtopic.php?f=4&amp;amp;t=270&#34; target=&#34;_blank&#34;&gt;这篇帖子&lt;/a&gt;,甚是郁闷啊，google+baidu 找到一片描写wp的&lt;br /&gt;rewrite的&lt;a href=&#34;http://hi.baidu.com/3322/blog/item/95d254e7594a012bb93820bb.html&#34; target=&#34;_blank&#34;&gt;帖子&lt;/a&gt;,因typecho与wp笔记像，抱着试试看的想法,在测试站点试验了一下，嘿嘿&lt;br /&gt;能用，转寄在此，备忘&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>我学Linq to SQL做的demo</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/07/19/cb-1246773/</link>
+      <link>https://huobazi.github.com/blog/2008/07/19/cb-1246773/</link>
       <pubDate>Sat, 19 Jul 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/07/19/cb-1246773/</guid>
+      <guid>https://huobazi.github.com/blog/2008/07/19/cb-1246773/</guid>
       <description>最近才开始学LINQ to SQL,
 做了个demo，都是基本操作。
 有兴趣的朋友看看。
@@ -202,10 +202,10 @@ http://download.csdn.net/source/528628</description>
     
     <item>
       <title>使用dotNetZipLib轻松压缩目录/文件夹</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/03/29/usingdotnetziplibcompressadirectory/</link>
+      <link>https://huobazi.github.com/blog/2008/03/29/usingdotnetziplibcompressadirectory/</link>
       <pubDate>Sat, 29 Mar 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/03/29/usingdotnetziplibcompressadirectory/</guid>
+      <guid>https://huobazi.github.com/blog/2008/03/29/usingdotnetziplibcompressadirectory/</guid>
       <description>.net1.1时代我们选SharpZipLib
 .net2.0时代我们选System.IO.Compression名称空间下的东东
 .net3.0时代我们选System.IO.Packaging名称空间下的东东。
@@ -223,10 +223,10 @@ DotNet Zip Library   </description>
     
     <item>
       <title>2007最后一博,Url地址重写，利用HttpHander手工编译页面并按需生成静态HTML文件</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/12/31/urlrewriteandhttphanderandmakestatichtmlfiles/</link>
+      <link>https://huobazi.github.com/blog/2007/12/31/urlrewriteandhttphanderandmakestatichtmlfiles/</link>
       <pubDate>Mon, 31 Dec 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/12/31/urlrewriteandhttphanderandmakestatichtmlfiles/</guid>
+      <guid>https://huobazi.github.com/blog/2007/12/31/urlrewriteandhttphanderandmakestatichtmlfiles/</guid>
       <description>很多朋友可能都讨论过ASP.NET中生成HTML的方法了，有按照模板用IO方法写文件
 有在404错误页面内生成HTML的，有在Render内保存页面输出到HTML文件的。
 今天我发一个配合Url重写利用HttpHander手工编译.aspx页面方法。
@@ -268,10 +268,10 @@ http://www.devedu.com/Doc/DotNet/AspNet/default.2.html
     
     <item>
       <title>在自定义控件中实现ICallbackEventHandler接口不经过回发而实现客户端回掉</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/07/23/webcontrolandicallbackeventhandler/</link>
+      <link>https://huobazi.github.com/blog/2007/07/23/webcontrolandicallbackeventhandler/</link>
       <pubDate>Mon, 23 Jul 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/07/23/webcontrolandicallbackeventhandler/</guid>
+      <guid>https://huobazi.github.com/blog/2007/07/23/webcontrolandicallbackeventhandler/</guid>
       <description>在自定义控件中实现ICallbackEventHandler接口不经过回发而实现客户端回掉 Asp.Net2.0中新增了ICallbackEventHandler接口，用于指示控件可以作为服务器的回调事件的目标。
 MSDN中的描述:
 实现 ICallbackEventHandler 接口的控件的示例包括 GridView、DetailsView 和 TreeView 控件。当回调事件以实现了 ICallbackEventHandler 接口的控件为目标时，将把事件变量作为参数传递来调用 RaiseCallbackEvent 方法以处理该事件，并且GetCallbackResult 方法返回回调的结果。
@@ -304,10 +304,10 @@ RaiseCallbackEvent
     
     <item>
       <title>两个DropDownList在Repeater、DataList、DataGrid内的连动和冒泡事件(BubbleEvent) </title>
-      <link>https://huobazi.aspxboy.com/blog/2006/04/08/twodropdownlistindatagridandbubbleevent/</link>
+      <link>https://huobazi.github.com/blog/2006/04/08/two-dropdownlist-in-data-grid-and-bubble-event/</link>
       <pubDate>Sat, 08 Apr 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/04/08/twodropdownlistindatagridandbubbleevent/</guid>
+      <guid>https://huobazi.github.com/blog/2006/04/08/two-dropdownlist-in-data-grid-and-bubble-event/</guid>
       <description>两个DropDownList在Repeater、DataList、DataGrid内的连动和冒泡事件(BubbleEvent)
 问题: http://community.csdn.net/Expert/topic/4670/4670056.xml?temp=3.944033E-02
 刚看第一眼觉得在第一个DDL的SelectedIndexChanged事件内绑定第二个DDL就ok了，页面上写或者ItemDataBound内写事件挂接代码都可以。打开VS写测试却发现有点障碍哦，
@@ -320,10 +320,10 @@ RaiseCallbackEvent
     
     <item>
       <title>关于Data Access Blok (SqlHelper.cs)使用时出现</title>
-      <link>https://huobazi.aspxboy.com/blog/2006/03/24/cb-357546/</link>
+      <link>https://huobazi.github.com/blog/2006/03/24/cb-357546/</link>
       <pubDate>Fri, 24 Mar 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/03/24/cb-357546/</guid>
+      <guid>https://huobazi.github.com/blog/2006/03/24/cb-357546/</guid>
       <description>关于Data Access Blok (SqlHelper.cs)使用时出现&#34;对象必须实现 IConvertible/Object must implement IConvertible.&#34;异常
 在使用低版本 Data Access Blok 时，出现如下异常
 “/”应用程序中的服务器错误。
@@ -342,10 +342,10 @@ the simple fix is to change line 93 to read:</description>
     
     <item>
       <title>打开一个Excel模板文件填充数据另存为一个文件</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/04/27/filldatatoexceltemplate/</link>
+      <link>https://huobazi.github.com/blog/2004/04/27/filldatatoexceltemplate/</link>
       <pubDate>Tue, 27 Apr 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/04/27/filldatatoexceltemplate/</guid>
+      <guid>https://huobazi.github.com/blog/2004/04/27/filldatatoexceltemplate/</guid>
       <description>最近做的东西要求打开一个Excel文件模板后填充数据
 开始用OleDb连接该Excel文件更新老是出错误 “需要一个可更新的.....“
 http://expert.csdn.net/Expert/topic/2992/2992809.xml?temp=.4825403
@@ -381,10 +381,10 @@ for( int i=0; i {</description>
     
     <item>
       <title>DataGrid点击删除按钮弹出确认对话框一个好办法</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/04/05/datagriddeleteconfirm/</link>
+      <link>https://huobazi.github.com/blog/2004/04/05/datagriddeleteconfirm/</link>
       <pubDate>Mon, 05 Apr 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/04/05/datagriddeleteconfirm/</guid>
+      <guid>https://huobazi.github.com/blog/2004/04/05/datagriddeleteconfirm/</guid>
       <description>原文地址
 http://expert.csdn.net/Expert/topic/2852/2852126.xml?temp=.4770471 其中
 wf5360308(峰)提供的方法
@@ -395,24 +395,24 @@ datagrid-》属性生成器-》列-》添加按钮列-》删除-》文本(T)-&am
     
     <item>
       <title>如何在ItemDataBound内获得DataGrid的列名称HeaderText</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/04/05/datagridheadertextinitemdatabound/</link>
+      <link>https://huobazi.github.com/blog/2004/04/05/datagridheadertextinitemdatabound/</link>
       <pubDate>Mon, 05 Apr 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/04/05/datagridheadertextinitemdatabound/</guid>
+      <guid>https://huobazi.github.com/blog/2004/04/05/datagridheadertextinitemdatabound/</guid>
       <description>如果 AutoGenerateColumns=&amp;ldquo;false&amp;rdquo; 使用绑定列，模板列 则比较好办，直接使用 YourDataGrid.Columns[编号].HeaderText 获得 可是,如果 AutoGenerateColumns=&amp;ldquo;true&amp;rdquo; ,就比较麻烦了,因为这时YourDataGrid.Columns.Count是0 但是可以变通做到。
-&amp;lt;%@ Page Language=&amp;quot;C#&amp;quot; Debug=&amp;quot;true&amp;quot; %&amp;gt; &amp;lt;%@ Import Namespace=&amp;quot;System.Data&amp;quot; %&amp;gt; &amp;lt;!DOCTYPE html PUBLIC &amp;quot;-//W3C//DTD XHTML 1.0 Transitional//EN&amp;quot; &amp;quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&amp;quot;&amp;gt; &amp;lt;html xmlns=&amp;quot;http://www.w3.org/1999/xhtml&amp;quot; xml:lang=&amp;quot;gb2312&amp;quot; lang=&amp;quot;gb2312&amp;quot;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;title&amp;gt; ItemDataBoundGetColumnName &amp;lt;/title&amp;gt; &amp;lt;meta http-equiv=&amp;quot;Content-Type&amp;quot; content=&amp;quot;text/html; charset=gb2312&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;title&amp;quot; content=&amp;quot;&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;author&amp;quot; content=&amp;quot;活靶子,Huobazi,www.AspxBoy.com&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;subject&amp;quot; content=&amp;quot;&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;language&amp;quot; content=&amp;quot;gb2312&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;keywords&amp;quot; content=&amp;quot;&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;Copyright&amp;quot; content=&amp;quot;www.AspxBoy.com&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;robots&amp;quot; content=&amp;quot;all&amp;quot; /&amp;gt; &amp;lt;script language=&amp;quot;c#&amp;quot; runat=&amp;quot;server&amp;quot;&amp;gt; void BindGrid() { DataTable dt = new DataTable(); DataRow dr; dt.</description>
+&amp;lt;%@ Page Language=&amp;quot;C#&amp;quot; Debug=&amp;quot;true&amp;quot; %&amp;gt; &amp;lt;%@ Import Namespace=&amp;quot;System.Data&amp;quot; %&amp;gt; &amp;lt;!DOCTYPE html PUBLIC &amp;quot;-//W3C//DTD XHTML 1.0 Transitional//EN&amp;quot; &amp;quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&amp;quot;&amp;gt; &amp;lt;html xmlns=&amp;quot;http://www.w3.org/1999/xhtml&amp;quot; xml:lang=&amp;quot;gb2312&amp;quot; lang=&amp;quot;gb2312&amp;quot;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;title&amp;gt; ItemDataBoundGetColumnName &amp;lt;/title&amp;gt; &amp;lt;meta http-equiv=&amp;quot;Content-Type&amp;quot; content=&amp;quot;text/html; charset=gb2312&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;title&amp;quot; content=&amp;quot;&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;author&amp;quot; content=&amp;quot;活靶子,Huobazi,www.github.com&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;subject&amp;quot; content=&amp;quot;&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;language&amp;quot; content=&amp;quot;gb2312&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;keywords&amp;quot; content=&amp;quot;&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;Copyright&amp;quot; content=&amp;quot;www.github.com&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;robots&amp;quot; content=&amp;quot;all&amp;quot; /&amp;gt; &amp;lt;script language=&amp;quot;c#&amp;quot; runat=&amp;quot;server&amp;quot;&amp;gt; void BindGrid() { DataTable dt = new DataTable(); DataRow dr; dt.</description>
     </item>
     
     <item>
       <title>用Asp.Net抓取web页面</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/02/23/cb-1521/</link>
+      <link>https://huobazi.github.com/blog/2004/02/23/cb-1521/</link>
       <pubDate>Mon, 23 Feb 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/02/23/cb-1521/</guid>
+      <guid>https://huobazi.github.com/blog/2004/02/23/cb-1521/</guid>
       <description>演示:
-http://www.aspxboy.com/demo/286.aspx
+http://www.github.com/demo/286.aspx
 代码高亮显示(HightLight in Source Code Viewer)
-http://www.aspxboy.com/code/default.aspx/S7s2zPJbeI9PJA/OK
+http://www.github.com/code/default.aspx/S7s2zPJbeI9PJA/OK
 HpAVwVaUEhf02EgEOgeB3Yd5Z7fLL3ZNgdv7XIqertUOYm9kbQ62
 LshbJBwvWPBBYa4EyVMhvMhyEDPH8chU5ornn8=.Aspx
 &amp;lt;html&amp;gt;
@@ -439,12 +439,12 @@ while (bytes &amp;gt; 0)
     
     <item>
       <title>域名Whois信息查询(ASP.NET&#43;C#)</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/02/04/whoisinaspdotnet/</link>
+      <link>https://huobazi.github.com/blog/2004/02/04/whoisinaspdotnet/</link>
       <pubDate>Wed, 04 Feb 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/02/04/whoisinaspdotnet/</guid>
+      <guid>https://huobazi.github.com/blog/2004/02/04/whoisinaspdotnet/</guid>
       <description>去年写的了,是从点缀的博客学来的
-看演示请点这里:http://www.aspxboy.com/whois.aspx
+看演示请点这里:http://www.github.com/whois.aspx
 代码如下:
 &amp;lt;% @Page Language=&#34;C#&#34; %&amp;gt;
 &amp;lt;% @Import Namespace=&#34;System.Net.Sockets&#34; %&amp;gt;

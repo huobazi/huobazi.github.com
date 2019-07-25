@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Edong on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/edong/</link>
+    <link>https://huobazi.github.com/tags/edong/</link>
     <description>Recent content in Edong on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 28 Jul 2007 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/edong/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/edong/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>中国EDONG网（中国排名第16的IDC）的技术力量和他的24小时客服。</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/07/28/edong/</link>
+      <link>https://huobazi.github.com/blog/2007/07/28/edong/</link>
       <pubDate>Sat, 28 Jul 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/07/28/edong/</guid>
+      <guid>https://huobazi.github.com/blog/2007/07/28/edong/</guid>
       <description>这篇post写好后发现在博客园不能保存，原因是内容包含违禁内容。
 只有写到其他地方，再挂个链接了。
 http://spaces.huash.com/index.php/uid-133969-action-viewspace-itemid-240537
@@ -32,10 +32,10 @@ http://spaces.huash.com/index.php/uid-133969-action-viewspace-itemid-240537
     
     <item>
       <title>买了edong的空间没有db_securityadmin权限</title>
-      <link>https://huobazi.aspxboy.com/blog/2005/10/16/cb-256133/</link>
+      <link>https://huobazi.github.com/blog/2005/10/16/cb-256133/</link>
       <pubDate>Sun, 16 Oct 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2005/10/16/cb-256133/</guid>
+      <guid>https://huobazi.github.com/blog/2005/10/16/cb-256133/</guid>
       <description>买了edong的http://www.edong.com/v8/webhosting/K1000.php这个k1000空间
 没有db_securityadmin权限装不了CommunityServer和DotNetNuke
 

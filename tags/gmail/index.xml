@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gmail on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/gmail/</link>
+    <link>https://huobazi.github.com/tags/gmail/</link>
     <description>Recent content in Gmail on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 21 Feb 2008 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/gmail/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/gmail/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>C# .Net Gmail Tools </title>
-      <link>https://huobazi.aspxboy.com/blog/2008/02/21/csharpgmailtools/</link>
+      <link>https://huobazi.github.com/blog/2008/02/21/csharpgmailtools/</link>
       <pubDate>Thu, 21 Feb 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/02/21/csharpgmailtools/</guid>
+      <guid>https://huobazi.github.com/blog/2008/02/21/csharpgmailtools/</guid>
       <description>位于code.msdn.microsoft.com的一个小型Library
 你可以很简单的使用它来通过gmail发送邮件或者获取Gmail Atom Feed 。
 

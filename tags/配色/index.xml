@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>配色 on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/%E9%85%8D%E8%89%B2/</link>
+    <link>https://huobazi.github.com/tags/%E9%85%8D%E8%89%B2/</link>
     <description>Recent content in 配色 on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 11 Jan 2010 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/%E9%85%8D%E8%89%B2/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/%E9%85%8D%E8%89%B2/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>漂亮的VIM配色方案</title>
-      <link>https://huobazi.aspxboy.com/blog/2010/01/11/vim-color-scheme/</link>
+      <link>https://huobazi.github.com/blog/2010/01/11/vim-color-scheme/</link>
       <pubDate>Mon, 11 Jan 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2010/01/11/vim-color-scheme/</guid>
+      <guid>https://huobazi.github.com/blog/2010/01/11/vim-color-scheme/</guid>
       <description>这里
 http://code.google.com/p/vimcolorschemetest/
 有一堆一堆的配色方案

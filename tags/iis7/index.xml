@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Iis7 on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/iis7/</link>
+    <link>https://huobazi.github.com/tags/iis7/</link>
     <description>Recent content in Iis7 on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 02 May 2007 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/iis7/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/iis7/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>IIS7 beta FREE WEBHOSTING FREE HOSTING FOR ASP.NET 2.0 IIS7</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/05/02/free-iis7-aspnet2-web-hosting/</link>
+      <link>https://huobazi.github.com/blog/2007/05/02/free-iis7-aspnet2-web-hosting/</link>
       <pubDate>Wed, 02 May 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/05/02/free-iis7-aspnet2-web-hosting/</guid>
+      <guid>https://huobazi.github.com/blog/2007/05/02/free-iis7-aspnet2-web-hosting/</guid>
       <description>Free IIS 7 Beta Hosting    Maximum ASP MaximumASP is proud to be the first Hoster partnered with Microsoft to help cutting edge developers and IT pros learn IIS 7, and showcase their applications to the world. We&amp;rsquo;ll provide you with 50MB of disk space for your application, and a 10MB SQL Server 2005 database that will remain active through the Longhorn Server RC1 period.
     Discount ASP.</description>
     </item>

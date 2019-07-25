@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Fckeditor on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/fckeditor/</link>
+    <link>https://huobazi.github.com/tags/fckeditor/</link>
     <description>Recent content in Fckeditor on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 27 Oct 2009 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/fckeditor/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/fckeditor/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>在线编辑器的一个新选择。</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/10/27/kissy-editor/</link>
+      <link>https://huobazi.github.com/blog/2009/10/27/kissy-editor/</link>
       <pubDate>Tue, 27 Oct 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/10/27/kissy-editor/</guid>
+      <guid>https://huobazi.github.com/blog/2009/10/27/kissy-editor/</guid>
       <description>今天lifesinger发布了淘宝编辑器,
 可以在这里看到演示
 介绍可以看这里，http://lifesinger.org/blog/2009/10/kissy-editor/</description>
@@ -24,10 +24,10 @@
     
     <item>
       <title>FckEditor,远程图片下载,插件</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/11/02/fckeditorremoteimagerubber/</link>
+      <link>https://huobazi.github.com/blog/2007/11/02/fckeditorremoteimagerubber/</link>
       <pubDate>Fri, 02 Nov 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/11/02/fckeditorremoteimagerubber/</guid>
+      <guid>https://huobazi.github.com/blog/2007/11/02/fckeditorremoteimagerubber/</guid>
       <description>有时候我们从其他网页上拷贝来的内容中含有图片，当原始地址失效后就会影响读者阅读。
 所以我制作了这样一个插件，可以将远程图片保存到本地服务器。声明：下面的文字是本文不可缺少的部分，转载请保留，谢谢！
 ////////////////////////////////////////////////////

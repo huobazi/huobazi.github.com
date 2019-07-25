@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Communtiy Server on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/communtiy-server/</link>
+    <link>https://huobazi.github.com/tags/communtiy-server/</link>
     <description>Recent content in Communtiy Server on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 07 Oct 2005 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/communtiy-server/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/communtiy-server/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Communtiy Server论坛的帖子显示页面分页部分的Url Rewrite的构造方法</title>
-      <link>https://huobazi.aspxboy.com/blog/2005/10/07/cb-249806/</link>
+      <link>https://huobazi.github.com/blog/2005/10/07/cb-249806/</link>
       <pubDate>Fri, 07 Oct 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2005/10/07/cb-249806/</guid>
+      <guid>https://huobazi.github.com/blog/2005/10/07/cb-249806/</guid>
       <description>你可能会发现在Communtiy Server的论坛帖子列表页面
 比如http://communityserver.org/forums/129/ShowForum.aspx
 看下面分页处的连接使用的地址是类似ShowForum.aspx?PageIndex=2这样的地址

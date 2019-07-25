@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>邮件 on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/%E9%82%AE%E4%BB%B6/</link>
+    <link>https://huobazi.github.com/tags/%E9%82%AE%E4%BB%B6/</link>
     <description>Recent content in 邮件 on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 21 Jul 2009 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/%E9%82%AE%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/%E9%82%AE%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Asp.Net发邮件，如何发送附件</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/07/21/how-to-send-an-email-with-attachments/</link>
+      <link>https://huobazi.github.com/blog/2009/07/21/how-to-send-an-email-with-attachments/</link>
       <pubDate>Tue, 21 Jul 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/07/21/how-to-send-an-email-with-attachments/</guid>
+      <guid>https://huobazi.github.com/blog/2009/07/21/how-to-send-an-email-with-attachments/</guid>
       <description>&lt;p&gt;&lt;p&gt;使用如下代码可以发送附件&lt;/p&gt;
 &lt;pre&gt;MailMessage mail = new MailMessage();
 mail.To = &amp;rdquo;me@mycompany.com&amp;rdquo;;

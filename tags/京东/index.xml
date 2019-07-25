@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>京东 on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/%E4%BA%AC%E4%B8%9C/</link>
+    <link>https://huobazi.github.com/tags/%E4%BA%AC%E4%B8%9C/</link>
     <description>Recent content in 京东 on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 30 Apr 2010 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/%E4%BA%AC%E4%B8%9C/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/%E4%BA%AC%E4%B8%9C/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>京东新蛋攻防</title>
-      <link>https://huobazi.aspxboy.com/blog/2010/04/30/360buy-vs-newegg/</link>
+      <link>https://huobazi.github.com/blog/2010/04/30/360buy-vs-newegg/</link>
       <pubDate>Fri, 30 Apr 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2010/04/30/360buy-vs-newegg/</guid>
+      <guid>https://huobazi.github.com/blog/2010/04/30/360buy-vs-newegg/</guid>
       <description>&lt;p&gt;这是一片不断膨胀、愈演愈烈的虚拟战场。每一位统帅都着迷于它的独特魅力——任何势力的盛衰都取决于无数素未谋面的人的鼠标点击。每一位统帅也都必须铭记：实体世界里“强攻弱守”的军事规律已经在此失效。这里唯一可以遵循的生死法则是，无论势力强弱，一旦站到防守的位置上，那么溃败将接踵而来，且来得出乎意料地快&lt;/p&gt;</description>
     </item>
     

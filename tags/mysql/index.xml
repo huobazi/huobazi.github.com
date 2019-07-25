@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mysql on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/mysql/</link>
+    <link>https://huobazi.github.com/tags/mysql/</link>
     <description>Recent content in Mysql on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 12 Sep 2012 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>将MySQL 的数据导入 PostgreSQL</title>
-      <link>https://huobazi.aspxboy.com/blog/2012/09/12/import-data-from-mysql-to-postgresql/</link>
+      <link>https://huobazi.github.com/blog/2012/09/12/import-data-from-mysql-to-postgresql/</link>
       <pubDate>Wed, 12 Sep 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2012/09/12/import-data-from-mysql-to-postgresql/</guid>
+      <guid>https://huobazi.github.com/blog/2012/09/12/import-data-from-mysql-to-postgresql/</guid>
       <description>&lt;p&gt;开始学习使用PostgreSQL, 先尝试将MySQL数据导入到PostgreSQL&lt;/p&gt;
 
 &lt;h2 id=&#34;安装postgresql&#34;&gt;安装PostgreSQL&lt;/h2&gt;
@@ -49,10 +49,10 @@ gem &amp;quot;mysql2&amp;quot;
     
     <item>
       <title>优化Rails数据库查询性能 -- rails_reviewer插件</title>
-      <link>https://huobazi.aspxboy.com/blog/2010/01/21/rails-review-on-rails/</link>
+      <link>https://huobazi.github.com/blog/2010/01/21/rails-review-on-rails/</link>
       <pubDate>Thu, 21 Jan 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2010/01/21/rails-review-on-rails/</guid>
+      <guid>https://huobazi.github.com/blog/2010/01/21/rails-review-on-rails/</guid>
       <description>发现一个很棒的插件rails_reviewer插件
 安装:
 $ script/plugin install git://github.com/dsboulder/query_reviewer.git
@@ -62,20 +62,20 @@ $ rake query_reviewer:setup  完毕后重启server,页面左上角浮动一个SQ
     
     <item>
       <title>rails里Mysql::Error: query: not connected</title>
-      <link>https://huobazi.aspxboy.com/blog/2010/01/15/rails-mysqlerror-query-not-connected/</link>
+      <link>https://huobazi.github.com/blog/2010/01/15/rails-mysqlerror-query-not-connected/</link>
       <pubDate>Fri, 15 Jan 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2010/01/15/rails-mysqlerror-query-not-connected/</guid>
+      <guid>https://huobazi.github.com/blog/2010/01/15/rails-mysqlerror-query-not-connected/</guid>
       <description>&lt;p&gt;从ubuntu换回了win7后又慢慢开始折腾以前在本本上跑的一些LAMP网站， php和 mysql还是用以前的xampp里的，仍然可以用。&lt;/p&gt;
 &lt;p&gt;重装了 ruby 1.8.6, rails 2.3.5 等...发现运行rails网站，弹出messagebox提示找不到libmysql.dll尝试把mysql/bin里的dll来regsvr32，不可，直接拷贝到system32目录下错误没了，但打开网站仍然报错，终端显示“Mysql::Error: query: not connected....&#34;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Mysql adapter on Rails 2.3.3</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/08/29/mysql-adapter-on-rails-2-3-3/</link>
+      <link>https://huobazi.github.com/blog/2009/08/29/mysql-adapter-on-rails-2-3-3/</link>
       <pubDate>Sat, 29 Aug 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/08/29/mysql-adapter-on-rails-2-3-3/</guid>
+      <guid>https://huobazi.github.com/blog/2009/08/29/mysql-adapter-on-rails-2-3-3/</guid>
       <description>安装好Ruby on Rails 2.3.3后，运行简单的页面提示如下错误“The bundled mysql.rb driver has been removed from Rails 2.2. Please install the mysql gem and try again: gem install mysql”
  gem 了n次也不成，搞了一早上，才google到一个比较山寨的方法解决
 1. download older MySQL client library, for example one from InstantRails: http://instantrails.rubyforge.org/svn/trunk/InstantRails-win/InstantRails/mysql/bin/libmySQL.dll 2. copy the downloaded file to C:\Ruby\bin (or wherever you installed Ruby) 3. restart MySQL server 另参考：http://www.ruby-forum.com/topic/160358和http://rdc.taobao.com/blog/qa/?p=523</description>

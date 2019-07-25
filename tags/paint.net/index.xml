@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Paint.net on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/paint.net/</link>
+    <link>https://huobazi.github.com/tags/paint.net/</link>
     <description>Recent content in Paint.net on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 10 May 2006 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/paint.net/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/paint.net/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>推荐一个.Net做的图形处理软件--Paint.NET </title>
-      <link>https://huobazi.aspxboy.com/blog/2006/05/10/paintdotnet/</link>
+      <link>https://huobazi.github.com/blog/2006/05/10/paintdotnet/</link>
       <pubDate>Wed, 10 May 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/05/10/paintdotnet/</guid>
+      <guid>https://huobazi.github.com/blog/2006/05/10/paintdotnet/</guid>
       <description>Home Features Download Roadmap Screenshots Forum  AboutPaint.NET is image and photo manipulation software designed to be used on computers that run Windows 2000, XP, Vista, or Server 2003. It supports layers, unlimited undo, special effects, and a wide variety of useful and powerful tools. The programming language used to create Paint.NET is C#, with a small amount of C++ for setup and shell-integration related functionality</description>
     </item>
     

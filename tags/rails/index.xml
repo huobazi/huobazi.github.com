@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rails on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/rails/</link>
+    <link>https://huobazi.github.com/tags/rails/</link>
     <description>Recent content in Rails on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 15 Aug 2012 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/rails/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/rails/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>使用AjaxUpload和Carrierwave在Rails Mongoid中批量上传图片</title>
-      <link>https://huobazi.aspxboy.com/blog/2012/08/15/ajaxupload-with-rail-carrierwave-on-mongodb/</link>
+      <link>https://huobazi.github.com/blog/2012/08/15/ajaxupload-with-rail-carrierwave-on-mongodb/</link>
       <pubDate>Wed, 15 Aug 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2012/08/15/ajaxupload-with-rail-carrierwave-on-mongodb/</guid>
+      <guid>https://huobazi.github.com/blog/2012/08/15/ajaxupload-with-rail-carrierwave-on-mongodb/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/valums/file-uploader&#34;&gt;file-uploader&lt;/a&gt;是一个用 Javascrit 编写的文件上传 Libary,在这里我使用&lt;a href=&#34;https://github.com/jnicklas/carrierwave&#34;&gt;CarrierWave&lt;/a&gt;和 &lt;a href=&#34;https://github.com/mongoid/mongoid&#34;&gt;Mongoid&lt;/a&gt; 来完成多文件的无刷新上传功能&lt;/p&gt;
 
 &lt;h2 id=&#34;rubygems&#34;&gt;RubyGems&lt;/h2&gt;
@@ -46,10 +46,10 @@ end
     
     <item>
       <title>在centos上装rubyee,passenger和memcached ,搭建rails环境</title>
-      <link>https://huobazi.aspxboy.com/blog/2010/07/24/ruby-on-rails-nginx-passenger-memcached-on-centos/</link>
+      <link>https://huobazi.github.com/blog/2010/07/24/ruby-on-rails-nginx-passenger-memcached-on-centos/</link>
       <pubDate>Sat, 24 Jul 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2010/07/24/ruby-on-rails-nginx-passenger-memcached-on-centos/</guid>
+      <guid>https://huobazi.github.com/blog/2010/07/24/ruby-on-rails-nginx-passenger-memcached-on-centos/</guid>
       <description>&lt;p&gt;流水笔记一则.&lt;/p&gt;
 &lt;p&gt;我之前已在服务器配置了nginx，php，mysql等，现在先安装ruby企业版&lt;/p&gt;
 &lt;div class=&#34;source&#34; style=&#39;font-family: &#34;[object HTMLOptionElement]&#34;,&#34;Consolas&#34;,&#34;Lucida Console&#34;,&#34;Courier New&#34;; color: #c0c0c0; background-color: #000000;&#39;&gt;
@@ -60,10 +60,10 @@ end
     
     <item>
       <title>在rails中不同的view不同皮肤下的js，css，注入js和css到head区域</title>
-      <link>https://huobazi.aspxboy.com/blog/2010/03/30/hwo-to-injecting-themes-css-javascript-to-header-in-rails/</link>
+      <link>https://huobazi.github.com/blog/2010/03/30/hwo-to-injecting-themes-css-javascript-to-header-in-rails/</link>
       <pubDate>Tue, 30 Mar 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2010/03/30/hwo-to-injecting-themes-css-javascript-to-header-in-rails/</guid>
+      <guid>https://huobazi.github.com/blog/2010/03/30/hwo-to-injecting-themes-css-javascript-to-header-in-rails/</guid>
       <description>&lt;p&gt;利用layout可以很好实现这个需求.&lt;/p&gt;
 &lt;p&gt;在ApplicationHelper内加入如下代码：&lt;/p&gt;
 &lt;div class=&#34;source&#34; style=&#39;font-family: &#34;[object HTMLOptionElement]&#34;,&#34;Consolas&#34;,&#34;Lucida Console&#34;,&#34;Courier New&#34;; color: #e6e1dc; background-color: #111111;&#39;&gt;
@@ -78,10 +78,10 @@ end
     
     <item>
       <title>优化Rails数据库查询性能 -- rails_reviewer插件</title>
-      <link>https://huobazi.aspxboy.com/blog/2010/01/21/rails-review-on-rails/</link>
+      <link>https://huobazi.github.com/blog/2010/01/21/rails-review-on-rails/</link>
       <pubDate>Thu, 21 Jan 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2010/01/21/rails-review-on-rails/</guid>
+      <guid>https://huobazi.github.com/blog/2010/01/21/rails-review-on-rails/</guid>
       <description>发现一个很棒的插件rails_reviewer插件
 安装:
 $ script/plugin install git://github.com/dsboulder/query_reviewer.git
@@ -91,20 +91,20 @@ $ rake query_reviewer:setup  完毕后重启server,页面左上角浮动一个SQ
     
     <item>
       <title>rails里Mysql::Error: query: not connected</title>
-      <link>https://huobazi.aspxboy.com/blog/2010/01/15/rails-mysqlerror-query-not-connected/</link>
+      <link>https://huobazi.github.com/blog/2010/01/15/rails-mysqlerror-query-not-connected/</link>
       <pubDate>Fri, 15 Jan 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2010/01/15/rails-mysqlerror-query-not-connected/</guid>
+      <guid>https://huobazi.github.com/blog/2010/01/15/rails-mysqlerror-query-not-connected/</guid>
       <description>&lt;p&gt;从ubuntu换回了win7后又慢慢开始折腾以前在本本上跑的一些LAMP网站， php和 mysql还是用以前的xampp里的，仍然可以用。&lt;/p&gt;
 &lt;p&gt;重装了 ruby 1.8.6, rails 2.3.5 等...发现运行rails网站，弹出messagebox提示找不到libmysql.dll尝试把mysql/bin里的dll来regsvr32，不可，直接拷贝到system32目录下错误没了，但打开网站仍然报错，终端显示“Mysql::Error: query: not connected....&#34;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>rails中的ActiveRecord真性感！</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/09/24/sexy-activerecord/</link>
+      <link>https://huobazi.github.com/blog/2009/09/24/sexy-activerecord/</link>
       <pubDate>Thu, 24 Sep 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/09/24/sexy-activerecord/</guid>
+      <guid>https://huobazi.github.com/blog/2009/09/24/sexy-activerecord/</guid>
       <description>&lt;p&gt;Rails使用的ActiveRecord真性感啊，see see吧&lt;/p&gt;
 &lt;div class=&#34;source&#34; style=&#34;COLOR: #dcdccc; FONT-FAMILY: &#39;[object]&#39;,&#39;Consolas&#39;,&#39;Lucida Console&#39;,&#39;Courier New&#39;; BACKGROUND-COLOR: #3f3f3f&#34;&gt;
 &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;User&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;FONT-WEIGHT: bold; COLOR: #dca3a3&#34;&gt;ActiveRecord&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;FONT-WEIGHT: bold; COLOR: #dca3a3&#34;&gt;Base&lt;/span&gt;  &lt;br /&gt;  &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;has_many&lt;/span&gt; &lt;span style=&#34;COLOR: #cc9393&#34;&gt;:articles&lt;/span&gt;  &lt;br /&gt;&lt;span style=&#34;COLOR: #e3ceab&#34;&gt;end&lt;/span&gt;  &lt;br /&gt; &lt;br /&gt;&lt;span style=&#34;COLOR: #e3ceab&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;Article&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;FONT-WEIGHT: bold; COLOR: #dca3a3&#34;&gt;ActiveRecord&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;FONT-WEIGHT: bold; COLOR: #dca3a3&#34;&gt;Base&lt;/span&gt;&lt;br /&gt;  &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;belongs_to&lt;/span&gt; &lt;span style=&#34;COLOR: #cc9393&#34;&gt;:user&lt;/span&gt;  &lt;br /&gt;&lt;span style=&#34;COLOR: #e3ceab&#34;&gt;end&lt;/span&gt;
@@ -114,10 +114,10 @@ $ rake query_reviewer:setup  完毕后重启server,页面左上角浮动一个SQ
     
     <item>
       <title>Mysql adapter on Rails 2.3.3</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/08/29/mysql-adapter-on-rails-2-3-3/</link>
+      <link>https://huobazi.github.com/blog/2009/08/29/mysql-adapter-on-rails-2-3-3/</link>
       <pubDate>Sat, 29 Aug 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/08/29/mysql-adapter-on-rails-2-3-3/</guid>
+      <guid>https://huobazi.github.com/blog/2009/08/29/mysql-adapter-on-rails-2-3-3/</guid>
       <description>安装好Ruby on Rails 2.3.3后，运行简单的页面提示如下错误“The bundled mysql.rb driver has been removed from Rails 2.2. Please install the mysql gem and try again: gem install mysql”
  gem 了n次也不成，搞了一早上，才google到一个比较山寨的方法解决
 1. download older MySQL client library, for example one from InstantRails: http://instantrails.rubyforge.org/svn/trunk/InstantRails-win/InstantRails/mysql/bin/libmySQL.dll 2. copy the downloaded file to C:\Ruby\bin (or wherever you installed Ruby) 3. restart MySQL server 另参考：http://www.ruby-forum.com/topic/160358和http://rdc.taobao.com/blog/qa/?p=523</description>
@@ -125,10 +125,10 @@ $ rake query_reviewer:setup  完毕后重启server,页面左上角浮动一个SQ
     
     <item>
       <title>DbEntry.Net 又一个国产开源ORM数据访问及 WEB 框架</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/01/31/dbentry/</link>
+      <link>https://huobazi.github.com/blog/2008/01/31/dbentry/</link>
       <pubDate>Thu, 31 Jan 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/01/31/dbentry/</guid>
+      <guid>https://huobazi.github.com/blog/2008/01/31/dbentry/</guid>
       <description>今天去逛CodePlex发现这个东西
 链接到JavaEye的blog，作者：梁利锋
 中文描述：http://llf.hanzify.org/llf/show.asp?id=555

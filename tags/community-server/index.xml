@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Community Server on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/community-server/</link>
+    <link>https://huobazi.github.com/tags/community-server/</link>
     <description>Recent content in Community Server on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 22 Feb 2008 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/community-server/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/community-server/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Telligent 发布了 CMS 系统</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/02/22/graffiticmsreleased/</link>
+      <link>https://huobazi.github.com/blog/2008/02/22/graffiticmsreleased/</link>
       <pubDate>Fri, 22 Feb 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/02/22/graffiticmsreleased/</guid>
+      <guid>https://huobazi.github.com/blog/2008/02/22/graffiticmsreleased/</guid>
       <description>Telligent Community Server 的出产厂商
 发布了 他们的新CMS产品 GraffitiCMS
 关于价格：http://get.graffiticms.com/
@@ -25,10 +25,10 @@ Licensing：http://graffiticms.com/learn-more/licensing/</description>
     
     <item>
       <title>买了edong的空间没有db_securityadmin权限</title>
-      <link>https://huobazi.aspxboy.com/blog/2005/10/16/cb-256133/</link>
+      <link>https://huobazi.github.com/blog/2005/10/16/cb-256133/</link>
       <pubDate>Sun, 16 Oct 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2005/10/16/cb-256133/</guid>
+      <guid>https://huobazi.github.com/blog/2005/10/16/cb-256133/</guid>
       <description>买了edong的http://www.edong.com/v8/webhosting/K1000.php这个k1000空间
 没有db_securityadmin权限装不了CommunityServer和DotNetNuke
 
@@ -44,10 +44,10 @@ sp_addrolemember &amp;rsquo;db_ddladmin&amp;rsquo;, &amp;rsquo;&amp;lt;your l
     
     <item>
       <title>C Community Server 群发Email MassEmailingAdmin.aspx页面内插入表情和代码时，404错误</title>
-      <link>https://huobazi.aspxboy.com/blog/2005/10/04/cb-248673/</link>
+      <link>https://huobazi.github.com/blog/2005/10/04/cb-248673/</link>
       <pubDate>Tue, 04 Oct 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2005/10/04/cb-248673/</guid>
+      <guid>https://huobazi.github.com/blog/2005/10/04/cb-248673/</guid>
       <description>Email群发的时候：MassEmailingAdmin.aspx页面内插入表情和代码时，404错误 发现是Js文件内路径的问题
 FTB-FreeTextBox.js内
 this.iPopup.document.location.href = &#34;../emoticons.aspx&#34;; 
@@ -61,10 +61,10 @@ this.iPopup.document.location.href = &#34;../emoticons.aspx&#34;;
     
     <item>
       <title>Community Server的新功能－－快速回复</title>
-      <link>https://huobazi.aspxboy.com/blog/2005/10/02/cb-248084/</link>
+      <link>https://huobazi.github.com/blog/2005/10/02/cb-248084/</link>
       <pubDate>Sun, 02 Oct 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2005/10/02/cb-248084/</guid>
+      <guid>https://huobazi.github.com/blog/2005/10/02/cb-248084/</guid>
       <description>进入
 http://communityserver.org/forums/498047/ShowPost.aspx
 双击鼠标,看效果

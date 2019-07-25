@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Job on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/job/</link>
+    <link>https://huobazi.github.com/tags/job/</link>
     <description>Recent content in Job on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 07 Jul 2007 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/job/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/job/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>.Net专业人力资源网上线试运行.</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/07/07/dotnetjobscn/</link>
+      <link>https://huobazi.github.com/blog/2007/07/07/dotnetjobscn/</link>
       <pubDate>Sat, 07 Jul 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/07/07/dotnetjobscn/</guid>
+      <guid>https://huobazi.github.com/blog/2007/07/07/dotnetjobscn/</guid>
       <description>自己也是搞.net开发的，经常看到有些朋友在csdn发求职/招聘贴
 国内而现有的大招聘网站又未见专门为我们这拨人有个专门分类。就花了点时间做了这样一个网站。
 今天开始试运行。

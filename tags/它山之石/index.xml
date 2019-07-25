@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>它山之石 on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/%E5%AE%83%E5%B1%B1%E4%B9%8B%E7%9F%B3/</link>
+    <link>https://huobazi.github.com/tags/%E5%AE%83%E5%B1%B1%E4%B9%8B%E7%9F%B3/</link>
     <description>Recent content in 它山之石 on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 13 Apr 2010 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/%E5%AE%83%E5%B1%B1%E4%B9%8B%E7%9F%B3/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/%E5%AE%83%E5%B1%B1%E4%B9%8B%E7%9F%B3/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>win7上安装memcache</title>
-      <link>https://huobazi.aspxboy.com/blog/2010/04/13/win7-memcache/</link>
+      <link>https://huobazi.github.com/blog/2010/04/13/win7-memcache/</link>
       <pubDate>Tue, 13 Apr 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2010/04/13/win7-memcache/</guid>
+      <guid>https://huobazi.github.com/blog/2010/04/13/win7-memcache/</guid>
       <description>像原来在xp下装一样
 memcached.exe -d install
 memcached.exe -d start
@@ -28,10 +28,10 @@ memcached.exe -d start
     
     <item>
       <title>漂亮的VIM配色方案</title>
-      <link>https://huobazi.aspxboy.com/blog/2010/01/11/vim-color-scheme/</link>
+      <link>https://huobazi.github.com/blog/2010/01/11/vim-color-scheme/</link>
       <pubDate>Mon, 11 Jan 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2010/01/11/vim-color-scheme/</guid>
+      <guid>https://huobazi.github.com/blog/2010/01/11/vim-color-scheme/</guid>
       <description>这里
 http://code.google.com/p/vimcolorschemetest/
 有一堆一堆的配色方案
@@ -41,10 +41,10 @@ Browse By File Type Featuring 428 schemes:
     
     <item>
       <title>把你的netbeans变成英文版</title>
-      <link>https://huobazi.aspxboy.com/blog/2010/01/07/349/</link>
+      <link>https://huobazi.github.com/blog/2010/01/07/349/</link>
       <pubDate>Thu, 07 Jan 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2010/01/07/349/</guid>
+      <guid>https://huobazi.github.com/blog/2010/01/07/349/</guid>
       <description>呵呵其实很简单，装完后再你使用的快捷方式内增加
 --locale en:us就可以了，比如我的快捷方式里的设置为：
 &#34;D:\Program Files\NetBeans 6.8\bin\netbeans.exe&#34; --locale en:us
@@ -54,10 +54,10 @@ ok 英文了.
     
     <item>
       <title>Graffiti CMS  开源了</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/12/18/graffiti-cms-is-now-free-open-source/</link>
+      <link>https://huobazi.github.com/blog/2009/12/18/graffiti-cms-is-now-free-open-source/</link>
       <pubDate>Fri, 18 Dec 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/12/18/graffiti-cms-is-now-free-open-source/</guid>
+      <guid>https://huobazi.github.com/blog/2009/12/18/graffiti-cms-is-now-free-open-source/</guid>
       <description>Graffiti CMS 
   
  see also:http://weblogs.asp.net/kencox/archive/2009/12/17/graffiti-cms-is-now-free-open-source.aspx</description>
@@ -65,10 +65,10 @@ ok 英文了.
     
     <item>
       <title>【How to】解决Visio虚线复制到word中变为实线</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/10/10/visio-dashed/</link>
+      <link>https://huobazi.github.com/blog/2009/10/10/visio-dashed/</link>
       <pubDate>Sat, 10 Oct 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/10/10/visio-dashed/</guid>
+      <guid>https://huobazi.github.com/blog/2009/10/10/visio-dashed/</guid>
       <description>添加 MetafileDashLineAsSolid 到以下注册表位置，类型DWORD。
  • Visio 2007
 HKEY_CURRENT_USER\Software\Microsoft\Office\12.0\Visio\Application
@@ -81,10 +81,10 @@ HKEY_CURRENT_USER\Software\Microsoft\Office\11.0\Visio\Application
     
     <item>
       <title>服务器状态代码含义</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/09/02/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8A%B6%E6%80%81%E4%BB%A3%E7%A0%81%E5%90%AB%E4%B9%89/</link>
+      <link>https://huobazi.github.com/blog/2009/09/02/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8A%B6%E6%80%81%E4%BB%A3%E7%A0%81%E5%90%AB%E4%B9%89/</link>
       <pubDate>Wed, 02 Sep 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/09/02/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8A%B6%E6%80%81%E4%BB%A3%E7%A0%81%E5%90%AB%E4%B9%89/</guid>
+      <guid>https://huobazi.github.com/blog/2009/09/02/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8A%B6%E6%80%81%E4%BB%A3%E7%A0%81%E5%90%AB%E4%B9%89/</guid>
       <description>&lt;p&gt;&lt;h2 class=&#34;title&#34;&gt;服务器状态代码含义google来的，存档。&lt;/h2&gt;
 &lt;p class=&#34;title&#34;&gt; &lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;</description>
@@ -92,10 +92,10 @@ HKEY_CURRENT_USER\Software\Microsoft\Office\11.0\Visio\Application
     
     <item>
       <title>如何判断一个网站是不是php做的？</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/07/18/php-guid/</link>
+      <link>https://huobazi.github.com/blog/2009/07/18/php-guid/</link>
       <pubDate>Sat, 18 Jul 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/07/18/php-guid/</guid>
+      <guid>https://huobazi.github.com/blog/2009/07/18/php-guid/</guid>
       <description>可以当作简易判断站点是否用PHP架设。
 PHP_LOGO_GUID
 http://www.php.net/?=PHPE9568F34-D428-11d2-A769-00AA001ACF42
@@ -113,28 +113,28 @@ http://www.php.net/ 这个网址只是范例，只要是任一PHP的站点即可
     
     <item>
       <title>哈佛经典案例，赶集卖猪记 </title>
-      <link>https://huobazi.aspxboy.com/blog/2008/11/01/hf/</link>
+      <link>https://huobazi.github.com/blog/2008/11/01/hf/</link>
       <pubDate>Sat, 01 Nov 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/11/01/hf/</guid>
+      <guid>https://huobazi.github.com/blog/2008/11/01/hf/</guid>
       <description>&lt;p&gt;哈佛经典案例，赶集卖猪记（次贷危机加强篇）&lt;br /&gt;　　&lt;br /&gt;　　这是目前为止关于次贷危机最通俗易懂的版本了。&lt;br /&gt;　　&lt;br /&gt;　　1&lt;br /&gt;　　&lt;br /&gt;　　大家都知道这个案例：&lt;br /&gt;　　&lt;br /&gt;　　一男赶集卖猪，天黑遇雨，二十头猪未卖成，到一农家借宿。&lt;br /&gt;　　&lt;br /&gt;　　少妇说：家里只一人不便。&lt;br /&gt;　&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>次贷危机和一夜情</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/10/26/crisis-and-ons/</link>
+      <link>https://huobazi.github.com/blog/2008/10/26/crisis-and-ons/</link>
       <pubDate>Sun, 26 Oct 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/10/26/crisis-and-ons/</guid>
+      <guid>https://huobazi.github.com/blog/2008/10/26/crisis-and-ons/</guid>
       <description>&lt;p&gt;     有一天，一位其貌不扬的男士，带着一位十分艳丽的OL，来到Causeway Bay一家LV店。他为OL选了一价值6万5元的LV handbag。　　付款时，男士掏出支票本，十分潇洒地签了一张支票。店员有些为难，因为这对夫妇是第一次来店购物。&lt;br /&gt;　　男士看穿了店员的心思，十分冷静地对店员说： &#34;我感觉到，您担心这是一张是空头支票，对吗？今天是周六，银行关门。我建议您把支票和handbag都留下。等到星期一支票兑现之后，再请你们把 handbag 送到这位小姐的府上。您看这样行不行？&#34;&lt;br /&gt;　&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>员工辞职的十大原因！ </title>
-      <link>https://huobazi.aspxboy.com/blog/2007/09/02/cb-878740/</link>
+      <link>https://huobazi.github.com/blog/2007/09/02/cb-878740/</link>
       <pubDate>Sun, 02 Sep 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/09/02/cb-878740/</guid>
+      <guid>https://huobazi.github.com/blog/2007/09/02/cb-878740/</guid>
       <description>美国企管顾问史密斯（Gregory Smith），日前在《CEO Refresher》杂志上指出，根据他多年的顾问经验，员工辞职的十大原因为
 1、员工的工作量过重，造成他们必须在晚上或周末加班。 2、公司不愿意在办公室杂务上，另外再花费雇用专人负责，以致专业工作者必须自行做影印等工作。
 3、当员工可以在其他公司找到薪水高二至三成的工作时，公司却宣布暂时不帮员工加薪及升迁。
@@ -145,10 +145,10 @@ http://www.php.net/ 这个网址只是范例，只要是任一PHP的站点即可
     
     <item>
       <title>转载, 春晚诗朗诵《心里话》之程序员版!! </title>
-      <link>https://huobazi.aspxboy.com/blog/2007/03/06/cb-665199/</link>
+      <link>https://huobazi.github.com/blog/2007/03/06/cb-665199/</link>
       <pubDate>Tue, 06 Mar 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/03/06/cb-665199/</guid>
+      <guid>https://huobazi.github.com/blog/2007/03/06/cb-665199/</guid>
       <description>要问我是谁？
 过去，我总不愿回答，
 因为我怕，
@@ -179,10 +179,10 @@ http://community.csdn.net/Expert/topic/5370/5370546.xml?temp=.6211817</descripti
     
     <item>
       <title>原来验证码可以租的哦</title>
-      <link>https://huobazi.aspxboy.com/blog/2006/04/17/textdisguisecaptchaimage/</link>
+      <link>https://huobazi.github.com/blog/2006/04/17/textdisguisecaptchaimage/</link>
       <pubDate>Mon, 17 Apr 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/04/17/textdisguisecaptchaimage/</guid>
+      <guid>https://huobazi.github.com/blog/2006/04/17/textdisguisecaptchaimage/</guid>
       <description>http://www.textdisguise.com/TextDisguise/default.aspx
 提供webservice生成防止机器人的CAPTCHA Image
 看样子挺贵的，不过Demo看起来很不错。</description>
@@ -190,10 +190,10 @@ http://community.csdn.net/Expert/topic/5370/5370546.xml?temp=.6211817</descripti
     
     <item>
       <title>一个很全的教程站</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/06/01/cb-12759/</link>
+      <link>https://huobazi.github.com/blog/2004/06/01/cb-12759/</link>
       <pubDate>Tue, 01 Jun 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/06/01/cb-12759/</guid>
+      <guid>https://huobazi.github.com/blog/2004/06/01/cb-12759/</guid>
       <description>很少见教程大全，不知道我是不是很落伍，今天才逛到这里
 
 HTML Tutorials
@@ -234,10 +234,10 @@ Learn PHP
     
     <item>
       <title>打开一个Excel模板文件填充数据另存为一个文件</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/04/27/filldatatoexceltemplate/</link>
+      <link>https://huobazi.github.com/blog/2004/04/27/filldatatoexceltemplate/</link>
       <pubDate>Tue, 27 Apr 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/04/27/filldatatoexceltemplate/</guid>
+      <guid>https://huobazi.github.com/blog/2004/04/27/filldatatoexceltemplate/</guid>
       <description>最近做的东西要求打开一个Excel文件模板后填充数据
 开始用OleDb连接该Excel文件更新老是出错误 “需要一个可更新的.....“
 http://expert.csdn.net/Expert/topic/2992/2992809.xml?temp=.4825403

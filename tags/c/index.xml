@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>C# on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/c/</link>
+    <link>https://huobazi.github.com/tags/c/</link>
     <description>Recent content in C# on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 06 Aug 2009 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/c/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/c/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>不改程序, 创建同一个程序不同服务名的方法</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/08/06/mulit-window-service-one-exe/</link>
+      <link>https://huobazi.github.com/blog/2009/08/06/mulit-window-service-one-exe/</link>
       <pubDate>Thu, 06 Aug 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/08/06/mulit-window-service-one-exe/</guid>
+      <guid>https://huobazi.github.com/blog/2009/08/06/mulit-window-service-one-exe/</guid>
       <description>&lt;p&gt;&lt;p&gt;以往写windows service都需要个ProjectInstaller和serviceInstaller并配置serviceName，这样build出来的exe在install成windows service时我们会：&lt;/p&gt;
 &lt;pre&gt;@echo 安装WindowService
 @Set Path=C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727;
@@ -30,10 +30,10 @@ pause
     
     <item>
       <title>Asp.Net发邮件，如何发送附件</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/07/21/how-to-send-an-email-with-attachments/</link>
+      <link>https://huobazi.github.com/blog/2009/07/21/how-to-send-an-email-with-attachments/</link>
       <pubDate>Tue, 21 Jul 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/07/21/how-to-send-an-email-with-attachments/</guid>
+      <guid>https://huobazi.github.com/blog/2009/07/21/how-to-send-an-email-with-attachments/</guid>
       <description>&lt;p&gt;&lt;p&gt;使用如下代码可以发送附件&lt;/p&gt;
 &lt;pre&gt;MailMessage mail = new MailMessage();
 mail.To = &amp;rdquo;me@mycompany.com&amp;rdquo;;
@@ -50,20 +50,20 @@ SmtpMail.Send( mail );&lt;/pre&gt;
     
     <item>
       <title>知识死角,name相同的html element</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/07/17/same-name-element-in-one-page/</link>
+      <link>https://huobazi.github.com/blog/2009/07/17/same-name-element-in-one-page/</link>
       <pubDate>Fri, 17 Jul 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/07/17/same-name-element-in-one-page/</guid>
+      <guid>https://huobazi.github.com/blog/2009/07/17/same-name-element-in-one-page/</guid>
       <description>&lt;p&gt;&lt;p&gt;今天在帮同事调程序时发现了这个死角&lt;br /&gt;现象如下，没有任何输入的textarea提交到服务端后得到的值总是&amp;rdquo;,&amp;rdquo;&lt;br /&gt;找了半天发现是因为页面上两个textarea的name相同，以前只知道页面上radio的name相同则是一个组，name相同的&lt;br /&gt;的checkbox提交后是以逗号分隔值的，于是做了下面代码的试验，发现任何name相同的element提交到服务端都会得到逗号分隔的值，以前还不知道这个，汗&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>C#中如何深度克隆一个对象？</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/07/15/make-a-deep-clone-of-the-object/</link>
+      <link>https://huobazi.github.com/blog/2009/07/15/make-a-deep-clone-of-the-object/</link>
       <pubDate>Wed, 15 Jul 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/07/15/make-a-deep-clone-of-the-object/</guid>
+      <guid>https://huobazi.github.com/blog/2009/07/15/make-a-deep-clone-of-the-object/</guid>
       <description>&lt;p&gt;&lt;p&gt;如何深度克隆一个对象？&lt;/p&gt;
 &lt;p&gt;普通版:&lt;/p&gt;
 &lt;pre&gt;
@@ -85,10 +85,10 @@ SmtpMail.Send( mail );&lt;/pre&gt;
     
     <item>
       <title>撞墙吧 Array.IndexOf(xxx)</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/09/18/cb-44424/</link>
+      <link>https://huobazi.github.com/blog/2004/09/18/cb-44424/</link>
       <pubDate>Sat, 18 Sep 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/09/18/cb-44424/</guid>
+      <guid>https://huobazi.github.com/blog/2004/09/18/cb-44424/</guid>
       <description>要在后台把CheckBoxList的某个ListItem 的selected给true了
 遍历该CheckBoxList,写下了下面注释内的代码，死活不能选中我的第个CheckBox
 
@@ -121,10 +121,10 @@ if (Array.IndexOf(xxxxx) &amp;gt; 0) 用力吧555555，撞的头都疼了.</desc
     
     <item>
       <title>疑惑 关于 多条件判断语句 的写法</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/08/21/cb-35432/</link>
+      <link>https://huobazi.github.com/blog/2004/08/21/cb-35432/</link>
       <pubDate>Sat, 21 Aug 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/08/21/cb-35432/</guid>
+      <guid>https://huobazi.github.com/blog/2004/08/21/cb-35432/</guid>
       <description>写法1
 if ( 条件1 &amp;amp;&amp;amp; 条件2)
 {

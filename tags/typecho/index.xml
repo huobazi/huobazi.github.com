@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Typecho on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/typecho/</link>
+    <link>https://huobazi.github.com/tags/typecho/</link>
     <description>Recent content in Typecho on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 06 Mar 2012 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/typecho/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/typecho/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>从typecho转换到Octopress了</title>
-      <link>https://huobazi.aspxboy.com/blog/2012/03/06/convert-typecho-to-octopress/</link>
+      <link>https://huobazi.github.com/blog/2012/03/06/convert-typecho-to-octopress/</link>
       <pubDate>Tue, 06 Mar 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2012/03/06/convert-typecho-to-octopress/</guid>
+      <guid>https://huobazi.github.com/blog/2012/03/06/convert-typecho-to-octopress/</guid>
       <description>人生在于折腾,所以将博客转换到Octopress了
 我的博客经历了如下几次变动：
 2003年1月,自己装了个SnowForum，用来写些技术记录之类的东西
@@ -32,19 +32,19 @@
     
     <item>
       <title>nginx下typecho的rewrite</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/07/09/nginx-typecho-rewrite/</link>
+      <link>https://huobazi.github.com/blog/2009/07/09/nginx-typecho-rewrite/</link>
       <pubDate>Thu, 09 Jul 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/07/09/nginx-typecho-rewrite/</guid>
+      <guid>https://huobazi.github.com/blog/2009/07/09/nginx-typecho-rewrite/</guid>
       <description>&lt;p&gt;导数据到typecho的时候是在localhost的windows xp系统上用的apache,部署时用的是nginx&lt;br /&gt;先是发现无法登陆按照&lt;a href=&#34;http://forum.typecho.org/viewtopic.php?f=4&amp;amp;t=238&amp;amp;p=852&amp;amp;hilit=nginx#p852&#34; target=&#34;_blank&#34;&gt;这篇帖子&lt;/a&gt;内的方法配置了vhost.conf，发现可以登陆了，接着又出现了&lt;br /&gt;无法编辑post的问题，具体症状见&lt;a href=&#34;http://forum.typecho.org/viewtopic.php?f=4&amp;amp;t=270&#34; target=&#34;_blank&#34;&gt;这篇帖子&lt;/a&gt;,甚是郁闷啊，google+baidu 找到一片描写wp的&lt;br /&gt;rewrite的&lt;a href=&#34;http://hi.baidu.com/3322/blog/item/95d254e7594a012bb93820bb.html&#34; target=&#34;_blank&#34;&gt;帖子&lt;/a&gt;,因typecho与wp笔记像，抱着试试看的想法,在测试站点试验了一下，嘿嘿&lt;br /&gt;能用，转寄在此，备忘&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>从Wordpress转到Typecho了</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/07/04/myblog-from-wordpress-to-typecho/</link>
+      <link>https://huobazi.github.com/blog/2009/07/04/myblog-from-wordpress-to-typecho/</link>
       <pubDate>Sat, 04 Jul 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/07/04/myblog-from-wordpress-to-typecho/</guid>
+      <guid>https://huobazi.github.com/blog/2009/07/04/myblog-from-wordpress-to-typecho/</guid>
       <description>WP比较占资源，今天把博客又转到Typecho了，忙乎了大半夜(现在接近临晨4点)，东拼西凑，南抄北挪，终于啊，皮肤基本上搞定了，发现Typecho的皮肤也蛮简单的，默认皮肤就七八个文件，照着改也蛮容易入门的。
 郁闷的是现在还是在localhost上，自己点击，速度超好，刷刷刷的哦。还有就是Typecho这个版本（0.6）默认没有WYSIWYG的编辑器，只这篇post就是手写发出的，不过这样也好，以前在博客园用编辑器编辑的博客有时候因皮肤调整，会出现编辑器的html不符合皮肤，撑的页面不好看。
 最搞的是我一直没找到如何处理分类排序的功能，还去官方论坛发了个贴（标准的新手贴），被告知按住拖动就OK了...

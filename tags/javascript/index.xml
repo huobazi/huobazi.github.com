@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Javascript on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/javascript/</link>
+    <link>https://huobazi.github.com/tags/javascript/</link>
     <description>Recent content in Javascript on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 02 Jun 2010 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Google 给几个Javascript Framework提供的CDN地址</title>
-      <link>https://huobazi.aspxboy.com/blog/2010/06/02/google-js-framework-cdn/</link>
+      <link>https://huobazi.github.com/blog/2010/06/02/google-js-framework-cdn/</link>
       <pubDate>Wed, 02 Jun 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2010/06/02/google-js-framework-cdn/</guid>
+      <guid>https://huobazi.github.com/blog/2010/06/02/google-js-framework-cdn/</guid>
       <description>&lt;p&gt;&lt;p&gt;Google 给几个Javascript Framework提供的CDN地址:&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>使用window.location跳转，在IE中UrlReffer不被记录</title>
-      <link>https://huobazi.aspxboy.com/blog/2010/01/21/window-location-href-ie-request-reffer/</link>
+      <link>https://huobazi.github.com/blog/2010/01/21/window-location-href-ie-request-reffer/</link>
       <pubDate>Thu, 21 Jan 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2010/01/21/window-location-href-ie-request-reffer/</guid>
+      <guid>https://huobazi.github.com/blog/2010/01/21/window-location-href-ie-request-reffer/</guid>
       <description>&lt;p&gt;使用window.location跳转，在FF中，没问题，下一页面可以取得UrlReffer，但在IE中UrlReffer不被记录&lt;/p&gt;
 &lt;p&gt;真变态，&lt;/p&gt;
 &lt;p&gt;让我头痛了半天，弄了个丑陋的办法做了如下实现：&lt;/p&gt;</description>
@@ -34,10 +34,10 @@
     
     <item>
       <title>FckEditor,远程图片下载,插件</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/11/02/fckeditorremoteimagerubber/</link>
+      <link>https://huobazi.github.com/blog/2007/11/02/fckeditorremoteimagerubber/</link>
       <pubDate>Fri, 02 Nov 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/11/02/fckeditorremoteimagerubber/</guid>
+      <guid>https://huobazi.github.com/blog/2007/11/02/fckeditorremoteimagerubber/</guid>
       <description>有时候我们从其他网页上拷贝来的内容中含有图片，当原始地址失效后就会影响读者阅读。
 所以我制作了这样一个插件，可以将远程图片保存到本地服务器。声明：下面的文字是本文不可缺少的部分，转载请保留，谢谢！
 ////////////////////////////////////////////////////
@@ -67,10 +67,10 @@ E:\IISROOT\FckTest\FckTest\fckeditor\editor\plugins\remoteimagerubber\remoteimag
     
     <item>
       <title>一个很全的教程站</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/06/01/cb-12759/</link>
+      <link>https://huobazi.github.com/blog/2004/06/01/cb-12759/</link>
       <pubDate>Tue, 01 Jun 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/06/01/cb-12759/</guid>
+      <guid>https://huobazi.github.com/blog/2004/06/01/cb-12759/</guid>
       <description>很少见教程大全，不知道我是不是很落伍，今天才逛到这里
 
 HTML Tutorials
@@ -111,10 +111,10 @@ Learn PHP
     
     <item>
       <title>使网页中的元素可编辑</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/02/04/cb-830/</link>
+      <link>https://huobazi.github.com/blog/2004/02/04/cb-830/</link>
       <pubDate>Wed, 04 Feb 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/02/04/cb-830/</guid>
+      <guid>https://huobazi.github.com/blog/2004/02/04/cb-830/</guid>
       <description>在net_lover的文章里找到了答案.
 http://www.csdn.net/Develop/Read_Article.asp?Id=4405
 代码如下：

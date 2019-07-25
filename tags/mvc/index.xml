@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mvc on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/mvc/</link>
+    <link>https://huobazi.github.com/tags/mvc/</link>
     <description>Recent content in Mvc on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 01 Dec 2008 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/mvc/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/mvc/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>把ASP.NET MVC的路由利用配置维护起来</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/12/01/asp-net-mvc-route-config/</link>
+      <link>https://huobazi.github.com/blog/2008/12/01/asp-net-mvc-route-config/</link>
       <pubDate>Mon, 01 Dec 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/12/01/asp-net-mvc-route-config/</guid>
+      <guid>https://huobazi.github.com/blog/2008/12/01/asp-net-mvc-route-config/</guid>
       <description>配置大多就是文件配置或者数据库配置了
 ref:
 http://mnour.blogspot.com/2008/11/mvc-routing-using-custom-configuration.html
@@ -27,10 +27,10 @@ http://www.iansuttle.com/blog/post/ASPNET-MVC-Store-Routes-in-the-Database.aspx
     
     <item>
       <title>Latest preview of the ASP.Net MVC available on CodePlex</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/07/17/mvcpreview4/</link>
+      <link>https://huobazi.github.com/blog/2008/07/17/mvcpreview4/</link>
       <pubDate>Thu, 17 Jul 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/07/17/mvcpreview4/</guid>
+      <guid>https://huobazi.github.com/blog/2008/07/17/mvcpreview4/</guid>
       <description>ASP.NET MVC Preview 4 available!!! ASP.NET MVC CodePlex Preview 4  runtime binary, 1075K, uploaded Today - 772 downloads  
  ASP.NET Codeplex Preview 4 Readme documentation, 71K, uploaded Today - 359 downloads  
  ASP.NET Codeplex Preview 4 Readme (PDF) documentation, 469K, uploaded Today - 360 downloads  

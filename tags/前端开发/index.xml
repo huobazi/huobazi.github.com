@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>前端开发 on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</link>
+    <link>https://huobazi.github.com/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</link>
     <description>Recent content in 前端开发 on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 06 Aug 2010 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>淘宝首页 say goodbye to YUI 了还是forever的</title>
-      <link>https://huobazi.aspxboy.com/blog/2010/08/06/taobao-say-goodbye-to-yui/</link>
+      <link>https://huobazi.github.com/blog/2010/08/06/taobao-say-goodbye-to-yui/</link>
       <pubDate>Fri, 06 Aug 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2010/08/06/taobao-say-goodbye-to-yui/</guid>
+      <guid>https://huobazi.github.com/blog/2010/08/06/taobao-say-goodbye-to-yui/</guid>
       <description>好久没有时间读google reader了攒了上千条，今天上去，玉伯的一则快讯映入眼帘
 Thanks YUI, and says goodbye to YUI forever!
 http://lifesinger.org/blog/2010/08/kissy-briefings-1/
@@ -25,10 +25,10 @@ http://lifesinger.org/blog/2010/08/kissy-briefings-1/
     
     <item>
       <title>使用window.location跳转，在IE中UrlReffer不被记录</title>
-      <link>https://huobazi.aspxboy.com/blog/2010/01/21/window-location-href-ie-request-reffer/</link>
+      <link>https://huobazi.github.com/blog/2010/01/21/window-location-href-ie-request-reffer/</link>
       <pubDate>Thu, 21 Jan 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2010/01/21/window-location-href-ie-request-reffer/</guid>
+      <guid>https://huobazi.github.com/blog/2010/01/21/window-location-href-ie-request-reffer/</guid>
       <description>&lt;p&gt;使用window.location跳转，在FF中，没问题，下一页面可以取得UrlReffer，但在IE中UrlReffer不被记录&lt;/p&gt;
 &lt;p&gt;真变态，&lt;/p&gt;
 &lt;p&gt;让我头痛了半天，弄了个丑陋的办法做了如下实现：&lt;/p&gt;</description>
@@ -36,19 +36,19 @@ http://lifesinger.org/blog/2010/08/kissy-briefings-1/
     
     <item>
       <title>腾讯webQQ的 CSS Sprite</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/11/28/webqq-css-sprite/</link>
+      <link>https://huobazi.github.com/blog/2009/11/28/webqq-css-sprite/</link>
       <pubDate>Sat, 28 Nov 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/11/28/webqq-css-sprite/</guid>
+      <guid>https://huobazi.github.com/blog/2009/11/28/webqq-css-sprite/</guid>
       <description>&lt;p&gt;web qq速度很快，很多图标处理的也很漂亮，偷偷看了一下sprite的图片，所有图标都在这个图里了20多k，性能压倒一切啊。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>在线编辑器的一个新选择。</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/10/27/kissy-editor/</link>
+      <link>https://huobazi.github.com/blog/2009/10/27/kissy-editor/</link>
       <pubDate>Tue, 27 Oct 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/10/27/kissy-editor/</guid>
+      <guid>https://huobazi.github.com/blog/2009/10/27/kissy-editor/</guid>
       <description>今天lifesinger发布了淘宝编辑器,
 可以在这里看到演示
 介绍可以看这里，http://lifesinger.org/blog/2009/10/kissy-editor/</description>
@@ -56,20 +56,20 @@ http://lifesinger.org/blog/2010/08/kissy-briefings-1/
     
     <item>
       <title>知识死角,name相同的html element</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/07/17/same-name-element-in-one-page/</link>
+      <link>https://huobazi.github.com/blog/2009/07/17/same-name-element-in-one-page/</link>
       <pubDate>Fri, 17 Jul 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/07/17/same-name-element-in-one-page/</guid>
+      <guid>https://huobazi.github.com/blog/2009/07/17/same-name-element-in-one-page/</guid>
       <description>&lt;p&gt;&lt;p&gt;今天在帮同事调程序时发现了这个死角&lt;br /&gt;现象如下，没有任何输入的textarea提交到服务端后得到的值总是&amp;rdquo;,&amp;rdquo;&lt;br /&gt;找了半天发现是因为页面上两个textarea的name相同，以前只知道页面上radio的name相同则是一个组，name相同的&lt;br /&gt;的checkbox提交后是以逗号分隔值的，于是做了下面代码的试验，发现任何name相同的element提交到服务端都会得到逗号分隔的值，以前还不知道这个，汗&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>jQuery从此更牛了</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/10/07/jquerycool/</link>
+      <link>https://huobazi.github.com/blog/2008/10/07/jquerycool/</link>
       <pubDate>Tue, 07 Oct 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/10/07/jquerycool/</guid>
+      <guid>https://huobazi.github.com/blog/2008/10/07/jquerycool/</guid>
       <description>&lt;p&gt;为什么更牛了?&lt;/p&gt;
 &lt;p&gt; &lt;/p&gt;
 &lt;p&gt;26日回家，昨天才返回，这么好的消息自己错过了，补记一下。&lt;/p&gt;
@@ -79,10 +79,10 @@ http://lifesinger.org/blog/2010/08/kissy-briefings-1/
     
     <item>
       <title>真郁闷，ListItem的Attributes让我碰到了</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/09/18/cb-44389/</link>
+      <link>https://huobazi.github.com/blog/2004/09/18/cb-44389/</link>
       <pubDate>Sat, 18 Sep 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/09/18/cb-44389/</guid>
+      <guid>https://huobazi.github.com/blog/2004/09/18/cb-44389/</guid>
       <description>想给CheckBoxList的Item加个Onclick执行的javascript函数
  CheckBoxList chk_list_big =(CheckBoxList)e.Item.FindControl(&#34;chk_list_big&#34;) asCheckBoxList;
 if(chk_list_big !=null)
@@ -101,10 +101,10 @@ http://support.microsoft.com/default.aspx?scid=kb;en-us;309338&amp;amp;Product=N
     
     <item>
       <title>问题，如何把上传文件的浏览按钮换成其他样式 或者图片</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/09/15/cb-43249/</link>
+      <link>https://huobazi.github.com/blog/2004/09/15/cb-43249/</link>
       <pubDate>Wed, 15 Sep 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/09/15/cb-43249/</guid>
+      <guid>https://huobazi.github.com/blog/2004/09/15/cb-43249/</guid>
       <description>我的上篇随笔中，写了如何替换“浏览”按钮的代码
 有朋友指出 该表单无法提交，
 由于我当时只是测试了 能否实现替换和浏览
@@ -131,10 +131,10 @@ document.forms[0].browse.disabled =true; }&amp;lt;/script&amp;gt;
     
     <item>
       <title>小技巧，如何把上传文件的浏览按钮换成其他样式 或者图片</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/09/14/cb-43051/</link>
+      <link>https://huobazi.github.com/blog/2004/09/14/cb-43051/</link>
       <pubDate>Tue, 14 Sep 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/09/14/cb-43051/</guid>
+      <guid>https://huobazi.github.com/blog/2004/09/14/cb-43051/</guid>
       <description>本随笔缩写内容有误，对不起，谢谢！
 csdn上有朋友问道这个问题
 上google跑了跑，从这里和csdn的980337(面包喳喳) 朋友的回复得到提示，做了做测试。
@@ -151,25 +151,25 @@ document.test_form.file.value =document.all.test_form.browse.value; }&amp;lt;/
     
     <item>
       <title>小雕虫,不被Google工具条拦截的弹出窗口</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/07/10/cb-7697-1/</link>
+      <link>https://huobazi.github.com/blog/2004/07/10/cb-7697-1/</link>
       <pubDate>Sat, 10 Jul 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/07/10/cb-7697-1/</guid>
+      <guid>https://huobazi.github.com/blog/2004/07/10/cb-7697-1/</guid>
       <description>如果做项目必须用到弹出窗口可以考虑以下
 不保证任何时候能用
 更不保证在那个myie新版本下能用
 如果myie等浏览器屏蔽掉了地址内的某些字比如我演示中有“pop“字样,那也出不来
 demo+code:
-http://www.aspxboy.com/popWindow/
+http://www.github.com/popWindow/
 测试通过日期： 2004/07/10/ ！！！</description>
     </item>
     
     <item>
       <title>一个很全的教程站</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/06/01/cb-12759/</link>
+      <link>https://huobazi.github.com/blog/2004/06/01/cb-12759/</link>
       <pubDate>Tue, 01 Jun 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/06/01/cb-12759/</guid>
+      <guid>https://huobazi.github.com/blog/2004/06/01/cb-12759/</guid>
       <description>很少见教程大全，不知道我是不是很落伍，今天才逛到这里
 
 HTML Tutorials

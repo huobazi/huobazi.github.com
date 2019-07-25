@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>程序员 on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/%E7%A8%8B%E5%BA%8F%E5%91%98/</link>
+    <link>https://huobazi.github.com/tags/%E7%A8%8B%E5%BA%8F%E5%91%98/</link>
     <description>Recent content in 程序员 on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 06 Mar 2007 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/%E7%A8%8B%E5%BA%8F%E5%91%98/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/%E7%A8%8B%E5%BA%8F%E5%91%98/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>转载, 春晚诗朗诵《心里话》之程序员版!! </title>
-      <link>https://huobazi.aspxboy.com/blog/2007/03/06/cb-665199/</link>
+      <link>https://huobazi.github.com/blog/2007/03/06/cb-665199/</link>
       <pubDate>Tue, 06 Mar 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/03/06/cb-665199/</guid>
+      <guid>https://huobazi.github.com/blog/2007/03/06/cb-665199/</guid>
       <description>要问我是谁？
 过去，我总不愿回答，
 因为我怕，
@@ -47,10 +47,10 @@ http://community.csdn.net/Expert/topic/5370/5370546.xml?temp=.6211817</descripti
     
     <item>
       <title>好东西,程序员是这样喝酒的</title>
-      <link>https://huobazi.aspxboy.com/blog/2006/07/29/cb-462570/</link>
+      <link>https://huobazi.github.com/blog/2006/07/29/cb-462570/</link>
       <pubDate>Sat, 29 Jul 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/07/29/cb-462570/</guid>
+      <guid>https://huobazi.github.com/blog/2006/07/29/cb-462570/</guid>
       <description>大家喝的是啤酒。这时你入座了。 你给自己倒了杯可乐，这叫低配置。 你给自已倒了杯啤酒，这叫标准配置。 你给自己倒了杯茶水，这茶的颜色还跟啤酒一样，这叫木马。 你给自己倒了杯可乐，还滴了几滴醋，不仅颜色跟啤酒一样，而且不冒热气还有泡泡，这叫超级木马。 你的同事给你倒了杯白酒，这叫推荐配置。 
 人到齐了，酒席开始了。 你先一个人喝了一小口，这叫单元测试。 你跟旁边的人说哥们咱们随意，这叫交叉测试。 但是他说不行，这杯要干了，这叫压力测试。 于是你说那就大家一起来吧，这叫内部测试。 这个时候boss向全场举杯了，这叫公开测试。 
 菜过三巡，你就不跟他们客气了。 你向对面的人敬酒，这叫p2p. 你向对面的人敬酒，他回敬你，你又再敬他……，这叫tcp. 你向一桌人挨个敬酒，这叫令牌环。 你说只要是兄弟就干了这杯，这叫广播。 可是你的上司jj听了不高兴了，只有兄弟么，罚酒三杯。这叫炸弹。 可是你的下级mm听了不高兴了，我喝一口，你喝一杯，这叫恶意攻击。 有一个人过来向这桌敬酒，你说不行你先过了我这关，这叫防火墙。 你的小弟们过来敬你酒，这叫一对多。 你是boss，所有人过来敬你酒，这叫服务器。 
@@ -64,10 +64,10 @@ http://community.csdn.net/Expert/topic/4910/4910780.xml?temp=.4186212</descripti
     
     <item>
       <title>多收了三五斗（TCL mm版）(收藏.搞笑) </title>
-      <link>https://huobazi.aspxboy.com/blog/2004/08/17/cb-34217/</link>
+      <link>https://huobazi.github.com/blog/2004/08/17/cb-34217/</link>
       <pubDate>Tue, 17 Aug 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/08/17/cb-34217/</guid>
+      <guid>https://huobazi.github.com/blog/2004/08/17/cb-34217/</guid>
       <description>from: http://computer.mblogger.cn/vcbear/posts/13163.aspx TCL的停车场里，横七竖八停着各处来的自行车,助动车。门口排队的是UT的GG，把门口 塞得很满。厚厚的履历表和财产证明用各色的夹子夹者,一捆一捆地,填没了这只手和那只手 之间的空隙.门口进去就是TCL最大的会议厅了,联谊的MM就排在市场的那一边。朝晨的太阳 光从整洁的玻璃天棚斜射下来，光柱子落在吧台外面晃动着的几双Gucci高跟鞋上。 那些UTGG大清早骑自行车出来，穿越了半个高新区,到了TCL，早饭也不吃一下，便来到 吧台前面占卜他们的命运。“Manager 30万，Team Leader 20W，Engineer不要。”TCL的联 谊小姐有气没力地回答他们。　“什么！”UT的朋友几乎不相信自己的耳朵。美满的希望突然一沉，一会儿大家都呆 了。　“在六月里，你们不是说IT年薪10万么？”　“8万也要过，不要说10万。”　“哪里有涨得这样厉害的！”　“现在是什么时候，你们不知道么？各处的GG象潮水一般涌来,过几天还要涨呢！” 
 原来出来犹如赛龙船似的一股劲儿，现在在每个人的身体里松懈下来了。最近天照应， 很多人加了薪，税务局的兄台也不来作梗, 很快就拿到了年薪，有的还是优秀 Staff的头 衔,谁都以为该得透一透气了。　哪里知道临到最后的占卜，却得到比IT冬天或公司开除更坏的课兆！　“还是不要娶的好，我们回去呆在家里吧！”从简单的心里喷出了这样的愤激的话。 “嗤，”小姐冷笑着，“你们不干，人家就关门了么？各处地方多的是新来的GG,头几 批还没分派完，华为，中兴的优秀GG就要涌来了.现在各地的海归,硕士,博士,MBA也多得是. 高素质的丫头是为他们留着的&#34; 华为，中兴的优秀GG,硕士,博士,MBA,那是遥远的事情，仿佛可以不管。而已经30的GG 不找LP，却只能作为一句愤激的话说说罢了。怎么能够不娶呢？在家父母的命令是要遵守 的，为了来联谊，买了体面的西装革履，当初父向亲母亲夸下的海口,自己向狐朋狗友吹的 牛是要还的。　“我们到创维去找MM吧，”在创维，或许有比较好的命运等候着他，有人这么想。　但是，小姐又来了一个“嗤”，眨着微翘的睫毛说道：“不要说创维，就是找到康佳
 去也一样。我们同行公议，这两天的价钱是Manager 30万，Team Leader 20W，Engineer 不要”。 “到创维去找没有好处，”同伴间也提出了驳议。“创维的还要深圳户口，天知道他们 多收我们多少钱！就说依他们给，哪里来的钱？”　“小姐，能不能降低一点？”差不多是哀求的声气。　“降低一点，说说倒是很容易的一句话。我们的MM都是金枝玉叶养的，你们要知道，降 低一点，就没有SK-II，没有资生堂，没有TOYOTA，这样的傻事谁肯干？” “这个价钱实在太高了，我们做梦也没想到。去年的要求是15万，今年有的只要12万， 不，你小姐说的，10万也招过；我们想，今年总该比15万少一点吧。哪里知道只有20 万！” “小姐，就是去年的老价钱，年薪15万吧。”　“小姐，灰领GG可怜，你们行行好心，少赚一点吧。”　另一位小姐听得厌烦，把手里的空咖啡杯扔到街心，睁大了眼睛说,“你们嫌价钱低， 不要来找好了。是你们自己来的，并没有请你们来。只管多罗嗦做什么！我们有的是 Offer，不给你们，有别人的好给。你们看，又有几群GG挤过来了.”　三四张Glasses好不容易从人堆里挤过来，Glasses后面是充满着希望的年轻的脸。他们 随即加入先到的一群。斜伸下来的光柱子落在他们的西服的肩背上。　“听听看，今年什么价钱。”　“比去年都不如，要求Team Leader 20W”伴着一副懊丧到无可奈何的神色。　“什么！”希望犹如肥皂泡，一会儿又进裂了三四个。</description>
@@ -75,10 +75,10 @@ http://community.csdn.net/Expert/topic/4910/4910780.xml?temp=.4186212</descripti
     
     <item>
       <title>这次吵的更凶了！！</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/04/05/cb-5210/</link>
+      <link>https://huobazi.github.com/blog/2004/04/05/cb-5210/</link>
       <pubDate>Mon, 05 Apr 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/04/05/cb-5210/</guid>
+      <guid>https://huobazi.github.com/blog/2004/04/05/cb-5210/</guid>
       <description>1 http://blog.joycode.com/5drush/posts/18249.aspx
 从而引出
 2 http://blog.codelphi.com/virushuo/posts/3453.aspx
@@ -92,10 +92,10 @@ MVPs是一群值得佩服的人，因为我身边就有一位 。如果你知�
     
     <item>
       <title>又开始吵架了</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/02/03/cb-734/</link>
+      <link>https://huobazi.github.com/blog/2004/02/03/cb-734/</link>
       <pubDate>Tue, 03 Feb 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/02/03/cb-734/</guid>
+      <guid>https://huobazi.github.com/blog/2004/02/03/cb-734/</guid>
       <description>http://expert.csdn.net/Expert/topic/2697/2697501.xml?temp=.2264826
 不过没有这个帖子吵的凶哦</description>
     </item>

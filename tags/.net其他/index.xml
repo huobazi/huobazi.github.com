@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>.Net其他 on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/.net%E5%85%B6%E4%BB%96/</link>
+    <link>https://huobazi.github.com/tags/.net%E5%85%B6%E4%BB%96/</link>
     <description>Recent content in .Net其他 on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 09 Nov 2011 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/.net%E5%85%B6%E4%BB%96/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/.net%E5%85%B6%E4%BB%96/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>AutoGenerateColumns=&#39;true&#39;的GridView如何支持htmlencode/htmldecode</title>
-      <link>https://huobazi.aspxboy.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/</link>
+      <link>https://huobazi.github.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/</link>
       <pubDate>Wed, 09 Nov 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/</guid>
+      <guid>https://huobazi.github.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/</guid>
       <description>&lt;p&gt;&lt;p&gt;我们知道BoundField.HtmlEncode 属性可以设置一个单元格是否能够htmlencode，我今天碰到的问题是：自动生成列的GridView，表头可能是包含html的比如&amp;lt;font color=red&amp;gt;邮件&amp;lt;/font&amp;gt;，默认被htmlencode了，而我不希望这样做，所以有了如下的代码:&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>在Console下输入密码，以星号代替。</title>
-      <link>https://huobazi.aspxboy.com/blog/2011/06/22/password-masking-in-csharp-console-application/</link>
+      <link>https://huobazi.github.com/blog/2011/06/22/password-masking-in-csharp-console-application/</link>
       <pubDate>Wed, 22 Jun 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2011/06/22/password-masking-in-csharp-console-application/</guid>
+      <guid>https://huobazi.github.com/blog/2011/06/22/password-masking-in-csharp-console-application/</guid>
       <description>&lt;p&gt;如何在Console下输入密码，像*unix系统下那样不显示，或者显示星号，如下代码经过测试：&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>不改程序, 创建同一个程序不同服务名的方法</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/08/06/mulit-window-service-one-exe/</link>
+      <link>https://huobazi.github.com/blog/2009/08/06/mulit-window-service-one-exe/</link>
       <pubDate>Thu, 06 Aug 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/08/06/mulit-window-service-one-exe/</guid>
+      <guid>https://huobazi.github.com/blog/2009/08/06/mulit-window-service-one-exe/</guid>
       <description>&lt;p&gt;&lt;p&gt;以往写windows service都需要个ProjectInstaller和serviceInstaller并配置serviceName，这样build出来的exe在install成windows service时我们会：&lt;/p&gt;
 &lt;pre&gt;@echo 安装WindowService
 @Set Path=C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727;
@@ -49,20 +49,20 @@ pause
     
     <item>
       <title>如何判断一个类型是nullable类型，并得知它的原始类型</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/07/30/how-to-determine-whether-an-type-is-nullable-and-get-the-underlying-type/</link>
+      <link>https://huobazi.github.com/blog/2009/07/30/how-to-determine-whether-an-type-is-nullable-and-get-the-underlying-type/</link>
       <pubDate>Thu, 30 Jul 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/07/30/how-to-determine-whether-an-type-is-nullable-and-get-the-underlying-type/</guid>
+      <guid>https://huobazi.github.com/blog/2009/07/30/how-to-determine-whether-an-type-is-nullable-and-get-the-underlying-type/</guid>
       <description>&lt;p&gt;&lt;p&gt;有些时候我们需要判断某个类型是否是Nullable类型，并且可能需要知道它的原始类型，&lt;br /&gt;比如在做些ORM相关工作时，就需要这方面的应用，如下代码使用可以实现这个要求&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Asp.Net发邮件，如何发送附件</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/07/21/how-to-send-an-email-with-attachments/</link>
+      <link>https://huobazi.github.com/blog/2009/07/21/how-to-send-an-email-with-attachments/</link>
       <pubDate>Tue, 21 Jul 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/07/21/how-to-send-an-email-with-attachments/</guid>
+      <guid>https://huobazi.github.com/blog/2009/07/21/how-to-send-an-email-with-attachments/</guid>
       <description>&lt;p&gt;&lt;p&gt;使用如下代码可以发送附件&lt;/p&gt;
 &lt;pre&gt;MailMessage mail = new MailMessage();
 mail.To = &amp;rdquo;me@mycompany.com&amp;rdquo;;
@@ -79,10 +79,10 @@ SmtpMail.Send( mail );&lt;/pre&gt;
     
     <item>
       <title>C#中如何深度克隆一个对象？</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/07/15/make-a-deep-clone-of-the-object/</link>
+      <link>https://huobazi.github.com/blog/2009/07/15/make-a-deep-clone-of-the-object/</link>
       <pubDate>Wed, 15 Jul 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/07/15/make-a-deep-clone-of-the-object/</guid>
+      <guid>https://huobazi.github.com/blog/2009/07/15/make-a-deep-clone-of-the-object/</guid>
       <description>&lt;p&gt;&lt;p&gt;如何深度克隆一个对象？&lt;/p&gt;
 &lt;p&gt;普通版:&lt;/p&gt;
 &lt;pre&gt;
@@ -104,20 +104,20 @@ SmtpMail.Send( mail );&lt;/pre&gt;
     
     <item>
       <title>博客园到Wordpress搬家成功！</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/06/21/my-blog-moved-to-wp/</link>
+      <link>https://huobazi.github.com/blog/2009/06/21/my-blog-moved-to-wp/</link>
       <pubDate>Sun, 21 Jun 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/06/21/my-blog-moved-to-wp/</guid>
+      <guid>https://huobazi.github.com/blog/2009/06/21/my-blog-moved-to-wp/</guid>
       <description>终于把在博客园的博客的数据导入到Wordpress内了，包括随笔/文章，图片,标签，评论等，是写了两个C# console程序做到的，程序我传到博客园了，如果有需要的朋友可以试试。但请注意，要自己在博客园后台备份RSS文件放到Reader的Data目录内，设置为编译选项为永远复制，运行后会生成一个Entry.xml并且把博客内的图片和分类、Tag、评论等抓下来，然后将此xml文件拷贝到Writer内，在代码内修改一下你的Wordress的数据库连接，然后跑一下Writer，就可以完成数据导入到Wordpress了，时间匆忙，代码写的很乱，有些地方是针对本人需求处理的，如果你想要直接运行此程序完成你的博客园博客到Wordpress的转换，那是不可能滴！你一定要有简单的C#调试基础哦。
 http://files.cnblogs.com/huobazi/MyBlogTools.rar</description>
     </item>
     
     <item>
       <title>我学Linq to SQL做的demo</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/07/19/cb-1246773/</link>
+      <link>https://huobazi.github.com/blog/2008/07/19/cb-1246773/</link>
       <pubDate>Sat, 19 Jul 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/07/19/cb-1246773/</guid>
+      <guid>https://huobazi.github.com/blog/2008/07/19/cb-1246773/</guid>
       <description>最近才开始学LINQ to SQL,
 做了个demo，都是基本操作。
 有兴趣的朋友看看。
@@ -126,10 +126,10 @@ http://download.csdn.net/source/528628</description>
     
     <item>
       <title>提供我现用的Vs配色（灰黑色调）下载，有兴趣的朋友玩玩。</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/06/14/myvs2005colorschema/</link>
+      <link>https://huobazi.github.com/blog/2008/06/14/myvs2005colorschema/</link>
       <pubDate>Sat, 14 Jun 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/06/14/myvs2005colorschema/</guid>
+      <guid>https://huobazi.github.com/blog/2008/06/14/myvs2005colorschema/</guid>
       <description>&lt;p&gt;提供我现用的Vs配色（灰黑色调）下载，&lt;/p&gt;
 &lt;p&gt; &lt;/p&gt;
 &lt;p&gt;有兴趣的朋友玩玩。&lt;/p&gt;
@@ -141,10 +141,10 @@ http://download.csdn.net/source/528628</description>
     
     <item>
       <title>使用AzMan找不到Microsoft.Interop.Security.AzRoles的解决方法</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/04/20/microsoftinteropsecurityazroles/</link>
+      <link>https://huobazi.github.com/blog/2008/04/20/microsoftinteropsecurityazroles/</link>
       <pubDate>Sun, 20 Apr 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/04/20/microsoftinteropsecurityazroles/</guid>
+      <guid>https://huobazi.github.com/blog/2008/04/20/microsoftinteropsecurityazroles/</guid>
       <description>在c:/Windows/system32下找到azRoles.dll
 如果没有Xp/2003请安装http://www.microsoft.com/downloads/details.aspx?FamilyID=e487f885-f0c7-436a-a392-25793a25bad7&amp;amp;DisplayLang=en.
 Win2000请安装http://www.microsoft.com/downloads/details.aspx?FamilyID=7edde11f-bcea-4773-a292-84525f23baf7&amp;amp;DisplayLang=en.
@@ -166,10 +166,10 @@ ft.Interop.Security.AzRoles.dll
     
     <item>
       <title>使用dotNetZipLib轻松压缩目录/文件夹</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/03/29/usingdotnetziplibcompressadirectory/</link>
+      <link>https://huobazi.github.com/blog/2008/03/29/usingdotnetziplibcompressadirectory/</link>
       <pubDate>Sat, 29 Mar 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/03/29/usingdotnetziplibcompressadirectory/</guid>
+      <guid>https://huobazi.github.com/blog/2008/03/29/usingdotnetziplibcompressadirectory/</guid>
       <description>.net1.1时代我们选SharpZipLib
 .net2.0时代我们选System.IO.Compression名称空间下的东东
 .net3.0时代我们选System.IO.Packaging名称空间下的东东。
@@ -187,10 +187,10 @@ DotNet Zip Library   </description>
     
     <item>
       <title>Telligent 发布了 CMS 系统</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/02/22/graffiticmsreleased/</link>
+      <link>https://huobazi.github.com/blog/2008/02/22/graffiticmsreleased/</link>
       <pubDate>Fri, 22 Feb 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/02/22/graffiticmsreleased/</guid>
+      <guid>https://huobazi.github.com/blog/2008/02/22/graffiticmsreleased/</guid>
       <description>Telligent Community Server 的出产厂商
 发布了 他们的新CMS产品 GraffitiCMS
 关于价格：http://get.graffiticms.com/
@@ -199,10 +199,10 @@ Licensing：http://graffiticms.com/learn-more/licensing/</description>
     
     <item>
       <title>DbEntry.Net 又一个国产开源ORM数据访问及 WEB 框架</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/01/31/dbentry/</link>
+      <link>https://huobazi.github.com/blog/2008/01/31/dbentry/</link>
       <pubDate>Thu, 31 Jan 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/01/31/dbentry/</guid>
+      <guid>https://huobazi.github.com/blog/2008/01/31/dbentry/</guid>
       <description>今天去逛CodePlex发现这个东西
 链接到JavaEye的blog，作者：梁利锋
 中文描述：http://llf.hanzify.org/llf/show.asp?id=555
@@ -228,10 +228,10 @@ FluentInterface query syntax
     
     <item>
       <title>Google的投票站点在用Asp.net</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/01/25/googleandaspdotnet/</link>
+      <link>https://huobazi.github.com/blog/2008/01/25/googleandaspdotnet/</link>
       <pubDate>Fri, 25 Jan 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/01/25/googleandaspdotnet/</guid>
+      <guid>https://huobazi.github.com/blog/2008/01/25/googleandaspdotnet/</guid>
       <description>https://survey.google.com/wix/p0621608.aspx
 https://survey.google.com/aaaaaaaaaaaaaa.axd
 
@@ -244,10 +244,10 @@ X-Powered-By ASP.NET</description>
     
     <item>
       <title>一系列SQL SERVER SQL 的分析文章</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/09/07/cb-885304/</link>
+      <link>https://huobazi.github.com/blog/2007/09/07/cb-885304/</link>
       <pubDate>Fri, 07 Sep 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/09/07/cb-885304/</guid>
+      <guid>https://huobazi.github.com/blog/2007/09/07/cb-885304/</guid>
       <description>位于：
 http://blogs.sqlpassj.org/mitsugi/archive/2007/09.aspx
 语言： 日文
@@ -261,10 +261,10 @@ http://blogs.sqlpassj.org/mitsugi/archive/2007/09.aspx
     
     <item>
       <title>.Net专业人力资源网上线试运行.</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/07/07/dotnetjobscn/</link>
+      <link>https://huobazi.github.com/blog/2007/07/07/dotnetjobscn/</link>
       <pubDate>Sat, 07 Jul 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/07/07/dotnetjobscn/</guid>
+      <guid>https://huobazi.github.com/blog/2007/07/07/dotnetjobscn/</guid>
       <description>自己也是搞.net开发的，经常看到有些朋友在csdn发求职/招聘贴
 国内而现有的大招聘网站又未见专门为我们这拨人有个专门分类。就花了点时间做了这样一个网站。
 今天开始试运行。
@@ -277,10 +277,10 @@ http://www.dotnetjobs.cn/FeedBack.aspx</description>
     
     <item>
       <title>讨论一下类似BlogEngine为何要一次性加载所有Post到内存</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/07/04/lazyinitializationorearlyinitializationinblogengine/</link>
+      <link>https://huobazi.github.com/blog/2007/07/04/lazyinitializationorearlyinitializationinblogengine/</link>
       <pubDate>Wed, 04 Jul 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/07/04/lazyinitializationorearlyinitializationinblogengine/</guid>
+      <guid>https://huobazi.github.com/blog/2007/07/04/lazyinitializationorearlyinitializationinblogengine/</guid>
       <description>试验了一下给BlogEngine生成10000个post 程序第一次运行时等待的时间让我想自杀（白屏了近2分钟)
 看了一下代码，发现BlogEngine在第一次运行时候加载所有Post（从数据库)到List内,类似（Early initialization）
 当新添加post时，给数据库（xml/database)内加入该post同时给List内追加该post
@@ -312,10 +312,10 @@ http://www.dotnetjobs.cn/FeedBack.aspx</description>
     
     <item>
       <title>郁闷啊，竟然用256M内存跑着VS2005 SP1 好几个月</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/05/27/vs2005sp1256andmram/</link>
+      <link>https://huobazi.github.com/blog/2007/05/27/vs2005sp1256andmram/</link>
       <pubDate>Sun, 27 May 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/05/27/vs2005sp1256andmram/</guid>
+      <guid>https://huobazi.github.com/blog/2007/05/27/vs2005sp1256andmram/</guid>
       <description>还有什么比这更郁闷的啊
 几个月前 为了装 VS2005 SP1 加了160G硬盘，然后开新的装系统装VS2005 装SP1
 后来的这几个月发现机子慢如牛啊，今天早上，无意间看到了开机前的一幕256M ？？？？
@@ -325,10 +325,10 @@ http://www.dotnetjobs.cn/FeedBack.aspx</description>
     
     <item>
       <title>给Visual Studio 2005设置一个代码边界线，提醒自己，别写的太长哦。</title>
-      <link>https://huobazi.aspxboy.com/blog/2006/08/11/visualstudiocodewidthsetting/</link>
+      <link>https://huobazi.github.com/blog/2006/08/11/visualstudiocodewidthsetting/</link>
       <pubDate>Fri, 11 Aug 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/08/11/visualstudiocodewidthsetting/</guid>
+      <guid>https://huobazi.github.com/blog/2006/08/11/visualstudiocodewidthsetting/</guid>
       <description>Codeproject上有一个关于代码宽度的调查
 http://www.codeproject.com/script/survey/detail.asp?survey=590&amp;amp;df=100&amp;amp;forumid=305784&amp;amp;select=1615639#xx1615639xx
 其中的评论中有人贴到下面这个地址
@@ -341,19 +341,19 @@ http://blogs.msdn.com/saraford/archive/2004/11/15/257953.aspx
     
     <item>
       <title>比尔盖茨的又一个网站</title>
-      <link>https://huobazi.aspxboy.com/blog/2006/05/25/iiswebsite/</link>
+      <link>https://huobazi.github.com/blog/2006/05/25/iiswebsite/</link>
       <pubDate>Thu, 25 May 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/05/25/iiswebsite/</guid>
+      <guid>https://huobazi.github.com/blog/2006/05/25/iiswebsite/</guid>
       <description>http://www.iis.net/default.aspx?tabid=1</description>
     </item>
     
     <item>
       <title>Communtiy Server论坛的帖子显示页面分页部分的Url Rewrite的构造方法</title>
-      <link>https://huobazi.aspxboy.com/blog/2005/10/07/cb-249806/</link>
+      <link>https://huobazi.github.com/blog/2005/10/07/cb-249806/</link>
       <pubDate>Fri, 07 Oct 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2005/10/07/cb-249806/</guid>
+      <guid>https://huobazi.github.com/blog/2005/10/07/cb-249806/</guid>
       <description>你可能会发现在Communtiy Server的论坛帖子列表页面
 比如http://communityserver.org/forums/129/ShowForum.aspx
 看下面分页处的连接使用的地址是类似ShowForum.aspx?PageIndex=2这样的地址
@@ -371,10 +371,10 @@ http://www.3pub.com/bbs/3/default.aspx</description>
     
     <item>
       <title>今天头又晕了</title>
-      <link>https://huobazi.aspxboy.com/blog/2005/04/14/cb-137712/</link>
+      <link>https://huobazi.github.com/blog/2005/04/14/cb-137712/</link>
       <pubDate>Thu, 14 Apr 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2005/04/14/cb-137712/</guid>
+      <guid>https://huobazi.github.com/blog/2005/04/14/cb-137712/</guid>
       <description>写了如下代码，还跟踪了半个多小时，没找出来问题 if(strCarId.StartsWith(&amp;ldquo;&amp;ldquo;))
 {
 strCarId.Replace(&amp;ldquo;&amp;ldquo;,&amp;ldquo;U&amp;ldquo;);
@@ -386,10 +386,10 @@ strCarId.Replace(&amp;ldquo;&amp;ldquo;,&amp;ldquo;T&amp;ldquo;);
     
     <item>
       <title>撞墙吧 Array.IndexOf(xxx)</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/09/18/cb-44424/</link>
+      <link>https://huobazi.github.com/blog/2004/09/18/cb-44424/</link>
       <pubDate>Sat, 18 Sep 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/09/18/cb-44424/</guid>
+      <guid>https://huobazi.github.com/blog/2004/09/18/cb-44424/</guid>
       <description>要在后台把CheckBoxList的某个ListItem 的selected给true了
 遍历该CheckBoxList,写下了下面注释内的代码，死活不能选中我的第个CheckBox
 
@@ -422,10 +422,10 @@ if (Array.IndexOf(xxxxx) &amp;gt; 0) 用力吧555555，撞的头都疼了.</desc
     
     <item>
       <title>TechNet月度光盘资料&#43;贺卡&#43;msn贴纸&#43;TechNet体恤 被哄抢而光</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/05/11/cb-8865/</link>
+      <link>https://huobazi.github.com/blog/2004/05/11/cb-8865/</link>
       <pubDate>Tue, 11 May 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/05/11/cb-8865/</guid>
+      <guid>https://huobazi.github.com/blog/2004/05/11/cb-8865/</guid>
       <description>前阵子换了工作，没有及时的更新TechNet的资料4月份的光盘资料被寄到原来单位去了
 连同一张贺卡，msn贴纸，TechNet的体恤 昨天同事带给了我。
 好消息和MM共享之... ...
@@ -439,10 +439,10 @@ MM的话“微软是关心你们这些开发人员，不想让你们打光棍，
     
     <item>
       <title>一个关于DataGrid的打印类,分享,感谢作者</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/04/30/cb-8176/</link>
+      <link>https://huobazi.github.com/blog/2004/04/30/cb-8176/</link>
       <pubDate>Fri, 30 Apr 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/04/30/cb-8176/</guid>
+      <guid>https://huobazi.github.com/blog/2004/04/30/cb-8176/</guid>
       <description>手中的活计需要打印,就到处找找。
 从google中扑获,挺不错的，大家共享～
 how can i print the data in DataGrid?http://forums.aspfree.com/archive/t-17107
@@ -456,12 +456,12 @@ private void printDocument_PrintPage(object sender, System.Drawing.Printing.Prin
     
     <item>
       <title>域名Whois信息查询(ASP.NET&#43;C#)</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/02/04/whoisinaspdotnet/</link>
+      <link>https://huobazi.github.com/blog/2004/02/04/whoisinaspdotnet/</link>
       <pubDate>Wed, 04 Feb 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/02/04/whoisinaspdotnet/</guid>
+      <guid>https://huobazi.github.com/blog/2004/02/04/whoisinaspdotnet/</guid>
       <description>去年写的了,是从点缀的博客学来的
-看演示请点这里:http://www.aspxboy.com/whois.aspx
+看演示请点这里:http://www.github.com/whois.aspx
 代码如下:
 &amp;lt;% @Page Language=&#34;C#&#34; %&amp;gt;
 &amp;lt;% @Import Namespace=&#34;System.Net.Sockets&#34; %&amp;gt;

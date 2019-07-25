@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>自定义控件 on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%A7%E4%BB%B6/</link>
+    <link>https://huobazi.github.com/tags/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%A7%E4%BB%B6/</link>
     <description>Recent content in 自定义控件 on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 05 Aug 2007 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%A7%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%A7%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>自定义控件实现广告内容后期加载，以及NamingContainer层次的应用</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/08/05/advertisementlazyloadingcontrol/</link>
+      <link>https://huobazi.github.com/blog/2007/08/05/advertisementlazyloadingcontrol/</link>
       <pubDate>Sun, 05 Aug 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/08/05/advertisementlazyloadingcontrol/</guid>
+      <guid>https://huobazi.github.com/blog/2007/08/05/advertisementlazyloadingcontrol/</guid>
       <description>&lt;p&gt;自定义控件：广告内容后期加载。以及NamingContainer层次的应用&lt;br /&gt;网站上的广告内容可能会因加载过慢而导致整个网页加载过慢&lt;br /&gt;我们可以考虑将广告内全部放在网页最底部，等整个页面加载完毕後&lt;br /&gt;再采用javascript使其显示，考虑给控件一个TargetContainerID标识&lt;br /&gt;控件广告内容将要被显示的容器ID，然后从控件自己所处的 开始向上查找该ID&lt;br /&gt;所指定的控件，(我们只向上找而没有向下找，并且没有处理某层次的&lt;br /&gt;子NamingContainer,所以不一定能够找到，这里没有考虑从Page对象向下递归查找&lt;br /&gt;主要考虑为了提高性能),如果没有找到，则考虑给用户一个事件让用户自己处理TargetContainer&lt;/p&gt;
 &lt;p&gt;下面的自定义控件对此实现了封装:&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>在自定义控件中实现ICallbackEventHandler接口不经过回发而实现客户端回掉</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/07/23/webcontrolandicallbackeventhandler/</link>
+      <link>https://huobazi.github.com/blog/2007/07/23/webcontrolandicallbackeventhandler/</link>
       <pubDate>Mon, 23 Jul 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/07/23/webcontrolandicallbackeventhandler/</guid>
+      <guid>https://huobazi.github.com/blog/2007/07/23/webcontrolandicallbackeventhandler/</guid>
       <description>在自定义控件中实现ICallbackEventHandler接口不经过回发而实现客户端回掉 Asp.Net2.0中新增了ICallbackEventHandler接口，用于指示控件可以作为服务器的回调事件的目标。
 MSDN中的描述:
 实现 ICallbackEventHandler 接口的控件的示例包括 GridView、DetailsView 和 TreeView 控件。当回调事件以实现了 ICallbackEventHandler 接口的控件为目标时，将把事件变量作为参数传递来调用 RaiseCallbackEvent 方法以处理该事件，并且GetCallbackResult 方法返回回调的结果。
@@ -59,10 +59,10 @@ RaiseCallbackEvent
     
     <item>
       <title>在写自定义控件时，如果控件某个属性允许被验证控件验证，需要注意微软在 WebUIValidation.js内的实现。</title>
-      <link>https://huobazi.aspxboy.com/blog/2006/12/01/customwebcontrolandwebuivalidationjs/</link>
+      <link>https://huobazi.github.com/blog/2006/12/01/customwebcontrolandwebuivalidationjs/</link>
       <pubDate>Fri, 01 Dec 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/12/01/customwebcontrolandwebuivalidationjs/</guid>
+      <guid>https://huobazi.github.com/blog/2006/12/01/customwebcontrolandwebuivalidationjs/</guid>
       <description>微软在WebUIValidation.js(System.Web的资源文件内自己找工具看吧)
 内有如下代码：
 functionValidatorGetValue(id) {
@@ -99,10 +99,10 @@ return&#34;&#34;;
     
     <item>
       <title>可以弹出确认对话框的自定义Web服务器控件ConfirmButton</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/04/30/confirmbutton/</link>
+      <link>https://huobazi.github.com/blog/2004/04/30/confirmbutton/</link>
       <pubDate>Fri, 30 Apr 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/04/30/confirmbutton/</guid>
+      <guid>https://huobazi.github.com/blog/2004/04/30/confirmbutton/</guid>
       <description>经常在论坛里看到类似这样的问题：“…如何在点击删除按钮的时候弹出个确认删除对话框”。
 下面我们来自己写一个这样的自定义Web服务器控件!
 思路如下：

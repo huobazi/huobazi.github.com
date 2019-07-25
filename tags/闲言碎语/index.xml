@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>闲言碎语 on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD/</link>
+    <link>https://huobazi.github.com/tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD/</link>
     <description>Recent content in 闲言碎语 on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 06 Mar 2012 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>从typecho转换到Octopress了</title>
-      <link>https://huobazi.aspxboy.com/blog/2012/03/06/convert-typecho-to-octopress/</link>
+      <link>https://huobazi.github.com/blog/2012/03/06/convert-typecho-to-octopress/</link>
       <pubDate>Tue, 06 Mar 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2012/03/06/convert-typecho-to-octopress/</guid>
+      <guid>https://huobazi.github.com/blog/2012/03/06/convert-typecho-to-octopress/</guid>
       <description>人生在于折腾,所以将博客转换到Octopress了
 我的博客经历了如下几次变动：
 2003年1月,自己装了个SnowForum，用来写些技术记录之类的东西
@@ -32,10 +32,10 @@
     
     <item>
       <title>华为HG232破解一例</title>
-      <link>https://huobazi.aspxboy.com/blog/2012/02/25/hg232/</link>
+      <link>https://huobazi.github.com/blog/2012/02/25/hg232/</link>
       <pubDate>Sat, 25 Feb 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2012/02/25/hg232/</guid>
+      <guid>https://huobazi.github.com/blog/2012/02/25/hg232/</guid>
       <description>0. 默认超级账户 如果电信没有改过你的猫账户，可以尝试使用下面的信息登陆，如果不可以在进入后面的步骤1和2破解 帐号： telecomadmin 密码：nE7jA%5m (注意大小写)
 1. 下载配置文件 猫上插入U盘，下面两种方法都可以，您挑一种吧。
 1.1 手工操作&amp;mdash;-乐趣 用猫后面印刷的普通用户useradmin登陆，这个用户登陆进去什么高级全选都木有，但是表着急，我这么干的，浏览器用firefox，如果木有就去下载，然后装上firebug，去看隐藏的html元素吧，把样式表的disply:none;都禁止掉，什么 备份配置文件、启动从U盘加载配置、回复出厂值、日志等等都出来了吧，插入U盘，点击备份按钮，文件就下载下来了。
@@ -52,10 +52,10 @@ itv 不选择 无线的话 要选VLAN透传，选无线是VLAN修改
     
     <item>
       <title>Ubuntu下设置 Sublime Text 2 显示中文 &amp;&amp; 输入中文</title>
-      <link>https://huobazi.aspxboy.com/blog/2012/02/04/ubuntu-sublime-text-chinese/</link>
+      <link>https://huobazi.github.com/blog/2012/02/04/ubuntu-sublime-text-chinese/</link>
       <pubDate>Sat, 04 Feb 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2012/02/04/ubuntu-sublime-text-chinese/</guid>
+      <guid>https://huobazi.github.com/blog/2012/02/04/ubuntu-sublime-text-chinese/</guid>
       <description>&lt;p&gt;Sublime text 2在mac os 下用的很舒服，今天尝试在ubuntu下使用一下，发现汉字显示不了，&lt;/p&gt;
 &lt;p&gt;后来找到方法：&lt;/p&gt;
 &lt;p&gt;菜单栏 -&amp;gt; Preferences -&amp;gt; File Settings - User，在配置文件中增加：&lt;/p&gt;</description>
@@ -63,19 +63,19 @@ itv 不选择 无线的话 要选VLAN透传，选无线是VLAN修改
     
     <item>
       <title>How to,在iOS中点击文本框以外区域，隐藏键盘</title>
-      <link>https://huobazi.aspxboy.com/blog/2011/12/09/ios-hide-keyboard-when-touch/</link>
+      <link>https://huobazi.github.com/blog/2011/12/09/ios-hide-keyboard-when-touch/</link>
       <pubDate>Fri, 09 Dec 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2011/12/09/ios-hide-keyboard-when-touch/</guid>
+      <guid>https://huobazi.github.com/blog/2011/12/09/ios-hide-keyboard-when-touch/</guid>
       <description>&lt;p&gt;当点击文本框以外部分时，隐藏键盘，实现很简单，加个Category就可以了，代码如下：&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>新蛋西安招聘.net软件工程师</title>
-      <link>https://huobazi.aspxboy.com/blog/2011/08/31/newegg-invite/</link>
+      <link>https://huobazi.github.com/blog/2011/08/31/newegg-invite/</link>
       <pubDate>Wed, 31 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2011/08/31/newegg-invite/</guid>
+      <guid>https://huobazi.github.com/blog/2011/08/31/newegg-invite/</guid>
       <description>&lt;p&gt;&lt;strong&gt;岗位职责&lt;/strong&gt;：&lt;/p&gt;
 &lt;div style=&#34;font-size: 12px; line-height: 1.5; padding-bottom: 30px;&#34;&gt;
 &lt;p&gt; &lt;/p&gt;</description>
@@ -83,28 +83,28 @@ itv 不选择 无线的话 要选VLAN透传，选无线是VLAN修改
     
     <item>
       <title>京东新蛋攻防</title>
-      <link>https://huobazi.aspxboy.com/blog/2010/04/30/360buy-vs-newegg/</link>
+      <link>https://huobazi.github.com/blog/2010/04/30/360buy-vs-newegg/</link>
       <pubDate>Fri, 30 Apr 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2010/04/30/360buy-vs-newegg/</guid>
+      <guid>https://huobazi.github.com/blog/2010/04/30/360buy-vs-newegg/</guid>
       <description>&lt;p&gt;这是一片不断膨胀、愈演愈烈的虚拟战场。每一位统帅都着迷于它的独特魅力——任何势力的盛衰都取决于无数素未谋面的人的鼠标点击。每一位统帅也都必须铭记：实体世界里“强攻弱守”的军事规律已经在此失效。这里唯一可以遵循的生死法则是，无论势力强弱，一旦站到防守的位置上，那么溃败将接踵而来，且来得出乎意料地快&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>office 2010 正在下载中。</title>
-      <link>https://huobazi.aspxboy.com/blog/2010/04/25/office-2010-download/</link>
+      <link>https://huobazi.github.com/blog/2010/04/25/office-2010-download/</link>
       <pubDate>Sun, 25 Apr 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2010/04/25/office-2010-download/</guid>
+      <guid>https://huobazi.github.com/blog/2010/04/25/office-2010-download/</guid>
       <description>Office 2010 正在下载中，午饭时就可以装了...</description>
     </item>
     
     <item>
       <title>编程语言排行榜Java下跌引起的...</title>
-      <link>https://huobazi.aspxboy.com/blog/2010/04/07/tiobe-java/</link>
+      <link>https://huobazi.github.com/blog/2010/04/07/tiobe-java/</link>
       <pubDate>Wed, 07 Apr 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2010/04/07/tiobe-java/</guid>
+      <guid>https://huobazi.github.com/blog/2010/04/07/tiobe-java/</guid>
       <description>javaeye的新闻http://www.javaeye.com/news/15494
 cnblogs的新闻http://news.cnblogs.com/n/60768/
 发现cnblogs的评论有很多类似“xx人民发来贺电！java终于跌下神坛了！”，而javaeye的评论要显的理性的多。</description>
@@ -112,48 +112,48 @@ cnblogs的新闻http://news.cnblogs.com/n/60768/
     
     <item>
       <title>新蛋开始卖蛋蛋了</title>
-      <link>https://huobazi.aspxboy.com/blog/2010/04/02/newegg-egg/</link>
+      <link>https://huobazi.github.com/blog/2010/04/02/newegg-egg/</link>
       <pubDate>Fri, 02 Apr 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2010/04/02/newegg-egg/</guid>
+      <guid>https://huobazi.github.com/blog/2010/04/02/newegg-egg/</guid>
       <description>新蛋开始卖蛋蛋了
 http://www.newegg.com/Product/Product.aspx?Item=N82E16800000033</description>
     </item>
     
     <item>
       <title>关于女人这个神奇的东西，从网上找了些觉得同感的片片</title>
-      <link>https://huobazi.aspxboy.com/blog/2010/02/09/nv-ren/</link>
+      <link>https://huobazi.github.com/blog/2010/02/09/nv-ren/</link>
       <pubDate>Tue, 09 Feb 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2010/02/09/nv-ren/</guid>
+      <guid>https://huobazi.github.com/blog/2010/02/09/nv-ren/</guid>
       <description>&lt;p&gt;女人总是把原本不属于自己的东西死死地认定为是自己的，然后患得患失； 更好玩的是，明明是自己不懂珍惜刁蛮成性而导致失去的东西，她们非要说成是别人的背叛，这点让男人挺没辙的。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>rails里Mysql::Error: query: not connected</title>
-      <link>https://huobazi.aspxboy.com/blog/2010/01/15/rails-mysqlerror-query-not-connected/</link>
+      <link>https://huobazi.github.com/blog/2010/01/15/rails-mysqlerror-query-not-connected/</link>
       <pubDate>Fri, 15 Jan 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2010/01/15/rails-mysqlerror-query-not-connected/</guid>
+      <guid>https://huobazi.github.com/blog/2010/01/15/rails-mysqlerror-query-not-connected/</guid>
       <description>&lt;p&gt;从ubuntu换回了win7后又慢慢开始折腾以前在本本上跑的一些LAMP网站， php和 mysql还是用以前的xampp里的，仍然可以用。&lt;/p&gt;
 &lt;p&gt;重装了 ruby 1.8.6, rails 2.3.5 等...发现运行rails网站，弹出messagebox提示找不到libmysql.dll尝试把mysql/bin里的dll来regsvr32，不可，直接拷贝到system32目录下错误没了，但打开网站仍然报错，终端显示“Mysql::Error: query: not connected....&#34;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>把typecho升级到0.7了</title>
-      <link>https://huobazi.aspxboy.com/blog/2010/01/14/typecho-0-7-updated/</link>
+      <link>https://huobazi.github.com/blog/2010/01/14/typecho-0-7-updated/</link>
       <pubDate>Thu, 14 Jan 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2010/01/14/typecho-0-7-updated/</guid>
+      <guid>https://huobazi.github.com/blog/2010/01/14/typecho-0-7-updated/</guid>
       <description>什么时候typecho能够像wp那样在线升级就好了。</description>
     </item>
     
     <item>
       <title>漂亮的VIM配色方案</title>
-      <link>https://huobazi.aspxboy.com/blog/2010/01/11/vim-color-scheme/</link>
+      <link>https://huobazi.github.com/blog/2010/01/11/vim-color-scheme/</link>
       <pubDate>Mon, 11 Jan 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2010/01/11/vim-color-scheme/</guid>
+      <guid>https://huobazi.github.com/blog/2010/01/11/vim-color-scheme/</guid>
       <description>这里
 http://code.google.com/p/vimcolorschemetest/
 有一堆一堆的配色方案
@@ -163,19 +163,19 @@ Browse By File Type Featuring 428 schemes:
     
     <item>
       <title>我的win7和ubuntu之旅</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/12/02/win7-ubuntu/</link>
+      <link>https://huobazi.github.com/blog/2009/12/02/win7-ubuntu/</link>
       <pubDate>Wed, 02 Dec 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/12/02/win7-ubuntu/</guid>
+      <guid>https://huobazi.github.com/blog/2009/12/02/win7-ubuntu/</guid>
       <description>&lt;p&gt;先装了win7 后装了ubuntu9.10，开始煎熬了数日...&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Wordpress真的不错</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/10/20/342/</link>
+      <link>https://huobazi.github.com/blog/2009/10/20/342/</link>
       <pubDate>Tue, 20 Oct 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/10/20/342/</guid>
+      <guid>https://huobazi.github.com/blog/2009/10/20/342/</guid>
       <description>另外一个博客，用的wp，自动升级使用了一下，很不错，速度很快
 Upgrade WordPress
 Downloading update from http://wordpress.org/wordpress-2.8.4.zip.
@@ -188,19 +188,19 @@ WordPress upgraded successfully</description>
     
     <item>
       <title>得罪一下腾讯</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/10/13/tencent/</link>
+      <link>https://huobazi.github.com/blog/2009/10/13/tencent/</link>
       <pubDate>Tue, 13 Oct 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/10/13/tencent/</guid>
+      <guid>https://huobazi.github.com/blog/2009/10/13/tencent/</guid>
       <description>&lt;p&gt;别人出了ICQ ————–腾讯就出QQ&lt;br /&gt;别人出了MSN ————-腾讯就出TM&lt;br /&gt;别人出了冒险岛————腾讯就出QQ三国&lt;br /&gt;别人出了泡泡堂————腾讯就出QQ堂&lt;br /&gt;别人出了劲舞团————腾讯就出QQ炫舞&lt;br /&gt;别人出了诛仙 ————–腾讯就出QQ寻仙&lt;br /&gt;别人出了华夏 ————–腾讯就出QQ华夏&lt;br /&gt;别人出了O2JAM – ———腾讯就出QQ音速&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>【How to】解决Visio虚线复制到word中变为实线</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/10/10/visio-dashed/</link>
+      <link>https://huobazi.github.com/blog/2009/10/10/visio-dashed/</link>
       <pubDate>Sat, 10 Oct 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/10/10/visio-dashed/</guid>
+      <guid>https://huobazi.github.com/blog/2009/10/10/visio-dashed/</guid>
       <description>添加 MetafileDashLineAsSolid 到以下注册表位置，类型DWORD。
  • Visio 2007
 HKEY_CURRENT_USER\Software\Microsoft\Office\12.0\Visio\Application
@@ -213,10 +213,10 @@ HKEY_CURRENT_USER\Software\Microsoft\Office\11.0\Visio\Application
     
     <item>
       <title>国庆节前期,我每晚都想找个小姐包夜</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/09/14/gq/</link>
+      <link>https://huobazi.github.com/blog/2009/09/14/gq/</link>
       <pubDate>Mon, 14 Sep 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/09/14/gq/</guid>
+      <guid>https://huobazi.github.com/blog/2009/09/14/gq/</guid>
       <description>&lt;p&gt;新中国60岁了，注意“新”字，很多人最近说什么祖国60岁云云，在此纠正一下，祖国好几千岁了！&lt;/p&gt;
 &lt;p&gt;今年新中国过生日，放假8天，比春节还多，会不会引发一轮新的返乡/旅游高潮呢？，国庆买不到票怎么办？&lt;/p&gt;
 &lt;p&gt;看下面这个仁兄如果牛B的&lt;/p&gt;</description>
@@ -224,69 +224,69 @@ HKEY_CURRENT_USER\Software\Microsoft\Office\11.0\Visio\Application
     
     <item>
       <title>大半夜的替老婆种菜，偷别人的菜。</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/09/12/%E5%A4%A7%E5%8D%8A%E5%A4%9C%E7%9A%84%E6%9B%BF%E8%80%81%E5%A9%86%E7%A7%8D%E8%8F%9C%E5%81%B7%E5%88%AB%E4%BA%BA%E7%9A%84%E8%8F%9C/</link>
+      <link>https://huobazi.github.com/blog/2009/09/12/%E5%A4%A7%E5%8D%8A%E5%A4%9C%E7%9A%84%E6%9B%BF%E8%80%81%E5%A9%86%E7%A7%8D%E8%8F%9C%E5%81%B7%E5%88%AB%E4%BA%BA%E7%9A%84%E8%8F%9C/</link>
       <pubDate>Sat, 12 Sep 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/09/12/%E5%A4%A7%E5%8D%8A%E5%A4%9C%E7%9A%84%E6%9B%BF%E8%80%81%E5%A9%86%E7%A7%8D%E8%8F%9C%E5%81%B7%E5%88%AB%E4%BA%BA%E7%9A%84%E8%8F%9C/</guid>
+      <guid>https://huobazi.github.com/blog/2009/09/12/%E5%A4%A7%E5%8D%8A%E5%A4%9C%E7%9A%84%E6%9B%BF%E8%80%81%E5%A9%86%E7%A7%8D%E8%8F%9C%E5%81%B7%E5%88%AB%E4%BA%BA%E7%9A%84%E8%8F%9C/</guid>
       <description>&lt;p&gt;唉......&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>我被ps了</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/09/10/meituxiuxiu/</link>
+      <link>https://huobazi.github.com/blog/2009/09/10/meituxiuxiu/</link>
       <pubDate>Thu, 10 Sep 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/09/10/meituxiuxiu/</guid>
+      <guid>https://huobazi.github.com/blog/2009/09/10/meituxiuxiu/</guid>
       <description>&lt;p&gt;老婆学会了用&lt;a title=&#34;http://xiuxiu.meitu.com/&#34; href=&#34;http://xiuxiu.meitu.com/&#34; target=&#34;_blank&#34;&gt;美图秀秀&lt;/a&gt;这个软件，我成了第一个被ps的对象，&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huobazi.aspxboy.com/images/hbz_images/lg10.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;https://huobazi.github.com/images/hbz_images/lg10.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>百度要在西北这边大卖了</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/08/31/%E7%99%BE%E5%BA%A6%E8%A6%81%E5%9C%A8%E8%A5%BF%E5%8C%97%E8%BF%99%E8%BE%B9%E5%A4%A7%E5%8D%96%E4%BA%86/</link>
+      <link>https://huobazi.github.com/blog/2009/08/31/%E7%99%BE%E5%BA%A6%E8%A6%81%E5%9C%A8%E8%A5%BF%E5%8C%97%E8%BF%99%E8%BE%B9%E5%A4%A7%E5%8D%96%E4%BA%86/</link>
       <pubDate>Mon, 31 Aug 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/08/31/%E7%99%BE%E5%BA%A6%E8%A6%81%E5%9C%A8%E8%A5%BF%E5%8C%97%E8%BF%99%E8%BE%B9%E5%A4%A7%E5%8D%96%E4%BA%86/</guid>
+      <guid>https://huobazi.github.com/blog/2009/08/31/%E7%99%BE%E5%BA%A6%E8%A6%81%E5%9C%A8%E8%A5%BF%E5%8C%97%E8%BF%99%E8%BE%B9%E5%A4%A7%E5%8D%96%E4%BA%86/</guid>
       <description>今天早上乘电梯，按了15层也没注意其他人按那一层，结果电梯直上15，才发现同乘其他人均是千万18层的，嘿嘿，都是百度的。看来百度在西北的招聘很成功啊，要开始在西北这边大卖关键字和竞价排名了。想起上次晚上夜班和同事一起溜上去隔玻璃偷窥了百度的办公室，妈妈妈哦，好多好多好多工位，每人大概60厘米长的桌子吧，看上去比网吧的格局还紧凑，一桌一部电话，西北的老少爷们们等着被骚扰吧。
 ps：曾有此仍然是电梯里闻两位百度哥们对话，一位说道“软件园的企业就不要想了，肯定被之前来的扫过几百遍了...”</description>
     </item>
     
     <item>
       <title>Palm Centro(690)的软启动和硬启动</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/08/25/hwo-to-reset-palm-centro/</link>
+      <link>https://huobazi.github.com/blog/2009/08/25/hwo-to-reset-palm-centro/</link>
       <pubDate>Tue, 25 Aug 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/08/25/hwo-to-reset-palm-centro/</guid>
+      <guid>https://huobazi.github.com/blog/2009/08/25/hwo-to-reset-palm-centro/</guid>
       <description>给老婆买了部centro，结果不知道如何软起和硬起，泡了半天吹友吧，得知如下
 软启 下电池 硬启 下电池后按住红色挂机件上电池 到PALM开机图不动后松开 按向上键</description>
     </item>
     
     <item>
       <title>商务中国的DNS解析，主机名不许有下划线</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/08/02/bizcn-dns-hostname/</link>
+      <link>https://huobazi.github.com/blog/2009/08/02/bizcn-dns-hostname/</link>
       <pubDate>Sun, 02 Aug 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/08/02/bizcn-dns-hostname/</guid>
+      <guid>https://huobazi.github.com/blog/2009/08/02/bizcn-dns-hostname/</guid>
       <description>&lt;p&gt;&lt;p&gt;就在刚才，就在刚才哦，本博客突然突然的就不能访问了，玉米是上午中国注册的，使用的是商务中国的dns服务，使用同样dns服务器的域名都可以访问，就这个突然离奇的不能访问了，去商务中国提了个ticket,过了不一会儿收到邮件说是已经回复了这个问题，赶紧登陆一看&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>博客园到Wordpress搬家成功！</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/06/21/my-blog-moved-to-wp/</link>
+      <link>https://huobazi.github.com/blog/2009/06/21/my-blog-moved-to-wp/</link>
       <pubDate>Sun, 21 Jun 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/06/21/my-blog-moved-to-wp/</guid>
+      <guid>https://huobazi.github.com/blog/2009/06/21/my-blog-moved-to-wp/</guid>
       <description>终于把在博客园的博客的数据导入到Wordpress内了，包括随笔/文章，图片,标签，评论等，是写了两个C# console程序做到的，程序我传到博客园了，如果有需要的朋友可以试试。但请注意，要自己在博客园后台备份RSS文件放到Reader的Data目录内，设置为编译选项为永远复制，运行后会生成一个Entry.xml并且把博客内的图片和分类、Tag、评论等抓下来，然后将此xml文件拷贝到Writer内，在代码内修改一下你的Wordress的数据库连接，然后跑一下Writer，就可以完成数据导入到Wordpress了，时间匆忙，代码写的很乱，有些地方是针对本人需求处理的，如果你想要直接运行此程序完成你的博客园博客到Wordpress的转换，那是不可能滴！你一定要有简单的C#调试基础哦。
 http://files.cnblogs.com/huobazi/MyBlogTools.rar</description>
     </item>
     
     <item>
       <title>家滨面对面</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/04/22/jiabin/</link>
+      <link>https://huobazi.github.com/blog/2009/04/22/jiabin/</link>
       <pubDate>Wed, 22 Apr 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/04/22/jiabin/</guid>
+      <guid>https://huobazi.github.com/blog/2009/04/22/jiabin/</guid>
       <description>2009.04.22新任CEO杜家滨先生莅临西安，我有幸获邀参加“嘉宾面对面”活动。
 前辈很随和，和我们聊了他的职业生涯，从微软中国到思科，到新蛋就当前电子商务形式以及对于中国新蛋网的未来，很认真的听却了大家对目前中国区以及中国新蛋网的看法。并现场开通了一个邮箱留给大家，诚恳的希望大家有什么好点子，都能及时通过这个邮箱与他分享。
 直至聚会结束，气氛都非常融洽，前辈表现出一个职业经理人强大的亲和力！</description>
@@ -294,38 +294,38 @@ http://files.cnblogs.com/huobazi/MyBlogTools.rar</description>
     
     <item>
       <title>2008我的收获了3个本儿,一堆朋友</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/01/19/2008-me/</link>
+      <link>https://huobazi.github.com/blog/2009/01/19/2008-me/</link>
       <pubDate>Mon, 19 Jan 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/01/19/2008-me/</guid>
+      <guid>https://huobazi.github.com/blog/2009/01/19/2008-me/</guid>
       <description>&lt;p&gt;2008 我收获了3个本儿 结婚证，Microsoft MVP证书，newegg中国区优秀员工证书&lt;/p&gt;
-&lt;p&gt;&lt;img id=&#34;ViewPicture1_GalleryImage&#34; style=&#34;width: 640px; height: 480px; border-width: 0px; border-color: black;&#34; src=&#34;https://huobazi.aspxboy.com/images/hbz_images/2008_me.JPG&#34; alt=&#34;2008我的收获&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img id=&#34;ViewPicture1_GalleryImage&#34; style=&#34;width: 640px; height: 480px; border-width: 0px; border-color: black;&#34; src=&#34;https://huobazi.github.com/images/hbz_images/2008_me.JPG&#34; alt=&#34;2008我的收获&#34;&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>哈佛经典案例，赶集卖猪记 </title>
-      <link>https://huobazi.aspxboy.com/blog/2008/11/01/hf/</link>
+      <link>https://huobazi.github.com/blog/2008/11/01/hf/</link>
       <pubDate>Sat, 01 Nov 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/11/01/hf/</guid>
+      <guid>https://huobazi.github.com/blog/2008/11/01/hf/</guid>
       <description>&lt;p&gt;哈佛经典案例，赶集卖猪记（次贷危机加强篇）&lt;br /&gt;　　&lt;br /&gt;　　这是目前为止关于次贷危机最通俗易懂的版本了。&lt;br /&gt;　　&lt;br /&gt;　　1&lt;br /&gt;　　&lt;br /&gt;　　大家都知道这个案例：&lt;br /&gt;　　&lt;br /&gt;　　一男赶集卖猪，天黑遇雨，二十头猪未卖成，到一农家借宿。&lt;br /&gt;　　&lt;br /&gt;　　少妇说：家里只一人不便。&lt;br /&gt;　&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>次贷危机和一夜情</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/10/26/crisis-and-ons/</link>
+      <link>https://huobazi.github.com/blog/2008/10/26/crisis-and-ons/</link>
       <pubDate>Sun, 26 Oct 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/10/26/crisis-and-ons/</guid>
+      <guid>https://huobazi.github.com/blog/2008/10/26/crisis-and-ons/</guid>
       <description>&lt;p&gt;     有一天，一位其貌不扬的男士，带着一位十分艳丽的OL，来到Causeway Bay一家LV店。他为OL选了一价值6万5元的LV handbag。　　付款时，男士掏出支票本，十分潇洒地签了一张支票。店员有些为难，因为这对夫妇是第一次来店购物。&lt;br /&gt;　　男士看穿了店员的心思，十分冷静地对店员说： &#34;我感觉到，您担心这是一张是空头支票，对吗？今天是周六，银行关门。我建议您把支票和handbag都留下。等到星期一支票兑现之后，再请你们把 handbag 送到这位小姐的府上。您看这样行不行？&#34;&lt;br /&gt;　&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>地震- 新房变危房</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/05/13/cb-1194436/</link>
+      <link>https://huobazi.github.com/blog/2008/05/13/cb-1194436/</link>
       <pubDate>Tue, 13 May 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/05/13/cb-1194436/</guid>
+      <guid>https://huobazi.github.com/blog/2008/05/13/cb-1194436/</guid>
       <description>受灾了
 2008-5-12日 2点30分左右，我被晃醒，感觉床在动，奔置厨房，感觉就像在树梢上，所有电话均不能拨出，看到窗外瓷砖下落。
 数十秒后，穿衣，下楼，秩序还不错，奔袭至丰汇南路，早上得知自己新买新西兰小区的准备结婚用的新房变危房了,墙体裂缝，物业让回家搬东西
@@ -334,10 +334,10 @@ http://files.cnblogs.com/huobazi/MyBlogTools.rar</description>
     
     <item>
       <title>批量 移动 msn 联系人</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/03/16/movefriendtoothergroupinmsn/</link>
+      <link>https://huobazi.github.com/blog/2008/03/16/movefriendtoothergroupinmsn/</link>
       <pubDate>Sun, 16 Mar 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/03/16/movefriendtoothergroupinmsn/</guid>
+      <guid>https://huobazi.github.com/blog/2008/03/16/movefriendtoothergroupinmsn/</guid>
       <description>MSN内导入一个联系人列表后，联系人都在“其他联系人”这个组，
 我想把它重命名一下，不可以，转移到其他组，发现只能一个一个转移。
 最后发现，新建组然后按shift选择需要加入的联系人checkbox，确定。
@@ -348,10 +348,10 @@ http://files.cnblogs.com/huobazi/MyBlogTools.rar</description>
     
     <item>
       <title>上班族饮食十大“夺命”恶习</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/10/10/ohmygod/</link>
+      <link>https://huobazi.github.com/blog/2007/10/10/ohmygod/</link>
       <pubDate>Wed, 10 Oct 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/10/10/ohmygod/</guid>
+      <guid>https://huobazi.github.com/blog/2007/10/10/ohmygod/</guid>
       <description>经常听周围的人说起：“怎么办呀，又查出来血脂异常了”，“某某血压偏高呀”，“最近又胖了怎么办，上次体检已经有脂肪肝了！”这些问题也许在你身上也发生过。其实这些问题的一个根源就是“吃”——
 下面小编给您罗列一下有关“吃”的十大健康杀手：
 夺命恶习1：进食速度过快
@@ -406,10 +406,10 @@ http://files.cnblogs.com/huobazi/MyBlogTools.rar</description>
     
     <item>
       <title>一系列SQL SERVER SQL 的分析文章</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/09/07/cb-885304/</link>
+      <link>https://huobazi.github.com/blog/2007/09/07/cb-885304/</link>
       <pubDate>Fri, 07 Sep 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/09/07/cb-885304/</guid>
+      <guid>https://huobazi.github.com/blog/2007/09/07/cb-885304/</guid>
       <description>位于：
 http://blogs.sqlpassj.org/mitsugi/archive/2007/09.aspx
 语言： 日文
@@ -423,20 +423,20 @@ http://blogs.sqlpassj.org/mitsugi/archive/2007/09.aspx
     
     <item>
       <title>地主的奋斗</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/09/03/cb-880230/</link>
+      <link>https://huobazi.github.com/blog/2007/09/03/cb-880230/</link>
       <pubDate>Mon, 03 Sep 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/09/03/cb-880230/</guid>
+      <guid>https://huobazi.github.com/blog/2007/09/03/cb-880230/</guid>
       <description>&#39;妙文转载&#39;
 古代，有一个地主，家有良田百亩，算是一个小地主，他家一共雇佣了4个雇农，都属于长工性质，主要负责田地的耕种。 　开始，地主按照传统的方式对雇农采用高压政策，雇佣了一个护卫作为监工，现场监督雇农劳作，雇农稍有懈怠就会招来监工的一顿鞭打。雇农们非常气愤，经常聚集在一起声讨地主，一致达成默契，表面服从，但暗地里都不努力劳动，一有可能就磨洋工。 　一年下来，收成比别家低了许多，地主一怒之下，认为护卫监工不力，便换了个护卫，由于成本问题，他不可能雇佣更多的人来做监工。第二年收成依然下降，而且还发生了雇农集体罢工事件。 　地主气不打一处来，将监工和雇农全部拿下，并增加了四个雇农，他们分别是张三、李四、王五、赵六，同时地主亲自参与监督雇农的劳作，但情况丝毫没有转变，到了年底收成依然达不到理想水平。 　地主苦恼极了，正在此时，一个西方的传教士来到这个封闭的山庄，经过与传教士的深层次交流，地主深感资本主义的先进性，他转变成为了新兴派人物，同时落实到实际情况上，他辞退了监工，并强调给予雇农们充分人权和自由，保证不再采用强制性的高压政策，而采用固定工资制并制定了详细的规章制度。 　规章制度规定雇农们每日鸡叫必须起床，太阳升起之前必须上岗劳动，中午太阳烈时可以在树荫下休息一个时辰，太阳落山了才能够收工。上工和收工都必须在地主家按拇指印，考虑到雇农还得照顾家庭，地主规定雇农每隔5天可以休息2天，但条件是不得耽误农活。 　凡违反劳动记录，一次迟到或早退扣罚当天工资，一次旷工扣罚10天工资，一年累计5次旷工（三次迟到或早退算一次旷工，缺少一个拇指印按半次旷工处理）做自动离职处理。劳动期间不准偷懒和晒太阳，凡发现者一律按迟到论处。 　由于地主提供的薪金极具挑战性，而且按月提供，不至于青黄不接，雇农们欣喜若狂，纷纷表示一定要努力工作，以报答地主的大恩大德。 　当年土地收成提高了50%，地主看到民主管理带来的巨大收益，高兴得嘴都笑不合拢。兴奋之余，他决定扩大生产规模，于是向其他地主购买了100亩土地，另外又招聘了周七、武八两个雇农，准备大干一场。 　一切照旧，想象着年底丰厚的收成，地主经常从睡梦中笑醒，日子一天天过去，年底来了，收成汇总下来，在新增100亩地和两个人的情况下，收入仅仅增长了10%.地主气急败坏，把雇农们召集起来，开了一个声色俱厉的批判大会。大会会场悬挂了一幅大大的横幅上书一行大字“今天不努力耕作，明天就努力找耕作”让人看了胆战心惊、不寒而栗。 　会上地主在深刻批判了雇农们的懒惰和无能后，宣布今年年终最后一个月的工资全部扣罚。 　这一下子向捅了马蜂窝一样，大家纷纷表示不满和抗议，地主用手指朝横幅一指，丢下一句话“谁不想干，立马走人”转身便走。大家象焉了的茄子一般，都不讲话。 　会后，张三、李四和王五在一起打“斗地主”，一边打，一边骂地主狠心，让他们过年都没有钱拿回家，这下子回家不被老婆骂死才怪。 　一番发泄之后他们决定分头去找地主说情。 　张三首先出发，找到地主诉苦说他们四个人本来干得好好的，由于新来的周七、武八两个人平时工作不努力，一有机会就偷懒，而每个月工资和大家拿得一样多，时间长了大家觉得心里不公平，于是便纷纷开始偷懒，所以才造成了收成下降的原因。 　地主勃然大怒，决定找其他人来确认此事，他决心一旦落实此事，定当对当事人予以重罚。 　张三走后，李四旋即来找地主反映情况，地主当即核实了周七、武八的事情，情况基本与张三讲的一致。 　李四走后，王五也找地主谈心来了，除了张三、李四提及的问题外，他还提到了另外一个情况，说他有一次看到隔壁家的牛来吃庄稼，他去赶的时候被牛角顶破了腿，第二天没有能够来上班，被地主扣罚了10天的工资，于是以后他看见别家的牛吃庄稼就再也不管了。地主哼他一顿道“当时你为什么不声明理由呢？”王五说“我本来准备说的，但你当时气急败坏的样子把我吓慌了，就没有讲，过后也没有机会再说”。 　地主想，接下来该赵六来了，谁知等了一天却没有等到。地主等不及了，正准备召开员工大会，宣布对周七和武八的处分决定。俩人同时来找地主了，地主将他们大声责罚一番，两人大呼冤枉，说张三、李四他们仗着是老员工，资历老，人数多，平时经常欺负他们，自己从不好好劳动，还嘲笑他们俩踏实肯干是傻冒，还说他们经常在地主去视察的时候装着勤劳的样子。 　地主晕了，一下子分不清真伪，将六人找来当面对质，大家除了吵成一团外，没有解决丝毫的问题。 　地主被吵得不行，恍惚中似乎发现了问题的症结所在，他决定推行承包制，将土地划分为六份，采用招标的方式，根据土地的肥沃程度和面积大小以及耕种难度等指标，由地主事先根据往年的指标核定一个最低土地收益，由六人投标竟价，最后价高者承包成功，以此类推，直到最后一块土地。 　雇农们似乎对此都表示了极大的热情，投标当天，他们六人共同用竹竿支撑起一条更大更醒目的横幅，上书“地主，地主我爱你，我们永远支持你！”。地主看到横幅，前段时间的不快一扫而光，笑眯了双眼看着大家，大家回报给他的是自信而激昂向上的眼光。 　招标非常成功在经过激烈的竟标之后大家都获得了比较满意的结果。 　会场散去，地主的目光中散发出一种醉人的芬芳，他仿佛又看到了明年谷物满仓的丰收景象。 　刚开始，地主不放心，不时的到田间地头去转转，看见大家都在辛勤的耕种，庄稼一块比一块好，地主终于放下了心，在传教士朋友的邀请下，他们一起去游历祖国大好的河山，一去就是大半年。 　年底地主回到家里，看到自家的谷仓里面装满了稻谷、玉米等粮食，看到老婆脸上灿烂的笑容，不用说，今年的收成好得不得了。 　一算下来，“哇”，地主禁不住跳了起来，今年的净收益比上年增长了100%，雇农们全部完成定额，每人还主动多贡献了20%.地主尝试到了包产到户的甜头，决心将事业做大做强，他发誓要做乡里，不，县里、省里最大的地主。 　可是地主没有多余的钱大规模买地，怎么办？ 　地主苦恼不已。 　第二天一开门，“哇”，门口站满了大大小小的地主们，他们每个人的额上都用血书写着“来吧，兼并我吧！” 　原来，大大小小的地主们看到地主取得了如此巨大的成绩，纷纷表示愿意用自有土地入股，与地主一起发展壮大。 　经过仔细挑选，地主选定了地主甲、地主乙、地主丙三个当地最有名的大地主作为战略合作伙伴，成立了一个土地合作经营联社，又地主出任社长负责日常经营，地主甲、地主乙、地主丙作为副社长，重大经营决策必须有三票以上同意才能通过。收益按1：1：1：1分配。 　由于几个大地主的参与，地主的经营规模一下子扩大了10倍，达到了2000亩。按每个人平均承包40亩计算，地主需要招聘50人，而目前只有6个人，地主决定公开对外招聘。 　地主放话出去，来竟标的人挤破了地主的大门，地主决定对参加投标者每人收取1两银子的投标费用，以保证投标活动的支出。仅此一项就收入1000两银子。地主们无不对地主的经营能力佩服得五体投地，尚未开张就净赚250，真是太划算了，这更增加了他们对地主的信任和爱戴。 　投标活动的会场非常热闹，到处洋溢着热烈的气氛，各种各样的横幅飘扬在会场当中好不精彩。 　“宝锄一出，谁与争锋！” 　“放眼田间，舍我其谁！” 　“东风吹，战鼓擂，如今的田地谁怕谁？” 　“没有了地，我的世界雨下个不停” 　“东方红，太阳升，我们出了个好地主！” 　还是老员工们的横幅比较感人“东家，东家，好东家，世世代代跟着你！”此条横幅被后人评选为投标最佳横幅，奖品是以后上茅厕每人可以领用两张草纸（备注：一般人每天只能领用一张）。 　竟标按预期进行，五十人经过长达三天的征战终于将和约拿下，按照同等条件，老员工优先获得和约的规则，六个老员工如愿的拿到了和约。 　从和约的统计来看，今年的每亩收益至少在去年的基础上增长50%，对于地主来说总收益的增长将达到去年的375%，想想都让人兴奋。其他的地主总收益也有很大的提高，大家都非常高兴，期待着来年的快快到来。 　第二年，地主主动邀约传教士去周游各地，这次他们去的是遥远的东瀛，一来一回正好一年的时间，地主玩得好不痛快。 　临到家了，想着家里新增的谷仓装满粮食的情景，地主的心情真是急不可耐。 　远远的看到了家门，还有门口站着的地主甲、地主乙和地主丙，他们一定是来欢迎我了。 　大老远的，地主就打着招呼“大家好！我回来了” 　看见大家阴沉着脸都没有答话，地主发现情况不对，连忙问其详情。 　原来今年的每亩收益只比去年增长了1%，这样各个地主的总收益不升反降，你叫他们怎么高兴得起来。 　“怎么会这样呢？”地主不断的自言自语到。 　地主连夜召集了10个雇农代表参加的土地收成分析研讨会，经过与会人员的充分讨论，汇总后得出如下原因：一、今年的天气比去年干旱，由于没有人肯出钱修建引水渠，导致庄稼缺水，收成下降。 　二、由于投标额太高，大部分雇农基本没有多余的收益，极大的影响了他们的积极性的发挥。 　三、没有人愿意多施肥，因为明年耕种的土地可能就不属于他们了，客观上导致土地施肥不足，产量下降。 　四、由于土地面积较以前扩大比较多，每户人家都需要增加耕牛和农具这对大家造成了新的困难，而平时这些东西闲置又比较多，这使得大家本来就薄的收益更加雪上加霜，这也是大家不愿意努力的原因。 　五、粮食收成之后，大家集中在一起竟卖，由于要卖掉换银子，大家的卖价一个比一个低，使得大家的收益降低。 　六、少数雇农缺乏职业道德，存心不交或少交承包金，甚至不惜举家迁徙到他乡，据初步统计大约有10户人家，直接导致大量的经济损失。 　经过仔细分析，地主看到了包产到户的各种弊端，决心进行大幅度的改革，但他面临的问题还很多，首当其冲的是副社长们的支持问题，地主甲已经明确提出要退股，地主乙和地主丙也在徘徊之中，维护联社的稳定是当务之急。 　由于地主耐心而细致的劝说，并承诺如果明年每亩收益增加不超过10%，地主分文不收，地主们总算同意再合作经营一年。 　经过上年的教训，地主成熟了许多。 　首先他意识到，作为领导者，仅仅制定了正确的政策，确立了发展战略就交给大家放手去做，自己不闻不问已经不适合现在的经营方式了，他必须亲自参与管理，这点对于不管何种模式来说都是至关重要的。 　其次，追求短期效应，要想在短期内年年大幅度增长，忽视了长期的投资，导致土地的后续资源不足。 　最后在经营方针上，鉴于历史原因和目前土地经济发展的状况，包产到户对农户的积极性具有重大的促进作用，地主再次肯定了在目前的联社规模下将继续坚持并不断完善包产到户的经营方式，同时针对其目前所具有的各种局限性，特地做了如下调整：一、鉴于农户的短期效应，不愿意对田地进行有效的维护，将土地承包期提高到5年。 　二、在设置投标金额上除设置保底金额外，另外设置封顶金额，在封顶金额上选取最佳人选中标，以保障投标人的合理利益。 　三、在社长和副社长的高层领导下面增设以下几个部门：1、水利部：负责辖区内的水利基础设施的建设和维护工作，农户根据用水量合理收取费用，从体制上保障耕地和人畜的用水。 　2、耕牛和农具部：出资将农户手中的耕牛全部收购上来，统一管理，并根据农户的需要安排耕种，并根据每亩收取相应的费用，多余的耕牛可以租借给其他农户。负责农具的购买和日常保养，先进农具的采购和试用等3、农肥部：建立联社统一的肥料中心，将各家各户的农家肥集中起来，并通过废料发酵等方式科学、合理的提供庄稼所需要的肥料。 　4、农技部：负责新产品、新技术以及先进的耕种方式的推广，提高农户的耕种效率和经济效益。 　5、管理部：负责农户的日常管理和相互间纠纷处理，保障农户能够安心劳作，对于可能发生欠款和困难的农户建立预警机制，确保承包金的安全。 　6、销售部：负责农产品的销售问题，确保收益的增加。 　四、确定管理人员的人选：建立了各个部门之后，选取相应的负责人就成为一个重要的任务，鉴于地主对张三等的了解决定启用他们六人作为联社的第一批管理人员。 　地主找张三等谈话，希望他们能够去农从管，提升自己的层次。张三等表示非常愿意，但对于收入提出了疑问，充当管理人员之后，自己的收入会不会发生大幅度的下降。对此，地主予以明确答复，由于工作性质已发生了改变，在目前的生产规模下，要保证以前的收益是比较困难的，但工作本身具备很高的挑战性，同时对于自己未来职业生涯的帮助非常大，大家应该克服暂时的困难，将来我们的规模扩大了，我保证大家的收益会发生巨大的转变。 　由于对地主的信任和对新工作的憧憬以及对今后人生的重新认识，张三等人决定跟着地主就新生活赌上一把，他们对自己和联社的未来充满了激情。 　张三沟通能力比较强，综合处理各种冲突的水平比较高，负责管理部。 　李四头脑灵活，善于专营，习惯和经销商打交道，负责销售部。 　王五擅长养牛负责耕牛和农具部。 　赵六喜欢专研新的农耕技术负责农技部。 　周七的农田灌溉搞得比较好，负责水利部。 　武八没什么专长，但踏实肯干，就负责农肥部。 　地主全面而系统的整体安排获得了联社其他地主的一致通过，他们决心在未来的日子里再跟地主一起同风雨共患难，共同打造美好的明天。 　工作紧张而有序的进行着，大家怀着满腔的激情奔赴各自的岗位，尽心尽力，不辞劳苦，各项工作均得到了有效的落实，事业在稳固而扎实的前进。 　这一年共做了如下大的事情：1、完成红河河水引水工程，并根据农田的布局，建设了一系列的庄稼灌溉设施。 　2、组成了50头牛的耕牛队，除圆满完成本联社的耕作计划外，在外承包了大量的耕作工程，为联社创造效益500两银子。 　3、建立了统一的肥料供应中心，保障了农民用肥需要。 　4、新推广“红河一号”产品，并取得初步见效，获得农户们的热烈欢迎。 　5、完美协调农户间的关系，全年没发生一起大的纠纷和逃税事件。 　6、寻找到好的粮食销售商，并在往年的基础上提高10%的粮食售价。 　由于各项措施安排得力，在水利、耕种、施肥、技术、农户管理、市场销售等的有力保障下，扣除大量的基础投资之后，年底每亩收益仍然较上年增长15%，考虑基础设施建设，实际增长在30%以上，而且这种增长是长期的，可以预见和有充足保障的。 　年底，在地主的倡导下，地主们一致同意对表现优异的张三等管理人员一个丰厚的红包，并加发一个月的工资。 　公司走上了正轨，大家也走上了管理者的道路，对此大家都非常高兴，期待着来年更大的收获。 　联社高层领导在经过协商后，一致同意新增资本，为此他们又引进了地主戊、地主戌、地主庚、地主辛，总耕地规模扩展到4000亩，新引进的地主表决权占原有地主的50%.</description>
     </item>
     
     <item>
       <title>员工辞职的十大原因！ </title>
-      <link>https://huobazi.aspxboy.com/blog/2007/09/02/cb-878740/</link>
+      <link>https://huobazi.github.com/blog/2007/09/02/cb-878740/</link>
       <pubDate>Sun, 02 Sep 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/09/02/cb-878740/</guid>
+      <guid>https://huobazi.github.com/blog/2007/09/02/cb-878740/</guid>
       <description>美国企管顾问史密斯（Gregory Smith），日前在《CEO Refresher》杂志上指出，根据他多年的顾问经验，员工辞职的十大原因为
 1、员工的工作量过重，造成他们必须在晚上或周末加班。 2、公司不愿意在办公室杂务上，另外再花费雇用专人负责，以致专业工作者必须自行做影印等工作。
 3、当员工可以在其他公司找到薪水高二至三成的工作时，公司却宣布暂时不帮员工加薪及升迁。
@@ -447,28 +447,28 @@ http://blogs.sqlpassj.org/mitsugi/archive/2007/09.aspx
     
     <item>
       <title>本人的博客性别鉴定</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/08/29/myblogsex/</link>
+      <link>https://huobazi.github.com/blog/2007/08/29/myblogsex/</link>
       <pubDate>Wed, 29 Aug 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/08/29/myblogsex/</guid>
+      <guid>https://huobazi.github.com/blog/2007/08/29/myblogsex/</guid>
       <description> 博客园-武眉博&amp;lt;.     93.0%男性倾向,7.0%女性倾向             评点：您的文风冷静而镇定，言语间展现出强悍的思辨能力与恢宏的胸襟，一个男子汉的阳刚形象跃然纸上。  yodao | 博客男女        </description>
     </item>
     
     <item>
       <title>奇怪的下载进度显示</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/08/01/iedownload/</link>
+      <link>https://huobazi.github.com/blog/2007/08/01/iedownload/</link>
       <pubDate>Wed, 01 Aug 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/08/01/iedownload/</guid>
+      <guid>https://huobazi.github.com/blog/2007/08/01/iedownload/</guid>
       <description>今天下载VS2008 beta 发现一个奇怪的下载提示 百分之好几百</description>
     </item>
     
     <item>
       <title>中国EDONG网（中国排名第16的IDC）的技术力量和他的24小时客服。</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/07/28/edong/</link>
+      <link>https://huobazi.github.com/blog/2007/07/28/edong/</link>
       <pubDate>Sat, 28 Jul 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/07/28/edong/</guid>
+      <guid>https://huobazi.github.com/blog/2007/07/28/edong/</guid>
       <description>这篇post写好后发现在博客园不能保存，原因是内容包含违禁内容。
 只有写到其他地方，再挂个链接了。
 http://spaces.huash.com/index.php/uid-133969-action-viewspace-itemid-240537
@@ -484,10 +484,10 @@ http://spaces.huash.com/index.php/uid-133969-action-viewspace-itemid-240537
     
     <item>
       <title>.Net专业人力资源网上线试运行.</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/07/07/dotnetjobscn/</link>
+      <link>https://huobazi.github.com/blog/2007/07/07/dotnetjobscn/</link>
       <pubDate>Sat, 07 Jul 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/07/07/dotnetjobscn/</guid>
+      <guid>https://huobazi.github.com/blog/2007/07/07/dotnetjobscn/</guid>
       <description>自己也是搞.net开发的，经常看到有些朋友在csdn发求职/招聘贴
 国内而现有的大招聘网站又未见专门为我们这拨人有个专门分类。就花了点时间做了这样一个网站。
 今天开始试运行。
@@ -500,10 +500,10 @@ http://www.dotnetjobs.cn/FeedBack.aspx</description>
     
     <item>
       <title>GotDotNet.Com要退休了</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/06/21/gotdotnetwillberetired/</link>
+      <link>https://huobazi.github.com/blog/2007/06/21/gotdotnetwillberetired/</link>
       <pubDate>Thu, 21 Jun 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/06/21/gotdotnetwillberetired/</guid>
+      <guid>https://huobazi.github.com/blog/2007/06/21/gotdotnetwillberetired/</guid>
       <description>http://www.gotdotnet.com/
  GotDotNet Phase-out Announcement    Microsoft announces changes to the GotDotNet phase-out schedule. Overall phase-out will be completed in summer 2007.
       Based on your feedback, we&amp;rsquo;ve made some adjustments to our schedule: CodeGallery phase-out – Rescheduled to July 2007 (original phase-out date was April 24, 2007)
@@ -512,10 +512,10 @@ This gives CodeGallery owners more time to migrate. We suggest CodePlex as an ex
     
     <item>
       <title>靶子的婚纱照出炉了，各位朋友PP</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/06/08/cb-777092/</link>
+      <link>https://huobazi.github.com/blog/2007/06/08/cb-777092/</link>
       <pubDate>Fri, 08 Jun 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/06/08/cb-777092/</guid>
+      <guid>https://huobazi.github.com/blog/2007/06/08/cb-777092/</guid>
       <description>婚纱照
  May 31, 2007
  照片数量：70</description>
@@ -523,10 +523,10 @@ This gives CodeGallery owners more time to migrate. We suggest CodePlex as an ex
     
     <item>
       <title>郁闷啊，竟然用256M内存跑着VS2005 SP1 好几个月</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/05/27/vs2005sp1256andmram/</link>
+      <link>https://huobazi.github.com/blog/2007/05/27/vs2005sp1256andmram/</link>
       <pubDate>Sun, 27 May 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/05/27/vs2005sp1256andmram/</guid>
+      <guid>https://huobazi.github.com/blog/2007/05/27/vs2005sp1256andmram/</guid>
       <description>还有什么比这更郁闷的啊
 几个月前 为了装 VS2005 SP1 加了160G硬盘，然后开新的装系统装VS2005 装SP1
 后来的这几个月发现机子慢如牛啊，今天早上，无意间看到了开机前的一幕256M ？？？？
@@ -536,10 +536,10 @@ This gives CodeGallery owners more time to migrate. We suggest CodePlex as an ex
     
     <item>
       <title>Google发布谷歌拼音输入</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/04/04/googlepinyininput/</link>
+      <link>https://huobazi.github.com/blog/2007/04/04/googlepinyininput/</link>
       <pubDate>Wed, 04 Apr 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/04/04/googlepinyininput/</guid>
+      <guid>https://huobazi.github.com/blog/2007/04/04/googlepinyininput/</guid>
       <description>http://tools.google.com/pinyin/
  终有个好用的 可以在日文系统下用的拼音输入法了。
 更酷的是网络同步功能：
@@ -548,10 +548,10 @@ This gives CodeGallery owners more time to migrate. We suggest CodePlex as an ex
     
     <item>
       <title>男人 女人 猪</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/04/04/manwomanpig/</link>
+      <link>https://huobazi.github.com/blog/2007/04/04/manwomanpig/</link>
       <pubDate>Wed, 04 Apr 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/04/04/manwomanpig/</guid>
+      <guid>https://huobazi.github.com/blog/2007/04/04/manwomanpig/</guid>
       <description>From:
 开发区报道 总 第 079 期第40版
 人=吃饭+睡觉+工作+玩,
@@ -578,19 +578,19 @@ This gives CodeGallery owners more time to migrate. We suggest CodePlex as an ex
     
     <item>
       <title>上班人员必读：“五险一金”详解！</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/03/31/cb-694846/</link>
+      <link>https://huobazi.github.com/blog/2007/03/31/cb-694846/</link>
       <pubDate>Sat, 31 Mar 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/03/31/cb-694846/</guid>
+      <guid>https://huobazi.github.com/blog/2007/03/31/cb-694846/</guid>
       <description>问：什么是五险一金？  答：“五险一金”讲的是五种保险，包括养老保险、医疗保险、失业保险、工伤保险和生育保险；“一金”指的是住房公积金。  其中养老保险、医疗保险和失业保险，这三种险是由企业和个人共同缴纳的保费，工伤保险和生育保险完全是由企业承担的。个人不需要缴纳。这里要注意的是“五险”是法定的，而“一金”不是法定的。  问：“五险一金”的缴费比例是什么？  答：目前北京养老保险缴费比例：单位20%(其中17%划入统筹基金，3%划入个人帐户)，个人8%(全部划入个人帐户)；医疗保险缴费比例：单位10%，个人2%+3元。  失业保险缴费比例：单位1.5%，个人0.5%；工伤保险根据单位被划分的行业范围来确定它的工伤费率；生育保险缴费比例：单位0.8%，个人不交钱。  公积金缴费比例：　根据企业的实际情况，选择住房公积金缴费比例。但原则上最高缴费额不得超过北京市职工平均工资300%的10%。  统筹基金即：在养老保险制度从国家—单位制逐渐向国家—社会制转变的过程中需要国家统筹，以解决经济发展不平衡及人口老龄化等问题。  (1)以企业缴费为主建立社会统筹基金；(2)由职工和企业缴费为主建立个人帐户；(3)政府负担养老保险基金的管理费用。这种社会统筹和个人帐户相结合的半基金制有利于应付中国人口老龄化危机，逐渐分散旧制度到新制度的转轨成本，逐步实现由企业养老保险制度到个人养老保险制度的转变。  四险一金的缴纳额度每个地区的规定都不同，基数是以工资总额为基数。有的企业在发放时有基本工资，有相关一些补贴，但有的企业在缴纳时，只是基本工资，这是违反法律规定的。具体比例要向当地的劳动部门去咨询。  关于养老保险、失业保险和医疗保险的支取，是在法定允许的情况下才可以领取，是由设保登记部门来发放，比如“养老保险，要达到法定的年龄才可以，失业保险金的领取也是要具备条件，比如你到户口所在地的街道办事处办理失业证明，同时又办了求职证，就是指你失业以后还必须有求职的意愿，这样的条件才可以领取。  如果失业之后你不想工作，那么就不能给你发保险金。另外，养老金和失业金是不能同时享受的。  问：试用期内是否享有保险？  答：在试用期内也应该有享受保险，因为试用期是合同期的一个组成部分，它不是隔离在合同期之外的。所以在试用期内也应该上保险。另外，企业给员工上保险是一个法定的义务，不取决于当事人的意思或自愿与否，即使员工表示不需要交保险也不行，而且商业保险不能替代社会保险。养老保险的享受待遇。  累计缴纳养老保险15年以上，并达到法定退休年龄，可以享受养老保险待遇：  1、按月领取按规定计发的基本养老金，直至死亡。  基本养老金的计算公式如下：  基本养老金=基础养老金+个人账户养老金+过渡性养老金=退休前一年全市职工月平均工资×20%(缴费年限不满15年的按15%)+个人账户本息和÷120+指数化月平均缴费工资×1997年底前缴费年限×1.4%。  2、死亡待遇。(1)丧葬费(2)一次性抚恤费(3)符合供养条件的直系亲属生活困难补助费，按月发放，直至供养直系亲属死亡。  注意：养老保险应尽量连续缴纳，根据有关文件规定，凡企业或被保险人间断缴纳基本养老保险费的(失业人员领取失业保险金期间或按有关规定不缴费的人员除外)，被保险人符合国家规定的养老条件，计算基本养老金时，其基础性养老金的计算基数，按累计间断的缴费时间逐年前推至相应年度上一年的本市职工平均工资计算(累计间断的缴费时间，按每满12个月为一个间断缴费年度计算，不满12个月不计算)  举例来说吧：  如果你2020年退休，正常你的基础养老金是2019年的社会平均工资×20%，但是如果你在退休之前养老保险中断了30个月，就是中断了2.5年，按2年算，你的基础养老金就是2017年社会平均工资×20%  问：参加医疗保险享受哪些待遇？  答：1、门、急诊医疗费用。在职职工年度内(1月1日-12月31日)符合基本医疗保险规定范围的医疗费累计超过2000元以上部分；  2、结算比例。合同期内派遣人员2000元以上部分报销50%，个人自付50%；在一个年度内累计支付派遣人员门、急诊报销最高数额为2万元。  3、参保人员要妥善保管好在定点医院就诊的门诊医疗单据(含大额以下部分的收据、处方底方等)，作为医疗费用报销凭证；　 4、三种特殊病的门诊就医：参保人员患恶性肿瘤放射治疗和化学治疗、肾透析、肾移植后服抗排异药需在门诊就医时，由参保人就医的二、三级定点医院开据”疾病诊断证明”，并填写《北京市医疗保险特殊病种申报审批表》，报区医保中心审批备案。这三种特殊病的门诊就医及取药仅限在批准就诊的定点医院，不能到定点零售药店购买。发生的医疗费符合门诊特殊病规定范围的，参照住院进行结算。  5、住院医疗  ●住院押金：符合住院条件的参保人员，在收入住院时，医院收取参保人员部分押金，押金数额由医院根据病情按比例确定。如被派遣人员单位和参保人员未能按时足额缴纳医疗保险费的，住院押金由派遣人员个人全额垫付。  ●结算周期：参保人员住院治疗每90天为一个结算周期：不超过90天的，每次住院为一个结算周期。  ●恶性肿瘤患者门诊放射治疗和化学治疗、肾透析、肾移植后服抗排异药、患有精神病需常年住院的患者其发生的医疗费用每360天为一个结算周期。  ●参保人员在定点的社区卫生服务中心(站)的家庭病床治疗发生的医疗费用，每90天为一个结算周期。  ●参保人员出院或阶段治疗结束时，需由派遣人员个人先与医院结清应由派遣人员个人自费和自付的费用，应由基本医疗保险统筹基金和大额医疗互助资金支付的医疗费用，由医院向医保中心申报审核、结算。  ●参保人员住院治疗，符合基本医疗保险规定范围的医疗费的结算，设定基本医疗统筹基金支付起付线和最高支付额。  ●起付线第一次住院为1300元，以后住院为650元，最高支付限额为5万元；超过最高支付上限的(不含起付标准以下以及派遣人员个人负担部分)大额医疗费用互助。  资金支付70%，派遣人员个人负担30%。在一个年度内最高支付10万元。住院费用的结算标准，在一个结算周期内按医院等级和费用数额采取分段计算、累加支付的办法。（各项比例有调整时，按新的标准执行）  注意：非因公交通事故，医保是免责的！  问：参加失业保险将能享受待遇？  答：失业保险连续缴纳一年以上，档案退回街道后。可以在街道享受失业保险待遇。  1.</description>
     </item>
     
     <item>
       <title>Google的Picasa网络相册很弓虽！！！</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/03/21/googlepicasa/</link>
+      <link>https://huobazi.github.com/blog/2007/03/21/googlepicasa/</link>
       <pubDate>Wed, 21 Mar 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/03/21/googlepicasa/</guid>
+      <guid>https://huobazi.github.com/blog/2007/03/21/googlepicasa/</guid>
       <description>今天试验了一下 功能比较强 特别是 当机器上未装Picasa时用 Activex 来上传、排序 幻灯片播放等。
 一个字 弓虽！
 演示：
@@ -601,10 +601,10 @@ http://picasaweb.google.com/huobazi/NCFAnE/photo#s5044173787206243378</descripti
     
     <item>
       <title>转载, 春晚诗朗诵《心里话》之程序员版!! </title>
-      <link>https://huobazi.aspxboy.com/blog/2007/03/06/cb-665199/</link>
+      <link>https://huobazi.github.com/blog/2007/03/06/cb-665199/</link>
       <pubDate>Tue, 06 Mar 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/03/06/cb-665199/</guid>
+      <guid>https://huobazi.github.com/blog/2007/03/06/cb-665199/</guid>
       <description>要问我是谁？
 过去，我总不愿回答，
 因为我怕，
@@ -635,37 +635,37 @@ http://community.csdn.net/Expert/topic/5370/5370546.xml?temp=.6211817</descripti
     
     <item>
       <title>拎个这样的手提袋上街，肯定好多眼球</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/03/02/cb-661909/</link>
+      <link>https://huobazi.github.com/blog/2007/03/02/cb-661909/</link>
       <pubDate>Fri, 02 Mar 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/03/02/cb-661909/</guid>
+      <guid>https://huobazi.github.com/blog/2007/03/02/cb-661909/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Test live writer</title>
-      <link>https://huobazi.aspxboy.com/blog/2006/11/19/cb-565070/</link>
+      <link>https://huobazi.github.com/blog/2006/11/19/cb-565070/</link>
       <pubDate>Sun, 19 Nov 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/11/19/cb-565070/</guid>
+      <guid>https://huobazi.github.com/blog/2006/11/19/cb-565070/</guid>
       <description>Test live writer</description>
     </item>
     
     <item>
       <title>Test remote images for live writer</title>
-      <link>https://huobazi.aspxboy.com/blog/2006/11/19/cb-565071/</link>
+      <link>https://huobazi.github.com/blog/2006/11/19/cb-565071/</link>
       <pubDate>Sun, 19 Nov 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/11/19/cb-565071/</guid>
+      <guid>https://huobazi.github.com/blog/2006/11/19/cb-565071/</guid>
       <description>如何设置能使远程图片直接上传呢</description>
     </item>
     
     <item>
       <title>好像是 sqlserver mangage studio express 的bug</title>
-      <link>https://huobazi.aspxboy.com/blog/2006/09/21/isitabugofsqlservermangagestudioeexpress/</link>
+      <link>https://huobazi.github.com/blog/2006/09/21/isitabugofsqlservermangagestudioeexpress/</link>
       <pubDate>Thu, 21 Sep 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/09/21/isitabugofsqlservermangagestudioeexpress/</guid>
+      <guid>https://huobazi.github.com/blog/2006/09/21/isitabugofsqlservermangagestudioeexpress/</guid>
       <description>sqlserver 2005 express
 使用 sqlserver mangage studio express 创建一个测试用表
 CREATE TABLE [dbo].[test](
@@ -688,10 +688,10 @@ Msg 208, Level 16, State 1, Procedure xxx, Line 10</description>
     
     <item>
       <title>好东西,程序员是这样喝酒的</title>
-      <link>https://huobazi.aspxboy.com/blog/2006/07/29/cb-462570/</link>
+      <link>https://huobazi.github.com/blog/2006/07/29/cb-462570/</link>
       <pubDate>Sat, 29 Jul 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/07/29/cb-462570/</guid>
+      <guid>https://huobazi.github.com/blog/2006/07/29/cb-462570/</guid>
       <description>大家喝的是啤酒。这时你入座了。 你给自己倒了杯可乐，这叫低配置。 你给自已倒了杯啤酒，这叫标准配置。 你给自己倒了杯茶水，这茶的颜色还跟啤酒一样，这叫木马。 你给自己倒了杯可乐，还滴了几滴醋，不仅颜色跟啤酒一样，而且不冒热气还有泡泡，这叫超级木马。 你的同事给你倒了杯白酒，这叫推荐配置。 
 人到齐了，酒席开始了。 你先一个人喝了一小口，这叫单元测试。 你跟旁边的人说哥们咱们随意，这叫交叉测试。 但是他说不行，这杯要干了，这叫压力测试。 于是你说那就大家一起来吧，这叫内部测试。 这个时候boss向全场举杯了，这叫公开测试。 
 菜过三巡，你就不跟他们客气了。 你向对面的人敬酒，这叫p2p. 你向对面的人敬酒，他回敬你，你又再敬他……，这叫tcp. 你向一桌人挨个敬酒，这叫令牌环。 你说只要是兄弟就干了这杯，这叫广播。 可是你的上司jj听了不高兴了，只有兄弟么，罚酒三杯。这叫炸弹。 可是你的下级mm听了不高兴了，我喝一口，你喝一杯，这叫恶意攻击。 有一个人过来向这桌敬酒，你说不行你先过了我这关，这叫防火墙。 你的小弟们过来敬你酒，这叫一对多。 你是boss，所有人过来敬你酒，这叫服务器。 
@@ -705,10 +705,10 @@ http://community.csdn.net/Expert/topic/4910/4910780.xml?temp=.4186212</descripti
     
     <item>
       <title>CSDN上的打油诗，大家分享</title>
-      <link>https://huobazi.aspxboy.com/blog/2006/04/30/cb-389174/</link>
+      <link>https://huobazi.github.com/blog/2006/04/30/cb-389174/</link>
       <pubDate>Sun, 30 Apr 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/04/30/cb-389174/</guid>
+      <guid>https://huobazi.github.com/blog/2006/04/30/cb-389174/</guid>
       <description>在http://terrylee.cnblogs.com/archive/2006/04/28/387669.html
 看到 一部分 ，把我当时从 帖子里拔下来的 再贴一下，分享 ～～～～
 CSDN上的打油诗，大家分享 
@@ -747,15 +747,15 @@ CSDN上的打油诗，大家分享
 若将贫贱比贫者，一在平地一在天；若将贫贱比车马，他得驱驰我得闲。
 别人笑我忒疯癫，我笑他人看不穿；不见五陵豪杰墓，无花无酒锄作田。）
 http://expert.csdn.net/Expert/xsl/Reply_Xml.asp?Topicid=2010462
-http://www.aspxboy.com/private/showthread.asp?threadid=134</description>
+http://www.github.com/private/showthread.asp?threadid=134</description>
     </item>
     
     <item>
       <title>四、六级证件真伪查询就是摆设</title>
-      <link>https://huobazi.aspxboy.com/blog/2006/03/14/cet4andcet6/</link>
+      <link>https://huobazi.github.com/blog/2006/03/14/cet4andcet6/</link>
       <pubDate>Tue, 14 Mar 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/03/14/cet4andcet6/</guid>
+      <guid>https://huobazi.github.com/blog/2006/03/14/cet4andcet6/</guid>
       <description>证书上联系电话是空号
 http://www.scol.com.cn/technology/wjzx/20050808/20058891927.htm
 联系了一下cet官方网站上公布的电话（http://www.cet.edu.cn/contract.htm）
@@ -769,10 +769,10 @@ http://www.scol.com.cn/technology/wjzx/20050808/20058891927.htm
     
     <item>
       <title>记Trojan.PWS.QQPass,winmide32.dll,wins.lib的清除</title>
-      <link>https://huobazi.aspxboy.com/blog/2006/03/08/cleartrojanpwsqqpasswinmide32dllwinslib/</link>
+      <link>https://huobazi.github.com/blog/2006/03/08/cleartrojanpwsqqpasswinmide32dllwinslib/</link>
       <pubDate>Wed, 08 Mar 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/03/08/cleartrojanpwsqqpasswinmide32dllwinslib/</guid>
+      <guid>https://huobazi.github.com/blog/2006/03/08/cleartrojanpwsqqpasswinmide32dllwinslib/</guid>
       <description>机器中标，竟然有提示您的QQ已在别处登陆，亏得俺是QQ会员，不一会儿手机收到藤讯短信
 提示QQ密码被修改，随发个“16”回去，取回密码，在打开QQ准备登陆时，
 诺顿报警如下：
@@ -809,20 +809,20 @@ del wins.lib
     
     <item>
       <title>Google的网站统计、分析系统</title>
-      <link>https://huobazi.aspxboy.com/blog/2005/11/16/cb-277830/</link>
+      <link>https://huobazi.github.com/blog/2005/11/16/cb-277830/</link>
       <pubDate>Wed, 16 Nov 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2005/11/16/cb-277830/</guid>
+      <guid>https://huobazi.github.com/blog/2005/11/16/cb-277830/</guid>
       <description>http://www.google.com/analytics/
 功能全，比较酷！</description>
     </item>
     
     <item>
       <title>准备开辟第二职业了，哎......</title>
-      <link>https://huobazi.aspxboy.com/blog/2005/11/09/cb-272505/</link>
+      <link>https://huobazi.github.com/blog/2005/11/09/cb-272505/</link>
       <pubDate>Wed, 09 Nov 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2005/11/09/cb-272505/</guid>
+      <guid>https://huobazi.github.com/blog/2005/11/09/cb-272505/</guid>
       <description> 现欲开辟第二职业，有意者来电来函咨询，本人承接以下业务：苦力搬运，装卸，车工，钳工，焊工，水电工，瓦工，砸墙，砌墙，筛沙,油漆,通下水道,贴瓷砖,室内装璜,Vb,C++，面点制作，热炒、小炒。
 .NET,C#,Java,j2ee,j2me,asp,delphi,汇编，PC&amp;amp;手机游戏开发,网络维护管理，3维建模，照片上色，平面设计，建筑效果图，flash动画，硬件设计,单片机开发,四六级替考，办证，黑枪，黑车,暗杀，洗钱，放火，要债，割双眼皮，拉单眼皮，修复处女膜，整容，养狗…
 　另:本人长期代写小学生寒,暑假作业.替小学生欺负其他同学，代替学生父母开家长会，(限制5-10岁以内)
@@ -831,10 +831,10 @@ del wins.lib
     
     <item>
       <title>买了edong的空间没有db_securityadmin权限</title>
-      <link>https://huobazi.aspxboy.com/blog/2005/10/16/cb-256133/</link>
+      <link>https://huobazi.github.com/blog/2005/10/16/cb-256133/</link>
       <pubDate>Sun, 16 Oct 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2005/10/16/cb-256133/</guid>
+      <guid>https://huobazi.github.com/blog/2005/10/16/cb-256133/</guid>
       <description>买了edong的http://www.edong.com/v8/webhosting/K1000.php这个k1000空间
 没有db_securityadmin权限装不了CommunityServer和DotNetNuke
 
@@ -850,10 +850,10 @@ sp_addrolemember &amp;rsquo;db_ddladmin&amp;rsquo;, &amp;rsquo;&amp;lt;your l
     
     <item>
       <title>比较酷</title>
-      <link>https://huobazi.aspxboy.com/blog/2005/10/07/cb-249660/</link>
+      <link>https://huobazi.github.com/blog/2005/10/07/cb-249660/</link>
       <pubDate>Fri, 07 Oct 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2005/10/07/cb-249660/</guid>
+      <guid>https://huobazi.github.com/blog/2005/10/07/cb-249660/</guid>
       <description>http://www.netvibes.com/
 http://www.google.com/ig
 http://www.start.com/
@@ -862,10 +862,10 @@ http://www.start.com/
     
     <item>
       <title>做站要有创意，不然没有前途！！！</title>
-      <link>https://huobazi.aspxboy.com/blog/2005/10/04/cb-248706/</link>
+      <link>https://huobazi.github.com/blog/2005/10/04/cb-248706/</link>
       <pubDate>Tue, 04 Oct 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2005/10/04/cb-248706/</guid>
+      <guid>https://huobazi.github.com/blog/2005/10/04/cb-248706/</guid>
       <description>做站要有创意，不然没有前途！！！
 前几天刚发布的：
 一个老外做了个million dollar homepage http://www.milliondollarhomepage.com/
@@ -886,10 +886,10 @@ http://www.im286.com/viewthread.php?tid=1121013&amp;amp;fpage=1&amp;amp;highligh
     
     <item>
       <title>顺利与不顺利</title>
-      <link>https://huobazi.aspxboy.com/blog/2005/05/17/cb-157531/</link>
+      <link>https://huobazi.github.com/blog/2005/05/17/cb-157531/</link>
       <pubDate>Tue, 17 May 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2005/05/17/cb-157531/</guid>
+      <guid>https://huobazi.github.com/blog/2005/05/17/cb-157531/</guid>
       <description>今日给客户做演示，1年多的项目演示，客户比较满意，算顺利。
 下午打开邮箱，发现GoogleAdsense把我的帐号停用了，说产生了无效点击。
 一天才几个美毛的收入，我这个弊做的也太差劲了。不顺利。</description>
@@ -897,10 +897,10 @@ http://www.im286.com/viewthread.php?tid=1121013&amp;amp;fpage=1&amp;amp;highligh
     
     <item>
       <title>很多网站，软件对自定义的dpi支持不好</title>
-      <link>https://huobazi.aspxboy.com/blog/2005/05/02/cb-148894/</link>
+      <link>https://huobazi.github.com/blog/2005/05/02/cb-148894/</link>
       <pubDate>Mon, 02 May 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2005/05/02/cb-148894/</guid>
+      <guid>https://huobazi.github.com/blog/2005/05/02/cb-148894/</guid>
       <description>桌面－右键－属性－设置－高级－dpi设置
 调整到大尺寸120dpi　ＱＱ有好友上线的时候，pop的窗体不在右下角了
 CSDN论坛内每个帖子你都看不到回复和重写的按钮了</description>
@@ -908,10 +908,10 @@ CSDN论坛内每个帖子你都看不到回复和重写的按钮了</description
     
     <item>
       <title>笑一下</title>
-      <link>https://huobazi.aspxboy.com/blog/2005/03/30/cb-128545/</link>
+      <link>https://huobazi.github.com/blog/2005/03/30/cb-128545/</link>
       <pubDate>Wed, 30 Mar 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2005/03/30/cb-128545/</guid>
+      <guid>https://huobazi.github.com/blog/2005/03/30/cb-128545/</guid>
       <description>八十年代初，摆个地摊就能发财，可很多人不敢。
 九十年代初，买支股票就能挣钱，可很多人不信。
 二十一世纪，开个网站就能赚钱，可很多人不试。</description>
@@ -919,10 +919,10 @@ CSDN论坛内每个帖子你都看不到回复和重写的按钮了</description
     
     <item>
       <title>什么东西做到 “只此一家，别无分号” 的时候，想不成为暴利都不可能</title>
-      <link>https://huobazi.aspxboy.com/blog/2005/03/03/cb-112265/</link>
+      <link>https://huobazi.github.com/blog/2005/03/03/cb-112265/</link>
       <pubDate>Thu, 03 Mar 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2005/03/03/cb-112265/</guid>
+      <guid>https://huobazi.github.com/blog/2005/03/03/cb-112265/</guid>
       <description>什么东西做到 “只此一家，别无分号” 的时候，想不成为暴利都不可能
 而这个经过红头文件认证的网站，每查一个号码2块钱
 特别提示 1、零散用户须通过手机短信方式进行查询，限查询2001-2004年的学历数据。
@@ -937,10 +937,10 @@ http://www.chsi.com.cn/xlcx/index.jsp
     
     <item>
       <title>我认识个家伙，说了注册表这个词，三天之后就被车撞了,哈哈哈哈</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/12/04/cb-72811/</link>
+      <link>https://huobazi.github.com/blog/2004/12/04/cb-72811/</link>
       <pubDate>Sat, 04 Dec 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/12/04/cb-72811/</guid>
+      <guid>https://huobazi.github.com/blog/2004/12/04/cb-72811/</guid>
       <description>好文笔哦,幽默.
 警告：不要修改注册表里的值。永远别这样。我们知道刚才我们让您这么做，可如果我们让您去跳崖您也去跳吗？永远也别改变注册表中的值。甚至连注册表这个词都别说。我认识个家伙，说了注册表这个词，三天之后就被车撞了。这是一个真实的故事。事实上，您的计算机上都不该有注册表。如果您怀疑你的计算机上有个注册表，请致电我们，我们会立即派出训练有素的专业人员去您的办公室将注册表删除。如果您不小心接触了注册表，请打肥皂洗手然后去叫医生。不要将注册表吞下或弄到眼睛里！
 原文地址:
@@ -949,28 +949,28 @@ http://www.microsoft.com/china/technet/community/scriptcenter/tools/twkmatic.msp
     
     <item>
       <title>你,我,他,中秋快乐!</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/09/28/cb-47380/</link>
+      <link>https://huobazi.github.com/blog/2004/09/28/cb-47380/</link>
       <pubDate>Tue, 28 Sep 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/09/28/cb-47380/</guid>
+      <guid>https://huobazi.github.com/blog/2004/09/28/cb-47380/</guid>
       <description>┏━┓┃中秋快乐┃┏━┓ ┃逢┃┗━━━━┛┃迎┃ ┃千┃　━　━━ ┃中┃ ┃禧┃━┳━┏━┓┃秋┃ ┃举┃┃┃┃┗━┛┃佳┃ ┃世┃┃┃┃┏┳┓┃节┃ ┃共┃　┃　┃╋┃┃同┃ ┃欢┃　┛　┗┻┛┃庆┃ ┗━┛　┗━┛</description>
     </item>
     
     <item>
       <title>可怜的ColdFusion 国内没认学吗？还是都不在csdn讨论？</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/09/22/cb-45611/</link>
+      <link>https://huobazi.github.com/blog/2004/09/22/cb-45611/</link>
       <pubDate>Wed, 22 Sep 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/09/22/cb-45611/</guid>
+      <guid>https://huobazi.github.com/blog/2004/09/22/cb-45611/</guid>
       <description> ColdFusion 2004-08专家榜  名次 社区昵称 专家分 个人描述    1 suzhenning 66    2 Qthinker 22 在失意的时候不要灰心,想一想,为了老婆,为了父母,为了将来的孩子,为了社会,要赶快爬起来  3 yibotiemen 5 我们一起来学习，我们一起来进步   4 s1ihome 5 勤能补拙  5 BlueDestiny 5 天资之于才华，一如本能之于理智。   6 y7967 5 走猫的路,让狗说去吧~   </description>
     </item>
     
     <item>
       <title>撞墙吧 Array.IndexOf(xxx)</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/09/18/cb-44424/</link>
+      <link>https://huobazi.github.com/blog/2004/09/18/cb-44424/</link>
       <pubDate>Sat, 18 Sep 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/09/18/cb-44424/</guid>
+      <guid>https://huobazi.github.com/blog/2004/09/18/cb-44424/</guid>
       <description>要在后台把CheckBoxList的某个ListItem 的selected给true了
 遍历该CheckBoxList,写下了下面注释内的代码，死活不能选中我的第个CheckBox
 
@@ -1003,10 +1003,10 @@ if (Array.IndexOf(xxxxx) &amp;gt; 0) 用力吧555555，撞的头都疼了.</desc
     
     <item>
       <title>中午了 吃免费的午餐吧</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/09/03/cb-39328/</link>
+      <link>https://huobazi.github.com/blog/2004/09/03/cb-39328/</link>
       <pubDate>Fri, 03 Sep 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/09/03/cb-39328/</guid>
+      <guid>https://huobazi.github.com/blog/2004/09/03/cb-39328/</guid>
       <description>这个站点提供免费的yourname.info的玉米注册http://www.domainsite.com/
 注册个账号就可以申请了 每人可以申请25个
 不知道1年后需费如何收了</description>
@@ -1014,10 +1014,10 @@ if (Array.IndexOf(xxxxx) &amp;gt; 0) 用力吧555555，撞的头都疼了.</desc
     
     <item>
       <title>多收了三五斗（TCL mm版）(收藏.搞笑) </title>
-      <link>https://huobazi.aspxboy.com/blog/2004/08/17/cb-34217/</link>
+      <link>https://huobazi.github.com/blog/2004/08/17/cb-34217/</link>
       <pubDate>Tue, 17 Aug 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/08/17/cb-34217/</guid>
+      <guid>https://huobazi.github.com/blog/2004/08/17/cb-34217/</guid>
       <description>from: http://computer.mblogger.cn/vcbear/posts/13163.aspx TCL的停车场里，横七竖八停着各处来的自行车,助动车。门口排队的是UT的GG，把门口 塞得很满。厚厚的履历表和财产证明用各色的夹子夹者,一捆一捆地,填没了这只手和那只手 之间的空隙.门口进去就是TCL最大的会议厅了,联谊的MM就排在市场的那一边。朝晨的太阳 光从整洁的玻璃天棚斜射下来，光柱子落在吧台外面晃动着的几双Gucci高跟鞋上。 那些UTGG大清早骑自行车出来，穿越了半个高新区,到了TCL，早饭也不吃一下，便来到 吧台前面占卜他们的命运。“Manager 30万，Team Leader 20W，Engineer不要。”TCL的联 谊小姐有气没力地回答他们。　“什么！”UT的朋友几乎不相信自己的耳朵。美满的希望突然一沉，一会儿大家都呆 了。　“在六月里，你们不是说IT年薪10万么？”　“8万也要过，不要说10万。”　“哪里有涨得这样厉害的！”　“现在是什么时候，你们不知道么？各处的GG象潮水一般涌来,过几天还要涨呢！” 
 原来出来犹如赛龙船似的一股劲儿，现在在每个人的身体里松懈下来了。最近天照应， 很多人加了薪，税务局的兄台也不来作梗, 很快就拿到了年薪，有的还是优秀 Staff的头 衔,谁都以为该得透一透气了。　哪里知道临到最后的占卜，却得到比IT冬天或公司开除更坏的课兆！　“还是不要娶的好，我们回去呆在家里吧！”从简单的心里喷出了这样的愤激的话。 “嗤，”小姐冷笑着，“你们不干，人家就关门了么？各处地方多的是新来的GG,头几 批还没分派完，华为，中兴的优秀GG就要涌来了.现在各地的海归,硕士,博士,MBA也多得是. 高素质的丫头是为他们留着的&#34; 华为，中兴的优秀GG,硕士,博士,MBA,那是遥远的事情，仿佛可以不管。而已经30的GG 不找LP，却只能作为一句愤激的话说说罢了。怎么能够不娶呢？在家父母的命令是要遵守 的，为了来联谊，买了体面的西装革履，当初父向亲母亲夸下的海口,自己向狐朋狗友吹的 牛是要还的。　“我们到创维去找MM吧，”在创维，或许有比较好的命运等候着他，有人这么想。　但是，小姐又来了一个“嗤”，眨着微翘的睫毛说道：“不要说创维，就是找到康佳
 去也一样。我们同行公议，这两天的价钱是Manager 30万，Team Leader 20W，Engineer 不要”。 “到创维去找没有好处，”同伴间也提出了驳议。“创维的还要深圳户口，天知道他们 多收我们多少钱！就说依他们给，哪里来的钱？”　“小姐，能不能降低一点？”差不多是哀求的声气。　“降低一点，说说倒是很容易的一句话。我们的MM都是金枝玉叶养的，你们要知道，降 低一点，就没有SK-II，没有资生堂，没有TOYOTA，这样的傻事谁肯干？” “这个价钱实在太高了，我们做梦也没想到。去年的要求是15万，今年有的只要12万， 不，你小姐说的，10万也招过；我们想，今年总该比15万少一点吧。哪里知道只有20 万！” “小姐，就是去年的老价钱，年薪15万吧。”　“小姐，灰领GG可怜，你们行行好心，少赚一点吧。”　另一位小姐听得厌烦，把手里的空咖啡杯扔到街心，睁大了眼睛说,“你们嫌价钱低， 不要来找好了。是你们自己来的，并没有请你们来。只管多罗嗦做什么！我们有的是 Offer，不给你们，有别人的好给。你们看，又有几群GG挤过来了.”　三四张Glasses好不容易从人堆里挤过来，Glasses后面是充满着希望的年轻的脸。他们 随即加入先到的一群。斜伸下来的光柱子落在他们的西服的肩背上。　“听听看，今年什么价钱。”　“比去年都不如，要求Team Leader 20W”伴着一副懊丧到无可奈何的神色。　“什么！”希望犹如肥皂泡，一会儿又进裂了三四个。</description>
@@ -1025,19 +1025,19 @@ if (Array.IndexOf(xxxxx) &amp;gt; 0) 用力吧555555，撞的头都疼了.</desc
     
     <item>
       <title>一觉睡醒 中国4块金牌啦，开心啊</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/08/15/cb-33477/</link>
+      <link>https://huobazi.github.com/blog/2004/08/15/cb-33477/</link>
       <pubDate>Sun, 15 Aug 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/08/15/cb-33477/</guid>
-      <description>http://www.aspxboy.com/jp/default.aspx</description>
+      <guid>https://huobazi.github.com/blog/2004/08/15/cb-33477/</guid>
+      <description>http://www.github.com/jp/default.aspx</description>
     </item>
     
     <item>
       <title>哭了......</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/07/30/cb-28509/</link>
+      <link>https://huobazi.github.com/blog/2004/07/30/cb-28509/</link>
       <pubDate>Fri, 30 Jul 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/07/30/cb-28509/</guid>
+      <guid>https://huobazi.github.com/blog/2004/07/30/cb-28509/</guid>
       <description>   南方女会网友流落户县      
     
         南方女孩户县会网友沦为乞丐 
@@ -1062,10 +1062,10 @@ from: http://news.huash.com/gb/news/2004-07/14/content_1116383.htm
     
     <item>
       <title>csdn开通blog了</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/06/22/cb-17871/</link>
+      <link>https://huobazi.github.com/blog/2004/06/22/cb-17871/</link>
       <pubDate>Tue, 22 Jun 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/06/22/cb-17871/</guid>
+      <guid>https://huobazi.github.com/blog/2004/06/22/cb-17871/</guid>
       <description>csdn开通blog了
 文档中心发过豆腐干 的都有吧
 http://blog.csdn.net/xiahouwen</description>
@@ -1073,10 +1073,10 @@ http://blog.csdn.net/xiahouwen</description>
     
     <item>
       <title>为小巨人记一笔，等待明日新星的升起</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/05/18/cb-10058/</link>
+      <link>https://huobazi.github.com/blog/2004/05/18/cb-10058/</link>
       <pubDate>Tue, 18 May 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/05/18/cb-10058/</guid>
+      <guid>https://huobazi.github.com/blog/2004/05/18/cb-10058/</guid>
       <description>你知道9岁零6个月时的姚明有多高？告诉你，1米79，吓人吧。而长沙有个比姚明更吓人的小巨人，9岁零6个月的刘武帅，身高1米82，比当年的姚明还高3厘米。现在姚明的身高2米26，而经过科学预测，成年后的刘武帅身高也很可能会超过姚明。
 　刘武帅，今年3月刚满10岁，在湖南省青少年篮球俱乐部接受正规篮球训练不到一年，如今身高已达到1米86。刘武帅的父亲身高1米93，母亲身高1米73，严格的医学检查表明 ，刘武帅身体发育一切正常，出众的身高完全得益于遗传。“他现在穿49码的鞋，身高平均每年要长7厘米。我们现在最发愁的是给他买不到合适的鞋。”刘武帅的妈妈伍女士说。
 　5月10日下午，记者在育英小学篮球馆看到了这位高大的“篮球小子”：结实的身材，留着和姚明一样的寸头，有着和姚明一样的深眼眶和大眼睛。
@@ -1089,10 +1089,10 @@ http://blog.csdn.net/xiahouwen</description>
     
     <item>
       <title>不错的搜索引擎</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/04/17/cb-6394/</link>
+      <link>https://huobazi.github.com/blog/2004/04/17/cb-6394/</link>
       <pubDate>Sat, 17 Apr 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/04/17/cb-6394/</guid>
+      <guid>https://huobazi.github.com/blog/2004/04/17/cb-6394/</guid>
       <description>在http://blog.joycode.com/zhanbos看到的
 页面很简单，速度很快，功能也很强？
 感觉比较好。
@@ -1102,10 +1102,10 @@ http://a9.com/huobazi</description>
     
     <item>
       <title>网络流留言行政区划改革出台??????????</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/04/15/cb-6139/</link>
+      <link>https://huobazi.github.com/blog/2004/04/15/cb-6139/</link>
       <pubDate>Thu, 15 Apr 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/04/15/cb-6139/</guid>
+      <guid>https://huobazi.github.com/blog/2004/04/15/cb-6139/</guid>
       <description>http://www.baidu.com/baidu?ct=0&amp;amp;ie=gb2312&amp;amp;bs=%D6%D0%B9%FA50%B8%F6%D0%D0%D5%FE%C7%F8%BB%AE%B8%C4%B8%EF%B3%F6%CC%A8&amp;amp;sr=&amp;amp;z=&amp;amp;word=%D0%D0%D5%FE%C7%F8%BB%AE%B8%C4%B8%EF%B3%F6%CC%A8&amp;amp;cl=3&amp;amp;f=8
 中国50个行政区划改革出台..
 中国50个行政区划改革出台---2004年10月1日正式在全国实施
@@ -1167,28 +1167,28 @@ http://a9.com/huobazi</description>
     
     <item>
       <title>据说是网络上最全的3721、百度等的免疫程序</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/03/26/cb-4245/</link>
+      <link>https://huobazi.github.com/blog/2004/03/26/cb-4245/</link>
       <pubDate>Fri, 26 Mar 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/03/26/cb-4245/</guid>
+      <guid>https://huobazi.github.com/blog/2004/03/26/cb-4245/</guid>
       <description>http://www.loveyuki.com/attachments/month_0403/li!p_AntiActiveXnags1.02.rar</description>
     </item>
     
     <item>
       <title>转一篇  搞笑的</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/03/10/cb-2676/</link>
+      <link>https://huobazi.github.com/blog/2004/03/10/cb-2676/</link>
       <pubDate>Wed, 10 Mar 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/03/10/cb-2676/</guid>
+      <guid>https://huobazi.github.com/blog/2004/03/10/cb-2676/</guid>
       <description>http://www.cnblogs.com/huobazi/articles/2690.aspx</description>
     </item>
     
     <item>
       <title>Serv-U FTPD 2.x/3.x/4.x/5.x remote overflow exploit V7.0</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/02/28/cb-1794/</link>
+      <link>https://huobazi.github.com/blog/2004/02/28/cb-1794/</link>
       <pubDate>Sat, 28 Feb 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/02/28/cb-1794/</guid>
+      <guid>https://huobazi.github.com/blog/2004/02/28/cb-1794/</guid>
       <description>5.0的版本也发现了溢出漏洞
 源码
 http://www.cnhonker.com/download/releases/Codes/Servu2.c</description>
@@ -1196,10 +1196,10 @@ http://www.cnhonker.com/download/releases/Codes/Servu2.c</description>
     
     <item>
       <title>电脑报使用盗版软件????</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/02/27/cb-1736/</link>
+      <link>https://huobazi.github.com/blog/2004/02/27/cb-1736/</link>
       <pubDate>Fri, 27 Feb 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/02/27/cb-1736/</guid>
+      <guid>https://huobazi.github.com/blog/2004/02/27/cb-1736/</guid>
       <description>今天下午
 落伍者的网友几十位执着的php爱好者
 来到电脑报论坛,质问电脑报论坛使用盗版VBB论坛程序一事,由于人员太多
@@ -1210,10 +1210,10 @@ http://www.cnhonker.com/download/releases/Codes/Servu2.c</description>
     
     <item>
       <title>好想再去上学...</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/02/23/cb-1516/</link>
+      <link>https://huobazi.github.com/blog/2004/02/23/cb-1516/</link>
       <pubDate>Mon, 23 Feb 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/02/23/cb-1516/</guid>
+      <guid>https://huobazi.github.com/blog/2004/02/23/cb-1516/</guid>
       <description>昨天有点事去了西部大学城,
 好漂亮啊,稍微有点偏僻而已.
 政法,邮电学院,师大,新校区都好漂亮啊.
@@ -1223,10 +1223,10 @@ http://www.cnhonker.com/download/releases/Codes/Servu2.c</description>
     
     <item>
       <title>去网吧要办实名卡</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/02/22/cb-1491/</link>
+      <link>https://huobazi.github.com/blog/2004/02/22/cb-1491/</link>
       <pubDate>Sun, 22 Feb 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/02/22/cb-1491/</guid>
+      <guid>https://huobazi.github.com/blog/2004/02/22/cb-1491/</guid>
       <description>今天萌生了去网吧玩会CS的念头,
 去了结果扫兴而归.
 原因是网吧都要办个什么实名卡才能上机说是上级部门的规定,每张卡工本费10元
@@ -1235,10 +1235,10 @@ http://www.cnhonker.com/download/releases/Codes/Servu2.c</description>
     
     <item>
       <title>Windows(2000/NT4.0)部份源码泄露</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/02/14/cb-1242/</link>
+      <link>https://huobazi.github.com/blog/2004/02/14/cb-1242/</link>
       <pubDate>Sat, 14 Feb 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/02/14/cb-1242/</guid>
+      <guid>https://huobazi.github.com/blog/2004/02/14/cb-1242/</guid>
       <description>微软公司发言人汤姆·皮拉表示：“今天，我们发现Windows 2000和NT 4.0的部分源代码非法地出现在互联网上。”他警告说，任何第三方传播这些源代码都是非法的行为，微软将对此采取严肃行动。
 Url
 http://www.neowin.net/
@@ -1280,29 +1280,29 @@ hang_system();</description>
     
     <item>
       <title>顺便发现一bug??</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/02/09/cb-1054/</link>
+      <link>https://huobazi.github.com/blog/2004/02/09/cb-1054/</link>
       <pubDate>Mon, 09 Feb 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/02/09/cb-1054/</guid>
+      <guid>https://huobazi.github.com/blog/2004/02/09/cb-1054/</guid>
       <description>在这个http://www.cnblogs.com/huobazi/archive/2004/02/09/1053.aspx 里有一句a.col_img_group=@gid被DotText当成mailto 自动加上了mailto连接</description>
     </item>
     
     <item>
       <title>又开始吵架了</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/02/03/cb-734/</link>
+      <link>https://huobazi.github.com/blog/2004/02/03/cb-734/</link>
       <pubDate>Tue, 03 Feb 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/02/03/cb-734/</guid>
+      <guid>https://huobazi.github.com/blog/2004/02/03/cb-734/</guid>
       <description>http://expert.csdn.net/Expert/topic/2697/2697501.xml?temp=.2264826
 不过没有这个帖子吵的凶哦</description>
     </item>
     
     <item>
       <title>Hello World !</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/01/29/cb-504/</link>
+      <link>https://huobazi.github.com/blog/2004/01/29/cb-504/</link>
       <pubDate>Thu, 29 Jan 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/01/29/cb-504/</guid>
+      <guid>https://huobazi.github.com/blog/2004/01/29/cb-504/</guid>
       <description>Hello World !
 开张了
 Hello World !
@@ -1313,10 +1313,10 @@ Hello World !
     
     <item>
       <title>MSN Toolbar 谁用了</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/01/29/cb-506/</link>
+      <link>https://huobazi.github.com/blog/2004/01/29/cb-506/</link>
       <pubDate>Thu, 29 Jan 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/01/29/cb-506/</guid>
+      <guid>https://huobazi.github.com/blog/2004/01/29/cb-506/</guid>
       <description>MSN Toolbar Beta</description>
     </item>
     

@@ -2,69 +2,69 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Asp.net on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/asp.net/</link>
+    <link>https://huobazi.github.com/tags/asp.net/</link>
     <description>Recent content in Asp.net on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 28 Nov 2011 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/asp.net/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/asp.net/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title> [How to] 如何卸载Xcode</title>
-      <link>https://huobazi.aspxboy.com/blog/2011/11/28/how-to-uninstall-xcode/</link>
+      <link>https://huobazi.github.com/blog/2011/11/28/how-to-uninstall-xcode/</link>
       <pubDate>Mon, 28 Nov 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2011/11/28/how-to-uninstall-xcode/</guid>
+      <guid>https://huobazi.github.com/blog/2011/11/28/how-to-uninstall-xcode/</guid>
       <description>  $ sudo /Developer/Library/uninstall-devtools --mode=all  </description>
     </item>
     
     <item>
       <title>AutoGenerateColumns=&#39;true&#39;的GridView如何支持htmlencode/htmldecode</title>
-      <link>https://huobazi.aspxboy.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/</link>
+      <link>https://huobazi.github.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/</link>
       <pubDate>Wed, 09 Nov 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/</guid>
+      <guid>https://huobazi.github.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/</guid>
       <description>&lt;p&gt;&lt;p&gt;我们知道BoundField.HtmlEncode 属性可以设置一个单元格是否能够htmlencode，我今天碰到的问题是：自动生成列的GridView，表头可能是包含html的比如&amp;lt;font color=red&amp;gt;邮件&amp;lt;/font&amp;gt;，默认被htmlencode了，而我不希望这样做，所以有了如下的代码:&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>AutoGenerateColumns=&#39;true&#39;的GridView如何支持htmlencode/htmldecode</title>
-      <link>https://huobazi.aspxboy.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/</link>
+      <link>https://huobazi.github.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/</link>
       <pubDate>Wed, 09 Nov 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/</guid>
+      <guid>https://huobazi.github.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/</guid>
       <description>&lt;p&gt;&lt;p&gt;我们知道BoundField.HtmlEncode 属性可以设置一个单元格是否能够htmlencode，我今天碰到的问题是：自动生成列的GridView，表头可能是包含html的比如&amp;lt;font color=red&amp;gt;邮件&amp;lt;/font&amp;gt;，默认被htmlencode了，而我不希望这样做，所以有了如下的代码:&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>在Console下输入密码，以星号代替。</title>
-      <link>https://huobazi.aspxboy.com/blog/2011/06/22/password-masking-in-csharp-console-application/</link>
+      <link>https://huobazi.github.com/blog/2011/06/22/password-masking-in-csharp-console-application/</link>
       <pubDate>Wed, 22 Jun 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2011/06/22/password-masking-in-csharp-console-application/</guid>
+      <guid>https://huobazi.github.com/blog/2011/06/22/password-masking-in-csharp-console-application/</guid>
       <description>&lt;p&gt;如何在Console下输入密码，像*unix系统下那样不显示，或者显示星号，如下代码经过测试：&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>请珍爱自己的身体</title>
-      <link>https://huobazi.aspxboy.com/blog/2010/03/03/356/</link>
+      <link>https://huobazi.github.com/blog/2010/03/03/356/</link>
       <pubDate>Wed, 03 Mar 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2010/03/03/356/</guid>
+      <guid>https://huobazi.github.com/blog/2010/03/03/356/</guid>
       <description>see see:
 http://www.cnblogs.com/yiway/archive/2010/02/23/1672173.html</description>
     </item>
     
     <item>
       <title>使用window.location跳转，在IE中UrlReffer不被记录</title>
-      <link>https://huobazi.aspxboy.com/blog/2010/01/21/window-location-href-ie-request-reffer/</link>
+      <link>https://huobazi.github.com/blog/2010/01/21/window-location-href-ie-request-reffer/</link>
       <pubDate>Thu, 21 Jan 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2010/01/21/window-location-href-ie-request-reffer/</guid>
+      <guid>https://huobazi.github.com/blog/2010/01/21/window-location-href-ie-request-reffer/</guid>
       <description>&lt;p&gt;使用window.location跳转，在FF中，没问题，下一页面可以取得UrlReffer，但在IE中UrlReffer不被记录&lt;/p&gt;
 &lt;p&gt;真变态，&lt;/p&gt;
 &lt;p&gt;让我头痛了半天，弄了个丑陋的办法做了如下实现：&lt;/p&gt;</description>
@@ -72,10 +72,10 @@ http://www.cnblogs.com/yiway/archive/2010/02/23/1672173.html</description>
     
     <item>
       <title>使用window.location跳转，在IE中UrlReffer不被记录</title>
-      <link>https://huobazi.aspxboy.com/blog/2010/01/21/window-location-href-ie-request-reffer/</link>
+      <link>https://huobazi.github.com/blog/2010/01/21/window-location-href-ie-request-reffer/</link>
       <pubDate>Thu, 21 Jan 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2010/01/21/window-location-href-ie-request-reffer/</guid>
+      <guid>https://huobazi.github.com/blog/2010/01/21/window-location-href-ie-request-reffer/</guid>
       <description>&lt;p&gt;使用window.location跳转，在FF中，没问题，下一页面可以取得UrlReffer，但在IE中UrlReffer不被记录&lt;/p&gt;
 &lt;p&gt;真变态，&lt;/p&gt;
 &lt;p&gt;让我头痛了半天，弄了个丑陋的办法做了如下实现：&lt;/p&gt;</description>
@@ -83,10 +83,10 @@ http://www.cnblogs.com/yiway/archive/2010/02/23/1672173.html</description>
     
     <item>
       <title>Graffiti CMS  开源了</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/12/18/graffiti-cms-is-now-free-open-source/</link>
+      <link>https://huobazi.github.com/blog/2009/12/18/graffiti-cms-is-now-free-open-source/</link>
       <pubDate>Fri, 18 Dec 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/12/18/graffiti-cms-is-now-free-open-source/</guid>
+      <guid>https://huobazi.github.com/blog/2009/12/18/graffiti-cms-is-now-free-open-source/</guid>
       <description>Graffiti CMS 
   
  see also:http://weblogs.asp.net/kencox/archive/2009/12/17/graffiti-cms-is-now-free-open-source.aspx</description>
@@ -94,10 +94,10 @@ http://www.cnblogs.com/yiway/archive/2010/02/23/1672173.html</description>
     
     <item>
       <title>Graffiti CMS  开源了</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/12/18/graffiti-cms-is-now-free-open-source/</link>
+      <link>https://huobazi.github.com/blog/2009/12/18/graffiti-cms-is-now-free-open-source/</link>
       <pubDate>Fri, 18 Dec 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/12/18/graffiti-cms-is-now-free-open-source/</guid>
+      <guid>https://huobazi.github.com/blog/2009/12/18/graffiti-cms-is-now-free-open-source/</guid>
       <description>Graffiti CMS 
   
  see also:http://weblogs.asp.net/kencox/archive/2009/12/17/graffiti-cms-is-now-free-open-source.aspx</description>
@@ -105,10 +105,10 @@ http://www.cnblogs.com/yiway/archive/2010/02/23/1672173.html</description>
     
     <item>
       <title>Repeater,DataList等嵌套如何绑定父repeater字段?</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/12/11/nested-repeater-parent/</link>
+      <link>https://huobazi.github.com/blog/2009/12/11/nested-repeater-parent/</link>
       <pubDate>Fri, 11 Dec 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/12/11/nested-repeater-parent/</guid>
+      <guid>https://huobazi.github.com/blog/2009/12/11/nested-repeater-parent/</guid>
       <description>嘿嘿，其实Container有个Parent属性,把它转换为RepeaterItem再取其DataItem
 DataBinder.Eval(((System.W
 eb.UI.WebControls.Repeat erItem)Container.Parent.Parent.Parent).DataItem</description>
@@ -116,20 +116,20 @@ eb.UI.WebControls.Repeat erItem)Container.Parent.Parent.Parent).DataItem</descri
     
     <item>
       <title>使用SQL语句更改数据表的默认值</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/12/09/chang-sql-table-field-default/</link>
+      <link>https://huobazi.github.com/blog/2009/12/09/chang-sql-table-field-default/</link>
       <pubDate>Wed, 09 Dec 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/12/09/chang-sql-table-field-default/</guid>
+      <guid>https://huobazi.github.com/blog/2009/12/09/chang-sql-table-field-default/</guid>
       <description>&lt;p&gt;&lt;p&gt;以前还真没这么干过，都是手工去掉约束，再添加的，今天一边google一边搞啊搞啊的，最终下面这个脚本可以用了&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>在线编辑器的一个新选择。</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/10/27/kissy-editor/</link>
+      <link>https://huobazi.github.com/blog/2009/10/27/kissy-editor/</link>
       <pubDate>Tue, 27 Oct 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/10/27/kissy-editor/</guid>
+      <guid>https://huobazi.github.com/blog/2009/10/27/kissy-editor/</guid>
       <description>今天lifesinger发布了淘宝编辑器,
 可以在这里看到演示
 介绍可以看这里，http://lifesinger.org/blog/2009/10/kissy-editor/</description>
@@ -137,20 +137,20 @@ eb.UI.WebControls.Repeat erItem)Container.Parent.Parent.Parent).DataItem</descri
     
     <item>
       <title>拆箱记</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/07/26/2009-mvp/</link>
+      <link>https://huobazi.github.com/blog/2009/07/26/2009-mvp/</link>
       <pubDate>Sun, 26 Jul 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/07/26/2009-mvp/</guid>
+      <guid>https://huobazi.github.com/blog/2009/07/26/2009-mvp/</guid>
       <description>&lt;p&gt;大洋彼岸寄来了一个纸箱&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://huobazi.aspxboy.com/images/hbz_images/mvp/1.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;http://huobazi.github.com/images/hbz_images/mvp/1.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Asp.Net发邮件，如何发送附件</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/07/21/how-to-send-an-email-with-attachments/</link>
+      <link>https://huobazi.github.com/blog/2009/07/21/how-to-send-an-email-with-attachments/</link>
       <pubDate>Tue, 21 Jul 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/07/21/how-to-send-an-email-with-attachments/</guid>
+      <guid>https://huobazi.github.com/blog/2009/07/21/how-to-send-an-email-with-attachments/</guid>
       <description>&lt;p&gt;&lt;p&gt;使用如下代码可以发送附件&lt;/p&gt;
 &lt;pre&gt;MailMessage mail = new MailMessage();
 mail.To = &amp;rdquo;me@mycompany.com&amp;rdquo;;
@@ -167,10 +167,10 @@ SmtpMail.Send( mail );&lt;/pre&gt;
     
     <item>
       <title>Asp.Net发邮件，如何发送附件</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/07/21/how-to-send-an-email-with-attachments/</link>
+      <link>https://huobazi.github.com/blog/2009/07/21/how-to-send-an-email-with-attachments/</link>
       <pubDate>Tue, 21 Jul 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/07/21/how-to-send-an-email-with-attachments/</guid>
+      <guid>https://huobazi.github.com/blog/2009/07/21/how-to-send-an-email-with-attachments/</guid>
       <description>&lt;p&gt;&lt;p&gt;使用如下代码可以发送附件&lt;/p&gt;
 &lt;pre&gt;MailMessage mail = new MailMessage();
 mail.To = &amp;rdquo;me@mycompany.com&amp;rdquo;;
@@ -187,30 +187,30 @@ SmtpMail.Send( mail );&lt;/pre&gt;
     
     <item>
       <title>知识死角,name相同的html element</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/07/17/same-name-element-in-one-page/</link>
+      <link>https://huobazi.github.com/blog/2009/07/17/same-name-element-in-one-page/</link>
       <pubDate>Fri, 17 Jul 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/07/17/same-name-element-in-one-page/</guid>
+      <guid>https://huobazi.github.com/blog/2009/07/17/same-name-element-in-one-page/</guid>
       <description>&lt;p&gt;&lt;p&gt;今天在帮同事调程序时发现了这个死角&lt;br /&gt;现象如下，没有任何输入的textarea提交到服务端后得到的值总是&amp;rdquo;,&amp;rdquo;&lt;br /&gt;找了半天发现是因为页面上两个textarea的name相同，以前只知道页面上radio的name相同则是一个组，name相同的&lt;br /&gt;的checkbox提交后是以逗号分隔值的，于是做了下面代码的试验，发现任何name相同的element提交到服务端都会得到逗号分隔的值，以前还不知道这个，汗&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>知识死角,name相同的html element</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/07/17/same-name-element-in-one-page/</link>
+      <link>https://huobazi.github.com/blog/2009/07/17/same-name-element-in-one-page/</link>
       <pubDate>Fri, 17 Jul 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/07/17/same-name-element-in-one-page/</guid>
+      <guid>https://huobazi.github.com/blog/2009/07/17/same-name-element-in-one-page/</guid>
       <description>&lt;p&gt;&lt;p&gt;今天在帮同事调程序时发现了这个死角&lt;br /&gt;现象如下，没有任何输入的textarea提交到服务端后得到的值总是&amp;rdquo;,&amp;rdquo;&lt;br /&gt;找了半天发现是因为页面上两个textarea的name相同，以前只知道页面上radio的name相同则是一个组，name相同的&lt;br /&gt;的checkbox提交后是以逗号分隔值的，于是做了下面代码的试验，发现任何name相同的element提交到服务端都会得到逗号分隔的值，以前还不知道这个，汗&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>C#中如何深度克隆一个对象？</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/07/15/make-a-deep-clone-of-the-object/</link>
+      <link>https://huobazi.github.com/blog/2009/07/15/make-a-deep-clone-of-the-object/</link>
       <pubDate>Wed, 15 Jul 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/07/15/make-a-deep-clone-of-the-object/</guid>
+      <guid>https://huobazi.github.com/blog/2009/07/15/make-a-deep-clone-of-the-object/</guid>
       <description>&lt;p&gt;&lt;p&gt;如何深度克隆一个对象？&lt;/p&gt;
 &lt;p&gt;普通版:&lt;/p&gt;
 &lt;pre&gt;
@@ -232,10 +232,10 @@ SmtpMail.Send( mail );&lt;/pre&gt;
     
     <item>
       <title>C#中如何深度克隆一个对象？</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/07/15/make-a-deep-clone-of-the-object/</link>
+      <link>https://huobazi.github.com/blog/2009/07/15/make-a-deep-clone-of-the-object/</link>
       <pubDate>Wed, 15 Jul 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/07/15/make-a-deep-clone-of-the-object/</guid>
+      <guid>https://huobazi.github.com/blog/2009/07/15/make-a-deep-clone-of-the-object/</guid>
       <description>&lt;p&gt;&lt;p&gt;如何深度克隆一个对象？&lt;/p&gt;
 &lt;p&gt;普通版:&lt;/p&gt;
 &lt;pre&gt;
@@ -257,10 +257,10 @@ SmtpMail.Send( mail );&lt;/pre&gt;
     
     <item>
       <title>把ASP.NET MVC的路由利用配置维护起来</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/12/01/asp-net-mvc-route-config/</link>
+      <link>https://huobazi.github.com/blog/2008/12/01/asp-net-mvc-route-config/</link>
       <pubDate>Mon, 01 Dec 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/12/01/asp-net-mvc-route-config/</guid>
+      <guid>https://huobazi.github.com/blog/2008/12/01/asp-net-mvc-route-config/</guid>
       <description>配置大多就是文件配置或者数据库配置了
 ref:
 http://mnour.blogspot.com/2008/11/mvc-routing-using-custom-configuration.html
@@ -271,10 +271,10 @@ http://www.iansuttle.com/blog/post/ASPNET-MVC-Store-Routes-in-the-Database.aspx
     
     <item>
       <title>把ASP.NET MVC的路由利用配置维护起来</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/12/01/asp-net-mvc-route-config/</link>
+      <link>https://huobazi.github.com/blog/2008/12/01/asp-net-mvc-route-config/</link>
       <pubDate>Mon, 01 Dec 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/12/01/asp-net-mvc-route-config/</guid>
+      <guid>https://huobazi.github.com/blog/2008/12/01/asp-net-mvc-route-config/</guid>
       <description>配置大多就是文件配置或者数据库配置了
 ref:
 http://mnour.blogspot.com/2008/11/mvc-routing-using-custom-configuration.html
@@ -285,10 +285,10 @@ http://www.iansuttle.com/blog/post/ASPNET-MVC-Store-Routes-in-the-Database.aspx
     
     <item>
       <title>jQuery从此更牛了</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/10/07/jquerycool/</link>
+      <link>https://huobazi.github.com/blog/2008/10/07/jquerycool/</link>
       <pubDate>Tue, 07 Oct 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/10/07/jquerycool/</guid>
+      <guid>https://huobazi.github.com/blog/2008/10/07/jquerycool/</guid>
       <description>&lt;p&gt;为什么更牛了?&lt;/p&gt;
 &lt;p&gt; &lt;/p&gt;
 &lt;p&gt;26日回家，昨天才返回，这么好的消息自己错过了，补记一下。&lt;/p&gt;
@@ -298,10 +298,10 @@ http://www.iansuttle.com/blog/post/ASPNET-MVC-Store-Routes-in-the-Database.aspx
     
     <item>
       <title>【分享】如何创建自己的Visual Studio 2005/2008配色</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/08/09/visualstudiothemegenerator/</link>
+      <link>https://huobazi.github.com/blog/2008/08/09/visualstudiothemegenerator/</link>
       <pubDate>Sat, 09 Aug 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/08/09/visualstudiothemegenerator/</guid>
+      <guid>https://huobazi.github.com/blog/2008/08/09/visualstudiothemegenerator/</guid>
       <description>自己改过配色的朋友都知道在Vs内配置比较麻烦，导入过别人配好的现成配置的朋友，有没有研究过那个.vssettings文件是个什么东西呢？
 用文本编辑器打开它就能看到那是个Xml文件，现在有了一个很好的在线工具能够方便的搞出自己喜欢的配色，然后再导入就OK了。
 http://frickinsweet.com/tools/Theme.mvc.aspx</description>
@@ -309,10 +309,10 @@ http://frickinsweet.com/tools/Theme.mvc.aspx</description>
     
     <item>
       <title>我学Linq to SQL做的demo</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/07/19/cb-1246773/</link>
+      <link>https://huobazi.github.com/blog/2008/07/19/cb-1246773/</link>
       <pubDate>Sat, 19 Jul 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/07/19/cb-1246773/</guid>
+      <guid>https://huobazi.github.com/blog/2008/07/19/cb-1246773/</guid>
       <description>最近才开始学LINQ to SQL,
 做了个demo，都是基本操作。
 有兴趣的朋友看看。
@@ -321,10 +321,10 @@ http://download.csdn.net/source/528628</description>
     
     <item>
       <title>Latest preview of the ASP.Net MVC available on CodePlex</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/07/17/mvcpreview4/</link>
+      <link>https://huobazi.github.com/blog/2008/07/17/mvcpreview4/</link>
       <pubDate>Thu, 17 Jul 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/07/17/mvcpreview4/</guid>
+      <guid>https://huobazi.github.com/blog/2008/07/17/mvcpreview4/</guid>
       <description>ASP.NET MVC Preview 4 available!!! ASP.NET MVC CodePlex Preview 4  runtime binary, 1075K, uploaded Today - 772 downloads  
  ASP.NET Codeplex Preview 4 Readme documentation, 71K, uploaded Today - 359 downloads  
  ASP.NET Codeplex Preview 4 Readme (PDF) documentation, 469K, uploaded Today - 360 downloads  
@@ -333,10 +333,10 @@ http://download.csdn.net/source/528628</description>
     
     <item>
       <title>Latest preview of the ASP.Net MVC available on CodePlex</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/07/17/mvcpreview4/</link>
+      <link>https://huobazi.github.com/blog/2008/07/17/mvcpreview4/</link>
       <pubDate>Thu, 17 Jul 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/07/17/mvcpreview4/</guid>
+      <guid>https://huobazi.github.com/blog/2008/07/17/mvcpreview4/</guid>
       <description>ASP.NET MVC Preview 4 available!!! ASP.NET MVC CodePlex Preview 4  runtime binary, 1075K, uploaded Today - 772 downloads  
  ASP.NET Codeplex Preview 4 Readme documentation, 71K, uploaded Today - 359 downloads  
  ASP.NET Codeplex Preview 4 Readme (PDF) documentation, 469K, uploaded Today - 360 downloads  
@@ -345,10 +345,10 @@ http://download.csdn.net/source/528628</description>
     
     <item>
       <title>提供我现用的Vs配色（灰黑色调）下载，有兴趣的朋友玩玩。</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/06/14/myvs2005colorschema/</link>
+      <link>https://huobazi.github.com/blog/2008/06/14/myvs2005colorschema/</link>
       <pubDate>Sat, 14 Jun 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/06/14/myvs2005colorschema/</guid>
+      <guid>https://huobazi.github.com/blog/2008/06/14/myvs2005colorschema/</guid>
       <description>&lt;p&gt;提供我现用的Vs配色（灰黑色调）下载，&lt;/p&gt;
 &lt;p&gt; &lt;/p&gt;
 &lt;p&gt;有兴趣的朋友玩玩。&lt;/p&gt;
@@ -360,17 +360,17 @@ http://download.csdn.net/source/528628</description>
     
     <item>
       <title>CustomError可以设置绝对路径</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/04/23/customerrordirecturlcanuseabsolutepath/</link>
+      <link>https://huobazi.github.com/blog/2008/04/23/customerrordirecturlcanuseabsolutepath/</link>
       <pubDate>Wed, 23 Apr 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/04/23/customerrordirecturlcanuseabsolutepath/</guid>
+      <guid>https://huobazi.github.com/blog/2008/04/23/customerrordirecturlcanuseabsolutepath/</guid>
       <description>偶然发现web.config内自定义错误信息页面
 &amp;lt;customErrors mode=&#34;RemoteOnly&#34; defaultRedirect=&#34;503.aspx&#34;&amp;gt;
 &amp;lt;error statusCode=&#34;404&#34; redirect=&#34;404.aspx&#34;/&amp;gt;
 &amp;lt;/customErrors&amp;gt;
 可以设置成
 &amp;lt;customErrors mode=&#34;RemoteOnly&#34; defaultRedirect=&#34;503.aspx&#34;&amp;gt;
-&amp;lt;error statusCode=&#34;404&#34; redirect=&#34;http://www.aspxboy.com/404.aspx&#34;/&amp;gt;
+&amp;lt;error statusCode=&#34;404&#34; redirect=&#34;http://www.github.com/404.aspx&#34;/&amp;gt;
 &amp;lt;/customErrors&amp;gt;
 这样的绝对路径.
 看了一下 CustomErrorsSection 中的代码
@@ -395,17 +395,17 @@ absoluteRedirect =this.DefaultAbsolutePath;
     
     <item>
       <title>CustomError可以设置绝对路径</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/04/23/customerrordirecturlcanuseabsolutepath/</link>
+      <link>https://huobazi.github.com/blog/2008/04/23/customerrordirecturlcanuseabsolutepath/</link>
       <pubDate>Wed, 23 Apr 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/04/23/customerrordirecturlcanuseabsolutepath/</guid>
+      <guid>https://huobazi.github.com/blog/2008/04/23/customerrordirecturlcanuseabsolutepath/</guid>
       <description>偶然发现web.config内自定义错误信息页面
 &amp;lt;customErrors mode=&#34;RemoteOnly&#34; defaultRedirect=&#34;503.aspx&#34;&amp;gt;
 &amp;lt;error statusCode=&#34;404&#34; redirect=&#34;404.aspx&#34;/&amp;gt;
 &amp;lt;/customErrors&amp;gt;
 可以设置成
 &amp;lt;customErrors mode=&#34;RemoteOnly&#34; defaultRedirect=&#34;503.aspx&#34;&amp;gt;
-&amp;lt;error statusCode=&#34;404&#34; redirect=&#34;http://www.aspxboy.com/404.aspx&#34;/&amp;gt;
+&amp;lt;error statusCode=&#34;404&#34; redirect=&#34;http://www.github.com/404.aspx&#34;/&amp;gt;
 &amp;lt;/customErrors&amp;gt;
 这样的绝对路径.
 看了一下 CustomErrorsSection 中的代码
@@ -430,10 +430,10 @@ absoluteRedirect =this.DefaultAbsolutePath;
     
     <item>
       <title>使用AzMan找不到Microsoft.Interop.Security.AzRoles的解决方法</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/04/20/microsoftinteropsecurityazroles/</link>
+      <link>https://huobazi.github.com/blog/2008/04/20/microsoftinteropsecurityazroles/</link>
       <pubDate>Sun, 20 Apr 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/04/20/microsoftinteropsecurityazroles/</guid>
+      <guid>https://huobazi.github.com/blog/2008/04/20/microsoftinteropsecurityazroles/</guid>
       <description>在c:/Windows/system32下找到azRoles.dll
 如果没有Xp/2003请安装http://www.microsoft.com/downloads/details.aspx?FamilyID=e487f885-f0c7-436a-a392-25793a25bad7&amp;amp;DisplayLang=en.
 Win2000请安装http://www.microsoft.com/downloads/details.aspx?FamilyID=7edde11f-bcea-4773-a292-84525f23baf7&amp;amp;DisplayLang=en.
@@ -455,30 +455,30 @@ ft.Interop.Security.AzRoles.dll
     
     <item>
       <title>MS Ajax 客户端生命周期</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/04/03/microsoftajaxclientlifecycle/</link>
+      <link>https://huobazi.github.com/blog/2008/04/03/microsoftajaxclientlifecycle/</link>
       <pubDate>Thu, 03 Apr 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/04/03/microsoftajaxclientlifecycle/</guid>
+      <guid>https://huobazi.github.com/blog/2008/04/03/microsoftajaxclientlifecycle/</guid>
       <description>The flowing reference is an excellent post ！！！
 http://aspnetresources.com/downloads/MS%20Ajax%20Client%20Life-Cycle%20Events.pdf</description>
     </item>
     
     <item>
       <title>MS Ajax 客户端生命周期</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/04/03/microsoftajaxclientlifecycle/</link>
+      <link>https://huobazi.github.com/blog/2008/04/03/microsoftajaxclientlifecycle/</link>
       <pubDate>Thu, 03 Apr 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/04/03/microsoftajaxclientlifecycle/</guid>
+      <guid>https://huobazi.github.com/blog/2008/04/03/microsoftajaxclientlifecycle/</guid>
       <description>The flowing reference is an excellent post ！！！
 http://aspnetresources.com/downloads/MS%20Ajax%20Client%20Life-Cycle%20Events.pdf</description>
     </item>
     
     <item>
       <title>使用dotNetZipLib轻松压缩目录/文件夹</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/03/29/usingdotnetziplibcompressadirectory/</link>
+      <link>https://huobazi.github.com/blog/2008/03/29/usingdotnetziplibcompressadirectory/</link>
       <pubDate>Sat, 29 Mar 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/03/29/usingdotnetziplibcompressadirectory/</guid>
+      <guid>https://huobazi.github.com/blog/2008/03/29/usingdotnetziplibcompressadirectory/</guid>
       <description>.net1.1时代我们选SharpZipLib
 .net2.0时代我们选System.IO.Compression名称空间下的东东
 .net3.0时代我们选System.IO.Packaging名称空间下的东东。
@@ -496,10 +496,10 @@ DotNet Zip Library   </description>
     
     <item>
       <title>使用dotNetZipLib轻松压缩目录/文件夹</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/03/29/usingdotnetziplibcompressadirectory/</link>
+      <link>https://huobazi.github.com/blog/2008/03/29/usingdotnetziplibcompressadirectory/</link>
       <pubDate>Sat, 29 Mar 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/03/29/usingdotnetziplibcompressadirectory/</guid>
+      <guid>https://huobazi.github.com/blog/2008/03/29/usingdotnetziplibcompressadirectory/</guid>
       <description>.net1.1时代我们选SharpZipLib
 .net2.0时代我们选System.IO.Compression名称空间下的东东
 .net3.0时代我们选System.IO.Packaging名称空间下的东东。
@@ -517,10 +517,10 @@ DotNet Zip Library   </description>
     
     <item>
       <title>IE8 BETA1 来了....</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/03/06/ie8beta1iscoming/</link>
+      <link>https://huobazi.github.com/blog/2008/03/06/ie8beta1iscoming/</link>
       <pubDate>Thu, 06 Mar 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/03/06/ie8beta1iscoming/</guid>
+      <guid>https://huobazi.github.com/blog/2008/03/06/ie8beta1iscoming/</guid>
       <description>太疯狂了，迅雷30秒就下完了14.43M啊
 Install Internet Explorer 8 Internet Explorer 8 can be installed on Microsoft Windows Vista® Service Pack 1 (SP1), Windows Vista, Windows XP® Service Pack 2 (SP2), Windows Server® 2008 and Windows Server2003 Service Pack 2 (SP2). Downloads are available from the following locations:
 Internet Explorer 8 Beta 1 for Windows Vista and Windows Server 2008 Internet Explorer 8 Beta 1 for Windows Vista x64 Edition and Windows Server 2008 x64 Edition</description>
@@ -528,10 +528,10 @@ Internet Explorer 8 Beta 1 for Windows Vista and Windows Server 2008 Internet E
     
     <item>
       <title>Telligent 发布了 CMS 系统</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/02/22/graffiticmsreleased/</link>
+      <link>https://huobazi.github.com/blog/2008/02/22/graffiticmsreleased/</link>
       <pubDate>Fri, 22 Feb 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/02/22/graffiticmsreleased/</guid>
+      <guid>https://huobazi.github.com/blog/2008/02/22/graffiticmsreleased/</guid>
       <description>Telligent Community Server 的出产厂商
 发布了 他们的新CMS产品 GraffitiCMS
 关于价格：http://get.graffiticms.com/
@@ -540,10 +540,10 @@ Licensing：http://graffiticms.com/learn-more/licensing/</description>
     
     <item>
       <title>Telligent 发布了 CMS 系统</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/02/22/graffiticmsreleased/</link>
+      <link>https://huobazi.github.com/blog/2008/02/22/graffiticmsreleased/</link>
       <pubDate>Fri, 22 Feb 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/02/22/graffiticmsreleased/</guid>
+      <guid>https://huobazi.github.com/blog/2008/02/22/graffiticmsreleased/</guid>
       <description>Telligent Community Server 的出产厂商
 发布了 他们的新CMS产品 GraffitiCMS
 关于价格：http://get.graffiticms.com/
@@ -552,10 +552,10 @@ Licensing：http://graffiticms.com/learn-more/licensing/</description>
     
     <item>
       <title>C# .Net Gmail Tools </title>
-      <link>https://huobazi.aspxboy.com/blog/2008/02/21/csharpgmailtools/</link>
+      <link>https://huobazi.github.com/blog/2008/02/21/csharpgmailtools/</link>
       <pubDate>Thu, 21 Feb 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/02/21/csharpgmailtools/</guid>
+      <guid>https://huobazi.github.com/blog/2008/02/21/csharpgmailtools/</guid>
       <description>位于code.msdn.microsoft.com的一个小型Library
 你可以很简单的使用它来通过gmail发送邮件或者获取Gmail Atom Feed 。
 
@@ -564,10 +564,10 @@ Licensing：http://graffiticms.com/learn-more/licensing/</description>
     
     <item>
       <title>C# .Net Gmail Tools </title>
-      <link>https://huobazi.aspxboy.com/blog/2008/02/21/csharpgmailtools/</link>
+      <link>https://huobazi.github.com/blog/2008/02/21/csharpgmailtools/</link>
       <pubDate>Thu, 21 Feb 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/02/21/csharpgmailtools/</guid>
+      <guid>https://huobazi.github.com/blog/2008/02/21/csharpgmailtools/</guid>
       <description>位于code.msdn.microsoft.com的一个小型Library
 你可以很简单的使用它来通过gmail发送邮件或者获取Gmail Atom Feed 。
 
@@ -576,10 +576,10 @@ Licensing：http://graffiticms.com/learn-more/licensing/</description>
     
     <item>
       <title>DbEntry.Net 又一个国产开源ORM数据访问及 WEB 框架</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/01/31/dbentry/</link>
+      <link>https://huobazi.github.com/blog/2008/01/31/dbentry/</link>
       <pubDate>Thu, 31 Jan 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/01/31/dbentry/</guid>
+      <guid>https://huobazi.github.com/blog/2008/01/31/dbentry/</guid>
       <description>今天去逛CodePlex发现这个东西
 链接到JavaEye的blog，作者：梁利锋
 中文描述：http://llf.hanzify.org/llf/show.asp?id=555
@@ -605,10 +605,10 @@ FluentInterface query syntax
     
     <item>
       <title>DbEntry.Net 又一个国产开源ORM数据访问及 WEB 框架</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/01/31/dbentry/</link>
+      <link>https://huobazi.github.com/blog/2008/01/31/dbentry/</link>
       <pubDate>Thu, 31 Jan 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/01/31/dbentry/</guid>
+      <guid>https://huobazi.github.com/blog/2008/01/31/dbentry/</guid>
       <description>今天去逛CodePlex发现这个东西
 链接到JavaEye的blog，作者：梁利锋
 中文描述：http://llf.hanzify.org/llf/show.asp?id=555
@@ -634,10 +634,10 @@ FluentInterface query syntax
     
     <item>
       <title>Google的投票站点在用Asp.net</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/01/25/googleandaspdotnet/</link>
+      <link>https://huobazi.github.com/blog/2008/01/25/googleandaspdotnet/</link>
       <pubDate>Fri, 25 Jan 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/01/25/googleandaspdotnet/</guid>
+      <guid>https://huobazi.github.com/blog/2008/01/25/googleandaspdotnet/</guid>
       <description>https://survey.google.com/wix/p0621608.aspx
 https://survey.google.com/aaaaaaaaaaaaaa.axd
 
@@ -650,10 +650,10 @@ X-Powered-By ASP.NET</description>
     
     <item>
       <title>Google的投票站点在用Asp.net</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/01/25/googleandaspdotnet/</link>
+      <link>https://huobazi.github.com/blog/2008/01/25/googleandaspdotnet/</link>
       <pubDate>Fri, 25 Jan 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/01/25/googleandaspdotnet/</guid>
+      <guid>https://huobazi.github.com/blog/2008/01/25/googleandaspdotnet/</guid>
       <description>https://survey.google.com/wix/p0621608.aspx
 https://survey.google.com/aaaaaaaaaaaaaa.axd
 
@@ -666,10 +666,10 @@ X-Powered-By ASP.NET</description>
     
     <item>
       <title>2007最后一博,Url地址重写，利用HttpHander手工编译页面并按需生成静态HTML文件</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/12/31/urlrewriteandhttphanderandmakestatichtmlfiles/</link>
+      <link>https://huobazi.github.com/blog/2007/12/31/urlrewriteandhttphanderandmakestatichtmlfiles/</link>
       <pubDate>Mon, 31 Dec 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/12/31/urlrewriteandhttphanderandmakestatichtmlfiles/</guid>
+      <guid>https://huobazi.github.com/blog/2007/12/31/urlrewriteandhttphanderandmakestatichtmlfiles/</guid>
       <description>很多朋友可能都讨论过ASP.NET中生成HTML的方法了，有按照模板用IO方法写文件
 有在404错误页面内生成HTML的，有在Render内保存页面输出到HTML文件的。
 今天我发一个配合Url重写利用HttpHander手工编译.aspx页面方法。
@@ -711,10 +711,10 @@ http://www.devedu.com/Doc/DotNet/AspNet/default.2.html
     
     <item>
       <title>2007最后一博,Url地址重写，利用HttpHander手工编译页面并按需生成静态HTML文件</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/12/31/urlrewriteandhttphanderandmakestatichtmlfiles/</link>
+      <link>https://huobazi.github.com/blog/2007/12/31/urlrewriteandhttphanderandmakestatichtmlfiles/</link>
       <pubDate>Mon, 31 Dec 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/12/31/urlrewriteandhttphanderandmakestatichtmlfiles/</guid>
+      <guid>https://huobazi.github.com/blog/2007/12/31/urlrewriteandhttphanderandmakestatichtmlfiles/</guid>
       <description>很多朋友可能都讨论过ASP.NET中生成HTML的方法了，有按照模板用IO方法写文件
 有在404错误页面内生成HTML的，有在Render内保存页面输出到HTML文件的。
 今天我发一个配合Url重写利用HttpHander手工编译.aspx页面方法。
@@ -756,10 +756,10 @@ http://www.devedu.com/Doc/DotNet/AspNet/default.2.html
     
     <item>
       <title>FckEditor,远程图片下载,插件</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/11/02/fckeditorremoteimagerubber/</link>
+      <link>https://huobazi.github.com/blog/2007/11/02/fckeditorremoteimagerubber/</link>
       <pubDate>Fri, 02 Nov 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/11/02/fckeditorremoteimagerubber/</guid>
+      <guid>https://huobazi.github.com/blog/2007/11/02/fckeditorremoteimagerubber/</guid>
       <description>有时候我们从其他网页上拷贝来的内容中含有图片，当原始地址失效后就会影响读者阅读。
 所以我制作了这样一个插件，可以将远程图片保存到本地服务器。声明：下面的文字是本文不可缺少的部分，转载请保留，谢谢！
 ////////////////////////////////////////////////////
@@ -789,10 +789,10 @@ E:\IISROOT\FckTest\FckTest\fckeditor\editor\plugins\remoteimagerubber\remoteimag
     
     <item>
       <title>FckEditor,远程图片下载,插件</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/11/02/fckeditorremoteimagerubber/</link>
+      <link>https://huobazi.github.com/blog/2007/11/02/fckeditorremoteimagerubber/</link>
       <pubDate>Fri, 02 Nov 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/11/02/fckeditorremoteimagerubber/</guid>
+      <guid>https://huobazi.github.com/blog/2007/11/02/fckeditorremoteimagerubber/</guid>
       <description>有时候我们从其他网页上拷贝来的内容中含有图片，当原始地址失效后就会影响读者阅读。
 所以我制作了这样一个插件，可以将远程图片保存到本地服务器。声明：下面的文字是本文不可缺少的部分，转载请保留，谢谢！
 ////////////////////////////////////////////////////
@@ -822,10 +822,10 @@ E:\IISROOT\FckTest\FckTest\fckeditor\editor\plugins\remoteimagerubber\remoteimag
     
     <item>
       <title>一系列SQL SERVER SQL 的分析文章</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/09/07/cb-885304/</link>
+      <link>https://huobazi.github.com/blog/2007/09/07/cb-885304/</link>
       <pubDate>Fri, 07 Sep 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/09/07/cb-885304/</guid>
+      <guid>https://huobazi.github.com/blog/2007/09/07/cb-885304/</guid>
       <description>位于：
 http://blogs.sqlpassj.org/mitsugi/archive/2007/09.aspx
 语言： 日文
@@ -839,30 +839,30 @@ http://blogs.sqlpassj.org/mitsugi/archive/2007/09.aspx
     
     <item>
       <title>自定义控件实现广告内容后期加载，以及NamingContainer层次的应用</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/08/05/advertisementlazyloadingcontrol/</link>
+      <link>https://huobazi.github.com/blog/2007/08/05/advertisementlazyloadingcontrol/</link>
       <pubDate>Sun, 05 Aug 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/08/05/advertisementlazyloadingcontrol/</guid>
+      <guid>https://huobazi.github.com/blog/2007/08/05/advertisementlazyloadingcontrol/</guid>
       <description>&lt;p&gt;自定义控件：广告内容后期加载。以及NamingContainer层次的应用&lt;br /&gt;网站上的广告内容可能会因加载过慢而导致整个网页加载过慢&lt;br /&gt;我们可以考虑将广告内全部放在网页最底部，等整个页面加载完毕後&lt;br /&gt;再采用javascript使其显示，考虑给控件一个TargetContainerID标识&lt;br /&gt;控件广告内容将要被显示的容器ID，然后从控件自己所处的 开始向上查找该ID&lt;br /&gt;所指定的控件，(我们只向上找而没有向下找，并且没有处理某层次的&lt;br /&gt;子NamingContainer,所以不一定能够找到，这里没有考虑从Page对象向下递归查找&lt;br /&gt;主要考虑为了提高性能),如果没有找到，则考虑给用户一个事件让用户自己处理TargetContainer&lt;/p&gt;
 &lt;p&gt;下面的自定义控件对此实现了封装:&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>自定义控件实现广告内容后期加载，以及NamingContainer层次的应用</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/08/05/advertisementlazyloadingcontrol/</link>
+      <link>https://huobazi.github.com/blog/2007/08/05/advertisementlazyloadingcontrol/</link>
       <pubDate>Sun, 05 Aug 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/08/05/advertisementlazyloadingcontrol/</guid>
+      <guid>https://huobazi.github.com/blog/2007/08/05/advertisementlazyloadingcontrol/</guid>
       <description>&lt;p&gt;自定义控件：广告内容后期加载。以及NamingContainer层次的应用&lt;br /&gt;网站上的广告内容可能会因加载过慢而导致整个网页加载过慢&lt;br /&gt;我们可以考虑将广告内全部放在网页最底部，等整个页面加载完毕後&lt;br /&gt;再采用javascript使其显示，考虑给控件一个TargetContainerID标识&lt;br /&gt;控件广告内容将要被显示的容器ID，然后从控件自己所处的 开始向上查找该ID&lt;br /&gt;所指定的控件，(我们只向上找而没有向下找，并且没有处理某层次的&lt;br /&gt;子NamingContainer,所以不一定能够找到，这里没有考虑从Page对象向下递归查找&lt;br /&gt;主要考虑为了提高性能),如果没有找到，则考虑给用户一个事件让用户自己处理TargetContainer&lt;/p&gt;
 &lt;p&gt;下面的自定义控件对此实现了封装:&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>中国EDONG网（中国排名第16的IDC）的技术力量和他的24小时客服。</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/07/28/edong/</link>
+      <link>https://huobazi.github.com/blog/2007/07/28/edong/</link>
       <pubDate>Sat, 28 Jul 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/07/28/edong/</guid>
+      <guid>https://huobazi.github.com/blog/2007/07/28/edong/</guid>
       <description>这篇post写好后发现在博客园不能保存，原因是内容包含违禁内容。
 只有写到其他地方，再挂个链接了。
 http://spaces.huash.com/index.php/uid-133969-action-viewspace-itemid-240537
@@ -878,10 +878,10 @@ http://spaces.huash.com/index.php/uid-133969-action-viewspace-itemid-240537
     
     <item>
       <title>在自定义控件中实现ICallbackEventHandler接口不经过回发而实现客户端回掉</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/07/23/webcontrolandicallbackeventhandler/</link>
+      <link>https://huobazi.github.com/blog/2007/07/23/webcontrolandicallbackeventhandler/</link>
       <pubDate>Mon, 23 Jul 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/07/23/webcontrolandicallbackeventhandler/</guid>
+      <guid>https://huobazi.github.com/blog/2007/07/23/webcontrolandicallbackeventhandler/</guid>
       <description>在自定义控件中实现ICallbackEventHandler接口不经过回发而实现客户端回掉 Asp.Net2.0中新增了ICallbackEventHandler接口，用于指示控件可以作为服务器的回调事件的目标。
 MSDN中的描述:
 实现 ICallbackEventHandler 接口的控件的示例包括 GridView、DetailsView 和 TreeView 控件。当回调事件以实现了 ICallbackEventHandler 接口的控件为目标时，将把事件变量作为参数传递来调用 RaiseCallbackEvent 方法以处理该事件，并且GetCallbackResult 方法返回回调的结果。
@@ -914,10 +914,10 @@ RaiseCallbackEvent
     
     <item>
       <title>在自定义控件中实现ICallbackEventHandler接口不经过回发而实现客户端回掉</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/07/23/webcontrolandicallbackeventhandler/</link>
+      <link>https://huobazi.github.com/blog/2007/07/23/webcontrolandicallbackeventhandler/</link>
       <pubDate>Mon, 23 Jul 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/07/23/webcontrolandicallbackeventhandler/</guid>
+      <guid>https://huobazi.github.com/blog/2007/07/23/webcontrolandicallbackeventhandler/</guid>
       <description>在自定义控件中实现ICallbackEventHandler接口不经过回发而实现客户端回掉 Asp.Net2.0中新增了ICallbackEventHandler接口，用于指示控件可以作为服务器的回调事件的目标。
 MSDN中的描述:
 实现 ICallbackEventHandler 接口的控件的示例包括 GridView、DetailsView 和 TreeView 控件。当回调事件以实现了 ICallbackEventHandler 接口的控件为目标时，将把事件变量作为参数传递来调用 RaiseCallbackEvent 方法以处理该事件，并且GetCallbackResult 方法返回回调的结果。
@@ -950,10 +950,10 @@ RaiseCallbackEvent
     
     <item>
       <title>.Net专业人力资源网上线试运行.</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/07/07/dotnetjobscn/</link>
+      <link>https://huobazi.github.com/blog/2007/07/07/dotnetjobscn/</link>
       <pubDate>Sat, 07 Jul 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/07/07/dotnetjobscn/</guid>
+      <guid>https://huobazi.github.com/blog/2007/07/07/dotnetjobscn/</guid>
       <description>自己也是搞.net开发的，经常看到有些朋友在csdn发求职/招聘贴
 国内而现有的大招聘网站又未见专门为我们这拨人有个专门分类。就花了点时间做了这样一个网站。
 今天开始试运行。
@@ -966,10 +966,10 @@ http://www.dotnetjobs.cn/FeedBack.aspx</description>
     
     <item>
       <title>.Net专业人力资源网上线试运行.</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/07/07/dotnetjobscn/</link>
+      <link>https://huobazi.github.com/blog/2007/07/07/dotnetjobscn/</link>
       <pubDate>Sat, 07 Jul 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/07/07/dotnetjobscn/</guid>
+      <guid>https://huobazi.github.com/blog/2007/07/07/dotnetjobscn/</guid>
       <description>自己也是搞.net开发的，经常看到有些朋友在csdn发求职/招聘贴
 国内而现有的大招聘网站又未见专门为我们这拨人有个专门分类。就花了点时间做了这样一个网站。
 今天开始试运行。
@@ -982,10 +982,10 @@ http://www.dotnetjobs.cn/FeedBack.aspx</description>
     
     <item>
       <title>讨论一下类似BlogEngine为何要一次性加载所有Post到内存</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/07/04/lazyinitializationorearlyinitializationinblogengine/</link>
+      <link>https://huobazi.github.com/blog/2007/07/04/lazyinitializationorearlyinitializationinblogengine/</link>
       <pubDate>Wed, 04 Jul 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/07/04/lazyinitializationorearlyinitializationinblogengine/</guid>
+      <guid>https://huobazi.github.com/blog/2007/07/04/lazyinitializationorearlyinitializationinblogengine/</guid>
       <description>试验了一下给BlogEngine生成10000个post 程序第一次运行时等待的时间让我想自杀（白屏了近2分钟)
 看了一下代码，发现BlogEngine在第一次运行时候加载所有Post（从数据库)到List内,类似（Early initialization）
 当新添加post时，给数据库（xml/database)内加入该post同时给List内追加该post
@@ -1017,10 +1017,10 @@ http://www.dotnetjobs.cn/FeedBack.aspx</description>
     
     <item>
       <title>讨论一下类似BlogEngine为何要一次性加载所有Post到内存</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/07/04/lazyinitializationorearlyinitializationinblogengine/</link>
+      <link>https://huobazi.github.com/blog/2007/07/04/lazyinitializationorearlyinitializationinblogengine/</link>
       <pubDate>Wed, 04 Jul 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/07/04/lazyinitializationorearlyinitializationinblogengine/</guid>
+      <guid>https://huobazi.github.com/blog/2007/07/04/lazyinitializationorearlyinitializationinblogengine/</guid>
       <description>试验了一下给BlogEngine生成10000个post 程序第一次运行时等待的时间让我想自杀（白屏了近2分钟)
 看了一下代码，发现BlogEngine在第一次运行时候加载所有Post（从数据库)到List内,类似（Early initialization）
 当新添加post时，给数据库（xml/database)内加入该post同时给List内追加该post
@@ -1052,10 +1052,10 @@ http://www.dotnetjobs.cn/FeedBack.aspx</description>
     
     <item>
       <title>GotDotNet.Com要退休了</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/06/21/gotdotnetwillberetired/</link>
+      <link>https://huobazi.github.com/blog/2007/06/21/gotdotnetwillberetired/</link>
       <pubDate>Thu, 21 Jun 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/06/21/gotdotnetwillberetired/</guid>
+      <guid>https://huobazi.github.com/blog/2007/06/21/gotdotnetwillberetired/</guid>
       <description>http://www.gotdotnet.com/
  GotDotNet Phase-out Announcement    Microsoft announces changes to the GotDotNet phase-out schedule. Overall phase-out will be completed in summer 2007.
       Based on your feedback, we&amp;rsquo;ve made some adjustments to our schedule: CodeGallery phase-out – Rescheduled to July 2007 (original phase-out date was April 24, 2007)
@@ -1064,30 +1064,30 @@ This gives CodeGallery owners more time to migrate. We suggest CodePlex as an ex
     
     <item>
       <title>如何在Web App Project 或者 Web Site Project的App_Code 内使用 Profile/ProfileCommon</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/06/06/howtouserprofileinwebsiteprojectinvs2005sp1/</link>
+      <link>https://huobazi.github.com/blog/2007/06/06/howtouserprofileinwebsiteprojectinvs2005sp1/</link>
       <pubDate>Wed, 06 Jun 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/06/06/howtouserprofileinwebsiteprojectinvs2005sp1/</guid>
+      <guid>https://huobazi.github.com/blog/2007/06/06/howtouserprofileinwebsiteprojectinvs2005sp1/</guid>
       <description>在 web site project 内 可以很方便的使用 Profile/ProfileCommon 来 访问我们在web.config 的profile节内定义的properties ， 并且有很爽的 intellisense 然而在Web App Project或者Web Site Project的App_Code内使用的时候 编译都通不过的，因为 Profile 是 web site project 模型 在页面 执行时候创建在HttpContext的，Web Site Project 或者App_Code编译的时候还没有页面实例呢，何谈HttpContext, 当然无法使用了
 引用scottgu的原话解释“This is supported because with the VS 2005 Web Site Project option Visual Studio is dynamically creating and adding a &#34;ProfileCommon&#34; class named &#34;Profile&#34; into every code-behind instance”，那么怎么办呢 scottgu 支招------“VS 2005 Web Application Projects don&#39;t automatically support generating a strongly-typed Profile class proxy.</description>
     </item>
     
     <item>
       <title>如何在Web App Project 或者 Web Site Project的App_Code 内使用 Profile/ProfileCommon</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/06/06/howtouserprofileinwebsiteprojectinvs2005sp1/</link>
+      <link>https://huobazi.github.com/blog/2007/06/06/howtouserprofileinwebsiteprojectinvs2005sp1/</link>
       <pubDate>Wed, 06 Jun 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/06/06/howtouserprofileinwebsiteprojectinvs2005sp1/</guid>
+      <guid>https://huobazi.github.com/blog/2007/06/06/howtouserprofileinwebsiteprojectinvs2005sp1/</guid>
       <description>在 web site project 内 可以很方便的使用 Profile/ProfileCommon 来 访问我们在web.config 的profile节内定义的properties ， 并且有很爽的 intellisense 然而在Web App Project或者Web Site Project的App_Code内使用的时候 编译都通不过的，因为 Profile 是 web site project 模型 在页面 执行时候创建在HttpContext的，Web Site Project 或者App_Code编译的时候还没有页面实例呢，何谈HttpContext, 当然无法使用了
 引用scottgu的原话解释“This is supported because with the VS 2005 Web Site Project option Visual Studio is dynamically creating and adding a &#34;ProfileCommon&#34; class named &#34;Profile&#34; into every code-behind instance”，那么怎么办呢 scottgu 支招------“VS 2005 Web Application Projects don&#39;t automatically support generating a strongly-typed Profile class proxy.</description>
     </item>
     
     <item>
       <title>郁闷啊，竟然用256M内存跑着VS2005 SP1 好几个月</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/05/27/vs2005sp1256andmram/</link>
+      <link>https://huobazi.github.com/blog/2007/05/27/vs2005sp1256andmram/</link>
       <pubDate>Sun, 27 May 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/05/27/vs2005sp1256andmram/</guid>
+      <guid>https://huobazi.github.com/blog/2007/05/27/vs2005sp1256andmram/</guid>
       <description>还有什么比这更郁闷的啊
 几个月前 为了装 VS2005 SP1 加了160G硬盘，然后开新的装系统装VS2005 装SP1
 后来的这几个月发现机子慢如牛啊，今天早上，无意间看到了开机前的一幕256M ？？？？
@@ -1097,10 +1097,10 @@ This gives CodeGallery owners more time to migrate. We suggest CodePlex as an ex
     
     <item>
       <title>郁闷啊，竟然用256M内存跑着VS2005 SP1 好几个月</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/05/27/vs2005sp1256andmram/</link>
+      <link>https://huobazi.github.com/blog/2007/05/27/vs2005sp1256andmram/</link>
       <pubDate>Sun, 27 May 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/05/27/vs2005sp1256andmram/</guid>
+      <guid>https://huobazi.github.com/blog/2007/05/27/vs2005sp1256andmram/</guid>
       <description>还有什么比这更郁闷的啊
 几个月前 为了装 VS2005 SP1 加了160G硬盘，然后开新的装系统装VS2005 装SP1
 后来的这几个月发现机子慢如牛啊，今天早上，无意间看到了开机前的一幕256M ？？？？
@@ -1110,30 +1110,30 @@ This gives CodeGallery owners more time to migrate. We suggest CodePlex as an ex
     
     <item>
       <title>IIS7 beta FREE WEBHOSTING FREE HOSTING FOR ASP.NET 2.0 IIS7</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/05/02/free-iis7-aspnet2-web-hosting/</link>
+      <link>https://huobazi.github.com/blog/2007/05/02/free-iis7-aspnet2-web-hosting/</link>
       <pubDate>Wed, 02 May 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/05/02/free-iis7-aspnet2-web-hosting/</guid>
+      <guid>https://huobazi.github.com/blog/2007/05/02/free-iis7-aspnet2-web-hosting/</guid>
       <description>Free IIS 7 Beta Hosting    Maximum ASP MaximumASP is proud to be the first Hoster partnered with Microsoft to help cutting edge developers and IT pros learn IIS 7, and showcase their applications to the world. We&amp;rsquo;ll provide you with 50MB of disk space for your application, and a 10MB SQL Server 2005 database that will remain active through the Longhorn Server RC1 period.
     Discount ASP.</description>
     </item>
     
     <item>
       <title>IIS7 beta FREE WEBHOSTING FREE HOSTING FOR ASP.NET 2.0 IIS7</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/05/02/free-iis7-aspnet2-web-hosting/</link>
+      <link>https://huobazi.github.com/blog/2007/05/02/free-iis7-aspnet2-web-hosting/</link>
       <pubDate>Wed, 02 May 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/05/02/free-iis7-aspnet2-web-hosting/</guid>
+      <guid>https://huobazi.github.com/blog/2007/05/02/free-iis7-aspnet2-web-hosting/</guid>
       <description>Free IIS 7 Beta Hosting    Maximum ASP MaximumASP is proud to be the first Hoster partnered with Microsoft to help cutting edge developers and IT pros learn IIS 7, and showcase their applications to the world. We&amp;rsquo;ll provide you with 50MB of disk space for your application, and a 10MB SQL Server 2005 database that will remain active through the Longhorn Server RC1 period.
     Discount ASP.</description>
     </item>
     
     <item>
       <title>Ajax Control Toolkit 出新版了</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/03/04/newversionofajaxcontroltoolkit/</link>
+      <link>https://huobazi.github.com/blog/2007/03/04/newversionofajaxcontroltoolkit/</link>
       <pubDate>Sun, 04 Mar 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/03/04/newversionofajaxcontroltoolkit/</guid>
+      <guid>https://huobazi.github.com/blog/2007/03/04/newversionofajaxcontroltoolkit/</guid>
       <description>Ajax Control Toolkit 出新版了
 http://www.codeplex.com/AtlasControlToolkit/Release/ProjectReleases.aspx
 Release 10301 Production   三月-01-20072 Files    Description 2007-03-01 release of the AJAX Control Toolkit includes two new controls (ListSearch and SlideShow), a number of fixes identified as important by the community, and three significant enhancements: localization support, automatic JavaScript comment stripping, and ASP.NET theme/skin support. It continues to target the new ASP.NET AJAX v1.0 release (http://ajax.asp.net/).
@@ -1142,10 +1142,10 @@ AjaxControlToolkit.zip is the full release package with complete source code to 
     
     <item>
       <title>Ajax Control Toolkit 出新版了</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/03/04/newversionofajaxcontroltoolkit/</link>
+      <link>https://huobazi.github.com/blog/2007/03/04/newversionofajaxcontroltoolkit/</link>
       <pubDate>Sun, 04 Mar 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/03/04/newversionofajaxcontroltoolkit/</guid>
+      <guid>https://huobazi.github.com/blog/2007/03/04/newversionofajaxcontroltoolkit/</guid>
       <description>Ajax Control Toolkit 出新版了
 http://www.codeplex.com/AtlasControlToolkit/Release/ProjectReleases.aspx
 Release 10301 Production   三月-01-20072 Files    Description 2007-03-01 release of the AJAX Control Toolkit includes two new controls (ListSearch and SlideShow), a number of fixes identified as important by the community, and three significant enhancements: localization support, automatic JavaScript comment stripping, and ASP.NET theme/skin support. It continues to target the new ASP.NET AJAX v1.0 release (http://ajax.asp.net/).
@@ -1154,10 +1154,10 @@ AjaxControlToolkit.zip is the full release package with complete source code to 
     
     <item>
       <title>在写自定义控件时，如果控件某个属性允许被验证控件验证，需要注意微软在 WebUIValidation.js内的实现。</title>
-      <link>https://huobazi.aspxboy.com/blog/2006/12/01/customwebcontrolandwebuivalidationjs/</link>
+      <link>https://huobazi.github.com/blog/2006/12/01/customwebcontrolandwebuivalidationjs/</link>
       <pubDate>Fri, 01 Dec 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/12/01/customwebcontrolandwebuivalidationjs/</guid>
+      <guid>https://huobazi.github.com/blog/2006/12/01/customwebcontrolandwebuivalidationjs/</guid>
       <description>微软在WebUIValidation.js(System.Web的资源文件内自己找工具看吧)
 内有如下代码：
 functionValidatorGetValue(id) {
@@ -1194,10 +1194,10 @@ return&#34;&#34;;
     
     <item>
       <title>在写自定义控件时，如果控件某个属性允许被验证控件验证，需要注意微软在 WebUIValidation.js内的实现。</title>
-      <link>https://huobazi.aspxboy.com/blog/2006/12/01/customwebcontrolandwebuivalidationjs/</link>
+      <link>https://huobazi.github.com/blog/2006/12/01/customwebcontrolandwebuivalidationjs/</link>
       <pubDate>Fri, 01 Dec 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/12/01/customwebcontrolandwebuivalidationjs/</guid>
+      <guid>https://huobazi.github.com/blog/2006/12/01/customwebcontrolandwebuivalidationjs/</guid>
       <description>微软在WebUIValidation.js(System.Web的资源文件内自己找工具看吧)
 内有如下代码：
 functionValidatorGetValue(id) {
@@ -1234,10 +1234,10 @@ return&#34;&#34;;
     
     <item>
       <title>给Visual Studio 2005设置一个代码边界线，提醒自己，别写的太长哦。</title>
-      <link>https://huobazi.aspxboy.com/blog/2006/08/11/visualstudiocodewidthsetting/</link>
+      <link>https://huobazi.github.com/blog/2006/08/11/visualstudiocodewidthsetting/</link>
       <pubDate>Fri, 11 Aug 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/08/11/visualstudiocodewidthsetting/</guid>
+      <guid>https://huobazi.github.com/blog/2006/08/11/visualstudiocodewidthsetting/</guid>
       <description>Codeproject上有一个关于代码宽度的调查
 http://www.codeproject.com/script/survey/detail.asp?survey=590&amp;amp;df=100&amp;amp;forumid=305784&amp;amp;select=1615639#xx1615639xx
 其中的评论中有人贴到下面这个地址
@@ -1250,10 +1250,10 @@ http://blogs.msdn.com/saraford/archive/2004/11/15/257953.aspx
     
     <item>
       <title>给Visual Studio 2005设置一个代码边界线，提醒自己，别写的太长哦。</title>
-      <link>https://huobazi.aspxboy.com/blog/2006/08/11/visualstudiocodewidthsetting/</link>
+      <link>https://huobazi.github.com/blog/2006/08/11/visualstudiocodewidthsetting/</link>
       <pubDate>Fri, 11 Aug 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/08/11/visualstudiocodewidthsetting/</guid>
+      <guid>https://huobazi.github.com/blog/2006/08/11/visualstudiocodewidthsetting/</guid>
       <description>Codeproject上有一个关于代码宽度的调查
 http://www.codeproject.com/script/survey/detail.asp?survey=590&amp;amp;df=100&amp;amp;forumid=305784&amp;amp;select=1615639#xx1615639xx
 其中的评论中有人贴到下面这个地址
@@ -1266,10 +1266,10 @@ http://blogs.msdn.com/saraford/archive/2004/11/15/257953.aspx
     
     <item>
       <title>code-beside方式绑定GridView后EnableSortingAndPagingCallbacks不工作</title>
-      <link>https://huobazi.aspxboy.com/blog/2006/07/03/enablesortingandpagingcallbacksisnotworkingwhennotusethesqldatasourcecontorl/</link>
+      <link>https://huobazi.github.com/blog/2006/07/03/enablesortingandpagingcallbacksisnotworkingwhennotusethesqldatasourcecontorl/</link>
       <pubDate>Mon, 03 Jul 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/07/03/enablesortingandpagingcallbacksisnotworkingwhennotusethesqldatasourcecontorl/</guid>
+      <guid>https://huobazi.github.com/blog/2006/07/03/enablesortingandpagingcallbacksisnotworkingwhennotusethesqldatasourcecontorl/</guid>
       <description>今天对GridView的学习中发现 当用 code-beside方式绑定GridView后（比如我绑一个DataTable)
 EnableSortingAndPagingCallbacks不起作用。
 在下面地址找到 一些说法
@@ -1306,10 +1306,10 @@ http://connect.microsoft.com/VisualStudio/feedback/ViewFeedback.aspx?FeedbackID=
     
     <item>
       <title>code-beside方式绑定GridView后EnableSortingAndPagingCallbacks不工作</title>
-      <link>https://huobazi.aspxboy.com/blog/2006/07/03/enablesortingandpagingcallbacksisnotworkingwhennotusethesqldatasourcecontorl/</link>
+      <link>https://huobazi.github.com/blog/2006/07/03/enablesortingandpagingcallbacksisnotworkingwhennotusethesqldatasourcecontorl/</link>
       <pubDate>Mon, 03 Jul 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/07/03/enablesortingandpagingcallbacksisnotworkingwhennotusethesqldatasourcecontorl/</guid>
+      <guid>https://huobazi.github.com/blog/2006/07/03/enablesortingandpagingcallbacksisnotworkingwhennotusethesqldatasourcecontorl/</guid>
       <description>今天对GridView的学习中发现 当用 code-beside方式绑定GridView后（比如我绑一个DataTable)
 EnableSortingAndPagingCallbacks不起作用。
 在下面地址找到 一些说法
@@ -1346,10 +1346,10 @@ http://connect.microsoft.com/VisualStudio/feedback/ViewFeedback.aspx?FeedbackID=
     
     <item>
       <title>还记得 Page.SmartNavigation 属性么，此属性已被否决。</title>
-      <link>https://huobazi.aspxboy.com/blog/2006/06/29/smartnavigationwasobsoletedtherecommendedalternativeispagemaintainscrollpositiononpostback/</link>
+      <link>https://huobazi.github.com/blog/2006/06/29/smartnavigationwasobsoletedtherecommendedalternativeispagemaintainscrollpositiononpostback/</link>
       <pubDate>Thu, 29 Jun 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/06/29/smartnavigationwasobsoletedtherecommendedalternativeispagemaintainscrollpositiononpostback/</guid>
+      <guid>https://huobazi.github.com/blog/2006/06/29/smartnavigationwasobsoletedtherecommendedalternativeispagemaintainscrollpositiononpostback/</guid>
       <description>还记得在.Net 1.x 中我们为了保持在页面回发后 保持滚动条位置的做法么？
 Page.SmartNavigation 可以做到，但会带来这样那样的问题。
 我们也曾经用这样那样的方法实现这个效果，如：
@@ -1368,10 +1368,10 @@ SmartNavigation 属性已被否决。请改用 SetFocus 方法和 MaintainScroll
     
     <item>
       <title>还记得 Page.SmartNavigation 属性么，此属性已被否决。</title>
-      <link>https://huobazi.aspxboy.com/blog/2006/06/29/smartnavigationwasobsoletedtherecommendedalternativeispagemaintainscrollpositiononpostback/</link>
+      <link>https://huobazi.github.com/blog/2006/06/29/smartnavigationwasobsoletedtherecommendedalternativeispagemaintainscrollpositiononpostback/</link>
       <pubDate>Thu, 29 Jun 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/06/29/smartnavigationwasobsoletedtherecommendedalternativeispagemaintainscrollpositiononpostback/</guid>
+      <guid>https://huobazi.github.com/blog/2006/06/29/smartnavigationwasobsoletedtherecommendedalternativeispagemaintainscrollpositiononpostback/</guid>
       <description>还记得在.Net 1.x 中我们为了保持在页面回发后 保持滚动条位置的做法么？
 Page.SmartNavigation 可以做到，但会带来这样那样的问题。
 我们也曾经用这样那样的方法实现这个效果，如：
@@ -1390,19 +1390,19 @@ SmartNavigation 属性已被否决。请改用 SetFocus 方法和 MaintainScroll
     
     <item>
       <title>比尔盖茨的又一个网站</title>
-      <link>https://huobazi.aspxboy.com/blog/2006/05/25/iiswebsite/</link>
+      <link>https://huobazi.github.com/blog/2006/05/25/iiswebsite/</link>
       <pubDate>Thu, 25 May 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/05/25/iiswebsite/</guid>
+      <guid>https://huobazi.github.com/blog/2006/05/25/iiswebsite/</guid>
       <description>http://www.iis.net/default.aspx?tabid=1</description>
     </item>
     
     <item>
       <title>在Asp.Net2.0中可以方便的访问配置文件web.config,如判断debug设置，验证类型等。</title>
-      <link>https://huobazi.aspxboy.com/blog/2006/05/18/systemwebsectiongroup/</link>
+      <link>https://huobazi.github.com/blog/2006/05/18/systemwebsectiongroup/</link>
       <pubDate>Thu, 18 May 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/05/18/systemwebsectiongroup/</guid>
+      <guid>https://huobazi.github.com/blog/2006/05/18/systemwebsectiongroup/</guid>
       <description>Asp.Net2.0中我们可以方便的访问配置文件中，.NetFrameWork2.0新增加了 SystemWebSectionGroup 类。
 允许用户以编程方式访问配置文件的 system.web 组。
 比如判断web.config内是否为 debug=&amp;ldquo;true&amp;rdquo;,或者判断身份验证形式
@@ -1416,10 +1416,10 @@ AuthenticationMode的取值如下：
     
     <item>
       <title>在Asp.Net2.0中可以方便的访问配置文件web.config,如判断debug设置，验证类型等。</title>
-      <link>https://huobazi.aspxboy.com/blog/2006/05/18/systemwebsectiongroup/</link>
+      <link>https://huobazi.github.com/blog/2006/05/18/systemwebsectiongroup/</link>
       <pubDate>Thu, 18 May 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/05/18/systemwebsectiongroup/</guid>
+      <guid>https://huobazi.github.com/blog/2006/05/18/systemwebsectiongroup/</guid>
       <description>Asp.Net2.0中我们可以方便的访问配置文件中，.NetFrameWork2.0新增加了 SystemWebSectionGroup 类。
 允许用户以编程方式访问配置文件的 system.web 组。
 比如判断web.config内是否为 debug=&amp;ldquo;true&amp;rdquo;,或者判断身份验证形式
@@ -1433,28 +1433,28 @@ AuthenticationMode的取值如下：
     
     <item>
       <title>推荐一个.Net做的图形处理软件--Paint.NET </title>
-      <link>https://huobazi.aspxboy.com/blog/2006/05/10/paintdotnet/</link>
+      <link>https://huobazi.github.com/blog/2006/05/10/paintdotnet/</link>
       <pubDate>Wed, 10 May 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/05/10/paintdotnet/</guid>
+      <guid>https://huobazi.github.com/blog/2006/05/10/paintdotnet/</guid>
       <description>Home Features Download Roadmap Screenshots Forum  AboutPaint.NET is image and photo manipulation software designed to be used on computers that run Windows 2000, XP, Vista, or Server 2003. It supports layers, unlimited undo, special effects, and a wide variety of useful and powerful tools. The programming language used to create Paint.NET is C#, with a small amount of C++ for setup and shell-integration related functionality</description>
     </item>
     
     <item>
       <title>推荐一个.Net做的图形处理软件--Paint.NET </title>
-      <link>https://huobazi.aspxboy.com/blog/2006/05/10/paintdotnet/</link>
+      <link>https://huobazi.github.com/blog/2006/05/10/paintdotnet/</link>
       <pubDate>Wed, 10 May 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/05/10/paintdotnet/</guid>
+      <guid>https://huobazi.github.com/blog/2006/05/10/paintdotnet/</guid>
       <description>Home Features Download Roadmap Screenshots Forum  AboutPaint.NET is image and photo manipulation software designed to be used on computers that run Windows 2000, XP, Vista, or Server 2003. It supports layers, unlimited undo, special effects, and a wide variety of useful and powerful tools. The programming language used to create Paint.NET is C#, with a small amount of C++ for setup and shell-integration related functionality</description>
     </item>
     
     <item>
       <title>Vs2005的倒退?</title>
-      <link>https://huobazi.aspxboy.com/blog/2006/05/04/int32tostringinvs2005/</link>
+      <link>https://huobazi.github.com/blog/2006/05/04/int32tostringinvs2005/</link>
       <pubDate>Thu, 04 May 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/05/04/int32tostringinvs2005/</guid>
+      <guid>https://huobazi.github.com/blog/2006/05/04/int32tostringinvs2005/</guid>
       <description>String abc = 123.ToString;
 代码在Vs2003内编译将得到错误信息
 “在不带括号的情况下引用了方法.....”
@@ -1469,10 +1469,10 @@ AuthenticationMode的取值如下：
     
     <item>
       <title>原来验证码可以租的哦</title>
-      <link>https://huobazi.aspxboy.com/blog/2006/04/17/textdisguisecaptchaimage/</link>
+      <link>https://huobazi.github.com/blog/2006/04/17/textdisguisecaptchaimage/</link>
       <pubDate>Mon, 17 Apr 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/04/17/textdisguisecaptchaimage/</guid>
+      <guid>https://huobazi.github.com/blog/2006/04/17/textdisguisecaptchaimage/</guid>
       <description>http://www.textdisguise.com/TextDisguise/default.aspx
 提供webservice生成防止机器人的CAPTCHA Image
 看样子挺贵的，不过Demo看起来很不错。</description>
@@ -1480,30 +1480,30 @@ AuthenticationMode的取值如下：
     
     <item>
       <title>一个非常Strong 的ListBox控件EasyList</title>
-      <link>https://huobazi.aspxboy.com/blog/2006/04/13/easylist/</link>
+      <link>https://huobazi.github.com/blog/2006/04/13/easylist/</link>
       <pubDate>Thu, 13 Apr 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/04/13/easylist/</guid>
+      <guid>https://huobazi.github.com/blog/2006/04/13/easylist/</guid>
       <description>用于开发人员工具箱的资源提到的EasyListBox是一款功能非常强大的ListBox控件
 功能嘛我不说了 去http://easylistbox.com/demoColumns.aspx体验一下那20几个demo就知道了</description>
     </item>
     
     <item>
       <title>一个非常Strong 的ListBox控件EasyList</title>
-      <link>https://huobazi.aspxboy.com/blog/2006/04/13/easylist/</link>
+      <link>https://huobazi.github.com/blog/2006/04/13/easylist/</link>
       <pubDate>Thu, 13 Apr 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/04/13/easylist/</guid>
+      <guid>https://huobazi.github.com/blog/2006/04/13/easylist/</guid>
       <description>用于开发人员工具箱的资源提到的EasyListBox是一款功能非常强大的ListBox控件
 功能嘛我不说了 去http://easylistbox.com/demoColumns.aspx体验一下那20几个demo就知道了</description>
     </item>
     
     <item>
       <title>Yetanotherforum 编辑表情后不立即更新</title>
-      <link>https://huobazi.aspxboy.com/blog/2006/04/11/cb-372413/</link>
+      <link>https://huobazi.github.com/blog/2006/04/11/cb-372413/</link>
       <pubDate>Tue, 11 Apr 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/04/11/cb-372413/</guid>
+      <guid>https://huobazi.github.com/blog/2006/04/11/cb-372413/</guid>
       <description>文件 FormatMsg.cs
 方法iAddSmiles内 Code:
 strTemp = strTemp.Replace(code.ToLower(),String.Format(&#34;&amp;lt;img src=\&#34;{0}\&#34; alt=\&#34;{1}\&#34; /&amp;gt;&#34;,basePage.Smiley(Convert.ToString(row[&#34;Icon&#34;])),basePage.Server.HtmlEncode(row[&#34;Emoticon&#34;].ToString())));
@@ -1519,10 +1519,10 @@ System.Web.HttpContext.Current.Cache.Remove(&#34;Smiles&#34;);</description>
     
     <item>
       <title>Yetanotherforum 编辑表情后不立即更新</title>
-      <link>https://huobazi.aspxboy.com/blog/2006/04/11/cb-372413/</link>
+      <link>https://huobazi.github.com/blog/2006/04/11/cb-372413/</link>
       <pubDate>Tue, 11 Apr 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/04/11/cb-372413/</guid>
+      <guid>https://huobazi.github.com/blog/2006/04/11/cb-372413/</guid>
       <description>文件 FormatMsg.cs
 方法iAddSmiles内 Code:
 strTemp = strTemp.Replace(code.ToLower(),String.Format(&#34;&amp;lt;img src=\&#34;{0}\&#34; alt=\&#34;{1}\&#34; /&amp;gt;&#34;,basePage.Smiley(Convert.ToString(row[&#34;Icon&#34;])),basePage.Server.HtmlEncode(row[&#34;Emoticon&#34;].ToString())));
@@ -1538,10 +1538,10 @@ System.Web.HttpContext.Current.Cache.Remove(&#34;Smiles&#34;);</description>
     
     <item>
       <title>两个DropDownList在Repeater、DataList、DataGrid内的连动和冒泡事件(BubbleEvent) </title>
-      <link>https://huobazi.aspxboy.com/blog/2006/04/08/twodropdownlistindatagridandbubbleevent/</link>
+      <link>https://huobazi.github.com/blog/2006/04/08/two-dropdownlist-in-data-grid-and-bubble-event/</link>
       <pubDate>Sat, 08 Apr 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/04/08/twodropdownlistindatagridandbubbleevent/</guid>
+      <guid>https://huobazi.github.com/blog/2006/04/08/two-dropdownlist-in-data-grid-and-bubble-event/</guid>
       <description>两个DropDownList在Repeater、DataList、DataGrid内的连动和冒泡事件(BubbleEvent)
 问题: http://community.csdn.net/Expert/topic/4670/4670056.xml?temp=3.944033E-02
 刚看第一眼觉得在第一个DDL的SelectedIndexChanged事件内绑定第二个DDL就ok了，页面上写或者ItemDataBound内写事件挂接代码都可以。打开VS写测试却发现有点障碍哦，
@@ -1554,10 +1554,10 @@ System.Web.HttpContext.Current.Cache.Remove(&#34;Smiles&#34;);</description>
     
     <item>
       <title>两个DropDownList在Repeater、DataList、DataGrid内的连动和冒泡事件(BubbleEvent) </title>
-      <link>https://huobazi.aspxboy.com/blog/2006/04/08/twodropdownlistindatagridandbubbleevent/</link>
+      <link>https://huobazi.github.com/blog/2006/04/08/two-dropdownlist-in-data-grid-and-bubble-event/</link>
       <pubDate>Sat, 08 Apr 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/04/08/twodropdownlistindatagridandbubbleevent/</guid>
+      <guid>https://huobazi.github.com/blog/2006/04/08/two-dropdownlist-in-data-grid-and-bubble-event/</guid>
       <description>两个DropDownList在Repeater、DataList、DataGrid内的连动和冒泡事件(BubbleEvent)
 问题: http://community.csdn.net/Expert/topic/4670/4670056.xml?temp=3.944033E-02
 刚看第一眼觉得在第一个DDL的SelectedIndexChanged事件内绑定第二个DDL就ok了，页面上写或者ItemDataBound内写事件挂接代码都可以。打开VS写测试却发现有点障碍哦，
@@ -1570,10 +1570,10 @@ System.Web.HttpContext.Current.Cache.Remove(&#34;Smiles&#34;);</description>
     
     <item>
       <title>关于Data Access Blok (SqlHelper.cs)使用时出现</title>
-      <link>https://huobazi.aspxboy.com/blog/2006/03/24/cb-357546/</link>
+      <link>https://huobazi.github.com/blog/2006/03/24/cb-357546/</link>
       <pubDate>Fri, 24 Mar 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/03/24/cb-357546/</guid>
+      <guid>https://huobazi.github.com/blog/2006/03/24/cb-357546/</guid>
       <description>关于Data Access Blok (SqlHelper.cs)使用时出现&#34;对象必须实现 IConvertible/Object must implement IConvertible.&#34;异常
 在使用低版本 Data Access Blok 时，出现如下异常
 “/”应用程序中的服务器错误。
@@ -1592,10 +1592,10 @@ the simple fix is to change line 93 to read:</description>
     
     <item>
       <title>关于Data Access Blok (SqlHelper.cs)使用时出现</title>
-      <link>https://huobazi.aspxboy.com/blog/2006/03/24/cb-357546/</link>
+      <link>https://huobazi.github.com/blog/2006/03/24/cb-357546/</link>
       <pubDate>Fri, 24 Mar 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/03/24/cb-357546/</guid>
+      <guid>https://huobazi.github.com/blog/2006/03/24/cb-357546/</guid>
       <description>关于Data Access Blok (SqlHelper.cs)使用时出现&#34;对象必须实现 IConvertible/Object must implement IConvertible.&#34;异常
 在使用低版本 Data Access Blok 时，出现如下异常
 “/”应用程序中的服务器错误。
@@ -1614,16 +1614,16 @@ the simple fix is to change line 93 to read:</description>
     
     <item>
       <title>SourceCodeViewer 0.1  and  Ms treeview &#39;s problem</title>
-      <link>https://huobazi.aspxboy.com/blog/2006/01/05/sourcecodeviewer01/</link>
+      <link>https://huobazi.github.com/blog/2006/01/05/sourcecodeviewer01/</link>
       <pubDate>Thu, 05 Jan 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/01/05/sourcecodeviewer01/</guid>
+      <guid>https://huobazi.github.com/blog/2006/01/05/sourcecodeviewer01/</guid>
       <description>SourceCodeViewer 0.1
 一直想给自己网站放一个源码浏览器，发现Scott Watermasysk做的Cojax很酷，但却找不到同类的asp.net的开源项目，就决定自己做一个，顺便学习ajax .基本做出了个雏形，语法高亮也只能支持到 C#,Jscript,htm.
 树用的是MS treeview ，但郁闷的事情也来了，MS treeview在firefox下render出的html竟然和ie下一点都不相同，而且是采用postback方式展开节点，我给tree上加的onclick不起作用，导致目前这个东东在firefox下不能用,继续研究中....
 
 An open source web based Source Code Viewer system application written in ASP.NET / C#.NET / Javascript with ajax for the Windows OS and .Net FrameWork platform.
-Homepage : http://www.aspxboy.com/scv/ Online demo : http://www.aspxboy.com/code/ Online screenshots : http://sourceforge.net/project/screenshots.php?group_id=155912 On Sourceforge : http://sourceforge.net/projects/scv Download the latest version 0.1 including the source code :
+Homepage : http://www.github.com/scv/ Online demo : http://www.github.com/code/ Online screenshots : http://sourceforge.net/project/screenshots.php?group_id=155912 On Sourceforge : http://sourceforge.net/projects/scv Download the latest version 0.1 including the source code :
 http://sourceforge.net/project/s ... p;release_id=382944
 Screenshots:
   </description>
@@ -1631,16 +1631,16 @@ Screenshots:
     
     <item>
       <title>SourceCodeViewer 0.1  and  Ms treeview &#39;s problem</title>
-      <link>https://huobazi.aspxboy.com/blog/2006/01/05/sourcecodeviewer01/</link>
+      <link>https://huobazi.github.com/blog/2006/01/05/sourcecodeviewer01/</link>
       <pubDate>Thu, 05 Jan 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/01/05/sourcecodeviewer01/</guid>
+      <guid>https://huobazi.github.com/blog/2006/01/05/sourcecodeviewer01/</guid>
       <description>SourceCodeViewer 0.1
 一直想给自己网站放一个源码浏览器，发现Scott Watermasysk做的Cojax很酷，但却找不到同类的asp.net的开源项目，就决定自己做一个，顺便学习ajax .基本做出了个雏形，语法高亮也只能支持到 C#,Jscript,htm.
 树用的是MS treeview ，但郁闷的事情也来了，MS treeview在firefox下render出的html竟然和ie下一点都不相同，而且是采用postback方式展开节点，我给tree上加的onclick不起作用，导致目前这个东东在firefox下不能用,继续研究中....
 
 An open source web based Source Code Viewer system application written in ASP.NET / C#.NET / Javascript with ajax for the Windows OS and .Net FrameWork platform.
-Homepage : http://www.aspxboy.com/scv/ Online demo : http://www.aspxboy.com/code/ Online screenshots : http://sourceforge.net/project/screenshots.php?group_id=155912 On Sourceforge : http://sourceforge.net/projects/scv Download the latest version 0.1 including the source code :
+Homepage : http://www.github.com/scv/ Online demo : http://www.github.com/code/ Online screenshots : http://sourceforge.net/project/screenshots.php?group_id=155912 On Sourceforge : http://sourceforge.net/projects/scv Download the latest version 0.1 including the source code :
 http://sourceforge.net/project/s ... p;release_id=382944
 Screenshots:
   </description>
@@ -1648,10 +1648,10 @@ Screenshots:
     
     <item>
       <title>免费的Asp.net2.0 Sqlserver express的学习空间</title>
-      <link>https://huobazi.aspxboy.com/blog/2005/12/12/freeaspdotnetsqlserverexpresswebhosting/</link>
+      <link>https://huobazi.github.com/blog/2005/12/12/freeaspdotnetsqlserverexpresswebhosting/</link>
       <pubDate>Mon, 12 Dec 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2005/12/12/freeaspdotnetsqlserverexpresswebhosting/</guid>
+      <guid>https://huobazi.github.com/blog/2005/12/12/freeaspdotnetsqlserverexpresswebhosting/</guid>
       <description>dotnetspider.com提供Asp.net2.0 Sqlserver express的学习空间
 - Learn ASP.NET 2.0- Develop your web site - Host it for free. 
 
@@ -1667,10 +1667,10 @@ Web hosting package For ASP.NET programmers
     
     <item>
       <title>免费的Asp.net2.0 Sqlserver express的学习空间</title>
-      <link>https://huobazi.aspxboy.com/blog/2005/12/12/freeaspdotnetsqlserverexpresswebhosting/</link>
+      <link>https://huobazi.github.com/blog/2005/12/12/freeaspdotnetsqlserverexpresswebhosting/</link>
       <pubDate>Mon, 12 Dec 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2005/12/12/freeaspdotnetsqlserverexpresswebhosting/</guid>
+      <guid>https://huobazi.github.com/blog/2005/12/12/freeaspdotnetsqlserverexpresswebhosting/</guid>
       <description>dotnetspider.com提供Asp.net2.0 Sqlserver express的学习空间
 - Learn ASP.NET 2.0- Develop your web site - Host it for free. 
 
@@ -1686,10 +1686,10 @@ Web hosting package For ASP.NET programmers
     
     <item>
       <title>关于请求的目录不存在而需要url重写</title>
-      <link>https://huobazi.aspxboy.com/blog/2005/11/21/nodirurlrewrite/</link>
+      <link>https://huobazi.github.com/blog/2005/11/21/nodirurlrewrite/</link>
       <pubDate>Mon, 21 Nov 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2005/11/21/nodirurlrewrite/</guid>
+      <guid>https://huobazi.github.com/blog/2005/11/21/nodirurlrewrite/</guid>
       <description>在http://pwqzc.cnblogs.com/archive/2005/11/21/281331.html看到的讨论
 其实csdn的那两个帖子
 http://community.csdn.net/Expert/topic/4401/4401936.xml?temp=.317898
@@ -1703,10 +1703,10 @@ http://community.csdn.net/Expert/topic/4406/4406615.xml?temp=.513714
     
     <item>
       <title>关于请求的目录不存在而需要url重写</title>
-      <link>https://huobazi.aspxboy.com/blog/2005/11/21/nodirurlrewrite/</link>
+      <link>https://huobazi.github.com/blog/2005/11/21/nodirurlrewrite/</link>
       <pubDate>Mon, 21 Nov 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2005/11/21/nodirurlrewrite/</guid>
+      <guid>https://huobazi.github.com/blog/2005/11/21/nodirurlrewrite/</guid>
       <description>在http://pwqzc.cnblogs.com/archive/2005/11/21/281331.html看到的讨论
 其实csdn的那两个帖子
 http://community.csdn.net/Expert/topic/4401/4401936.xml?temp=.317898
@@ -1720,19 +1720,19 @@ http://community.csdn.net/Expert/topic/4406/4406615.xml?temp=.513714
     
     <item>
       <title>新的GotDotNet</title>
-      <link>https://huobazi.aspxboy.com/blog/2005/11/03/cb-268350/</link>
+      <link>https://huobazi.github.com/blog/2005/11/03/cb-268350/</link>
       <pubDate>Thu, 03 Nov 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2005/11/03/cb-268350/</guid>
+      <guid>https://huobazi.github.com/blog/2005/11/03/cb-268350/</guid>
       <description>http://gotdotnet.com/</description>
     </item>
     
     <item>
       <title>买了edong的空间没有db_securityadmin权限</title>
-      <link>https://huobazi.aspxboy.com/blog/2005/10/16/cb-256133/</link>
+      <link>https://huobazi.github.com/blog/2005/10/16/cb-256133/</link>
       <pubDate>Sun, 16 Oct 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2005/10/16/cb-256133/</guid>
+      <guid>https://huobazi.github.com/blog/2005/10/16/cb-256133/</guid>
       <description>买了edong的http://www.edong.com/v8/webhosting/K1000.php这个k1000空间
 没有db_securityadmin权限装不了CommunityServer和DotNetNuke
 
@@ -1748,30 +1748,30 @@ sp_addrolemember &amp;rsquo;db_ddladmin&amp;rsquo;, &amp;rsquo;&amp;lt;your l
     
     <item>
       <title>在Asp.Net中使用HttpModule实现多个域名分别“绑定”到子目录 </title>
-      <link>https://huobazi.aspxboy.com/blog/2005/10/15/subdomainswithhttpmoduleinaspdotnet/</link>
+      <link>https://huobazi.github.com/blog/2005/10/15/subdomainswithhttpmoduleinaspdotnet/</link>
       <pubDate>Sat, 15 Oct 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2005/10/15/subdomainswithhttpmoduleinaspdotnet/</guid>
-      <description>&lt;p&gt;作者：活靶子 发表于：&lt;a href=&#34;http://www.aspxboy.com/&#34;&gt;AspxBoy.Com&lt;/a&gt; &amp;amp;&amp;amp; &lt;a href=&#34;http://im286.com/&#34;&gt;im286.com&lt;/a&gt; &amp;amp;&amp;amp; &lt;a href=&#34;http://cnblogs.com/&#34;&gt;Cnblogs.com&lt;/a&gt;&lt;/p&gt;
+      <guid>https://huobazi.github.com/blog/2005/10/15/subdomainswithhttpmoduleinaspdotnet/</guid>
+      <description>&lt;p&gt;作者：活靶子 发表于：&lt;a href=&#34;http://www.github.com/&#34;&gt;AspxBoy.Com&lt;/a&gt; &amp;amp;&amp;amp; &lt;a href=&#34;http://im286.com/&#34;&gt;im286.com&lt;/a&gt; &amp;amp;&amp;amp; &lt;a href=&#34;http://cnblogs.com/&#34;&gt;Cnblogs.com&lt;/a&gt;&lt;/p&gt;
 &lt;br /&gt;&lt;p&gt;目前虚拟主机商提供将多个域名绑定到站点根目录，但是不提供类似CPanel那样可以将域名绑定到站点的子目录。&lt;br /&gt;而当你手上有多个域名，网站空间和流量又有闲置的时候，是很希望&lt;br /&gt;将这些资源利用起来，而且要做到降低做站的成本。而网络上流传的多域名绑到子目录多为判断HTTP_HOST再使用Asp的Response.Redirect或者php的header方法重订向到子目录去。这种方法在地址的请求上发生了变化，大家都知道Redirect的定向是很不友好的，在服务器端控制自动跳转会令访问者感到不安。&lt;br /&gt;所以我需要的是对这个域名下面的所有请求都转接到对应的子目录里去&lt;br /&gt;比如&lt;</description>
     </item>
     
     <item>
       <title>在Asp.Net中使用HttpModule实现多个域名分别“绑定”到子目录 </title>
-      <link>https://huobazi.aspxboy.com/blog/2005/10/15/subdomainswithhttpmoduleinaspdotnet/</link>
+      <link>https://huobazi.github.com/blog/2005/10/15/subdomainswithhttpmoduleinaspdotnet/</link>
       <pubDate>Sat, 15 Oct 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2005/10/15/subdomainswithhttpmoduleinaspdotnet/</guid>
-      <description>&lt;p&gt;作者：活靶子 发表于：&lt;a href=&#34;http://www.aspxboy.com/&#34;&gt;AspxBoy.Com&lt;/a&gt; &amp;amp;&amp;amp; &lt;a href=&#34;http://im286.com/&#34;&gt;im286.com&lt;/a&gt; &amp;amp;&amp;amp; &lt;a href=&#34;http://cnblogs.com/&#34;&gt;Cnblogs.com&lt;/a&gt;&lt;/p&gt;
+      <guid>https://huobazi.github.com/blog/2005/10/15/subdomainswithhttpmoduleinaspdotnet/</guid>
+      <description>&lt;p&gt;作者：活靶子 发表于：&lt;a href=&#34;http://www.github.com/&#34;&gt;AspxBoy.Com&lt;/a&gt; &amp;amp;&amp;amp; &lt;a href=&#34;http://im286.com/&#34;&gt;im286.com&lt;/a&gt; &amp;amp;&amp;amp; &lt;a href=&#34;http://cnblogs.com/&#34;&gt;Cnblogs.com&lt;/a&gt;&lt;/p&gt;
 &lt;br /&gt;&lt;p&gt;目前虚拟主机商提供将多个域名绑定到站点根目录，但是不提供类似CPanel那样可以将域名绑定到站点的子目录。&lt;br /&gt;而当你手上有多个域名，网站空间和流量又有闲置的时候，是很希望&lt;br /&gt;将这些资源利用起来，而且要做到降低做站的成本。而网络上流传的多域名绑到子目录多为判断HTTP_HOST再使用Asp的Response.Redirect或者php的header方法重订向到子目录去。这种方法在地址的请求上发生了变化，大家都知道Redirect的定向是很不友好的，在服务器端控制自动跳转会令访问者感到不安。&lt;br /&gt;所以我需要的是对这个域名下面的所有请求都转接到对应的子目录里去&lt;br /&gt;比如&lt;</description>
     </item>
     
     <item>
       <title>哭使用Data Access 2 插入Ntext类型数据时SqlParameter不指定类型的问题 ， ，请为我解惑</title>
-      <link>https://huobazi.aspxboy.com/blog/2005/10/10/cb-251251/</link>
+      <link>https://huobazi.github.com/blog/2005/10/10/cb-251251/</link>
       <pubDate>Mon, 10 Oct 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2005/10/10/cb-251251/</guid>
+      <guid>https://huobazi.github.com/blog/2005/10/10/cb-251251/</guid>
       <description>实在郁闷 ，请大家为我解惑。
 同发csdn：http://community.csdn.net/Expert/topic/4315/4315539.xml?temp=.3931848
 原来的代码 
@@ -1808,10 +1808,10 @@ public SqlDbType SqlDbType {get; set;}</description>
     
     <item>
       <title>哭使用Data Access 2 插入Ntext类型数据时SqlParameter不指定类型的问题 ， ，请为我解惑</title>
-      <link>https://huobazi.aspxboy.com/blog/2005/10/10/cb-251251/</link>
+      <link>https://huobazi.github.com/blog/2005/10/10/cb-251251/</link>
       <pubDate>Mon, 10 Oct 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2005/10/10/cb-251251/</guid>
+      <guid>https://huobazi.github.com/blog/2005/10/10/cb-251251/</guid>
       <description>实在郁闷 ，请大家为我解惑。
 同发csdn：http://community.csdn.net/Expert/topic/4315/4315539.xml?temp=.3931848
 原来的代码 
@@ -1848,10 +1848,10 @@ public SqlDbType SqlDbType {get; set;}</description>
     
     <item>
       <title>Communtiy Server论坛的帖子显示页面分页部分的Url Rewrite的构造方法</title>
-      <link>https://huobazi.aspxboy.com/blog/2005/10/07/cb-249806/</link>
+      <link>https://huobazi.github.com/blog/2005/10/07/cb-249806/</link>
       <pubDate>Fri, 07 Oct 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2005/10/07/cb-249806/</guid>
+      <guid>https://huobazi.github.com/blog/2005/10/07/cb-249806/</guid>
       <description>你可能会发现在Communtiy Server的论坛帖子列表页面
 比如http://communityserver.org/forums/129/ShowForum.aspx
 看下面分页处的连接使用的地址是类似ShowForum.aspx?PageIndex=2这样的地址
@@ -1869,10 +1869,10 @@ http://www.3pub.com/bbs/3/default.aspx</description>
     
     <item>
       <title>Communtiy Server论坛的帖子显示页面分页部分的Url Rewrite的构造方法</title>
-      <link>https://huobazi.aspxboy.com/blog/2005/10/07/cb-249806/</link>
+      <link>https://huobazi.github.com/blog/2005/10/07/cb-249806/</link>
       <pubDate>Fri, 07 Oct 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2005/10/07/cb-249806/</guid>
+      <guid>https://huobazi.github.com/blog/2005/10/07/cb-249806/</guid>
       <description>你可能会发现在Communtiy Server的论坛帖子列表页面
 比如http://communityserver.org/forums/129/ShowForum.aspx
 看下面分页处的连接使用的地址是类似ShowForum.aspx?PageIndex=2这样的地址
@@ -1890,10 +1890,10 @@ http://www.3pub.com/bbs/3/default.aspx</description>
     
     <item>
       <title>C Community Server 群发Email MassEmailingAdmin.aspx页面内插入表情和代码时，404错误</title>
-      <link>https://huobazi.aspxboy.com/blog/2005/10/04/cb-248673/</link>
+      <link>https://huobazi.github.com/blog/2005/10/04/cb-248673/</link>
       <pubDate>Tue, 04 Oct 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2005/10/04/cb-248673/</guid>
+      <guid>https://huobazi.github.com/blog/2005/10/04/cb-248673/</guid>
       <description>Email群发的时候：MassEmailingAdmin.aspx页面内插入表情和代码时，404错误 发现是Js文件内路径的问题
 FTB-FreeTextBox.js内
 this.iPopup.document.location.href = &#34;../emoticons.aspx&#34;; 
@@ -1907,10 +1907,10 @@ this.iPopup.document.location.href = &#34;../emoticons.aspx&#34;;
     
     <item>
       <title>C Community Server 群发Email MassEmailingAdmin.aspx页面内插入表情和代码时，404错误</title>
-      <link>https://huobazi.aspxboy.com/blog/2005/10/04/cb-248673/</link>
+      <link>https://huobazi.github.com/blog/2005/10/04/cb-248673/</link>
       <pubDate>Tue, 04 Oct 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2005/10/04/cb-248673/</guid>
+      <guid>https://huobazi.github.com/blog/2005/10/04/cb-248673/</guid>
       <description>Email群发的时候：MassEmailingAdmin.aspx页面内插入表情和代码时，404错误 发现是Js文件内路径的问题
 FTB-FreeTextBox.js内
 this.iPopup.document.location.href = &#34;../emoticons.aspx&#34;; 
@@ -1924,10 +1924,10 @@ this.iPopup.document.location.href = &#34;../emoticons.aspx&#34;;
     
     <item>
       <title>使ExpanderPanel的文本带上连接</title>
-      <link>https://huobazi.aspxboy.com/blog/2005/10/04/cb-248674/</link>
+      <link>https://huobazi.github.com/blog/2005/10/04/cb-248674/</link>
       <pubDate>Tue, 04 Oct 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2005/10/04/cb-248674/</guid>
+      <guid>https://huobazi.github.com/blog/2005/10/04/cb-248674/</guid>
       <description>ExpanderPanel.cs 增加TextHref属性
 修改了Text属性的Get方法
 if(ResourceName != null) { if(TextHref == null)
@@ -1942,10 +1942,10 @@ return String.Format(&amp;rdquo;&amp;lt;a href=\&amp;ldquo;{0}\&amp;rdquo;&amp;g
     
     <item>
       <title>Community Server的新功能－－快速回复</title>
-      <link>https://huobazi.aspxboy.com/blog/2005/10/02/cb-248084/</link>
+      <link>https://huobazi.github.com/blog/2005/10/02/cb-248084/</link>
       <pubDate>Sun, 02 Oct 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2005/10/02/cb-248084/</guid>
+      <guid>https://huobazi.github.com/blog/2005/10/02/cb-248084/</guid>
       <description>进入
 http://communityserver.org/forums/498047/ShowPost.aspx
 双击鼠标,看效果
@@ -1954,10 +1954,10 @@ http://communityserver.org/forums/498047/ShowPost.aspx
     
     <item>
       <title>Community Server的新功能－－快速回复</title>
-      <link>https://huobazi.aspxboy.com/blog/2005/10/02/cb-248084/</link>
+      <link>https://huobazi.github.com/blog/2005/10/02/cb-248084/</link>
       <pubDate>Sun, 02 Oct 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2005/10/02/cb-248084/</guid>
+      <guid>https://huobazi.github.com/blog/2005/10/02/cb-248084/</guid>
       <description>进入
 http://communityserver.org/forums/498047/ShowPost.aspx
 双击鼠标,看效果
@@ -1966,10 +1966,10 @@ http://communityserver.org/forums/498047/ShowPost.aspx
     
     <item>
       <title>使用Url Rewrite 如果原始Url就带QueryString时候的一个问题</title>
-      <link>https://huobazi.aspxboy.com/blog/2005/09/24/cb-243385/</link>
+      <link>https://huobazi.github.com/blog/2005/09/24/cb-243385/</link>
       <pubDate>Sat, 24 Sep 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2005/09/24/cb-243385/</guid>
+      <guid>https://huobazi.github.com/blog/2005/09/24/cb-243385/</guid>
       <description>我重写了我的站点程序，在使用msdn内
 http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnaspp/html/urlrewriting.asp
 关于Url Rewrite的方法
@@ -2001,10 +2001,10 @@ Rewrite(app.Request.RawUrl, app); }
     
     <item>
       <title>使用Url Rewrite 如果原始Url就带QueryString时候的一个问题</title>
-      <link>https://huobazi.aspxboy.com/blog/2005/09/24/cb-243385/</link>
+      <link>https://huobazi.github.com/blog/2005/09/24/cb-243385/</link>
       <pubDate>Sat, 24 Sep 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2005/09/24/cb-243385/</guid>
+      <guid>https://huobazi.github.com/blog/2005/09/24/cb-243385/</guid>
       <description>我重写了我的站点程序，在使用msdn内
 http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnaspp/html/urlrewriting.asp
 关于Url Rewrite的方法
@@ -2036,14 +2036,14 @@ Rewrite(app.Request.RawUrl, app); }
     
     <item>
       <title>文本块内的文本的空格、制表符和换行处理</title>
-      <link>https://huobazi.aspxboy.com/blog/2005/09/21/cb-241048/</link>
+      <link>https://huobazi.github.com/blog/2005/09/21/cb-241048/</link>
       <pubDate>Wed, 21 Sep 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2005/09/21/cb-241048/</guid>
+      <guid>https://huobazi.github.com/blog/2005/09/21/cb-241048/</guid>
       <description>最近在做我的AspxBoy.Com时遇到一个郁闷的问题
 在使用ftb２.0做编辑器的时候  在内容筐内粘贴进
 &amp;hellip;. 
- 的代码  当提交后显示页面(如http://www.aspxboy.com/433/archive.aspx)内
+ 的代码  当提交后显示页面(如http://www.github.com/433/archive.aspx)内
 内的制表符都变没了
 求助与csdn:
   http://community.csdn.net/Expert/topic/4282/4282303.xml?temp=.5363428
@@ -2064,30 +2064,30 @@ white-space:pre;
     
     <item>
       <title>从VB的语法理解 抽象方法</title>
-      <link>https://huobazi.aspxboy.com/blog/2005/05/12/cb-154060/</link>
+      <link>https://huobazi.github.com/blog/2005/05/12/cb-154060/</link>
       <pubDate>Thu, 12 May 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2005/05/12/cb-154060/</guid>
+      <guid>https://huobazi.github.com/blog/2005/05/12/cb-154060/</guid>
       <description>C#中 abstract void MethodName(....
 VB中 MustOverride Sub MethodName(....</description>
     </item>
     
     <item>
       <title>从VB的语法理解 抽象方法</title>
-      <link>https://huobazi.aspxboy.com/blog/2005/05/12/cb-154060/</link>
+      <link>https://huobazi.github.com/blog/2005/05/12/cb-154060/</link>
       <pubDate>Thu, 12 May 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2005/05/12/cb-154060/</guid>
+      <guid>https://huobazi.github.com/blog/2005/05/12/cb-154060/</guid>
       <description>C#中 abstract void MethodName(....
 VB中 MustOverride Sub MethodName(....</description>
     </item>
     
     <item>
       <title>今天头又晕了</title>
-      <link>https://huobazi.aspxboy.com/blog/2005/04/14/cb-137712/</link>
+      <link>https://huobazi.github.com/blog/2005/04/14/cb-137712/</link>
       <pubDate>Thu, 14 Apr 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2005/04/14/cb-137712/</guid>
+      <guid>https://huobazi.github.com/blog/2005/04/14/cb-137712/</guid>
       <description>写了如下代码，还跟踪了半个多小时，没找出来问题 if(strCarId.StartsWith(&amp;ldquo;&amp;ldquo;))
 {
 strCarId.Replace(&amp;ldquo;&amp;ldquo;,&amp;ldquo;U&amp;ldquo;);
@@ -2099,10 +2099,10 @@ strCarId.Replace(&amp;ldquo;&amp;ldquo;,&amp;ldquo;T&amp;ldquo;);
     
     <item>
       <title>1bu.com用的什么方法？</title>
-      <link>https://huobazi.aspxboy.com/blog/2005/02/24/cb-108606/</link>
+      <link>https://huobazi.github.com/blog/2005/02/24/cb-108606/</link>
       <pubDate>Thu, 24 Feb 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2005/02/24/cb-108606/</guid>
+      <guid>https://huobazi.github.com/blog/2005/02/24/cb-108606/</guid>
       <description>http://www.cnblogs.com.1bu.com/
 可以访问
 某些论坛竟然都可以登录甚至回复帖子
@@ -2117,48 +2117,48 @@ http://www.im286.com/viewthread.php?tid=817711&amp;amp;extra=page%3D1
     
     <item>
       <title>在Codebehind内动态设置显示内容的DataFormatString</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/11/16/dataformatstringincodebehind/</link>
+      <link>https://huobazi.github.com/blog/2004/11/16/dataformatstringincodebehind/</link>
       <pubDate>Tue, 16 Nov 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/11/16/dataformatstringincodebehind/</guid>
+      <guid>https://huobazi.github.com/blog/2004/11/16/dataformatstringincodebehind/</guid>
       <description>&lt;p&gt;在DataGrid内控制单元格显示内容的格式，如时间格式的时候&lt;br /&gt;如果AutoGenerateColumns=false&lt;br /&gt;那么绑定列中设置 DataFormatString=&#34;{0:dd/mm/yyyy}&#34; 就可以做到了&lt;br /&gt;可是AutoGenerateColumns=true的时候,就不好办了&lt;br /&gt;一个办法,可以在sql语句中使用convert或者cast函数转换一下。&lt;br /&gt;我们正在做的一个项目中&lt;br /&gt;有个动态查询功能,是根据用户选择的条件、需显示的字段来动态生成Sql语句(破坏了三层结构，不知道其他朋友如何做？)来查询的。&lt;br /&gt;如果用Sql的函数将非常麻烦，我采用了如下方法，在后台绑定数据的时候设置内容格式。&lt;/p&gt;
 &lt;p&gt;示例：&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>在Codebehind内动态设置显示内容的DataFormatString</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/11/16/dataformatstringincodebehind/</link>
+      <link>https://huobazi.github.com/blog/2004/11/16/dataformatstringincodebehind/</link>
       <pubDate>Tue, 16 Nov 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/11/16/dataformatstringincodebehind/</guid>
+      <guid>https://huobazi.github.com/blog/2004/11/16/dataformatstringincodebehind/</guid>
       <description>&lt;p&gt;在DataGrid内控制单元格显示内容的格式，如时间格式的时候&lt;br /&gt;如果AutoGenerateColumns=false&lt;br /&gt;那么绑定列中设置 DataFormatString=&#34;{0:dd/mm/yyyy}&#34; 就可以做到了&lt;br /&gt;可是AutoGenerateColumns=true的时候,就不好办了&lt;br /&gt;一个办法,可以在sql语句中使用convert或者cast函数转换一下。&lt;br /&gt;我们正在做的一个项目中&lt;br /&gt;有个动态查询功能,是根据用户选择的条件、需显示的字段来动态生成Sql语句(破坏了三层结构，不知道其他朋友如何做？)来查询的。&lt;br /&gt;如果用Sql的函数将非常麻烦，我采用了如下方法，在后台绑定数据的时候设置内容格式。&lt;/p&gt;
 &lt;p&gt;示例：&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>检测email地址是否存在的Web Service</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/09/30/verifyemailwebservice/</link>
+      <link>https://huobazi.github.com/blog/2004/09/30/verifyemailwebservice/</link>
       <pubDate>Thu, 30 Sep 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/09/30/verifyemailwebservice/</guid>
+      <guid>https://huobazi.github.com/blog/2004/09/30/verifyemailwebservice/</guid>
       <description>检测email地址是否存在的Web Servicehttp://ws.cdyne.com/emailverify/ev.asmx?op=VerifyEmail</description>
     </item>
     
     <item>
       <title>检测email地址是否存在的Web Service</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/09/30/verifyemailwebservice/</link>
+      <link>https://huobazi.github.com/blog/2004/09/30/verifyemailwebservice/</link>
       <pubDate>Thu, 30 Sep 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/09/30/verifyemailwebservice/</guid>
+      <guid>https://huobazi.github.com/blog/2004/09/30/verifyemailwebservice/</guid>
       <description>检测email地址是否存在的Web Servicehttp://ws.cdyne.com/emailverify/ev.asmx?op=VerifyEmail</description>
     </item>
     
     <item>
       <title>验证控件中显示的信息要换行竟然要用“&#34; 啊</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/09/20/cb-44837/</link>
+      <link>https://huobazi.github.com/blog/2004/09/20/cb-44837/</link>
       <pubDate>Mon, 20 Sep 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/09/20/cb-44837/</guid>
+      <guid>https://huobazi.github.com/blog/2004/09/20/cb-44837/</guid>
       <description>如果在javascript内
 要用alert显示换行的信息则
  &amp;lt;script language=&amp;ldquo;javascript&amp;ldquo;&amp;gt;alert(&amp;ldquo;1 2 3&amp;ldquo;)
@@ -2173,10 +2173,10 @@ http://www.im286.com/viewthread.php?tid=817711&amp;amp;extra=page%3D1
     
     <item>
       <title>验证控件中显示的信息要换行竟然要用“&#34; 啊</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/09/20/cb-44837/</link>
+      <link>https://huobazi.github.com/blog/2004/09/20/cb-44837/</link>
       <pubDate>Mon, 20 Sep 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/09/20/cb-44837/</guid>
+      <guid>https://huobazi.github.com/blog/2004/09/20/cb-44837/</guid>
       <description>如果在javascript内
 要用alert显示换行的信息则
  &amp;lt;script language=&amp;ldquo;javascript&amp;ldquo;&amp;gt;alert(&amp;ldquo;1 2 3&amp;ldquo;)
@@ -2191,10 +2191,10 @@ http://www.im286.com/viewthread.php?tid=817711&amp;amp;extra=page%3D1
     
     <item>
       <title>撞墙吧 Array.IndexOf(xxx)</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/09/18/cb-44424/</link>
+      <link>https://huobazi.github.com/blog/2004/09/18/cb-44424/</link>
       <pubDate>Sat, 18 Sep 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/09/18/cb-44424/</guid>
+      <guid>https://huobazi.github.com/blog/2004/09/18/cb-44424/</guid>
       <description>要在后台把CheckBoxList的某个ListItem 的selected给true了
 遍历该CheckBoxList,写下了下面注释内的代码，死活不能选中我的第个CheckBox
 
@@ -2227,10 +2227,10 @@ if (Array.IndexOf(xxxxx) &amp;gt; 0) 用力吧555555，撞的头都疼了.</desc
     
     <item>
       <title>真郁闷，ListItem的Attributes让我碰到了</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/09/18/cb-44389/</link>
+      <link>https://huobazi.github.com/blog/2004/09/18/cb-44389/</link>
       <pubDate>Sat, 18 Sep 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/09/18/cb-44389/</guid>
+      <guid>https://huobazi.github.com/blog/2004/09/18/cb-44389/</guid>
       <description>想给CheckBoxList的Item加个Onclick执行的javascript函数
  CheckBoxList chk_list_big =(CheckBoxList)e.Item.FindControl(&#34;chk_list_big&#34;) asCheckBoxList;
 if(chk_list_big !=null)
@@ -2249,10 +2249,10 @@ http://support.microsoft.com/default.aspx?scid=kb;en-us;309338&amp;amp;Product=N
     
     <item>
       <title>真郁闷，ListItem的Attributes让我碰到了</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/09/18/cb-44389/</link>
+      <link>https://huobazi.github.com/blog/2004/09/18/cb-44389/</link>
       <pubDate>Sat, 18 Sep 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/09/18/cb-44389/</guid>
+      <guid>https://huobazi.github.com/blog/2004/09/18/cb-44389/</guid>
       <description>想给CheckBoxList的Item加个Onclick执行的javascript函数
  CheckBoxList chk_list_big =(CheckBoxList)e.Item.FindControl(&#34;chk_list_big&#34;) asCheckBoxList;
 if(chk_list_big !=null)
@@ -2271,10 +2271,10 @@ http://support.microsoft.com/default.aspx?scid=kb;en-us;309338&amp;amp;Product=N
     
     <item>
       <title>问题，如何把上传文件的浏览按钮换成其他样式 或者图片</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/09/15/cb-43249/</link>
+      <link>https://huobazi.github.com/blog/2004/09/15/cb-43249/</link>
       <pubDate>Wed, 15 Sep 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/09/15/cb-43249/</guid>
+      <guid>https://huobazi.github.com/blog/2004/09/15/cb-43249/</guid>
       <description>我的上篇随笔中，写了如何替换“浏览”按钮的代码
 有朋友指出 该表单无法提交，
 由于我当时只是测试了 能否实现替换和浏览
@@ -2301,10 +2301,10 @@ document.forms[0].browse.disabled =true; }&amp;lt;/script&amp;gt;
     
     <item>
       <title>问题，如何把上传文件的浏览按钮换成其他样式 或者图片</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/09/15/cb-43249/</link>
+      <link>https://huobazi.github.com/blog/2004/09/15/cb-43249/</link>
       <pubDate>Wed, 15 Sep 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/09/15/cb-43249/</guid>
+      <guid>https://huobazi.github.com/blog/2004/09/15/cb-43249/</guid>
       <description>我的上篇随笔中，写了如何替换“浏览”按钮的代码
 有朋友指出 该表单无法提交，
 由于我当时只是测试了 能否实现替换和浏览
@@ -2331,10 +2331,10 @@ document.forms[0].browse.disabled =true; }&amp;lt;/script&amp;gt;
     
     <item>
       <title>小技巧，如何把上传文件的浏览按钮换成其他样式 或者图片</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/09/14/cb-43051/</link>
+      <link>https://huobazi.github.com/blog/2004/09/14/cb-43051/</link>
       <pubDate>Tue, 14 Sep 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/09/14/cb-43051/</guid>
+      <guid>https://huobazi.github.com/blog/2004/09/14/cb-43051/</guid>
       <description>本随笔缩写内容有误，对不起，谢谢！
 csdn上有朋友问道这个问题
 上google跑了跑，从这里和csdn的980337(面包喳喳) 朋友的回复得到提示，做了做测试。
@@ -2351,10 +2351,10 @@ document.test_form.file.value =document.all.test_form.browse.value; }&amp;lt;/
     
     <item>
       <title>MSDN中文站增加了几篇关于Smart Client的翻译文章</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/08/23/cb-35803/</link>
+      <link>https://huobazi.github.com/blog/2004/08/23/cb-35803/</link>
       <pubDate>Mon, 23 Aug 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/08/23/cb-35803/</guid>
+      <guid>https://huobazi.github.com/blog/2004/08/23/cb-35803/</guid>
       <description>最近正在看智能客户端方面的资料,发现中文的甚少, 不料今日去MSDN中文站,发现本周更新里多出好多关于智能客户端的文章,正是前几日在看的英文文章的翻译 能看到中文资料,太高兴了,谢谢译者!
  TaskVision 解决方案概述：设计与实现
   智能客户端 Offline Application Block
@@ -2371,10 +2371,10 @@ document.test_form.file.value =document.all.test_form.browse.value; }&amp;lt;/
     
     <item>
       <title>MSDN中文站增加了几篇关于Smart Client的翻译文章</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/08/23/cb-35803/</link>
+      <link>https://huobazi.github.com/blog/2004/08/23/cb-35803/</link>
       <pubDate>Mon, 23 Aug 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/08/23/cb-35803/</guid>
+      <guid>https://huobazi.github.com/blog/2004/08/23/cb-35803/</guid>
       <description>最近正在看智能客户端方面的资料,发现中文的甚少, 不料今日去MSDN中文站,发现本周更新里多出好多关于智能客户端的文章,正是前几日在看的英文文章的翻译 能看到中文资料,太高兴了,谢谢译者!
  TaskVision 解决方案概述：设计与实现
   智能客户端 Offline Application Block
@@ -2391,10 +2391,10 @@ document.test_form.file.value =document.all.test_form.browse.value; }&amp;lt;/
     
     <item>
       <title>疑惑 关于 多条件判断语句 的写法</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/08/21/cb-35432/</link>
+      <link>https://huobazi.github.com/blog/2004/08/21/cb-35432/</link>
       <pubDate>Sat, 21 Aug 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/08/21/cb-35432/</guid>
+      <guid>https://huobazi.github.com/blog/2004/08/21/cb-35432/</guid>
       <description>写法1
 if ( 条件1 &amp;amp;&amp;amp; 条件2)
 {
@@ -2432,10 +2432,10 @@ HttpContext.Current.User =newSystem.Security.Principal.GenericPrincipal(id,myRo
     
     <item>
       <title>疑惑 关于 多条件判断语句 的写法</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/08/21/cb-35432/</link>
+      <link>https://huobazi.github.com/blog/2004/08/21/cb-35432/</link>
       <pubDate>Sat, 21 Aug 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/08/21/cb-35432/</guid>
+      <guid>https://huobazi.github.com/blog/2004/08/21/cb-35432/</guid>
       <description>写法1
 if ( 条件1 &amp;amp;&amp;amp; 条件2)
 {
@@ -2473,10 +2473,10 @@ HttpContext.Current.User =newSystem.Security.Principal.GenericPrincipal(id,myRo
     
     <item>
       <title>HTML特殊字符 - 补遗 </title>
-      <link>https://huobazi.aspxboy.com/blog/2004/08/18/cb-34377/</link>
+      <link>https://huobazi.github.com/blog/2004/08/18/cb-34377/</link>
       <pubDate>Wed, 18 Aug 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/08/18/cb-34377/</guid>
+      <guid>https://huobazi.github.com/blog/2004/08/18/cb-34377/</guid>
       <description>ISO 8859-1 (Latin-1) characters
  
     &amp;amp;nbsp; &amp;amp;#160; ¡ &amp;amp;iexcl; &amp;amp;#161; ¢ &amp;amp;cent; &amp;amp;#162; £ &amp;amp;pound; &amp;amp;#163; ¤ &amp;amp;curren; &amp;amp;#164;   ¥ &amp;amp;yen; &amp;amp;#165; ¦ &amp;amp;brvbar; &amp;amp;#166; § &amp;amp;sect; &amp;amp;#167; ¨ &amp;amp;uml; &amp;amp;#168; © &amp;amp;copy; &amp;amp;#169;   ª &amp;amp;ordf; &amp;amp;#170; « &amp;amp;laquo; &amp;amp;#171; ¬ &amp;amp;not; &amp;amp;#172; ­ &amp;amp;shy; &amp;amp;#173; ® &amp;amp;reg; &amp;amp;#174;   ¯ &amp;amp;macr; &amp;amp;#175; ° &amp;amp;deg; &amp;amp;#176; ± &amp;amp;plusmn; &amp;amp;#177; ² &amp;amp;sup2; &amp;amp;#178; ³ &amp;amp;sup3; &amp;amp;#179;   ´ &amp;amp;acute; &amp;amp;#180; µ &amp;amp;micro; &amp;amp;#181; ¶ &amp;amp;para; &amp;amp;#182; · &amp;amp;middot; &amp;amp;#183; ¸ &amp;amp;cedil; &amp;amp;#184;   ¹ &amp;amp;sup1; &amp;amp;#185; º &amp;amp;ordm; &amp;amp;#186; » &amp;amp;raquo; &amp;amp;#187; ¼ &amp;amp;frac14; &amp;amp;#188; ½ &amp;amp;frac12; &amp;amp;#189;   ¾ &amp;amp;frac34; &amp;amp;#190; ¿ &amp;amp;iquest; &amp;amp;#191; À &amp;amp;Agrave; &amp;amp;#192; Á &amp;amp;Aacute; &amp;amp;#193; Â &amp;amp;Acirc; &amp;amp;#194;   Ã &amp;amp;Atilde; &amp;amp;#195; Ä &amp;amp;Auml; &amp;amp;#196; Å &amp;amp;Aring; &amp;amp;#197; Æ &amp;amp;AElig; &amp;amp;#198; Ç &amp;amp;Ccedil; &amp;amp;#199;   È &amp;amp;Egrave; &amp;amp;#200; É &amp;amp;Eacute; &amp;amp;#201; Ê &amp;amp;Ecirc; &amp;amp;#202; Ë &amp;amp;Euml; &amp;amp;#203; Ì &amp;amp;Igrave; &amp;amp;#204;   Í &amp;amp;Iacute; &amp;amp;#205; Î &amp;amp;Icirc; &amp;amp;#206; Ï &amp;amp;Iuml; &amp;amp;#207; Ð &amp;amp;ETH; &amp;amp;#208; Ñ &amp;amp;Ntilde; &amp;amp;#209;   Ò &amp;amp;Ograve; &amp;amp;#210; Ó &amp;amp;Oacute; &amp;amp;#211; Ô &amp;amp;Ocirc; &amp;amp;#212; Õ &amp;amp;Otilde; &amp;amp;#213; Ö &amp;amp;Ouml; &amp;amp;#214;   × &amp;amp;times; &amp;amp;#215; Ø &amp;amp;Oslash; &amp;amp;#216; Ù &amp;amp;Ugrave; &amp;amp;#217; Ú &amp;amp;Uacute; &amp;amp;#218; Û &amp;amp;Ucirc; &amp;amp;#219;   Ü &amp;amp;Uuml; &amp;amp;#220; Ý &amp;amp;Yacute; &amp;amp;#221; Þ &amp;amp;THORN; &amp;amp;#222; ß &amp;amp;szlig; &amp;amp;#223; à &amp;amp;agrave; &amp;amp;#224;   á &amp;amp;aacute; &amp;amp;#225; â &amp;amp;acirc; &amp;amp;#226; ã &amp;amp;atilde; &amp;amp;#227; ä &amp;amp;auml; &amp;amp;#228; å &amp;amp;aring; &amp;amp;#229;   æ &amp;amp;aelig; &amp;amp;#230; ç &amp;amp;ccedil; &amp;amp;#231; è &amp;amp;egrave; &amp;amp;#232; é &amp;amp;eacute; &amp;amp;#233; ê &amp;amp;ecirc; &amp;amp;#234;   ë &amp;amp;euml; &amp;amp;#235; ì &amp;amp;igrave; &amp;amp;#236; í &amp;amp;iacute; &amp;amp;#237; î &amp;amp;icirc; &amp;amp;#238; ï &amp;amp;iuml; &amp;amp;#239;   ð &amp;amp;eth; &amp;amp;#240; ñ &amp;amp;ntilde; &amp;amp;#241; ò &amp;amp;ograve; &amp;amp;#242; ó &amp;amp;oacute; &amp;amp;#243; ô &amp;amp;ocirc; &amp;amp;#244;   õ &amp;amp;otilde; &amp;amp;#245; ö &amp;amp;ouml; &amp;amp;#246; ÷ &amp;amp;divide; &amp;amp;#247; ø &amp;amp;oslash; &amp;amp;#248; ù &amp;amp;ugrave; &amp;amp;#249;   ú &amp;amp;uacute; &amp;amp;#250; û &amp;amp;ucirc; &amp;amp;#251; ü &amp;amp;uuml; &amp;amp;#252; ý &amp;amp;yacute; &amp;amp;#253; þ &amp;amp;thorn; &amp;amp;#254;   ÿ &amp;amp;yuml; &amp;amp;#255;   symbols, mathematical symbols, and Greek letters</description>
@@ -2484,10 +2484,10 @@ HttpContext.Current.User =newSystem.Security.Principal.GenericPrincipal(id,myRo
     
     <item>
       <title>数据从SqlServer6.5到SqlServer2000</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/07/14/cb-24010/</link>
+      <link>https://huobazi.github.com/blog/2004/07/14/cb-24010/</link>
       <pubDate>Wed, 14 Jul 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/07/14/cb-24010/</guid>
+      <guid>https://huobazi.github.com/blog/2004/07/14/cb-24010/</guid>
       <description>一台SqlServer65上的数据需要导到SqlServer200下
 源机器:WinNt4 sp6 SqlServer65 Sp5a
 目的机器: Win2000 sp4 SqlServer2000 sp3a
@@ -2499,10 +2499,10 @@ HttpContext.Current.User =newSystem.Security.Principal.GenericPrincipal(id,myRo
     
     <item>
       <title>能在微软的网站找到IeWebcontrols的安装文件吗</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/07/14/cb-24084/</link>
+      <link>https://huobazi.github.com/blog/2004/07/14/cb-24084/</link>
       <pubDate>Wed, 14 Jul 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/07/14/cb-24084/</guid>
+      <guid>https://huobazi.github.com/blog/2004/07/14/cb-24084/</guid>
       <description>你们能在微软的网站找到IeWebcontrols的安装文件吗?
 这个地址不行了
 http://msdn.microsoft.com/downloads/samples/internet/ASP_DOT_NET_ServerControls/WebControls/default.asp
@@ -2514,10 +2514,10 @@ http://msdn.microsoft.com/downloads/samples/internet/ASP_DOT_NET_ServerControls/
     
     <item>
       <title>能在微软的网站找到IeWebcontrols的安装文件吗</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/07/14/cb-24084/</link>
+      <link>https://huobazi.github.com/blog/2004/07/14/cb-24084/</link>
       <pubDate>Wed, 14 Jul 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/07/14/cb-24084/</guid>
+      <guid>https://huobazi.github.com/blog/2004/07/14/cb-24084/</guid>
       <description>你们能在微软的网站找到IeWebcontrols的安装文件吗?
 这个地址不行了
 http://msdn.microsoft.com/downloads/samples/internet/ASP_DOT_NET_ServerControls/WebControls/default.asp
@@ -2529,60 +2529,60 @@ http://msdn.microsoft.com/downloads/samples/internet/ASP_DOT_NET_ServerControls/
     
     <item>
       <title>小雕虫,不被Google工具条拦截的弹出窗口</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/07/10/cb-7697-1/</link>
+      <link>https://huobazi.github.com/blog/2004/07/10/cb-7697-1/</link>
       <pubDate>Sat, 10 Jul 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/07/10/cb-7697-1/</guid>
+      <guid>https://huobazi.github.com/blog/2004/07/10/cb-7697-1/</guid>
       <description>如果做项目必须用到弹出窗口可以考虑以下
 不保证任何时候能用
 更不保证在那个myie新版本下能用
 如果myie等浏览器屏蔽掉了地址内的某些字比如我演示中有“pop“字样,那也出不来
 demo+code:
-http://www.aspxboy.com/popWindow/
+http://www.github.com/popWindow/
 测试通过日期： 2004/07/10/ ！！！</description>
     </item>
     
     <item>
       <title>小雕虫,不被Google工具条拦截的弹出窗口</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/07/10/cb-7697-1/</link>
+      <link>https://huobazi.github.com/blog/2004/07/10/cb-7697-1/</link>
       <pubDate>Sat, 10 Jul 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/07/10/cb-7697-1/</guid>
+      <guid>https://huobazi.github.com/blog/2004/07/10/cb-7697-1/</guid>
       <description>如果做项目必须用到弹出窗口可以考虑以下
 不保证任何时候能用
 更不保证在那个myie新版本下能用
 如果myie等浏览器屏蔽掉了地址内的某些字比如我演示中有“pop“字样,那也出不来
 demo+code:
-http://www.aspxboy.com/popWindow/
+http://www.github.com/popWindow/
 测试通过日期： 2004/07/10/ ！！！</description>
     </item>
     
     <item>
       <title>AspNet2.0的QuickStart出了</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/07/07/cb-22127/</link>
+      <link>https://huobazi.github.com/blog/2004/07/07/cb-22127/</link>
       <pubDate>Wed, 07 Jul 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/07/07/cb-22127/</guid>
+      <guid>https://huobazi.github.com/blog/2004/07/07/cb-22127/</guid>
       <description>http://beta.asp.net/quickstart/aspnet/
 英文的</description>
     </item>
     
     <item>
       <title>AspNet2.0的QuickStart出了</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/07/07/cb-22127/</link>
+      <link>https://huobazi.github.com/blog/2004/07/07/cb-22127/</link>
       <pubDate>Wed, 07 Jul 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/07/07/cb-22127/</guid>
+      <guid>https://huobazi.github.com/blog/2004/07/07/cb-22127/</guid>
       <description>http://beta.asp.net/quickstart/aspnet/
 英文的</description>
     </item>
     
     <item>
       <title>项目的发布的方法</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/06/15/cb-15786/</link>
+      <link>https://huobazi.github.com/blog/2004/06/15/cb-15786/</link>
       <pubDate>Tue, 15 Jun 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/06/15/cb-15786/</guid>
+      <guid>https://huobazi.github.com/blog/2004/06/15/cb-15786/</guid>
       <description>在http://www.cnblogs.com/aierong/archive/2004/06/12/15264.aspx
 看到大家讨论关于项目的发布。
 我们的做法是：
@@ -2606,10 +2606,10 @@ web方法为(RadioButton)：文件共享
     
     <item>
       <title>ASP.NET Developer&#39;s Cookbook</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/06/14/cb-15458/</link>
+      <link>https://huobazi.github.com/blog/2004/06/14/cb-15458/</link>
       <pubDate>Mon, 14 Jun 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/06/14/cb-15458/</guid>
+      <guid>https://huobazi.github.com/blog/2004/06/14/cb-15458/</guid>
       <description>一个很系统的ASP.NET示例教程?lt;BR&amp;gt;类似于QuickStart,但感觉详细的多?lt;BR&amp;gt;可以象某些书一样起个名字－－“从入门到精通?lt;BR&amp;gt;ASP.NET Developer&#39;s Cookbook
 Chapter 1: Web Form Basics
 Chapter 2: User Controls
@@ -2629,10 +2629,10 @@ Chapter 14: Working with Classes</description>
     
     <item>
       <title>ASP.NET Developer&#39;s Cookbook</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/06/14/cb-15458/</link>
+      <link>https://huobazi.github.com/blog/2004/06/14/cb-15458/</link>
       <pubDate>Mon, 14 Jun 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/06/14/cb-15458/</guid>
+      <guid>https://huobazi.github.com/blog/2004/06/14/cb-15458/</guid>
       <description>一个很系统的ASP.NET示例教程?lt;BR&amp;gt;类似于QuickStart,但感觉详细的多?lt;BR&amp;gt;可以象某些书一样起个名字－－“从入门到精通?lt;BR&amp;gt;ASP.NET Developer&#39;s Cookbook
 Chapter 1: Web Form Basics
 Chapter 2: User Controls
@@ -2652,20 +2652,20 @@ Chapter 14: Working with Classes</description>
     
     <item>
       <title>一个有关水晶报表的Blog</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/06/14/cb-15450/</link>
+      <link>https://huobazi.github.com/blog/2004/06/14/cb-15450/</link>
       <pubDate>Mon, 14 Jun 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/06/14/cb-15450/</guid>
+      <guid>https://huobazi.github.com/blog/2004/06/14/cb-15450/</guid>
       <description>http://blogs.aspadvice.com/crystal/
 有很多的faq，很实用的技巧。</description>
     </item>
     
     <item>
       <title>C-omega语言什么东东？</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/06/07/cb-13934/</link>
+      <link>https://huobazi.github.com/blog/2004/06/07/cb-13934/</link>
       <pubDate>Mon, 07 Jun 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/06/07/cb-13934/</guid>
+      <guid>https://huobazi.github.com/blog/2004/06/07/cb-13934/</guid>
       <description>谁研究过？
 和DotNet什么关系？
 好像是C#的扩展http://research.microsoft.com/Comega/</description>
@@ -2673,10 +2673,10 @@ Chapter 14: Working with Classes</description>
     
     <item>
       <title>C# VB XML 源代码转Html高亮显示工具</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/06/03/cb-13068/</link>
+      <link>https://huobazi.github.com/blog/2004/06/03/cb-13068/</link>
       <pubDate>Thu, 03 Jun 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/06/03/cb-13068/</guid>
+      <guid>https://huobazi.github.com/blog/2004/06/03/cb-13068/</guid>
       <description>C# VB XML 源代码转Html高亮显示工具
 http://www.squishyweb.com/ware/products.asp?q=squishysyntax
 很不错的东西
@@ -2689,10 +2689,10 @@ http://www.squishyweb.com/ware/files/SampleXML-Output.html
     
     <item>
       <title>C# VB XML 源代码转Html高亮显示工具</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/06/03/cb-13068/</link>
+      <link>https://huobazi.github.com/blog/2004/06/03/cb-13068/</link>
       <pubDate>Thu, 03 Jun 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/06/03/cb-13068/</guid>
+      <guid>https://huobazi.github.com/blog/2004/06/03/cb-13068/</guid>
       <description>C# VB XML 源代码转Html高亮显示工具
 http://www.squishyweb.com/ware/products.asp?q=squishysyntax
 很不错的东西
@@ -2705,10 +2705,10 @@ http://www.squishyweb.com/ware/files/SampleXML-Output.html
     
     <item>
       <title>一个很全的教程站</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/06/01/cb-12759/</link>
+      <link>https://huobazi.github.com/blog/2004/06/01/cb-12759/</link>
       <pubDate>Tue, 01 Jun 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/06/01/cb-12759/</guid>
+      <guid>https://huobazi.github.com/blog/2004/06/01/cb-12759/</guid>
       <description>很少见教程大全，不知道我是不是很落伍，今天才逛到这里
 
 HTML Tutorials
@@ -2749,10 +2749,10 @@ Learn PHP
     
     <item>
       <title>一个很全的教程站</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/06/01/cb-12759/</link>
+      <link>https://huobazi.github.com/blog/2004/06/01/cb-12759/</link>
       <pubDate>Tue, 01 Jun 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/06/01/cb-12759/</guid>
+      <guid>https://huobazi.github.com/blog/2004/06/01/cb-12759/</guid>
       <description>很少见教程大全，不知道我是不是很落伍，今天才逛到这里
 
 HTML Tutorials
@@ -2793,10 +2793,10 @@ Learn PHP
     
     <item>
       <title>也有人和我一样抱怨为何C#中操作office产品的方法有那么多的参数</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/05/29/cb-12201/</link>
+      <link>https://huobazi.github.com/blog/2004/05/29/cb-12201/</link>
       <pubDate>Sat, 29 May 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/05/29/cb-12201/</guid>
+      <guid>https://huobazi.github.com/blog/2004/05/29/cb-12201/</guid>
       <description>原来做过一个小的win程序操作Excel的 被那些个参数搞的头晕晕的
 那么多Missing啊
 今天在Blog.Msdn.com看到关于VB和C#在office开发中的比较的讨论
@@ -2808,10 +2808,10 @@ http://blogs.msdn.com/cyrusn/archive/2004/05/28/144165.aspx
     
     <item>
       <title>也有人和我一样抱怨为何C#中操作office产品的方法有那么多的参数</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/05/29/cb-12201/</link>
+      <link>https://huobazi.github.com/blog/2004/05/29/cb-12201/</link>
       <pubDate>Sat, 29 May 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/05/29/cb-12201/</guid>
+      <guid>https://huobazi.github.com/blog/2004/05/29/cb-12201/</guid>
       <description>原来做过一个小的win程序操作Excel的 被那些个参数搞的头晕晕的
 那么多Missing啊
 今天在Blog.Msdn.com看到关于VB和C#在office开发中的比较的讨论
@@ -2823,10 +2823,10 @@ http://blogs.msdn.com/cyrusn/archive/2004/05/28/144165.aspx
     
     <item>
       <title>TechNet月度光盘资料&#43;贺卡&#43;msn贴纸&#43;TechNet体恤 被哄抢而光</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/05/11/cb-8865/</link>
+      <link>https://huobazi.github.com/blog/2004/05/11/cb-8865/</link>
       <pubDate>Tue, 11 May 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/05/11/cb-8865/</guid>
+      <guid>https://huobazi.github.com/blog/2004/05/11/cb-8865/</guid>
       <description>前阵子换了工作，没有及时的更新TechNet的资料4月份的光盘资料被寄到原来单位去了
 连同一张贺卡，msn贴纸，TechNet的体恤 昨天同事带给了我。
 好消息和MM共享之... ...
@@ -2840,28 +2840,28 @@ MM的话“微软是关心你们这些开发人员，不想让你们打光棍，
     
     <item>
       <title>一个好地方～SharpLibrary</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/05/07/cb-8466/</link>
+      <link>https://huobazi.github.com/blog/2004/05/07/cb-8466/</link>
       <pubDate>Fri, 07 May 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/05/07/cb-8466/</guid>
+      <guid>https://huobazi.github.com/blog/2004/05/07/cb-8466/</guid>
       <description></description>
     </item>
     
     <item>
       <title>一个好地方～SharpLibrary</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/05/07/cb-8466/</link>
+      <link>https://huobazi.github.com/blog/2004/05/07/cb-8466/</link>
       <pubDate>Fri, 07 May 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/05/07/cb-8466/</guid>
+      <guid>https://huobazi.github.com/blog/2004/05/07/cb-8466/</guid>
       <description></description>
     </item>
     
     <item>
       <title>一个关于DataGrid的打印类,分享,感谢作者</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/04/30/cb-8176/</link>
+      <link>https://huobazi.github.com/blog/2004/04/30/cb-8176/</link>
       <pubDate>Fri, 30 Apr 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/04/30/cb-8176/</guid>
+      <guid>https://huobazi.github.com/blog/2004/04/30/cb-8176/</guid>
       <description>手中的活计需要打印,就到处找找。
 从google中扑获,挺不错的，大家共享～
 how can i print the data in DataGrid?http://forums.aspfree.com/archive/t-17107
@@ -2875,10 +2875,10 @@ private void printDocument_PrintPage(object sender, System.Drawing.Printing.Prin
     
     <item>
       <title>可以弹出确认对话框的自定义Web服务器控件ConfirmButton</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/04/30/confirmbutton/</link>
+      <link>https://huobazi.github.com/blog/2004/04/30/confirmbutton/</link>
       <pubDate>Fri, 30 Apr 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/04/30/confirmbutton/</guid>
+      <guid>https://huobazi.github.com/blog/2004/04/30/confirmbutton/</guid>
       <description>经常在论坛里看到类似这样的问题：“…如何在点击删除按钮的时候弹出个确认删除对话框”。
 下面我们来自己写一个这样的自定义Web服务器控件!
 思路如下：
@@ -2938,10 +2938,10 @@ namespace AspxBoy.Com.ConfirmButton
     
     <item>
       <title>可以弹出确认对话框的自定义Web服务器控件ConfirmButton</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/04/30/confirmbutton/</link>
+      <link>https://huobazi.github.com/blog/2004/04/30/confirmbutton/</link>
       <pubDate>Fri, 30 Apr 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/04/30/confirmbutton/</guid>
+      <guid>https://huobazi.github.com/blog/2004/04/30/confirmbutton/</guid>
       <description>经常在论坛里看到类似这样的问题：“…如何在点击删除按钮的时候弹出个确认删除对话框”。
 下面我们来自己写一个这样的自定义Web服务器控件!
 思路如下：
@@ -3001,10 +3001,10 @@ namespace AspxBoy.Com.ConfirmButton
     
     <item>
       <title>打开一个Excel模板文件填充数据另存为一个文件</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/04/27/filldatatoexceltemplate/</link>
+      <link>https://huobazi.github.com/blog/2004/04/27/filldatatoexceltemplate/</link>
       <pubDate>Tue, 27 Apr 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/04/27/filldatatoexceltemplate/</guid>
+      <guid>https://huobazi.github.com/blog/2004/04/27/filldatatoexceltemplate/</guid>
       <description>最近做的东西要求打开一个Excel文件模板后填充数据
 开始用OleDb连接该Excel文件更新老是出错误 “需要一个可更新的.....“
 http://expert.csdn.net/Expert/topic/2992/2992809.xml?temp=.4825403
@@ -3040,10 +3040,10 @@ for( int i=0; i {</description>
     
     <item>
       <title>打开一个Excel模板文件填充数据另存为一个文件</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/04/27/filldatatoexceltemplate/</link>
+      <link>https://huobazi.github.com/blog/2004/04/27/filldatatoexceltemplate/</link>
       <pubDate>Tue, 27 Apr 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/04/27/filldatatoexceltemplate/</guid>
+      <guid>https://huobazi.github.com/blog/2004/04/27/filldatatoexceltemplate/</guid>
       <description>最近做的东西要求打开一个Excel文件模板后填充数据
 开始用OleDb连接该Excel文件更新老是出错误 “需要一个可更新的.....“
 http://expert.csdn.net/Expert/topic/2992/2992809.xml?temp=.4825403
@@ -3079,10 +3079,10 @@ for( int i=0; i {</description>
     
     <item>
       <title>关于 “编译器失败，错误代码为 128”</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/04/26/cb-7697/</link>
+      <link>https://huobazi.github.com/blog/2004/04/26/cb-7697/</link>
       <pubDate>Mon, 26 Apr 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/04/26/cb-7697/</guid>
+      <guid>https://huobazi.github.com/blog/2004/04/26/cb-7697/</guid>
       <description>csdn上有位兄弟遇到这个错误了
 http://expert.csdn.net/Expert/topic/3009/3009791.xml?temp=2.024478E-02
 我先是搜索baidu发现一个帖子
@@ -3094,10 +3094,10 @@ First of all, update your antivirus software and make a full scan on your comput
     
     <item>
       <title>弹出窗口刷新它的父页面后。出现不重新发送信息，则无法刷新网页</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/04/06/refreshorreloadparentwindowwithoutconfirm/</link>
+      <link>https://huobazi.github.com/blog/2004/04/06/refreshorreloadparentwindowwithoutconfirm/</link>
       <pubDate>Tue, 06 Apr 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/04/06/refreshorreloadparentwindowwithoutconfirm/</guid>
+      <guid>https://huobazi.github.com/blog/2004/04/06/refreshorreloadparentwindowwithoutconfirm/</guid>
       <description>做的东西弹出一个窗口处理某些动作后刷新父窗口
 用
 window.opener.location.reload();
@@ -3118,10 +3118,10 @@ window.opener.location.href=window.opener.location.href
     
     <item>
       <title>弹出窗口刷新它的父页面后。出现不重新发送信息，则无法刷新网页</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/04/06/refreshorreloadparentwindowwithoutconfirm/</link>
+      <link>https://huobazi.github.com/blog/2004/04/06/refreshorreloadparentwindowwithoutconfirm/</link>
       <pubDate>Tue, 06 Apr 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/04/06/refreshorreloadparentwindowwithoutconfirm/</guid>
+      <guid>https://huobazi.github.com/blog/2004/04/06/refreshorreloadparentwindowwithoutconfirm/</guid>
       <description>做的东西弹出一个窗口处理某些动作后刷新父窗口
 用
 window.opener.location.reload();
@@ -3142,10 +3142,10 @@ window.opener.location.href=window.opener.location.href
     
     <item>
       <title>DataGrid点击删除按钮弹出确认对话框一个好办法</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/04/05/datagriddeleteconfirm/</link>
+      <link>https://huobazi.github.com/blog/2004/04/05/datagriddeleteconfirm/</link>
       <pubDate>Mon, 05 Apr 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/04/05/datagriddeleteconfirm/</guid>
+      <guid>https://huobazi.github.com/blog/2004/04/05/datagriddeleteconfirm/</guid>
       <description>原文地址
 http://expert.csdn.net/Expert/topic/2852/2852126.xml?temp=.4770471 其中
 wf5360308(峰)提供的方法
@@ -3156,10 +3156,10 @@ datagrid-》属性生成器-》列-》添加按钮列-》删除-》文本(T)-&am
     
     <item>
       <title>DataGrid点击删除按钮弹出确认对话框一个好办法</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/04/05/datagriddeleteconfirm/</link>
+      <link>https://huobazi.github.com/blog/2004/04/05/datagriddeleteconfirm/</link>
       <pubDate>Mon, 05 Apr 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/04/05/datagriddeleteconfirm/</guid>
+      <guid>https://huobazi.github.com/blog/2004/04/05/datagriddeleteconfirm/</guid>
       <description>原文地址
 http://expert.csdn.net/Expert/topic/2852/2852126.xml?temp=.4770471 其中
 wf5360308(峰)提供的方法
@@ -3170,30 +3170,30 @@ datagrid-》属性生成器-》列-》添加按钮列-》删除-》文本(T)-&am
     
     <item>
       <title>如何在ItemDataBound内获得DataGrid的列名称HeaderText</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/04/05/datagridheadertextinitemdatabound/</link>
+      <link>https://huobazi.github.com/blog/2004/04/05/datagridheadertextinitemdatabound/</link>
       <pubDate>Mon, 05 Apr 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/04/05/datagridheadertextinitemdatabound/</guid>
+      <guid>https://huobazi.github.com/blog/2004/04/05/datagridheadertextinitemdatabound/</guid>
       <description>如果 AutoGenerateColumns=&amp;ldquo;false&amp;rdquo; 使用绑定列，模板列 则比较好办，直接使用 YourDataGrid.Columns[编号].HeaderText 获得 可是,如果 AutoGenerateColumns=&amp;ldquo;true&amp;rdquo; ,就比较麻烦了,因为这时YourDataGrid.Columns.Count是0 但是可以变通做到。
-&amp;lt;%@ Page Language=&amp;quot;C#&amp;quot; Debug=&amp;quot;true&amp;quot; %&amp;gt; &amp;lt;%@ Import Namespace=&amp;quot;System.Data&amp;quot; %&amp;gt; &amp;lt;!DOCTYPE html PUBLIC &amp;quot;-//W3C//DTD XHTML 1.0 Transitional//EN&amp;quot; &amp;quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&amp;quot;&amp;gt; &amp;lt;html xmlns=&amp;quot;http://www.w3.org/1999/xhtml&amp;quot; xml:lang=&amp;quot;gb2312&amp;quot; lang=&amp;quot;gb2312&amp;quot;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;title&amp;gt; ItemDataBoundGetColumnName &amp;lt;/title&amp;gt; &amp;lt;meta http-equiv=&amp;quot;Content-Type&amp;quot; content=&amp;quot;text/html; charset=gb2312&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;title&amp;quot; content=&amp;quot;&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;author&amp;quot; content=&amp;quot;活靶子,Huobazi,www.AspxBoy.com&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;subject&amp;quot; content=&amp;quot;&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;language&amp;quot; content=&amp;quot;gb2312&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;keywords&amp;quot; content=&amp;quot;&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;Copyright&amp;quot; content=&amp;quot;www.AspxBoy.com&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;robots&amp;quot; content=&amp;quot;all&amp;quot; /&amp;gt; &amp;lt;script language=&amp;quot;c#&amp;quot; runat=&amp;quot;server&amp;quot;&amp;gt; void BindGrid() { DataTable dt = new DataTable(); DataRow dr; dt.</description>
+&amp;lt;%@ Page Language=&amp;quot;C#&amp;quot; Debug=&amp;quot;true&amp;quot; %&amp;gt; &amp;lt;%@ Import Namespace=&amp;quot;System.Data&amp;quot; %&amp;gt; &amp;lt;!DOCTYPE html PUBLIC &amp;quot;-//W3C//DTD XHTML 1.0 Transitional//EN&amp;quot; &amp;quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&amp;quot;&amp;gt; &amp;lt;html xmlns=&amp;quot;http://www.w3.org/1999/xhtml&amp;quot; xml:lang=&amp;quot;gb2312&amp;quot; lang=&amp;quot;gb2312&amp;quot;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;title&amp;gt; ItemDataBoundGetColumnName &amp;lt;/title&amp;gt; &amp;lt;meta http-equiv=&amp;quot;Content-Type&amp;quot; content=&amp;quot;text/html; charset=gb2312&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;title&amp;quot; content=&amp;quot;&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;author&amp;quot; content=&amp;quot;活靶子,Huobazi,www.github.com&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;subject&amp;quot; content=&amp;quot;&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;language&amp;quot; content=&amp;quot;gb2312&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;keywords&amp;quot; content=&amp;quot;&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;Copyright&amp;quot; content=&amp;quot;www.github.com&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;robots&amp;quot; content=&amp;quot;all&amp;quot; /&amp;gt; &amp;lt;script language=&amp;quot;c#&amp;quot; runat=&amp;quot;server&amp;quot;&amp;gt; void BindGrid() { DataTable dt = new DataTable(); DataRow dr; dt.</description>
     </item>
     
     <item>
       <title>如何在ItemDataBound内获得DataGrid的列名称HeaderText</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/04/05/datagridheadertextinitemdatabound/</link>
+      <link>https://huobazi.github.com/blog/2004/04/05/datagridheadertextinitemdatabound/</link>
       <pubDate>Mon, 05 Apr 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/04/05/datagridheadertextinitemdatabound/</guid>
+      <guid>https://huobazi.github.com/blog/2004/04/05/datagridheadertextinitemdatabound/</guid>
       <description>如果 AutoGenerateColumns=&amp;ldquo;false&amp;rdquo; 使用绑定列，模板列 则比较好办，直接使用 YourDataGrid.Columns[编号].HeaderText 获得 可是,如果 AutoGenerateColumns=&amp;ldquo;true&amp;rdquo; ,就比较麻烦了,因为这时YourDataGrid.Columns.Count是0 但是可以变通做到。
-&amp;lt;%@ Page Language=&amp;quot;C#&amp;quot; Debug=&amp;quot;true&amp;quot; %&amp;gt; &amp;lt;%@ Import Namespace=&amp;quot;System.Data&amp;quot; %&amp;gt; &amp;lt;!DOCTYPE html PUBLIC &amp;quot;-//W3C//DTD XHTML 1.0 Transitional//EN&amp;quot; &amp;quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&amp;quot;&amp;gt; &amp;lt;html xmlns=&amp;quot;http://www.w3.org/1999/xhtml&amp;quot; xml:lang=&amp;quot;gb2312&amp;quot; lang=&amp;quot;gb2312&amp;quot;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;title&amp;gt; ItemDataBoundGetColumnName &amp;lt;/title&amp;gt; &amp;lt;meta http-equiv=&amp;quot;Content-Type&amp;quot; content=&amp;quot;text/html; charset=gb2312&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;title&amp;quot; content=&amp;quot;&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;author&amp;quot; content=&amp;quot;活靶子,Huobazi,www.AspxBoy.com&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;subject&amp;quot; content=&amp;quot;&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;language&amp;quot; content=&amp;quot;gb2312&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;keywords&amp;quot; content=&amp;quot;&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;Copyright&amp;quot; content=&amp;quot;www.AspxBoy.com&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;robots&amp;quot; content=&amp;quot;all&amp;quot; /&amp;gt; &amp;lt;script language=&amp;quot;c#&amp;quot; runat=&amp;quot;server&amp;quot;&amp;gt; void BindGrid() { DataTable dt = new DataTable(); DataRow dr; dt.</description>
+&amp;lt;%@ Page Language=&amp;quot;C#&amp;quot; Debug=&amp;quot;true&amp;quot; %&amp;gt; &amp;lt;%@ Import Namespace=&amp;quot;System.Data&amp;quot; %&amp;gt; &amp;lt;!DOCTYPE html PUBLIC &amp;quot;-//W3C//DTD XHTML 1.0 Transitional//EN&amp;quot; &amp;quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&amp;quot;&amp;gt; &amp;lt;html xmlns=&amp;quot;http://www.w3.org/1999/xhtml&amp;quot; xml:lang=&amp;quot;gb2312&amp;quot; lang=&amp;quot;gb2312&amp;quot;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;title&amp;gt; ItemDataBoundGetColumnName &amp;lt;/title&amp;gt; &amp;lt;meta http-equiv=&amp;quot;Content-Type&amp;quot; content=&amp;quot;text/html; charset=gb2312&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;title&amp;quot; content=&amp;quot;&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;author&amp;quot; content=&amp;quot;活靶子,Huobazi,www.github.com&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;subject&amp;quot; content=&amp;quot;&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;language&amp;quot; content=&amp;quot;gb2312&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;keywords&amp;quot; content=&amp;quot;&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;Copyright&amp;quot; content=&amp;quot;www.github.com&amp;quot; /&amp;gt; &amp;lt;meta name=&amp;quot;robots&amp;quot; content=&amp;quot;all&amp;quot; /&amp;gt; &amp;lt;script language=&amp;quot;c#&amp;quot; runat=&amp;quot;server&amp;quot;&amp;gt; void BindGrid() { DataTable dt = new DataTable(); DataRow dr; dt.</description>
     </item>
     
     <item>
       <title>这次吵的更凶了！！</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/04/05/cb-5210/</link>
+      <link>https://huobazi.github.com/blog/2004/04/05/cb-5210/</link>
       <pubDate>Mon, 05 Apr 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/04/05/cb-5210/</guid>
+      <guid>https://huobazi.github.com/blog/2004/04/05/cb-5210/</guid>
       <description>1 http://blog.joycode.com/5drush/posts/18249.aspx
 从而引出
 2 http://blog.codelphi.com/virushuo/posts/3453.aspx
@@ -3207,46 +3207,46 @@ MVPs是一群值得佩服的人，因为我身边就有一位 。如果你知�
     
     <item>
       <title>一个比较郁闷的问题</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/03/14/cb-3113/</link>
+      <link>https://huobazi.github.com/blog/2004/03/14/cb-3113/</link>
       <pubDate>Sun, 14 Mar 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/03/14/cb-3113/</guid>
-      <description>我在我的主页 http://www.AspxBoy.com 内
+      <guid>https://huobazi.github.com/blog/2004/03/14/cb-3113/</guid>
+      <description>我在我的主页 http://www.github.com 内
 文章显示页面是在添加文章的时候生成的静态htm页。
 在首页和其他栏目显示文章列表时链接为
-http://www.aspxboy.com/ShowArticle.Aspx?ID=214
+http://www.github.com/ShowArticle.Aspx?ID=214
 这样的链接
 在ShowArticle.Aspx内为文章的被阅读次数加1，跳转到（Response.Redirect）相应的Html文件
 如
-http://www.aspxboy.com/Files/71/66/20039280037.htm
+http://www.github.com/Files/71/66/20039280037.htm
 最近发现这样的设计导致搜索引擎抓取不到页面好友龙龙放出他的龙族蜘蛛在我的站内老是抓取不到任何可用链接,只能抓到首页就进行不下去了......
 不只该如何解决，郁闷啊。</description>
     </item>
     
     <item>
       <title>一个比较郁闷的问题</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/03/14/cb-3113/</link>
+      <link>https://huobazi.github.com/blog/2004/03/14/cb-3113/</link>
       <pubDate>Sun, 14 Mar 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/03/14/cb-3113/</guid>
-      <description>我在我的主页 http://www.AspxBoy.com 内
+      <guid>https://huobazi.github.com/blog/2004/03/14/cb-3113/</guid>
+      <description>我在我的主页 http://www.github.com 内
 文章显示页面是在添加文章的时候生成的静态htm页。
 在首页和其他栏目显示文章列表时链接为
-http://www.aspxboy.com/ShowArticle.Aspx?ID=214
+http://www.github.com/ShowArticle.Aspx?ID=214
 这样的链接
 在ShowArticle.Aspx内为文章的被阅读次数加1，跳转到（Response.Redirect）相应的Html文件
 如
-http://www.aspxboy.com/Files/71/66/20039280037.htm
+http://www.github.com/Files/71/66/20039280037.htm
 最近发现这样的设计导致搜索引擎抓取不到页面好友龙龙放出他的龙族蜘蛛在我的站内老是抓取不到任何可用链接,只能抓到首页就进行不下去了......
 不只该如何解决，郁闷啊。</description>
     </item>
     
     <item>
       <title>落伍者三周岁了</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/03/14/cb-3122/</link>
+      <link>https://huobazi.github.com/blog/2004/03/14/cb-3122/</link>
       <pubDate>Sun, 14 Mar 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/03/14/cb-3122/</guid>
+      <guid>https://huobazi.github.com/blog/2004/03/14/cb-3122/</guid>
       <description>我常泡的一个论坛&amp;lt;&amp;lt;落伍者&amp;gt;&amp;gt;三周岁了，
 小贺一下
 公布我的AspxBoy.Com.Article的源代码
@@ -3257,10 +3257,10 @@ http://www.aspxboy.com/Files/71/66/20039280037.htm
     
     <item>
       <title>MessageBox Control in ASP.NET</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/03/04/cb-2135/</link>
+      <link>https://huobazi.github.com/blog/2004/03/04/cb-2135/</link>
       <pubDate>Thu, 04 Mar 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/03/04/cb-2135/</guid>
+      <guid>https://huobazi.github.com/blog/2004/03/04/cb-2135/</guid>
       <description>在ASP.NET里实现MessageBox
 http://www.microsoft.com/india/msdn/articles/119.aspx?
  ShowMessageAtStartup  This control is used to show message at startup of the page. For example, if you want to inform the user with some information using message box after the post back. Then you can use this control. This control has following two properties,     MessageText: This property is used to set the Message which is showed in the message box.   Enabled: This property is used for enabling or disabling this control depending upon the</description>
@@ -3268,10 +3268,10 @@ http://www.microsoft.com/india/msdn/articles/119.aspx?
     
     <item>
       <title>MessageBox Control in ASP.NET</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/03/04/cb-2135/</link>
+      <link>https://huobazi.github.com/blog/2004/03/04/cb-2135/</link>
       <pubDate>Thu, 04 Mar 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/03/04/cb-2135/</guid>
+      <guid>https://huobazi.github.com/blog/2004/03/04/cb-2135/</guid>
       <description>在ASP.NET里实现MessageBox
 http://www.microsoft.com/india/msdn/articles/119.aspx?
  ShowMessageAtStartup  This control is used to show message at startup of the page. For example, if you want to inform the user with some information using message box after the post back. Then you can use this control. This control has following two properties,     MessageText: This property is used to set the Message which is showed in the message box.   Enabled: This property is used for enabling or disabling this control depending upon the</description>
@@ -3279,14 +3279,14 @@ http://www.microsoft.com/india/msdn/articles/119.aspx?
     
     <item>
       <title>用Asp.Net抓取web页面</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/02/23/cb-1521/</link>
+      <link>https://huobazi.github.com/blog/2004/02/23/cb-1521/</link>
       <pubDate>Mon, 23 Feb 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/02/23/cb-1521/</guid>
+      <guid>https://huobazi.github.com/blog/2004/02/23/cb-1521/</guid>
       <description>演示:
-http://www.aspxboy.com/demo/286.aspx
+http://www.github.com/demo/286.aspx
 代码高亮显示(HightLight in Source Code Viewer)
-http://www.aspxboy.com/code/default.aspx/S7s2zPJbeI9PJA/OK
+http://www.github.com/code/default.aspx/S7s2zPJbeI9PJA/OK
 HpAVwVaUEhf02EgEOgeB3Yd5Z7fLL3ZNgdv7XIqertUOYm9kbQ62
 LshbJBwvWPBBYa4EyVMhvMhyEDPH8chU5ornn8=.Aspx
 &amp;lt;html&amp;gt;
@@ -3313,14 +3313,14 @@ while (bytes &amp;gt; 0)
     
     <item>
       <title>用Asp.Net抓取web页面</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/02/23/cb-1521/</link>
+      <link>https://huobazi.github.com/blog/2004/02/23/cb-1521/</link>
       <pubDate>Mon, 23 Feb 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/02/23/cb-1521/</guid>
+      <guid>https://huobazi.github.com/blog/2004/02/23/cb-1521/</guid>
       <description>演示:
-http://www.aspxboy.com/demo/286.aspx
+http://www.github.com/demo/286.aspx
 代码高亮显示(HightLight in Source Code Viewer)
-http://www.aspxboy.com/code/default.aspx/S7s2zPJbeI9PJA/OK
+http://www.github.com/code/default.aspx/S7s2zPJbeI9PJA/OK
 HpAVwVaUEhf02EgEOgeB3Yd5Z7fLL3ZNgdv7XIqertUOYm9kbQ62
 LshbJBwvWPBBYa4EyVMhvMhyEDPH8chU5ornn8=.Aspx
 &amp;lt;html&amp;gt;
@@ -3347,10 +3347,10 @@ while (bytes &amp;gt; 0)
     
     <item>
       <title>一个不错的代码编辑工具</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/02/12/cb-1192/</link>
+      <link>https://huobazi.github.com/blog/2004/02/12/cb-1192/</link>
       <pubDate>Thu, 12 Feb 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/02/12/cb-1192/</guid>
+      <guid>https://huobazi.github.com/blog/2004/02/12/cb-1192/</guid>
       <description>CrimSon Editer
 http://www.crimsoneditor.com/
 我用它因为它体积小 启动迅速 最大的优点是免费哦
@@ -3363,10 +3363,10 @@ http://www.crimsoneditor.com/english/editors.html</description>
     
     <item>
       <title>分页存储过程</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/02/09/pagedsp/</link>
+      <link>https://huobazi.github.com/blog/2004/02/09/pagedsp/</link>
       <pubDate>Mon, 09 Feb 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/02/09/pagedsp/</guid>
+      <guid>https://huobazi.github.com/blog/2004/02/09/pagedsp/</guid>
       <description>搞了一中午终于可以用了 但不知道效率如何.郁闷的是我要用php去调用它
 /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 CopyRight： ******
@@ -3399,10 +3399,10 @@ insert into @indextable(nid)</description>
     
     <item>
       <title>分页存储过程</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/02/09/pagedsp/</link>
+      <link>https://huobazi.github.com/blog/2004/02/09/pagedsp/</link>
       <pubDate>Mon, 09 Feb 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/02/09/pagedsp/</guid>
+      <guid>https://huobazi.github.com/blog/2004/02/09/pagedsp/</guid>
       <description>搞了一中午终于可以用了 但不知道效率如何.郁闷的是我要用php去调用它
 /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 CopyRight： ******
@@ -3435,19 +3435,19 @@ insert into @indextable(nid)</description>
     
     <item>
       <title>顺便发现一bug??</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/02/09/cb-1054/</link>
+      <link>https://huobazi.github.com/blog/2004/02/09/cb-1054/</link>
       <pubDate>Mon, 09 Feb 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/02/09/cb-1054/</guid>
+      <guid>https://huobazi.github.com/blog/2004/02/09/cb-1054/</guid>
       <description>在这个http://www.cnblogs.com/huobazi/archive/2004/02/09/1053.aspx 里有一句a.col_img_group=@gid被DotText当成mailto 自动加上了mailto连接</description>
     </item>
     
     <item>
       <title>使网页中的元素可编辑</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/02/04/cb-830/</link>
+      <link>https://huobazi.github.com/blog/2004/02/04/cb-830/</link>
       <pubDate>Wed, 04 Feb 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/02/04/cb-830/</guid>
+      <guid>https://huobazi.github.com/blog/2004/02/04/cb-830/</guid>
       <description>在net_lover的文章里找到了答案.
 http://www.csdn.net/Develop/Read_Article.asp?Id=4405
 代码如下：
@@ -3467,10 +3467,10 @@ oDiv.contentEditable = true;
     
     <item>
       <title>使网页中的元素可编辑</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/02/04/cb-830/</link>
+      <link>https://huobazi.github.com/blog/2004/02/04/cb-830/</link>
       <pubDate>Wed, 04 Feb 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/02/04/cb-830/</guid>
+      <guid>https://huobazi.github.com/blog/2004/02/04/cb-830/</guid>
       <description>在net_lover的文章里找到了答案.
 http://www.csdn.net/Develop/Read_Article.asp?Id=4405
 代码如下：
@@ -3490,12 +3490,12 @@ oDiv.contentEditable = true;
     
     <item>
       <title>域名Whois信息查询(ASP.NET&#43;C#)</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/02/04/whoisinaspdotnet/</link>
+      <link>https://huobazi.github.com/blog/2004/02/04/whoisinaspdotnet/</link>
       <pubDate>Wed, 04 Feb 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/02/04/whoisinaspdotnet/</guid>
+      <guid>https://huobazi.github.com/blog/2004/02/04/whoisinaspdotnet/</guid>
       <description>去年写的了,是从点缀的博客学来的
-看演示请点这里:http://www.aspxboy.com/whois.aspx
+看演示请点这里:http://www.github.com/whois.aspx
 代码如下:
 &amp;lt;% @Page Language=&#34;C#&#34; %&amp;gt;
 &amp;lt;% @Import Namespace=&#34;System.Net.Sockets&#34; %&amp;gt;
@@ -3526,12 +3526,12 @@ www.&amp;lt;asp:TextBox id=&#34;txtDomain&#34; width=&#34;100&#34; value=&#34;AS
     
     <item>
       <title>域名Whois信息查询(ASP.NET&#43;C#)</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/02/04/whoisinaspdotnet/</link>
+      <link>https://huobazi.github.com/blog/2004/02/04/whoisinaspdotnet/</link>
       <pubDate>Wed, 04 Feb 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/02/04/whoisinaspdotnet/</guid>
+      <guid>https://huobazi.github.com/blog/2004/02/04/whoisinaspdotnet/</guid>
       <description>去年写的了,是从点缀的博客学来的
-看演示请点这里:http://www.aspxboy.com/whois.aspx
+看演示请点这里:http://www.github.com/whois.aspx
 代码如下:
 &amp;lt;% @Page Language=&#34;C#&#34; %&amp;gt;
 &amp;lt;% @Import Namespace=&#34;System.Net.Sockets&#34; %&amp;gt;
@@ -3562,30 +3562,30 @@ www.&amp;lt;asp:TextBox id=&#34;txtDomain&#34; width=&#34;100&#34; value=&#34;AS
     
     <item>
       <title>又开始吵架了</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/02/03/cb-734/</link>
+      <link>https://huobazi.github.com/blog/2004/02/03/cb-734/</link>
       <pubDate>Tue, 03 Feb 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/02/03/cb-734/</guid>
+      <guid>https://huobazi.github.com/blog/2004/02/03/cb-734/</guid>
       <description>http://expert.csdn.net/Expert/topic/2697/2697501.xml?temp=.2264826
 不过没有这个帖子吵的凶哦</description>
     </item>
     
     <item>
       <title>又开始吵架了</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/02/03/cb-734/</link>
+      <link>https://huobazi.github.com/blog/2004/02/03/cb-734/</link>
       <pubDate>Tue, 03 Feb 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/02/03/cb-734/</guid>
+      <guid>https://huobazi.github.com/blog/2004/02/03/cb-734/</guid>
       <description>http://expert.csdn.net/Expert/topic/2697/2697501.xml?temp=.2264826
 不过没有这个帖子吵的凶哦</description>
     </item>
     
     <item>
       <title>MSN Toolbar 谁用了</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/01/29/cb-506/</link>
+      <link>https://huobazi.github.com/blog/2004/01/29/cb-506/</link>
       <pubDate>Thu, 29 Jan 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/01/29/cb-506/</guid>
+      <guid>https://huobazi.github.com/blog/2004/01/29/cb-506/</guid>
       <description>MSN Toolbar Beta</description>
     </item>
     

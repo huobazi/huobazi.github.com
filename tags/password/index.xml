@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Password on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/password/</link>
+    <link>https://huobazi.github.com/tags/password/</link>
     <description>Recent content in Password on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 22 Jun 2011 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/password/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/password/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>在Console下输入密码，以星号代替。</title>
-      <link>https://huobazi.aspxboy.com/blog/2011/06/22/password-masking-in-csharp-console-application/</link>
+      <link>https://huobazi.github.com/blog/2011/06/22/password-masking-in-csharp-console-application/</link>
       <pubDate>Wed, 22 Jun 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2011/06/22/password-masking-in-csharp-console-application/</guid>
+      <guid>https://huobazi.github.com/blog/2011/06/22/password-masking-in-csharp-console-application/</guid>
       <description>&lt;p&gt;如何在Console下输入密码，像*unix系统下那样不显示，或者显示星号，如下代码经过测试：&lt;/p&gt;</description>
     </item>
     

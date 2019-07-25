@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>数据转换 on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/%E6%95%B0%E6%8D%AE%E8%BD%AC%E6%8D%A2/</link>
+    <link>https://huobazi.github.com/tags/%E6%95%B0%E6%8D%AE%E8%BD%AC%E6%8D%A2/</link>
     <description>Recent content in 数据转换 on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 06 Mar 2012 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/%E6%95%B0%E6%8D%AE%E8%BD%AC%E6%8D%A2/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/%E6%95%B0%E6%8D%AE%E8%BD%AC%E6%8D%A2/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>从typecho转换到Octopress了</title>
-      <link>https://huobazi.aspxboy.com/blog/2012/03/06/convert-typecho-to-octopress/</link>
+      <link>https://huobazi.github.com/blog/2012/03/06/convert-typecho-to-octopress/</link>
       <pubDate>Tue, 06 Mar 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2012/03/06/convert-typecho-to-octopress/</guid>
+      <guid>https://huobazi.github.com/blog/2012/03/06/convert-typecho-to-octopress/</guid>
       <description>人生在于折腾,所以将博客转换到Octopress了
 我的博客经历了如下几次变动：
 2003年1月,自己装了个SnowForum，用来写些技术记录之类的东西

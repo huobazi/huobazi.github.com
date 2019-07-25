@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>奇技淫巧 on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/</link>
+    <link>https://huobazi.github.com/tags/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/</link>
     <description>Recent content in 奇技淫巧 on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 04 Feb 2012 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Ubuntu下设置 Sublime Text 2 显示中文 &amp;&amp; 输入中文</title>
-      <link>https://huobazi.aspxboy.com/blog/2012/02/04/ubuntu-sublime-text-chinese/</link>
+      <link>https://huobazi.github.com/blog/2012/02/04/ubuntu-sublime-text-chinese/</link>
       <pubDate>Sat, 04 Feb 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2012/02/04/ubuntu-sublime-text-chinese/</guid>
+      <guid>https://huobazi.github.com/blog/2012/02/04/ubuntu-sublime-text-chinese/</guid>
       <description>&lt;p&gt;Sublime text 2在mac os 下用的很舒服，今天尝试在ubuntu下使用一下，发现汉字显示不了，&lt;/p&gt;
 &lt;p&gt;后来找到方法：&lt;/p&gt;
 &lt;p&gt;菜单栏 -&amp;gt; Preferences -&amp;gt; File Settings - User，在配置文件中增加：&lt;/p&gt;</description>
@@ -24,20 +24,20 @@
     
     <item>
       <title>AutoGenerateColumns=&#39;true&#39;的GridView如何支持htmlencode/htmldecode</title>
-      <link>https://huobazi.aspxboy.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/</link>
+      <link>https://huobazi.github.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/</link>
       <pubDate>Wed, 09 Nov 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/</guid>
+      <guid>https://huobazi.github.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/</guid>
       <description>&lt;p&gt;&lt;p&gt;我们知道BoundField.HtmlEncode 属性可以设置一个单元格是否能够htmlencode，我今天碰到的问题是：自动生成列的GridView，表头可能是包含html的比如&amp;lt;font color=red&amp;gt;邮件&amp;lt;/font&amp;gt;，默认被htmlencode了，而我不希望这样做，所以有了如下的代码:&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>使用window.location跳转，在IE中UrlReffer不被记录</title>
-      <link>https://huobazi.aspxboy.com/blog/2010/01/21/window-location-href-ie-request-reffer/</link>
+      <link>https://huobazi.github.com/blog/2010/01/21/window-location-href-ie-request-reffer/</link>
       <pubDate>Thu, 21 Jan 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2010/01/21/window-location-href-ie-request-reffer/</guid>
+      <guid>https://huobazi.github.com/blog/2010/01/21/window-location-href-ie-request-reffer/</guid>
       <description>&lt;p&gt;使用window.location跳转，在FF中，没问题，下一页面可以取得UrlReffer，但在IE中UrlReffer不被记录&lt;/p&gt;
 &lt;p&gt;真变态，&lt;/p&gt;
 &lt;p&gt;让我头痛了半天，弄了个丑陋的办法做了如下实现：&lt;/p&gt;</description>
@@ -45,10 +45,10 @@
     
     <item>
       <title>漂亮的VIM配色方案</title>
-      <link>https://huobazi.aspxboy.com/blog/2010/01/11/vim-color-scheme/</link>
+      <link>https://huobazi.github.com/blog/2010/01/11/vim-color-scheme/</link>
       <pubDate>Mon, 11 Jan 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2010/01/11/vim-color-scheme/</guid>
+      <guid>https://huobazi.github.com/blog/2010/01/11/vim-color-scheme/</guid>
       <description>这里
 http://code.google.com/p/vimcolorschemetest/
 有一堆一堆的配色方案
@@ -58,10 +58,10 @@ Browse By File Type Featuring 428 schemes:
     
     <item>
       <title>把你的netbeans变成英文版</title>
-      <link>https://huobazi.aspxboy.com/blog/2010/01/07/349/</link>
+      <link>https://huobazi.github.com/blog/2010/01/07/349/</link>
       <pubDate>Thu, 07 Jan 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2010/01/07/349/</guid>
+      <guid>https://huobazi.github.com/blog/2010/01/07/349/</guid>
       <description>呵呵其实很简单，装完后再你使用的快捷方式内增加
 --locale en:us就可以了，比如我的快捷方式里的设置为：
 &#34;D:\Program Files\NetBeans 6.8\bin\netbeans.exe&#34; --locale en:us
@@ -71,10 +71,10 @@ ok 英文了.
     
     <item>
       <title>Mysql adapter on Rails 2.3.3</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/08/29/mysql-adapter-on-rails-2-3-3/</link>
+      <link>https://huobazi.github.com/blog/2009/08/29/mysql-adapter-on-rails-2-3-3/</link>
       <pubDate>Sat, 29 Aug 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/08/29/mysql-adapter-on-rails-2-3-3/</guid>
+      <guid>https://huobazi.github.com/blog/2009/08/29/mysql-adapter-on-rails-2-3-3/</guid>
       <description>安装好Ruby on Rails 2.3.3后，运行简单的页面提示如下错误“The bundled mysql.rb driver has been removed from Rails 2.2. Please install the mysql gem and try again: gem install mysql”
  gem 了n次也不成，搞了一早上，才google到一个比较山寨的方法解决
 1. download older MySQL client library, for example one from InstantRails: http://instantrails.rubyforge.org/svn/trunk/InstantRails-win/InstantRails/mysql/bin/libmySQL.dll 2. copy the downloaded file to C:\Ruby\bin (or wherever you installed Ruby) 3. restart MySQL server 另参考：http://www.ruby-forum.com/topic/160358和http://rdc.taobao.com/blog/qa/?p=523</description>
@@ -82,10 +82,10 @@ ok 英文了.
     
     <item>
       <title>如何判断一个网站是不是php做的？</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/07/18/php-guid/</link>
+      <link>https://huobazi.github.com/blog/2009/07/18/php-guid/</link>
       <pubDate>Sat, 18 Jul 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/07/18/php-guid/</guid>
+      <guid>https://huobazi.github.com/blog/2009/07/18/php-guid/</guid>
       <description>可以当作简易判断站点是否用PHP架设。
 PHP_LOGO_GUID
 http://www.php.net/?=PHPE9568F34-D428-11d2-A769-00AA001ACF42
@@ -103,20 +103,20 @@ http://www.php.net/ 这个网址只是范例，只要是任一PHP的站点即可
     
     <item>
       <title>博客园到Wordpress搬家成功！</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/06/21/my-blog-moved-to-wp/</link>
+      <link>https://huobazi.github.com/blog/2009/06/21/my-blog-moved-to-wp/</link>
       <pubDate>Sun, 21 Jun 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/06/21/my-blog-moved-to-wp/</guid>
+      <guid>https://huobazi.github.com/blog/2009/06/21/my-blog-moved-to-wp/</guid>
       <description>终于把在博客园的博客的数据导入到Wordpress内了，包括随笔/文章，图片,标签，评论等，是写了两个C# console程序做到的，程序我传到博客园了，如果有需要的朋友可以试试。但请注意，要自己在博客园后台备份RSS文件放到Reader的Data目录内，设置为编译选项为永远复制，运行后会生成一个Entry.xml并且把博客内的图片和分类、Tag、评论等抓下来，然后将此xml文件拷贝到Writer内，在代码内修改一下你的Wordress的数据库连接，然后跑一下Writer，就可以完成数据导入到Wordpress了，时间匆忙，代码写的很乱，有些地方是针对本人需求处理的，如果你想要直接运行此程序完成你的博客园博客到Wordpress的转换，那是不可能滴！你一定要有简单的C#调试基础哦。
 http://files.cnblogs.com/huobazi/MyBlogTools.rar</description>
     </item>
     
     <item>
       <title>小技巧，如何把上传文件的浏览按钮换成其他样式 或者图片</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/09/14/cb-43051/</link>
+      <link>https://huobazi.github.com/blog/2004/09/14/cb-43051/</link>
       <pubDate>Tue, 14 Sep 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/09/14/cb-43051/</guid>
+      <guid>https://huobazi.github.com/blog/2004/09/14/cb-43051/</guid>
       <description>本随笔缩写内容有误，对不起，谢谢！
 csdn上有朋友问道这个问题
 上google跑了跑，从这里和csdn的980337(面包喳喳) 朋友的回复得到提示，做了做测试。
@@ -133,25 +133,25 @@ document.test_form.file.value =document.all.test_form.browse.value; }&amp;lt;/
     
     <item>
       <title>小雕虫,不被Google工具条拦截的弹出窗口</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/07/10/cb-7697-1/</link>
+      <link>https://huobazi.github.com/blog/2004/07/10/cb-7697-1/</link>
       <pubDate>Sat, 10 Jul 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/07/10/cb-7697-1/</guid>
+      <guid>https://huobazi.github.com/blog/2004/07/10/cb-7697-1/</guid>
       <description>如果做项目必须用到弹出窗口可以考虑以下
 不保证任何时候能用
 更不保证在那个myie新版本下能用
 如果myie等浏览器屏蔽掉了地址内的某些字比如我演示中有“pop“字样,那也出不来
 demo+code:
-http://www.aspxboy.com/popWindow/
+http://www.github.com/popWindow/
 测试通过日期： 2004/07/10/ ！！！</description>
     </item>
     
     <item>
       <title>弹出窗口刷新它的父页面后。出现不重新发送信息，则无法刷新网页</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/04/06/refreshorreloadparentwindowwithoutconfirm/</link>
+      <link>https://huobazi.github.com/blog/2004/04/06/refreshorreloadparentwindowwithoutconfirm/</link>
       <pubDate>Tue, 06 Apr 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/04/06/refreshorreloadparentwindowwithoutconfirm/</guid>
+      <guid>https://huobazi.github.com/blog/2004/04/06/refreshorreloadparentwindowwithoutconfirm/</guid>
       <description>做的东西弹出一个窗口处理某些动作后刷新父窗口
 用
 window.opener.location.reload();

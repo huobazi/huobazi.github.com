@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Excel on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/excel/</link>
+    <link>https://huobazi.github.com/tags/excel/</link>
     <description>Recent content in Excel on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 27 Apr 2004 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/excel/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/excel/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>打开一个Excel模板文件填充数据另存为一个文件</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/04/27/filldatatoexceltemplate/</link>
+      <link>https://huobazi.github.com/blog/2004/04/27/filldatatoexceltemplate/</link>
       <pubDate>Tue, 27 Apr 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/04/27/filldatatoexceltemplate/</guid>
+      <guid>https://huobazi.github.com/blog/2004/04/27/filldatatoexceltemplate/</guid>
       <description>最近做的东西要求打开一个Excel文件模板后填充数据
 开始用OleDb连接该Excel文件更新老是出错误 “需要一个可更新的.....“
 http://expert.csdn.net/Expert/topic/2992/2992809.xml?temp=.4825403

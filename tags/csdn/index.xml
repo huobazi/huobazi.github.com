@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Csdn on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/csdn/</link>
+    <link>https://huobazi.github.com/tags/csdn/</link>
     <description>Recent content in Csdn on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 30 Apr 2006 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/csdn/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/csdn/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>CSDN上的打油诗，大家分享</title>
-      <link>https://huobazi.aspxboy.com/blog/2006/04/30/cb-389174/</link>
+      <link>https://huobazi.github.com/blog/2006/04/30/cb-389174/</link>
       <pubDate>Sun, 30 Apr 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/04/30/cb-389174/</guid>
+      <guid>https://huobazi.github.com/blog/2006/04/30/cb-389174/</guid>
       <description>在http://terrylee.cnblogs.com/archive/2006/04/28/387669.html
 看到 一部分 ，把我当时从 帖子里拔下来的 再贴一下，分享 ～～～～
 CSDN上的打油诗，大家分享 
@@ -55,24 +55,24 @@ CSDN上的打油诗，大家分享
 若将贫贱比贫者，一在平地一在天；若将贫贱比车马，他得驱驰我得闲。
 别人笑我忒疯癫，我笑他人看不穿；不见五陵豪杰墓，无花无酒锄作田。）
 http://expert.csdn.net/Expert/xsl/Reply_Xml.asp?Topicid=2010462
-http://www.aspxboy.com/private/showthread.asp?threadid=134</description>
+http://www.github.com/private/showthread.asp?threadid=134</description>
     </item>
     
     <item>
       <title>可怜的ColdFusion 国内没认学吗？还是都不在csdn讨论？</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/09/22/cb-45611/</link>
+      <link>https://huobazi.github.com/blog/2004/09/22/cb-45611/</link>
       <pubDate>Wed, 22 Sep 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/09/22/cb-45611/</guid>
+      <guid>https://huobazi.github.com/blog/2004/09/22/cb-45611/</guid>
       <description> ColdFusion 2004-08专家榜  名次 社区昵称 专家分 个人描述    1 suzhenning 66    2 Qthinker 22 在失意的时候不要灰心,想一想,为了老婆,为了父母,为了将来的孩子,为了社会,要赶快爬起来  3 yibotiemen 5 我们一起来学习，我们一起来进步   4 s1ihome 5 勤能补拙  5 BlueDestiny 5 天资之于才华，一如本能之于理智。   6 y7967 5 走猫的路,让狗说去吧~   </description>
     </item>
     
     <item>
       <title>csdn开通blog了</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/06/22/cb-17871/</link>
+      <link>https://huobazi.github.com/blog/2004/06/22/cb-17871/</link>
       <pubDate>Tue, 22 Jun 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/06/22/cb-17871/</guid>
+      <guid>https://huobazi.github.com/blog/2004/06/22/cb-17871/</guid>
       <description>csdn开通blog了
 文档中心发过豆腐干 的都有吧
 http://blog.csdn.net/xiahouwen</description>

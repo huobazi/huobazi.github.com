@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Redis on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/redis/</link>
+    <link>https://huobazi.github.com/tags/redis/</link>
     <description>Recent content in Redis on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 06 Aug 2011 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/redis/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/redis/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>在 Ubuntu 下安装 Redis 并使用 init 脚本启动  &amp;&amp; 添加 删除ubuntu自启动服务</title>
-      <link>https://huobazi.aspxboy.com/blog/2011/08/06/ubuntu-redis-init-service-autorun/</link>
+      <link>https://huobazi.github.com/blog/2011/08/06/ubuntu-redis-init-service-autorun/</link>
       <pubDate>Sat, 06 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2011/08/06/ubuntu-redis-init-service-autorun/</guid>
+      <guid>https://huobazi.github.com/blog/2011/08/06/ubuntu-redis-init-service-autorun/</guid>
       <description>1. 下载安装：  cd /tmp wget http://redis.googlecode.com/files/redis-*.*.*.tar.gz tar -zxf redis-*.*.*.tar.gz cd redis-*.*.* make sudo make install  2. 配置init脚本：  wget https://github.com/ijonas/dotfiles/raw/master/etc/init.d/redis-server wget https://github.com/ijonas/dotfiles/raw/master/etc/redis.conf sudo mv redis-server /etc/init.d/redis-server sudo chmod +x /etc/init.d/redis-server sudo mv redis.conf /etc/redis.conf  3. 初始化用户和日志路径  sudo useradd redis sudo mkdir -p /var/lib/redis sudo mkdir -p /var/log/redis sudo chown redis.redis /var/lib/redis sudo chown redis.redis /var/log/redis  4. 启动Redis：  sudo /etc/init.d/redis-server start   添加一个服务 #sudo update-rc.</description>
     </item>
     

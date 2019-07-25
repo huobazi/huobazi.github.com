@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Nginx on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/nginx/</link>
+    <link>https://huobazi.github.com/tags/nginx/</link>
     <description>Recent content in Nginx on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 01 Jan 2011 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>在ubuntu上配置 nginx和php&#43;fastcgi</title>
-      <link>https://huobazi.aspxboy.com/blog/2011/01/01/ubuntu-nginx-php-fastcgi/</link>
+      <link>https://huobazi.github.com/blog/2011/01/01/ubuntu-nginx-php-fastcgi/</link>
       <pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2011/01/01/ubuntu-nginx-php-fastcgi/</guid>
+      <guid>https://huobazi.github.com/blog/2011/01/01/ubuntu-nginx-php-fastcgi/</guid>
       <description>&lt;p&gt;(1)安装php5&lt;br /&gt;apt-get install php5 php-pear php5-cli php5-common php5-xcache php5-cgi php5-mysql php5-curl  php5-gd  php5-imagick  php5-xmlrpc  php5-dev php5-memcache&lt;br /&gt;(2)安装nginx&lt;br /&gt;apt-get install nginx&lt;br /&gt;(3)安装spawn-fcgi&lt;br /&gt; apt-get install spawn-fcgi&lt;br /&gt;(4)设置，也是最头疼滴地方哦&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>在centos上装rubyee,passenger和memcached ,搭建rails环境</title>
-      <link>https://huobazi.aspxboy.com/blog/2010/07/24/ruby-on-rails-nginx-passenger-memcached-on-centos/</link>
+      <link>https://huobazi.github.com/blog/2010/07/24/ruby-on-rails-nginx-passenger-memcached-on-centos/</link>
       <pubDate>Sat, 24 Jul 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2010/07/24/ruby-on-rails-nginx-passenger-memcached-on-centos/</guid>
+      <guid>https://huobazi.github.com/blog/2010/07/24/ruby-on-rails-nginx-passenger-memcached-on-centos/</guid>
       <description>&lt;p&gt;流水笔记一则.&lt;/p&gt;
 &lt;p&gt;我之前已在服务器配置了nginx，php，mysql等，现在先安装ruby企业版&lt;/p&gt;
 &lt;div class=&#34;source&#34; style=&#39;font-family: &#34;[object HTMLOptionElement]&#34;,&#34;Consolas&#34;,&#34;Lucida Console&#34;,&#34;Courier New&#34;; color: #c0c0c0; background-color: #000000;&#39;&gt;
@@ -36,10 +36,10 @@
     
     <item>
       <title>nginx下typecho的rewrite</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/07/09/nginx-typecho-rewrite/</link>
+      <link>https://huobazi.github.com/blog/2009/07/09/nginx-typecho-rewrite/</link>
       <pubDate>Thu, 09 Jul 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/07/09/nginx-typecho-rewrite/</guid>
+      <guid>https://huobazi.github.com/blog/2009/07/09/nginx-typecho-rewrite/</guid>
       <description>&lt;p&gt;导数据到typecho的时候是在localhost的windows xp系统上用的apache,部署时用的是nginx&lt;br /&gt;先是发现无法登陆按照&lt;a href=&#34;http://forum.typecho.org/viewtopic.php?f=4&amp;amp;t=238&amp;amp;p=852&amp;amp;hilit=nginx#p852&#34; target=&#34;_blank&#34;&gt;这篇帖子&lt;/a&gt;内的方法配置了vhost.conf，发现可以登陆了，接着又出现了&lt;br /&gt;无法编辑post的问题，具体症状见&lt;a href=&#34;http://forum.typecho.org/viewtopic.php?f=4&amp;amp;t=270&#34; target=&#34;_blank&#34;&gt;这篇帖子&lt;/a&gt;,甚是郁闷啊，google+baidu 找到一片描写wp的&lt;br /&gt;rewrite的&lt;a href=&#34;http://hi.baidu.com/3322/blog/item/95d254e7594a012bb93820bb.html&#34; target=&#34;_blank&#34;&gt;帖子&lt;/a&gt;,因typecho与wp笔记像，抱着试试看的想法,在测试站点试验了一下，嘿嘿&lt;br /&gt;能用，转寄在此，备忘&lt;/p&gt;</description>
     </item>
     

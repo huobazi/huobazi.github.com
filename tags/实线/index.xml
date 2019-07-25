@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>实线 on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/%E5%AE%9E%E7%BA%BF/</link>
+    <link>https://huobazi.github.com/tags/%E5%AE%9E%E7%BA%BF/</link>
     <description>Recent content in 实线 on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 10 Oct 2009 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/%E5%AE%9E%E7%BA%BF/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/%E5%AE%9E%E7%BA%BF/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>【How to】解决Visio虚线复制到word中变为实线</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/10/10/visio-dashed/</link>
+      <link>https://huobazi.github.com/blog/2009/10/10/visio-dashed/</link>
       <pubDate>Sat, 10 Oct 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/10/10/visio-dashed/</guid>
+      <guid>https://huobazi.github.com/blog/2009/10/10/visio-dashed/</guid>
       <description>添加 MetafileDashLineAsSolid 到以下注册表位置，类型DWORD。
  • Visio 2007
 HKEY_CURRENT_USER\Software\Microsoft\Office\12.0\Visio\Application

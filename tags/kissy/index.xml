@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kissy on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/kissy/</link>
+    <link>https://huobazi.github.com/tags/kissy/</link>
     <description>Recent content in Kissy on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 06 Aug 2010 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/kissy/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/kissy/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>淘宝首页 say goodbye to YUI 了还是forever的</title>
-      <link>https://huobazi.aspxboy.com/blog/2010/08/06/taobao-say-goodbye-to-yui/</link>
+      <link>https://huobazi.github.com/blog/2010/08/06/taobao-say-goodbye-to-yui/</link>
       <pubDate>Fri, 06 Aug 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2010/08/06/taobao-say-goodbye-to-yui/</guid>
+      <guid>https://huobazi.github.com/blog/2010/08/06/taobao-say-goodbye-to-yui/</guid>
       <description>好久没有时间读google reader了攒了上千条，今天上去，玉伯的一则快讯映入眼帘
 Thanks YUI, and says goodbye to YUI forever!
 http://lifesinger.org/blog/2010/08/kissy-briefings-1/

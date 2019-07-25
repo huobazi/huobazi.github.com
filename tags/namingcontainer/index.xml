@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Namingcontainer on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/namingcontainer/</link>
+    <link>https://huobazi.github.com/tags/namingcontainer/</link>
     <description>Recent content in Namingcontainer on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 05 Aug 2007 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/namingcontainer/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/namingcontainer/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>自定义控件实现广告内容后期加载，以及NamingContainer层次的应用</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/08/05/advertisementlazyloadingcontrol/</link>
+      <link>https://huobazi.github.com/blog/2007/08/05/advertisementlazyloadingcontrol/</link>
       <pubDate>Sun, 05 Aug 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/08/05/advertisementlazyloadingcontrol/</guid>
+      <guid>https://huobazi.github.com/blog/2007/08/05/advertisementlazyloadingcontrol/</guid>
       <description>&lt;p&gt;自定义控件：广告内容后期加载。以及NamingContainer层次的应用&lt;br /&gt;网站上的广告内容可能会因加载过慢而导致整个网页加载过慢&lt;br /&gt;我们可以考虑将广告内全部放在网页最底部，等整个页面加载完毕後&lt;br /&gt;再采用javascript使其显示，考虑给控件一个TargetContainerID标识&lt;br /&gt;控件广告内容将要被显示的容器ID，然后从控件自己所处的 开始向上查找该ID&lt;br /&gt;所指定的控件，(我们只向上找而没有向下找，并且没有处理某层次的&lt;br /&gt;子NamingContainer,所以不一定能够找到，这里没有考虑从Page对象向下递归查找&lt;br /&gt;主要考虑为了提高性能),如果没有找到，则考虑给用户一个事件让用户自己处理TargetContainer&lt;/p&gt;
 &lt;p&gt;下面的自定义控件对此实现了封装:&lt;/p&gt;</description>
     </item>

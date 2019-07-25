@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Htmlencode on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/htmlencode/</link>
+    <link>https://huobazi.github.com/tags/htmlencode/</link>
     <description>Recent content in Htmlencode on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 09 Nov 2011 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/htmlencode/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/htmlencode/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>AutoGenerateColumns=&#39;true&#39;的GridView如何支持htmlencode/htmldecode</title>
-      <link>https://huobazi.aspxboy.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/</link>
+      <link>https://huobazi.github.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/</link>
       <pubDate>Wed, 09 Nov 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/</guid>
+      <guid>https://huobazi.github.com/blog/2011/11/09/htmldecode-on-autogeneratecolumns-gridview/</guid>
       <description>&lt;p&gt;&lt;p&gt;我们知道BoundField.HtmlEncode 属性可以设置一个单元格是否能够htmlencode，我今天碰到的问题是：自动生成列的GridView，表头可能是包含html的比如&amp;lt;font color=red&amp;gt;邮件&amp;lt;/font&amp;gt;，默认被htmlencode了，而我不希望这样做，所以有了如下的代码:&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;</description>
     </item>

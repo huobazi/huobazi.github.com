@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vim on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/vim/</link>
+    <link>https://huobazi.github.com/tags/vim/</link>
     <description>Recent content in Vim on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 26 Nov 2012 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/vim/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>OSX 上默认 VIM 不支持 &#43; 寄存器</title>
-      <link>https://huobazi.aspxboy.com/blog/2012/11/26/osx-shang-mo-ren-vim-bu-zhi-chi-plus-ji-cun-qi/</link>
+      <link>https://huobazi.github.com/blog/2012/11/26/osx-shang-mo-ren-vim-bu-zhi-chi-plus-ji-cun-qi/</link>
       <pubDate>Mon, 26 Nov 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2012/11/26/osx-shang-mo-ren-vim-bu-zhi-chi-plus-ji-cun-qi/</guid>
+      <guid>https://huobazi.github.com/blog/2012/11/26/osx-shang-mo-ren-vim-bu-zhi-chi-plus-ji-cun-qi/</guid>
       <description>&lt;p&gt;OSX 上默认 VIM 不支持 + 寄存器，所以从系统剪贴板相互复制东西就麻烦了
 所以,我重新装了一下vim&lt;/p&gt;
 
@@ -52,10 +52,10 @@ SO上找找，发现&lt;/p&gt;
     
     <item>
       <title>tmux丢失或显示vim的配色</title>
-      <link>https://huobazi.aspxboy.com/blog/2012/11/02/tmux-diu-shi-huo-xian-shi-vimde-pei-se/</link>
+      <link>https://huobazi.github.com/blog/2012/11/02/tmux-diu-shi-huo-xian-shi-vimde-pei-se/</link>
       <pubDate>Fri, 02 Nov 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2012/11/02/tmux-diu-shi-huo-xian-shi-vimde-pei-se/</guid>
+      <guid>https://huobazi.github.com/blog/2012/11/02/tmux-diu-shi-huo-xian-shi-vimde-pei-se/</guid>
       <description>使用tmux，同时使用vim，发现配色总是和别人截图有差别 在.tmux.conf内设置了
 set -g default-terminal &amp;quot;screen-256color&amp;quot;  还是木有作用，最后在SO上找到了解决的办法 在.bashrc内(我是在.zshrc内)添加
 alias tmux=&#39;tmux -2&#39;  就OK了
@@ -65,10 +65,10 @@ http://vim.wikia.com/wiki/256_colors_setup_for_console_Vim http://stackoverflow.
     
     <item>
       <title>漂亮的VIM配色方案</title>
-      <link>https://huobazi.aspxboy.com/blog/2010/01/11/vim-color-scheme/</link>
+      <link>https://huobazi.github.com/blog/2010/01/11/vim-color-scheme/</link>
       <pubDate>Mon, 11 Jan 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2010/01/11/vim-color-scheme/</guid>
+      <guid>https://huobazi.github.com/blog/2010/01/11/vim-color-scheme/</guid>
       <description>这里
 http://code.google.com/p/vimcolorschemetest/
 有一堆一堆的配色方案

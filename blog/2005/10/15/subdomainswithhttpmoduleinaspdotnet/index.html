@@ -3,10 +3,10 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
 
-    <link rel="stylesheet" href='https://huobazi.aspxboy.com/css/all.min.css'>
+    <link rel="stylesheet" href='https://huobazi.github.com/css/all.min.css'>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <link rel="alternate" type="application/rss+xml" title="武眉博" href='https://huobazi.aspxboy.com/index.xml' />
+    <link rel="alternate" type="application/rss+xml" title="武眉博" href='https://huobazi.github.com/index.xml' />
 </head>
 <body>
 
@@ -15,7 +15,7 @@
     <div class="sidebar pure-u-1 pure-u-md-1-4">
     <div class="header">
         <hgroup>
-            <h1 class="brand-title"><a href="https://huobazi.aspxboy.com">武眉博</a></h1>
+            <h1 class="brand-title"><a href="https://huobazi.github.com">武眉博</a></h1>
             <h2 class="brand-tagline"> Marble&#39;s blog </h2>
         </hgroup>
 
@@ -44,7 +44,7 @@
                 </li>
                 
                 <li class="nav-item">
-                    <a class="pure-button" href='https://huobazi.aspxboy.com/index.xml'>
+                    <a class="pure-button" href='https://huobazi.github.com/index.xml'>
                         <i class="fa fa-rss"></i> rss
                     </a>
                 </li>
@@ -62,7 +62,7 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2005/10/15/subdomainswithhttpmoduleinaspdotnet/" class="post-title">在Asp.Net中使用HttpModule实现多个域名分别“绑定”到子目录 </a>
+                        <a href="https://huobazi.github.com/blog/2005/10/15/subdomainswithhttpmoduleinaspdotnet/" class="post-title">在Asp.Net中使用HttpModule实现多个域名分别“绑定”到子目录 </a>
 
                         <p class="post-meta">
                             
@@ -87,10 +87,10 @@
                     </div>
                     
                     <div class="post-description">
-                        <p>作者：活靶子 发表于：<a href="http://www.aspxboy.com/">AspxBoy.Com</a> &amp;&amp; <a href="http://im286.com/">im286.com</a> &amp;&amp; <a href="http://cnblogs.com/">Cnblogs.com</a></p>
+                        <p>作者：活靶子 发表于：<a href="http://www.github.com/">AspxBoy.Com</a> &amp;&amp; <a href="http://im286.com/">im286.com</a> &amp;&amp; <a href="http://cnblogs.com/">Cnblogs.com</a></p>
 <br /><p>目前虚拟主机商提供将多个域名绑定到站点根目录，但是不提供类似CPanel那样可以将域名绑定到站点的子目录。<br />而当你手上有多个域名，网站空间和流量又有闲置的时候，是很希望<br />将这些资源利用起来，而且要做到降低做站的成本。而网络上流传的多域名绑到子目录多为判断HTTP_HOST再使用Asp的Response.Redirect或者php的header方法重订向到子目录去。这种方法在地址的请求上发生了变化，大家都知道Redirect的定向是很不友好的，在服务器端控制自动跳转会令访问者感到不安。<br />所以我需要的是对这个域名下面的所有请求都转接到对应的子目录里去<br />比如<
 <br /><a href="http://www.xaradio.com/default.aspx">http://www.xaradio.com/default.aspx</a><br />实际访问的是<a href="http://www.3pub.com/xaradio/default.aspx">http://www.3pub.com/xaradio/default.aspx</a><br /><br /><a href="http://www.xaradio.com/album.aspx?id=722">http://www.xaradio.com/album.aspx?id=722</a><br />实际访问的是<a href="http://www.3pub.com/xaradio/album.aspx?id=722">http://www.3pub.com/xaradio/album.aspx?id=722</a><br /><br />http://www.xaradio.com/*.aspx<br />实际要访问到http://www.3pub.com/xaradio/*.aspx<br /><br />而绑定到该站点根目录的其他域名和地址仍然不受影响<br />如: <a href="http://www.3pub.com/">http://www.3pub.com/</a> 和<a href="http://3pub.com/">http://3pub.com/</a><br /> <a href="http://www.3pub.com/default.aspx">http://www.3pub.com/default.aspx</a>和<a href="http://3pub.com/default.aspx">http://3pub.com/default.aspx</a></p>
-<br /><p><br /><a href="http://www.aspxboy.com/484/default.aspx"><strong>http://www.aspxboy.com/484/default.aspx</strong></a>该文章详细的描述了在Asp.Net中使用HttpModule和HttpHander来重写Url,读懂他特别是<a href="http://www.aspxboy.com/484/archive.aspx#ekaa"><strong>http://www.aspxboy.com/484/archive.aspx#ekaa</strong></a><strong>节</strong>将是我们下面工作的前提朋友们可以下载该文章附带的代码研究。<br /><br />如果您对HttpModule的编成非常熟悉那么可以向下进行了<br /><br />一。 先把配置文件从web.config内移出为了不让web.config变的非常臃肿，我们将配置文件从web.config内移出<br />假设我们的多域名绑定配置文件为“MulitDomain.config“<br />将RewriterConfiguration.cs的public static RewriterConfiguration GetConfig()方法<br />修改如下:<br /></p>
+<br /><p><br /><a href="http://www.github.com/484/default.aspx"><strong>http://www.github.com/484/default.aspx</strong></a>该文章详细的描述了在Asp.Net中使用HttpModule和HttpHander来重写Url,读懂他特别是<a href="http://www.github.com/484/archive.aspx#ekaa"><strong>http://www.github.com/484/archive.aspx#ekaa</strong></a><strong>节</strong>将是我们下面工作的前提朋友们可以下载该文章附带的代码研究。<br /><br />如果您对HttpModule的编成非常熟悉那么可以向下进行了<br /><br />一。 先把配置文件从web.config内移出为了不让web.config变的非常臃肿，我们将配置文件从web.config内移出<br />假设我们的多域名绑定配置文件为“MulitDomain.config“<br />将RewriterConfiguration.cs的public static RewriterConfiguration GetConfig()方法<br />修改如下:<br /></p>
 <pre>/// <summary>
 /// 从XML配置文件中返回重写信息
 /// </summary>
@@ -199,7 +199,7 @@ app.Context.Trace.Write("RewriterModule", "Exiting ModuleRewriter");
 </pre>
 <p>四。写规则文件<br />MulitDomain.config的匹配规则如下：<br /></p>
 <div class="codeDiv">&lt;?xml version="1.0" encoding="utf-8" ?&gt; <br /> &lt;RewriterConfig&gt;<br /> &lt;Rules&gt;<br />  &lt;RewriterRule&gt;<br />   &lt;LookFor&gt;www\.xaradio\.com&lt;/LookFor&gt;<br />   &lt;SendTo&gt;~/xaradio&lt;/SendTo&gt;<br />  &lt;/RewriterRule&gt;<br />  &lt;RewriterRule&gt;<br />   &lt;LookFor&gt;xaradio\.com&lt;/LookFor&gt;<br />   &lt;SendTo&gt;~/xaradio&lt;/SendTo&gt;<br />  &lt;/RewriterRule&gt;<br /> &lt;/Rules&gt;<br />  &lt;/RewriterConfig&gt;</div>
-<p>最后说明一下，根目录下一定要有一个Default.aspx如果你的所有域名都按照这种方式“绑定”那么根目录下放置一个空Default.aspx就可以，该文件来“欺骗IIS” ，防止直接使用域名访问的时候IIS查找不到default或者index文件就报404错误，等到该检查过去之后权利已经移交到aspnet_isapi.dll那里了。<br /><br /><strong><span style="COLOR: #339966"> <span style="COLOR: #0000ff">全部</span><span style="COLOR: #0000ff">代码</span></span>：</strong><a href="http://www.aspxboy.com/code/"><strong>http://www.aspxboy.com/code/</strong></a>  Other节点</p>
+<p>最后说明一下，根目录下一定要有一个Default.aspx如果你的所有域名都按照这种方式“绑定”那么根目录下放置一个空Default.aspx就可以，该文件来“欺骗IIS” ，防止直接使用域名访问的时候IIS查找不到default或者index文件就报404错误，等到该检查过去之后权利已经移交到aspnet_isapi.dll那里了。<br /><br /><strong><span style="COLOR: #339966"> <span style="COLOR: #0000ff">全部</span><span style="COLOR: #0000ff">代码</span></span>：</strong><a href="http://www.github.com/code/"><strong>http://www.github.com/code/</strong></a>  Other节点</p>
                     </div>
                     <div id="disqus_thread"></div>
 <script type="application/javascript">
@@ -230,7 +230,7 @@ app.Context.Trace.Write("RewriterModule", "Exiting ModuleRewriter");
         </ul>
     </div>
 </div>
-<script src='https://huobazi.aspxboy.com/js/all.min.js'></script>
+<script src='https://huobazi.github.com/js/all.min.js'></script>
 
         </div>
     </div>

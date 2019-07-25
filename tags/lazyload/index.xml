@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lazyload on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/lazyload/</link>
+    <link>https://huobazi.github.com/tags/lazyload/</link>
     <description>Recent content in Lazyload on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 04 Jul 2007 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/lazyload/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/lazyload/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>讨论一下类似BlogEngine为何要一次性加载所有Post到内存</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/07/04/lazyinitializationorearlyinitializationinblogengine/</link>
+      <link>https://huobazi.github.com/blog/2007/07/04/lazyinitializationorearlyinitializationinblogengine/</link>
       <pubDate>Wed, 04 Jul 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/07/04/lazyinitializationorearlyinitializationinblogengine/</guid>
+      <guid>https://huobazi.github.com/blog/2007/07/04/lazyinitializationorearlyinitializationinblogengine/</guid>
       <description>试验了一下给BlogEngine生成10000个post 程序第一次运行时等待的时间让我想自杀（白屏了近2分钟)
 看了一下代码，发现BlogEngine在第一次运行时候加载所有Post（从数据库)到List内,类似（Early initialization）
 当新添加post时，给数据库（xml/database)内加入该post同时给List内追加该post

@@ -3,10 +3,10 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
 
-    <link rel="stylesheet" href='https://huobazi.aspxboy.com/css/all.min.css'>
+    <link rel="stylesheet" href='https://huobazi.github.com/css/all.min.css'>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <link rel="alternate" type="application/rss+xml" title="武眉博" href='https://huobazi.aspxboy.com/index.xml' />
+    <link rel="alternate" type="application/rss+xml" title="武眉博" href='https://huobazi.github.com/index.xml' />
 </head>
 <body>
 
@@ -15,7 +15,7 @@
     <div class="sidebar pure-u-1 pure-u-md-1-4">
     <div class="header">
         <hgroup>
-            <h1 class="brand-title"><a href="https://huobazi.aspxboy.com">武眉博</a></h1>
+            <h1 class="brand-title"><a href="https://huobazi.github.com">武眉博</a></h1>
             <h2 class="brand-tagline"> Marble&#39;s blog </h2>
         </hgroup>
 
@@ -44,7 +44,7 @@
                 </li>
                 
                 <li class="nav-item">
-                    <a class="pure-button" href='https://huobazi.aspxboy.com/index.xml'>
+                    <a class="pure-button" href='https://huobazi.github.com/index.xml'>
                         <i class="fa fa-rss"></i> rss
                     </a>
                 </li>
@@ -63,7 +63,7 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2004/03/04/cb-2135/" class="post-title">MessageBox Control in ASP.NET</a>
+                        <a href="https://huobazi.github.com/blog/2004/03/04/cb-2135/" class="post-title">MessageBox Control in ASP.NET</a>
 
                         <p class="post-meta">
                             
@@ -155,7 +155,7 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2004/02/23/cb-1521/" class="post-title">用Asp.Net抓取web页面</a>
+                        <a href="https://huobazi.github.com/blog/2004/02/23/cb-1521/" class="post-title">用Asp.Net抓取web页面</a>
 
                         <p class="post-meta">
                             
@@ -172,9 +172,9 @@
                     </header>
 
                     <div class="post-description">
-                        <p><span style="color: #990000;">演示:<br /><a href="http://www.aspxboy.com/demo/286.aspx" target="_blank">http://www.aspxboy.com/demo/286.aspx</a></span></p>
-<p><span style="color: #990000;"><br />代码高亮显示(HightLight in <a href="http://www.aspxboy.com/scv/">Source Code Viewer</a>)</span></p>
-<p><span style="color: #990000;"><br /><a href="http://www.aspxboy.com/code/default.aspx/S7s2zPJbeI9PJA/OKHpAVwVaUEhf02EgEOgeB3Yd5Z7fLL3ZNgdv7XIqertUOYm9kbQ62LshbJBwvWPBBYa4EyVMhvMhyEDPH8chU5ornn8=.Aspx" target="_blank">http://www.aspxboy.com/code/default.aspx/S7s2zPJbeI9PJA/OK<br />HpAVwVaUEhf02EgEOgeB3Yd5Z7fLL3ZNgdv7XIqertUOYm9kbQ62<br />LshbJBwvWPBBYa4EyVMhvMhyEDPH8chU5ornn8=.Aspx</a></span><br /><span style="color: #990000;">&lt;html&gt;<br />&lt;head&gt;<br /> </span><br /><span style="color: #990000;">&lt;SCRIPT runat="server"&gt;<br />  void Page_Load(Object sender, EventArgs e) {</span><br /><span style="color: #990000;">    WebRequest req = WebRequest.Create("<a href="http://www.im286.com/index.php" target="_blank">http://www.im286.com/index.php</a>");<br /> string urliii="src="; //图片使用绝对连接<br /> urliii+="<a href="http://www.im286.com/" target="_blank">http://www.im286.com/</a>";<br />    try {<br />        WebResponse result = req.GetResponse();<br />        Stream ReceiveStream = result.GetResponseStream();</span><br /><span style="color: #990000;">        Byte[] read = new Byte[512];<br />        int bytes = ReceiveStream.Read(read, 0, 512);</span><br /><span style="color: #990000;">        lblHTML.Text = "";<br />        while (bytes &gt; 0)<br />        {</span><br /><span style="color: #990000;">          // 注意：<br />          // 下面假定响应使用 gb2312 作为编码方式。<br />          // 如果内容以 ANSI 代码页形式（例如，932）发送，则使用类似下面的语句：<br />          //Encoding encode = System.Text.Encoding.GetEncoding("shift-jis");<br />          Encoding encode = System.Text.Encoding.GetEncoding("gb2312");<br />          lblHTML.Text = lblHTML.Text + encode.GetString(read, 0, bytes);<br />   <br />          bytes = ReceiveStream.Read(read, 0, 512);<br />   <br />        }<br />    } catch(Exception) {<br />        lblHTML.Text = "检索页时出错";<br />    }<br /> lblHTML.Text = lblHTML.Text.Replace("src=",""+urliii+"");<br /> lblHTML.Text = lblHTML.Text.Replace("\"","");<br />  }<br />&lt;/SCRIPT&gt;<br />&lt;/head&gt;</span><br /><span style="color: #990000;">&lt;body&gt;</span><br /><span style="color: #990000;">  &lt;form method="post" action="Webrequest.aspx" runat="server"&gt;<br />   <br />    &lt;asp:Label runat=server ID="lblHTML" Rows="30" Cols="80" EnableViewState="false"  Wrap="True"&gt;&lt;/asp:Label&gt;<br />  &lt;/form&gt;</span><br /><span style="color: #990000;">&lt;/body&gt;<br />&lt;/html&gt;</span></p>
+                        <p><span style="color: #990000;">演示:<br /><a href="http://www.github.com/demo/286.aspx" target="_blank">http://www.github.com/demo/286.aspx</a></span></p>
+<p><span style="color: #990000;"><br />代码高亮显示(HightLight in <a href="http://www.github.com/scv/">Source Code Viewer</a>)</span></p>
+<p><span style="color: #990000;"><br /><a href="http://www.github.com/code/default.aspx/S7s2zPJbeI9PJA/OKHpAVwVaUEhf02EgEOgeB3Yd5Z7fLL3ZNgdv7XIqertUOYm9kbQ62LshbJBwvWPBBYa4EyVMhvMhyEDPH8chU5ornn8=.Aspx" target="_blank">http://www.github.com/code/default.aspx/S7s2zPJbeI9PJA/OK<br />HpAVwVaUEhf02EgEOgeB3Yd5Z7fLL3ZNgdv7XIqertUOYm9kbQ62<br />LshbJBwvWPBBYa4EyVMhvMhyEDPH8chU5ornn8=.Aspx</a></span><br /><span style="color: #990000;">&lt;html&gt;<br />&lt;head&gt;<br /> </span><br /><span style="color: #990000;">&lt;SCRIPT runat="server"&gt;<br />  void Page_Load(Object sender, EventArgs e) {</span><br /><span style="color: #990000;">    WebRequest req = WebRequest.Create("<a href="http://www.im286.com/index.php" target="_blank">http://www.im286.com/index.php</a>");<br /> string urliii="src="; //图片使用绝对连接<br /> urliii+="<a href="http://www.im286.com/" target="_blank">http://www.im286.com/</a>";<br />    try {<br />        WebResponse result = req.GetResponse();<br />        Stream ReceiveStream = result.GetResponseStream();</span><br /><span style="color: #990000;">        Byte[] read = new Byte[512];<br />        int bytes = ReceiveStream.Read(read, 0, 512);</span><br /><span style="color: #990000;">        lblHTML.Text = "";<br />        while (bytes &gt; 0)<br />        {</span><br /><span style="color: #990000;">          // 注意：<br />          // 下面假定响应使用 gb2312 作为编码方式。<br />          // 如果内容以 ANSI 代码页形式（例如，932）发送，则使用类似下面的语句：<br />          //Encoding encode = System.Text.Encoding.GetEncoding("shift-jis");<br />          Encoding encode = System.Text.Encoding.GetEncoding("gb2312");<br />          lblHTML.Text = lblHTML.Text + encode.GetString(read, 0, bytes);<br />   <br />          bytes = ReceiveStream.Read(read, 0, 512);<br />   <br />        }<br />    } catch(Exception) {<br />        lblHTML.Text = "检索页时出错";<br />    }<br /> lblHTML.Text = lblHTML.Text.Replace("src=",""+urliii+"");<br /> lblHTML.Text = lblHTML.Text.Replace("\"","");<br />  }<br />&lt;/SCRIPT&gt;<br />&lt;/head&gt;</span><br /><span style="color: #990000;">&lt;body&gt;</span><br /><span style="color: #990000;">  &lt;form method="post" action="Webrequest.aspx" runat="server"&gt;<br />   <br />    &lt;asp:Label runat=server ID="lblHTML" Rows="30" Cols="80" EnableViewState="false"  Wrap="True"&gt;&lt;/asp:Label&gt;<br />  &lt;/form&gt;</span><br /><span style="color: #990000;">&lt;/body&gt;<br />&lt;/html&gt;</span></p>
 <p>&lt;%@ Page language="C#" Trace="True" %&gt;<br />&lt;%@ Import Namespace="System.Net" %&gt;<br />&lt;%@ Import Namespace="System.IO" %&gt;</p>              
 
                     </div>
@@ -184,7 +184,7 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2004/02/23/cb-1521/" class="post-title">用Asp.Net抓取web页面</a>
+                        <a href="https://huobazi.github.com/blog/2004/02/23/cb-1521/" class="post-title">用Asp.Net抓取web页面</a>
 
                         <p class="post-meta">
                             
@@ -201,9 +201,9 @@
                     </header>
 
                     <div class="post-description">
-                        <p><span style="color: #990000;">演示:<br /><a href="http://www.aspxboy.com/demo/286.aspx" target="_blank">http://www.aspxboy.com/demo/286.aspx</a></span></p>
-<p><span style="color: #990000;"><br />代码高亮显示(HightLight in <a href="http://www.aspxboy.com/scv/">Source Code Viewer</a>)</span></p>
-<p><span style="color: #990000;"><br /><a href="http://www.aspxboy.com/code/default.aspx/S7s2zPJbeI9PJA/OKHpAVwVaUEhf02EgEOgeB3Yd5Z7fLL3ZNgdv7XIqertUOYm9kbQ62LshbJBwvWPBBYa4EyVMhvMhyEDPH8chU5ornn8=.Aspx" target="_blank">http://www.aspxboy.com/code/default.aspx/S7s2zPJbeI9PJA/OK<br />HpAVwVaUEhf02EgEOgeB3Yd5Z7fLL3ZNgdv7XIqertUOYm9kbQ62<br />LshbJBwvWPBBYa4EyVMhvMhyEDPH8chU5ornn8=.Aspx</a></span><br /><span style="color: #990000;">&lt;html&gt;<br />&lt;head&gt;<br /> </span><br /><span style="color: #990000;">&lt;SCRIPT runat="server"&gt;<br />  void Page_Load(Object sender, EventArgs e) {</span><br /><span style="color: #990000;">    WebRequest req = WebRequest.Create("<a href="http://www.im286.com/index.php" target="_blank">http://www.im286.com/index.php</a>");<br /> string urliii="src="; //图片使用绝对连接<br /> urliii+="<a href="http://www.im286.com/" target="_blank">http://www.im286.com/</a>";<br />    try {<br />        WebResponse result = req.GetResponse();<br />        Stream ReceiveStream = result.GetResponseStream();</span><br /><span style="color: #990000;">        Byte[] read = new Byte[512];<br />        int bytes = ReceiveStream.Read(read, 0, 512);</span><br /><span style="color: #990000;">        lblHTML.Text = "";<br />        while (bytes &gt; 0)<br />        {</span><br /><span style="color: #990000;">          // 注意：<br />          // 下面假定响应使用 gb2312 作为编码方式。<br />          // 如果内容以 ANSI 代码页形式（例如，932）发送，则使用类似下面的语句：<br />          //Encoding encode = System.Text.Encoding.GetEncoding("shift-jis");<br />          Encoding encode = System.Text.Encoding.GetEncoding("gb2312");<br />          lblHTML.Text = lblHTML.Text + encode.GetString(read, 0, bytes);<br />   <br />          bytes = ReceiveStream.Read(read, 0, 512);<br />   <br />        }<br />    } catch(Exception) {<br />        lblHTML.Text = "检索页时出错";<br />    }<br /> lblHTML.Text = lblHTML.Text.Replace("src=",""+urliii+"");<br /> lblHTML.Text = lblHTML.Text.Replace("\"","");<br />  }<br />&lt;/SCRIPT&gt;<br />&lt;/head&gt;</span><br /><span style="color: #990000;">&lt;body&gt;</span><br /><span style="color: #990000;">  &lt;form method="post" action="Webrequest.aspx" runat="server"&gt;<br />   <br />    &lt;asp:Label runat=server ID="lblHTML" Rows="30" Cols="80" EnableViewState="false"  Wrap="True"&gt;&lt;/asp:Label&gt;<br />  &lt;/form&gt;</span><br /><span style="color: #990000;">&lt;/body&gt;<br />&lt;/html&gt;</span></p>
+                        <p><span style="color: #990000;">演示:<br /><a href="http://www.github.com/demo/286.aspx" target="_blank">http://www.github.com/demo/286.aspx</a></span></p>
+<p><span style="color: #990000;"><br />代码高亮显示(HightLight in <a href="http://www.github.com/scv/">Source Code Viewer</a>)</span></p>
+<p><span style="color: #990000;"><br /><a href="http://www.github.com/code/default.aspx/S7s2zPJbeI9PJA/OKHpAVwVaUEhf02EgEOgeB3Yd5Z7fLL3ZNgdv7XIqertUOYm9kbQ62LshbJBwvWPBBYa4EyVMhvMhyEDPH8chU5ornn8=.Aspx" target="_blank">http://www.github.com/code/default.aspx/S7s2zPJbeI9PJA/OK<br />HpAVwVaUEhf02EgEOgeB3Yd5Z7fLL3ZNgdv7XIqertUOYm9kbQ62<br />LshbJBwvWPBBYa4EyVMhvMhyEDPH8chU5ornn8=.Aspx</a></span><br /><span style="color: #990000;">&lt;html&gt;<br />&lt;head&gt;<br /> </span><br /><span style="color: #990000;">&lt;SCRIPT runat="server"&gt;<br />  void Page_Load(Object sender, EventArgs e) {</span><br /><span style="color: #990000;">    WebRequest req = WebRequest.Create("<a href="http://www.im286.com/index.php" target="_blank">http://www.im286.com/index.php</a>");<br /> string urliii="src="; //图片使用绝对连接<br /> urliii+="<a href="http://www.im286.com/" target="_blank">http://www.im286.com/</a>";<br />    try {<br />        WebResponse result = req.GetResponse();<br />        Stream ReceiveStream = result.GetResponseStream();</span><br /><span style="color: #990000;">        Byte[] read = new Byte[512];<br />        int bytes = ReceiveStream.Read(read, 0, 512);</span><br /><span style="color: #990000;">        lblHTML.Text = "";<br />        while (bytes &gt; 0)<br />        {</span><br /><span style="color: #990000;">          // 注意：<br />          // 下面假定响应使用 gb2312 作为编码方式。<br />          // 如果内容以 ANSI 代码页形式（例如，932）发送，则使用类似下面的语句：<br />          //Encoding encode = System.Text.Encoding.GetEncoding("shift-jis");<br />          Encoding encode = System.Text.Encoding.GetEncoding("gb2312");<br />          lblHTML.Text = lblHTML.Text + encode.GetString(read, 0, bytes);<br />   <br />          bytes = ReceiveStream.Read(read, 0, 512);<br />   <br />        }<br />    } catch(Exception) {<br />        lblHTML.Text = "检索页时出错";<br />    }<br /> lblHTML.Text = lblHTML.Text.Replace("src=",""+urliii+"");<br /> lblHTML.Text = lblHTML.Text.Replace("\"","");<br />  }<br />&lt;/SCRIPT&gt;<br />&lt;/head&gt;</span><br /><span style="color: #990000;">&lt;body&gt;</span><br /><span style="color: #990000;">  &lt;form method="post" action="Webrequest.aspx" runat="server"&gt;<br />   <br />    &lt;asp:Label runat=server ID="lblHTML" Rows="30" Cols="80" EnableViewState="false"  Wrap="True"&gt;&lt;/asp:Label&gt;<br />  &lt;/form&gt;</span><br /><span style="color: #990000;">&lt;/body&gt;<br />&lt;/html&gt;</span></p>
 <p>&lt;%@ Page language="C#" Trace="True" %&gt;<br />&lt;%@ Import Namespace="System.Net" %&gt;<br />&lt;%@ Import Namespace="System.IO" %&gt;</p>              
 
                     </div>
@@ -213,7 +213,7 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2004/02/12/cb-1192/" class="post-title">一个不错的代码编辑工具</a>
+                        <a href="https://huobazi.github.com/blog/2004/02/12/cb-1192/" class="post-title">一个不错的代码编辑工具</a>
 
                         <p class="post-meta">
                             
@@ -236,7 +236,7 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2004/02/09/pagedsp/" class="post-title">分页存储过程</a>
+                        <a href="https://huobazi.github.com/blog/2004/02/09/pagedsp/" class="post-title">分页存储过程</a>
 
                         <p class="post-meta">
                             
@@ -268,7 +268,7 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2004/02/09/pagedsp/" class="post-title">分页存储过程</a>
+                        <a href="https://huobazi.github.com/blog/2004/02/09/pagedsp/" class="post-title">分页存储过程</a>
 
                         <p class="post-meta">
                             
@@ -300,7 +300,7 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2004/02/09/cb-1054/" class="post-title">顺便发现一bug??</a>
+                        <a href="https://huobazi.github.com/blog/2004/02/09/cb-1054/" class="post-title">顺便发现一bug??</a>
 
                         <p class="post-meta">
                             
@@ -324,7 +324,7 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2004/02/04/cb-830/" class="post-title">使网页中的元素可编辑</a>
+                        <a href="https://huobazi.github.com/blog/2004/02/04/cb-830/" class="post-title">使网页中的元素可编辑</a>
 
                         <p class="post-meta">
                             
@@ -354,7 +354,7 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2004/02/04/cb-830/" class="post-title">使网页中的元素可编辑</a>
+                        <a href="https://huobazi.github.com/blog/2004/02/04/cb-830/" class="post-title">使网页中的元素可编辑</a>
 
                         <p class="post-meta">
                             
@@ -384,7 +384,7 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="https://huobazi.aspxboy.com/blog/2004/02/04/whoisinaspdotnet/" class="post-title">域名Whois信息查询(ASP.NET&#43;C#)</a>
+                        <a href="https://huobazi.github.com/blog/2004/02/04/whoisinaspdotnet/" class="post-title">域名Whois信息查询(ASP.NET&#43;C#)</a>
 
                         <p class="post-meta">
                             
@@ -403,10 +403,10 @@
                     </header>
 
                     <div class="post-description">
-                        <p>去年写的了,是从<a href="http://http://blog.joycode.com/aspdian/posts/4466.aspx">点缀</a>的博客学来的<br />看演示请点这里:<a href="http://www.aspxboy.com/whois.aspx">http://www.aspxboy.com/whois.aspx</a><br />代码如下:<br /><span style="color: #a52a2a;">&lt;% @Page Language="C#" %&gt;<br />&lt;% @Import Namespace="System.Net.Sockets" %&gt;<br />&lt;% @Import Namespace="System.Text" %&gt;<br />&lt;% @Import Namespace="System.IO" %&gt;<br />&lt;html&gt;<br />&lt;head&gt;<br />&lt;title&gt;.Com/.Net/.Org/.Cn 域名Whois信息查询&lt;/title&gt;<br />&lt;meta name="keywords" content=".Com,.Net,.Org,.Cn 域名Whois信息查询"&gt;<br />&lt;meta name="generator" content=".Com/.Net/.Org,.Cn 域名Whois信息查询"&gt;<br />&lt;meta name="description" content=".Com/.Net/.Org,.Cn 域名Whois信息查询"&gt;<br />&lt;style&gt;<br />&lt;!--<br />body,input{<br />        font-family: Tahoma, Verdana; color: #004080; font-size: 12px        <br />        }<br />a:link,a:visited{<br />        text-decoration: none; color: #004080<br />        }<br />--&gt;<br />&lt;/style&gt;<br />&lt;/head&gt;<br />&lt;body&gt;<br />&lt;form id="fmQuery" runat="server"&gt;<br />&amp;nbsp;要查询的域名域名:<br />www.&lt;asp:TextBox id="txtDomain" width="100" value="ASPXBOY.COM" runat="server" /&gt;<br />&amp;nbsp; &lt;asp:Button id="btnQuery" OnClick="btn_click"<br />text="查询!" runat="server" /&gt;（只能查询.Com/.Net/.Org/.Cn 域名Whois的信息）&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a href ="WhoisCode.htm" title="View the source code here!"&gt;源代码在这里&lt;/a&gt;<br />&lt;BR&gt;&lt;HR width="550" height="1" align="left"&gt;&lt;BR&gt;<br />&lt;asp:label id="lblResult" runat="server" /&gt;<br />&lt;/form&gt;<br />&lt;/body&gt;<br />&lt;/html&gt;<br />&lt;script language="C#" runat="server"&gt;<br />void btn_click(Object sender, EventArgs e)<br />{<br />String strServer;<br />String strDomain = txtDomain.Text;<br />String strServerCom = "whois.networksolutions.com";<br />String strServerCN = "whois.cnnic.net.cn";<br />String strResponse;<br />string[] arrDomain = strDomain.Split('.');<br />if (arrDomain[1].ToUpper()=="CN")<br />{<br />       <br />        strServer=strServerCN;<br />}<br />else<br />{<br />        strServer=strServerCom;<br />}</span></p>
+                        <p>去年写的了,是从<a href="http://http://blog.joycode.com/aspdian/posts/4466.aspx">点缀</a>的博客学来的<br />看演示请点这里:<a href="http://www.github.com/whois.aspx">http://www.github.com/whois.aspx</a><br />代码如下:<br /><span style="color: #a52a2a;">&lt;% @Page Language="C#" %&gt;<br />&lt;% @Import Namespace="System.Net.Sockets" %&gt;<br />&lt;% @Import Namespace="System.Text" %&gt;<br />&lt;% @Import Namespace="System.IO" %&gt;<br />&lt;html&gt;<br />&lt;head&gt;<br />&lt;title&gt;.Com/.Net/.Org/.Cn 域名Whois信息查询&lt;/title&gt;<br />&lt;meta name="keywords" content=".Com,.Net,.Org,.Cn 域名Whois信息查询"&gt;<br />&lt;meta name="generator" content=".Com/.Net/.Org,.Cn 域名Whois信息查询"&gt;<br />&lt;meta name="description" content=".Com/.Net/.Org,.Cn 域名Whois信息查询"&gt;<br />&lt;style&gt;<br />&lt;!--<br />body,input{<br />        font-family: Tahoma, Verdana; color: #004080; font-size: 12px        <br />        }<br />a:link,a:visited{<br />        text-decoration: none; color: #004080<br />        }<br />--&gt;<br />&lt;/style&gt;<br />&lt;/head&gt;<br />&lt;body&gt;<br />&lt;form id="fmQuery" runat="server"&gt;<br />&amp;nbsp;要查询的域名域名:<br />www.&lt;asp:TextBox id="txtDomain" width="100" value="ASPXBOY.COM" runat="server" /&gt;<br />&amp;nbsp; &lt;asp:Button id="btnQuery" OnClick="btn_click"<br />text="查询!" runat="server" /&gt;（只能查询.Com/.Net/.Org/.Cn 域名Whois的信息）&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a href ="WhoisCode.htm" title="View the source code here!"&gt;源代码在这里&lt;/a&gt;<br />&lt;BR&gt;&lt;HR width="550" height="1" align="left"&gt;&lt;BR&gt;<br />&lt;asp:label id="lblResult" runat="server" /&gt;<br />&lt;/form&gt;<br />&lt;/body&gt;<br />&lt;/html&gt;<br />&lt;script language="C#" runat="server"&gt;<br />void btn_click(Object sender, EventArgs e)<br />{<br />String strServer;<br />String strDomain = txtDomain.Text;<br />String strServerCom = "whois.networksolutions.com";<br />String strServerCN = "whois.cnnic.net.cn";<br />String strResponse;<br />string[] arrDomain = strDomain.Split('.');<br />if (arrDomain[1].ToUpper()=="CN")<br />{<br />       <br />        strServer=strServerCN;<br />}<br />else<br />{<br />        strServer=strServerCom;<br />}</span></p>
 <p>bool blSuccess = IsWhosisSuccess(strDomain, strServer, out strResponse);<br />if (blSuccess)<br />{<br />lblResult.Text = strResponse;<br />}<br />else<br />{<br />lblResult.Text = "查找失败....";<br />}<br />}<br />bool IsWhosisSuccess(String strDomain, String strServer,<br />                   out String strResponse)<br />{<br />  strResponse = "none";<br />  bool blSuccess = false;<br />  TcpClient tcpc = new TcpClient();<br />  try<br />  {<br />    tcpc.Connect(strServer, 43);<br />  }<br />  catch(SocketException ex)<br />  {<br />    strResponse = "连接不到该 Whois server,请稍后再试。";<br />    return false;<br />  }</p>
 <p>  strDomain += "\r\n";<br />  Byte[] arrDomain = Encoding.UTF8.GetBytes(strDomain.ToCharArray());<br />  try<br />  {<br />        Stream s = tcpc.GetStream();<br />        s.Write(arrDomain, 0, strDomain.Length);<br />       <br />        StreamReader sr = new StreamReader(tcpc.GetStream(), Encoding.UTF8);<br />        StringBuilder strBuilder = new StringBuilder();<br />        string strLine = null;</p>
-<p>        while (null != (strLine = sr.ReadLine()))<br />        {<br />                strBuilder.Append(strLine+"&lt;br&gt;");<br />        }<br />        tcpc.Close();<br />               <br />        blSuccess = true;<br />        string my="Go to Huobazi's WebSite：&lt;a href=\"http://www.aspxboy.com\" title=\".Net男孩社区\"&gt;www.AspxBoy.Com&lt;/a&gt;&lt;br&gt;";<br />        strResponse = strBuilder.ToString()+my;  }<br />  catch(Exception e)<br />  {<br />        strResponse = e.ToString();<br />  }<br />  <br />  return blSuccess;<br />}<br />  &lt;/script&gt;</p>               
+<p>        while (null != (strLine = sr.ReadLine()))<br />        {<br />                strBuilder.Append(strLine+"&lt;br&gt;");<br />        }<br />        tcpc.Close();<br />               <br />        blSuccess = true;<br />        string my="Go to Huobazi's WebSite：&lt;a href=\"http://www.github.com\" title=\".Net男孩社区\"&gt;www.github.Com&lt;/a&gt;&lt;br&gt;";<br />        strResponse = strBuilder.ToString()+my;  }<br />  catch(Exception e)<br />  {<br />        strResponse = e.ToString();<br />  }<br />  <br />  return blSuccess;<br />}<br />  &lt;/script&gt;</p>             
 
                     </div>
                 </section>
@@ -437,7 +437,7 @@
         </ul>
     </div>
 </div>
-<script src='https://huobazi.aspxboy.com/js/all.min.js'></script>
+<script src='https://huobazi.github.com/js/all.min.js'></script>
 
         </div>
     </div>

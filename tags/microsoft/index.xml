@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Microsoft on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/microsoft/</link>
+    <link>https://huobazi.github.com/tags/microsoft/</link>
     <description>Recent content in Microsoft on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 26 Jul 2009 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/microsoft/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/microsoft/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>拆箱记</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/07/26/2009-mvp/</link>
+      <link>https://huobazi.github.com/blog/2009/07/26/2009-mvp/</link>
       <pubDate>Sun, 26 Jul 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/07/26/2009-mvp/</guid>
+      <guid>https://huobazi.github.com/blog/2009/07/26/2009-mvp/</guid>
       <description>&lt;p&gt;大洋彼岸寄来了一个纸箱&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://huobazi.aspxboy.com/images/hbz_images/mvp/1.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;http://huobazi.github.com/images/hbz_images/mvp/1.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>jQuery从此更牛了</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/10/07/jquerycool/</link>
+      <link>https://huobazi.github.com/blog/2008/10/07/jquerycool/</link>
       <pubDate>Tue, 07 Oct 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/10/07/jquerycool/</guid>
+      <guid>https://huobazi.github.com/blog/2008/10/07/jquerycool/</guid>
       <description>&lt;p&gt;为什么更牛了?&lt;/p&gt;
 &lt;p&gt; &lt;/p&gt;
 &lt;p&gt;26日回家，昨天才返回，这么好的消息自己错过了，补记一下。&lt;/p&gt;
@@ -36,10 +36,10 @@
     
     <item>
       <title>IE8 BETA1 来了....</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/03/06/ie8beta1iscoming/</link>
+      <link>https://huobazi.github.com/blog/2008/03/06/ie8beta1iscoming/</link>
       <pubDate>Thu, 06 Mar 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/03/06/ie8beta1iscoming/</guid>
+      <guid>https://huobazi.github.com/blog/2008/03/06/ie8beta1iscoming/</guid>
       <description>太疯狂了，迅雷30秒就下完了14.43M啊
 Install Internet Explorer 8 Internet Explorer 8 can be installed on Microsoft Windows Vista® Service Pack 1 (SP1), Windows Vista, Windows XP® Service Pack 2 (SP2), Windows Server® 2008 and Windows Server2003 Service Pack 2 (SP2). Downloads are available from the following locations:
 Internet Explorer 8 Beta 1 for Windows Vista and Windows Server 2008 Internet Explorer 8 Beta 1 for Windows Vista x64 Edition and Windows Server 2008 x64 Edition</description>
@@ -47,19 +47,19 @@ Internet Explorer 8 Beta 1 for Windows Vista and Windows Server 2008 Internet E
     
     <item>
       <title>比尔盖茨的又一个网站</title>
-      <link>https://huobazi.aspxboy.com/blog/2006/05/25/iiswebsite/</link>
+      <link>https://huobazi.github.com/blog/2006/05/25/iiswebsite/</link>
       <pubDate>Thu, 25 May 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/05/25/iiswebsite/</guid>
+      <guid>https://huobazi.github.com/blog/2006/05/25/iiswebsite/</guid>
       <description>http://www.iis.net/default.aspx?tabid=1</description>
     </item>
     
     <item>
       <title>Windows(2000/NT4.0)部份源码泄露</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/02/14/cb-1242/</link>
+      <link>https://huobazi.github.com/blog/2004/02/14/cb-1242/</link>
       <pubDate>Sat, 14 Feb 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/02/14/cb-1242/</guid>
+      <guid>https://huobazi.github.com/blog/2004/02/14/cb-1242/</guid>
       <description>微软公司发言人汤姆·皮拉表示：“今天，我们发现Windows 2000和NT 4.0的部分源代码非法地出现在互联网上。”他警告说，任何第三方传播这些源代码都是非法的行为，微软将对此采取严肃行动。
 Url
 http://www.neowin.net/
@@ -101,10 +101,10 @@ hang_system();</description>
     
     <item>
       <title>MSN Toolbar 谁用了</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/01/29/cb-506/</link>
+      <link>https://huobazi.github.com/blog/2004/01/29/cb-506/</link>
       <pubDate>Thu, 29 Jan 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/01/29/cb-506/</guid>
+      <guid>https://huobazi.github.com/blog/2004/01/29/cb-506/</guid>
       <description>MSN Toolbar Beta</description>
     </item>
     

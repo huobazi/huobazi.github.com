@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Coldfusion on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/coldfusion/</link>
+    <link>https://huobazi.github.com/tags/coldfusion/</link>
     <description>Recent content in Coldfusion on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 22 Sep 2004 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/coldfusion/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/coldfusion/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>可怜的ColdFusion 国内没认学吗？还是都不在csdn讨论？</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/09/22/cb-45611/</link>
+      <link>https://huobazi.github.com/blog/2004/09/22/cb-45611/</link>
       <pubDate>Wed, 22 Sep 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/09/22/cb-45611/</guid>
+      <guid>https://huobazi.github.com/blog/2004/09/22/cb-45611/</guid>
       <description> ColdFusion 2004-08专家榜  名次 社区昵称 专家分 个人描述    1 suzhenning 66    2 Qthinker 22 在失意的时候不要灰心,想一想,为了老婆,为了父母,为了将来的孩子,为了社会,要赶快爬起来  3 yibotiemen 5 我们一起来学习，我们一起来进步   4 s1ihome 5 勤能补拙  5 BlueDestiny 5 天资之于才华，一如本能之于理智。   6 y7967 5 走猫的路,让狗说去吧~   </description>
     </item>
     

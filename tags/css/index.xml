@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Css on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/css/</link>
+    <link>https://huobazi.github.com/tags/css/</link>
     <description>Recent content in Css on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 28 Nov 2009 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/css/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/css/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>腾讯webQQ的 CSS Sprite</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/11/28/webqq-css-sprite/</link>
+      <link>https://huobazi.github.com/blog/2009/11/28/webqq-css-sprite/</link>
       <pubDate>Sat, 28 Nov 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/11/28/webqq-css-sprite/</guid>
+      <guid>https://huobazi.github.com/blog/2009/11/28/webqq-css-sprite/</guid>
       <description>&lt;p&gt;web qq速度很快，很多图标处理的也很漂亮，偷偷看了一下sprite的图片，所有图标都在这个图里了20多k，性能压倒一切啊。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>一个很全的教程站</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/06/01/cb-12759/</link>
+      <link>https://huobazi.github.com/blog/2004/06/01/cb-12759/</link>
       <pubDate>Tue, 01 Jun 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/06/01/cb-12759/</guid>
+      <guid>https://huobazi.github.com/blog/2004/06/01/cb-12759/</guid>
       <description>很少见教程大全，不知道我是不是很落伍，今天才逛到这里
 
 HTML Tutorials

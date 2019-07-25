@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ajax on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/ajax/</link>
+    <link>https://huobazi.github.com/tags/ajax/</link>
     <description>Recent content in Ajax on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 15 Aug 2012 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/ajax/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/ajax/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>使用AjaxUpload和Carrierwave在Rails Mongoid中批量上传图片</title>
-      <link>https://huobazi.aspxboy.com/blog/2012/08/15/ajaxupload-with-rail-carrierwave-on-mongodb/</link>
+      <link>https://huobazi.github.com/blog/2012/08/15/ajaxupload-with-rail-carrierwave-on-mongodb/</link>
       <pubDate>Wed, 15 Aug 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2012/08/15/ajaxupload-with-rail-carrierwave-on-mongodb/</guid>
+      <guid>https://huobazi.github.com/blog/2012/08/15/ajaxupload-with-rail-carrierwave-on-mongodb/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/valums/file-uploader&#34;&gt;file-uploader&lt;/a&gt;是一个用 Javascrit 编写的文件上传 Libary,在这里我使用&lt;a href=&#34;https://github.com/jnicklas/carrierwave&#34;&gt;CarrierWave&lt;/a&gt;和 &lt;a href=&#34;https://github.com/mongoid/mongoid&#34;&gt;Mongoid&lt;/a&gt; 来完成多文件的无刷新上传功能&lt;/p&gt;
 
 &lt;h2 id=&#34;rubygems&#34;&gt;RubyGems&lt;/h2&gt;
@@ -46,20 +46,20 @@ end
     
     <item>
       <title>MS Ajax 客户端生命周期</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/04/03/microsoftajaxclientlifecycle/</link>
+      <link>https://huobazi.github.com/blog/2008/04/03/microsoftajaxclientlifecycle/</link>
       <pubDate>Thu, 03 Apr 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/04/03/microsoftajaxclientlifecycle/</guid>
+      <guid>https://huobazi.github.com/blog/2008/04/03/microsoftajaxclientlifecycle/</guid>
       <description>The flowing reference is an excellent post ！！！
 http://aspnetresources.com/downloads/MS%20Ajax%20Client%20Life-Cycle%20Events.pdf</description>
     </item>
     
     <item>
       <title>FckEditor,远程图片下载,插件</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/11/02/fckeditorremoteimagerubber/</link>
+      <link>https://huobazi.github.com/blog/2007/11/02/fckeditorremoteimagerubber/</link>
       <pubDate>Fri, 02 Nov 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/11/02/fckeditorremoteimagerubber/</guid>
+      <guid>https://huobazi.github.com/blog/2007/11/02/fckeditorremoteimagerubber/</guid>
       <description>有时候我们从其他网页上拷贝来的内容中含有图片，当原始地址失效后就会影响读者阅读。
 所以我制作了这样一个插件，可以将远程图片保存到本地服务器。声明：下面的文字是本文不可缺少的部分，转载请保留，谢谢！
 ////////////////////////////////////////////////////
@@ -89,10 +89,10 @@ E:\IISROOT\FckTest\FckTest\fckeditor\editor\plugins\remoteimagerubber\remoteimag
     
     <item>
       <title>Ajax Control Toolkit 出新版了</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/03/04/newversionofajaxcontroltoolkit/</link>
+      <link>https://huobazi.github.com/blog/2007/03/04/newversionofajaxcontroltoolkit/</link>
       <pubDate>Sun, 04 Mar 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/03/04/newversionofajaxcontroltoolkit/</guid>
+      <guid>https://huobazi.github.com/blog/2007/03/04/newversionofajaxcontroltoolkit/</guid>
       <description>Ajax Control Toolkit 出新版了
 http://www.codeplex.com/AtlasControlToolkit/Release/ProjectReleases.aspx
 Release 10301 Production   三月-01-20072 Files    Description 2007-03-01 release of the AJAX Control Toolkit includes two new controls (ListSearch and SlideShow), a number of fixes identified as important by the community, and three significant enhancements: localization support, automatic JavaScript comment stripping, and ASP.NET theme/skin support. It continues to target the new ASP.NET AJAX v1.0 release (http://ajax.asp.net/).

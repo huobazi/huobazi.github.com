@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Iptv on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/iptv/</link>
+    <link>https://huobazi.github.com/tags/iptv/</link>
     <description>Recent content in Iptv on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 25 Feb 2012 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/iptv/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/iptv/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>华为HG232破解一例</title>
-      <link>https://huobazi.aspxboy.com/blog/2012/02/25/hg232/</link>
+      <link>https://huobazi.github.com/blog/2012/02/25/hg232/</link>
       <pubDate>Sat, 25 Feb 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2012/02/25/hg232/</guid>
+      <guid>https://huobazi.github.com/blog/2012/02/25/hg232/</guid>
       <description>0. 默认超级账户 如果电信没有改过你的猫账户，可以尝试使用下面的信息登陆，如果不可以在进入后面的步骤1和2破解 帐号： telecomadmin 密码：nE7jA%5m (注意大小写)
 1. 下载配置文件 猫上插入U盘，下面两种方法都可以，您挑一种吧。
 1.1 手工操作&amp;mdash;-乐趣 用猫后面印刷的普通用户useradmin登陆，这个用户登陆进去什么高级全选都木有，但是表着急，我这么干的，浏览器用firefox，如果木有就去下载，然后装上firebug，去看隐藏的html元素吧，把样式表的disply:none;都禁止掉，什么 备份配置文件、启动从U盘加载配置、回复出厂值、日志等等都出来了吧，插入U盘，点击备份按钮，文件就下载下来了。

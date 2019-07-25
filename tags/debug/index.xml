@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Debug on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/debug/</link>
+    <link>https://huobazi.github.com/tags/debug/</link>
     <description>Recent content in Debug on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 26 Apr 2004 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/debug/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/debug/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>关于 “编译器失败，错误代码为 128”</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/04/26/cb-7697/</link>
+      <link>https://huobazi.github.com/blog/2004/04/26/cb-7697/</link>
       <pubDate>Mon, 26 Apr 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/04/26/cb-7697/</guid>
+      <guid>https://huobazi.github.com/blog/2004/04/26/cb-7697/</guid>
       <description>csdn上有位兄弟遇到这个错误了
 http://expert.csdn.net/Expert/topic/3009/3009791.xml?temp=2.024478E-02
 我先是搜索baidu发现一个帖子

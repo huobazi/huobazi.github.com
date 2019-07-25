@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Html on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/html/</link>
+    <link>https://huobazi.github.com/tags/html/</link>
     <description>Recent content in Html on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 18 Aug 2004 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/html/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/html/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>HTML特殊字符 - 补遗 </title>
-      <link>https://huobazi.aspxboy.com/blog/2004/08/18/cb-34377/</link>
+      <link>https://huobazi.github.com/blog/2004/08/18/cb-34377/</link>
       <pubDate>Wed, 18 Aug 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/08/18/cb-34377/</guid>
+      <guid>https://huobazi.github.com/blog/2004/08/18/cb-34377/</guid>
       <description>ISO 8859-1 (Latin-1) characters
  
     &amp;amp;nbsp; &amp;amp;#160; ¡ &amp;amp;iexcl; &amp;amp;#161; ¢ &amp;amp;cent; &amp;amp;#162; £ &amp;amp;pound; &amp;amp;#163; ¤ &amp;amp;curren; &amp;amp;#164;   ¥ &amp;amp;yen; &amp;amp;#165; ¦ &amp;amp;brvbar; &amp;amp;#166; § &amp;amp;sect; &amp;amp;#167; ¨ &amp;amp;uml; &amp;amp;#168; © &amp;amp;copy; &amp;amp;#169;   ª &amp;amp;ordf; &amp;amp;#170; « &amp;amp;laquo; &amp;amp;#171; ¬ &amp;amp;not; &amp;amp;#172; ­ &amp;amp;shy; &amp;amp;#173; ® &amp;amp;reg; &amp;amp;#174;   ¯ &amp;amp;macr; &amp;amp;#175; ° &amp;amp;deg; &amp;amp;#176; ± &amp;amp;plusmn; &amp;amp;#177; ² &amp;amp;sup2; &amp;amp;#178; ³ &amp;amp;sup3; &amp;amp;#179;   ´ &amp;amp;acute; &amp;amp;#180; µ &amp;amp;micro; &amp;amp;#181; ¶ &amp;amp;para; &amp;amp;#182; · &amp;amp;middot; &amp;amp;#183; ¸ &amp;amp;cedil; &amp;amp;#184;   ¹ &amp;amp;sup1; &amp;amp;#185; º &amp;amp;ordm; &amp;amp;#186; » &amp;amp;raquo; &amp;amp;#187; ¼ &amp;amp;frac14; &amp;amp;#188; ½ &amp;amp;frac12; &amp;amp;#189;   ¾ &amp;amp;frac34; &amp;amp;#190; ¿ &amp;amp;iquest; &amp;amp;#191; À &amp;amp;Agrave; &amp;amp;#192; Á &amp;amp;Aacute; &amp;amp;#193; Â &amp;amp;Acirc; &amp;amp;#194;   Ã &amp;amp;Atilde; &amp;amp;#195; Ä &amp;amp;Auml; &amp;amp;#196; Å &amp;amp;Aring; &amp;amp;#197; Æ &amp;amp;AElig; &amp;amp;#198; Ç &amp;amp;Ccedil; &amp;amp;#199;   È &amp;amp;Egrave; &amp;amp;#200; É &amp;amp;Eacute; &amp;amp;#201; Ê &amp;amp;Ecirc; &amp;amp;#202; Ë &amp;amp;Euml; &amp;amp;#203; Ì &amp;amp;Igrave; &amp;amp;#204;   Í &amp;amp;Iacute; &amp;amp;#205; Î &amp;amp;Icirc; &amp;amp;#206; Ï &amp;amp;Iuml; &amp;amp;#207; Ð &amp;amp;ETH; &amp;amp;#208; Ñ &amp;amp;Ntilde; &amp;amp;#209;   Ò &amp;amp;Ograve; &amp;amp;#210; Ó &amp;amp;Oacute; &amp;amp;#211; Ô &amp;amp;Ocirc; &amp;amp;#212; Õ &amp;amp;Otilde; &amp;amp;#213; Ö &amp;amp;Ouml; &amp;amp;#214;   × &amp;amp;times; &amp;amp;#215; Ø &amp;amp;Oslash; &amp;amp;#216; Ù &amp;amp;Ugrave; &amp;amp;#217; Ú &amp;amp;Uacute; &amp;amp;#218; Û &amp;amp;Ucirc; &amp;amp;#219;   Ü &amp;amp;Uuml; &amp;amp;#220; Ý &amp;amp;Yacute; &amp;amp;#221; Þ &amp;amp;THORN; &amp;amp;#222; ß &amp;amp;szlig; &amp;amp;#223; à &amp;amp;agrave; &amp;amp;#224;   á &amp;amp;aacute; &amp;amp;#225; â &amp;amp;acirc; &amp;amp;#226; ã &amp;amp;atilde; &amp;amp;#227; ä &amp;amp;auml; &amp;amp;#228; å &amp;amp;aring; &amp;amp;#229;   æ &amp;amp;aelig; &amp;amp;#230; ç &amp;amp;ccedil; &amp;amp;#231; è &amp;amp;egrave; &amp;amp;#232; é &amp;amp;eacute; &amp;amp;#233; ê &amp;amp;ecirc; &amp;amp;#234;   ë &amp;amp;euml; &amp;amp;#235; ì &amp;amp;igrave; &amp;amp;#236; í &amp;amp;iacute; &amp;amp;#237; î &amp;amp;icirc; &amp;amp;#238; ï &amp;amp;iuml; &amp;amp;#239;   ð &amp;amp;eth; &amp;amp;#240; ñ &amp;amp;ntilde; &amp;amp;#241; ò &amp;amp;ograve; &amp;amp;#242; ó &amp;amp;oacute; &amp;amp;#243; ô &amp;amp;ocirc; &amp;amp;#244;   õ &amp;amp;otilde; &amp;amp;#245; ö &amp;amp;ouml; &amp;amp;#246; ÷ &amp;amp;divide; &amp;amp;#247; ø &amp;amp;oslash; &amp;amp;#248; ù &amp;amp;ugrave; &amp;amp;#249;   ú &amp;amp;uacute; &amp;amp;#250; û &amp;amp;ucirc; &amp;amp;#251; ü &amp;amp;uuml; &amp;amp;#252; ý &amp;amp;yacute; &amp;amp;#253; þ &amp;amp;thorn; &amp;amp;#254;   ÿ &amp;amp;yuml; &amp;amp;#255;   symbols, mathematical symbols, and Greek letters</description>
@@ -24,10 +24,10 @@
     
     <item>
       <title>一个很全的教程站</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/06/01/cb-12759/</link>
+      <link>https://huobazi.github.com/blog/2004/06/01/cb-12759/</link>
       <pubDate>Tue, 01 Jun 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/06/01/cb-12759/</guid>
+      <guid>https://huobazi.github.com/blog/2004/06/01/cb-12759/</guid>
       <description>很少见教程大全，不知道我是不是很落伍，今天才逛到这里
 
 HTML Tutorials
@@ -68,10 +68,10 @@ Learn PHP
     
     <item>
       <title>使网页中的元素可编辑</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/02/04/cb-830/</link>
+      <link>https://huobazi.github.com/blog/2004/02/04/cb-830/</link>
       <pubDate>Wed, 04 Feb 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/02/04/cb-830/</guid>
+      <guid>https://huobazi.github.com/blog/2004/02/04/cb-830/</guid>
       <description>在net_lover的文章里找到了答案.
 http://www.csdn.net/Develop/Read_Article.asp?Id=4405
 代码如下：

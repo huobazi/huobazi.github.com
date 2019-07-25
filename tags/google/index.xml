@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Google on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/google/</link>
+    <link>https://huobazi.github.com/tags/google/</link>
     <description>Recent content in Google on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 25 Jan 2008 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/google/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/google/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Google的投票站点在用Asp.net</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/01/25/googleandaspdotnet/</link>
+      <link>https://huobazi.github.com/blog/2008/01/25/googleandaspdotnet/</link>
       <pubDate>Fri, 25 Jan 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/01/25/googleandaspdotnet/</guid>
+      <guid>https://huobazi.github.com/blog/2008/01/25/googleandaspdotnet/</guid>
       <description>https://survey.google.com/wix/p0621608.aspx
 https://survey.google.com/aaaaaaaaaaaaaa.axd
 
@@ -29,10 +29,10 @@ X-Powered-By ASP.NET</description>
     
     <item>
       <title>Google发布谷歌拼音输入</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/04/04/googlepinyininput/</link>
+      <link>https://huobazi.github.com/blog/2007/04/04/googlepinyininput/</link>
       <pubDate>Wed, 04 Apr 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/04/04/googlepinyininput/</guid>
+      <guid>https://huobazi.github.com/blog/2007/04/04/googlepinyininput/</guid>
       <description>http://tools.google.com/pinyin/
  终有个好用的 可以在日文系统下用的拼音输入法了。
 更酷的是网络同步功能：
@@ -41,10 +41,10 @@ X-Powered-By ASP.NET</description>
     
     <item>
       <title>Google的Picasa网络相册很弓虽！！！</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/03/21/googlepicasa/</link>
+      <link>https://huobazi.github.com/blog/2007/03/21/googlepicasa/</link>
       <pubDate>Wed, 21 Mar 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/03/21/googlepicasa/</guid>
+      <guid>https://huobazi.github.com/blog/2007/03/21/googlepicasa/</guid>
       <description>今天试验了一下 功能比较强 特别是 当机器上未装Picasa时用 Activex 来上传、排序 幻灯片播放等。
 一个字 弓虽！
 演示：
@@ -55,10 +55,10 @@ http://picasaweb.google.com/huobazi/NCFAnE/photo#s5044173787206243378</descripti
     
     <item>
       <title>Google的网站统计、分析系统</title>
-      <link>https://huobazi.aspxboy.com/blog/2005/11/16/cb-277830/</link>
+      <link>https://huobazi.github.com/blog/2005/11/16/cb-277830/</link>
       <pubDate>Wed, 16 Nov 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2005/11/16/cb-277830/</guid>
+      <guid>https://huobazi.github.com/blog/2005/11/16/cb-277830/</guid>
       <description>http://www.google.com/analytics/
 功能全，比较酷！</description>
     </item>

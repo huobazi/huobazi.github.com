@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Treeview on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/treeview/</link>
+    <link>https://huobazi.github.com/tags/treeview/</link>
     <description>Recent content in Treeview on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 14 Jul 2004 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/treeview/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/treeview/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>能在微软的网站找到IeWebcontrols的安装文件吗</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/07/14/cb-24084/</link>
+      <link>https://huobazi.github.com/blog/2004/07/14/cb-24084/</link>
       <pubDate>Wed, 14 Jul 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/07/14/cb-24084/</guid>
+      <guid>https://huobazi.github.com/blog/2004/07/14/cb-24084/</guid>
       <description>你们能在微软的网站找到IeWebcontrols的安装文件吗?
 这个地址不行了
 http://msdn.microsoft.com/downloads/samples/internet/ASP_DOT_NET_ServerControls/WebControls/default.asp

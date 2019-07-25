@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Azman on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/azman/</link>
+    <link>https://huobazi.github.com/tags/azman/</link>
     <description>Recent content in Azman on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 20 Apr 2008 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/azman/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/azman/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>使用AzMan找不到Microsoft.Interop.Security.AzRoles的解决方法</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/04/20/microsoftinteropsecurityazroles/</link>
+      <link>https://huobazi.github.com/blog/2008/04/20/microsoftinteropsecurityazroles/</link>
       <pubDate>Sun, 20 Apr 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/04/20/microsoftinteropsecurityazroles/</guid>
+      <guid>https://huobazi.github.com/blog/2008/04/20/microsoftinteropsecurityazroles/</guid>
       <description>在c:/Windows/system32下找到azRoles.dll
 如果没有Xp/2003请安装http://www.microsoft.com/downloads/details.aspx?FamilyID=e487f885-f0c7-436a-a392-25793a25bad7&amp;amp;DisplayLang=en.
 Win2000请安装http://www.microsoft.com/downloads/details.aspx?FamilyID=7edde11f-bcea-4773-a292-84525f23baf7&amp;amp;DisplayLang=en.

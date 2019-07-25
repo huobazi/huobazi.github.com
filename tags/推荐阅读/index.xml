@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>推荐阅读 on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB/</link>
+    <link>https://huobazi.github.com/tags/%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB/</link>
     <description>Recent content in 推荐阅读 on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 25 Feb 2012 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>华为HG232破解一例</title>
-      <link>https://huobazi.aspxboy.com/blog/2012/02/25/hg232/</link>
+      <link>https://huobazi.github.com/blog/2012/02/25/hg232/</link>
       <pubDate>Sat, 25 Feb 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2012/02/25/hg232/</guid>
+      <guid>https://huobazi.github.com/blog/2012/02/25/hg232/</guid>
       <description>0. 默认超级账户 如果电信没有改过你的猫账户，可以尝试使用下面的信息登陆，如果不可以在进入后面的步骤1和2破解 帐号： telecomadmin 密码：nE7jA%5m (注意大小写)
 1. 下载配置文件 猫上插入U盘，下面两种方法都可以，您挑一种吧。
 1.1 手工操作&amp;mdash;-乐趣 用猫后面印刷的普通用户useradmin登陆，这个用户登陆进去什么高级全选都木有，但是表着急，我这么干的，浏览器用firefox，如果木有就去下载，然后装上firebug，去看隐藏的html元素吧，把样式表的disply:none;都禁止掉，什么 备份配置文件、启动从U盘加载配置、回复出厂值、日志等等都出来了吧，插入U盘，点击备份按钮，文件就下载下来了。
@@ -33,19 +33,19 @@ itv 不选择 无线的话 要选VLAN透传，选无线是VLAN修改
     
     <item>
       <title>京东新蛋攻防</title>
-      <link>https://huobazi.aspxboy.com/blog/2010/04/30/360buy-vs-newegg/</link>
+      <link>https://huobazi.github.com/blog/2010/04/30/360buy-vs-newegg/</link>
       <pubDate>Fri, 30 Apr 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2010/04/30/360buy-vs-newegg/</guid>
+      <guid>https://huobazi.github.com/blog/2010/04/30/360buy-vs-newegg/</guid>
       <description>&lt;p&gt;这是一片不断膨胀、愈演愈烈的虚拟战场。每一位统帅都着迷于它的独特魅力——任何势力的盛衰都取决于无数素未谋面的人的鼠标点击。每一位统帅也都必须铭记：实体世界里“强攻弱守”的军事规律已经在此失效。这里唯一可以遵循的生死法则是，无论势力强弱，一旦站到防守的位置上，那么溃败将接踵而来，且来得出乎意料地快&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>在线编辑器的一个新选择。</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/10/27/kissy-editor/</link>
+      <link>https://huobazi.github.com/blog/2009/10/27/kissy-editor/</link>
       <pubDate>Tue, 27 Oct 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/10/27/kissy-editor/</guid>
+      <guid>https://huobazi.github.com/blog/2009/10/27/kissy-editor/</guid>
       <description>今天lifesinger发布了淘宝编辑器,
 可以在这里看到演示
 介绍可以看这里，http://lifesinger.org/blog/2009/10/kissy-editor/</description>
@@ -53,10 +53,10 @@ itv 不选择 无线的话 要选VLAN透传，选无线是VLAN修改
     
     <item>
       <title>【How to】解决Visio虚线复制到word中变为实线</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/10/10/visio-dashed/</link>
+      <link>https://huobazi.github.com/blog/2009/10/10/visio-dashed/</link>
       <pubDate>Sat, 10 Oct 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/10/10/visio-dashed/</guid>
+      <guid>https://huobazi.github.com/blog/2009/10/10/visio-dashed/</guid>
       <description>添加 MetafileDashLineAsSolid 到以下注册表位置，类型DWORD。
  • Visio 2007
 HKEY_CURRENT_USER\Software\Microsoft\Office\12.0\Visio\Application
@@ -69,10 +69,10 @@ HKEY_CURRENT_USER\Software\Microsoft\Office\11.0\Visio\Application
     
     <item>
       <title>服务器状态代码含义</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/09/02/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8A%B6%E6%80%81%E4%BB%A3%E7%A0%81%E5%90%AB%E4%B9%89/</link>
+      <link>https://huobazi.github.com/blog/2009/09/02/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8A%B6%E6%80%81%E4%BB%A3%E7%A0%81%E5%90%AB%E4%B9%89/</link>
       <pubDate>Wed, 02 Sep 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/09/02/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8A%B6%E6%80%81%E4%BB%A3%E7%A0%81%E5%90%AB%E4%B9%89/</guid>
+      <guid>https://huobazi.github.com/blog/2009/09/02/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8A%B6%E6%80%81%E4%BB%A3%E7%A0%81%E5%90%AB%E4%B9%89/</guid>
       <description>&lt;p&gt;&lt;h2 class=&#34;title&#34;&gt;服务器状态代码含义google来的，存档。&lt;/h2&gt;
 &lt;p class=&#34;title&#34;&gt; &lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;</description>
@@ -80,28 +80,28 @@ HKEY_CURRENT_USER\Software\Microsoft\Office\11.0\Visio\Application
     
     <item>
       <title>哈佛经典案例，赶集卖猪记 </title>
-      <link>https://huobazi.aspxboy.com/blog/2008/11/01/hf/</link>
+      <link>https://huobazi.github.com/blog/2008/11/01/hf/</link>
       <pubDate>Sat, 01 Nov 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/11/01/hf/</guid>
+      <guid>https://huobazi.github.com/blog/2008/11/01/hf/</guid>
       <description>&lt;p&gt;哈佛经典案例，赶集卖猪记（次贷危机加强篇）&lt;br /&gt;　　&lt;br /&gt;　　这是目前为止关于次贷危机最通俗易懂的版本了。&lt;br /&gt;　　&lt;br /&gt;　　1&lt;br /&gt;　　&lt;br /&gt;　　大家都知道这个案例：&lt;br /&gt;　　&lt;br /&gt;　　一男赶集卖猪，天黑遇雨，二十头猪未卖成，到一农家借宿。&lt;br /&gt;　　&lt;br /&gt;　　少妇说：家里只一人不便。&lt;br /&gt;　&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>次贷危机和一夜情</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/10/26/crisis-and-ons/</link>
+      <link>https://huobazi.github.com/blog/2008/10/26/crisis-and-ons/</link>
       <pubDate>Sun, 26 Oct 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/10/26/crisis-and-ons/</guid>
+      <guid>https://huobazi.github.com/blog/2008/10/26/crisis-and-ons/</guid>
       <description>&lt;p&gt;     有一天，一位其貌不扬的男士，带着一位十分艳丽的OL，来到Causeway Bay一家LV店。他为OL选了一价值6万5元的LV handbag。　　付款时，男士掏出支票本，十分潇洒地签了一张支票。店员有些为难，因为这对夫妇是第一次来店购物。&lt;br /&gt;　　男士看穿了店员的心思，十分冷静地对店员说： &#34;我感觉到，您担心这是一张是空头支票，对吗？今天是周六，银行关门。我建议您把支票和handbag都留下。等到星期一支票兑现之后，再请你们把 handbag 送到这位小姐的府上。您看这样行不行？&#34;&lt;br /&gt;　&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>员工辞职的十大原因！ </title>
-      <link>https://huobazi.aspxboy.com/blog/2007/09/02/cb-878740/</link>
+      <link>https://huobazi.github.com/blog/2007/09/02/cb-878740/</link>
       <pubDate>Sun, 02 Sep 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/09/02/cb-878740/</guid>
+      <guid>https://huobazi.github.com/blog/2007/09/02/cb-878740/</guid>
       <description>美国企管顾问史密斯（Gregory Smith），日前在《CEO Refresher》杂志上指出，根据他多年的顾问经验，员工辞职的十大原因为
 1、员工的工作量过重，造成他们必须在晚上或周末加班。 2、公司不愿意在办公室杂务上，另外再花费雇用专人负责，以致专业工作者必须自行做影印等工作。
 3、当员工可以在其他公司找到薪水高二至三成的工作时，公司却宣布暂时不帮员工加薪及升迁。
@@ -112,19 +112,19 @@ HKEY_CURRENT_USER\Software\Microsoft\Office\11.0\Visio\Application
     
     <item>
       <title>上班人员必读：“五险一金”详解！</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/03/31/cb-694846/</link>
+      <link>https://huobazi.github.com/blog/2007/03/31/cb-694846/</link>
       <pubDate>Sat, 31 Mar 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/03/31/cb-694846/</guid>
+      <guid>https://huobazi.github.com/blog/2007/03/31/cb-694846/</guid>
       <description>问：什么是五险一金？  答：“五险一金”讲的是五种保险，包括养老保险、医疗保险、失业保险、工伤保险和生育保险；“一金”指的是住房公积金。  其中养老保险、医疗保险和失业保险，这三种险是由企业和个人共同缴纳的保费，工伤保险和生育保险完全是由企业承担的。个人不需要缴纳。这里要注意的是“五险”是法定的，而“一金”不是法定的。  问：“五险一金”的缴费比例是什么？  答：目前北京养老保险缴费比例：单位20%(其中17%划入统筹基金，3%划入个人帐户)，个人8%(全部划入个人帐户)；医疗保险缴费比例：单位10%，个人2%+3元。  失业保险缴费比例：单位1.5%，个人0.5%；工伤保险根据单位被划分的行业范围来确定它的工伤费率；生育保险缴费比例：单位0.8%，个人不交钱。  公积金缴费比例：　根据企业的实际情况，选择住房公积金缴费比例。但原则上最高缴费额不得超过北京市职工平均工资300%的10%。  统筹基金即：在养老保险制度从国家—单位制逐渐向国家—社会制转变的过程中需要国家统筹，以解决经济发展不平衡及人口老龄化等问题。  (1)以企业缴费为主建立社会统筹基金；(2)由职工和企业缴费为主建立个人帐户；(3)政府负担养老保险基金的管理费用。这种社会统筹和个人帐户相结合的半基金制有利于应付中国人口老龄化危机，逐渐分散旧制度到新制度的转轨成本，逐步实现由企业养老保险制度到个人养老保险制度的转变。  四险一金的缴纳额度每个地区的规定都不同，基数是以工资总额为基数。有的企业在发放时有基本工资，有相关一些补贴，但有的企业在缴纳时，只是基本工资，这是违反法律规定的。具体比例要向当地的劳动部门去咨询。  关于养老保险、失业保险和医疗保险的支取，是在法定允许的情况下才可以领取，是由设保登记部门来发放，比如“养老保险，要达到法定的年龄才可以，失业保险金的领取也是要具备条件，比如你到户口所在地的街道办事处办理失业证明，同时又办了求职证，就是指你失业以后还必须有求职的意愿，这样的条件才可以领取。  如果失业之后你不想工作，那么就不能给你发保险金。另外，养老金和失业金是不能同时享受的。  问：试用期内是否享有保险？  答：在试用期内也应该有享受保险，因为试用期是合同期的一个组成部分，它不是隔离在合同期之外的。所以在试用期内也应该上保险。另外，企业给员工上保险是一个法定的义务，不取决于当事人的意思或自愿与否，即使员工表示不需要交保险也不行，而且商业保险不能替代社会保险。养老保险的享受待遇。  累计缴纳养老保险15年以上，并达到法定退休年龄，可以享受养老保险待遇：  1、按月领取按规定计发的基本养老金，直至死亡。  基本养老金的计算公式如下：  基本养老金=基础养老金+个人账户养老金+过渡性养老金=退休前一年全市职工月平均工资×20%(缴费年限不满15年的按15%)+个人账户本息和÷120+指数化月平均缴费工资×1997年底前缴费年限×1.4%。  2、死亡待遇。(1)丧葬费(2)一次性抚恤费(3)符合供养条件的直系亲属生活困难补助费，按月发放，直至供养直系亲属死亡。  注意：养老保险应尽量连续缴纳，根据有关文件规定，凡企业或被保险人间断缴纳基本养老保险费的(失业人员领取失业保险金期间或按有关规定不缴费的人员除外)，被保险人符合国家规定的养老条件，计算基本养老金时，其基础性养老金的计算基数，按累计间断的缴费时间逐年前推至相应年度上一年的本市职工平均工资计算(累计间断的缴费时间，按每满12个月为一个间断缴费年度计算，不满12个月不计算)  举例来说吧：  如果你2020年退休，正常你的基础养老金是2019年的社会平均工资×20%，但是如果你在退休之前养老保险中断了30个月，就是中断了2.5年，按2年算，你的基础养老金就是2017年社会平均工资×20%  问：参加医疗保险享受哪些待遇？  答：1、门、急诊医疗费用。在职职工年度内(1月1日-12月31日)符合基本医疗保险规定范围的医疗费累计超过2000元以上部分；  2、结算比例。合同期内派遣人员2000元以上部分报销50%，个人自付50%；在一个年度内累计支付派遣人员门、急诊报销最高数额为2万元。  3、参保人员要妥善保管好在定点医院就诊的门诊医疗单据(含大额以下部分的收据、处方底方等)，作为医疗费用报销凭证；　 4、三种特殊病的门诊就医：参保人员患恶性肿瘤放射治疗和化学治疗、肾透析、肾移植后服抗排异药需在门诊就医时，由参保人就医的二、三级定点医院开据”疾病诊断证明”，并填写《北京市医疗保险特殊病种申报审批表》，报区医保中心审批备案。这三种特殊病的门诊就医及取药仅限在批准就诊的定点医院，不能到定点零售药店购买。发生的医疗费符合门诊特殊病规定范围的，参照住院进行结算。  5、住院医疗  ●住院押金：符合住院条件的参保人员，在收入住院时，医院收取参保人员部分押金，押金数额由医院根据病情按比例确定。如被派遣人员单位和参保人员未能按时足额缴纳医疗保险费的，住院押金由派遣人员个人全额垫付。  ●结算周期：参保人员住院治疗每90天为一个结算周期：不超过90天的，每次住院为一个结算周期。  ●恶性肿瘤患者门诊放射治疗和化学治疗、肾透析、肾移植后服抗排异药、患有精神病需常年住院的患者其发生的医疗费用每360天为一个结算周期。  ●参保人员在定点的社区卫生服务中心(站)的家庭病床治疗发生的医疗费用，每90天为一个结算周期。  ●参保人员出院或阶段治疗结束时，需由派遣人员个人先与医院结清应由派遣人员个人自费和自付的费用，应由基本医疗保险统筹基金和大额医疗互助资金支付的医疗费用，由医院向医保中心申报审核、结算。  ●参保人员住院治疗，符合基本医疗保险规定范围的医疗费的结算，设定基本医疗统筹基金支付起付线和最高支付额。  ●起付线第一次住院为1300元，以后住院为650元，最高支付限额为5万元；超过最高支付上限的(不含起付标准以下以及派遣人员个人负担部分)大额医疗费用互助。  资金支付70%，派遣人员个人负担30%。在一个年度内最高支付10万元。住院费用的结算标准，在一个结算周期内按医院等级和费用数额采取分段计算、累加支付的办法。（各项比例有调整时，按新的标准执行）  注意：非因公交通事故，医保是免责的！  问：参加失业保险将能享受待遇？  答：失业保险连续缴纳一年以上，档案退回街道后。可以在街道享受失业保险待遇。  1.</description>
     </item>
     
     <item>
       <title>转载, 春晚诗朗诵《心里话》之程序员版!! </title>
-      <link>https://huobazi.aspxboy.com/blog/2007/03/06/cb-665199/</link>
+      <link>https://huobazi.github.com/blog/2007/03/06/cb-665199/</link>
       <pubDate>Tue, 06 Mar 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/03/06/cb-665199/</guid>
+      <guid>https://huobazi.github.com/blog/2007/03/06/cb-665199/</guid>
       <description>要问我是谁？
 过去，我总不愿回答，
 因为我怕，
@@ -155,10 +155,10 @@ http://community.csdn.net/Expert/topic/5370/5370546.xml?temp=.6211817</descripti
     
     <item>
       <title>多收了三五斗（TCL mm版）(收藏.搞笑) </title>
-      <link>https://huobazi.aspxboy.com/blog/2004/08/17/cb-34217/</link>
+      <link>https://huobazi.github.com/blog/2004/08/17/cb-34217/</link>
       <pubDate>Tue, 17 Aug 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/08/17/cb-34217/</guid>
+      <guid>https://huobazi.github.com/blog/2004/08/17/cb-34217/</guid>
       <description>from: http://computer.mblogger.cn/vcbear/posts/13163.aspx TCL的停车场里，横七竖八停着各处来的自行车,助动车。门口排队的是UT的GG，把门口 塞得很满。厚厚的履历表和财产证明用各色的夹子夹者,一捆一捆地,填没了这只手和那只手 之间的空隙.门口进去就是TCL最大的会议厅了,联谊的MM就排在市场的那一边。朝晨的太阳 光从整洁的玻璃天棚斜射下来，光柱子落在吧台外面晃动着的几双Gucci高跟鞋上。 那些UTGG大清早骑自行车出来，穿越了半个高新区,到了TCL，早饭也不吃一下，便来到 吧台前面占卜他们的命运。“Manager 30万，Team Leader 20W，Engineer不要。”TCL的联 谊小姐有气没力地回答他们。　“什么！”UT的朋友几乎不相信自己的耳朵。美满的希望突然一沉，一会儿大家都呆 了。　“在六月里，你们不是说IT年薪10万么？”　“8万也要过，不要说10万。”　“哪里有涨得这样厉害的！”　“现在是什么时候，你们不知道么？各处的GG象潮水一般涌来,过几天还要涨呢！” 
 原来出来犹如赛龙船似的一股劲儿，现在在每个人的身体里松懈下来了。最近天照应， 很多人加了薪，税务局的兄台也不来作梗, 很快就拿到了年薪，有的还是优秀 Staff的头 衔,谁都以为该得透一透气了。　哪里知道临到最后的占卜，却得到比IT冬天或公司开除更坏的课兆！　“还是不要娶的好，我们回去呆在家里吧！”从简单的心里喷出了这样的愤激的话。 “嗤，”小姐冷笑着，“你们不干，人家就关门了么？各处地方多的是新来的GG,头几 批还没分派完，华为，中兴的优秀GG就要涌来了.现在各地的海归,硕士,博士,MBA也多得是. 高素质的丫头是为他们留着的&#34; 华为，中兴的优秀GG,硕士,博士,MBA,那是遥远的事情，仿佛可以不管。而已经30的GG 不找LP，却只能作为一句愤激的话说说罢了。怎么能够不娶呢？在家父母的命令是要遵守 的，为了来联谊，买了体面的西装革履，当初父向亲母亲夸下的海口,自己向狐朋狗友吹的 牛是要还的。　“我们到创维去找MM吧，”在创维，或许有比较好的命运等候着他，有人这么想。　但是，小姐又来了一个“嗤”，眨着微翘的睫毛说道：“不要说创维，就是找到康佳
 去也一样。我们同行公议，这两天的价钱是Manager 30万，Team Leader 20W，Engineer 不要”。 “到创维去找没有好处，”同伴间也提出了驳议。“创维的还要深圳户口，天知道他们 多收我们多少钱！就说依他们给，哪里来的钱？”　“小姐，能不能降低一点？”差不多是哀求的声气。　“降低一点，说说倒是很容易的一句话。我们的MM都是金枝玉叶养的，你们要知道，降 低一点，就没有SK-II，没有资生堂，没有TOYOTA，这样的傻事谁肯干？” “这个价钱实在太高了，我们做梦也没想到。去年的要求是15万，今年有的只要12万， 不，你小姐说的，10万也招过；我们想，今年总该比15万少一点吧。哪里知道只有20 万！” “小姐，就是去年的老价钱，年薪15万吧。”　“小姐，灰领GG可怜，你们行行好心，少赚一点吧。”　另一位小姐听得厌烦，把手里的空咖啡杯扔到街心，睁大了眼睛说,“你们嫌价钱低， 不要来找好了。是你们自己来的，并没有请你们来。只管多罗嗦做什么！我们有的是 Offer，不给你们，有别人的好给。你们看，又有几群GG挤过来了.”　三四张Glasses好不容易从人堆里挤过来，Glasses后面是充满着希望的年轻的脸。他们 随即加入先到的一群。斜伸下来的光柱子落在他们的西服的肩背上。　“听听看，今年什么价钱。”　“比去年都不如，要求Team Leader 20W”伴着一副懊丧到无可奈何的神色。　“什么！”希望犹如肥皂泡，一会儿又进裂了三四个。</description>
@@ -166,10 +166,10 @@ http://community.csdn.net/Expert/topic/5370/5370546.xml?temp=.6211817</descripti
     
     <item>
       <title>一个很全的教程站</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/06/01/cb-12759/</link>
+      <link>https://huobazi.github.com/blog/2004/06/01/cb-12759/</link>
       <pubDate>Tue, 01 Jun 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/06/01/cb-12759/</guid>
+      <guid>https://huobazi.github.com/blog/2004/06/01/cb-12759/</guid>
       <description>很少见教程大全，不知道我是不是很落伍，今天才逛到这里
 
 HTML Tutorials

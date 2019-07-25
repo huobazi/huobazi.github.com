@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogging on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/blogging/</link>
+    <link>https://huobazi.github.com/tags/blogging/</link>
     <description>Recent content in Blogging on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 21 Jun 2009 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/blogging/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/blogging/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>博客园到Wordpress搬家成功！</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/06/21/my-blog-moved-to-wp/</link>
+      <link>https://huobazi.github.com/blog/2009/06/21/my-blog-moved-to-wp/</link>
       <pubDate>Sun, 21 Jun 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/06/21/my-blog-moved-to-wp/</guid>
+      <guid>https://huobazi.github.com/blog/2009/06/21/my-blog-moved-to-wp/</guid>
       <description>终于把在博客园的博客的数据导入到Wordpress内了，包括随笔/文章，图片,标签，评论等，是写了两个C# console程序做到的，程序我传到博客园了，如果有需要的朋友可以试试。但请注意，要自己在博客园后台备份RSS文件放到Reader的Data目录内，设置为编译选项为永远复制，运行后会生成一个Entry.xml并且把博客内的图片和分类、Tag、评论等抓下来，然后将此xml文件拷贝到Writer内，在代码内修改一下你的Wordress的数据库连接，然后跑一下Writer，就可以完成数据导入到Wordpress了，时间匆忙，代码写的很乱，有些地方是针对本人需求处理的，如果你想要直接运行此程序完成你的博客园博客到Wordpress的转换，那是不可能滴！你一定要有简单的C#调试基础哦。
 http://files.cnblogs.com/huobazi/MyBlogTools.rar</description>
     </item>

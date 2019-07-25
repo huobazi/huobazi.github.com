@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ubuntu on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/ubuntu/</link>
+    <link>https://huobazi.github.com/tags/ubuntu/</link>
     <description>Recent content in Ubuntu on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 04 Feb 2012 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Ubuntu下设置 Sublime Text 2 显示中文 &amp;&amp; 输入中文</title>
-      <link>https://huobazi.aspxboy.com/blog/2012/02/04/ubuntu-sublime-text-chinese/</link>
+      <link>https://huobazi.github.com/blog/2012/02/04/ubuntu-sublime-text-chinese/</link>
       <pubDate>Sat, 04 Feb 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2012/02/04/ubuntu-sublime-text-chinese/</guid>
+      <guid>https://huobazi.github.com/blog/2012/02/04/ubuntu-sublime-text-chinese/</guid>
       <description>&lt;p&gt;Sublime text 2在mac os 下用的很舒服，今天尝试在ubuntu下使用一下，发现汉字显示不了，&lt;/p&gt;
 &lt;p&gt;后来找到方法：&lt;/p&gt;
 &lt;p&gt;菜单栏 -&amp;gt; Preferences -&amp;gt; File Settings - User，在配置文件中增加：&lt;/p&gt;</description>
@@ -24,28 +24,28 @@
     
     <item>
       <title>在 Ubuntu 下安装 Redis 并使用 init 脚本启动  &amp;&amp; 添加 删除ubuntu自启动服务</title>
-      <link>https://huobazi.aspxboy.com/blog/2011/08/06/ubuntu-redis-init-service-autorun/</link>
+      <link>https://huobazi.github.com/blog/2011/08/06/ubuntu-redis-init-service-autorun/</link>
       <pubDate>Sat, 06 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2011/08/06/ubuntu-redis-init-service-autorun/</guid>
+      <guid>https://huobazi.github.com/blog/2011/08/06/ubuntu-redis-init-service-autorun/</guid>
       <description>1. 下载安装：  cd /tmp wget http://redis.googlecode.com/files/redis-*.*.*.tar.gz tar -zxf redis-*.*.*.tar.gz cd redis-*.*.* make sudo make install  2. 配置init脚本：  wget https://github.com/ijonas/dotfiles/raw/master/etc/init.d/redis-server wget https://github.com/ijonas/dotfiles/raw/master/etc/redis.conf sudo mv redis-server /etc/init.d/redis-server sudo chmod +x /etc/init.d/redis-server sudo mv redis.conf /etc/redis.conf  3. 初始化用户和日志路径  sudo useradd redis sudo mkdir -p /var/lib/redis sudo mkdir -p /var/log/redis sudo chown redis.redis /var/lib/redis sudo chown redis.redis /var/log/redis  4. 启动Redis：  sudo /etc/init.d/redis-server start   添加一个服务 #sudo update-rc.</description>
     </item>
     
     <item>
       <title>在ubuntu上配置 nginx和php&#43;fastcgi</title>
-      <link>https://huobazi.aspxboy.com/blog/2011/01/01/ubuntu-nginx-php-fastcgi/</link>
+      <link>https://huobazi.github.com/blog/2011/01/01/ubuntu-nginx-php-fastcgi/</link>
       <pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2011/01/01/ubuntu-nginx-php-fastcgi/</guid>
+      <guid>https://huobazi.github.com/blog/2011/01/01/ubuntu-nginx-php-fastcgi/</guid>
       <description>&lt;p&gt;(1)安装php5&lt;br /&gt;apt-get install php5 php-pear php5-cli php5-common php5-xcache php5-cgi php5-mysql php5-curl  php5-gd  php5-imagick  php5-xmlrpc  php5-dev php5-memcache&lt;br /&gt;(2)安装nginx&lt;br /&gt;apt-get install nginx&lt;br /&gt;(3)安装spawn-fcgi&lt;br /&gt; apt-get install spawn-fcgi&lt;br /&gt;(4)设置，也是最头疼滴地方哦&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>VirtualBox内的Linux和宿主Windows的文件共享</title>
-      <link>https://huobazi.aspxboy.com/blog/2010/12/25/virtualbox-linux-windows-share/</link>
+      <link>https://huobazi.github.com/blog/2010/12/25/virtualbox-linux-windows-share/</link>
       <pubDate>Sat, 25 Dec 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2010/12/25/virtualbox-linux-windows-share/</guid>
+      <guid>https://huobazi.github.com/blog/2010/12/25/virtualbox-linux-windows-share/</guid>
       <description>&lt;p&gt;VirtualBox内的Linux和宿主Windows的文件共享&lt;br /&gt;（1）安装增强功能&lt;br /&gt;（2）分配数据空间，制定一个名称，假设为“temp”&lt;br /&gt;（3）挂载， mount -t vboxsf temp /mnt&lt;/p&gt;</description>
     </item>
     

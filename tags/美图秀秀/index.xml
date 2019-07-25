@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>美图秀秀 on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/%E7%BE%8E%E5%9B%BE%E7%A7%80%E7%A7%80/</link>
+    <link>https://huobazi.github.com/tags/%E7%BE%8E%E5%9B%BE%E7%A7%80%E7%A7%80/</link>
     <description>Recent content in 美图秀秀 on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 10 Sep 2009 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/%E7%BE%8E%E5%9B%BE%E7%A7%80%E7%A7%80/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/%E7%BE%8E%E5%9B%BE%E7%A7%80%E7%A7%80/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>我被ps了</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/09/10/meituxiuxiu/</link>
+      <link>https://huobazi.github.com/blog/2009/09/10/meituxiuxiu/</link>
       <pubDate>Thu, 10 Sep 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/09/10/meituxiuxiu/</guid>
+      <guid>https://huobazi.github.com/blog/2009/09/10/meituxiuxiu/</guid>
       <description>&lt;p&gt;老婆学会了用&lt;a title=&#34;http://xiuxiu.meitu.com/&#34; href=&#34;http://xiuxiu.meitu.com/&#34; target=&#34;_blank&#34;&gt;美图秀秀&lt;/a&gt;这个软件，我成了第一个被ps的对象，&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huobazi.aspxboy.com/images/hbz_images/lg10.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;https://huobazi.github.com/images/hbz_images/lg10.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

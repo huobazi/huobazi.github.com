@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ms Ajax on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/ms-ajax/</link>
+    <link>https://huobazi.github.com/tags/ms-ajax/</link>
     <description>Recent content in Ms Ajax on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 04 Mar 2007 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/ms-ajax/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/ms-ajax/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Ajax Control Toolkit 出新版了</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/03/04/newversionofajaxcontroltoolkit/</link>
+      <link>https://huobazi.github.com/blog/2007/03/04/newversionofajaxcontroltoolkit/</link>
       <pubDate>Sun, 04 Mar 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/03/04/newversionofajaxcontroltoolkit/</guid>
+      <guid>https://huobazi.github.com/blog/2007/03/04/newversionofajaxcontroltoolkit/</guid>
       <description>Ajax Control Toolkit 出新版了
 http://www.codeplex.com/AtlasControlToolkit/Release/ProjectReleases.aspx
 Release 10301 Production   三月-01-20072 Files    Description 2007-03-01 release of the AJAX Control Toolkit includes two new controls (ListSearch and SlideShow), a number of fixes identified as important by the community, and three significant enhancements: localization support, automatic JavaScript comment stripping, and ASP.NET theme/skin support. It continues to target the new ASP.NET AJAX v1.0 release (http://ajax.asp.net/).

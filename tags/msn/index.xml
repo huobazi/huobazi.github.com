@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Msn on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/msn/</link>
+    <link>https://huobazi.github.com/tags/msn/</link>
     <description>Recent content in Msn on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 16 Mar 2008 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/msn/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/msn/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>批量 移动 msn 联系人</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/03/16/movefriendtoothergroupinmsn/</link>
+      <link>https://huobazi.github.com/blog/2008/03/16/movefriendtoothergroupinmsn/</link>
       <pubDate>Sun, 16 Mar 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/03/16/movefriendtoothergroupinmsn/</guid>
+      <guid>https://huobazi.github.com/blog/2008/03/16/movefriendtoothergroupinmsn/</guid>
       <description>MSN内导入一个联系人列表后，联系人都在“其他联系人”这个组，
 我想把它重命名一下，不可以，转移到其他组，发现只能一个一个转移。
 最后发现，新建组然后按shift选择需要加入的联系人checkbox，确定。
@@ -27,10 +27,10 @@
     
     <item>
       <title>MSN Toolbar 谁用了</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/01/29/cb-506/</link>
+      <link>https://huobazi.github.com/blog/2004/01/29/cb-506/</link>
       <pubDate>Thu, 29 Jan 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/01/29/cb-506/</guid>
+      <guid>https://huobazi.github.com/blog/2004/01/29/cb-506/</guid>
       <description>MSN Toolbar Beta</description>
     </item>
     

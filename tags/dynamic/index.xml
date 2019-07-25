@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dynamic on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/dynamic/</link>
+    <link>https://huobazi.github.com/tags/dynamic/</link>
     <description>Recent content in Dynamic on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 30 Mar 2010 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/dynamic/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/dynamic/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>在rails中不同的view不同皮肤下的js，css，注入js和css到head区域</title>
-      <link>https://huobazi.aspxboy.com/blog/2010/03/30/hwo-to-injecting-themes-css-javascript-to-header-in-rails/</link>
+      <link>https://huobazi.github.com/blog/2010/03/30/hwo-to-injecting-themes-css-javascript-to-header-in-rails/</link>
       <pubDate>Tue, 30 Mar 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2010/03/30/hwo-to-injecting-themes-css-javascript-to-header-in-rails/</guid>
+      <guid>https://huobazi.github.com/blog/2010/03/30/hwo-to-injecting-themes-css-javascript-to-header-in-rails/</guid>
       <description>&lt;p&gt;利用layout可以很好实现这个需求.&lt;/p&gt;
 &lt;p&gt;在ApplicationHelper内加入如下代码：&lt;/p&gt;
 &lt;div class=&#34;source&#34; style=&#39;font-family: &#34;[object HTMLOptionElement]&#34;,&#34;Consolas&#34;,&#34;Lucida Console&#34;,&#34;Courier New&#34;; color: #e6e1dc; background-color: #111111;&#39;&gt;

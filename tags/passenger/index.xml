@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Passenger on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/passenger/</link>
+    <link>https://huobazi.github.com/tags/passenger/</link>
     <description>Recent content in Passenger on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 24 Jul 2010 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/passenger/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/passenger/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>在centos上装rubyee,passenger和memcached ,搭建rails环境</title>
-      <link>https://huobazi.aspxboy.com/blog/2010/07/24/ruby-on-rails-nginx-passenger-memcached-on-centos/</link>
+      <link>https://huobazi.github.com/blog/2010/07/24/ruby-on-rails-nginx-passenger-memcached-on-centos/</link>
       <pubDate>Sat, 24 Jul 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2010/07/24/ruby-on-rails-nginx-passenger-memcached-on-centos/</guid>
+      <guid>https://huobazi.github.com/blog/2010/07/24/ruby-on-rails-nginx-passenger-memcached-on-centos/</guid>
       <description>&lt;p&gt;流水笔记一则.&lt;/p&gt;
 &lt;p&gt;我之前已在服务器配置了nginx，php，mysql等，现在先安装ruby企业版&lt;/p&gt;
 &lt;div class=&#34;source&#34; style=&#39;font-family: &#34;[object HTMLOptionElement]&#34;,&#34;Consolas&#34;,&#34;Lucida Console&#34;,&#34;Courier New&#34;; color: #c0c0c0; background-color: #000000;&#39;&gt;

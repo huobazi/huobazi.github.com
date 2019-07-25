@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sql Server on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/sql-server/</link>
+    <link>https://huobazi.github.com/tags/sql-server/</link>
     <description>Recent content in Sql Server on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 07 Sep 2007 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/sql-server/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/sql-server/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>一系列SQL SERVER SQL 的分析文章</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/09/07/cb-885304/</link>
+      <link>https://huobazi.github.com/blog/2007/09/07/cb-885304/</link>
       <pubDate>Fri, 07 Sep 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/09/07/cb-885304/</guid>
+      <guid>https://huobazi.github.com/blog/2007/09/07/cb-885304/</guid>
       <description>位于：
 http://blogs.sqlpassj.org/mitsugi/archive/2007/09.aspx
 语言： 日文
@@ -30,10 +30,10 @@ http://blogs.sqlpassj.org/mitsugi/archive/2007/09.aspx
     
     <item>
       <title>免费的Asp.net2.0 Sqlserver express的学习空间</title>
-      <link>https://huobazi.aspxboy.com/blog/2005/12/12/freeaspdotnetsqlserverexpresswebhosting/</link>
+      <link>https://huobazi.github.com/blog/2005/12/12/freeaspdotnetsqlserverexpresswebhosting/</link>
       <pubDate>Mon, 12 Dec 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2005/12/12/freeaspdotnetsqlserverexpresswebhosting/</guid>
+      <guid>https://huobazi.github.com/blog/2005/12/12/freeaspdotnetsqlserverexpresswebhosting/</guid>
       <description>dotnetspider.com提供Asp.net2.0 Sqlserver express的学习空间
 - Learn ASP.NET 2.0- Develop your web site - Host it for free. 
 
@@ -49,10 +49,10 @@ Web hosting package For ASP.NET programmers
     
     <item>
       <title>哭使用Data Access 2 插入Ntext类型数据时SqlParameter不指定类型的问题 ， ，请为我解惑</title>
-      <link>https://huobazi.aspxboy.com/blog/2005/10/10/cb-251251/</link>
+      <link>https://huobazi.github.com/blog/2005/10/10/cb-251251/</link>
       <pubDate>Mon, 10 Oct 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2005/10/10/cb-251251/</guid>
+      <guid>https://huobazi.github.com/blog/2005/10/10/cb-251251/</guid>
       <description>实在郁闷 ，请大家为我解惑。
 同发csdn：http://community.csdn.net/Expert/topic/4315/4315539.xml?temp=.3931848
 原来的代码 
@@ -89,10 +89,10 @@ public SqlDbType SqlDbType {get; set;}</description>
     
     <item>
       <title>数据从SqlServer6.5到SqlServer2000</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/07/14/cb-24010/</link>
+      <link>https://huobazi.github.com/blog/2004/07/14/cb-24010/</link>
       <pubDate>Wed, 14 Jul 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/07/14/cb-24010/</guid>
+      <guid>https://huobazi.github.com/blog/2004/07/14/cb-24010/</guid>
       <description>一台SqlServer65上的数据需要导到SqlServer200下
 源机器:WinNt4 sp6 SqlServer65 Sp5a
 目的机器: Win2000 sp4 SqlServer2000 sp3a
@@ -104,10 +104,10 @@ public SqlDbType SqlDbType {get; set;}</description>
     
     <item>
       <title>分页存储过程</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/02/09/pagedsp/</link>
+      <link>https://huobazi.github.com/blog/2004/02/09/pagedsp/</link>
       <pubDate>Mon, 09 Feb 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/02/09/pagedsp/</guid>
+      <guid>https://huobazi.github.com/blog/2004/02/09/pagedsp/</guid>
       <description>搞了一中午终于可以用了 但不知道效率如何.郁闷的是我要用php去调用它
 /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 CopyRight： ******

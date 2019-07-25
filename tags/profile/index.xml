@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Profile on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/profile/</link>
+    <link>https://huobazi.github.com/tags/profile/</link>
     <description>Recent content in Profile on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 06 Jun 2007 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/profile/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/profile/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>如何在Web App Project 或者 Web Site Project的App_Code 内使用 Profile/ProfileCommon</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/06/06/howtouserprofileinwebsiteprojectinvs2005sp1/</link>
+      <link>https://huobazi.github.com/blog/2007/06/06/howtouserprofileinwebsiteprojectinvs2005sp1/</link>
       <pubDate>Wed, 06 Jun 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/06/06/howtouserprofileinwebsiteprojectinvs2005sp1/</guid>
+      <guid>https://huobazi.github.com/blog/2007/06/06/howtouserprofileinwebsiteprojectinvs2005sp1/</guid>
       <description>在 web site project 内 可以很方便的使用 Profile/ProfileCommon 来 访问我们在web.config 的profile节内定义的properties ， 并且有很爽的 intellisense 然而在Web App Project或者Web Site Project的App_Code内使用的时候 编译都通不过的，因为 Profile 是 web site project 模型 在页面 执行时候创建在HttpContext的，Web Site Project 或者App_Code编译的时候还没有页面实例呢，何谈HttpContext, 当然无法使用了
 引用scottgu的原话解释“This is supported because with the VS 2005 Web Site Project option Visual Studio is dynamically creating and adding a &#34;ProfileCommon&#34; class named &#34;Profile&#34; into every code-behind instance”，那么怎么办呢 scottgu 支招------“VS 2005 Web Application Projects don&#39;t automatically support generating a strongly-typed Profile class proxy.</description>
     </item>

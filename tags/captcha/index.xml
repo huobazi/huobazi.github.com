@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Captcha on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/captcha/</link>
+    <link>https://huobazi.github.com/tags/captcha/</link>
     <description>Recent content in Captcha on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 17 Apr 2006 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/captcha/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/captcha/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>原来验证码可以租的哦</title>
-      <link>https://huobazi.aspxboy.com/blog/2006/04/17/textdisguisecaptchaimage/</link>
+      <link>https://huobazi.github.com/blog/2006/04/17/textdisguisecaptchaimage/</link>
       <pubDate>Mon, 17 Apr 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/04/17/textdisguisecaptchaimage/</guid>
+      <guid>https://huobazi.github.com/blog/2006/04/17/textdisguisecaptchaimage/</guid>
       <description>http://www.textdisguise.com/TextDisguise/default.aspx
 提供webservice生成防止机器人的CAPTCHA Image
 看样子挺贵的，不过Demo看起来很不错。</description>

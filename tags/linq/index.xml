@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linq on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/linq/</link>
+    <link>https://huobazi.github.com/tags/linq/</link>
     <description>Recent content in Linq on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 19 Jul 2008 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/linq/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/linq/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>我学Linq to SQL做的demo</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/07/19/cb-1246773/</link>
+      <link>https://huobazi.github.com/blog/2008/07/19/cb-1246773/</link>
       <pubDate>Sat, 19 Jul 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/07/19/cb-1246773/</guid>
+      <guid>https://huobazi.github.com/blog/2008/07/19/cb-1246773/</guid>
       <description>最近才开始学LINQ to SQL,
 做了个demo，都是基本操作。
 有兴趣的朋友看看。

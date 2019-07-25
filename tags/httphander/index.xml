@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Httphander on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/httphander/</link>
+    <link>https://huobazi.github.com/tags/httphander/</link>
     <description>Recent content in Httphander on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 31 Dec 2007 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/httphander/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/httphander/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>2007最后一博,Url地址重写，利用HttpHander手工编译页面并按需生成静态HTML文件</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/12/31/urlrewriteandhttphanderandmakestatichtmlfiles/</link>
+      <link>https://huobazi.github.com/blog/2007/12/31/urlrewriteandhttphanderandmakestatichtmlfiles/</link>
       <pubDate>Mon, 31 Dec 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/12/31/urlrewriteandhttphanderandmakestatichtmlfiles/</guid>
+      <guid>https://huobazi.github.com/blog/2007/12/31/urlrewriteandhttphanderandmakestatichtmlfiles/</guid>
       <description>很多朋友可能都讨论过ASP.NET中生成HTML的方法了，有按照模板用IO方法写文件
 有在404错误页面内生成HTML的，有在Render内保存页面输出到HTML文件的。
 今天我发一个配合Url重写利用HttpHander手工编译.aspx页面方法。
@@ -58,10 +58,10 @@ http://www.devedu.com/Doc/DotNet/AspNet/default.2.html
     
     <item>
       <title>FckEditor,远程图片下载,插件</title>
-      <link>https://huobazi.aspxboy.com/blog/2007/11/02/fckeditorremoteimagerubber/</link>
+      <link>https://huobazi.github.com/blog/2007/11/02/fckeditorremoteimagerubber/</link>
       <pubDate>Fri, 02 Nov 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2007/11/02/fckeditorremoteimagerubber/</guid>
+      <guid>https://huobazi.github.com/blog/2007/11/02/fckeditorremoteimagerubber/</guid>
       <description>有时候我们从其他网页上拷贝来的内容中含有图片，当原始地址失效后就会影响读者阅读。
 所以我制作了这样一个插件，可以将远程图片保存到本地服务器。声明：下面的文字是本文不可缺少的部分，转载请保留，谢谢！
 ////////////////////////////////////////////////////

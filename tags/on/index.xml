@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>On on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/on/</link>
+    <link>https://huobazi.github.com/tags/on/</link>
     <description>Recent content in On on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 24 Sep 2009 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/on/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/on/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>rails中的ActiveRecord真性感！</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/09/24/sexy-activerecord/</link>
+      <link>https://huobazi.github.com/blog/2009/09/24/sexy-activerecord/</link>
       <pubDate>Thu, 24 Sep 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/09/24/sexy-activerecord/</guid>
+      <guid>https://huobazi.github.com/blog/2009/09/24/sexy-activerecord/</guid>
       <description>&lt;p&gt;Rails使用的ActiveRecord真性感啊，see see吧&lt;/p&gt;
 &lt;div class=&#34;source&#34; style=&#34;COLOR: #dcdccc; FONT-FAMILY: &#39;[object]&#39;,&#39;Consolas&#39;,&#39;Lucida Console&#39;,&#39;Courier New&#39;; BACKGROUND-COLOR: #3f3f3f&#34;&gt;
 &lt;span style=&#34;COLOR: #e3ceab&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;User&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;FONT-WEIGHT: bold; COLOR: #dca3a3&#34;&gt;ActiveRecord&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;FONT-WEIGHT: bold; COLOR: #dca3a3&#34;&gt;Base&lt;/span&gt;  &lt;br /&gt;  &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;has_many&lt;/span&gt; &lt;span style=&#34;COLOR: #cc9393&#34;&gt;:articles&lt;/span&gt;  &lt;br /&gt;&lt;span style=&#34;COLOR: #e3ceab&#34;&gt;end&lt;/span&gt;  &lt;br /&gt; &lt;br /&gt;&lt;span style=&#34;COLOR: #e3ceab&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;Article&lt;/span&gt; &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;FONT-WEIGHT: bold; COLOR: #dca3a3&#34;&gt;ActiveRecord&lt;/span&gt;&lt;span style=&#34;COLOR: #dcdccc&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;FONT-WEIGHT: bold; COLOR: #dca3a3&#34;&gt;Base&lt;/span&gt;&lt;br /&gt;  &lt;span style=&#34;COLOR: #dcdccc&#34;&gt;belongs_to&lt;/span&gt; &lt;span style=&#34;COLOR: #cc9393&#34;&gt;:user&lt;/span&gt;  &lt;br /&gt;&lt;span style=&#34;COLOR: #e3ceab&#34;&gt;end&lt;/span&gt;

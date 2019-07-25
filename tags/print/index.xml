@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Print on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/print/</link>
+    <link>https://huobazi.github.com/tags/print/</link>
     <description>Recent content in Print on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 30 Apr 2004 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/print/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/print/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>一个关于DataGrid的打印类,分享,感谢作者</title>
-      <link>https://huobazi.aspxboy.com/blog/2004/04/30/cb-8176/</link>
+      <link>https://huobazi.github.com/blog/2004/04/30/cb-8176/</link>
       <pubDate>Fri, 30 Apr 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2004/04/30/cb-8176/</guid>
+      <guid>https://huobazi.github.com/blog/2004/04/30/cb-8176/</guid>
       <description>手中的活计需要打印,就到处找找。
 从google中扑获,挺不错的，大家共享～
 how can i print the data in DataGrid?http://forums.aspfree.com/archive/t-17107

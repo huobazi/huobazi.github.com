@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Grid on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/grid/</link>
+    <link>https://huobazi.github.com/tags/grid/</link>
     <description>Recent content in Grid on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 08 Apr 2006 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/grid/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/grid/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>两个DropDownList在Repeater、DataList、DataGrid内的连动和冒泡事件(BubbleEvent) </title>
-      <link>https://huobazi.aspxboy.com/blog/2006/04/08/twodropdownlistindatagridandbubbleevent/</link>
+      <link>https://huobazi.github.com/blog/2006/04/08/two-dropdownlist-in-data-grid-and-bubble-event/</link>
       <pubDate>Sat, 08 Apr 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2006/04/08/twodropdownlistindatagridandbubbleevent/</guid>
+      <guid>https://huobazi.github.com/blog/2006/04/08/two-dropdownlist-in-data-grid-and-bubble-event/</guid>
       <description>两个DropDownList在Repeater、DataList、DataGrid内的连动和冒泡事件(BubbleEvent)
 问题: http://community.csdn.net/Expert/topic/4670/4670056.xml?temp=3.944033E-02
 刚看第一眼觉得在第一个DDL的SelectedIndexChanged事件内绑定第二个DDL就ok了，页面上写或者ItemDataBound内写事件挂接代码都可以。打开VS写测试却发现有点障碍哦，

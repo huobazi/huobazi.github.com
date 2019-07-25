@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cms on 武眉博</title>
-    <link>https://huobazi.aspxboy.com/tags/cms/</link>
+    <link>https://huobazi.github.com/tags/cms/</link>
     <description>Recent content in Cms on 武眉博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 18 Dec 2009 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huobazi.aspxboy.com/tags/cms/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huobazi.github.com/tags/cms/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Graffiti CMS  开源了</title>
-      <link>https://huobazi.aspxboy.com/blog/2009/12/18/graffiti-cms-is-now-free-open-source/</link>
+      <link>https://huobazi.github.com/blog/2009/12/18/graffiti-cms-is-now-free-open-source/</link>
       <pubDate>Fri, 18 Dec 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2009/12/18/graffiti-cms-is-now-free-open-source/</guid>
+      <guid>https://huobazi.github.com/blog/2009/12/18/graffiti-cms-is-now-free-open-source/</guid>
       <description>Graffiti CMS 
   
  see also:http://weblogs.asp.net/kencox/archive/2009/12/17/graffiti-cms-is-now-free-open-source.aspx</description>
@@ -24,10 +24,10 @@
     
     <item>
       <title>Telligent 发布了 CMS 系统</title>
-      <link>https://huobazi.aspxboy.com/blog/2008/02/22/graffiticmsreleased/</link>
+      <link>https://huobazi.github.com/blog/2008/02/22/graffiticmsreleased/</link>
       <pubDate>Fri, 22 Feb 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://huobazi.aspxboy.com/blog/2008/02/22/graffiticmsreleased/</guid>
+      <guid>https://huobazi.github.com/blog/2008/02/22/graffiticmsreleased/</guid>
       <description>Telligent Community Server 的出产厂商
 发布了 他们的新CMS产品 GraffitiCMS
 关于价格：http://get.graffiticms.com/
