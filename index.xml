@@ -1112,7 +1112,7 @@ Licensing：http://graffiticms.com/learn-more/licensing/</description>
       <description>位于code.msdn.microsoft.com的一个小型Library
 你可以很简单的使用它来通过gmail发送邮件或者获取Gmail Atom Feed 。
 
-//Send a message with one line of code RC.Gmail.GmailMessage.SendFromGmail(&amp;ldquo;username&amp;rdquo;, &amp;ldquo;password&amp;rdquo;, &amp;ldquo;toAddress@gmail.com&amp;rdquo;, &amp;ldquo;subject&amp;rdquo;, &amp;ldquo;message body&amp;rdquo;); //Send a message with one line of code with a MailMessage object RC.Gmail.GmailMessage.SendMailMessageFromGmail(&amp;ldquo;username&amp;rdquo;, &amp;ldquo;password&amp;rdquo;, mailMessageObject); //Use the GmailMessage object to create and send your message RC.Gmail.GmailMessage gmailMsg = new RC.Gmail.GmailMessage(&amp;ldquo;username&amp;rdquo;, &amp;ldquo;password&amp;rdquo;); gmailMsg.To = &amp;ldquo;RCcode@gmail.com&amp;rdquo;; gmailMsg.From = &amp;ldquo;fromAddress@gmail.com&amp;rdquo;; gmailMsg.Subject = &amp;ldquo;C# Test Message&amp;rdquo;; gmailMsg.Body = &amp;ldquo;Test body&amp;rdquo;; MailAttachment attachment = new MailAttachment(@&amp;ldquo;c:\testfile.</description>
+//Send a message with one line of code RC.Gmail.GmailMessage.SendFromGmail(&#34;username&#34;, &#34;password&#34;, &#34;toAddress@gmail.com&#34;, &#34;subject&#34;, &#34;message body&#34;); //Send a message with one line of code with a MailMessage object RC.Gmail.GmailMessage.SendMailMessageFromGmail(&#34;username&#34;, &#34;password&#34;, mailMessageObject); //Use the GmailMessage object to create and send your message RC.Gmail.GmailMessage gmailMsg = new RC.Gmail.GmailMessage(&#34;username&#34;, &#34;password&#34;); gmailMsg.To = &#34;RCcode@gmail.com&#34;; gmailMsg.From = &#34;fromAddress@gmail.com&#34;; gmailMsg.Subject = &#34;C# Test Message&#34;; gmailMsg.Body = &#34;Test body&#34;; MailAttachment attachment = new MailAttachment(@&#34;</description>
     </item>
     
     <item>
@@ -1302,15 +1302,11 @@ E:\IISROOT\FckTest\FckTest\fckeditor\editor\plugins\remoteimagerubber\remoteimag
       <pubDate>Fri, 07 Sep 2007 00:00:00 +0000</pubDate>
       
       <guid>https://huobazi.github.com/blog/2007/09/07/cb-885304/</guid>
-      <description>位于：
+      <description>
+位于：
 http://blogs.sqlpassj.org/mitsugi/archive/2007/09.aspx
 语言： 日文
-[SQL Server 2005]AGGREGATES/インデックス付きビュー/DTA デモ  posted @ 2007年9月5日 21:33 | Feedback (0)  
- [SQL Server 2005]JOIN デモ  posted @ 2007年9月5日 21:01 | Feedback (0)  
- [SQL Server]OR デモ  posted @ 2007年9月5日 20:15 | Feedback (0)  
- [SQL Server]AND デモ  posted @ 2007年9月2日 19:09 | Feedback (0)  
- [SQL Server]検索性デモ 
- 我也看不懂，列这里，期望原子里的日语达人看看能否翻译一下。</description>
+[SQL Server 2005]AGGREGATES/インデックス付きビュー/DTA デモ [SQL Server 2005]JOIN デモ [SQL Server]OR デモ [SQL Server]AND デモ [SQL Server]検索性デモ </description>
     </item>
     
     <item>
